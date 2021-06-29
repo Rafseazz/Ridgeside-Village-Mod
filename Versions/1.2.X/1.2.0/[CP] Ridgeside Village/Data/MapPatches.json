@@ -1,0 +1,24 @@
+{
+"Changes": [
+	
+//----------------------
+//FlowerDance Map       
+//----------------------
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Forest-FlowerFestival",
+		"FromFile": "assets/Map/Forest-FlowerFestivalPatch.tbin",
+		"FromArea": { "X": 25, "Y": 8, "Width": 25, "Height": 37 },
+		"ToArea": { "X": 25, "Y": 8, "Width": 25, "Height": 37 },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": true },
+	},
+	{
+		"Action": "Load",
+		"Target": "Maps/Forest-FlowerFestival",
+		"FromFile": "assets/Map/Forest-FlowerFestival.tbin",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false },
+	},
+
+	
+]
+}

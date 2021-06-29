@@ -1,0 +1,75 @@
+{
+    "Changes": [
+        {
+		"Action": "EditData",
+		"Target": "Data/SpecialOrders",
+			"Entries": {
+				"Lumisteria.SpecialOrders.EmilyWarmCloth": {
+					"Name": "[Lumisteria.SpecialOrders.EmilyWarmCloth_Name]",
+					"Requester": "Emily",
+					"Duration": "TwoWeeks",
+					"Repeatable": "True",
+					"RequiredTags": "season_winter, mail_gusGiantOmelet",
+					"OrderType": "QF:RsvSpecialOrders",
+					"SpecialRule": "",
+					"Text": "[Lumisteria.SpecialOrders.EmilyWarmCloth_Text]",
+					"ItemToRemoveOnEnd": null,
+					"MailToRemoveOnEnd": null,
+					"RandomizedElements": [
+					  {
+						"Name": "Text",
+						"Values": [
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.EmilyWarmCloth_RE_Text_0]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.EmilyWarmCloth_RE_Text_1]"
+						  },
+						]
+					  }
+					],
+					"Objectives": [
+					  {
+						"Type": "Collect",
+						"Text": "[Lumisteria.SpecialOrders.EmilyWarmCloth_Objective_0_Text]",
+						"RequiredCount": "15",
+						"Data": {
+							"AcceptedContextTags": "item_cloth"
+						}
+					  },
+					  {
+						"Type": "Ship",
+						"Text": "[Lumisteria.SpecialOrders.EmilyWarmCloth_Objective_1_Text]",
+						"RequiredCount": "15",
+						"Data": {
+							"AcceptedContextTags": "item_cloth"
+						}
+					  }
+					],
+					"Rewards": [
+					  {
+						"Type": "Money",
+						"Data": {
+						  "Amount": "1000",
+						}
+					  },
+					  {
+						"Type": "Friendship",
+						"Data": {}
+					  },
+					  {
+						"Type": "Mail",
+						"Data": {
+						  "MailReceived": "Lumisteria.SpecialOrders.EmilyWarmClothMail",
+						  "NoLetter": "false"
+						}
+					  }
+					]
+					},
+				},
+	  
+          }
+    ]
+}

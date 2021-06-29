@@ -1,0 +1,25 @@
+{
+"Changes": [
+	
+	/*********
+	** Karmylla's Immersive Maps
+	*********/	
+
+	{
+		"LogName": "Karmylla's Map Patch - Flor",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Flor",
+		"Entries": { "Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 11 10 2 flor_read/1400 Town 89 100 3/1600 Custom_Ridgeside_LogCabinHotel2ndFloor 2 9 1/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 3 5 0 flor_sleep", },
+		"When": { "HasMod: |contains=Karmylla.ImmersiveMaps": true, },
+	},
+	
+	{
+		"LogName": "Karmylla's Map Patch - Keahi",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Keahi",
+		"Entries": { "Tue": "610 Town 103 92 2 square_2_2_2/1100 ArchaeologyHouse 15 11 1/1130 ArchaeologyHouse 14 11 3 keahi_read/1400 Town 86 98 2 square_2_2_2/1600 Custom_Ridgeside_RidgesideVillage 76 60 2 square_1_2_2/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep", },
+		"When": { "HasMod: |contains=Karmylla.ImmersiveMaps": true, },
+	},
+
+]
+}

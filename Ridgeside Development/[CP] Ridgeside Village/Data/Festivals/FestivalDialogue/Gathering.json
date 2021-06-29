@@ -1,0 +1,105 @@
+{
+"Changes": [
+	
+//------------------------
+// FESTIVAL DIALOGUE   
+//------------------------
+
+	//Ridgeside Gathering----------------------
+	
+		{
+			"LogName": "Ridgeside Gathering",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"Entries": {
+			
+			//Non-Dateables
+				"Aguar": "{{i18n:Festivals.Gathering.Aguar}}",
+				"Bert": "{{i18n:Festivals.Gathering.Bert}}",
+				"Ezekiel": "{{i18n:Festivals.Gathering.Ezekiel}}",
+				"Freddie": "{{i18n:Festivals.Gathering.Freddie}}",
+				"Jio": "{{i18n:Festivals.Gathering.Jio}}",
+				"Keahi": "{{i18n:Festivals.Gathering.Keahi}}",
+				"Kiwi": "{{i18n:Festivals.Gathering.Kiwi}}",
+				"Lenny": "{{i18n:Festivals.Gathering.Lenny}}",
+				"Lola": "{{i18n:Festivals.Gathering.Lola}}",
+				"Olga": "{{i18n:Festivals.Gathering.Olga}}",
+				"Pika": "{{i18n:Festivals.Gathering.Pika}}",
+				"Richard": "{{i18n:Festivals.Gathering.Richard}}",
+				"Trinnie": "{{i18n:Festivals.Gathering.Trinnie}}",
+				"Yuuma": "{{i18n:Festivals.Gathering.Yuuma}}",
+			
+			//Vanilla Non-Dateables
+			    "Robin": "{{i18n:GatheringDialogue.Robin}}",
+			    "Demetrius": "{{i18n:GatheringDialogue.Demetrius}}",
+			    "Pierre": "{{i18n:GatheringDialogue.Pierre}}",
+			    "Caroline": "{{i18n:GatheringDialogue.Caroline}}",
+			    "Linus": "{{i18n:GatheringDialogue.Linus}}",
+			    "George": "{{i18n:GatheringDialogue.George}}",
+			    "Evelyn": "{{i18n:GatheringDialogue.Evelyn}}",
+			    "Lewis": "{{i18n:GatheringDialogue.Lewis}}",
+			    "Clint": "{{i18n:GatheringDialogue.Clint}}",
+			    "Pam": "{{i18n:GatheringDialogue.Pam}}",
+			    "Jodi": "{{i18n:GatheringDialogue.Jodi}}",
+			    "Kent": "{{i18n:GatheringDialogue.Kent}}",
+			    "Marnie": "{{i18n:GatheringDialogue.Marnie}}",
+			    "Gus": "{{i18n:GatheringDialogue.Gus}}",
+			    "Jas": "{{i18n:GatheringDialogue.Jas}}",
+			    "Vincent": "{{i18n:GatheringDialogue.Vincent}}",
+			    "Willy": "{{i18n:GatheringDialogue.Willy}}",
+				"Marlon": "{{i18n:GatheringDialogue.Marlon}}",
+				"Wizard": "{{i18n:GatheringDialogue.Wizard}}",
+
+			//Dateables
+				"Alissa": "{{i18n:Festivals.Gathering.Alissa}}",
+				"Alissa_spouse": "{{i18n:Festivals.Gathering.Alissa_spouse}}",
+				"Corine": "{{i18n:Festivals.Gathering.Corine}}",
+				"Corine_spouse": "{{i18n:Festivals.Gathering.Corine_spouse}}",
+				"Flor": "{{i18n:Festivals.Gathering.Flor}}",
+				"Flor_spouse": "{{i18n:Festivals.Gathering.Flor_spouse}}",
+				"Ian": "{{i18n:Festivals.Gathering.Ian}}",
+				"Ian_spouse": "{{i18n:Festivals.Gathering.Ian_spouse}}",
+				"Jeric": "{{i18n:Festivals.Gathering.Jeric}}",
+				"Jeric_spouse": "{{i18n:Festivals.Gathering.Jeric_spouse}}",
+				"Kenneth": "{{i18n:Festivals.Gathering.Kenneth}}",
+				"Kenneth_spouse": "{{i18n:Festivals.Gathering.Kenneth_spouse}}",
+				"Maddie": "{{i18n:Festivals.Gathering.Maddie}}",
+				"Maddie_spouse": "{{i18n:Festivals.Gathering.Maddie_spouse}}",
+				"Philip": "{{i18n:Festivals.Gathering.Philip}}",
+				"Philip_spouse": "{{i18n:Festivals.Gathering.Philip_spouse}}",
+				"Shiro": "{{i18n:Festivals.Gathering.Shiro}}",
+				"Shiro_spouse": "{{i18n:Festivals.Gathering.Shiro_spouse}}",
+				"Ysabelle": "{{i18n:Festivals.Gathering.Ysabelle}}",
+				"Ysabelle_spouse": "{{i18n:Festivals.Gathering.Ysabelle_spouse}}",
+
+			//Vanilla Dateables
+			    "Abigail_spouse": "{{i18n:GatheringDialogue.Abigail.spouse}}",
+			    "Abigail": "{{i18n:GatheringDialogue.Abigail}}",
+			    "Leah": "{{i18n:GatheringDialogue.Leah}}",
+			    "Leah_spouse": "{{i18n:GatheringDialogue.Leah.spouse}}",
+			    "Maru": "{{i18n:GatheringDialogue.Maru}}",
+			    "Maru_spouse": "{{i18n:GatheringDialogue.Maru.spouse}}",
+			    "Penny": "{{i18n:GatheringDialogue.Penny}}",
+			    "Penny_spouse": "{{i18n:GatheringDialogue.Penny.spouse}}",
+			    "Haley": "{{i18n:GatheringDialogue.Haley}}",
+			    "Haley_spouse": "{{i18n:GatheringDialogue.Haley.spouse}}",
+			    "Sebastian": "{{i18n:GatheringDialogue.Sebastian}}",
+			    "Sebastian_spouse": "{{i18n:GatheringDialogue.Sebastian.spouse}}",
+			    "Sam": "{{i18n:GatheringDialogue.Sam}}",
+			    "Sam_spouse": "{{i18n:GatheringDialogue.Sam.spouse}}",
+			    "Alex": "{{i18n:GatheringDialogue.Alex}}",
+			    "Alex_spouse": "{{i18n:GatheringDialogue.Alex.spouse}}",
+			    "Harvey": "{{i18n:GatheringDialogue.Harvey}}",
+			    "Harvey_spouse": "{{i18n:GatheringDialogue.Harvey.spouse}}",
+			    "Elliott": "{{i18n:GatheringDialogue.Elliott}}",
+			    "Elliott_spouse": "{{i18n:GatheringDialogue.Elliott.spouse}}",
+			    "Emily": "{{i18n:GatheringDialogue.Emily}}",
+			    "Emily_spouse": "{{i18n:GatheringDialogue.Emily.spouse}}",
+			    "Shane": "{{i18n:GatheringDialogue.Shane}}",
+				"Shane_spouse": "{{i18n:GatheringDialogue.Shane.spouse}}",
+
+			},
+		},
+		
+]
+}

@@ -1,0 +1,29 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "AlissaShed Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_AlissaShed",
+		"Entries": {
+		//Alissa in the shed (Alissa extra event)
+			"75160116/f Alissa 1250/t 1200 1600": "playful/4 11/farmer -100 -100 0 Alissa 4 13 3/skippable/pause 500/move Alissa 0 -5 0/move Alissa 1 0 1/emote Alissa 28/pause 500/speak Alissa \"{{i18n:event-75160116.01}}\"/playSound doorClose/warp farmer 4 16/emote Alissa 16/faceDirection Alissa 2/move farmer 0 -3 0/speak Alissa \"{{i18n:event-75160116.02}}\"/move Alissa -1 0 2/move Alissa 0 2 2/emote Alissa 8/pause 500/emote farmer 56/pause 500/speak Alissa \"{{i18n:event-75160116.03}}\"/emote farmer 28/pause 500/speak Alissa \"$q 75160116 null\"#{{i18n:event-75160116.04}}#$r 75160116 0 alissa1_1#{{i18n:event-75160116.05}}#$r 75160116 40 alissa1_2#{{i18n:event-75160116.06}}#$r 75160116 0 alissa1_3#{{i18n:event-75160116.07}}\"/emote Alissa 56/pause 500/speak Alissa \"{{i18n:event-75160116.08}}\"/emote farmer 56/pause 500/speak Alissa \"{{i18n:event-75160116.09}}\"/move Alissa 1 0 1/move farmer 0 -2 0/move farmer -1 0 3/emote Alissa 56/pause 1000/faceDirection farmer 1/message \"{{i18n:event-75160116.10}}\"/emote farmer 32/pause 1000/faceDirection farmer 3/pause 1000/globalFade/viewport -1000 -1000/message \"{{i18n:event-75160116.11}}\"/end dialogue Alissa \"{{i18n:event-75160116.12}}\"",
+		
+		//Alissa and farmer at shed (Alissa 10 hearts)
+			"75160121/f Alissa 2500/w sunny/t 800 1200/e 75160120/D Alissa": "cm:AlissaTheme/4 13/farmer 4 16 0 Alissa 4 13 3/skippable/pause 500/emote Alissa 8/pause 500/faceDirection Alissa 2/speak Alissa \"{{i18n:event-75160121.01}}\"/move farmer 1 0 0/move farmer 0 -3 3/faceDirection Alissa 1/emote Alissa 60/pause 500/speak Alissa \"{{i18n:event-75160121.02}}\"/emote farmer 32/pause 500/speak Alissa \"{{i18n:event-75160121.03}}\"/globalFade/viewport -1000 -1000/changeToTemporaryMap Custom_Ridgeside_RidgesideVillage false/warp farmer 18 106/faceDirection farmer 3/warp Alissa 22 109/faceDirection Alissa 1/fade/viewport 20 107/pause 500/move Alissa 0 -3 1/move farmer 0 3 3/pause 800/move Alissa 0 3 1/pause 1000/emote Alissa 60/pause 500/faceDirection Alissa 3/emote Alissa 20/pause 500/speak Alissa \"{{i18n:event-75160121.04}}\"/emote farmer 8/pause 500/faceDirection farmer 1/pause 1000/move Alissa -3 0 3/showFrame Alissa 25/positionOffset Alissa -20 20/emote Alissa 20 true/emote farmer 16/pause 2000/warp Alissa 19 109/faceDirection Alissa 3/speak Alissa \"{{i18n:event-75160121.05}}\"/emote farmer 20/pause 1000/showFrame Alissa 25/positionOffset Alissa -10 0/positionOffset farmer 10 0/animate farmer false true 100 101/emote Alissa 20/pause 2000/globalFade/viewport -1000 -1000/speak Alissa \"{{i18n:event-75160121.06}}\"/farmerEat 215/pause 1000/end dialogue Alissa \"{{i18n:event-75160121.07}}\""
+		},
+	},
+
+        {
+                //Event dialogue Alissa extra event
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Alissa",
+                "Entries": {                        
+                        "alissa1_1": "{{i18n:event-75160116.Fork1}}",
+                        "alissa1_2": "{{i18n:event-75160116.Fork2}}",
+                        "alissa1_3": "{{i18n:event-75160116.Fork3}}",
+                }
+        },
+	
+]
+}

@@ -1,0 +1,604 @@
+{
+  "loadLate": true,
+  "addMaps": [
+    {
+	  "name": "RidgesideVillage",
+	  "file": "assets/RidgesideVillage.tbin",
+	        "addWarps": [
+		"150 25 RSVCliff 0 15",
+		"150 26 RSVCliff 0 15",
+		"150 27 RSVCliff 0 15",
+		"150 28 RSVCliff 0 15",
+		"150 112 RSVTheHike 0 27",
+		"150 113 RSVTheHike 0 27",
+		"150 114 RSVTheHike 0 27",
+		"97 -1 Ridge 38 38",
+		"98 -1 Ridge 39 38",
+		"99 -1 Ridge 40 38",
+		"100 -1 Ridge 41 38",
+	  ]
+	},
+    {
+	  "name": "Ridge",
+	  "file": "assets/Ridge.tbin",
+	        "addWarps": [
+		"38 40 RidgesideVillage 97 1",
+		"39 40 RidgesideVillage 98 1",
+		"40 40 RidgesideVillage 99 1",
+		"41 40 RidgesideVillage 100 1",
+		"42 40 RidgesideVillage 100 1",
+		"31 -1 RidgeForestQ1 69 53",
+		"32 -1 RidgeForestQ1 69 53",
+		"33 -1 RidgeForestQ1 69 53",
+		"-1 14 RidgeFalls 78 62",
+		"-1 15 RidgeFalls 78 62",
+		"-1 16 RidgeFalls 78 62",
+	  ]
+	},
+	{
+	  "name": "RidgeFalls",
+	  "file": "assets/RidgeFalls.tbin",
+	        "addWarps": [
+		"80 61 Ridge 1 15",
+		"80 62 Ridge 1 15",
+		"80 63 Ridge 1 15",
+	  ]
+	},
+	{
+	  "name": "RidgeForestQ1",
+	  "file": "assets/RidgeForestQ1.tbin",
+	        "addWarps": [
+		"68 55 Ridge 32 1",
+		"69 55 Ridge 32 1",
+		"70 55 Ridge 32 1",
+		
+		"26 -1 RidgeForestQ4 27 73",
+		"27 -1 RidgeForestQ4 27 73",
+		"28 -1 RidgeForestQ4 27 73",
+		"29 -1 RidgeForestQ4 27 73",
+		
+		"75 -1 RidgeForestQ4 76 73",
+		"76 -1 RidgeForestQ4 76 73",
+		"77 -1 RidgeForestQ4 76 73",
+		"78 -1 RidgeForestQ4 76 73",
+		
+		"92 6 RidgeForestQ2 1 7",
+		"92 7 RidgeForestQ2 1 7",
+		"92 8 RidgeForestQ2 1 7",
+		
+		"92 26 RidgeForestQ2 1 27",
+		"92 27 RidgeForestQ2 1 27",
+		"92 28 RidgeForestQ2 1 27",
+		
+		"92 40 RidgeForestQ2 1 41",
+		"92 41 RidgeForestQ2 1 41",
+		"92 42 RidgeForestQ2 1 41",
+	  ]
+	},
+	{
+	  "name": "RidgeForestQ2",
+	  "file": "assets/RidgeForestQ2.tbin",
+	        "addWarps": [
+		"-1 6 RidgeForestQ1 90 7",
+		"-1 7 RidgeForestQ1 90 7",
+		"-1 8 RidgeForestQ1 90 7",
+		
+		"-1 26 RidgeForestQ1 90 27",
+		"-1 27 RidgeForestQ1 90 27",
+		"-1 28 RidgeForestQ1 90 27",
+		
+		"-1 40 RidgeForestQ1 90 41",
+		"-1 41 RidgeForestQ1 90 41",
+		"-1 42 RidgeForestQ1 90 41",
+		
+		"34 -1 RidgeForestQ3 35 73",
+		"35 -1 RidgeForestQ3 35 73",
+		"36 -1 RidgeForestQ3 35 73",
+		"37 -1 RidgeForestQ3 35 73",
+	  ]
+	},
+	{
+	  "name": "RidgeForestQ3",
+	  "file": "assets/RidgeForestQ3.tbin",
+	        "addWarps": [
+		"34 75 RidgeForestQ2 35 1",
+		"35 75 RidgeForestQ2 35 1",
+		"36 75 RidgeForestQ2 35 1",
+		"37 75 RidgeForestQ2 35 1",
+		
+		"-1 55 RidgeForestQ4 90 56",
+		"-1 56 RidgeForestQ4 90 56",
+		"-1 57 RidgeForestQ4 90 56",
+		
+		"-1 19 RidgeForestQ4 90 20",
+		"-1 20 RidgeForestQ4 90 20",
+		"-1 21 RidgeForestQ4 90 20",
+		
+		"34 30 MysticFalls1 15 19",
+		"10 33 MysticFalls3 15 19",
+	  ]
+	},
+	{
+	  "name": "RidgeForestQ4",
+	  "file": "assets/RidgeForestQ4.tbin",
+	        "addWarps": [
+		"26 75 RidgeForestQ1 27 1",
+		"27 75 RidgeForestQ1 27 1",
+		"28 75 RidgeForestQ1 27 1",
+		"29 75 RidgeForestQ1 27 1",
+		
+		"75 75 RidgeForestQ1 76 1",
+		"76 75 RidgeForestQ1 76 1",
+		"77 75 RidgeForestQ1 76 1",
+		"78 76 RidgeForestQ1 76 1",
+		
+		"92 55 RidgeForestQ3 1 56",
+		"92 56 RidgeForestQ3 1 56",
+		"92 57 RidgeForestQ3 1 56",
+		
+		"92 19 RidgeForestQ3 1 20",
+		"92 20 RidgeForestQ3 1 20",
+		"92 21 RidgeForestQ3 1 20",
+		
+		"42 32 MysticFalls2 15 19",
+	  ]
+	},
+	{
+	  "name": "RSVCableCar",
+	  "file": "assets/RSVCableCar.tbin",
+	        "addWarps": [
+		"20 7 RSVCliff 24 19",
+		"21 7 RSVCliff 24 19",
+		"19 30 BusStop 27 1",
+		"20 30 BusStop 28 1",
+		"21 30 BusStop 29 1"
+	  ]
+	},
+	{
+	  "name": "RSVCliff",
+	  "file": "assets/RSVCliff.tbin",
+	        "addWarps": [
+		"24 17 RSVCableCar 20 9",
+		"25 17 RSVCableCar 20 9",
+		"-1 13 RidgesideVillage 149 26",
+		"-1 14 RidgesideVillage 149 26",
+		"-1 15 RidgesideVillage 149 26",
+		"-1 16 RidgesideVillage 149 26",
+		"-1 33 RSVTheHike 79 26",
+		"-1 34 RSVTheHike 79 26",
+		"-1 35 RSVTheHike 79 26",
+	  ]
+	},
+    {
+	  "name": "RSVTheHike",
+	  "file": "assets/RSVTheHike.tbin",
+	        "addWarps": [
+		"80 25 RSVCliff 0 34",
+		"80 26 RSVCliff 0 34",
+		"80 27 RSVCliff 0 34",
+		"-1 26 RidgesideVillage 149 113",
+		"-1 27 RidgesideVillage 149 113",
+		"-1 28 RidgesideVillage 149 113",
+	  ]
+	},
+	{
+	  "name": "MysticFalls1",
+	  "file": "assets/MysticFalls1.tbin",
+	        "addWarps": [
+		"14 20 RidgeForestQ3 34 32",
+		"15 20 RidgeForestQ3 34 32",
+		"16 20 RidgeForestQ3 34 32",
+	  ]
+	},
+	{
+	  "name": "MysticFalls2",
+	  "file": "assets/MysticFalls2.tbin",
+	        "addWarps": [
+		"14 20 RidgeForestQ4 42 34",
+		"15 20 RidgeForestQ4 42 34",
+		"16 20 RidgeForestQ4 42 34",
+	  ]
+	},
+	{
+	  "name": "MysticFalls3",
+	  "file": "assets/MysticFalls3.tbin",
+	        "addWarps": [
+		"14 20 RidgeForestQ3 10 35",
+		"15 20 RidgeForestQ3 10 35",
+		"16 20 RidgeForestQ3 10 35",
+	  ]
+	},
+	{
+	  "name": "RSVTheRide",
+	  "file": "assets/RSVTheRide.tbin",
+	        "addWarps": [
+		"-2 -2 RidgesideVillage 0 0"
+	  ]
+	},
+    {
+	  "name": "EzekielPic",
+	  "file": "assets/EzekielPic.tbin",
+	        "addWarps": [
+		"-1 -1 EzekielHouse 0 0"
+	  ]
+	},
+    {
+	  "name": "AguarCave",
+	  "file": "assets/AguarCave.tbin",
+	        "addWarps": [
+		"13 30 RidgesideVillage 63 107"
+	  ]
+	},
+    {
+	  "name": "AguarCaveTemporary",
+	  "file": "assets/AguarCaveTemporary.tbin",
+	        "addWarps": [
+		"-1 -1 RidgesideVillage 2 2"
+	  ]
+	},
+//    {
+//	  "name": "LogCabinHotelLobby",
+//	  "file": "assets/LogCabinHotelLobby.tbin",
+//	        "addWarps": [
+//		"7 18 Custom_Ridgeside_RidgesideVillage 114 22",
+//		"8 18 Custom_Ridgeside_RidgesideVillage 115 22",
+//		"20 0 Custom_Ridgeside_LogCabinHotel2ndFloor 21 27",
+//		"21 0 Custom_Ridgeside_LogCabinHotel2ndFloor 22 27",
+//		"22 0 Custom_Ridgeside_LogCabinHotel2ndFloor 23 27",
+//		"23 0 Custom_Ridgeside_LogCabinHotel2ndFloor 24 27"
+//	  ]
+//	},
+//    {
+//	  "name": "LogCabinHotel2ndFloor",
+//	  "file": "assets/LogCabinHotel2ndFloor.tbin",
+//	        "addWarps": [
+//		"21 28 Custom_Ridgeside_LogCabinHotelLobby 20 1",
+//		"22 28 Custom_Ridgeside_LogCabinHotelLobby 21 1",
+//		"23 28 Custom_Ridgeside_LogCabinHotelLobby 22 1",
+//		"24 28 Custom_Ridgeside_LogCabinHotelLobby 23 1",
+//		"21 -1 Custom_Ridgeside_LogCabinHotel3rdFloor 10 17",
+//		"22 -1 Custom_Ridgeside_LogCabinHotel3rdFloor 11 17",
+//		"23 -1 Custom_Ridgeside_LogCabinHotel3rdFloor 12 17",
+//		"24 -1 Custom_Ridgeside_LogCabinHotel3rdFloor 13 17"
+//	  ]
+//	},
+//    {
+//	  "name": "LogCabinHotel3rdFloor",
+//	  "file": "assets/LogCabinHotel3rdFloor.tbin",
+//	        "addWarps": [
+//		"10 18 Custom_Ridgeside_LogCabinHotel2ndFloor 21 0",
+//		"11 18 Custom_Ridgeside_LogCabinHotel2ndFloor 22 0",
+//		"12 18 Custom_Ridgeside_LogCabinHotel2ndFloor 23 0",
+//		"13 18 Custom_Ridgeside_LogCabinHotel2ndFloor 24 0"
+//	  ]
+//	},
+    {
+	  "name": "LennyHouse",
+	  "file": "assets/LennyHouse.tbin",
+	        "addWarps": [
+		"14 14 RidgesideVillage 114 38"
+	  ]
+	},
+    {
+	  "name": "ShiroHouse",
+	  "file": "assets/ShiroHouse.tbin",
+	        "addWarps": [
+		"2 15 RidgesideVillage 130 44"
+	  ]
+	},
+    {
+	  "name": "KennethHouse",
+	  "file": "assets/KennethHouse.tbin",
+	        "addWarps": [
+		"9 13 RidgesideVillage 140 51"
+	  ]
+	},
+    {
+	  "name": "EzekielHouse",
+	  "file": "assets/EzekielHouse.tbin",
+	        "addWarps": [
+		"6 23 RidgesideVillage 83 19"
+	  ]
+	},
+    {
+	  "name": "MaddieHouse",
+	  "file": "assets/MaddieHouse.tbin",
+	        "addWarps": [
+		"4 18 RidgesideVillage 89 28"
+	  ]
+	},
+    {
+	  "name": "PikaHouse",
+	  "file": "assets/PikaHouse.tbin",
+	        "addWarps": [
+		"5 18 RidgesideVillage 59 37"
+	  ]
+	},
+    {
+	  "name": "JericHouse",
+	  "file": "assets/JericHouse.tbin",
+	        "addWarps": [
+		"5 18 RidgesideVillage 22 21"
+	  ]
+	},
+    {
+	  "name": "FreddieHouse",
+	  "file": "assets/FreddieHouse.tbin",
+	        "addWarps": [
+		"8 18 RidgesideVillage 14 63"
+	  ]
+	},
+    {
+	  "name": "LolaShed",
+	  "file": "assets/LolaShed.tbin",
+	        "addWarps": [
+		"9 18 RidgesideVillage 7 48"
+	  ]
+	},
+    {
+	  "name": "AlissaHouse",
+	  "file": "assets/AlissaHouse.tbin",
+	        "addWarps": [
+		"7 15 RidgesideVillage 27 94"
+	  ]
+	},
+    {
+	  "name": "AlissaShed",
+	  "file": "assets/AlissaShed.tbin",
+	        "addWarps": [
+		"4 18 RidgesideVillage 19 98"
+	  ]
+	},
+    {
+	  "name": "BertHouse",
+	  "file": "assets/BertHouse.tbin",
+	        "addWarps": [
+		"15 16 RidgesideVillage 76 115",
+		"18 -1 BertHouse2ndFloor 18 15",
+		"19 -1 BertHouse2ndFloor 19 15"
+	  ]
+	},
+    {
+	  "name": "BertHouse2ndFloor",
+	  "file": "assets/BertHouse2ndFloor.tbin",
+	        "addWarps": [
+		"18 16 BertHouse 18 0",
+		"19 16 BertHouse 19 0"
+	  ]
+	},
+    {
+	  "name": "AguarLab",
+	  "file": "assets/AguarLab.tbin",
+	        "addWarps": [
+		"6 14 RidgesideVillage 98 110",
+		"30 10 RidgesideVillage 110 106",
+		"30 11 RidgesideVillage 110 107"
+	  ]
+	},
+	{
+	  "name": "AguarBasement",
+	  "file": "assets/AguarBasement.tbin",
+	        "addWarps": [
+		"1 -1 AguarLab 1 11"
+	  ]
+	},
+    {
+	  "name": "RSVNinjaHouse",
+	  "file": "assets/RSVNinjaHouse.tbin",
+	        "addWarps": [
+		"8 14 RidgesideVillage 135 83"
+	  ]
+	},
+    {
+	  "name": "IanHouse",
+	  "file": "assets/IanHouse.tbin",
+	        "addWarps": [
+		"9 13 RidgesideVillage 124 72"
+	  ]
+	},
+    {
+      "name": "PrincessVilleDate",
+      "file": "assets/PrincessVilleDate.tbin",
+	        "addWarps": [
+        "-10 0 RSVNinjaHouse -10 0"
+      ]
+    },
+	{
+      "name": "RSVAbandonedHouse",
+      "file": "assets/RSVAbandonedHouse.tbin",
+	        "addWarps": [
+        "6 12 RSVCliff 31 34"
+      ]
+    },
+	{
+      "name": "RSVHiddenWarp",
+      "file": "assets/RSVHiddenWarp.tbin",
+	        "addWarps": [
+        "11 1 RSVNinjaHouse 6 9"
+      ]
+    },
+	{
+      "name": "RSVHiddenWarp2",
+      "file": "assets/RSVHiddenWarp2.tbin",
+	        "addWarps": [
+        "11 1 Ridge 70 33"
+      ]
+    },
+	{
+      "name": "RSVMinecart",
+      "file": "assets/RSVMinecart.tbin",
+	        "addWarps": [
+        "11 1 RSVNinjaHouse 6 9"
+      ]
+    },
+	
+	//Greenhouses
+	{
+	  "name": "RSVGreenhouse1",
+	  "file": "assets/RSVGreenhouse1.tbin",
+	        "addWarps": [
+		"10 24 RidgesideVillage 53 67"
+	  ]
+	},
+	{
+	  "name": "RSVGreenhouse2",
+	  "file": "assets/RSVGreenhouse2.tbin",
+	        "addWarps": [
+		"10 24 RSVTheHike 38 24"
+	  ]
+	},
+	
+	//Ember Night Map
+	{
+	  "name": "EmberNight",
+	  "file": "assets/EmberNight.tbin",
+	        "addWarps": [
+		"38 80 RidgesideVillage 95 2",
+		"39 80 RidgesideVillage 96 2",
+		"40 80 RidgesideVillage 97 2",
+		"41 80 RidgesideVillage 98 2",
+		"42 80 RidgesideVillage 98 2",
+		"43 80 RidgesideVillage 98 2",
+		"44 80 RidgesideVillage 98 2",
+		"45 80 RidgesideVillage 98 2",
+		"46 80 RidgesideVillage 98 2",
+		"47 80 RidgesideVillage 98 2",
+		"48 80 RidgesideVillage 98 2",
+	  ]
+	},
+	//Gathering Festival Map
+	{
+	  "name": "RSVGathering",
+	  "file": "assets/RSVGathering.tbin",
+	        "addWarps": [
+		"150 25 RSVCliff 0 15",
+		"150 26 RSVCliff 0 15",
+		"150 27 RSVCliff 0 15",
+		"150 28 RSVCliff 0 15",
+		"150 112 RSVTheHike 0 27",
+		"150 113 RSVTheHike 0 27",
+		"150 114 RSVTheHike 0 27",
+		"97 -1 Ridge 38 38",
+		"98 -1 Ridge 39 38",
+		"99 -1 Ridge 40 38",
+		"100 -1 Ridge 41 38",
+	  ]
+	},
+  ],
+  "onlyWarps": [
+    {
+	  "name": "BusStop",
+	        "addWarps": [
+		"27 -1 RSVCableCar 19 28",
+		"28 -1 RSVCableCar 20 28",
+		"29 -1 RSVCableCar 21 28",
+	  ]
+	},
+  ],
+
+  "mergeMaps": [
+    {
+      "name": "BusStop",
+      "file": "assets/RSVBusStop.tbin",
+	  "sourceArea": [23,0,12,6],
+	  "position": [23,0],
+    },
+	{
+      "name": "Backwoods",
+      "file": "assets/RSVLine.tbin",
+	  "sourceArea": [0,0,50,12],
+	  "position": [0,0],
+    },
+    {
+      "name": "RidgesideVillage",
+      "file": "assets/AguarWaterfalls.tbin",
+	  "sourceArea": [0,0,1,1],
+	  "position": [63,106],
+	  "Conditions": "LC Game1.MasterPlayer.eventsSeen.Contains(75160063)",
+    },
+    {
+      "name": "AguarCave",
+      "file": "assets/AguarCaveFixed.tbin",
+	  "sourceArea": [0,0,20,25],
+	  "position": [0,0],
+	  "Conditions": "LC Game1.MasterPlayer.eventsSeen.Contains(75160064)",
+    },
+    {
+      "name": "LogCabinHotel3rdFloor",
+      "file": "assets/Richard8HeartsEffect.tbin",
+	  "sourceArea": [0,0,1,2],
+	  "position": [6,13],
+	  "Conditions": "LC Game1.MasterPlayer.eventsSeen.Contains(75160105)",
+    },
+			
+	//Greenhouses unlock
+	{
+		"name": "RidgesideVillage",
+		"file": "assets/UnlockGH1.tbin",
+		"sourceArea": [0,0,7,10],
+		"position": [50,57],
+		"Conditions": "Hn GH1Letter",
+	},
+	{
+		"name": "RSVTheHike",
+		"file": "assets/UnlockGH2.tbin",
+		"sourceArea": [0,0,7,10],
+		"position": [35,14],
+		"Conditions": "y 4/t 2300 2600",
+	},
+	
+	//Jio Shop
+	{
+		"name": "RSVNinjaHouse",
+		"file": "assets/RSVJioShop.tbin",
+		"sourceArea": [0,0,1,2],
+		"position": [10,5],
+		"Conditions": "LC Game1.MasterPlayer.eventsSeen.Contains(75160187)",
+	},
+
+
+  ],
+  
+  "spouseRooms": [
+	{
+      "name": "Alissa",
+	  "file": "assets/RoomAlissa.tmx",
+    },
+	{
+      "name": "Corine",
+	  "file": "assets/RoomCorine.tmx",
+    },
+	{
+      "name": "Flor",
+	  "file": "assets/RoomFlor.tmx",
+    },
+	{
+      "name": "Maddie",
+	  "file": "assets/RoomMaddie.tmx",
+    },
+	{
+      "name": "Ysabelle",
+	  "file": "assets/RoomYsabelle.tmx",
+    },
+	{
+      "name": "Ian",
+	  "file": "assets/RoomIan.tmx",
+    },
+	{
+      "name": "Jeric",
+	  "file": "assets/RoomJeric.tmx",
+    },
+	{
+      "name": "Kenneth",
+	  "file": "assets/RoomKenneth.tmx",
+    },
+	{
+      "name": "Philip",
+	  "file": "assets/RoomPhilip.tmx",
+    },
+	{
+      "name": "Shiro",
+	  "file": "assets/RoomShiro.tmx",
+    },
+  ]
+}

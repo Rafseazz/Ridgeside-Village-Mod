@@ -1,0 +1,14 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "RidgeForestQ1 Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_RidgeForestQ1",
+		"Entries": {
+		//Jio welcomes farmer to RidgeForest (Quadrant1)
+			"75160187": "continue/69 46/farmer 69 50 0 Jio 69 44 0/skippable/addTemporaryActor Beast2 16 32 75 44 2 false/pause 500/move farmer 0 -3 0/emote farmer 8/emote Jio 40/faceDirection Jio 2/pause 1000/speak Jio \"{{i18n:event-75160187.01}}\"/emote farmer 8/speak Jio \"{{i18n:event-75160187.02}}\"/speed Beast2 3/move Beast2 -5 0 3/animate Jio false false 200 24 25 26/playSound swordswipe/showFrame Beast2 19/emote farmer 16/faceDirection Jio 1/speak Jio \"{{i18n:event-75160187.03}}\"/pause 1000/faceDirection Jio 2/speak Jio \"{{i18n:event-75160187.04}}\"/emote farmer 28/speak Jio \"{{i18n:event-75160187.05}}\"/showFrame Jio 23/playSound shadowpeep/pause 800/warp Jio -1000 -1000/emote farmer 16/pause 1000/end",
+		},
+	},
+]
+}

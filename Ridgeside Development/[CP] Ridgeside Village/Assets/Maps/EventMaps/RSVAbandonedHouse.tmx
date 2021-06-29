@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="12" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="170">
+ <properties>
+  <property name="AmbientLight" value="95 95 95"/>
+ </properties>
+ <tileset firstgid="1" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <layer id="1" name="Back" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,1404,1407,1404,1408,1404,1690,1407,1404,1407,1404,0,
+0,1436,1439,1436,1440,1436,1722,1439,1436,1439,1436,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,2079,2080,2080,2080,2080,2080,2080,2080,2080,2079,607,
+0,639,640,639,640,639,640,639,640,639,640,639,
+0,607,1659,1660,608,607,608,2141,608,607,608,607,
+0,639,1691,1692,640,639,2173,639,640,639,640,639,
+0,607,1723,1724,608,607,2172,607,608,607,608,607,
+0,639,640,639,640,639,2141,639,640,639,640,639,
+0,607,608,607,608,607,608,607,608,607,608,607,
+0,639,640,639,640,639,640,639,640,639,640,639
+</data>
+ </layer>
+ <objectgroup id="6" name="Back"/>
+ <layer id="2" name="Buildings" width="12" height="12">
+  <properties>
+   <property name="AmbientLight" value="255 255 255"/>
+  </properties>
+  <data encoding="csv">
+10,3,3,3,3,3,3,3,3,3,3,12,
+65,0,0,0,0,0,0,0,0,0,0,69,
+65,0,0,0,0,0,0,0,0,0,0,69,
+65,1471,1472,1468,1472,1471,1754,1468,1471,1472,1471,69,
+65,2148,0,2148,2148,0,0,0,0,1036,1037,69,
+65,2148,0,0,0,0,0,0,0,0,0,69,
+65,0,0,0,1180,856,857,0,0,1100,1101,69,
+65,0,0,0,0,888,889,1394,0,0,0,69,
+65,0,0,0,0,0,0,0,0,0,0,69,
+65,891,892,0,0,0,0,0,0,0,0,69,
+97,923,924,0,0,0,0,0,0,0,0,131,
+1,1,1,1,1,65,0,69,1,1,1,1
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings">
+  <object id="160" name="TileData" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse4&quot;"/>
+   </properties>
+  </object>
+  <object id="161" name="TileData" x="96" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse4&quot;"/>
+   </properties>
+  </object>
+  <object id="162" name="TileData" x="112" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse4&quot;"/>
+   </properties>
+  </object>
+  <object id="163" name="TileData" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse4&quot;"/>
+   </properties>
+  </object>
+  <object id="164" name="TileData" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse3&quot;"/>
+   </properties>
+  </object>
+  <object id="165" name="TileData" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse2&quot;"/>
+   </properties>
+  </object>
+  <object id="166" name="TileData" x="64" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse2&quot;"/>
+   </properties>
+  </object>
+  <object id="167" name="TileData" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse2&quot;"/>
+   </properties>
+  </object>
+  <object id="168" name="TileData" x="80" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse1&quot;"/>
+   </properties>
+  </object>
+  <object id="169" name="TileData" x="32" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.abandonedhouse5&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="Paths" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <layer id="4" name="Front" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,307,0,0,310,311,0,0,0,
+0,1818,1819,1820,339,340,341,342,343,0,0,0,
+0,2116,0,2116,2116,0,0,0,0,0,0,0,
+0,2116,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,1068,1069,0,
+0,0,0,0,0,650,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,859,860,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,197,197,197,197,163,0,164,197,197,197,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="9" name="Front"/>
+ <layer id="5" name="AlwaysFront" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,1786,1787,1788,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,371,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,545,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

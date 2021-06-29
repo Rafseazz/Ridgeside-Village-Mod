@@ -1,0 +1,46 @@
+# user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# emacs, see https://github.com/github/gitignore/blob/master/Global/Emacs.gitignore
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+_releases/
+
+# Visual Studio cache/options
+.vs/
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# NuGet packages
+*.nupkg
+**/packages/*
+*.nuget.props
+*.nuget.targets
+
+# vanilla map tilesheets
+SmallBeachFarm/assets/paths.png
+SmallBeachFarm/assets/spring_beach.png
+SmallBeachFarm/assets/spring_island_tilesheet_1.png
+SmallBeachFarm/assets/spring_outdoorsTileSheet.png
+SmallBeachFarm/assets/spring_town.png
+
+# JetBrains Rider
+.idea/

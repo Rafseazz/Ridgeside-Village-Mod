@@ -1,0 +1,26 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "AguarBasment Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_AguarBasement",
+		"Entries": { 
+		//Farmer sees Aguar perform magic. (Aguar 2 hearts)
+			"75160061/f Aguar 500/t 900 1400": "WizardSong/5 7/farmer 1 4 2 Aguar 7 8 2/skippable/pause 1000/faceDirection Aguar 1/pause 500/emote Aguar 40/pause 500/animate Aguar false true 100 20 20 21 21 22 22 23 23/pause 2000/speak Aguar \"{{i18n:event-75160061.01}}\"/pause 500/stopAnimation Aguar 16/pause 500/emote farmer 8/pause 500/screenFlash .8/playSound thunder_small/glow 0 0 255 true/pause 500/emote farmer 16/pause 1000/stopGlowing/pause 1000/faceDirection Aguar 2/pause 500/animate Aguar false true 100 20 20 21 21 22 22 23 23/speak Aguar \"{{i18n:event-75160061.02}}\"/move farmer 0 1 1/stopAnimation Aguar 0/faceDirection Aguar 3/emote Aguar 16/pause 500/speak Aguar \"{{i18n:event-75160061.03}}\"/emote farmer 28/move Aguar -3 0 0/move Aguar 0 -3 3/pause 100/emote Aguar 12/pause 500/speak Aguar \"{{i18n:event-75160061.04}}\"/emote farmer 28/pause 500/speak Aguar \"$q 75160061 null \"#{{i18n:event-75160061.05}}#$r 75160061 50 aguar1_1#{{i18n:event-75160061.06}}#$r 75160061 -100 aguar1_2#{{i18n:event-75160061.07}}\"/fork AguarAngry1/faceDirection Aguar 1/emote Aguar 12/pause 500/speak Aguar \"{{i18n:event-75160061.08}}\"/faceDirection Aguar 3/emote farmer 8/pause 500/speak Aguar \"{{i18n:event-75160061.09}}\"/emote farmer 16/pause 500/move Aguar 1 0 1/pause 500/speak Aguar \"{{i18n:event-75160061.10}}\"/emote farmer 8/pause 500/faceDirection Aguar 3/pause 200/speak Aguar \"{{i18n:event-75160061.11}}\"/move farmer 1 0 1/emote farmer 28/pause 500/speak Aguar \"{{i18n:event-75160061.12}}\"/pause 500/emote farmer 32/pause 1000/fade/end dialogueWarpOut Aguar \"{{i18n:event-75160061.13}}\"",
+			"AguarAngry1": "pause 500/emote Aguar 12/pause 500/screenFlash .8/playSound dwop/emote farmer 8/pause 500/emote Aguar 56/pause 500/speak Aguar \"{{i18n:event-75160061.AguarAngry1.01}}\"/emote farmer 16/pause 500/emote Aguar 12/pause 500/speak Aguar \"{{i18n:event-75160061.AguarAngry1.02}}\"/emote farmer 16/pause 500/end dialogueWarpOut Aguar \"{{i18n:event-75160061.AguarAngry1.03}}\"",
+			},
+	},
+        {
+                //Event dialogue Aguar 2 hearts
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Aguar",
+                "Entries": {                        
+                        "aguar1_1": "{{i18n:event-75160061.AguarFork1}}",
+                        "aguar1_2": "{{i18n:event-75160061.AguarFork2}}",                        
+                }
+        },
+
+	
+]
+}

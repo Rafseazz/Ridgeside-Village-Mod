@@ -1,0 +1,19 @@
+{
+
+	"spring": "610 LogCabinHotel2ndFloor 6 5 2/800 Town 62 16 2/1300 LogCabinHotelLobby 21 14 2/2000 LogCabinHotel2ndFloor 2 9 1/2400 LogCabinHotel2ndFloor 3 5 0 flor_sleep",
+	"summer": "610 LogCabinHotel2ndFloor 6 5 2/1000 BusStop 6 14 0/1500 Town 12 12 1/1800 LogCabinHotel2ndFloor 2 9 1/2200 LogCabinHotel2ndFloor 3 5 0 flor_sleep",
+	"fall": "610 LogCabinHotel2ndFloor 6 5 2/800 Town 17 58 1/1200 Forest 42 9 2/1800 LogCabinHotel2ndFloor 2 9 1/2200 LogCabinHotel2ndFloor 3 5 0 flor_sleep",
+	"winter": "610 LogCabinHotel2ndFloor 6 5 2/1000 LogCabinHotelLobby 21 14 2/1600 Saloon 43 22 2/2000 LogCabinHotel2ndFloor 3 5 2 flor_sleep",
+	"rain": "610 LogCabinHotel2ndFloor 6 5 2/1200 LogCabinHotel2ndFloor 27 14 3/1700 LogCabinHotel2ndFloor 28 5 2/2000 LogCabinHotel2ndFloor 3 5 2 flor_sleep",
+	"Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 89 100 3/1600 LogCabinHotel2ndFloor 2 9 1/2200 LogCabinHotel2ndFloor 3 5 0 flor_sleep",
+	"Wed": "GOTO Tue",
+	"Fri": "GOTO Tue",
+	"Sun": "610 LogCabinHotel2ndFloor 6 5 2/1200 RidgesideVillage 115 51 0/1600 RidgesideVillage 90 65 0/2000 LogCabinHotel2ndFloor 3 5 0 flor_sleep",
+	
+	//Marriage Schedule
+	"marriage_Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 89 100 3/1800 BusStop -1 23 3",
+	"marriage_Wed": "GOTO marriage_Tue",
+	"marriage_Fri": "GOTO marriage_Tue",
+	"marriage_Mon": "1000 SeedShop 13 23 0/1400 RidgesideVillage 95 61 0/1800 BusStop -1 23 3",
+
+}

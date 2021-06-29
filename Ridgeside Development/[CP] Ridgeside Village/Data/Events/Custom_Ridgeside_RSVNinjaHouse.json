@@ -1,0 +1,32 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "RSVNinjaHouse Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_RSVNinjaHouse",
+		"Entries": {
+		//Jio does not want to be disturbed (Jio 2 hearts)
+			"75160078/f Jio 500/t 1100 1200": "none/8 7/farmer 8 12 0 Jio 8 7 2/skippable/pause 100/showFrame Jio 21/move farmer 0 -3 0/emote farmer 8/pause 500/emote Jio 40/pause 1000/speak Jio \"{{i18n:event-75160078.01}}\"/emote farmer 56/pause 500/emote Jio 40/pause 1000/showFrame Jio 20/pause 1000/faceDirection Jio 2/speak Jio \"{{i18n:event-75160078.02}}\"/emote farmer 28/pause 500/speak Jio \"{{i18n:event-75160078.03}}\"/emote farmer 16/pause 500/emote farmer 28/pause 500/speak Jio \"$q 75160078 null \"#{{i18n:event-75160078.04}}#$r 75160078 0 jio1_1#{{i18n:event-75160078.05}}#$r 75160078 -200 jio1_2#{{i18n:event-75160078.06}}\"/fork JioRetreat/pause 500/speak Jio \"{{i18n:event-75160078.07}}\"/emote farmer 32/pause 500/speak Jio \"{{i18n:event-75160078.08}}\"/emote farmer 28/pause 800/end dialogue Jio \"{{i18n:event-75160078.09}}\"",
+			"JioRetreat": "pause 500/speak Jio \"{{i18n:event-75160078.JioRetreat.01}}\"/emote farmer 28/pause 500/speak Jio \"{{i18n:event-75160078.JioRetreat.02}}\"/emote farmer 16/showFrame Jio 23/pause 200/end dialogueWarpOut Jio \"{{i18n:event-75160078.JioRetreat.03}}\"",
+
+		//Jio asks for favor (Jio 6 hearts)
+			"75160080/f Jio 1500/t 1100 1200/e 75160079/w sunny": "playful/8 7/farmer 8 12 0 Jio 8 7 2 Pierre -2000 -2000 0/skippable/pause 100/showFrame Jio 21/move farmer 0 -3 0/emote Jio 16/pause 500/faceDirection Jio 0/faceDirection Jio 2/speak Jio \"{{i18n:event-75160080.01}}\"/emote farmer 32/pause 500/speak Jio \"{{i18n:event-75160080.02}}\"/emote farmer 8/pause 500/speak Jio \"{{i18n:event-75160080.03}}\"/emote farmer 16/pause 500/speak Jio \"{{i18n:event-75160080.04}}\"/emote farmer 16/pause 500/speak Jio \"{{i18n:event-75160080.05}}\"/emote farmer 28/pause 500/speak Jio \"{{i18n:event-75160080.06}}\"/pause 500/globalFade/viewport -1000 -1000/changeToTemporaryMap Town false/warp farmer 38 58/faceDirection farmer 1/warp Jio -2000 -2001/fade/viewport 42 57/pause 500/move farmer 5 0 0/move farmer 0 -1 0/pause 500/speak Jio \"{{i18n:event-75160080.07}}\"/emote farmer 8/pause 500/faceDirection farmer 1/pause 600/faceDirection farmer 2/pause 600/faceDirection farmer 3/pause 600/speak Jio \"{{i18n:event-75160080.08}}\"/faceDirection farmer 0/emote farmer 16/viewport move 0 -1 3000/pause 1000/fade/viewport 43 51/showFrame Jio 23/playSound shadowpeep/warp Jio 46 51/pause 500/showFrame Jio 0/pause 500/speak Jio \"{{i18n:event-75160080.09}}\"/viewport move 0 1 3000/pause 1000/fade/viewport 43 57/emote farmer 28/pause 800/warp farmer -2000 -2001/playSound doorClose/pause 1000/speak Pierre \"{{i18n:event-75160080.10}}\"/pause 3000/speak Pierre \"{{i18n:event-75160080.11}}\"/playSound purchase/pause 2000/playSound doorClose/warp farmer 43 57/faceDirection farmer 2/showFrame Jio 23/pause 500/playSound shadowpeep/warp Jio 42 57/pause 800/faceDirection Jio 1/faceDirection farmer 3/speak Jio \"{{i18n:event-75160080.12}}\"/emote farmer 56/pause 500/speak Jio \"{{i18n:event-75160080.13}}\"/move Jio 0 1 3/move farmer 0 1 3/move Jio -3 0 3 true/move farmer -3 0 3 true/pause 500/end dialogueWarpOut Jio \"{{i18n:event-75160080.14}}\"",
+
+		//Kiwi hiding (Kiwi 2 hearts)
+			"75160177/f Kiwi 500/t 1000 1100": "playful/8 7/farmer 8 12 0 Kiwi 8 7 2/skippable/pause 500/playSound doorClose/emote Kiwi 16/pause 500/speak Kiwi \"{{i18n:event-75160177.01}}\"/emote farmer 8/pause 500/move farmer 0 -3 0/emote farmer 56/pause 500/emote Kiwi 40/pause 500/speak Kiwi \"{{i18n:event-75160177.02}}\"/emote farmer 40/pause 500/jump Kiwi/emote farmer 16/pause 500/speak Kiwi \"{{i18n:event-75160177.03}}\"/emote farmer 16/pause 500/emote farmer 56/pause 500/emote Kiwi 8/pause 500/speak Kiwi \"{{i18n:event-75160177.04}}\"/emote farmer 32/pause 500/emote Kiwi 40/pause 500/move Kiwi 0 -1 0/speak Kiwi \"{{i18n:event-75160177.05}}\"/emote farmer 28/pause 1000/end dialogue Kiwi \"{{i18n:event-75160177.06}}\"",
+		},
+	},
+
+        {
+                //Event dialogue Jio 2 hearts
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Jio",
+                "Entries": {                        
+                        "jio1_1": "{{i18n:event-75160078.Fork1}}",
+                        "jio1_2": "{{i18n:event-75160078.Fork2}}",                
+                }
+        },
+
+]
+}

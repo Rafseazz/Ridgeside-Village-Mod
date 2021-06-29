@@ -1,0 +1,83 @@
+{
+"Changes": [
+	
+//World Map Changes-----------------
+
+	//Vanilla
+ 	{
+		"LogName": "Map Replace Vanilla",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/map.png",
+		//"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		//"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Replace",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+	},
+ 	//{
+		//"LogName": "Map Overlay 2",
+		///"Action": "EditImage",
+		//"Target": "LooseSprites/map",
+		//"FromFile": "assets/Map/map.png",
+		//"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
+		//"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
+		//"PatchMode": "Overlay",
+		//"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+	//},
+ 	//{
+		//"LogName": "Map Overlay 3",
+		//"Action": "EditImage",
+		//"Target": "LooseSprites/map",
+		//"FromFile": "assets/Map/map.png",
+		//"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
+		//"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
+		//"PatchMode": "Overlay",
+		//"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+	//},
+	
+	//SVE Compat
+ 	{
+		"LogName": "Map Replace SVE",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		//"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		//"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Replace",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=flashshifter.immersivefarm2remastered": false },
+	},
+ 	//{
+		//"LogName": "Map Overlay 2",
+		//"Action": "EditImage",
+		//"Target": "LooseSprites/map",
+		//"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		//"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
+		//"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
+		//"PatchMode": "Overlay",
+		//"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+	//},
+ 	//{
+		//"LogName": "Map Overlay 3",
+		//"Action": "EditImage",
+		//"Target": "LooseSprites/map",
+		//"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		//"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
+		//"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
+		//"PatchMode": "Overlay",
+		//"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+	//},
+	
+	//SVE IF2R Compat
+ 	{
+		"LogName": "Map Replace SVE + IF2R",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEIF2Rcompat/{{season}}_map.png",
+		//"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		//"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Replace",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=flashshifter.immersivefarm2remastered": true },
+	},
+	
+]
+}

@@ -1,0 +1,247 @@
+{
+"Changes": [
+	
+//------------------------------------- D A T A B L E S -------------------------------------
+
+//------------------------
+// E N G A G E M E N T    
+//------------------------
+
+	{
+			
+		"LogName": "Engagement Dialogue",
+		"Action": "EditData",
+		"Target": "Data/EngagementDialogue",
+		"Entries": {
+		
+				"Alissa0": "Wait, @? What are you doing?$l#$b#Oh don't tell me!! No way!!$l#$b#It's a YES ofcourse @! I love you!$l#$b#*Smooch*$l",
+				"Alissa1": "I can't wait to tell Olga and Bert!! I'm so happy @!$h",
+				
+				"Corine0": "Hey uhmm @?? Is that what I think it is??$l#$b#Oh my yoba, @... *smooch*$l#$b#Ofcourse! Ofcourse it's a yes! I really really love you.$l",
+				"Corine1": "I'll tell dad later. He will be so surprised!$h",
+				
+				"Flor0": "Oh wow, that necklace looks interesting @...#$b#Wait..$u#$b#Are you??$l#$b#@!!!! I... I don't know what to say..$l#$b#Yes.. Yes I will marry you!$l",
+				"Flor1": "I'm so excited @... I love you!!$l",
+				
+				"Ian0": "Oh hey. Are you joking? Don't tell me you're not joking!$l#$b#@! No way! Really?$h#$b#Ofcourse I'll marry you! I love you.$l",
+				"Ian1": "*Kisses your forehead* Wow. I can't believe we're getting married!$h",
+				
+				"Jeric0": "@!!!$u#$b#I.. I don't know what to say!$l#$b#I'm speechless! Uhmm..$l#$b#Come here you! *kisses you*#$b#Ofcourse. It's a YES!$h",
+				"Jeric1": "This is amazing! I can't wait to start a life with you!$h",
+				
+				"Kenneth0": "@?? Are you? Is that??$l#$b#This is surprising. I.. I'm so happy @.$l#$b#Yes. Yes ofcourse I'll marry you @. I love you.$l",
+				"Kenneth1": "You made me the happiest man in the world right now! I'm so excited!$h",
+				
+				"Maddie0": "@! Now's not the time to play pranks on me!$a#$b#Wait.. Are you serious?$l#$b#@!! No wait! Is this real?$l#$b#@... I.. I..#$b#*kisses you and holds you tight*$l#$b#Yes.. Yes I'll marry you.. I really do..$l",
+				"Maddie1": "Sorry.. I was so surprised!$l#$b#I'm so happy @.. So very happy!$l",
+				
+				"Philip0": "Hey uhmm are you??$u#$b#@? Are you really serious?$l#$b#Yes! It's a 100 percent yes!$h#$b#I love you @!$l",
+				"Philip1": "I can't wait for our wedding @!!$h#$b#Man! I'm so happy!$l",
+				
+				"Shiro0": "!!!$u#$b#@????$l#$b#Do you really want me?$l#$b#Have you thought about this??$l#$b#Isn't my answer obvious? Ofcourse I want to marry you @.$l#$b#*Embraces and kisses you*$l",
+				"Shiro1": "*Embraces you again*$l#$b#I'm so happy right now @... I can't wait to tell Yuuma.$h",
+				
+				"Ysabelle0": "Baby? Wait. Are you really proposing to me love??$l#$b#EEEP!!$l#$b#I do! I do!! I really do!$l#$b#I love you! *smooch*$l",
+				"Ysabelle1": "I have to tell grandpa! I'm so happy!!$l#$b#Hey @.. I love you so much!$l",
+				
+		},
+	},
+	
+	//Female Wedding Fixes
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Utility.cs.5367": "When @ first arrived in Pelican Town, no one knew if he'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Alissa in the bonds of marriage.",
+		"Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if she'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Alissa in the bonds of marriage.",
+		"Utility.cs.5371": "@... Alissa... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+		"Utility.cs.5377": "@... Alissa... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and..., well, wife!$h",
+		},
+		"When": { "Relationship:Alissa": "Engaged" },
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Utility.cs.5367": "When @ first arrived in Pelican Town, no one knew if he'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Corine in the bonds of marriage.",
+		"Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if she'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Corine in the bonds of marriage.",
+		"Utility.cs.5371": "@... Corine... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+		"Utility.cs.5377": "@... Corine... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and..., well, wife!$h",
+		},
+		"When": { "Relationship:Corine": "Engaged" },
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Utility.cs.5367": "When @ first arrived in Pelican Town, no one knew if he'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Flor in the bonds of marriage.",
+		"Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if she'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Flor in the bonds of marriage.",
+		"Utility.cs.5371": "@... Flor... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+		"Utility.cs.5377": "@... Flor... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and..., well, wife!$h",
+		},
+		"When": { "Relationship:Flor": "Engaged" },
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Utility.cs.5367": "When @ first arrived in Pelican Town, no one knew if he'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Maddie in the bonds of marriage.",
+		"Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if she'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Maddie in the bonds of marriage.",
+		"Utility.cs.5371": "@... Maddie... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+		"Utility.cs.5377": "@... Maddie... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and..., well, wife!$h",
+		},
+		"When": { "Relationship:Maddie": "Engaged" },
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Utility.cs.5367": "When @ first arrived in Pelican Town, no one knew if he'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Ysabelle in the bonds of marriage.",
+		"Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if she'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Ysabelle in the bonds of marriage.",
+		"Utility.cs.5371": "@... Ysabelle... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and wife!$h",
+		"Utility.cs.5377": "@... Ysabelle... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and..., well, wife!$h",
+		},
+		"When": { "Relationship:Ysabelle": "Engaged" },
+	},
+	
+//--------------------
+// Special Dialogue   
+//--------------------
+
+	{
+		"LogName": "Alissa Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Alissa",
+		"Entries": {
+			"give_flowersA": "Hey what's this @?#$b#Wait, Are you serious?$u#$b#You want me as your girlfriend?$l#$b#Ofcourse it's a yes!$l#$b#I wouldn't have it any other way!$l#$e#I'm seriously super happy right now, I can't stop smiling!$l#$b#Teehee < $l",
+			"give_flowersB": "Hey what's this @?#$b#Wait, Are you serious?$u#$b#You want me as your girlfriend?$l#$b#Ofcourse it's a yes!$l#$b#I wouldn't have it any other way!$l#$e#I'm seriously super happy right now, I can't stop smiling!$l#$b#Teehee < $l",
+			"stardrop_gift": "You've been the best partner I never thought I could have..$l#$b#No song could ever summerize how much I appreciate and love you @.. I hope this little gift could show you how special you are to me.$l",
+			"rejectNPCA": "I'm sorry but I don't see you as such @.$s#$b#I think you had the wrong idea. I'm sorry but it's a no.$s",
+			"rejectNPCB": "I'm sorry but I don't see you as such @.$s#$b#I think you had the wrong idea. I'm sorry but it's a no.$s",
+		},
+	},
+	{
+		"LogName": "Corine Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Corine",
+		"Entries": {
+			"give_flowersA": "Oh my$u#$b#Are you sure about this?$l#$b#You really want me as your girlfriend??$l#$b#Well of course I’ll be happy to<3#$e#Oh my, we’re really together now?$h#$b#I’m so happy right now$l#$e#Give me a kiss @?$l#$b#Thank you for today! <$h",
+			"give_flowersB": "Oh my$u#$b#Are you sure about this?$l#$b#You really want me as your girlfriend??$l#$b#Well of course I’ll be happy to<3#$e#Oh my, we’re really together now?$h#$b#I’m so happy right now$l#$e#Give me a kiss @?$l#$b#Thank you for today! <$h",
+			"stardrop_gift": "Through dangers and sickness, throughout everything, I'll be with you.$l#$b#Hehe, I just wanted to give you this hun.$h#$b#I just want to say how much you mean to me, and how much I love you..$l#$b#I fight and live for another day because I want to be with you forever. I love you @..$l#$b#Teehee < *kisses you* $l",
+			"rejectNPCA": "Oh, uhm.. $u#$b#I don’t want you to take this the wrong way… but uhh. I don’t like you in that sense.$s#$b#I mean we could just be friends right? I’m really sorry @ $s",
+			"rejectNPCB": "Oh, uhm.. $u#$b#I don’t want you to take this the wrong way… but uhh. I don’t like you in that sense.$s#$b#I mean we could just be friends right? I’m really sorry @ $s",
+		},
+	},
+	{
+		"LogName": "Flor Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Flor",
+		"Entries": {
+			"give_flowersA": "Uhhmm @?.. What's this for?#$b#Wait, uhmm... Isn't this???$u#$b#Uhm Ofcourse! I'd love to be your girlfriend!$l#$b#Uhm.. How does one be a girlfriend?? I mean.. I..$l#$b#I think I'll start with this? *Kisses you*$l#$b#I'm so happy!!$l",
+			"give_flowersB": "Uhhmm @?.. What's this for?#$b#Wait, uhmm... Isn't this???$u#$b#Uhm Ofcourse! I'd love to be your girlfriend!$l#$b#Uhm.. How does one be a girlfriend?? I mean.. I..$l#$b#I think I'll start with this? *Kisses you*$l#$b#I'm so happy!!$l",
+			"stardrop_gift": "Everything you have given and provided me with has been wonderful @... I am so lucky being your wife..$l#$b#Here's a little gift of mine, I hope you like it @..$h#$b#I love you!!$l",
+			"rejectNPCA": "Uhm.. No I'm sorry. I don't have any interests on being in a romantic relationship. I'm too busy.#$b#I hope you understand.$h",
+			"rejectNPCB": "Uhm.. No I'm sorry. I don't have any interests on being in a romantic relationship. I'm too busy.#$b#I hope you understand.$h",
+		},
+	},
+	{
+		"LogName": "Ian Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Ian",
+		"Entries": {
+			"give_flowersA": "@?! Hey? Do you know what this means?$l#$b#Wait, you're not joking right? Hey come on now!$h#$b#You're not??!$u#$b#Oh @.. Come here you!$l#$b#*kisses you*#$e#Ofcourse that was a yes! I love you @!$h",
+			"give_flowersB": "@?! Hey? Do you know what this means?$l#$b#Wait, you're not joking right? Hey come on now!$h#$b#You're not??!$u#$b#Oh @.. Come here you!$l#$b#*kisses you*#$e#Ofcourse that was a yes! I love you @!$h",
+			"stardrop_gift": "My life has been a lot more amazing and meaningful when you were in it. I'm very much thankful you're with me @.$l#$b#So here, Uhm.. I hope this shows you how much I really appreciate you @.$l",
+			"rejectNPCA": "Oh? Uhm, Please don't joke about relationships and stuff. It's not funny.$a#$b#I'm sorry but if you were serious, It's a no.$s",
+			"rejectNPCB": "Oh? Uhm, Please don't joke about relationships and stuff. It's not funny.$a#$b#I'm sorry but if you were serious, It's a no.$s",
+		},
+	},
+	{
+		"LogName": "Jeric Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Jeric",
+		"Entries": {
+			"give_flowersA": "!!$u#$b#@!$l I--I'm speechless!$l#$b#I was just about to give you one too you know?$h#$b#Obviously the answer is yes!$l#$e#Now come here handsome!$l^Now come here beautiful!$l#$b#*kisses you*$l",
+			"give_flowersB": "!!$u#$b#@!$l I--I'm speechless!$l#$b#I was just about to give you one too you know?$h#$b#Obviously the answer is yes!$l#$e#Now come here handsome!$l^Now come here beautiful!$l#$b#*kisses you*$l",
+			"stardrop_gift": "Hey @.. You win. You have the most amazing farm.$l#$b#Why? This is serious now okay? Unlike last time.$h#$b#It's because it homes our family, it homes us.$l#$b#And, I can't tell you how much I love being with you. So here's your reward babe.$l#$b#Love ya!$h",
+			"rejectNPCA": "Ey now, I'm sorry but it's a no.$s#$b#But hey I'm flattered though! Don't be a stranger now.",
+			"rejectNPCB": "Ey now, I'm sorry but it's a no.$s#$b#But hey I'm flattered though! Don't be a stranger now.",
+		},
+	},
+	{
+		"LogName": "Kenneth Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Kenneth",
+		"Entries": {
+			"give_flowersA": "Nice set of flower there @.$h#$b#Wait, isn't that.#$b#Whaatt?!$u#$b#@? Really?$l#$b#You really shocked me there! It's yes ofcourse.$l#$b#I love you!$h *kisses you*#$e#I'm happy that you felt the same @.$l",
+			"give_flowersB": "Nice set of flower there @.$h#$b#Wait, isn't that.#$b#Whaatt?!$u#$b#@? Really?$l#$b#You really shocked me there! It's yes ofcourse.$l#$b#I love you!$h *kisses you*#$e#I'm happy that you felt the same @.$l",
+			"stardrop_gift": "Hey this might come off as cheesy but..$h#$b#You're the light of my life @. And you are amazing.$l#$b#I wanted to give you this as a symbol of my love. I hope you like it @. I love you.$h",
+			"rejectNPCA": "Nope, Sorry I don't have time for those things @.#$b#I think I'm not cut for that.$s",
+			"rejectNPCB": "Nope, Sorry I don't have time for those things @.#$b#I think I'm not cut for that.$s",
+		},
+	},
+	{
+		"LogName": "Maddie Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Maddie",
+		"Entries": {
+			"give_flowersA": "Are you serious?$8#$b#I mean, uh.. You’re not kidding me or playing some sort of prank right?$l#$b#You’d really want me as your girlfriend?$9#$e#Well, sure.. If you’d really like me to be$8#$b#*slowly smiles*Hihi I’m your girlfriend now?$l#$b#It’s really official!$h#$b#*kisses you*$l#$e#You really couldn’t hold in what you feel for me can you$6",
+			"give_flowersB": "Are you serious?$8#$b#I mean, uh.. You’re not kidding me or playing some sort of prank right?$l#$b#You’d really want me as your girlfriend?$9#$e#Well, sure.. If you’d really like me to be$8#$b#*slowly smiles*Hihi I’m your girlfriend now?$l#$b#It’s really official!$h#$b#*kisses you*$l#$e#You really couldn’t hold in what you feel for me can you$6",
+			"stardrop_gift": "Hey, I'll only be this cheesy once so you better listen.$l#$b#Take this gift, because you deserve it.$l#$b#You have become so special in my life to the point that I have loved again, and that means a lot for me @..$l#$b#I love you so much.. SO SO MUCH!$l#$b#And I'm very much happy, So happy that I have you @.. Thank you.$l",
+			"rejectNPCA": "Uhhh, I don’t think so.$u#$b#Trust me, that is a waste of time.$6",
+			"rejectNPCB": "Uhhh, I don’t think so.$u#$b#Trust me, that is a waste of time.$6",
+		},
+	},
+	{
+		"LogName": "Philip Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Philip",
+		"Entries": {
+			"give_flowersA": "Hey now, really!?$l#$b#Wahaha! Hey! Stop really!?$l#$b#Oh come here you!$l#$b#*kisses you* Isn't the answer obvious? It's a yes!$l#$e#I feel like I'm flying right now! I'm so happy!!!$h",
+			"give_flowersB": "Hey now, really!?$l#$b#Wahaha! Hey! Stop really!?$l#$b#Oh come here you!$l#$b#*kisses you* Isn't the answer obvious? It's a yes!$l#$e#I feel like I'm flying right now! I'm so happy!!!$h",
+			"stardrop_gift": "Would you believe that you're my favorite person? Coz you're super amazing.$l#$b#This little geek would always fall in love with you everyday and I won't be tired because you're just super.$l#$b#So here's a gift @, I hope you like it.$h#$b#You mean so much to me, I love you!$h",
+			"rejectNPCA": "Hey now, But I don't think I see you that way @.$s#$b#I hope I didn't give you the wrong idea or something. Again I'm really sorry.$s",
+			"rejectNPCB": "Hey now, But I don't think I see you that way @.$s#$b#I hope I didn't give you the wrong idea or something. Again I'm really sorry.$s",
+		},
+	},
+	{
+		"LogName": "Shiro Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Shiro",
+		"Entries": {
+			"give_flowersA": "@? Is this really happening?$u#$b#I... I'm glad.$l#$b#I'm glad you feel the same way about me @. I was beginning to worry maybe I was hopeless.$l#$b#I'm so happy! *kisses you*$l#$b#Hehe, I can feel my heart pounding for joy, But I hope not too much though or it would kinda hurt.$h",
+			"give_flowersB": "@? Is this really happening?$u#$b#I... I'm glad.$l#$b#I'm glad you feel the same way about me @. I was beginning to worry maybe I was hopeless.$l#$b#I'm so happy! *kisses you*$l#$b#Hehe, I can feel my heart pounding for joy, But I hope not too much though or it would kinda hurt.$h",
+			"stardrop_gift": "Here @, I want you to have this.$h#$b#It's a gift from me to you, why?$h#$b#Well because I want you to know how special you are to me, and how much I love that you're with me.$l#$b#Whatever I've been through just to meet you, I'd gladly go through all that, because you're worth it.$h#$b#I'll do my best to be get better so that you won't have to worry too much okay?$h#$b#I love you.$l",
+			"rejectNPCA": "Uhm No @. This is a waste of time.#$b#I don't see you as the way you see me. So I'm sorry.",
+			"rejectNPCB": "Uhm No @. This is a waste of time.#$b#I don't see you as the way you see me. So I'm sorry.",
+		},
+	},
+	{
+		"LogName": "Ysabelle Special Dialogue",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Ysabelle",
+		"Entries": {
+			"give_flowersA": "Oh, really?$l#$b#You’d like it if I would be your girlfriend?$l#$b#Of course I will! I’m happy to be your girlfriend!$h#$b#Oh my, We’re really together! I hope you won’t get tired of me$7#$e#But enough of that overthinking! I want to focus on now and just be happy that we’re together already!$h#$b#Give me a kiss?*points to her cheeks*$l.",
+			"give_flowersB": "Oh, really?$l#$b#You’d like it if I would be your girlfriend?$l#$b#Of course I will! I’m happy to be your girlfriend!$h#$b#Oh my, We’re really together! I hope you won’t get tired of me$7#$e#But enough of that overthinking! I want to focus on now and just be happy that we’re together already!$h#$b#Give me a kiss?*points to her cheeks*$l.",
+			"stardrop_gift": "My darling, You're the masterpiece of this world for me.. You're simply amazing.$l#$b#You don't know how happy I am to be living a life with you in it.. I'd trade all what I have just to have you by my side.$l#$b#Here's a gift from me baby, I hope my emotions reach you.$h#$b#Now come here and give me a kiss my love.$l",
+			"rejectNPCA": "Oh dear$u#$b#I’m sorry but I’d have to reject your offer..$s#$b#I just don’t see us in that way @ $s#$e#I hope you understand where I’m coming from. And I wish you all the best life has to offer.$s#$b#I apologize if I must’ve given you the wrong impression$7",
+			"rejectNPCB": "Oh dear$u#$b#I’m sorry but I’d have to reject your offer..$s#$b#I just don’t see us in that way @ $s#$e#I hope you understand where I’m coming from. And I wish you all the best life has to offer.$s#$b#I apologize if I must’ve given you the wrong impression$7",
+		},
+	},
+	
+	
+	
+//-----------------------------------
+// M A R R I A G E  D I A L O G U E  
+//-----------------------------------
+	
+	{
+		"LogName": "Marriage Dialogue",
+		"Action": "Load",
+		"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle",
+		"FromFile": "assets/MarriageDialogue/{{TargetWithoutPath}}.json",
+	},
+
+	
+]
+}

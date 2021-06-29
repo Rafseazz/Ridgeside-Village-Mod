@@ -1,0 +1,28 @@
+{
+"Changes": [
+
+/*********
+	** MapString Changes
+	*********/
+
+	{
+		"LogName": "Winter Mapstring for Crops",		
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+	    "When": { "Season": "winter", },
+		"Entries": {
+				"rsv.23": "{{i18n:DynamicChanges.Winter.Crops}}",
+				},
+	},
+	{
+		"LogName": "Seasonal Mapstring for Crops",		
+		"Action": "EditData",
+		"Target": "Strings/StringsFromMaps",
+	    "When": { "Season": "spring, summer, fall", },
+		"Entries": {
+				"rsv.23": "{{i18n:MapString.rsv.23}}",
+				},
+	},	
+
+]
+}

@@ -1,0 +1,69 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "Farm Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+		//Aguar and farmer fix cave (Aguar 8 hearts)
+			"75160064/f Aguar 2000/t 600 1000/e 75160063/w sunny": "WizardSong/64 15/farmer 64 16 2 Aguar 64 18 0/skippable/pause 1000/speak Aguar \"{{i18n:event-75160064.01}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.02}}\"/globalFade/viewport -1000 -1000/changeToTemporaryMap Custom_Ridgeside_AguarCave false/warp farmer 9 26/warp Aguar 10 24 0/pause 1000/faceDirection farmer 0/faceDirection Aguar 0/playMusic Cavern/fade/viewport 9 20/pause 1000/speak Aguar \"{{i18n:event-75160064.03}}\"/faceDirection Aguar 2/emote farmer 8/pause 500/speak Aguar \"{{i18n:event-75160064.04}}\"/emote farmer 56/pause 500/faceDirection Aguar 0/speak Aguar \"{{i18n:event-75160064.05}}\"/pause 1000/animate Aguar false true 100 20 20 21 21 22 22 23 23/pause 2000/speak Aguar \"{{i18n:event-75160064.06}}\"/stopAnimation Aguar 16/pause 500/playSound wand/glow 0 0 255 true/pause 1000/screenFlash .8/emote farmer 16/pause 1000/screenFlash .8/pause 1000/screenFlash .8/changeToTemporaryMap Custom_Ridgeside_AguarCaveTemporary false/stopGlowing/emote farmer 16/pause 500/faceDirection Aguar 2/speak Aguar \"{{i18n:event-75160064.07}}\"/move farmer 0 -6 3/faceDirection Aguar 0/move farmer -1 0 3/showFrame farmer 58/pause 500/playSound hoeHit/pause 1000/playSound seeds/pause 1000/move farmer 1 0 3/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.08}}\"/faceDirection farmer 2/move Aguar -1 0 0/move Aguar 0 -3 0/speak Aguar \"{{i18n:event-75160064.09}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.10}}\"/emote farmer 16/pause 500/speak Aguar \"{{i18n:event-75160064.11}}\"/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.12}}\"/message \"{{i18n:event-75160064.13}}\"/emote farmer 20/pause 500/move Aguar 0 5 1 true/move farmer 0 4 1 true/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160064.14}}\"/pause 1000/end dialogue Aguar \"{{i18n:event-75160064.15}}\"",
+		
+		//Alissa sends letter to farmer (Alissa 6 hearts part 1)
+			"75160117/e 75160115/f Alissa 1500/x AlissaLetter": "null",
+			
+		//Alissa sends letter to farmer about performance (Alissa 8 hearts part 1)
+			"75160119/e 75160118/f Alissa 2000/x AlissaPerform": "null",
+		
+		//Corine visits farmer (Corine 10 hearts part 1)
+			"75160126/f Corine 2500/D Corine/t 600 1000/w sunny/e 75160125/d Mon Tue Wed Fri Sat Sun": "cm:CorineTheme/64 15/farmer 64 16 2 Corine 64 18 0/skippable/pause 500/emote Corine 20/pause 500/emote farmer 16/pause 500/speak Corine \"{{i18n:event-75160126.01}}\"/emote farmer 32/pause 500/speak Corine \"{{i18n:event-75160126.02}}\"/emote farmer 8/pause 500/speak Corine \"{{i18n:event-75160126.03}}\"/emote farmer 28/pause 500/emote Corine 20/pause 500/move Corine 0 -1 0/message \"{{i18n:event-75160126.04}}\"/move Corine 0 1 0/speak Corine \"{{i18n:event-75160126.05}}\"/playSound shadowpeep/showFrame Corine 24/pause 500/warp Corine -100 -100/emote farmer 16/pause 2000/end dialogue Corine \"{{i18n:event-75160126.06}}\"",
+		
+		//Flor sends letter (Flor 8 hearts part 1)
+			"75160131/e 75160130/f Flor 2000/x FlorLetter": "null",
+		
+		//Maddie sends letter (Maddie 10 (previously 8) hearts part 1)
+			"75160137/e 75160136/f Maddie 2500/x MaddieLetter": "null",
+		
+		//Maddie sends letter 2 (Maddie 10 hearts Part 3 (previously part 1)
+			"75160139/e 75160138/f Maddie 2500/D Maddie/x MaddieDate": "null",
+			
+		//Jeric visits farmer (Jeric 2 hearts)
+			"75160151/f Jeric 500/t 600 1200/w sunny": "playful/64 15/farmer 64 16 2 Jeric 64 18 0/skippable/pause 1000/emote Jeric 32/emote farmer 8/speak Jeric \"{{i18n:event-75160151.01}}\"/emote farmer 8/speak Jeric \"{{i18n:event-75160151.02}}\"/emote farmer 32/pause 500/emote Jeric 40/faceDirection Jeric 2/speak Jeric \"{{i18n:event-75160151.03}}\"/emote farmer 16/pause 500/emote Jeric 56/faceDirection Jeric 0/speak Jeric \"{{i18n:event-75160151.04}}\"/emote farmer 16/emote Jeric 56/speak Jeric \"{{i18n:event-75160151.05}}\"/emote farmer 40/pause 500/emote farmer 8/emote Jeric 28/speak Jeric \"{{i18n:event-75160151.06}}\"/emote farmer 28/pause 2000/globalFade/viewport -1000 -1000/message \"{{i18n:event-75160151.07}}\"/end dialogue Jeric \"{{i18n:event-75160151.08}}\"",
+		
+		//Jeric sends letter (Jeric 10 hearts part 1)
+			"75160155/e 75160154/f Jeric 2500/D Jeric/x JericLetter": "null",
+			
+		//Kenneth surprise (Kenneth 10 hearts)
+			"75160161/e 75160160/f Kenneth 2500/D Kenneth/w sunny/t 600 800": "cm:KennethTheme/64 15/farmer 64 16 2 RSVSurprise 64 18 0/skippable/pause 1000/emote farmer 8/pause 1000/playSound robotSoundEffects/pause 500/emote farmer 16/message \"{{i18n:event-75160161.01}}\"/emote farmer 8/pause 1000/globalFade/viewport -1000 -1000/changeToTemporaryMap BusStop false/warp farmer 5 23/faceDirection farmer 1/warp RSVSurprise 6 23/fade/viewport 11 23/move RSVSurprise 5 0 3/emote farmer 8/message \"{{i18n:event-75160161.02}}\"/move farmer 4 0 1/move RSVSurprise 7 0 1 true/move farmer 8 0 1 true/pause 1000/globalFade/viewport -1000 -1000/addTemporaryActor Kenneth 16 32 21 23 3 false/fade/viewport 19 23/pause 3000/emote farmer 16/speak Kenneth \"{{i18n:event-75160161.03}}\"/move RSVSurprise 0 -1 3/advancedMove RSVSurprise true -2 0 0 2 2 0 0 -2/move Kenneth -2 0 3/emote farmer 32/emote Kenneth 28/speak Kenneth \"{{i18n:event-75160161.04}}\"/emote farmer 20/playSound robotSoundEffects/stopAdvancedMoves/pause 1000/warp RSVSurprise 18 23/faceDirection RSVSurprise 2/playSound robotSoundEffects/pause 1000/speak Kenneth \"{{i18n:event-75160161.05}}\"/emote farmer 16/showFrame RSVSurprise 16/pause 1000/showFrame RSVSurprise 17/pause 1000/showFrame RSVSurprise 18/pause 1000/showFrame RSVSurprise 19/pause 500/emote farmer 16/emote Kenneth 60/emote farmer 20/speak Kenneth \"{{i18n:event-75160161.06}}\"/emote farmer 32/pause 500/warp RSVSurprise 18 22/move Kenneth -1 0 3/speak Kenneth \"{{i18n:event-75160161.07}}\"/emote farmer 20/showFrame Kenneth 43/positionOffset Kenneth -10 0/positionOffset farmer 10 0/animate farmer false true 100 101/emote Kenneth 20/pause 2000/globalFade/viewport -1000 -1000/speak Kenneth \"{{i18n:event-75160161.08}}\"/end dialogue Kenneth \"{{i18n:event-75160161.09}}\"",
+		
+		//Philip visits to apologize (Philip 4 hearts extra)
+			"75160164/e 75160163/t 600 1200": "cm:PhilipTheme/64 15/farmer 64 16 2 Philip 64 18 0/skippable/pause 1000/emote Philip 28/speak Philip \"{{i18n:event-75160164.01}}\"/emote farmer 32/emote Philip 56/speak Philip \"{{i18n:event-75160164.02}}\"/emote farmer 56/pause 500/end dialogue Philip \"{{i18n:event-75160164.03}}\"",
+		
+		//Shiro surprise date (Shiro 10 hearts)
+			"75160172/e 75160171/f Shiro 2500/D Shiro/t 2000 2200/w sunny/z winter": "cm:ShiroTheme/64 15/farmer 64 16 2 Yuuma 64 18 0/skippable/pause 800/emote farmer 8/speak Yuuma \"{{i18n:event-75160172.01}}\"/emote farmer 16/pause 500/globalFade/viewport -1000 -1000/changeToTemporaryMap Beach false/addFloorProp 8 14 11/addFloorProp 40 14 12/addFloorProp 9 15 11/addFloorProp 41 15 12/addFloorProp 10 16 11/addFloorProp 42 16 12/addFloorProp 299 12 10/addFloorProp 299 12 12/addFloorProp 299 12 14/addFloorProp 299 18 10/addFloorProp 299 18 12/addFloorProp 299 18 14/addLantern 791 12 10 1/addLantern 791 12 12 1/addLantern 791 12 14 1/addLantern 791 18 10 1/addLantern 791 18 12 1/addLantern 791 18 14 1/addLantern 791 15 12 2/addTemporaryActor Shiro 16 32 17 11 1/warp farmer 25 11/faceDirection farmer 3/warp Yuuma 24 11/faceDirection Yuuma 3/fade/viewport 18 11/pause 500/emote farmer 16/move Yuuma -5 0 3/speak Yuuma \"{{i18n:event-75160172.02}}\"/emote Shiro 28/speak Shiro \"{{i18n:event-75160172.03}}\"/move Yuuma 4 0 1/speak Yuuma \"{{i18n:event-75160172.04}}\"/emote farmer 32/advancedMove Yuuma false 0 -1 10 0/pause 4000/warp Yuuma -100 -100/move farmer -3 0 3 true/move Shiro 4 0 1 true/emote Shiro 32/emote farmer 60/pause 1000/speak Shiro \"{{i18n:event-75160172.05}}\"/emote farmer 32/move Shiro -6 0 1 true/move farmer -6 0 3 true/pause 2000/speak Shiro \"{{i18n:event-75160172.06}}\"/emote farmer 20/pause 1000/showFrame Shiro 42/positionOffset Shiro 10 0/positionOffset farmer -10 20/animate farmer true true 100 101/emote Shiro 20/pause 3000/globalFade/viewport -1000 -1000/message \"{{i18n:event-75160172.07}}\"/speak Shiro \"{{i18n:event-75160172.08}}\"/end dialogue Shiro \"{{i18n:event-75160172.09}}\"",
+		
+		//Unlocking Greenhouse1 (Letter)
+			"75160173/H/e 75160089/r 0.3/x GH1Letter": "null",
+		},
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {		
+		//Ridgeside Gathering Invitation (Letter)
+			"75160183/x GatheringInvitation": "null",
+		},
+		"When": { "Season": "Fall", "Day": 19 },
+	},
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {				
+		//Ember of Resolutions invitaion (Letter)
+			"75160184/x EmberNightInvitation": "null",
+		},
+		"When": { "Season": "Winter", "Day": 27 },
+	},	
+]
+}

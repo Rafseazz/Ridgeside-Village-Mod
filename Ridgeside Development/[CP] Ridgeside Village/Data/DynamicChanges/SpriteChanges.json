@@ -1,0 +1,70 @@
+{
+"Changes": [
+
+	/*********
+	** Sprites Config Changes
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Maddie",
+			"FromFile": "Assets/Characters/Maddie_Glasses.png",
+			"PatchMode": "Replace",
+			"When": { "MaddiePortraitStyle": "LegacyGlasses" },
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Philip",
+			"FromFile": "Assets/Characters/Philip_Legacy.png",
+			"PatchMode": "Replace",
+			"When": { "PhilipPortraitStyle": "Legacy" },
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Flor",
+			"FromFile": "Assets/Characters/Flor_{{FlorSpriteStyle}}.png",
+			"PatchMode": "Replace",
+			"When": { "FlorSpriteStyle": "Legacy" },
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Flor_Beach",
+			"FromFile": "Assets/Characters/Flor_Beach_{{FlorSpriteStyle}}.png",
+			"PatchMode": "Replace",
+			"When": { "FlorSpriteStyle": "Legacy" },
+		},
+
+	/*********
+	** Sprite Changes
+	*********/	
+		//Corine Ninja Change
+	{
+		"LogName": "Corine Ninja Outfit Sprite",
+		"Action": "EditImage",
+		"Target": "Characters/Corine",
+		"FromFile": "Assets/{{Target}}_Ninja.png",
+		"Update": "OnLocationChange",
+		"When": {
+			"HasSeenEvent: hostPlayer": 75160125,
+			"LocationName": "Custom_Ridgeside_RidgesideVillage, Custom_Ridgeside_Ridge, Farm, FarmHouse",
+			"DayOfWeek": "Thursday",
+		},
+	},
+
+		//Undreya SPRITE RANDOMIZE
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Undreya",
+			"FromFile": "Assets/Characters/Undreya{{Random:1, 2, 3, 4, 5, 6, 7, 8}}.png",
+			"When": {
+				"HasSeenEvent: hostPlayer": 75160182,
+				"DayOfWeek: |contains=Thursday": false
+			},
+		},
+
+
+
+]
+}

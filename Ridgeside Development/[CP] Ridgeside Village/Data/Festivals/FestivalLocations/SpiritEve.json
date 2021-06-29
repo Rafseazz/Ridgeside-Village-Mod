@@ -1,0 +1,24 @@
+{
+"Changes": [
+
+	{
+	//NO SVE
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+   "TextOperations": [
+   
+   //SetUp
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Aguar 22 100 down/Alissa 15 25 left/Bert 23 64 down/Corine 38 69 left/Ezekiel 38 70 left/Flor 34 38 up/Freddie 16 64 down/Ian 32 56 down/Jeric 31 64 right/Jio 34 4 down/Keahi 24 73 up/Kenneth 36 74 right/Kiwi 33 4 down/Lenny 27 69 down/Lola 17 64 down/Maddie 20 47 up/Olga 22 64 right/Philip 27 50 left/Pika 31 72 right/Richard 28 72 left/Shiro 23 50 down/Trinnie 23 72 right/Ysabelle 28 64 left/Yuuma 23 74 left",
+         "Delimiter": "/"
+		},
+
+	]	
+	},
+
+	
+]
+}

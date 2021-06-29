@@ -1,0 +1,161 @@
+{
+	"Changes": [
+
+//------------------------------------- D A T A B L E S -------------------------------------
+
+//------------------------
+// E N G A G E M E N T    
+//------------------------
+
+{
+
+	"LogName": "Engagement Dialogue",
+	"Action": "EditData",
+	"Target": "Data/EngagementDialogue",
+	"Entries": {
+		
+		"Alissa0": "{{i18n:Romance.Engagement.Alissa0}}",
+		"Alissa1": "{{i18n:Romance.Engagement.Alissa1}}",
+
+		"Corine0": "{{i18n:Romance.Engagement.Corine0}}",
+		"Corine1": "{{i18n:Romance.Engagement.Corine1}}",
+
+		"Flor0": "{{i18n:Romance.Engagement.Flor0}}",
+		"Flor1": "{{i18n:Romance.Engagement.Flor1}}",
+
+		"Ian0": "{{i18n:Romance.Engagement.Ian0}}",
+		"Ian1": "{{i18n:Romance.Engagement.Ian1}}",
+
+		"Jeric0": "{{i18n:Romance.Engagement.Jeric0}}",
+		"Jeric1": "{{i18n:Romance.Engagement.Jeric1}}",
+
+		"Kenneth0": "{{i18n:Romance.Engagement.Kenneth0}}",
+		"Kenneth1": "{{i18n:Romance.Engagement.Kenneth1}}",
+
+		"Maddie0": "{{i18n:Romance.Engagement.Maddie0}}",
+		"Maddie1": "{{i18n:Romance.Engagement.Maddie1}}",
+
+		"Philip0": "{{i18n:Romance.Engagement.Philip0}}",
+		"Philip1": "{{i18n:Romance.Engagement.Philip1}}",
+
+		"Shiro0": "{{i18n:Romance.Engagement.Shiro0}}",
+		"Shiro1": "{{i18n:Romance.Engagement.Shiro1}}",
+
+		"Ysabelle0": "{{i18n:Romance.Engagement.Ysabelle0}}",
+		"Ysabelle1": "{{i18n:Romance.Engagement.Ysabelle1}}",
+
+	},
+},
+
+	//Female Wedding Fixes
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Alissa}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Alissa}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Alissa}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Alissa}}",
+		},
+		"When": { "Relationship:Alissa": "Engaged" },
+	},
+	{    
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Corine}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Corine}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Corine}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Corine}}",
+		},
+		"When": { "Relationship:Corine": "Engaged" },
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Flor}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Flor}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Flor}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Flor}}",
+		},
+		"When": { "Relationship:Flor": "Engaged" },
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Maddie}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Maddie}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Maddie}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Maddie}}",
+		},
+		"When": { "Relationship:Maddie": "Engaged" },
+	},
+	{	
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Ysabelle}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Ysabelle}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Ysabelle}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Ysabelle}}",
+		},
+		"When": { "Relationship:Ysabelle": "Engaged" },
+	},
+	
+//--------------------
+// Special Dialogue   
+//--------------------
+
+{
+	"LogName": "Special Dialogue",
+	"Action": "EditData",
+	"Target": "Characters/Dialogue/Alissa, Characters/Dialogue/Corine, Characters/Dialogue/Flor, Characters/Dialogue/Ian, Characters/Dialogue/Jeric, Characters/Dialogue/Kenneth, Characters/Dialogue/Maddie, Characters/Dialogue/Philip, Characters/Dialogue/Shiro, Characters/Dialogue/Ysabelle",
+	"Entries": {
+		"give_flowersA": "{{i18n: Romance.give.flowersA.{{TargetWithoutPath}} }}",
+		"give_flowersB": "{{i18n: Romance.give.flowersB.{{TargetWithoutPath}} }}",
+		"stardrop_gift": "{{i18n: Romance.stardrop.gift.{{TargetWithoutPath}} }}",
+		"rejectNPCA": "{{i18n: Romance.rejectNPCA.{{TargetWithoutPath}} }}",
+		"rejectNPCB": "{{i18n: Romance.rejectNPCB.{{TargetWithoutPath}} }}"
+	},
+},
+
+//-----------------------------------
+// M A R R I A G E  D I A L O G U E  
+//-----------------------------------
+
+{
+	"LogName": "Load Empty Ridgeside MarriageDialogue File",
+	"Action": "Load",
+	"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle",
+	"FromFile": "Data/LoadData/LoadMarriageDialogue.json"
+},
+
+{
+	"LogName": "Include Ridgeside MarriageDialogue Files",
+	"Action": "Include",
+	"FromFile": "Assets/MarriageDialogue/MarriageDialogueAlissa.json, Assets/MarriageDialogue/MarriageDialogueCorine.json, Assets/MarriageDialogue/MarriageDialogueFlor.json, Assets/MarriageDialogue/MarriageDialogueIan.json, Assets/MarriageDialogue/MarriageDialogueJeric.json, Assets/MarriageDialogue/MarriageDialogueKenneth.json, Assets/MarriageDialogue/MarriageDialogueMaddie.json, Assets/MarriageDialogue/MarriageDialoguePhilip.json, Assets/MarriageDialogue/MarriageDialogueShiro.json, Assets/MarriageDialogue/MarriageDialogueYsabelle.json",
+},  
+
+
+{
+	"LogName": "Movie Invitation Dialogue",
+	"Action": "EditData",
+	"Target": "Strings/Characters",
+	"Entries": {
+		"MovieInvite_Spouse_Alissa": "{{i18n:Romance.MovieInvite.Spouse.Alissa}}",
+		"MovieInvite_Spouse_Corine": "{{i18n:Romance.MovieInvite.Spouse.Corine}}",
+		"MovieInvite_Spouse_Flor": "{{i18n:Romance.MovieInvite.Spouse.Flor}}",
+		"MovieInvite_Spouse_Ian": "{{i18n:Romance.MovieInvite.Spouse.Ian}}",
+		"MovieInvite_Spouse_Jeric": "{{i18n:Romance.MovieInvite.Spouse.Jeric}}",
+		"MovieInvite_Spouse_Kenneth": "{{i18n:Romance.MovieInvite.Spouse.Kenneth}}",
+		"MovieInvite_Spouse_Maddie": "{{i18n:Romance.MovieInvite.Spouse.Maddie}}",
+		"MovieInvite_Spouse_Philip": "{{i18n:Romance.MovieInvite.Spouse.Philip}}",
+		"MovieInvite_Spouse_Shiro": "{{i18n:Romance.MovieInvite.Spouse.Shiro}}",
+		"MovieInvite_Spouse_Ysabelle": "{{i18n:Romance.MovieInvite.Spouse.Ysabelle}}",
+	}, 
+},
+
+]
+}

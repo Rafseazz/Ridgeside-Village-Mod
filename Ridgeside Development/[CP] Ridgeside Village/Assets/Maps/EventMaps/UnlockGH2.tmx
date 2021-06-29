@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="7" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="144">
+ <properties>
+  <property name="Light" value="143 26 4 126 22 4 118 26 4 111 26 4 100 26 4 121 41 4 107 41 4 124 49 4 135 49 4 108 53 4 114 53 4 87 85 4 81 85 4 80 100 4 87 110 4 8 61 4 50 121 4 9 119 4 37 56 4 51 42 4 56 36 4 46 27 4 65 18 4 79 16 4 78 37 4 92 41 4 86 57 4 96 54 4 89 26 4 95 14 4 101 6 4 93 1 4"/>
+  <property name="NightTiles" value="AlwaysFront 143 26 908 AlwaysFront 126 22 908 AlwaysFront 118 26 908 AlwaysFront 111 26 908 AlwaysFront 100 26 908 AlwaysFront 121 41 908 AlwaysFront 107 41 908 AlwaysFront 124 49 908 AlwaysFront 135 49 908 AlwaysFront 108 53 908 AlwaysFront 114 53 908 AlwaysFront 87 85 908 AlwaysFront 81 85 908 AlwaysFront 80 100 908 AlwaysFront 87 110 908 AlwaysFront 8 61 908 AlwaysFront 50 121 908 AlwaysFront 9 119 908 AlwaysFront 37 56 908 AlwaysFront 51 42 908 AlwaysFront 56 36 908 AlwaysFront 46 27 908 AlwaysFront 65 18 908 AlwaysFront 79 16 908 AlwaysFront 78 37 908 AlwaysFront 92 41 908 AlwaysFront 86 57 908 AlwaysFront 96 54 908 AlwaysFront 89 26 908 AlwaysFront 95 14 908 AlwaysFront 101 6 908 AlwaysFront 93 1 908"/>
+  <property name="Outdoors" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" name="spring_zridgesidebuildings" tilewidth="16" tileheight="16" tilecount="2418" columns="62">
+  <image source="spring_zridgesidebuildings" width="992" height="624"/>
+ </tileset>
+ <layer id="1" name="Back" width="7" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="6" name="Back"/>
+ <layer id="2" name="Buildings" width="7" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+1048,1049,1050,1051,1052,1053,1054,
+1110,1111,1112,1113,1114,1115,1116,
+1172,1173,1174,1175,1176,1177,1178,
+1234,1235,1236,1237,1238,1239,1240,
+1296,1297,1298,1299,1300,1301,1302,
+1358,1359,1360,1361,1362,1363,1364
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings">
+  <object id="143" name="TileData" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Warp 10 22 Custom_Ridgeside_RSVGreenhouse2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="Paths" width="7" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <layer id="4" name="Front" width="7" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+986,987,988,989,990,991,992,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="9" name="Front"/>
+ <layer id="5" name="AlwaysFront" width="7" height="10">
+  <data encoding="csv">
+0,801,802,803,804,805,0,
+862,863,864,865,866,867,868,
+924,925,926,927,928,929,930,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,
+0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

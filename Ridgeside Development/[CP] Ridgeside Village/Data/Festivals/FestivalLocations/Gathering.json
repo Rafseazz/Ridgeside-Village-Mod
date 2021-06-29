@@ -1,0 +1,30 @@
+{
+"Changes": [
+
+	{
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall20",
+   "TextOperations": [
+   
+   //SetUp
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Aguar 74 30 up/Alissa 109 45 down/Bert 75 63 left/Corine 111 47 right/Ezekiel 95 56 down/Flor 105 52 right/Freddie 85 61 down/Ian 123 56 up/Jeric 120 45 down/Jio 76 29 left/Keahi 115 51 left/Kenneth 122 51 left/Kiwi 77 31 down/Lenny 85 51 down/Lola 84 61 left/Maddie 106 46 right/Olga 87 56 down/Philip 117 48 left/Pika 80 56 down/Richard 77 62 right/Shiro 122 46 left/Trinnie 112 51 rightYsabelle 106 50 right/Yuuma 115 45 left",
+         "Delimiter": "/"
+		},
+
+	
+   //MainEevent
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "MainEvent_additionalCharacters"],
+         "Value": "Aguar 74 29 down/Alissa 90 45 up/Bert 90 43 up/Corine 78 43 up/Ezekiel 92 48 up/Flor 94 44 left/Freddie 79 49 up/Ian 95 47 up/Jeric 79 47 up/Jio 76 29 down/Keahi 86 42 up/Kenneth 93 39 left/Kiwi 77 31 down/Lenny 86 44 up/Lola 80 49 up/Maddie 78 47 up/Olga 91 43 up/Philip 76 43 right/Richard 91 48 up/Shiro 96 43 left/Trinnie 85 42 up/Ysabelle 79 43 up/Yuuma 96 44 left",
+         "Delimiter": "/"
+		},
+
+	]	
+	},
+	
+]
+}

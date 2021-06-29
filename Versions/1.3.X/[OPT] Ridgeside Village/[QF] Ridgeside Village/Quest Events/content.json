@@ -1,0 +1,25 @@
+{
+	"Format": "1.21.0",
+
+	"Changes": [
+
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_RidgesideVillage",
+		"Entries": {
+			//Plot unlock
+			"75160189/H/z spring/w sunny": "continue/69 29/farmer 74 30 3 Lenny 69 30 0/pause 500/move farmer -3 0 3/emote Lenny 16/pause 500/faceDirection Lenny 1/pause 500/speak Lenny \"Oh, good to see you, @.$h#$b#It's such a lovely day today, isn't it?\"/emote farmer 32/pause 500/faceDirection farmer 0/pause 500/emote farmer 8/pause 500/faceDirection Lenny 0/pause 500/speak Lenny \"Oh, I'm guessing you're wondering what that is?#$b#Well, it's an old minecart system that connects Pelican Town to Ridgeside Village!#$b#It's been neglected for a while now.#$b#This was meant to be used in case of an emergency.$s#$b#You know... In case the war reached the shores of the Valley.$s#$b#As things stand though, it's just rusting slowly but surely.#$b#Not to mention we lack the funding and supplies to fix it.\"/emote farmer 32/faceDirection farmer 3/faceDirection Lenny 1/speak Lenny \"Let's get closer, shall we?\"/pause 500/faceDirection farmer 0/move Lenny 0 -3 0/globalFade/viewport -1000 -1000/warp farmer 70 21/warp Lenny 68 21/fade/viewport 69 19/pause 500/move farmer 0 -1 0 true/move Lenny 0 -1 0 true/pause 1000/emote Lenny 56/speak Lenny \"Hmmm...$s#$b#I wonder...$s\"/emote Lenny 40/pause 1000/emote Lenny 56/emote farmer 8/faceDirection farmer 3/pause 500/faceDirection Lenny 1/speak Lenny \"Say, @? How about we make this our pet project?$h#$b#We can restore the minecart system together!#$b#I mean... right now it's just a waste of space.$s#$b#It's free real estate!$4#$b#It can also serve as a faster method of transportation for you and the villagers.$h#$b#Well, that's if you have the guts to sit inside the rickety old cart, ha!$4#$b#Kidding, kidding!$h\"/emote farmer 28/speak Lenny \"Okay! This is what we should do...\"/faceDirection Lenny 0/pause 500/faceDirection Lenny 1/speak Lenny \"I'll give you a list of materials. You gather these materials and give them to me.#$b#I'll hire some contractors to fix it up and handle the paperwork.#$b#Deal?$h#$b#Perhaps we'll even save some money if we do this efficiently!$h\"/emote farmer 32/emote Lenny 56/speak Lenny \"Excellent!$h#$b#I'll send you the details by mail tomorrow morning!$h#$b#Pleasure doing business with ya, @!$h#$b#I'm looking forward to the Minecart Restoration Project.$h\"/emote farmer 56/pause 500/faceDirection farmer 0/faceDirection Lenny 0/pause 1000/end position 69 21",
+		}
+	},
+	{
+		//Load Minecart Fix
+		"LogName": "Minecart Fix",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_RidgesideVillage",
+		"Entries": {
+			"75160190/w sunny/H/e 75160189": "SettlingIn/69 18/farmer 70 20 0 Lenny 68 20 0 Robin 69 16 0 Ian 70 16 0 Clint 67 16 1/pause 500/move farmer 0 -1 0 true/move Lenny 0 -1 0 true/emote Robin 56/pause 500/emote Ian 28/emote Clint 56/speak Robin \"I think we're all done!$h#$b#Good job, everyone!$h\"/speak Ian \"Woah, that wasn't an easy gig!$h\"/faceDirection Clint 2/speak Clint \"Hi Lenny and @.#$b#We just finished restoring the minecart system!$h\"/faceDirection Robin 2/faceDirection Ian 2/emote Lenny 56/speak Lenny \"Oh my! Excellent work, crew!$h\"/move Robin 0 1 2/speak Robin \"Well, it wouldn't have been possible without @'s supplies!#$b#Thank you, @.$h\"/emote farmer 32/speak Robin \"Ah, Lenny! We've also fixed up the other minecart over by Nightingale Orchard.$h#$b#Turns out that one was even harder to fix...$s\"/speak Lenny \"That's fantastic news!#$b#It'll be even easier to get around, now.$h#$b#Thank you so much Robin, Clint, and Ian!$h\"/emote Clint 32/speak Clint \"No problem, Lenny.#$b#I'm glad I could participate.#$b#Finally, something more exciting than cracking open geodes or upgrading shoddy tools...$h\"/speak Ian \"I can run errands much faster now.$h\"/speak Lenny \"Be careful, Ian! I still need you for other things, haha!$4#$b#Alright folks, that's all for today!$h\"/emote farmer 32/pause 1000/end position 69 21",
+		},
+		"When": { "HasConversationTopic: hostPlayer": "RSV_startminecartfix" }
+	},
+],
+}

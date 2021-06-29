@@ -1,0 +1,40 @@
+{
+"Changes": [
+	
+	/*********
+	** Pastoral Recolor
+	*********/	
+ 	{
+		"LogName": "Map overlay with Pastoral installed with base fall",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "Assets/Maps/WorldMaps/PastoralCompat/{{season}}_map_{{PastoralMapStyle}}.png",
+		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=grapeponta.VibrantPastoralRecolor": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, },
+	},
+ 	{
+		"LogName": "Map overlay with Pastoral installed with green fall",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "Assets/Maps/WorldMaps/PastoralCompat/{{season}}_map_{{PastoralMapStyle}}.png",
+		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=grapeponta.VibrantPastoralRecolor": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, },
+	},
+ 	{
+		"LogName": "Map overlay with Pastoral and SVE installed",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "Assets/Maps/WorldMaps/PastoralCompat/{{season}}_map_{{PastoralMapStyle}}.png",
+		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=grapeponta.VibrantPastoralSVE": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
+	},
+
+
+]
+}

@@ -1,0 +1,23 @@
+{
+  "Name": "RSV Forage",
+  "Author": "Rafseazz",
+  "Version": "1.10.11",
+  "Description": "FTM for RSV",
+  "UniqueID": "Rafseazz.RSVFTM",
+  "MinimumApiVersion": "3.0",
+  "UpdateKeys": [ "Nexus:???" ],
+  "ContentPackFor": {
+    "UniqueID": "Esca.FarmTypeManager",
+    "MinimumVersion": "1.8"
+   },
+	"Dependencies": [
+	 {
+      "UniqueID": "Rafseazz.RSVJA",
+      "IsRequired": true,
+	 },
+	 {
+      "UniqueID": "Rafseazz.RSVCP",
+      "IsRequired": true,
+	 },	
+]
+}

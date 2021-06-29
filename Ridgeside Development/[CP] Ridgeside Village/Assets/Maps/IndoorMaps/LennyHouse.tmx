@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="29" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="238">
+ <properties>
+  <property name="AmbientLight" value="95 95 95"/>
+ </properties>
+ <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+  <tile id="0">
+   <properties>
+    <property name="PathType" value="NE"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="PathType" value="SE"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="PathType" value="WS"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="PathType" value="WN"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="PathType" value="Crossroad"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="PathType" value="End"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="37" name="spring_zridgesidebuildings" tilewidth="16" tileheight="16" tilecount="2418" columns="62">
+  <image source="spring_zridgesidebuildings" width="992" height="624"/>
+ </tileset>
+ <tileset firstgid="2455" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="4631" name="springobjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
+  <image source="springobjects" width="384" height="624"/>
+ </tileset>
+ <tileset firstgid="5567" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <layer id="1" name="Back" width="29" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,5600,5601,5601,5601,5601,5601,5601,5601,5601,5601,5601,5601,5601,5601,5601,5601,5602,5868,5868,5768,5769,5769,5769,5769,5769,5769,5770,0,
+0,5632,5633,5633,5633,5633,5633,5633,5633,5633,5633,5633,5633,5633,5633,5633,5633,5634,5868,5868,5768,5769,5769,5769,5769,5769,5769,5770,0,
+0,5664,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5666,0,0,5768,0,0,0,0,0,0,5770,0,
+0,5766,5767,5766,5767,5766,5767,5766,5767,5766,5767,5766,5767,5766,5767,5766,5767,5766,5767,5798,5766,5767,5766,5767,5766,5767,5766,5767,5799,
+0,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,
+0,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5818,5819,5820,5798,5799,5798,5799,
+0,5830,5815,5816,5817,5601,5601,5818,5819,5819,5820,5830,5831,5830,5831,5830,5831,5830,5868,5868,5831,5830,5850,5851,5852,5830,5831,5830,5831,
+0,5798,5847,5848,5849,5633,5633,5850,5851,5851,5852,5798,5799,5798,5799,5798,5799,5798,5868,5868,5799,5798,5882,5883,5884,5798,5799,5798,5799,
+0,5830,5831,5830,5831,5830,5831,5882,5883,5883,5884,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,
+0,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5818,5819,5820,5798,5799,
+0,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5850,5851,5852,5830,5831,
+0,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5799,5798,5882,5883,5884,5798,5799,
+0,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831,5830,5831
+</data>
+ </layer>
+ <objectgroup id="6" name="Back"/>
+ <layer id="2" name="Buildings" width="29" height="14">
+  <properties>
+   <property name="AmbientLight" value="255 255 255"/>
+  </properties>
+  <data encoding="csv">
+5567,5568,5569,5569,5569,5578,5576,5569,5569,5569,5569,5569,5569,5569,5569,5569,5569,5570,5567,5567,5568,5569,5569,5569,5569,5569,5569,5570,5567,
+5599,5608,0,0,0,5635,5631,0,0,0,0,0,0,0,0,0,0,5610,5603,5599,5608,0,0,0,0,0,0,5610,5603,
+5631,5646,5647,5647,5647,5635,5631,5647,5647,5647,5647,6297,6298,5647,5647,5647,5647,5648,5635,5631,5646,5647,5647,5647,5647,5647,5647,5648,5635,
+5631,5678,5679,5679,5679,5635,5631,5679,5679,5679,5679,6329,6330,5679,5679,5679,5679,5680,5635,5631,5678,5679,5679,5679,5679,5679,5679,5680,5635,
+5631,5710,6065,6066,6067,5635,5631,0,0,0,0,6361,6362,6148,6155,6156,6157,5712,5635,5631,5710,5923,5924,0,6087,6278,6279,5712,5635,
+5631,0,0,0,0,5635,5631,0,7114,7115,0,0,0,0,0,0,0,0,5635,5631,6087,0,0,0,0,6346,0,6101,5635,
+5631,0,6062,6063,6064,5760,5761,7145,7146,7147,7148,0,0,0,0,7714,6457,6458,5760,5761,0,5887,5888,0,0,0,0,0,5635,
+5631,0,0,0,0,5721,5722,7177,7178,7179,7180,0,0,0,7714,7714,6489,6490,5721,5722,0,0,0,0,0,0,0,0,5635,
+5631,0,0,0,0,5753,5754,5959,0,0,6023,0,0,0,6422,6423,0,0,5753,5754,6214,6215,0,0,6210,6211,6210,6211,5635,
+5631,0,0,0,5930,5785,5786,0,0,0,0,0,0,0,6454,6455,0,5930,5785,5786,0,0,0,0,0,0,0,6335,5635,
+5631,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6317,6318,0,0,6367,5635,
+5631,6280,0,6120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6349,6350,0,0,6399,5635,
+5663,6312,0,0,0,5930,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6431,5697,
+5567,5567,5567,5567,5567,5567,5567,5567,5567,5567,5567,5567,5567,5663,0,5697,5567,5567,5567,5567,5567,5567,5567,5567,5567,5567,5567,5567,5567
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings">
+  <object id="216" name="TileData" x="384" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny12&quot;"/>
+   </properties>
+  </object>
+  <object id="217" name="TileData" x="416" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny11&quot;"/>
+   </properties>
+  </object>
+  <object id="218" name="TileData" x="320" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny6&quot;"/>
+   </properties>
+  </object>
+  <object id="219" name="TileData" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny2&quot;"/>
+   </properties>
+  </object>
+  <object id="220" name="TileData" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny3&quot;"/>
+   </properties>
+  </object>
+  <object id="221" name="TileData" x="160" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny4&quot;"/>
+   </properties>
+  </object>
+  <object id="222" name="TileData" x="240" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny5&quot;"/>
+   </properties>
+  </object>
+  <object id="223" name="TileData" x="256" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny5&quot;"/>
+   </properties>
+  </object>
+  <object id="224" name="TileData" x="272" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny5&quot;"/>
+   </properties>
+  </object>
+  <object id="225" name="TileData" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny4&quot;"/>
+   </properties>
+  </object>
+  <object id="226" name="TileData" x="144" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny4&quot;"/>
+   </properties>
+  </object>
+  <object id="227" name="TileData" x="224" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny5&quot;"/>
+   </properties>
+  </object>
+  <object id="228" name="TileData" x="240" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny5&quot;"/>
+   </properties>
+  </object>
+  <object id="229" name="TileData" x="256" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny5&quot;"/>
+   </properties>
+  </object>
+  <object id="230" name="TileData" x="272" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny5&quot;"/>
+   </properties>
+  </object>
+  <object id="231" name="TileData" x="320" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny6&quot;"/>
+   </properties>
+  </object>
+  <object id="232" name="TileData" x="336" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny6&quot;"/>
+   </properties>
+  </object>
+  <object id="233" name="TileData" x="384" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny7&quot;"/>
+   </properties>
+  </object>
+  <object id="234" name="TileData" x="400" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny8&quot;"/>
+   </properties>
+  </object>
+  <object id="235" name="TileData" x="416" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny9&quot;"/>
+   </properties>
+  </object>
+  <object id="236" name="TileData" x="432" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny10&quot;"/>
+   </properties>
+  </object>
+  <object id="237" name="TileData" x="16" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.lenny1&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="Paths" width="29" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <layer id="4" name="Front" width="29" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,6233,6234,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,5792,0,0,0,0,6393,0,5792,0,6265,6266,0,5792,0,6393,0,0,0,0,0,5792,6133,6134,5792,6393,0,0,
+0,6393,5824,6002,6003,0,0,0,0,5824,0,0,0,0,5824,0,0,0,0,0,0,0,5824,0,0,5824,0,0,0,
+0,0,6033,6034,6035,0,0,0,0,0,0,0,0,6116,6123,6124,6125,0,0,0,0,5891,5892,0,6055,6246,6247,0,0,
+0,0,0,0,0,0,0,0,7082,7083,0,0,0,0,0,0,0,0,0,0,6055,5985,5986,0,0,6314,0,6069,0,
+0,0,6030,6031,6032,0,0,7113,0,0,7116,0,0,0,0,7682,6425,6426,0,0,0,6017,6018,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,7682,7682,0,0,0,0,0,0,0,0,6146,6147,6146,6147,0,
+0,0,0,0,0,6393,0,5927,0,0,5991,0,0,0,0,0,0,0,0,0,6182,6183,0,0,6178,6179,6178,6179,0,
+0,0,0,0,5898,0,0,0,0,0,0,0,0,0,0,0,0,5898,0,0,0,0,0,0,0,0,0,6303,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6285,6286,0,0,0,0,
+0,6248,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,5898,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,5763,5763,5763,5763,5763,5763,5763,5763,5763,5763,5763,5763,5729,0,5730,5763,5763,5763,5763,5763,5763,5763,5763,5763,5763,5763,5763,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,5763,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="9" name="Front"/>
+ <layer id="5" name="AlwaysFront" width="29" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5748,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6242,6442,6443,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6047,0,0,0,0,0,0,0,0,
+0,0,0,5998,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5812,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,6079,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

@@ -1,0 +1,29 @@
+{
+"Changes": [
+
+	{
+   "Action": "EditData",
+   "Target": "Data/Festivals/summer11",
+   "TextOperations": [
+   
+   //SetUp
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Jio 38 31 down/Keahi 13 8 down/Kenneth 22 6 down/Kiwi 37 31 down/Lenny 34 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Delimiter": "/"
+		},
+	
+   //MainEevent
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "MainEvent_additionalCharacters"],
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Jio 38 31 down/Keahi 13 8 down/Kenneth 22 6 right/Kiwi 37 31 down/Lenny 32 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Delimiter": "/"
+		},
+
+	]	
+	},
+	
+]
+}

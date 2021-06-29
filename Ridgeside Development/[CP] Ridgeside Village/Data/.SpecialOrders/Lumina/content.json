@@ -1,0 +1,244 @@
+{
+	"Format": "1.19.0",
+	
+	
+	"ConfigSchema": {
+        
+		"QuestsEnabled": {
+            "AllowValues": "AnimalRancher, Cook, Farmer, Fighter, Fisher, Florist, Forager, Generic, Miner",
+			"Default": "AnimalRancher, Cook, Farmer, Fighter, Fisher, Florist, Forager, Generic, Miner",
+			"AllowMultiple": true,
+        },
+		
+	},
+
+
+	"Changes": [
+	
+	//ContextTags
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersAppendContextTag.json",
+		},
+	
+	
+  
+		//Generic quests
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersGeneric.json",
+			"When": {
+				"QuestsEnabled":"Generic",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersGenericMail.json",
+			"When": {
+				"QuestsEnabled":"Generic",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersGenericStrings.json",
+			"When": {
+				"QuestsEnabled":"Generic",
+			},
+		},
+		
+		//AnimalRancher quests
+		
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersAnimalRancher.json",
+			"When": {
+				"QuestsEnabled":"AnimalRancher",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersAnimalRancherMail.json",
+			"When": {
+				"QuestsEnabled":"AnimalRancher",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersAnimalRancherStrings.json",
+			"When": {
+				"QuestsEnabled":"AnimalRancher",
+			},
+		},
+		
+		
+		
+		//Cooking quests
+		
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersCook.json",
+			"When": {
+				"QuestsEnabled":"Cook",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersCookMail.json",
+			"When": {
+				"QuestsEnabled":"Cook",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersCookStrings.json",
+			"When": {
+				"QuestsEnabled":"Cook",
+			},
+		},
+		
+		//Farmer quests
+		
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFarmer.json",
+			"When": {
+				"QuestsEnabled":"Farmer",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFarmerMail.json",
+			"When": {
+				"QuestsEnabled":"Farmer",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFarmerStrings.json",
+			"When": {
+				"QuestsEnabled":"Farmer",
+			},
+		},
+		
+		//Fighter quests
+		
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFighter.json",
+			"When": {
+				"QuestsEnabled":"Fighter",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFighterMail.json",
+			"When": {
+				"QuestsEnabled":"Fighter",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFighterStrings.json",
+			"When": {
+				"QuestsEnabled":"Fighter",
+			},
+		},
+		
+		//Fisher quests
+		
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFisher.json",
+			"When": {
+				"QuestsEnabled":"Fisher",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFisherMail.json",
+			"When": {
+				"QuestsEnabled":"Fisher",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFisherStrings.json",
+			"When": {
+				"QuestsEnabled":"Fisher",
+			},
+		},
+		
+		//Florist quests	
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFlorist.json",
+			"When": {
+				"QuestsEnabled":"Florist",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFloristMail.json",
+			"When": {
+				"QuestsEnabled":"Florist",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersFloristStrings.json",
+			"When": {
+				"QuestsEnabled":"Florist",
+			},
+		},
+		
+		//Forager quests
+		
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersForager.json",
+			"When": {
+				"QuestsEnabled":"Forager",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersForagerMail.json",
+			"When": {
+				"QuestsEnabled":"Forager",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersForagerStrings.json",
+			"When": {
+				"QuestsEnabled":"Forager",
+			},
+		},
+		
+		//Miner quests
+		
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersMiner.json",
+			"When": {
+				"QuestsEnabled":"Miner",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersMinerMail.json",
+			"When": {
+				"QuestsEnabled":"Miner",
+			},
+		},
+		{
+			"Action": "Include",
+			"FromFile": "Assets/LumiSpecialOrdersMinerStrings.json",
+			"When": {
+				"QuestsEnabled":"Miner",
+			},
+		},
+		
+		
+	]
+}

@@ -1,0 +1,32 @@
+{
+    "Changes": [
+	    {
+        "Action": "EditData",
+        "Target": "Data/ObjectContextTags",
+        "TextOperations": [
+		//Making food soup
+			{
+				"Operation": "Append",
+				"Target": ["Entries", "Pale Broth"],
+				"Value": "food_soup",
+				"Delimiter": ", "
+			},
+			{
+				"Operation": "Append",
+				"Target": ["Entries", "Parsnip Soup"],
+				"Value": "food_soup",
+				"Delimiter": ", "
+			},   
+			{
+				"Operation": "Append",
+				"Target": ["Entries", "Algae Soup"],
+				"Value": "food_soup",
+				"Delimiter": ", "
+			},   
+			
+			]
+		}
+	
+	
+    ]
+}

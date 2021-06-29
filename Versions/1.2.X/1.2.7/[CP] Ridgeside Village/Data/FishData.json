@@ -1,0 +1,733 @@
+{
+"Changes": [
+	
+//---------------------
+//Fishes               
+//---------------------
+
+//Data          
+	{
+		"Action": "EditData",
+		"Target": "Data/Fish",
+		"Entries": {
+			"{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}}": "Bladetail Sturgeon/100/smooth/18/32/1200 1600/summer/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}}": "Caped Tree Frog/100/dart/5/12/700 1200/fall/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}}": "Cardia Septal Jellyfish/100/mixed/12/20/2000 2400/winter/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}}": "Crimson Spiked Clam/100/floater/21/33/1000 1400/spring/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}}": "Fairytale Lionfish/100/mixed/18/28/1100 2000/spring summer fall winter/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Fixer Eel}}": "Fixer Eel/100/sinker/17/36/1400 1900/spring summer/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}}": "Golden Rose Fin/100/mixed/8/16/700 1900/spring summer fall winter/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Harvester Trout}}": "Harvester Trout/100/smooth/21/33/800 1600/spring/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}}": "Lullaby Carp/100/dart/9/17/1000 1800/fall/both/683 .4/1/.2/.3/0",
+			"{{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}}": "Pebble Back Crab/100/floater/5/15/1500 2200/summer/both/683 .4/1/.2/.3/0",
+		},
+	},
+	
+//Tags          
+	{
+		"Action": "EditData",
+		"Target": "Data/ObjectContextTags",
+		"Entries": {
+			"Bladetail Sturgeon": "color_green, fish_bladetail_sturgeon",
+			"Caped Tree Frog": "color_green, fish_caped_tree_frog",
+			"Cardia Septal Jellyfish": "color_purple, fish_cardia_septal_jellyfish",
+			"Crimson Spiked Clam": "color_red, fish_crimson_spiked_clam",
+			"Fairytale Lionfish": "color_blue, fish_fairytale_lionfish",
+			"Fixer Eel": "color_yellow, fish_fixer_eel",
+			"Golden Rose Fin": "color_yellow, fish_golden_rose_fin",
+			"Harvester Trout": "color_red, fish_harvester_trout",
+			"Lullaby Carp": "color_green, fish_lullaby_carp",
+			"Pebble Back Crab": "color_gray, fish_pebble_back_crab",
+		},
+	},
+	
+
+	
+//Aquarium
+//	{
+//		"Action": "EditData",
+//		"Target": "Data/AquariumFish",
+//		"Entries": {
+//			"{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}}": "93/fish",
+//			"{{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}}": "94/crawl",
+//			"{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}}": "95/float",
+//			"{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}}": "96/static",
+//			"{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}}": "97/fish",
+//			"{{spacechase0.JsonAssets/ObjectId:Fixer Eel}}": "98/fish",
+//			"{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}}": "99/fish",
+//			"{{spacechase0.JsonAssets/ObjectId:Harvester Trout}}": "100/fish",
+//			"{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}}": "101/fish",
+//			"{{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}}": "102/crawl",
+//		},
+//	},
+
+//	{
+//		"Action": "EditImage",
+//		"Target": "LooseSprites/AquariumFish",
+//		"FromFile": "assets/LooseSprites/RSVFishesAquarium.png",
+//		"ToArea": { "X": 288, "Y": 192, "Width": 192, "Height": 48 },
+//	},
+
+//Locations      
+
+	{
+	//Normal Days
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": {
+			"RidgesideVillage": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+			"Ridge": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+			"RSVTheCliff": "-1/-1/-1/-1/136 -1/136 -1/136 -1/136 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+			"RSVTheHike": "-1/-1/-1/-1/136 -1/136 -1/136 -1/136 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+			"RSVCableCar": "-1/-1/-1/-1/136 -1/136 -1/136 -1/136 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+			"RidgeForest": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+		},
+	},
+	
+	{
+	//Bladetail Surgeon
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "RidgesideVillage": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Thursday": true, "Season |contains=Summer": true },
+	},
+	
+	{
+	//Caped Tree Frog
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Ridge": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/{{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Saturday, Sunday": true, "Season |contains=Fall": true },
+	},
+	
+	{
+	//Cardia Septal Jellyfish
+	//NO SVE & More Fish
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3/372 .9 394 .5 718 .1 719 .3 723 .3/372 .9 718 .1 719 .3 723 .3/372 .4 392 .8 718 .05 719 .2 723 .2/129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1 267 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Sunday": true, "Season |contains=Winter": true, "HasMod |contains=MoreFish": false, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,  },
+	},
+	{
+	//Cardia Septal Jellyfish
+	//SVE Only
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3/372 .9 394 .5 718 .1 719 .3 723 .3/372 .9 718 .1 719 .3 723 .3/372 .4 392 .8 718 .05 719 .2 723 .2/{{spacechase0.JsonAssets/ObjectId:Starfish}} -1 267 -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1/267 -1 {{spacechase0.JsonAssets/ObjectId:Clownfish}} -1 {{spacechase0.JsonAssets/ObjectId:Starfish}} -1 128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1/{{spacechase0.JsonAssets/ObjectId:Starfish}} -1 129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Sunday": true, "Season |contains=Winter": true, "HasMod |contains=MoreFish": false, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,  },
+	},
+	{
+	//Cardia Septal Jellyfish
+	//MoreFish Only
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3 1096 .4 1097 .3/372 .9 394 .5 718 .1 719 .3 723 .3 1096 .5 1098 .1/372 .9 718 .1 719 .3 723 .3 1096 .5 1099 .1/372 .4 392 .8 718 .05 719 .2 723 .2 1096 .5 1100 .1/129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1071 -1 1076 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 267 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1 1071 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Sunday": true, "Season |contains=Winter": true, "HasMod |contains=MoreFish": true, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,  },
+	},
+	{
+	//Cardia Septal Jellyfish
+	//MoreFish Only Vampire Squid
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3 1096 .4 1097 .3/372 .9 394 .5 718 .1 719 .3 723 .3 1096 .5 1098 .1/372 .9 718 .1 719 .3 723 .3 1096 .5 1099 .1/372 .4 392 .8 718 .05 719 .2 723 .2 1096 .5 1100 .1/129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1071 -1 1076 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1 1071 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1 1119 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Sunday": true, "Season |contains=Winter": true, "HasMod |contains=MoreFish": true, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, "Day": "19,20,21,22,23,24,25,26,27,28"  },
+	},
+	{
+	//Cardia Septal Jellyfish
+	//SVE and MoreFish
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3 1096 .4 1097 .3/372 .9 394 .5 718 .1 719 .3 723 .3 1096 .5 1098 .1/372 .9 718 .1 719 .3 723 .3 1096 .5 1099 .1/372 .4 392 .8 718 .05 719 .2 723 .2 1096 .5 1100 .1/129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1071 -1 1076 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 267 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1 1071 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Sunday": true, "Season |contains=Winter": true, "HasMod |contains=MoreFish": true, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,  },
+	},
+	
+	{
+	//Crimson Spiked Clam
+	//NO SVE & More Fish
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3/372 .9 394 .5 718 .1 719 .3 723 .3/372 .9 718 .1 719 .3 723 .3/372 .4 392 .8 718 .05 719 .2 723 .2/{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1 267 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Tuesday": true, "Season |contains=Spring": true, "HasMod |contains=MoreFish": false, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, },
+	},
+	{
+	//Crimson Spiked Clam
+	//SVE Only
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3/372 .9 394 .5 718 .1 719 .3 723 .3/372 .9 718 .1 719 .3 723 .3/372 .4 392 .8 718 .05 719 .2 723 .2/{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Starfish}} -1 267 -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1/267 -1 {{spacechase0.JsonAssets/ObjectId:Clownfish}} -1 {{spacechase0.JsonAssets/ObjectId:Starfish}} -1 128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1/{{spacechase0.JsonAssets/ObjectId:Starfish}} -1 129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Tuesday": true, "Season |contains=Spring": true, "HasMod |contains=MoreFish": false, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, },
+	},
+	{
+	//Crimson Spiked Clam
+	//MoreFish Only
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3 1096 .4 1097 .3/372 .9 394 .5 718 .1 719 .3 723 .3 1096 .5 1098 .1/372 .9 718 .1 719 .3 723 .3 1096 .5 1099 .1/372 .4 392 .8 718 .05 719 .2 723 .2 1096 .5 1100 .1/{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1071 -1 1076 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 267 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1 1071 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Tuesday": true, "Season |contains=Spring": true, "HasMod |contains=MoreFish": true, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,  },
+	},
+	{
+	//Crimson Spiked Clam
+	//SVE and MoreFish
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3 1096 .4 1097 .3/372 .9 394 .5 718 .1 719 .3 723 .3 1096 .5 1098 .1/372 .9 718 .1 719 .3 723 .3 1096 .5 1099 .1/372 .4 392 .8 718 .05 719 .2 723 .2 1096 .5 1100 .1/{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1071 -1 1076 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 267 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1 1071 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Tuesday": true, "Season |contains=Spring": true, "HasMod |contains=MoreFish": true, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,  },
+	},
+	
+	{
+	//Fairytale Lionfish
+	//No SVE & MoreFish
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3/372 .9 394 .5 718 .1 719 .3 723 .3/372 .9 718 .1 719 .3 723 .3/372 .4 392 .8 718 .05 719 .2 723 .2/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 267 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1 267 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "Day |contains=10": true, "HasMod |contains=MoreFish": false, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, },
+	},
+	{
+	//Fairytale Lionfish
+	//SVE Only
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3/372 .9 394 .5 718 .1 719 .3 723 .3/372 .9 718 .1 719 .3 723 .3/372 .4 392 .8 718 .05 719 .2 723 .2/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Starfish}} -1 267 -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 267 -1 {{spacechase0.JsonAssets/ObjectId:Clownfish}} -1 {{spacechase0.JsonAssets/ObjectId:Starfish}} -1 128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Starfish}} -1 129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "Day |contains=10": true, "HasMod |contains=MoreFish": false, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, },
+	},
+	{
+	//Fairytale Lionfish
+	//MoreFish Only
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3 1096 .4 1097 .3/372 .9 394 .5 718 .1 719 .3 723 .3 1096 .5 1098 .1/372 .9 718 .1 719 .3 723 .3 1096 .5 1099 .1/372 .4 392 .8 718 .05 719 .2 723 .2 1096 .5 1100 .1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1071 -1 1076 -1 267 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 267 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1 1071 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "Day |contains=10": true, "HasMod |contains=MoreFish": true, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false, },
+	},
+	{
+	//Fairytale Lionfish
+	//SVE and MoreFish
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Beach": "372 .9 718 .1 719 .3 723 .3 1096 .4 1097 .3/372 .9 394 .5 718 .1 719 .3 723 .3 1096 .5 1098 .1/372 .9 718 .1 719 .3 723 .3 1096 .5 1099 .1/372 .4 392 .8 718 .05 719 .2 723 .2 1096 .5 1100 .1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1071 -1 1076 -1 267 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 267 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1 1071 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1/384 .08 589 .09 102 .15 390 .25 330 1", },
+		"When": { "Day |contains=10": true, "HasMod |contains=MoreFish": true, "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true, },
+	},
+	
+	{
+	//Fixer Eel
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Ridge": "-1/-1/-1/-1/{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 136 -1 142 -1 153 -1 702 -1 700 -1/{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Monday": true, "Season |contains=Spring, Summer": true },
+	},
+	
+	{
+	//Golden Rose Fin
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "Ridge": "-1/-1/-1/-1/{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 136 -1 142 -1 153 -1 702 -1 700 -1/{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1", },
+		"When": { "Day |contains=27": true },
+	},
+	
+	{
+	//Harvester Trout
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "RidgesideVillage": "-1/-1/-1/-1/{{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Saturday": true, "Season |contains=Spring": true },
+	},
+	
+	{
+	//Lullaby Carp
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "RidgesideVillage": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Friday": true, "Season |contains=Fall": true },
+	},
+	
+	{
+	//Pebble Back Crab
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": { "RidgesideVillage": "-1/-1/-1/-1/136 -1 142 -1 153 -1 702 -1 700 -1/{{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 136 -1 142 -1 153 -1 138 -1 702 -1 700 -1 698 -1/136 -1 140 -1 142 -1 153 -1 702 -1 700 -1 269 -1/136 -1 140 -1 141 -1 153 -1 707 -1 702 -1 700 -1 698 -1 269 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1", },
+		"When": { "DayOfWeek |contains=Wednesday": true, "Season |contains=Summer": true },
+	},
+	
+//Fishpond                    
+
+	{
+	//Bladetail Sturgeon
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Bladetail Sturgeon": {
+		"RequiredTags": [ "item_bladetail_sturgeon" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 445,				//Item ID
+		"MinQuantity": 2,			//Min #
+		"MaxQuantity": 4			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 441,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "591 2" ],			//What fish want to advance (ID amount)
+		"4": [ "196 2" ],
+		"8": [ "227 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Caped Tree Frog
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Caped Tree Frog": {
+		"RequiredTags": [ "item_caped_tree_frog" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 349,				//Item ID
+		"MinQuantity": 1,			//Min #
+		"MaxQuantity": 2			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 60,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "264 2" ],			//What fish want to advance (ID amount)
+		"4": [ "86 2" ],
+		"8": [ "219 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Cardia Septal Jellyfish
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Cardia Septal Jellyfish": {
+		"RequiredTags": [ "item_cardia_septal_jellyfish" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 577,				//Item ID
+		"MinQuantity": 3,			//Min #
+		"MaxQuantity": 4			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 456,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "420 2" ],			//What fish want to advance (ID amount)
+		"4": [ "414 2" ],
+		"8": [ "610 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Crimson Spiked Clam
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Crimson Spiked Clam": {
+		"RequiredTags": [ "item_crimson_spiked_clam" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 64,				//Item ID
+		"MinQuantity": 4,			//Min #
+		"MaxQuantity": 6			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 797,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 64,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 537,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "233 2" ],			//What fish want to advance (ID amount)
+		"4": [ "268 2" ],
+		"8": [ "253 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Fairytale Lionfish
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Fairytale Lionfish": {
+		"RequiredTags": [ "item_fairytale_lionfish" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.12,				//Chance to produce item
+		"ItemID": 74,				//Item ID
+		"MinQuantity": 1,			//Min #
+		"MaxQuantity": 1			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 445,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "393 2" ],			//What fish want to advance (ID amount)
+		"4": [ "586 2" ],
+		"8": [ "611 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Fixer Eel
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Fixer Eel": {
+		"RequiredTags": [ "item_fixer_eel" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 787,				//Item ID
+		"MinQuantity": 3,			//Min #
+		"MaxQuantity": 4			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 336,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "400 2" ],			//What fish want to advance (ID amount)
+		"4": [ "338 2" ],
+		"8": [ "206 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Golden Rose Fin
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Golden Rose Fin": {
+		"RequiredTags": [ "item_golden_rose_fin" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.20,				//Chance to produce item
+		"ItemID": 373,				//Item ID
+		"MinQuantity": 1,			//Min #
+		"MaxQuantity": 1			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 428,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "636 2" ],			//What fish want to advance (ID amount)
+		"4": [ "72 2" ],
+		"8": [ "228 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Harvester Trout
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Harvester Trout": {
+		"RequiredTags": [ "item_harvester_trout" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 114,				//Item ID
+		"MinQuantity": 5,			//Min #
+		"MaxQuantity": 6			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 770,
+		"MinQuantity": 5,
+		"MaxQuantity": 6
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "637 2" ],			//What fish want to advance (ID amount)
+		"4": [ "444 2" ],
+		"8": [ "224 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Lullaby Carp
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Lullaby Carp": {
+		"RequiredTags": [ "item_lullaby_carp" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 445,				//Item ID
+		"MinQuantity": 2,			//Min #
+		"MaxQuantity": 4			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 812,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.20,
+		"ItemID": 221,
+		"MinQuantity": 1,
+		"MaxQuantity": 1
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "276 2" ],			//What fish want to advance (ID amount)
+		"4": [ "60 2" ],
+		"8": [ "211 2" ],
+		},
+		},
+		},
+	},
+	{
+	//Pebble Back Crab
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Pebble Back Crab": {
+		"RequiredTags": [ "item_pebble_back_crab" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+		"RequiredPopulation": 10,	//# of fish
+		"Chance": 0.40,				//Chance to produce item
+		"ItemID": 386,				//Item ID
+		"MinQuantity": 2,			//Min #
+		"MaxQuantity": 4			//Max #
+		},
+		{
+		"RequiredPopulation": 6,
+		"Chance": 0.45,
+		"ItemID": 72,
+		"MinQuantity": 2,
+		"MaxQuantity": 4
+		},
+		{
+		"RequiredPopulation": 3,
+		"Chance": 0.50,
+		"ItemID": 749,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		},
+		{
+		"RequiredPopulation": 0,
+		"Chance": 0.70,
+		"ItemID": 812,
+		"MinQuantity": 1,
+		"MaxQuantity": 2
+		}
+		],
+		"PopulationGates": {
+		"2": [ "233 2" ],			//What fish want to advance (ID amount)
+		"4": [ "272 2" ],
+		"8": [ "213 2" ],
+		},
+		},
+		},
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"MoveEntries": [
+			{ "ID": "item_bladetail_sturgeon", "ToPosition": "Top" },
+			{ "ID": "item_caped_tree_frog", "AfterID": "item_bladetail_sturgeon" },
+			{ "ID": "item_cardia_septal_jellyfish", "AfterID": "item_caped_tree_frog" },
+			{ "ID": "item_crimson_spiked_clam", "AfterID": "item_cardia_septal_jellyfish" },
+			{ "ID": "item_fairytale_lionfish", "AfterID": "item_crimson_spiked_clam" },
+			{ "ID": "item_fixer_eel", "AfterID": "item_fairytale_lionfish" },
+			{ "ID": "item_golden_rose_fin", "AfterID": "item_fixer_eel" },
+			{ "ID": "item_harvester_trout", "AfterID": "item_golden_rose_fin" },
+			{ "ID": "item_lullaby_carp", "AfterID": "item_harvester_trout" },
+			{ "ID": "item_pebble_back_crab", "AfterID": "item_lullaby_carp" }
+		]
+	},
+
+
+	
+]
+}

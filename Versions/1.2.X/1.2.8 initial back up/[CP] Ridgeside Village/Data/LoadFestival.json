@@ -1,0 +1,94 @@
+{
+"Changes": [
+
+//===================================
+//Ember of Resolutions (winter 28)   
+//===================================
+
+    {
+		"LogName": "Ember of Resolutions",
+		"Action": "EditData",
+		"Target": "Data/Festivals/FestivalDates",
+		"Entries": { "winter28": "{{i18n:Ember.of.Resolutions}}", },
+    },
+    {
+		"LogName": "Festival Data",
+		"Action": "Load",
+		"Target": "Data/Festivals/winter28",
+		"FromFile": "Data/Festivals/{{Language}}/EmberNight.json",
+	},
+	{
+		"LogName": "Main Event Edit",
+		"Action": "EditData",
+		"Target": "Data/Festivals/winter28",
+		"Entries": {
+		"mainEvent": "fade/viewport 39 46/stopAdvancedMoves/loadActors MainEvent/addTemporaryActor RSVBonfireLeft 64 96 36 42 2 false/addTemporaryActor RSVBonfireRight 64 96 40 42 2 false/stopMusic/warp farmer1 40 49/warp farmer2 48 39/warp farmer3 48 40/warp farmer4 48 41/faceDirection farmer1 0/faceDirection farmer2 3/faceDirection farmer3 3/faceDirection farmer4 3/pause 1000/speak Lewis \"{{i18n:EoR.01}}\"/emote Lenny 56/pause 500/speak Lenny \"{{i18n:EoR.02}}\"/speak Lewis \"{{i18n:EoR.03}}\"/textAboveHead Marnie \"{{i18n:EoR.04}}\"/textAboveHead Robin \"{{i18n:EoR.05}}\"/pause 1000/textAboveHead Leah \"{{i18n:EoR.06}}\"/pause 1000/textAboveHead Gus \"{{i18n:EoR.07}}\"/pause 1000/textAboveHead Penny \"{{i18n:EoR.08}}\"/textAboveHead Vincent \"{{i18n:EoR.09}}\"/pause 1000/textAboveHead Willy \"{{i18n:EoR.10}}\"/textAboveHead Richard \"{{i18n:EoR.11}}\"/pause 1000/speak Lewis \"{{i18n:EoR.12}}\"/move Lenny 0 1 2/pause 1000/speak Lenny \"{{i18n:EoR.13}}\"/emote farmer 32/pause 1000/speak Lenny \"{{i18n:EoR.14}}\"/textAboveHead Abigail \"{{i18n:EoR.15}}\"/textAboveHead Keahi \"{{i18n:EoR.16}}\"/pause 800/textAboveHead Robin \"{{i18n:EoR.17}}\"/textAboveHead Maddie \"{{i18n:EoR.18}}\"/emote Harvey 28 true/emote Philip 28 true/emote Maru 28/pause 1000/globalFade/viewport -1000 -1000/warp Lenny 42 46/warp Lewis 42 47/faceDirection Lenny 3/faceDirection Lewis 3{{BONFIREEVENT}}warp Lenny 39 45/warp Lewis 40 45/faceDirection Lenny 2/faceDirection Lewis 2/fade/viewport 39 46/pause 2000/speak Lenny \"{{i18n:EoR.20}}\"/faceDirection Lewis 0/move Lenny 0 -2 0/pause 1000/playSound furnace/pause 1000/playSound cracklingFire/playMusic cm:EmberNight/animate RSVBonfireLeft false false 300 0 1 0 1 0 1 0 1 0 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 3 4 3 4 3 4 3 4 3 4 3 4 3 4 5 4 5 4 5 4 5 4 5 4 5 6 5 6 5 6 5 6 5 6 5 6 5 6 7 6 7 6 7 6 7 6 7 6 7 8 7 8 7 8 7 8 7 8 7 8 9 8 9 8 9 8 9 8 9 8 9 10 11/animate RSVBonfireRight false false 300 0 1 0 1 0 1 0 1 0 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 3 4 3 4 3 4 3 4 3 4 3 4 3 4 5 4 5 4 5 4 5 4 5 4 5 6 5 6 5 6 5 6 5 6 5 6 5 6 7 6 7 6 7 6 7 6 7 6 7 8 7 8 7 8 7 8 7 8 7 8 9 8 9 8 9 8 9 8 9 8 9 10 11/pause 3000/move Lenny 0 2 0/textAboveHead Lewis \"{{i18n:EoR.21}}\"/textAboveHead Vincent \"{{i18n:EoR.22}}\"/textAboveHead Jas \"{{i18n:EoR.23}}\"/pause 3000/textAboveHead Corine \"{{i18n:EoR.24}}\"/textAboveHead Jodi \"{{i18n:EoR.25}}\"/pause 3000/move Jas 0 -1 0/textAboveHead Shane \"{{i18n:EoR.26}}\"/textAboveHead Pika \"{{i18n:EoR.27}}\"/move Keahi 0 -1 0/move Abigail -1 0 3/pause 3000/move Robin 1 0 1/textAboveHead Elliott \"{{i18n:EoR.28}}\"/textAboveHead Pierre \"{{i18n:EoR.29}}\"/pause 3000/stopAnimation RSVBonfireLeft 11/stopAnimation RSVBonfireRight 11/pause 200/animate RSVBonfireLeft false true 300 9 10 11 10 9 11 10/animate RSVBonfireRight false true 300 9 10 11 10 9 11 10/pause 1000/faceDirection Lenny 1/pause 1000/faceDirection Lewis 3/faceDirection Lenny 2/faceDirection Lewis 2/speak Lenny \"{{i18n:EoR.30}}\"/faceDirection Lewis 2/faceDirection Lenny 2/speak Lewis \"{{i18n:EoR.31}}\"/pause 2000/viewport move 0 -1 8000000/pause 8000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/pause 600/message \"{{i18n:EoR.32}}\"/waitForOtherPlayers festivalEnd/end",
+		},
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Event.cs.1527": "$q -1 null#{{i18n:EoR.Bonfire}}#$r -1 0 yes#{{i18n:EoR.Yes}}#$r -1 0 no#{{i18n:EoR.No}}",
+		},
+		"When": { "Season": "winter", "Day": 28 },
+	},
+	
+//===================================
+//Ridgeside Gathering (fall 20)   
+//===================================
+
+    {
+		"LogName": "Ridgeside Gathering",
+		"Action": "EditData",
+		"Target": "Data/Festivals/FestivalDates",
+		"Entries": { "fall20": "{{i18n:Ridgeside.Gathering}}", },
+    },
+    {
+		"LogName": "Festival Data",
+		"Action": "Load",
+		"Target": "Data/Festivals/fall20",
+		"FromFile": "Data/Festivals/{{Language}}/Gathering.json",
+	},
+	
+	//MAIN EVENTS
+	{
+		"LogName": "Main Event Edit SAM SING",
+		"Action": "EditData",
+		"Target": "Data/Festivals/fall20",
+		"Update": "OnLocationChange",
+		"Entries": {
+		"mainEvent": "fade/viewport -1000 -1000/loadActors MainEvent/warp Abigail 81 38/warp Sebastian 89 40/positionOffset Sebastian 20 -18/positionOffset Abigail 20 18/stopMusic/pause 1000/warp farmer1 84 44/warp farmer2 94 39/warp farmer3 94 40/warp farmer4 94 41/faceDirection farmer1 0/faceDirection farmer2 3/faceDirection farmer3 3/faceDirection farmer4 3/warp Lenny 85 40/warp Lewis 84 40/faceDirection Lenny 2/faceDirection Lewis 2/speak Lenny \"{{i18n:RSVG.01}}\"/pause 1000/fade/viewport 85 43/pause 3000/speak Lewis \"{{i18n:RSVG.02}}\"/speak Lenny \"{{i18n:RSVG.03}}\"/speak Lewis \"{{i18n:RSVG.04}}\"/speak Lenny \"{{i18n:RSVG.05}}\"/speak Lewis \"{{i18n:RSVG.06}}\"/textAboveHead Shane \"{{i18n:RSVG.07}}\"/textAboveHead Clint \"{{i18n:RSVG.08}}\"/textAboveHead Jodi \"{{i18n:RSVG.09}}\"/pause 1500/textAboveHead Keahi \"{{i18n:RSVG.10}}\"/textAboveHead Bert \"{{i18n:RSVG.11}}\"/textAboveHead Leah \"{{i18n:RSVG.12}}\"/pause 3000/emote Lenny 20 true/emote Lewis 32/pause 1000/faceDirection Lenny 3/faceDirection Lewis 1/pause 2000/faceDirection Lenny 2/faceDirection Lewis 2/speak Lenny \"{{i18n:RSVG.13}}\"/globalFade/viewport -1000 -1000/warp Lenny 86 44/faceDirection Lenny 0/warp Lewis 83 44/faceDirection Lewis 0/faceDirection Elliott 1/faceDirection Leah 3/faceDirection Bert 1/faceDirection Olga 3/faceDirection Demetrius 1/faceDirection Robin 3{{RSVGATHER}}playMusic {{RANDOMMUSIC}}/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16{{RSVGATHERDANCE}}animate Robin true true 500 20 21 20 22/animate Demetrius true true 500 24 25 24 26/animate Keahi false true 236 16 17 18 17/animate Vincent false true 236 20 8 21 8/animate Emily false true 236 16 17/animate Maru false true 236 29 30/animate Olga false true 300 24 25/animate Bert false true 300 24 25/animate Emily false true 236 16 17/animate Leah false true 236 30 31/animate Elliott false true 236 36 37/animate Ysabelle false true 200 34 35/animate Corine false true 300 34 35/pause 25000/pause 2000/viewport move -1 -1 8000000/pause 8000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/pause 600/message \"{{i18n:RSVG.15}}\"/waitForOtherPlayers festivalEnd/end",
+		},
+	},
+	
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Event.cs.1527": "$q -1 null#{{i18n:RSVG.Concert}}#$r -1 0 yes#{{i18n:RSVG.Yes}}#$r -1 0 no#{{i18n:RSVG.No}}",
+		},
+		"When": { "Season": "fall", "Day": 20 },
+	},
+	
+	//{
+		//"Action": "EditData",
+		//"Target": "Characters/Dialogue/Lenny",
+		//"Entries": {
+		//"fall_20": "Hey @! Glad to see you!$h#$b#Later's the annual Ridgeside Gathering and I was wondering..#$b#Would you like to perform in the concert along with the others? I'll only ask once okay?$4#$q 75161001/75161002 ridgesideperform_question#Would you like to perform in the concert later?#$r 75161001 0 ridgesideperform_yes#Sure, I would love to!#$r 75161002 0 ridgesideperform_no#Oh, sorry, I'll just watch.",
+		//"ridgesideperform_yes": "You will?! Great! I can't wait!$h",
+		//"ridgesideperform_no": "Really huh? Well that's too bad.$4",
+		//"ridgesideperform_question": "$p 75161001#Oh! I'm excited to see you all perform! Goodluck!$h|Oh well, It would have been much more fun to have more performers. Sing and dance your heart out!?$h",
+		//},
+	//},
+	
+	//{
+		//"Action": "EditData",
+		//"Target": "Characters/schedules/Lenny",
+		//"Entries": {
+		//"fall_20": "610 RSVCliff 22 22 2/1410 LennyHouse 3 7 0/1600 LennyHouse 10 5 2/1800 RidgesideVillage 81 63 3/2200 LennyHouse 22 5 0 lenny_sleep",
+		//},
+	//},
+	
+]
+}

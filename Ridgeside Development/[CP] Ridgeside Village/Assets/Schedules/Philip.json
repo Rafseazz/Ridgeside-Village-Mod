@@ -1,0 +1,32 @@
+{
+"Changes": [
+
+	{
+		"LogName": "Philip Base Schedule",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Philip",
+		"Entries": {
+
+
+			"spring": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Custom_Ridgeside_RidgesideVillage 81 58 0/1200 Custom_Ridgeside_ShiroHouse 5 10 3/1600 Custom_Ridgeside_LogCabinHotel3rdFloor 21 6 2 philip_gym/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+			"summer": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Custom_Ridgeside_RidgesideVillage 81 58 0/1200 Custom_Ridgeside_ShiroHouse 5 10 3/1600 Custom_Ridgeside_LogCabinHotel3rdFloor 21 6 2 philip_gym/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+			"fall": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Custom_Ridgeside_RidgesideVillage 81 58 0/1200 Custom_Ridgeside_ShiroHouse 5 10 3/1600 Custom_Ridgeside_LogCabinHotel3rdFloor 21 6 2 philip_gym/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+			"winter": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Custom_Ridgeside_RidgesideVillage 81 58 0/1200 Custom_Ridgeside_ShiroHouse 5 10 3/1600 Custom_Ridgeside_LogCabinHotel3rdFloor 21 6 2 philip_gym/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+			"rain": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Hospital 1 7 0/1600 Saloon 20 20 3/2100 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+			"Sun": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Hospital 1 7 0/1200 JoshHouse 18 21 3/1600 Hospital 1 7 0/2000 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+			"Mon": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Custom_Ridgeside_ShiroHouse 5 10 3/1030 Custom_Ridgeside_RSVCliff 2 16 1/1200 Town 14 53 1/1400 Town 23 30 1/1500 Town 56 28 1/1600 Town 41 80 1/1800 Custom_Ridgeside_RidgesideVillage 124 45 1/2000 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+			"winter_16": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Custom_Ridgeside_RidgesideVillage 81 58 0/1200 Custom_Ridgeside_ShiroHouse 5 10 3/1600 Beach 25 36 2/2600 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+
+			//Marriage Schedule
+			"marriage_Mon": "1000 Custom_Ridgeside_RSVCliff 2 16 1/1200 Town 16 53 1/1400 Town 23 30 1/1500 Town 56 28 1/1600 Town 41 80 1/1800 RidgesideVillage 124 45 1/2000 BusStop -1 23 3",
+			"marriage_Tue": "GOTO marriage_Wed",
+			"marriage_Wed": "1000 Custom_Ridgeside_ShiroHouse 5 10 3/1600 Custom_Ridgeside_LogCabinHotel3rdFloor 21 6 2 philip_gym/2200 BusStop -1 23 3",
+			"marriage_Thu": "900 Hospital 1 7 0/1600 Saloon 20 20 3/2200 BusStop -1 23 3",
+			"marriage_Sun": "900 Hospital 1 7 0/1200 JoshHouse 18 21 3/1600 Hospital 1 7 0/2200 BusStop -1 23 3",
+			"marriage_winter_16": "700 Hospital 1 7 0/1200 JoshHouse 18 21 3/1400 Hospital 1 7 0/1600 Beach 25 36 2/2200 BusStop -1 23 3",
+
+					},
+	},
+
+]
+}

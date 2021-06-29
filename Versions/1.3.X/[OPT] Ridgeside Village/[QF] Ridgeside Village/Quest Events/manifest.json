@@ -1,0 +1,22 @@
+{
+	"Name": "Ridgeside Village QF Quests",
+	"Author": "Rafseazz",
+	"Version": "1.2.8",
+	"Description": "Adds Events for the QF Quests",
+	"UniqueID": "Rafseazz.RSVCPQF",
+	"MinimumApiVersion": "3.0.0",
+	"UpdateKeys": [ "Nexus:7286" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+   "Dependencies": [
+	   {
+        "UniqueID": "PurrplingCat.QuestFramework",
+        "IsRequired": false,
+	   },
+	   {
+        "UniqueID": "Rafseazz.RSVCP",
+        "IsRequired": false,
+	   },
+   ]
+}

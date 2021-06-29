@@ -1,0 +1,932 @@
+{
+  "Format": "1.0",
+
+//---------
+//QUESTS   
+//---------
+
+  "Quests": [
+  //Bert needs honey
+	{
+    "Name": "bert_honey", 
+    "Type": "ItemDelivery", 
+    "Title": "Panicking Husband",
+    "Description": "Olga is mad at me, but I know how to make her happy! I need some honey for my honey-bunny.",
+    "Objective": "Bring Honey to Bert",
+    "DaysLeft": 0, 
+    "Reward": 300,
+	"RewardType": "Money",
+	"RewardDescription": "300g",	
+    "Cancelable": true, 
+    "Trigger": "Bert 340 1", 
+    "ReactionText": "You brought it! Thank you so much! I hope she forgives me!$h"
+    },
+	
+  //Trinnie wants flowers
+	{
+    "Name": "trinnie_sunflower", 
+    "Type": "ItemDelivery", 
+    "Title": "Sunflower Princess",
+    "Description": "Trinnie needs sunflowers for the floral dress she is trying to make in order to become the Sunflower Princess!",
+    "Objective": "Bring 10 Sunflowers to Trinnie",
+    "DaysLeft": 0, 
+    "Reward": 2000,
+	"RewardType": "Money",
+	"RewardDescription": "2000g from my Papa.",	
+    "Cancelable": true, 
+    "Trigger": "Trinnie 421 10", 
+    "ReactionText": "The flowers are here! I'm so happy!! Thank you so much, @!!$h"
+    },
+	
+  //Keahi wants slime
+	{
+    "Name": "keahi_slime", 
+    "Type": "ItemDelivery", 
+    "Title": "The Slime King",
+    "Description": "Keahi wants to collect slime as a new hobby. Don't tell his dad.",
+    "Objective": "Bring 10 Slime to Keahi",
+    "DaysLeft": 0, 
+    "Reward": 500,
+	"RewardType": "Money",
+	"RewardDescription": "500g",	
+    "Cancelable": true, 
+    "Trigger": "Keahi 766 10", 
+    "ReactionText": "These are incredibly slimy. It's gross! But also AWESOME!? Thank you! I am now the Slime King!$4"
+    },
+	
+  //Yuuma lost a ring
+	{
+    "Name": "yuuma_ring", 
+    "Type": "LostItem", 
+    "Title": "Yuuma's Lost Ring",
+    "Description": "Yuuma lost his ring. He remembers still having the ring when he was buying stuff from Jeric's farm.",
+    "Objective": "Find Yuuma's ring and bring it back to him",
+    "DaysLeft": 0, 
+    "Reward": 200,
+	"RewardType": "Money",
+	"RewardDescription": "200g",	
+    "Cancelable": true, 
+    "Trigger": "Yuuma 530 RidgesideVillage 19 21", 
+    "ReactionText": "You found it!? Thank you so much, @! I'm really grateful!$h"
+    },
+	
+  //Olga wants to cook Tuna
+	{
+    "Name": "olga_tuna", 
+    "Type": "ItemDelivery", 
+    "Title": "Tuna Craving",
+    "Description": "The Liden's are craving Tuna. They have asked you to deliver one to them. Take the Tuna to Olga.",
+    "Objective": "Deliver 1 Tuna to Olga",
+    "DaysLeft": 0, 
+    "Reward": 400,
+	"RewardType": "Money",
+	"RewardDescription": "400g",	
+    "Cancelable": true, 
+    "Trigger": "Olga 130 1", 
+    "ReactionText": "Oh hey you've delivered it! It's fresh too! Great job @!$h"
+    },
+		
+  //Aguar needs essence
+	{
+    "Name": "aguar_essence", 
+    "Type": "ItemDelivery", 
+    "Title": "Void Experiment",
+    "Description": "Mr. Aguar requires some void essence for his experiment.",
+    "Objective": "Deliver 10 Void Essence to Mr. Aguar",
+    "DaysLeft": 0, 
+    "Reward": 1000,
+	"RewardType": "Money",
+	"RewardDescription": "1000g",	
+    "Cancelable": true, 
+    "Trigger": "Aguar 769 10", 
+    "ReactionText": "Marvelous work, @. Here's my payment. Now if you'll excuse me..."
+    },
+	
+  //Freddie lost his sword
+	{
+    "Name": "freddie_sword", 
+    "Type": "LostItem", 
+    "Title": "An Old Friend",
+    "Description": "Freddie lost an old sword of his while he was strolling around the village. He remembers standing next to a waterfall.",
+    "Objective": "Find Freddie's sword and bring it back to him",
+    "DaysLeft": 0, 
+    "Reward": 500,
+	"RewardType": "Money",
+	"RewardDescription": "500g",	
+    "Cancelable": true, 
+    "Trigger": "Freddie 109 RidgesideVillage 65 108", 
+    "ReactionText": "There you are, old friend. Thank you, @!$h"
+    },
+	
+  //Pika needs mayonnaise
+	{
+    "Name": "pika_mayonnaise", 
+    "Type": "ItemDelivery", 
+    "Title": "Mayo Surprise",
+    "Description": "Pika needs mayonnaise for his new recipe and he asked you to deliver one to him.",
+    "Objective": "Deliver 1 Mayonnaise to Pika",
+    "DaysLeft": 0, 
+    "Reward": 600,
+	"RewardType": "Money",
+	"RewardDescription": "600g",	
+    "Cancelable": true, 
+    "Trigger": "Pika 306 1", 
+    "ReactionText": "Mahalo, @! Thank you! This is quality mayo! Here's your payment, as promised!$h"
+    },
+	
+  //Richard lost his glasses
+	{
+    "Name": "richard_glasses", 
+    "Type": "LostItem", 
+    "Title": "Misplaced Glasses",
+    "Description": "Richard misplaced his glasses! The only thing he remembers is that he didn't leave the hotel the whole day.",
+    "Objective": "Find Richard's glasses and return them to him.",
+    "DaysLeft": 0, 
+    "Reward": 300,
+	"RewardType": "Money",
+	"RewardDescription": "300g",	
+    "Cancelable": true, 
+    "Trigger": "Richard 170 LogCabinHotel2ndFloor 1 24", 
+    "ReactionText": "You found them? Ah! I am eternally grateful, @!$h"
+    },
+	
+//RSVBoardQuests
+	{
+	"Name": "aguar_gem",
+	"Type": "ItemDelivery",
+	"Title": "Aquamarine Errand",
+	"Description": "I am in need of an Aquamarine. I'll be sure to pay you plenty if you provide me with what I desire.\n        -Mr. Aguar.\n\n- 400g on Delivery\n- Mr. Aguar will be thankful",
+	"Objective": "Deliver an Aquamarine to Mr. Aguar",
+	"DaysLeft": 0,
+	"Reward": 400,
+	"RewardType": "Money",
+	"RewardDescription": "400g",
+	"Cancelable": true,
+	"ReactionText": "This is adequate. Here's your payment. Now, if you'll excuse me...",
+	"Trigger": "Aguar 62",
+	"FriendshipGain": { "Aguar": 25 },
+	},
+	{
+	"Name": "aguar_fairystone",
+	"Type": "ItemDelivery",
+	"Title": "Fairy Stone Errand",
+	"Description": "I am in need of a Fairy Stone. I'll be sure to pay you plenty if you provide me with what I desire.\n        -Mr. Aguar.\n\n- 500g on Delivery\n- Mr. Aguar will be thankful",
+	"Objective": "Deliver a Fairy Stone to Mr. Aguar",
+	"DaysLeft": 0,
+	"Reward": 500,
+	"RewardType": "Money",
+	"RewardDescription": "500g",
+	"Cancelable": true,
+	"ReactionText": "This is adequate. Here's your payment. Now, if you'll excuse me...",
+	"Trigger": "Aguar 577",
+	"FriendshipGain": { "Aguar": 25 },
+	},
+	{
+	"Name": "bert_orange",
+	"Type": "ItemDelivery",
+	"Title": "Orange Man Bert",
+	"Description": "I want to start an Orange Juice business! I need someone to supply me with some oranges... At least 3 of 'em!\n        -Bert.\n\n- 900g on Delivery\n- Bert will be thankful",
+	"Objective": "Deliver 5 oranges to Bert",
+	"DaysLeft": 0,
+	"Reward": 900,
+	"RewardType": "Money",
+	"RewardDescription": "900g",
+	"Cancelable": true,
+	"ReactionText": "Orange you glad I didn't ask for bananas? Thanks a bunch, @!",
+	"Trigger": "Bert 635 3",
+	},
+	{
+	"Name": "ezekiel_cavecarrot",
+	"Type": "ItemDelivery",
+	"Title": "A Nostalgic Taste",
+	"Description": "It's been so long since I tasted a Cave Carrot. If anyone brings me some I'll give them some coins.\n        -Ezekiel.\n\n- 200g on Delivery\n- Ezekiel will be thankful",
+	"Objective": "Deliver a Cave Carrot to Ezekiel",
+	"DaysLeft": 0,
+	"Reward": 200,
+	"RewardType": "Money",
+	"RewardDescription": "200g",
+	"Cancelable": true,
+	"ReactionText": "Bah, this tastes disgusting. I guess I don't carrot all for this thing.$a",
+	"Trigger": "Ezekiel 78",
+	"FriendshipGain": { "Ezekiel": 25 },
+	},
+	{
+	"Name": "freddie_shadowbrute",
+	"Type": "Monster",
+	"Title": "Brutal Shadows",
+	"Description": "Shadow Brutes are dangerous feral beasts. Slay some Shadow Brutes to bring peace to the valley. Go forth, young adventurer.\n        -Freddie.\n\n- 3000g on Completion",
+	"Objective": "Slay 10 Shadow Brutes",
+	"DaysLeft": 0,
+	"Reward": 3000,
+	"RewardType": "Money",
+	"RewardDescription": "3000g",
+	"Cancelable": true,
+	"Trigger": "Shadow_Brute 10 Freddie",
+	"FriendshipGain": { "Freddie": 25 },
+	},
+	{
+	"Name": "freddie_pepperrex",
+	"Type": "Monster",
+	"Title": "A Wonderful Hobby",
+	"Description": "Has anyone heard of the Pepper Rex? They're quite fun to hunt! I challenge anyone to slay 10 of them and I'll reward you handsomely. Good luck!.\n        -Freddie.\n\n- 4000g on completion",
+	"Objective": "Slay 10 Pepper Rexes",
+	"DaysLeft": 0,
+	"Reward": 4000,
+	"RewardType": "Money",
+	"RewardDescription": "4000g",
+	"Cancelable": true,
+	"Trigger": "Pepper_Rex 10 Freddie",
+	"FriendshipGain": { "Freddie": 25 },
+	},
+	{
+	"Name": "keahi_tomato",
+	"Type": "ItemDelivery",
+	"Title": "Toe May Toe",
+	"Description": "Can anyone bring me a big fat juicy tomato? It's for a secret project.\n        -Keahi.\n\n- 200g on Delivery\n- Keahi will be thankful\n- Keahi will spare you",
+	"Objective": "Deliver a Tomato to Keahi",
+	"DaysLeft": 0,
+	"Reward": 200,
+	"RewardType": "Money",
+	"RewardDescription": "200g",
+	"Cancelable": true,
+	"ReactionText": "It's perfect, @! This is going to be epic!$h",
+	"Trigger": "Keahi 256",
+	"FriendshipGain": { "Keahi": 25 },
+	},
+	{
+	"Name": "keahi_bomb",
+	"Type": "ItemDelivery",
+	"Title": "A Harmless Prank",
+	"Description": "So... my dad won't buy me a bomb. So I posted this instead! If anyone has one, bring one to me and I'll pay you with my savings! Quick! Before they remove this again!.\n        -Keahi.\n\n- 1000g on Delivery\n- Keahi will be thankful\n- Citizens will be concerned",
+	"Objective": "Deliver a Bomb to Keahi",
+	"DaysLeft": 0,
+	"Reward": 1000,
+	"RewardType": "Money",
+	"RewardDescription": "1000g",
+	"Cancelable": true,
+	"ReactionText": "No one saw you right? Awesome! See ya, @! Thanks again!$h",
+	"Trigger": "Keahi 287",
+	"FriendshipGain": { "Keahi": 25 },
+	},
+	{
+	"Name": "lenny_eggplant",
+	"Type": "ItemDelivery",
+	"Title": "Healthy Salad",
+	"Description": "I saw this intriguing recipe for an eggplant salad and it requires an eggplant. Bring me an eggplant. I'll pay! .\n        -Lenny.\n\n- 200g on Delivery\n- Lenny will be thankful",
+	"Objective": "Deliver an Eggplant to Lenny",
+	"DaysLeft": 0,
+	"Reward": 500,
+	"RewardType": "Money",
+	"RewardDescription": "200g",
+	"Cancelable": true,
+	"ReactionText": "It's finally here! Thanks a lot, @! I'm going to have a healthy dinner tonight!$h",
+	"Trigger": "Lenny 272",
+	"FriendshipGain": { "Lenny": 25 },
+	},
+	{
+	"Name": "lenny_wine",
+	"Type": "ItemDelivery",
+	"Title": "Stress Reliever",
+	"Description": "Can anyone bring me some wine? I need to de-stress. I can't promise I won't finish the whole bottle in one night.\n        -Lenny.\n\n- 1000g on Delivery\n- Lenny will be thankful",
+	"Objective": "Deliver a Wine to Lenny",
+	"DaysLeft": 0,
+	"Reward": 1000,
+	"RewardType": "Money",
+	"RewardDescription": "1000g",
+	"Cancelable": true,
+	"ReactionText": "Ah! I've been longing for this! Thank you, @.",
+	"Trigger": "Lenny 348",
+	"FriendshipGain": { "Lenny": 25 },
+	},
+	{
+	"Name": "lola_hauntedskull",
+	"Type": "Monster",
+	"Title": "Best of the Best",
+	"Description": "Anyone up for a challenge? I'll pay you handsomely if you manage to slay 20 Haunted Skulls. Be a dear and slay some for me.\n        -Lola.\n\n- 10000g on Completion",
+	"Objective": "Slay 20 Haunted Skulls",
+	"DaysLeft": 0,
+	"Reward": 10000,
+	"RewardType": "Money",
+	"RewardDescription": "10000g",
+	"Cancelable": true,
+	"Trigger": "Haunted_Skull 20 Lola",
+	"FriendshipGain": { "Lola": 25 },
+	},
+	{
+	"Name": "lola_slime",
+	"Type": "Monster",
+	"Title": "Slime Slayer",
+	"Description": "I'm sick of all these slimey slimes. Slay a couple of Green Slimes for me, dear. I'll pay. \n        -Lola.\n\n- 750g on Completion",
+	"Objective": "Slay 10 Green Slimes",
+	"DaysLeft": 0,
+	"Reward": 750,
+	"RewardType": "Money",
+	"RewardDescription": "750g",
+	"Cancelable": true,
+	"Trigger": "Green_Slime 10 Lola",
+	"FriendshipGain": { "Lola": 25 },
+	},
+	{
+	"Name": "olga_coffee",
+	"Type": "ItemDelivery",
+	"Title": "Cuppa Coffee",
+	"Description": "I think I might try some coffee. I'm getting a bit sick of slurping tea all day. I'll pay.\n        -Olga.\n\n- 250g on Delivery\n- Olga will be thankful",
+	"Objective": "Deliver Coffee to Olga",
+	"DaysLeft": 0,
+	"Reward": 250,
+	"RewardType": "Money",
+	"RewardDescription": "250",
+	"Cancelable": true,
+	"ReactionText": "Thank you, @! This is much better than tea!",
+	"Trigger": "Olga 395",
+	"FriendshipGain": { "Olga": 30 },
+	},
+	{
+	"Name": "pika_cheese",
+	"Type": "ItemDelivery",
+	"Title": "Cheesy Memory",
+	"Description": "I need some cheese to make a childhood dish of mine. I want to my son to taste the dish that made me passionate about cooking.\n        -Pika.\n\n- 800g on Delivery\n- Pika will be thankful",
+	"Objective": "Deliver Cheese to Pika",
+	"DaysLeft": 0,
+	"Reward": 800,
+	"RewardType": "Money",
+	"RewardDescription": "800g",
+	"Cancelable": true,
+	"ReactionText": "Mahalo! Thank you! I can't wait to start cooking!$h",
+	"Trigger": "Pika 424",
+	"FriendshipGain": { "Pika": 25 },
+	},
+	{
+	"Name": "pika_starfruit",
+	"Type": "ItemDelivery",
+	"Title": "Ember Island Dish",
+	"Description": "I've been missing a certain Ember Island dish for quite some time now. I need some Starfruit, though. If anyone can bring me one I'll be really thankful.\n        -Pika.\n\n- 2000g on Delivery\n- Pika will be thankful",
+	"Objective": "Deliver Starfruit to Pika",
+	"DaysLeft": 0,
+	"Reward": 2000,
+	"RewardType": "Money",
+	"RewardDescription": "2000g",
+	"Cancelable": true,
+	"ReactionText": "Mahalo! Thank you! I've been looking everywhere for this! Thank you once again, @!$h",
+	"Trigger": "Pika 268",
+	"FriendshipGain": { "Pika": 100 },
+	},
+	{
+	"Name": "richard_caviar",
+	"Type": "ItemDelivery",
+	"Title": "Expensive Cuisine",
+	"Description": "I'm planning to add some more dishes for the room service menu for the hotel. One of the guests suggested Caviar. Bring me some. I'll pay handsomely.\n        -Richard.\n\n- 3000g on Delivery\n- Richard will be thankful",
+	"Objective": "Deliver Caviar to Richard",
+	"DaysLeft": 0,
+	"Reward": 3000,
+	"RewardType": "Money",
+	"RewardDescription": "3000g",
+	"Cancelable": true,
+	"ReactionText": "This is some good quality caviar, @! I'm utmost grateful.$h",
+	"Trigger": "Richard 445",
+	"FriendshipGain": { "Richard": 30 },
+	},
+	{
+	"Name": "richard_bat",
+	"Type": "Monster",
+	"Title": "Drats, bats!",
+	"Description": "Bats have been hanging around the hotel at night lately! They're spooky! I need someone to slay a number of them in the mines so they stop flying over.\n        -Richard.\n\n- 1000g on Delivery\n- Richard will be thankful",
+	"Objective": "Slay 20 Bats",
+	"DaysLeft": 0,
+	"Reward": 1000,
+	"RewardType": "Money",
+	"RewardDescription": "1000g",
+	"Cancelable": true,
+	"Trigger": "Bat 20 Richard",
+	"FriendshipGain": { "Richard": 25 },
+	},
+	{
+	"Name": "trinnie_pinkcake",
+	"Type": "ItemDelivery",
+	"Title": "Pink Dream",
+	"Description": "So I had this dream last night where I was living in a HUGE castle, it was made of cake... And it was PINK! Then I woke up and now I want to eat Pink Cake! Papa gave me money to pay for the delivery!\n        -Trinnie.\n\n- 600g on Delivery\n- Trinnie will be thankful",
+	"Objective": "Deliver Pink Cake to Trinnie",
+	"DaysLeft": 0,
+	"Reward": 600,
+	"RewardType": "Money",
+	"RewardDescription": "600g",
+	"Cancelable": true,
+	"ReactionText": "Yay! It's here! Thank you so much, @! Here's the monies!$h",
+	"Trigger": "Trinnie 221",
+	"FriendshipGain": { "Trinnie": 30 },
+	},
+	{
+	"Name": "trinnie_poppy",
+	"Type": "ItemDelivery",
+	"Title": "Poppy Drawing",
+	"Description": "I need a Poppy flower! I'm having a hard time drawing one! Someone PLEASE bring me one! Thank you!\n        -Trinnie.\n\n- 400g on Delivery\n- Trinnie will be thankful",
+	"Objective": "Poppy for Trinnie",
+	"DaysLeft": 0,
+	"Reward": 400,
+	"RewardType": "Money",
+	"RewardDescription": "400g",
+	"Cancelable": true,
+	"ReactionText": "Oh! It looks pretty! Thank you, @! I'll start drawing ASAP!$h",
+	"Trigger": "Trinnie 376",
+	"FriendshipGain": { "Trinnie": 50 },
+	},
+	{
+	"Name": "yuuma_burger",
+	"Type": "ItemDelivery",
+	"Title": "A Kid's Wish",
+	"Description": "It's fine if no one accepts this. But if anyone can, I just want to taste a Survival Burger again, it's been so long since I had one. But yeah... It's no big deal. Thank you.\n        -Yuuma.\n\n- 300g on Delivery\n- Yuuma will be thankful",
+	"Objective": "Deliver a Survival Burger to Yuuma",
+	"DaysLeft": 0,
+	"Reward": 300,
+	"RewardType": "Money",
+	"RewardDescription": "300g",
+	"Cancelable": true,
+	"ReactionText": "I've been wanting this for so long! Thank you so much, @!$h",
+	"Trigger": "Yuuma 241",
+	"FriendshipGain": { "Yuuma": 30 },
+	},
+	{
+	"Name": "yuuma_iron",
+	"Type": "ItemDelivery",
+	"Title": "The Broken Swing",
+	"Description": "Shiro wants to fix the swing in front of the house but I won't let him. So I'll do it instead, but I need an Iron Bar. Can anyone bring me some? I'll pay... I promise. Thank you.\n        -Yuuma.\n\n- 300g on Delivery\n- Yuuma will be thankful",
+	"Objective": "Deliver an Iron Bar to Yuuma",
+	"DaysLeft": 0,
+	"Reward": 300,
+	"RewardType": "Money",
+	"RewardDescription": "300g",
+	"Cancelable": true,
+	"ReactionText": "Thank you for this, @, I'm glad you helped me out. I was a little scared to go into the mines to get it myself.",
+	"Trigger": "Yuuma 335",
+	"FriendshipGain": { "Yuuma": 30 },
+	},
+	
+//Ridge Quests
+	{
+	"Name": "mysticfalls_1",
+	"Type": "Location",
+	"Title": "The Falls of Companionship",
+	"Description": "Hints of an underground waterfall can be found in the Ridge Forest. It's rummored to bless the ones who value friendship.",
+	"Objective": "Find the hidden waterfalls with lush green foliage in the Ridge Forest",
+	"DaysLeft": 0,
+	"Reward": "Prismatic Shard",
+	"RewardType": "Object",
+	"RewardDescription": "A rare colorful stone",
+	"Cancelable": false,
+	"Trigger": "MysticFalls1",
+	},
+	{
+	"Name": "mysticfalls_2",
+	"Type": "Location",
+	"Title": "The Falls of Love",
+	"Description": "Hints of an underground waterfall can be found in the Ridge Forest. It's rummored to bless the ones who value love.",
+	"Objective": "Find the hidden waterfalls surrounded by pink trees and sand in the Ridge Forest",
+	"DaysLeft": 0,
+	"Reward": 500,
+	"RewardType": "Money",
+	"RewardDescription": "Affection from the bachelors and bachelorettes of the valley",
+	"Cancelable": false,
+	"Trigger": "MysticFalls2",
+	"FriendshipGain": { 
+		"Alissa": 250,
+		"Corine": 250,
+		"Flor": 250,
+		"Maddie": 250,
+		"Ysabelle": 250,
+		"Abigail": 250,
+		"Maru": 250,
+		"Emily": 250,
+		"Haley": 250,
+		"Penny": 250,
+		"Leah": 250,
+		"Ian": 250,
+		"Jeric": 250,
+		"Kenneth": 250,
+		"Philip": 250,
+		"Shiro": 250,
+		"Alex": 250,
+		"Elliott": 250,
+		"Harvey": 250,
+		"Sam": 250,
+		"Sebastian": 250,
+		"Shane": 250,
+		},
+	},
+	{
+	"Name": "mysticfalls_3",
+	"Type": "Location",
+	"Title": "The Falls of Sacrifice",
+	"Description": "Hints of an underground waterfall can be found in the Ridge Forest. It's rummored to bless the ones who are curious about the unseen.",
+	"Objective": "Find the hidden waterfalls surrounded by the dark in the Ridge Forest",
+	"DaysLeft": 0,
+	"Reward": "Obsidian Edge",
+	"RewardType": "Weapon",
+	"RewardDescription": "Obsidian Edge",
+	"Cancelable": false,
+	"Trigger": "MysticFalls3",
+	},
+	
+	//Minecarft Restoration
+	  //Wood x 200
+	{
+    "Name": "lenny_minecart1", 
+    "Type": "ItemDelivery", 
+    "Title": "Ridge Minecart Restoration!",
+    "Description": "Lenny has given you details of materials needed to fix the minecart.",
+    "Objective": "Deliver 200 Wood to Lenny",
+    "DaysLeft": 0, 	
+    "Cancelable": false, 
+    "Trigger": "Lenny 388 200", 
+    "ReactionText": "These will be enough, @! Great job! Now, here's the next list of materials.",
+	"NextQuests": [ "lenny_minecart2" ]
+    },
+	  //Iron x 10
+	{
+    "Name": "lenny_minecart2", 
+    "Type": "ItemDelivery", 
+    "Title": "Ridge Minecart Restoration!",
+    "Description": "Lenny has given you details of the next material needed to fix the minecart.",
+    "Objective": "Deliver 10 Iron Bars to Lenny",
+    "DaysLeft": 0, 	
+    "Cancelable": false, 
+    "Trigger": "Lenny 335 10", 
+    "ReactionText": "Woah! You got them! We're getting close! Okay, here's the last thing we need...",
+	"NextQuests": [ "lenny_minecart3" ]
+    },
+	  //Gold x 5
+	{
+    "Name": "lenny_minecart3", 
+    "Type": "ItemDelivery", 
+    "Title": "Ridge Minecart Restoration!",
+    "Description": "Lenny has given you details of the last material needed to fix the minecart.",
+    "Objective": "Deliver 5 Gold Bars to Lenny",
+    "DaysLeft": 0, 	
+    "Cancelable": false, 
+    "Trigger": "Lenny 336 5", 
+    "ReactionText": "Awesome! We can finally finish it! Thank you so much for your hard work, @! Come back here soon to see the finished minecart system, alright?$h",
+	"ConversationTopic": {
+		"AddWhenQuestCompleted": "RSV_startminecartfix 10"
+		}
+    },
+  ],
+
+ 
+//---------
+//OFFERS   
+//---------
+  
+  "Offers": [
+	{
+      "QuestName": "bert_honey",
+      "OfferedBy": "Bulletinboard",
+      "When": {
+        "Days": "21",
+        "Seasons": "spring",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+	{
+      "QuestName": "trinnie_sunflower",
+      "OfferedBy": "Mail",
+      "OfferDetails": {
+        "Topic": "Sunflower Princess",
+        "Text": "Dear @,^ This is Trinnie. I wanted to ask you if you could bring me some Sunflowers. It's because I want to become the Sunflower Princess... I heard Keahi say Sunflowers are pretty and a Sunflower Princess will be even prettier. So maybe I'll make a floral dress with real sunflowers.^Papa said he'll pay you! Thank you, @!^     - Trinnie"
+      },
+      "When": {
+        "Seasons": "fall",
+        "Days": "5",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+    {
+      "QuestName": "keahi_slime",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Keahi", 
+        "DialogueText": "Hey @! You go the mines, right? You fight slimes and stuff?#$b#If by chance you found any slime, can you give some to me?$h#$b#I think I'll start a new hobby and become the Slime King!$h#$b#I'm going to impress Ysabelle!$h#$b#Can you bring me some? Thanks!$h"
+      },
+      "When": {
+        "Days": "10",
+        "Seasons": "summer fall winter",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+	{
+      "QuestName": "yuuma_ring",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Yuuma", 
+        "DialogueText": "Uhhmm... Hey @? Can I ask for help?$s#$b#I lost my ring... A ring my Mommy gave me a long time ago.$s#$b#I can't find it. I was hoping you'd help me.$s#$b#I'll pay you! I promise! I just can't leave Shiro alone while I go search for it...$s#$b#Please find it, @!$s"
+      },
+      "When": {
+        "FriendshipLevel": "Yuuma 2",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+	{
+      "QuestName": "olga_tuna",
+      "OfferedBy": "Mail",
+      "OfferDetails": {
+        "Topic": "Olga asks for Tuna",
+        "Text": "Dear @,^I'd like to request a Tuna. My family has been craving for a Tuna dish for quite some time now and we'd like to buy one from you. We are prepared to pay for the delivery. We hope to hear from you soon!^^    - Olga Liden"
+      },
+      "When": {
+        "FriendshipLevel": "Olga 4",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+		
+	{
+      "QuestName": "aguar_essence",
+      "OfferedBy": "Mail",
+      "OfferDetails": {
+        "Topic": "Aguar asks for essence",
+        "Text": "@, ^I require your assistance in collecting some void essence for my next research project. I don't want to blow my cover so I need to rely on you. I await your delivery. Of course there will be a monetary benefit.^^- Mr. Aguar, RSV WRF"
+      },
+      "When": {
+        "FriendshipLevel": "Aguar 4",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+	{
+      "QuestName": "freddie_sword",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Freddie", 
+        "DialogueText": "Now... where did I put that old thing?$s#$b#Oh, hey there, young one.$h#$b#I'm sorry. I was thinking about my sword.$s#$b#I was strolling around the village the other day and I seem to have misplaced it.$s#$b#The last thing I remember is that I was by the waterfalls, but I don't remember which one.$s#$b#Oh, I hope no one gets hurt when they find it, it's quite sharp.$s#$b#If you manage to find it, @, I'll pay you for bringing it back to me.$s"
+      },
+      "When": {
+        "FriendshipLevel": "Freddie 4",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+	{
+      "QuestName": "pika_mayonnaise",
+      "OfferedBy": "Mail",
+      "OfferDetails": {
+        "Topic": "Pike wants mayonnaise",
+        "Text": "Aloha, @!, ^I've been thinking of a recipe for a new dish and I've been struggling to find a decent mayonnaise to pair it with. You see, the mayonnaise will be the secret ingredient! I was hoping you could deliver me one. I'll pay you for the mayonnaise along with a tiny delivery fee.^^- Pika"
+      },
+      "When": {
+        "FriendshipLevel": "Pika 6",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+	{
+      "QuestName": "richard_glasses",
+      "OfferedBy": "NPC",
+      "OfferDetails": {
+        "NpcName": "Richard", 
+        "DialogueText": "Greetings, @. I need a favor, if that's alright with you.#$b#I seem to have misplaced my glasses and it's a bit hard for me to find them because.... I can't see very well without them.#$b#All I know is that I didn't leave the hotel before the whole day. I'll pay you for the trouble."
+      },
+      "When": {
+        "FriendshipLevel": "Richard 6",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+//RSVBoard Offers
+	{
+	"QuestName": "aguar_gem",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "aguar_fairystone",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "bert_orange",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring summer",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "ezekiel_cavecarrot",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "freddie_shadowbrute",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "freddie_pepperrex",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "keahi_tomato",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring summer",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "keahi_bomb",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "lenny_eggplant",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "lenny_wine",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "lola_hauntedskull",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "lola_slime",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "olga_coffee",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring summer",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "pika_starfruit",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "pika_cheese",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "richard_caviar",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "richard_bat",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "trinnie_poppy",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring summer",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "trinnie_pinkcake",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "yuuma_burger",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "spring fall",
+		"Random": 10,
+		}
+	},
+	{
+	"QuestName": "yuuma_iron",
+	"OfferedBy": "Board:RSVQuestBoard",
+	"When": {
+		"Seasons": "summer winter",
+		"Random": 10,
+		}
+	},
+	
+//NinjaBoard Quests
+	{
+	"QuestName": "mysticfalls_1",
+	"OfferedBy": "Board:RSVNinjaBoard",
+	"When": {
+		"QuestNeverCompleted": "yes"
+		}
+	},
+	{
+	"QuestName": "mysticfalls_2",
+	"OfferedBy": "Board:RSVNinjaBoard",
+	"When": {
+		"QuestNeverCompleted": "yes"
+		}
+	},
+	{
+	"QuestName": "mysticfalls_3",
+	"OfferedBy": "Board:RSVNinjaBoard",
+	"When": {
+		"QuestNeverCompleted": "yes"
+		}
+	},
+	
+//Unlock Minecarft Offer
+	{
+      "QuestName": "lenny_minecart1",
+      "OfferedBy": "Mail",
+      "OfferDetails": {
+        "Topic": "Restoration of the Ridge Minecart",
+        "Text": "Dear @, ^For the restoration of the minecart system we need: 200 pieces of Wood. ^You can hand them over to me when you've gathered them all.^^- Lenny"
+      },
+      "When": {
+        "EventSeen": "75160189",
+		"QuestNeverCompleted": "yes"
+      }
+    },
+	
+  ],
+  
+  
+//---------
+//QUESTBOARD   
+//---------
+
+"CustomBoards": [
+
+	{
+    "BoardName": "RSVQuestBoard",
+    "BoardType": "Quests",
+    "Location": "Custom_Ridgeside_RidgesideVillage",
+    "Tile": "109,40",
+    "IndicatorOffset": "10,-20",
+    "Texture": "LooseSprites/RSVQuestBoard"
+    },
+	{
+	"BoardName": "RSVNinjaBoard",
+	"BoardType": "Quests",
+	"Location": "Custom_Ridgeside_RSVNinjaHouse",
+	"Tile": "6,6",
+	"Texture": "LooseSprites/RSVNinjaBoard",
+	"IndicatorOffset": "0,-1",
+	"UnlockWhen": {
+		"EventSeen": "75160187",
+		}
+	}
+]
+
+}

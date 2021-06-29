@@ -1,0 +1,99 @@
+{
+  "Name": "BrownChicken",
+  "Type": "Walking", // Can either be Walking or Flying | Walking has collision with objects, flying has no collision
+  "EnableFarmerCollision": true, // Optional parameter, determines if the companion will collide with the farmer | NOTE: Only usable with map-based spawns, does nothing for follower-based spawns (e.g. with rings)
+  "EnableShadow": true, // Optional parameter, default false
+  "Shadow": {
+    "OffsetX": 0,
+    "OffsetY": -16,
+    "Scale": 1,
+    "Alpha": 255
+  },
+  "TravelSpeed": 1, // Speed at which the companion follows the player
+  "SpawnDirection": 1, // Optional parameter, determines which direction the companion will face when spawned (0 for up, 1 for right, 2 for down, 3 for right) | Default 2
+  "SpawnOffsetX": 0, // X offset (from player) of where to spawn | Note: Negative values will spawn to left of player, positive will spawn to right of player
+  "SpawnOffsetY": 0, // Y offset (from player) of where to spawn | Note: Negative values will spawn above player head, positive will spawn below player head
+  "MaxIdleDistance": -1, // Optional parameter, determines how far away a companion can be from a player / spawn point before idle behavior stops | NOTE: -1 will make it always idle if player isn't moving
+  "MaxDistanceBeforeTeleport": -1, // Optional parameter, determines how far away a companion can be from a player / spawn point before teleporting back | NOTE: -1 will make it never teleport if it gets too far
+  "InspectionDialogue": "A chicken.", // Optional parameter, determines what dialogue appears when interacting with the companion | NOTE: Only applicable for map-based spawns
+  "IdleBehavior": "Wander", // Optional parameter, determines how the companion acts while idle | Options: [Nothing, Hover, Wander, Jumper]
+
+  "FrameSizeWidth": 16, // Width of each frame / tile in pixels
+  "FrameSizeHeight": 16, // Height of each frame / tile in pixels
+  "TileSheetPath": "Animals\\Brown Chicken", // Optional parameter, but needed if creating a companion with an existing in-game sprite (e.g. Animals\\Rabbit)
+
+  // This plays when the companion travels upwards
+  "UpAnimation": {
+    "StartingFrame": 8,
+    "NumberOfFrames": 4,
+    "Duration": 100,
+
+    "IdleAnimation": {
+      "StartingFrame": 8,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  // This plays when the companion travels downwards
+  "DownAnimation": {
+    "StartingFrame": 0,
+    "NumberOfFrames": 4,
+    "Duration": 100,
+
+    "IdleAnimation": {
+      "StartingFrame": 0,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  // This plays when the companion travels left
+  "LeftAnimation": {
+    "ManualFrames": [
+      {
+        "Frame": 7,
+        "Duration": 100,
+        "Flip": true
+      },
+      {
+        "Frame": 6,
+        "Duration": 100,
+        "Flip": true
+      },
+      {
+        "Frame": 5,
+        "Duration": 100,
+        "Flip": true
+      },
+      {
+        "Frame": 4,
+        "Duration": 100,
+        "Flip": true
+      }
+    ],
+
+    "IdleAnimation": {
+      "ManualFrames": [
+        {
+          "Frame": 4,
+          "Duration": 100,
+          "Flip": true
+        }
+      ]
+    }
+  },
+
+  // This plays when the companion travels right
+  "RightAnimation": {
+    "StartingFrame": 4,
+    "NumberOfFrames": 4,
+    "Duration": 100,
+
+    "IdleAnimation": {
+      "StartingFrame": 4,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+"Changes": [
+
+	{
+		"LogName": "Jeric Base Schedule",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Jeric",
+		"Entries": {
+
+			"spring": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"summer": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"fall": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"winter": "610 Custom_Ridgeside_RidgesideVillage 11 26 3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 39 20 3/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"rain": "610 Custom_Ridgeside_RidgesideVillage 39 20 3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_JericHouse 12 5 0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"Sat": "800 Town 27 23 2/1500 Beach 41 8 2/1900 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"Tue": "GOTO Sat",
+			"Thu": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/800 SeedShop 6 19 0/1300 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"winter_17": "610 Custom_Ridgeside_RidgesideVillage 11 26 3/900 Custom_Ridgeside_JericHouse 2 13 2/1200 Beach 11 30 3/2600 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+
+			//Marriage Schedule
+			"marriage_Mon": "800 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2200 BusStop -1 23 3",
+			"marriage_Tue": "GOTO marriage_Mon",
+			"marriage_Thu": "GOTO marriage_Mon",
+			"marriage_Fri": "GOTO marriage_Mon",
+			"marriage_Sat": "1000 Town 27 23 2/1300 Beach 41 8 2/1800 BusStop -1 23 3",
+			"marriage_winter_17": "1000 Town 27 23 2/1600 Beach 11 30 3/2200 BusStop -1 23 3",
+
+					},
+	},
+
+]
+}

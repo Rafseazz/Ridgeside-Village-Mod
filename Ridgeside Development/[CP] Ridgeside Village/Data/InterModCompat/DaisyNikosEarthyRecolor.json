@@ -1,0 +1,20 @@
+{
+"Changes": [
+	
+	/*********
+	** DaisyNiko's Earthy Recolor
+	*********/	
+ 	{
+		"LogName": "Map overlay with DaisyNiko installed ",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "Assets/Maps/WorldMaps/DaisyNikoCompat/{{season}}_map.png", 
+		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=DaisyNiko.EarthyRecolour": true, "HasMod: |contains=Bouhm.NPCMapLocations": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
+	},
+
+
+]
+}

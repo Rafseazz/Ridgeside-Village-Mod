@@ -1,0 +1,111 @@
+{
+"Changes": [
+	
+//World Map Changes-----------------
+
+	//Vanilla ONLY
+ 	{
+		"LogName": "Map Replace Vanilla",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/{{season}}_map.png",
+		"PatchMode": "Replace",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Bouhm.NPCMapLocations": false },
+	},
+
+	//Vanilla w/ NPCMapLocations
+ 	{
+		"LogName": "Map Replace Vanilla",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/{{season}}_map.png",
+		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Bouhm.NPCMapLocations": true },
+	},
+ 	{
+		"LogName": "Map Overlay 2",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/{{season}}_map.png",
+		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
+		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Bouhm.NPCMapLocations": true },
+	},
+ 	{
+		"LogName": "Map Overlay 3",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/{{season}}_map.png",
+		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
+		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Bouhm.NPCMapLocations": true },
+	},
+	
+	//SVE Compat
+ 	{
+		"LogName": "Map Replace SVE",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": true },
+	},
+ 	{
+		"LogName": "Map Overlay 2",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
+		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": true },
+	},
+ 	{
+		"LogName": "Map Overlay 3",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
+		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false },
+	},
+	{
+		"LogName": "Map Replace SVE",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
+		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false },
+	},
+ 	{
+		"LogName": "Map Overlay 2",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
+		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false },
+	},
+ 	{
+		"LogName": "Map Overlay 3",
+		"Action": "EditImage",
+		"Target": "LooseSprites/map",
+		"FromFile": "assets/Map/SVEcompat/{{season}}_map.png",
+		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
+		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
+		"PatchMode": "Overlay",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false },
+	},
+	
+]
+}

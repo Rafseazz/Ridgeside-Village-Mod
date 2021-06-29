@@ -1,0 +1,65 @@
+{
+"Changes": [
+	
+	/*********
+	** Town School
+	*********/	
+	//Flor Town School Schedule Change
+	{
+		"LogName": "Flor Town School Schedule",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Flor",
+		"Entries": {
+			"Tue": "610 School 19 41 2/720 School 2 21 2 flor_read/1400 Town 89 100 3/1600 Custom_Ridgeside_LogCabinHotel2ndFloor 2 9 1/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 3 5 0 flor_sleep",
+			"Wed": "GOTO Tue",
+			"Fri": "GOTO Tue",
+			
+	
+			//Marriage Schedule
+			"marriage_Tue": "610 School 19 41 2/720 School 2 21 2 flor_read/1400 Town 89 100 3/1800 BusStop -1 23 3",
+			"marriage_Wed": "GOTO marriage_Tue",
+			"marriage_Fri": "GOTO marriage_Tue",
+
+		},
+		"When": { "HasMod: |contains=EduAnttunes.TownSchool.CP": true, "HasSeenEvent: hostPlayer |contains=7777002": true },
+	},
+	//Keahi Town School Schedule Change
+	{
+		"LogName": "Keahi Town School Schedule",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Keahi",
+		"Entries": {
+			"Tue": "610 School 8 42 0/720 School 7 33 0/1400 Town 86 98 2 keahi_dance/1600 Custom_Ridgeside_RidgesideVillage 71 59 2 square_1_2_2/1800 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep",
+			"Wed": "GOTO Tue",
+			"Fri": "GOTO Tue",
+
+		},
+		"When": { "HasMod: |contains=EduAnttunes.TownSchool.CP": true, "HasSeenEvent: hostPlayer |contains=7777002": true },
+	},
+	//Trinnie Town School Schedule Change
+	{
+		"LogName": "Trinnie Town School Schedule",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Trinnie",
+		"Entries": {
+			"Tue": "610 School 6 42 0/720 School 16 29 0/1400 Town 86 100 2 square_1_2_3/1600 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+			"Wed": "GOTO Tue",
+			"Fri": "GOTO Tue",
+
+		},
+		"When": { "HasMod: |contains=EduAnttunes.TownSchool.CP": true, "HasSeenEvent: hostPlayer |contains=7777002": true },
+	},
+	//Yuuma Town School Schedule Change
+	{
+		"LogName": "Yuuma Town School Schedule",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Yuuma",
+		"Entries": {
+			"Fri": "610 School 7 42 0/720 School 16 33 0/1400 Hospital 13 17 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+
+		},
+		"When": { "HasMod: |contains=EduAnttunes.TownSchool.CP": true, "HasSeenEvent: hostPlayer |contains=7777002": true },
+	},	
+
+]
+}

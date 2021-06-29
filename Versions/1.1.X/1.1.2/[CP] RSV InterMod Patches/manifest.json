@@ -1,0 +1,30 @@
+{
+	"Name": "RSV Patches",
+	"Author": "Rafseazz",
+	"Version": "1.0",
+	"Description": "RSV Patches for integration with other mods",
+	"UniqueID": "Rafseazz.RSVPatches",
+	"MinimumApiVersion": "3.0.0",
+	"UpdateKeys": [ "Nexus:???" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"Dependencies": [
+	 {
+      "UniqueID": "Rafseazz.RSVCP",
+      "IsRequired": true,
+	 },
+	 {
+	  "UniqueID": "misscoriel.eventrepeater",
+	  "IsRequired": true,
+	 },
+	 {
+	  "UniqueID": "Rafseazz.RSVEvents",
+	  "IsRequired": true,
+	 },
+	 {
+	  "UniqueID": "KimJyeulNPC.ExnoticTest",
+	  "IsRequired": false,
+	 },
+	]
+}

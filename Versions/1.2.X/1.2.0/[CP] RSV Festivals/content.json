@@ -1,0 +1,96 @@
+{
+"Format": "1.19.0",
+   
+"DynamicTokens": [
+{
+	//Alone
+	"Name": "BONFIREEVENT",
+	"Value": "/warp farmer 40 49/faceDirection farmer 0/fade/viewport 39 46/pause 2000/move farmer 0 -5 0/pause 1000/playSound backpackIN/addObject 40 42 294/pause 2000/message \"..And my new year resolutions are..\"/pause 3000/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/warp farmer 40 48/faceDirection farmer 0/",
+},
+{
+	//With Spouse
+	"Name": "BONFIREEVENT",
+	"Value": "/warp farmer 40 49/warp {{spouse}} 39 49/faceDirection farmer 0/faceDirection {{spouse}} 0/fade/viewport 39 46/pause 2000/move {{spouse}} 0 -5 2/move farmer 0 -5 3/faceDirection {{spouse}} 1/pause 1000/faceDirection farmer 0/faceDirection {{spouse}} 0/pause 1000/playSound backpackIN/addObject 39 42 294/pause 1000/playSound backpackIN/addObject 40 42 294/pause 1000/message \"..And my new year resolutions are..\"/pause 3000/faceDirection {{spouse}} 1/pause 2000/faceDirection farmer 3/speak {{spouse}} \"I'm looking forward for another year with you..$l\"/emote {{spouse}}/emote farmer 20/pause 3000/globalFade/viewport -1000 -1000/warp farmer 40 48/faceDirection farmer 0/warp {{spouse}} 39 48/faceDirection {{spouse}} 0/",
+	"When": { "HasValue:{{spouse}}": "true" }
+}
+],
+   
+
+"Changes": [
+
+//===================================
+//Ridgeside Get-Together Day (15th)  
+//===================================
+
+//Load Map
+	//{
+	//"LogName": "LoadMap",
+	//"Action": "EditMap",
+	//"Target": "Maps/RidgesideVillage",
+	//"FromFile": "assets/RSVRidgeFestival.tbin",
+	//"FromArea": { "X": 0, "Y": 0, "Width": 150, "Height": 130 },
+	//"ToArea": { "X": 0, "Y": 0, "Width": 150, "Height": 130 },
+	//"MapProperties": { "Music": "CloudCountry", "Light": "143 26 4 126 22 4 118 26 4 111 26 4 100 26 4 121 41 4 107 41 4 124 49 4 135 49 4 108 53 4 114 53 4 87 85 4 81 85 4 80 100 4 87 110 4 8 61 4 50 121 4 9 119 4 37 56 4 51 42 4 56 36 4 46 27 4 65 18 4 79 16 4 78 37 4 92 41 4 86 57 4 96 54 4 89 26 4 95 14 4 101 6 4 93 1 4 82 43 4 85 43 4 88 43 4 91 43 4 94 43 4 97 43 4 82 46 4 85 46 4 88 46 4 91 46 4 94 46 4 97 46 4 82 49 4 85 49 4 88 49 4 91 49 4 94 49 4 97 49 4 82 52 4 85 52 4 88 52 4 91 52 4 94 52 4 97 52 4 82 55 4 85 55 4 88 55 4 91 55 4 94 55 4 97 55 4 82 58 4 85 58 4 88 58 4 91 58 4 94 58 4 97 58 4" },
+	//"PatchMode": "Replace",
+	//"When": { "Season |contains=fall": true, "Weather |contains=Sun": true, "Day |contains=15": true },
+	//},
+	
+	
+//===================================
+//Ember of Resolutions (winter 28)   
+//===================================
+
+    {
+		"LogName": "Ember of Resolutions",
+		"Action": "EditData",
+		"Target": "Data/Festivals/FestivalDates",
+		"Entries": { "winter28": "Ember of Resolutions", },
+    },
+    {
+		"LogName": "Festival Data",
+		"Action": "Load",
+		"Target": "Data/Festivals/winter28",
+		"FromFile": "assets/EmberNight.json",
+	},
+	{
+		"LogName": "Main Event Edit",
+		"Action": "EditData",
+		"Target": "Data/Festivals/winter28",
+		"Entries": {
+		"mainEvent": "fade/viewport 39 46/stopAdvancedMoves/loadActors MainEvent/addTemporaryActor RSVBonfireLeft 64 96 36 42 2 false/addTemporaryActor RSVBonfireRight 64 96 40 42 2 false/stopMusic/warp farmer1 40 49/warp farmer2 48 39/warp farmer3 48 40/warp farmer4 48 41/faceDirection farmer1 0/faceDirection farmer2 3/faceDirection farmer3 3/faceDirection farmer4 3/pause 1000/speak Lewis \"Welcome once again to everybody here.#$b#Before anything else, I would like to thank my sister, Lenny, for organizing the Ember of Resolutions gathering every year.#$b#Thank you Lenny.$h\"/emote Lenny 56/pause 500/speak Lenny \"Oh come on now lil bro!$h#$b#I'm just happy to end the year here with everyone gathered up around one big bonfire.\"/speak Lewis \"Yes, this does warm my heart to see the citizens of two towns together in the last night of the year.$h\"/textAboveHead Marnie \"Oh Lewis..\"/textAboveHead Robin \"Awww\"/pause 1000/textAboveHead Leah \"It's so good to see everybody.\"/pause 1000/textAboveHead Gus \"T'was a good year.\"/pause 1000/textAboveHead Penny \"I hope the new year's better\"/textAboveHead Vincent \"I'm sleepy\"/pause 1000/textAboveHead Willy \"This is nice..\"/textAboveHead Richard \"Here's to a new year!\"/pause 1000/speak Lewis \"And now for the ceremony proper.#$b#Lenny..\"/move Lenny 0 1 2/pause 1000/speak Lenny \"We gather here tonight as we spend the last hours of the year, as we welcome the new one.#$b#Around this bonfire, to be made with the lumber each has brought, we burn down the what we want to leave and say goodbye to this year...#$b#..and ignite the spark that would fuel us to live our very best tomorrow, and forevermore.#$b#Tonight, we gather with our loved ones, the closest friends, acquintances, and even strangers..#$b#As we warm ourselves around the flame that everyone has ignited.\"/emote farmer 32/pause 1000/speak Lenny \"I'm finally done with that long introduction ey?$4#$b#And now, everyone can now line up and drop in your log.#$b#And with that, you burn and imprint into yourselves your resolutions!$h#$b#Don't take the last part too seriously now!$4#$b#Unless you're the hardcore type then we have medical in standby!$h#$b#Isn't that right Harvey, Maru and Philip?$4\"/textAboveHead Abigail \"Woohoo! Burning time!\"/textAboveHead Keahi \"I bought the biggest stick!\"/pause 800/textAboveHead Robin \"I bought my finest firewood!\"/textAboveHead Maddie \"I hope the forest doesn't burn down..\"/emote Harvey 28 true/emote Philip 28 true/emote Maru 28/pause 1000/globalFade/viewport -1000 -1000/warp Lenny 42 46/warp Lewis 42 47/playMusic cm:EmberNight/faceDirection Lenny 3/faceDirection Lewis 3{{BONFIREEVENT}}warp Lenny 39 45/warp Lewis 40 45/faceDirection Lenny 2/faceDirection Lewis 2/fade/viewport 39 46/pause 2000/speak Lenny \"I'm glad almost everyone put in a log to the bonfire pit tonight.$h#$b#This will be a big one!$4#$b#And now.. for the lighting the fire..$0\"/faceDirection Lewis 0/move Lenny 0 -2 0/pause 1000/playSound furnace/pause 1000/playSound cracklingFire/animate RSVBonfireLeft false false 300 0 1 0 1 0 1 0 1 0 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 3 4 3 4 3 4 3 4 3 4 3 4 3 4 5 4 5 4 5 4 5 4 5 4 5 6 5 6 5 6 5 6 5 6 5 6 5 6 7 6 7 6 7 6 7 6 7 6 7 8 7 8 7 8 7 8 7 8 7 8 9 8 9 8 9 8 9 8 9 8 9 10 11/animate RSVBonfireRight false false 300 0 1 0 1 0 1 0 1 0 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 3 4 3 4 3 4 3 4 3 4 3 4 3 4 5 4 5 4 5 4 5 4 5 4 5 6 5 6 5 6 5 6 5 6 5 6 5 6 7 6 7 6 7 6 7 6 7 6 7 8 7 8 7 8 7 8 7 8 7 8 9 8 9 8 9 8 9 8 9 8 9 10 11/pause 3000/move Lenny 0 2 0/textAboveHead Lewis \"Be careful now Lenny\"/textAboveHead Vincent \"Ahh! It's bright!\"/textAboveHead Jas \"Woah!\"/pause 3000/textAboveHead Corine \"Oh my!\"/textAboveHead Jodi \"Happy new year!\"/pause 3000/move Jas 0 -1 0/textAboveHead Shane \"This feels nice..\"/textAboveHead Pika \"Hey don't run!\"/move Keahi 0 -1 0/move Abigail -1 0 3/pause 3000/move Robin 1 0 1/textAboveHead Elliott \"Beautiful\"/textAboveHead Pierre \"More fortune for the new year!\"/pause 3000/stopAnimation RSVBonfireLeft 11/stopAnimation RSVBonfireRight 11/pause 200/animate RSVBonfireLeft false true 300 9 10 11 10 9 11 10/animate RSVBonfireRight false true 300 9 10 11 10 9 11 10/pause 1000/faceDirection Lenny 1/pause 1000/faceDirection Lewis 3/faceDirection Lenny 2/faceDirection Lewis 2/speak Lenny \"And done!$h#$b#Woooh! The fire's ablaze!$h\"/faceDirection Lewis 2/faceDirection Lenny 2/speak Lewis \"Happy New Year everyone!$h#$b#I look forward for another prosperous year!$h\"/pause 2000/viewport move 0 -1 8000000/pause 8000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/pause 600/message \"A whole new year..#I can't wait!\"/waitForOtherPlayers festivalEnd/end",
+		},
+	},
+	{
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+		"Event.cs.1527": "$q -1 null#Should we start the bonfire now? It's getting close to midnight now.#$r -1 0 yes#Yes, let's start.#$r -1 0 no#Not yet.",
+		},
+		"When": { "Season": "winter", "Day": 28 },
+	},
+	
+//===================================
+//Festival Locations                 
+//===================================
+
+	//Egg Festival
+	{
+   "Action": "Include",
+   "FromFile": "Includes/EggFestival.json",
+	},
+	
+	//Enber of Resolutions
+	{
+   "Action": "Include",
+   "FromFile": "Includes/EmberOfResolutions.json",
+	},
+
+	//Gathering of 15th
+	{
+   "Action": "Include",
+   "FromFile": "Includes/Gathering.json",
+	},
+
+
+]
+}

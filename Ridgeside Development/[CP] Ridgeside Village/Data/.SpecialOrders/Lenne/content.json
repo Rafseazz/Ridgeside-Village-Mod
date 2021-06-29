@@ -1,0 +1,576 @@
+{
+  "Format": "1.20.0",
+  "ConfigSchema": {
+    "Repeatable": {
+      "Description": "Specify if you want the special orders to be repeatable (true, false). Default is true.",
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "AllowMultiple": false
+    },
+    "IncludeIslandContent": {
+      "Description": "Specify if you want the special orders to include recipes from the island (true, false). Default is true.",
+      "AllowValues": "true, false",
+      "Default": "true",
+      "AllowBlank": false,
+      "AllowMultiple": false
+    }
+  },
+  "DynamicTokens": [
+    {
+      "Name": "PlayerHasKitchen",
+      "Value": "false"
+    },
+    {
+      "Name": "PlayerHasKitchen",
+      "Value": "true",
+      "When": {
+        "FarmhouseUpgrade": "1,2,3"
+      }
+    },
+    {
+      "Name": "PlayerHasKitchen",
+      "Value": "true",
+      "When": {
+        "HasMod": "Froststar11.CustomFarmhouse, Allayna.Kitchen, burakmese.products, mabelsyrup.farmhouse, KAYA.JAKitchenStationSet, minervamaga.FR.BiggerFarmhouses, muscat.FarmHouse12, DexMods.CozierDefaultFarmhouses"
+      }
+    }
+  ],
+  "Changes": [
+    // Include Orders
+    {
+      "LogName": "Include Townies Need Food Orders",
+      "Action": "Include",
+      "FromFile": "assets/TowniesNeedFoodSpecialOrders.json"
+    },
+    // Strings below
+    // Strings Abigail Sweet and Spicy
+    {
+      "LogName": "Strings Abigail Sweet and Spicy",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Abigail_SweetandSpicy_Name": "{{i18n:TowniesNeedFood_Abigail_SweetandSpicy_Name}}",
+        "TowniesNeedFood_Abigail_SweetandSpicy_Text": "{{i18n:TowniesNeedFood_Abigail_SweetandSpicy_Text}}",
+        "TowniesNeedFood_Abigail_SweetandSpicy_Objective_Text_0": "{{i18n:TowniesNeedFood_Abigail_SweetandSpicy_Objective_Text_0}}",
+        "TowniesNeedFood_Abigail_SweetandSpicy_Objective_Text_1": "{{i18n:TowniesNeedFood_Abigail_SweetandSpicy_Objective_Text_1}}",
+        "TowniesNeedFood_Abigail_SweetandSpicy_Message_0": "{{i18n:TowniesNeedFood_Abigail_SweetandSpicy_Message_0}}",
+        "TowniesNeedFood_Abigail_SweetandSpicy_Message_1": "{{i18n:TowniesNeedFood_Abigail_SweetandSpicy_Message_1}}"
+      }
+    },
+    // Strings Abigail Creamy Dessert
+    {
+      "LogName": "Strings Abigail Creamy Dessert",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Abigail_CreamyDessert_Name": "{{i18n:TowniesNeedFood_Abigail_CreamyDessert_Name}}",
+        "TowniesNeedFood_Abigail_CreamyDessert_Text": "{{i18n:TowniesNeedFood_Abigail_CreamyDessert_Text}}",
+        "TowniesNeedFood_Abigail_CreamyDessert_Objective_Text_0": "{{i18n:TowniesNeedFood_Abigail_CreamyDessert_Objective_Text_0}}",
+        "TowniesNeedFood_Abigail_CreamyDessert_Message_0": "{{i18n:TowniesNeedFood_Abigail_CreamyDessert_Message_0}}"
+      }
+    },
+    // Strings Alex Good Eating
+    {
+      "LogName": "Strings Alex Good Eating",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Alex_GoodEating_Name": "{{i18n:TowniesNeedFood_Alex_GoodEating_Name}}",
+        "TowniesNeedFood_Alex_GoodEating_Text": "{{i18n:TowniesNeedFood_Alex_GoodEating_Text}}",
+        "TowniesNeedFood_Alex_GoodEating_Objective_Text_0": "{{i18n:TowniesNeedFood_Alex_GoodEating_Objective_Text_0}}",
+        "TowniesNeedFood_Alex_GoodEating_Objective_Text_1": "{{i18n:TowniesNeedFood_Alex_GoodEating_Objective_Text_1}}",
+        "TowniesNeedFood_Alex_GoodEating_Message_0": "{{i18n:TowniesNeedFood_Alex_GoodEating_Message_0}}",
+        "TowniesNeedFood_Alex_GoodEating_Message_1": "{{i18n:TowniesNeedFood_Alex_GoodEating_Message_1}}"
+      }
+    },
+    // Strings Caroline Seafood Bonanza
+    {
+      "LogName": "Strings Caroline Seafood Bonanza",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Name": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Name}}",
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Text": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Text}}",
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Objective_Text_0": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Objective_Text_0}}",
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Objective_Text_1": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Objective_Text_1}}",
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Objective_Text_2": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Objective_Text_2}}",
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Message_0": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Message_0}}",
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Message_1": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Message_1}}",
+        "TowniesNeedFood_Caroline_SeafoodBonanza_Message_2": "{{i18n:TowniesNeedFood_Caroline_SeafoodBonanza_Message_2}}"
+      }
+    },
+    // Strings Clint Mild Snack
+    {
+      "LogName": "Strings Clint Mild Snack",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Clint_MildSnack_Name": "{{i18n:TowniesNeedFood_Clint_MildSnack_Name}}",
+        "TowniesNeedFood_Clint_MildSnack_Text": "{{i18n:TowniesNeedFood_Clint_MildSnack_Text}}",
+        "TowniesNeedFood_Clint_MildSnack_Objective_Text_0": "{{i18n:TowniesNeedFood_Clint_MildSnack_Objective_Text_0}}",
+        "TowniesNeedFood_Clint_MildSnack_Objective_Text_1": "{{i18n:TowniesNeedFood_Clint_MildSnack_Objective_Text_1}}",
+        "TowniesNeedFood_Clint_MildSnack_Message_0": "{{i18n:TowniesNeedFood_Clint_MildSnack_Message_0}}",
+        "TowniesNeedFood_Clint_MildSnack_Message_1": "{{i18n:TowniesNeedFood_Clint_MildSnack_Message_1}}"
+      }
+    },
+    // Strings Demetrius Dinner and Two Desserts
+    {
+      "LogName": "Strings Demetrius Dinner and Two Desserts",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Name": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Name}}",
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Text": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Text}}",
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Objective_Text_0": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Objective_Text_0}}",
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Objective_Text_1": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Objective_Text_1}}",
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Objective_Text_2": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Objective_Text_2}}",
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Message_0": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Message_0}}",
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Message_1": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Message_1}}",
+        "TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Message_2": "{{i18n:TowniesNeedFood_Demetrius_DinnerandTwoDesserts_Message_2}}"
+      }
+    },
+    // Strings Elliott Meal Planning
+    {
+      "LogName": "Strings Elliott Meal Planning",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Elliott_MealPlanning_Name": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Name}}",
+        "TowniesNeedFood_Elliott_MealPlanning_Text": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Text}}",
+        "TowniesNeedFood_Elliott_MealPlanning_Objective_Text_0": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Objective_Text_0}}",
+        "TowniesNeedFood_Elliott_MealPlanning_Objective_Text_1": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Objective_Text_1}}",
+        "TowniesNeedFood_Elliott_MealPlanning_Objective_Text_2": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Objective_Text_2}}",
+        "TowniesNeedFood_Elliott_MealPlanning_Message_0": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Message_0}}",
+        "TowniesNeedFood_Elliott_MealPlanning_Message_1": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Message_1}}",
+        "TowniesNeedFood_Elliott_MealPlanning_Message_2": "{{i18n:TowniesNeedFood_Elliott_MealPlanning_Message_2}}"
+      }
+    },
+    // Strings Emily Appetizer and Dinner
+    {
+      "LogName": "Strings Emily Appetizer and Dinner",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Emily_AppetizerandDinner_Name": "{{i18n:TowniesNeedFood_Emily_AppetizerandDinner_Name}}",
+        "TowniesNeedFood_Emily_AppetizerandDinner_Text": "{{i18n:TowniesNeedFood_Emily_AppetizerandDinner_Text}}",
+        "TowniesNeedFood_Emily_AppetizerandDinner_Objective_Text_0": "{{i18n:TowniesNeedFood_Emily_AppetizerandDinner_Objective_Text_0}}",
+        "TowniesNeedFood_Emily_AppetizerandDinner_Objective_Text_1": "{{i18n:TowniesNeedFood_Emily_AppetizerandDinner_Objective_Text_1}}",
+        "TowniesNeedFood_Emily_AppetizerandDinner_Message_0": "{{i18n:TowniesNeedFood_Emily_AppetizerandDinner_Message_0}}",
+        "TowniesNeedFood_Emily_AppetizerandDinner_Message_1": "{{i18n:TowniesNeedFood_Emily_AppetizerandDinner_Message_1}}"
+      }
+    },
+    // Strings Evelyn Side and Dessert
+    {
+      "LogName": "Strings Evelyn Side and Dessert",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Evelyn_SideandDessert_Name": "{{i18n:TowniesNeedFood_Evelyn_SideandDessert_Name}}",
+        "TowniesNeedFood_Evelyn_SideandDessert_Text": "{{i18n:TowniesNeedFood_Evelyn_SideandDessert_Text}}",
+        "TowniesNeedFood_Evelyn_SideandDessert_Objective_Text_0": "{{i18n:TowniesNeedFood_Evelyn_SideandDessert_Objective_Text_0}}",
+        "TowniesNeedFood_Evelyn_SideandDessert_Objective_Text_1": "{{i18n:TowniesNeedFood_Evelyn_SideandDessert_Objective_Text_1}}",
+        "TowniesNeedFood_Evelyn_SideandDessert_Message_0": "{{i18n:TowniesNeedFood_Evelyn_SideandDessert_Message_0}}",
+        "TowniesNeedFood_Evelyn_SideandDessert_Message_1": "{{i18n:TowniesNeedFood_Evelyn_SideandDessert_Message_1}}"
+      }
+    },
+    // Strings George Some Favorites
+    {
+      "LogName": "Strings George Some Favorites",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_George_SomeFavorites_Name": "{{i18n:TowniesNeedFood_George_SomeFavorites_Name}}",
+        "TowniesNeedFood_George_SomeFavorites_Text": "{{i18n:TowniesNeedFood_George_SomeFavorites_Text}}",
+        "TowniesNeedFood_George_SomeFavorites_Objective_Text_0": "{{i18n:TowniesNeedFood_George_SomeFavorites_Objective_Text_0}}",
+        "TowniesNeedFood_George_SomeFavorites_Objective_Text_1": "{{i18n:TowniesNeedFood_George_SomeFavorites_Objective_Text_1}}",
+        "TowniesNeedFood_George_SomeFavorites_Message_0": "{{i18n:TowniesNeedFood_George_SomeFavorites_Message_0}}",
+        "TowniesNeedFood_George_SomeFavorites_Message_1": "{{i18n:TowniesNeedFood_George_SomeFavorites_Message_1}}"
+      }
+    },
+    // Strings Gus Unique Delicacies
+    {
+      "LogName": "Strings Gus Unique Delicacies",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Gus_UniqueDelicacies_Name": "{{i18n:TowniesNeedFood_Gus_UniqueDelicacies_Name}}",
+        "TowniesNeedFood_Gus_UniqueDelicacies_Text": "{{i18n:TowniesNeedFood_Gus_UniqueDelicacies_Text}}",
+        "TowniesNeedFood_Gus_UniqueDelicacies_Objective_Text_0": "{{i18n:TowniesNeedFood_Gus_UniqueDelicacies_Objective_Text_0}}",
+        "TowniesNeedFood_Gus_UniqueDelicacies_Objective_Text_1": "{{i18n:TowniesNeedFood_Gus_UniqueDelicacies_Objective_Text_1}}",
+        "TowniesNeedFood_Gus_UniqueDelicacies_Message_0": "{{i18n:TowniesNeedFood_Gus_UniqueDelicacies_Message_0}}",
+        "TowniesNeedFood_Gus_UniqueDelicacies_Message_1": "{{i18n:TowniesNeedFood_Gus_UniqueDelicacies_Message_1}}"
+      }
+    },
+    // Strings Gus Fragrant Curry
+    {
+      "LogName": "Strings Gus Fragrant Curry",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Gus_FragrantCurry_Name": "{{i18n:TowniesNeedFood_Gus_FragrantCurry_Name}}",
+        "TowniesNeedFood_Gus_FragrantCurry_Text": "{{i18n:TowniesNeedFood_Gus_FragrantCurry_Text}}",
+        "TowniesNeedFood_Gus_FragrantCurry_Objective_Text_0": "{{i18n:TowniesNeedFood_Gus_FragrantCurry_Objective_Text_0}}",
+        "TowniesNeedFood_Gus_FragrantCurry_Message_0": "{{i18n:TowniesNeedFood_Gus_FragrantCurry_Message_0}}"
+      }
+    },
+    // Strings Haley Mostly Healthy
+    {
+      "LogName": "Strings Haley Mostly Healthy",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Haley_MostlyHealthy_Name": "{{i18n:TowniesNeedFood_Haley_MostlyHealthy_Name}}",
+        "TowniesNeedFood_Haley_MostlyHealthy_Text": "{{i18n:TowniesNeedFood_Haley_MostlyHealthy_Text}}",
+        "TowniesNeedFood_Haley_MostlyHealthy_Objective_Text_0": "{{i18n:TowniesNeedFood_Haley_MostlyHealthy_Objective_Text_0}}",
+        "TowniesNeedFood_Haley_MostlyHealthy_Objective_Text_1": "{{i18n:TowniesNeedFood_Haley_MostlyHealthy_Objective_Text_1}}",
+        "TowniesNeedFood_Haley_MostlyHealthy_Message_0": "{{i18n:TowniesNeedFood_Haley_MostlyHealthy_Message_0}}",
+        "TowniesNeedFood_Haley_MostlyHealthy_Message_1": "{{i18n:TowniesNeedFood_Haley_MostlyHealthy_Message_1}}"
+      }
+    },
+    // Strings Harvey Pick-me-up
+    {
+      "LogName": "Strings Harvey Pick-me-up",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Harvey_Pickmeup_Name": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Name}}",
+        "TowniesNeedFood_Harvey_Pickmeup_Text": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Text}}",
+        "TowniesNeedFood_Harvey_Pickmeup_Objective_Text_0": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Objective_Text_0}}",
+        "TowniesNeedFood_Harvey_Pickmeup_Objective_Text_1": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Objective_Text_1}}",
+        "TowniesNeedFood_Harvey_Pickmeup_Objective_Text_2": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Objective_Text_2}}",
+        "TowniesNeedFood_Harvey_Pickmeup_Message_0": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Message_0}}",
+        "TowniesNeedFood_Harvey_Pickmeup_Message_1": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Message_1}}",
+        "TowniesNeedFood_Harvey_Pickmeup_Message_2": "{{i18n:TowniesNeedFood_Harvey_Pickmeup_Message_2}}"
+      }
+    },
+    // Strings Jas Holiday Treat
+    {
+      "LogName": "Strings Jas Holiday Treat",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Jas_HolidayTreat_Name": "{{i18n:TowniesNeedFood_Jas_HolidayTreat_Name}}",
+        "TowniesNeedFood_Jas_HolidayTreat_Text": "{{i18n:TowniesNeedFood_Jas_HolidayTreat_Text}}",
+        "TowniesNeedFood_Jas_HolidayTreat_Objective_Text_0": "{{i18n:TowniesNeedFood_Jas_HolidayTreat_Objective_Text_0}}",
+        "TowniesNeedFood_Jas_HolidayTreat_Message_0": "{{i18n:TowniesNeedFood_Jas_HolidayTreat_Message_0}}"
+      }
+    },
+    // Strings Jodi Three Square Meals
+    {
+      "LogName": "Strings Jodi Three Square Meals",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Name": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Name}}",
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Text": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Text}}",
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Objective_Text_0": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Objective_Text_0}}",
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Objective_Text_1": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Objective_Text_1}}",
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Objective_Text_2": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Objective_Text_2}}",
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Message_0": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Message_0}}",
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Message_1": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Message_1}}",
+        "TowniesNeedFood_Jodi_ThreeSquareMeals_Message_2": "{{i18n:TowniesNeedFood_Jodi_ThreeSquareMeals_Message_2}}"
+      }
+    },
+    // Strings Kent Dinner and a Snack
+    {
+      "LogName": "Strings Kent Dinner and a Snack",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Kent_DinnerandaSnack_Name": "{{i18n:TowniesNeedFood_Kent_DinnerandaSnack_Name}}",
+        "TowniesNeedFood_Kent_DinnerandaSnack_Text": "{{i18n:TowniesNeedFood_Kent_DinnerandaSnack_Text}}",
+        "TowniesNeedFood_Kent_DinnerandaSnack_Objective_Text_0": "{{i18n:TowniesNeedFood_Kent_DinnerandaSnack_Objective_Text_0}}",
+        "TowniesNeedFood_Kent_DinnerandaSnack_Objective_Text_1": "{{i18n:TowniesNeedFood_Kent_DinnerandaSnack_Objective_Text_1}}",
+        "TowniesNeedFood_Kent_DinnerandaSnack_Message_0": "{{i18n:TowniesNeedFood_Kent_DinnerandaSnack_Message_0}}",
+        "TowniesNeedFood_Kent_DinnerandaSnack_Message_1": "{{i18n:TowniesNeedFood_Kent_DinnerandaSnack_Message_1}}"
+      }
+    },
+    // Strings Krobus Briny Pudding
+    {
+      "LogName": "Strings Krobus Briny Pudding",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Krobus_BrinyPudding_Name": "{{i18n:TowniesNeedFood_Krobus_BrinyPudding_Name}}",
+        "TowniesNeedFood_Krobus_BrinyPudding_Text": "{{i18n:TowniesNeedFood_Krobus_BrinyPudding_Text}}",
+        "TowniesNeedFood_Krobus_BrinyPudding_Objective_Text_0": "{{i18n:TowniesNeedFood_Krobus_BrinyPudding_Objective_Text_0}}",
+        "TowniesNeedFood_Krobus_BrinyPudding_Message_0": "{{i18n:TowniesNeedFood_Krobus_BrinyPudding_Message_0}}"
+      }
+    },
+    // Strings Leah Fresh Veggies
+    {
+      "LogName": "Strings Leah Fresh Veggies",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Leah_FreshVeggies_Name": "{{i18n:TowniesNeedFood_Leah_FreshVeggies_Name}}",
+        "TowniesNeedFood_Leah_FreshVeggies_Text": "{{i18n:TowniesNeedFood_Leah_FreshVeggies_Text}}",
+        "TowniesNeedFood_Leah_FreshVeggies_Objective_Text_0": "{{i18n:TowniesNeedFood_Leah_FreshVeggies_Objective_Text_0}}",
+        "TowniesNeedFood_Leah_FreshVeggies_Objective_Text_1": "{{i18n:TowniesNeedFood_Leah_FreshVeggies_Objective_Text_1}}",
+        "TowniesNeedFood_Leah_FreshVeggies_Message_0": "{{i18n:TowniesNeedFood_Leah_FreshVeggies_Message_0}}",
+        "TowniesNeedFood_Leah_FreshVeggies_Message_1": "{{i18n:TowniesNeedFood_Leah_FreshVeggies_Message_1}}"
+      }
+    },
+    // Strings Leo Sweet Flavor
+    {
+      "LogName": "Strings Leo Sweet Flavor",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Leo_SweetFlavor_Name": "{{i18n:TowniesNeedFood_Leo_SweetFlavor_Name}}",
+        "TowniesNeedFood_Leo_SweetFlavor_Text": "{{i18n:TowniesNeedFood_Leo_SweetFlavor_Text}}",
+        "TowniesNeedFood_Leo_SweetFlavor_Objective_Text_0": "{{i18n:TowniesNeedFood_Leo_SweetFlavor_Objective_Text_0}}",
+        "TowniesNeedFood_Leo_SweetFlavor_Message_0": "{{i18n:TowniesNeedFood_Leo_SweetFlavor_Message_0}}"
+      }
+    },
+    // Strings Lewis Hearty Veggies
+    {
+      "LogName": "Strings Lewis Hearty Veggies",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Lewis_HeartyVeggies_Name": "{{i18n:TowniesNeedFood_Lewis_HeartyVeggies_Name}}",
+        "TowniesNeedFood_Lewis_HeartyVeggies_Text": "{{i18n:TowniesNeedFood_Lewis_HeartyVeggies_Text}}",
+        "TowniesNeedFood_Lewis_HeartyVeggies_Objective_Text_0": "{{i18n:TowniesNeedFood_Lewis_HeartyVeggies_Objective_Text_0}}",
+        "TowniesNeedFood_Lewis_HeartyVeggies_Objective_Text_1": "{{i18n:TowniesNeedFood_Lewis_HeartyVeggies_Objective_Text_1}}",
+        "TowniesNeedFood_Lewis_HeartyVeggies_Message_0": "{{i18n:TowniesNeedFood_Lewis_HeartyVeggies_Message_0}}",
+        "TowniesNeedFood_Lewis_HeartyVeggies_Message_1": "{{i18n:TowniesNeedFood_Lewis_HeartyVeggies_Message_1}}"
+      }
+    },
+    // Strings Linus Fish and Dessert
+    {
+      "LogName": "Strings Linus Fish and Dessert",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Linus_FishandDessert_Name": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Name}}",
+        "TowniesNeedFood_Linus_FishandDessert_Text": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Text}}",
+        "TowniesNeedFood_Linus_FishandDessert_Objective_Text_0": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Objective_Text_0}}",
+        "TowniesNeedFood_Linus_FishandDessert_Objective_Text_1": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Objective_Text_1}}",
+        "TowniesNeedFood_Linus_FishandDessert_Objective_Text_2": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Objective_Text_2}}",
+        "TowniesNeedFood_Linus_FishandDessert_Message_0": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Message_0}}",
+        "TowniesNeedFood_Linus_FishandDessert_Message_1": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Message_1}}",
+        "TowniesNeedFood_Linus_FishandDessert_Message_2": "{{i18n:TowniesNeedFood_Linus_FishandDessert_Message_2}}"
+      }
+    },
+    // Strings Marnie Lunch and Two Desserts
+    {
+      "LogName": "Strings Marnie Lunch and Two Desserts",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Name": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Name}}",
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Text": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Text}}",
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Objective_Text_0": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Objective_Text_0}}",
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Objective_Text_1": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Objective_Text_1}}",
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Objective_Text_2": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Objective_Text_2}}",
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Message_0": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Message_0}}",
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Message_1": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Message_1}}",
+        "TowniesNeedFood_Marnie_LunchandTwoDesserts_Message_2": "{{i18n:TowniesNeedFood_Marnie_LunchandTwoDesserts_Message_2}}"
+      }
+    },
+    // Strings Maru My Favorite Foodstuffs
+    {
+      "LogName": "Strings Maru My Favorite Foodstuffs",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Name": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Name}}",
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Text": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Text}}",
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Objective_Text_0": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Objective_Text_0}}",
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Objective_Text_1": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Objective_Text_1}}",
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Objective_Text_2": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Objective_Text_2}}",
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Message_0": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Message_0}}",
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Message_1": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Message_1}}",
+        "TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Message_2": "{{i18n:TowniesNeedFood_Maru_MyFavoriteFoodstuffs_Message_2}}"
+      }
+    },
+    // Strings Pam Roots
+    {
+      "LogName": "Strings Pam Roots",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Pam_Roots_Name": "{{i18n:TowniesNeedFood_Pam_Roots_Name}}",
+        "TowniesNeedFood_Pam_Roots_Text": "{{i18n:TowniesNeedFood_Pam_Roots_Text}}",
+        "TowniesNeedFood_Pam_Roots_Objective_Text_0": "{{i18n:TowniesNeedFood_Pam_Roots_Objective_Text_0}}",
+        "TowniesNeedFood_Pam_Roots_Objective_Text_1": "{{i18n:TowniesNeedFood_Pam_Roots_Objective_Text_1}}",
+        "TowniesNeedFood_Pam_Roots_Objective_Text_2": "{{i18n:TowniesNeedFood_Pam_Roots_Objective_Text_2}}",
+        "TowniesNeedFood_Pam_Roots_Message_0": "{{i18n:TowniesNeedFood_Pam_Roots_Message_0}}",
+        "TowniesNeedFood_Pam_Roots_Message_1": "{{i18n:TowniesNeedFood_Pam_Roots_Message_1}}",
+        "TowniesNeedFood_Pam_Roots_Message_2": "{{i18n:TowniesNeedFood_Pam_Roots_Message_2}}"
+      }
+    },
+    // Strings Penny A Day's Meals
+    {
+      "LogName": "Strings Penny A Day's Meals",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Penny_ADaysMeals_Name": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Name}}",
+        "TowniesNeedFood_Penny_ADaysMeals_Text": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Text}}",
+        "TowniesNeedFood_Penny_ADaysMeals_Objective_Text_0": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Objective_Text_0}}",
+        "TowniesNeedFood_Penny_ADaysMeals_Objective_Text_1": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Objective_Text_1}}",
+        "TowniesNeedFood_Penny_ADaysMeals_Objective_Text_2": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Objective_Text_2}}",
+        "TowniesNeedFood_Penny_ADaysMeals_Message_0": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Message_0}}",
+        "TowniesNeedFood_Penny_ADaysMeals_Message_1": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Message_1}}",
+        "TowniesNeedFood_Penny_ADaysMeals_Message_2": "{{i18n:TowniesNeedFood_Penny_ADaysMeals_Message_2}}"
+      }
+    },
+    // Strings Pierre Appetizer and Entree
+    {
+      "LogName": "Strings Pierre Appetizer and Entree",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Pierre_AppetizerandEntree_Name": "{{i18n:TowniesNeedFood_Pierre_AppetizerandEntree_Name}}",
+        "TowniesNeedFood_Pierre_AppetizerandEntree_Text": "{{i18n:TowniesNeedFood_Pierre_AppetizerandEntree_Text}}",
+        "TowniesNeedFood_Pierre_AppetizerandEntree_Objective_Text_0": "{{i18n:TowniesNeedFood_Pierre_AppetizerandEntree_Objective_Text_0}}",
+        "TowniesNeedFood_Pierre_AppetizerandEntree_Objective_Text_1": "{{i18n:TowniesNeedFood_Pierre_AppetizerandEntree_Objective_Text_1}}",
+        "TowniesNeedFood_Pierre_AppetizerandEntree_Message_0": "{{i18n:TowniesNeedFood_Pierre_AppetizerandEntree_Message_0}}",
+        "TowniesNeedFood_Pierre_AppetizerandEntree_Message_1": "{{i18n:TowniesNeedFood_Pierre_AppetizerandEntree_Message_1}}"
+      }
+    },
+    // Strings Robin Family Buffet
+    {
+      "LogName": "Strings Robin Family Buffet",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Robin_FamilyBuffet_Name": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Name}}",
+        "TowniesNeedFood_Robin_FamilyBuffet_Text": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Text}}",
+        "TowniesNeedFood_Robin_FamilyBuffet_Objective_Text_0": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Objective_Text_0}}",
+        "TowniesNeedFood_Robin_FamilyBuffet_Objective_Text_1": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Objective_Text_1}}",
+        "TowniesNeedFood_Robin_FamilyBuffet_Objective_Text_2": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Objective_Text_2}}",
+        "TowniesNeedFood_Robin_FamilyBuffet_Message_0": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Message_0}}",
+        "TowniesNeedFood_Robin_FamilyBuffet_Message_1": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Message_1}}",
+        "TowniesNeedFood_Robin_FamilyBuffet_Message_2": "{{i18n:TowniesNeedFood_Robin_FamilyBuffet_Message_2}}"
+      }
+    },
+    // Strings Sam Slice and Dessert
+    {
+      "LogName": "Strings Sam Slice and Dessert",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Sam_SliceandDessert_Name": "{{i18n:TowniesNeedFood_Sam_SliceandDessert_Name}}",
+        "TowniesNeedFood_Sam_SliceandDessert_Text": "{{i18n:TowniesNeedFood_Sam_SliceandDessert_Text}}",
+        "TowniesNeedFood_Sam_SliceandDessert_Objective_Text_0": "{{i18n:TowniesNeedFood_Sam_SliceandDessert_Objective_Text_0}}",
+        "TowniesNeedFood_Sam_SliceandDessert_Objective_Text_1": "{{i18n:TowniesNeedFood_Sam_SliceandDessert_Objective_Text_1}}",
+        "TowniesNeedFood_Sam_SliceandDessert_Message_0": "{{i18n:TowniesNeedFood_Sam_SliceandDessert_Message_0}}",
+        "TowniesNeedFood_Sam_SliceandDessert_Message_1": "{{i18n:TowniesNeedFood_Sam_SliceandDessert_Message_1}}"
+      }
+    },
+    // Strings Sam Egg Wrap
+    {
+      "LogName": "Strings Sam Egg Wrap",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Sam_EggWrap_Name": "{{i18n:TowniesNeedFood_Sam_EggWrap_Name}}",
+        "TowniesNeedFood_Sam_EggWrap_Text": "{{i18n:TowniesNeedFood_Sam_EggWrap_Text}}",
+        "TowniesNeedFood_Sam_EggWrap_Objective_Text_0": "{{i18n:TowniesNeedFood_Sam_EggWrap_Objective_Text_0}}",
+        "TowniesNeedFood_Sam_EggWrap_Objective_Text_1": "{{i18n:TowniesNeedFood_Sam_EggWrap_Objective_Text_1}}",
+        "TowniesNeedFood_Sam_EggWrap_Message_0": "{{i18n:TowniesNeedFood_Sam_EggWrap_Message_0}}",
+        "TowniesNeedFood_Sam_EggWrap_Message_1": "{{i18n:TowniesNeedFood_Sam_EggWrap_Message_1}}"
+      }
+    },
+    // Strings Sandy Sweet Mango and Coconut
+    {
+      "LogName": "Strings Sandy Sweet Mango and Coconut",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Sandy_SweetMangoandCoconut_Name": "{{i18n:TowniesNeedFood_Sandy_SweetMangoandCoconut_Name}}",
+        "TowniesNeedFood_Sandy_SweetMangoandCoconut_Text": "{{i18n:TowniesNeedFood_Sandy_SweetMangoandCoconut_Text}}",
+        "TowniesNeedFood_Sandy_SweetMangoandCoconut_Objective_Text_0": "{{i18n:TowniesNeedFood_Sandy_SweetMangoandCoconut_Objective_Text_0}}",
+        "TowniesNeedFood_Sandy_SweetMangoandCoconut_Message_0": "{{i18n:TowniesNeedFood_Sandy_SweetMangoandCoconut_Message_0}}"
+      }
+    },
+    // Strings Sebastian Lunch and Dinner
+    {
+      "LogName": "Strings Sebastian Lunch and Dinner",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Sebastian_LunchandDinner_Name": "{{i18n:TowniesNeedFood_Sebastian_LunchandDinner_Name}}",
+        "TowniesNeedFood_Sebastian_LunchandDinner_Text": "{{i18n:TowniesNeedFood_Sebastian_LunchandDinner_Text}}",
+        "TowniesNeedFood_Sebastian_LunchandDinner_Objective_Text_0": "{{i18n:TowniesNeedFood_Sebastian_LunchandDinner_Objective_Text_0}}",
+        "TowniesNeedFood_Sebastian_LunchandDinner_Objective_Text_1": "{{i18n:TowniesNeedFood_Sebastian_LunchandDinner_Objective_Text_1}}",
+        "TowniesNeedFood_Sebastian_LunchandDinner_Message_0": "{{i18n:TowniesNeedFood_Sebastian_LunchandDinner_Message_0}}",
+        "TowniesNeedFood_Sebastian_LunchandDinner_Message_1": "{{i18n:TowniesNeedFood_Sebastian_LunchandDinner_Message_1}}"
+      }
+    },
+    // Strings Shane Peppers and Pizza
+    {
+      "LogName": "Strings Shane Peppers and Pizza",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Shane_PeppersandPizza_Name": "{{i18n:TowniesNeedFood_Shane_PeppersandPizza_Name}}",
+        "TowniesNeedFood_Shane_PeppersandPizza_Text": "{{i18n:TowniesNeedFood_Shane_PeppersandPizza_Text}}",
+        "TowniesNeedFood_Shane_PeppersandPizza_Objective_Text_0": "{{i18n:TowniesNeedFood_Shane_PeppersandPizza_Objective_Text_0}}",
+        "TowniesNeedFood_Shane_PeppersandPizza_Objective_Text_1": "{{i18n:TowniesNeedFood_Shane_PeppersandPizza_Objective_Text_1}}",
+        "TowniesNeedFood_Shane_PeppersandPizza_Message_0": "{{i18n:TowniesNeedFood_Shane_PeppersandPizza_Message_0}}",
+        "TowniesNeedFood_Shane_PeppersandPizza_Message_1": "{{i18n:TowniesNeedFood_Shane_PeppersandPizza_Message_1}}"
+      }
+    },
+    // Strings Vincent Fizzy and Soothing
+    {
+      "LogName": "Strings Vincent Fizzy and Soothing",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Vincent_FizzyandSoothing_Name": "{{i18n:TowniesNeedFood_Vincent_FizzyandSoothing_Name}}",
+        "TowniesNeedFood_Vincent_FizzyandSoothing_Text": "{{i18n:TowniesNeedFood_Vincent_FizzyandSoothing_Text}}",
+        "TowniesNeedFood_Vincent_FizzyandSoothing_Objective_Text_0": "{{i18n:TowniesNeedFood_Vincent_FizzyandSoothing_Objective_Text_0}}",
+        "TowniesNeedFood_Vincent_FizzyandSoothing_Message_0": "{{i18n:TowniesNeedFood_Vincent_FizzyandSoothing_Message_0}}"
+      }
+    },
+    // Strings Willy Daily Sustenance
+    {
+      "LogName": "Strings Willy Daily Sustenance",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Willy_DailySustenance_Name": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Name}}",
+        "TowniesNeedFood_Willy_DailySustenance_Text": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Text}}",
+        "TowniesNeedFood_Willy_DailySustenance_Objective_Text_0": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Objective_Text_0}}",
+        "TowniesNeedFood_Willy_DailySustenance_Objective_Text_1": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Objective_Text_1}}",
+        "TowniesNeedFood_Willy_DailySustenance_Objective_Text_2": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Objective_Text_2}}",
+        "TowniesNeedFood_Willy_DailySustenance_Message_0": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Message_0}}",
+        "TowniesNeedFood_Willy_DailySustenance_Message_1": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Message_1}}",
+        "TowniesNeedFood_Willy_DailySustenance_Message_2": "{{i18n:TowniesNeedFood_Willy_DailySustenance_Message_2}}"
+      }
+    },
+    // Strings Wizard Luck and Sweets
+    {
+      "LogName": "Strings Wizard Luck and Sweets",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Wizard_LuckandSweets_Name": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Name}}",
+        "TowniesNeedFood_Wizard_LuckandSweets_Text": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Text}}",
+        "TowniesNeedFood_Wizard_LuckandSweets_Objective_Text_0": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Objective_Text_0}}",
+        "TowniesNeedFood_Wizard_LuckandSweets_Objective_Text_1": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Objective_Text_1}}",
+        "TowniesNeedFood_Wizard_LuckandSweets_Objective_Text_2": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Objective_Text_2}}",
+        "TowniesNeedFood_Wizard_LuckandSweets_Message_0": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Message_0}}",
+        "TowniesNeedFood_Wizard_LuckandSweets_Message_1": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Message_1}}",
+        "TowniesNeedFood_Wizard_LuckandSweets_Message_2": "{{i18n:TowniesNeedFood_Wizard_LuckandSweets_Message_2}}"
+      }
+    },
+    // Strings Wizard Protective Pasta
+    {
+      "LogName": "Strings Wizard Protective Pasta",
+      "Action": "EditData",
+      "Target": "Strings/SpecialOrderStrings",
+      "Entries": {
+        "TowniesNeedFood_Wizard_ProtectivePasta_Name": "{{i18n:TowniesNeedFood_Wizard_ProtectivePasta_Name}}",
+        "TowniesNeedFood_Wizard_ProtectivePasta_Text": "{{i18n:TowniesNeedFood_Wizard_ProtectivePasta_Text}}",
+        "TowniesNeedFood_Wizard_ProtectivePasta_Objective_Text_0": "{{i18n:TowniesNeedFood_Wizard_ProtectivePasta_Objective_Text_0}}",
+        "TowniesNeedFood_Wizard_ProtectivePasta_Message_0": "{{i18n:TowniesNeedFood_Wizard_ProtectivePasta_Message_0}}"
+      }
+    }
+  ]
+}

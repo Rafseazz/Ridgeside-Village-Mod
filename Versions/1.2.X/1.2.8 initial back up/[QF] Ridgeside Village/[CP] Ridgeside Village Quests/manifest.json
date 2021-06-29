@@ -1,0 +1,22 @@
+{
+	"Name": "Ridgeside Village Quests",
+	"Author": "Rafseazz",
+	"Version": "1.3.0",
+	"Description": "Adds CP data for the Quest Add-On!",
+	"UniqueID": "Rafseazz.RSVCPQF",
+	"MinimumApiVersion": "3.0.0",
+	"UpdateKeys": [ "Nexus:???" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+   "Dependencies": [
+	   {
+        "UniqueID": "PurrplingCat.QuestFramework",
+        "IsRequired": true,
+	   },
+	   {
+        "UniqueID": "Rafseazz.RSVCP",
+        "IsRequired": true,
+	   },
+   ]
+}

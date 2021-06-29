@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="143">
+ <properties>
+  <property name="Doors" value="6 9 indoor 120"/>
+ </properties>
+ <tileset firstgid="1" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <layer id="1" name="Back" width="1" height="2">
+  <data encoding="csv">
+286,
+318
+</data>
+ </layer>
+ <objectgroup id="6" name="Back"/>
+ <layer id="2" name="Buildings" width="1" height="2">
+  <data encoding="csv">
+0,
+888
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings"/>
+ <layer id="3" name="Paths" width="1" height="2">
+  <data encoding="csv">
+0,
+0
+</data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <layer id="4" name="Front" width="1" height="2">
+  <data encoding="csv">
+856,
+0
+</data>
+ </layer>
+ <objectgroup id="9" name="Front"/>
+ <layer id="5" name="AlwaysFront" width="1" height="2">
+  <data encoding="csv">
+0,
+0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

@@ -1,0 +1,48 @@
+{
+	"Changes": [
+
+	/*********
+	** Quest Framework
+	*********/	
+	//Load QF custom Quest Boards
+		{
+			"Action": "Load",
+			"Target": "LooseSprites/RSVQuestBoard, LooseSprites/RSVNinjaBoard",
+			"FromFile": "Assets/LooseSprites/{{TargetWithoutPath}}_{{Language}}.png",
+		},
+		
+	//Blank Questboards
+//	{
+//        "Action": "EditMap",
+//        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+//        "MapTiles": [
+//			{
+//				"Position": { "X": 109, "Y": 40 },
+//				"Layer": "Buildings",
+//				"SetProperties": {
+//				"Action": "Message rsv.noquestboard"
+//               }
+//            }
+//		],
+//		"When": { "HasMod: |contains=Rafseazz.RSVQF": false }
+//    },
+
+//		//Non-QF work-around for Mine Carts
+//		{
+//			"Action": "EditData",
+//			"Target": "Data/Events/Custom_Ridgeside_LennyHouse",
+//			"Entries": {
+//		//Lenny gets the money for minecart
+//				"75160191/H/m 150000/k 75160190/e 75160189": "playful/11 8/farmer 11 10 0 Lenny 11 6 3/skippable/pause 800/move farmer 0 -2 0/emote Lenny 8/faceDirection Lenny 2/emote Lenny 32/pause 500/speak Lenny \"{{i18n:event-75160191.01}}\"/emote farmer 56/speak Lenny \"{{i18n:event-75160191.02}}\"/emote farmer 32/move farmer 0 -1 3/faceDirection Lenny 3/pause 500/emote farmer 56/pause 500/emote Lenny 32/speak Lenny \"{{i18n:event-75160191.03}}\"/emote farmer 56/pause 1000/end dialogue Lenny \"{{i18n:event-75160191.04}}\"",
+//			},
+//			"When": { "HasMod: |contains=Rafseazz.RSVQF": false }
+//		},
+//		//Minecart unlock
+//			"75160189/H/z spring/w sunny": "continue/69 29/farmer 74 30 3 Lenny 69 30 0/skippable/pause 500/move farmer -3 0 3/emote Lenny 16/pause 500/faceDirection Lenny 1/pause 500/speak Lenny \"{{i18n:event-75160189.01}}\"/emote farmer 32/pause 500/faceDirection farmer 0/pause 500/emote farmer 8/pause 500/faceDirection Lenny 0/pause 500/speak Lenny \"{{i18n:event-75160189.02}}\"/emote farmer 32/faceDirection farmer 3/faceDirection Lenny 1/speak Lenny \"{{i18n:event-75160189.03}}\"/pause 500/faceDirection farmer 0/move Lenny 0 -3 0/globalFade/viewport -1000 -1000/warp farmer 70 21/warp Lenny 68 21/fade/viewport 69 19/pause 500/move farmer 0 -1 0 true/move Lenny 0 -1 0 true/pause 1000/emote Lenny 56/speak Lenny \"{{i18n:event-75160189.04}}\"/emote Lenny 40/pause 1000/emote Lenny 56/emote farmer 8/faceDirection farmer 3/pause 500/faceDirection Lenny 1/speak Lenny \"{{i18n:event-75160189.05}}\"/emote farmer 28/speak Lenny \"{{i18n:event-75160189.06}}\"/faceDirection Lenny 0/pause 500/faceDirection Lenny 1/speak Lenny \"{{i18n:event-75160189.07}}\"/emote farmer 32/emote Lenny 56/speak Lenny \"{{i18n:event-75160189.08}}\"/emote farmer 56/pause 500/faceDirection farmer 0/faceDirection Lenny 0/pause 1000/end position 69 21",
+//		
+//		//Minecart Restored
+//			"75160190/w sunny/H/e 75160191": "SettlingIn/69 18/farmer 70 20 0 Lenny 68 20 0 Robin 69 16 0 Ian 70 16 0 Clint 67 16 1/skippable/pause 500/move farmer 0 -1 0 true/move Lenny 0 -1 0 true/emote Robin 56/pause 500/emote Ian 28/emote Clint 56/speak Robin \"{{i18n:event-75160190.01}}\"/speak Ian \"{{i18n:event-75160190.02}}\"/faceDirection Clint 2/speak Clint \"{{i18n:event-75160190.03}}\"/faceDirection Robin 2/faceDirection Ian 2/emote Lenny 56/speak Lenny \"{{i18n:event-75160190.04}}\"/move Robin 0 1 2/speak Robin \"{{i18n:event-75160190.05}}\"/emote farmer 32/speak Robin \"{{i18n:event-75160190.06}}\"/speak Lenny \"{{i18n:event-75160190.07}}\"/emote Clint 32/speak Clint \"{{i18n:event-75160190.08}}\"/speak Ian \"{{i18n:event-75160190.09}}\"/speak Lenny \"{{i18n:event-75160190.10}}\"/emote farmer 32/pause 1000/end",
+
+
+],
+}

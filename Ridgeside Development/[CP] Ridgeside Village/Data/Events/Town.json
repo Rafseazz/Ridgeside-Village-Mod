@@ -1,0 +1,32 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "Town Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Town",
+		"Entries": {
+		//Kiwi at community center (Kiwi 6 hearts)
+			"75160179/f Kiwi 1500/t 2200 2400/e 75160178/w sunny": "none/52 22/farmer 53 25 0 Kiwi 52 22 0/skippable/pause 300/move farmer 0 -1 0/emote farmer 8/pause 500/speak Kiwi \"{{i18n:event-75160179.01}}\"/move farmer 0 -2 0/emote Kiwi 40/pause 500/speak Kiwi \"{{i18n:event-75160179.02}}\"/emote farmer 28/speak Kiwi \"$q 75160084 null \"#{{i18n:event-75160179.03}}#$r 75160084 0 kiwi1_1#{{i18n:event-75160179.04}}#$r 75160084 0 kiwi1_2#{{i18n:event-75160179.05}}\"/fork KiwiLeave/pause 500/faceDirection Kiwi 1/speak Kiwi \"{{i18n:event-75160179.06}}\"/emote farmer 40/pause 500/faceDirection Kiwi 0/speak Kiwi \"{{i18n:event-75160179.07}}\"/emote farmer 56/pause 500/speak Kiwi \"{{i18n:event-75160179.08}}\"/faceDirection Kiwi 1/speak Kiwi \"{{i18n:event-75160179.09}}\"/emote farmer 32/pause 500/animate Kiwi false false 100 16 17 18 19 20/warp Kiwi -100 -100/playSound shadowpeep/emote farmer 16/pause 1000/end",
+			"KiwiLeave": "pause 500/move farmer 0 3 2/end",
+		
+		//Alissa at the town (Alissa 4 hearts)
+			"75160115/f Alissa 1000/t 1000 1400/e 75160114/w sunny": "playful/6 54/farmer 1 54 1 Alissa 10 54 3/skippable/pause 200/move farmer 2 0 1 true/move Alissa -3 0 3 true/emote Alissa 16/pause 500/emote Alissa 60/pause 500/emote farmer 8/pause 500/move Alissa -1 0 3/speak Alissa \"{{i18n:event-75160115.01}}\"/emote farmer 56/move farmer 1 0 1/pause 500/emote Alissa 8/pause 500/speak Alissa \"{{i18n:event-75160115.02}}\"/emote farmer 32/pause 500/question null \"{{i18n:event-75160115.03}}#{{i18n:event-75160115.04}}#{{i18n:event-75160115.05}}#\"/emote Alissa 60/pause 500/faceDirection Alissa 1/speak Alissa \"{{i18n:event-75160115.06}}\"/pause 1000/faceDirection Alissa 3/speak Alissa \"{{i18n:event-75160115.07}}\"/emote farmer 56/pause 500/speak Alissa \"{{i18n:event-75160115.08}}\"/emote farmer 56/pause 500/speak Alissa \"{{i18n:event-75160115.09}}\"/move Alissa -1 0 3/emote Alissa 16 true/emote farmer 16/pause 500/message \"{{i18n:event-75160115.10}}\"/speak Alissa \"{{i18n:event-75160115.11}}\"/move Alissa 0 -1 2 true/move farmer 0 1 0 true/pause 2000/emote Alissa 8 true/emote farmer 8/pause 500/speak Alissa \"{{i18n:event-75160115.12}}\"/emote farmer 28/pause 500/speak Alissa \"{{i18n:event-75160115.13}}\"/emote farmer 32/pause 1500/end dialogue Alissa \"{{i18n:event-75160115.14}}\"",
+		
+		//Philip at town (Philip 2 hearts)
+			"75160162/f Philip 500/t 1200 1400": "playful/39 57/farmer 33 58 1 Philip -1000 -1000 0 George -1001 -1000 2 Evelyn -1002 -1000 2/skippable/pause 500/move farmer 3 0 1/warp Philip 36 56/playSound doorClose/emote farmer 8/faceDirection farmer 0/speak Philip \"{{i18n:event-75160162.01}}\"/faceDirection Philip 2/emote Philip 16/speak Philip \"{{i18n:event-75160162.02}}\"/emote farmer 56/speak Philip \"{{i18n:event-75160162.03}}\"/emote farmer 32/move farmer -1 0 1/move Philip 0 2 1/move Philip 2 0 1/move farmer 1 0 0/playSound doorClose/warp George 43 57/move George 0 1 0/warp Evelyn 43 57/emote Philip 16/speak Philip \"{{i18n:event-75160162.04}}\"/faceDirection George 3/faceDirection Evelyn 3/speak Evelyn \"{{i18n:event-75160162.05}}\"/emote George 12/speak George \"{{i18n:event-75160162.06}}\"/emote Philip 28/emote farmer 8/faceDirection farmer 1/move Philip 3 0 1/speak Philip \"{{i18n:event-75160162.07}}\"/speak George \"{{i18n:event-75160162.08}}\"/emote Philip 28 true/emote Evelyn 28/speak Evelyn \"{{i18n:event-75160162.09}}\"/speak Philip \"{{i18n:event-75160162.10}}\"/emote George 40/speak George \"{{i18n:event-75160162.11}}\"/faceDirection Evelyn 2/speak Evelyn \"{{i18n:event-75160162.12}}\"/speak George \"{{i18n:event-75160162.13}}\"/emote Philip 56/speak Philip \"{{i18n:event-75160162.14}}\"/faceDirection Evelyn 3/speak Evelyn \"{{i18n:event-75160162.15}}\"/speak George \"{{i18n:event-75160162.16}}\"/advancedMove George false 6 0 0 -2/advancedMove Evelyn false 0 1 6 0 0 -1/pause 500/emote Philip 28/warp George -2000 -2000/warp Evelyn -2000 -2001/move Philip -3 0 3/emote Philip 8/speak Philip \"{{i18n:event-75160162.17}}\"/emote farmer 56/pause 500/end dialogue Philip \"{{i18n:event-75160162.18}}\"",
+		},
+	},
+
+        {
+                //Event dialogue Kiwi 6 hearts
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Kiwi",
+                "Entries": {                        
+                        "kiwi1_1": "{{i18n:event-75160179.Fork1}}",
+                        "kiwi1_2": "{{i18n:event-75160179.Fork2}}",                
+                }
+        },
+	
+]
+}

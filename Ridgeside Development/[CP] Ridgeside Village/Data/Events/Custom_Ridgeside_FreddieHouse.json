@@ -1,0 +1,46 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "FreddieHouse Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_FreddieHouse",
+		"Entries": {
+		//Freddie goes buying stuff at Pierre (Freddie 2 hearts)
+			"75160074/f Freddie 500/t 800 1200/w sunny": "playful/8 13/farmer 8 16 0 Freddie 10 15 3 Pierre -2000 -2000 0/skippable/pause 500/move farmer 0 -1 1/emote Freddie 16/pause 500/speak Freddie \"{{i18n:event-75160074.01}}\"/emote farmer 8/pause 500/speak Freddie \"{{i18n:event-75160074.02}}\"/move Freddie -1 0 3/emote Freddie 16 true/emote farmer 16/playSound boulderCrack/pause 1000/speak Freddie \"{{i18n:event-75160074.03}}\"/emote farmer 28/pause 500/speak Freddie \"$q 75160074 null \"#{{i18n:event-75160074.04}}#$r 75160074 30 freddie1_1#{{i18n:event-75160074.05}}#$r 75160074 0 freddie1_2#{{i18n:event-75160074.06}}\"/fork FreddieStay/pause 500/emote Freddie 56/pause 500/speak Freddie \"{{i18n:event-75160074.07}}\"/emote farmer 56/pause 500/speak Freddie \"{{i18n:event-75160074.08}}\"/pause 500/globalFade/viewport -1000 -1000/changeToTemporaryMap SeedShop false/warp farmer 6 20/faceDirection farmer 0/warp Freddie 5 19/faceDirection Freddie 0/warp Pierre 4 17 2/faceDirection Pierre 2/pause 500/fade/viewport 6 18/pause 500/move Freddie 0 1 1/faceDirection farmer 3/emote Freddie 40/pause 500/speak Freddie \"{{i18n:event-75160074.09}}\"/emote farmer 56/move farmer 4 0 0/speak Pierre \"{{i18n:event-75160074.10}}\"/faceDirection Freddie 0/speak Freddie \"{{i18n:event-75160074.11}}\"/speak Pierre \"{{i18n:event-75160074.12}}\"/move farmer -4 0 3/faceDirection Freddie 1/speak Freddie \"{{i18n:event-75160074.13}}\"/faceDirection farmer 0/move Freddie 0 -1 0/speak Freddie \"{{i18n:event-75160074.14}}\"/speak Pierre \"{{i18n:event-75160074.15}}\"/emote Freddie 28/pause 500/speak Freddie \"{{i18n:event-75160074.16}}\"/emote farmer 56 true/emote Pierre 56/pause 1000/globalFade/viewport -1000 -1000/warp Pierre -2000 -2000/changeToTemporaryMap Custom_Ridgeside_RidgesideVillage false/warp farmer 142 26/faceDirection farmer 3/warp Freddie 141 27/pause 500/fade/viewport 136 26/pause 1000/speak Freddie \"{{i18n:event-75160074.17}}\"/faceDirection Freddie 0/emote Freddie 56/pause 500/speak Freddie \"{{i18n:event-75160074.18}}\"/emote farmer 32/pause 500/speak Freddie \"{{i18n:event-75160074.19}}\"/move farmer -8 0 3 true/move Freddie -8 0 3 true/pause 2000/end dialogue Freddie \"{{i18n:event-75160074.20}}\"",
+			"FreddieStay": "pause 500/speak Freddie \"{{i18n:event-75160074.FreddieStay.01}}\"/emote Freddie 28/pause 500/speak Freddie \"{{i18n:event-75160074.FreddieStay.02}}\"/move Freddie 0 -8 0/pause 2000/end dialogue Freddie \"{{i18n:event-75160074.FreddieStay.03}}\"",
+
+		//Freddie trains farmer (Freddie 6 hearts)
+			"75160076/f Freddie 1500/t 800 1200/e 75160075/w sunny": "playful/11 6/farmer 11 8 0 Freddie 11 5 0/skippable/pause 500/move Freddie 1 0 0/pause 1000/move Freddie -1 0 0/pause 1000/speak Freddie \"{{i18n:event-75160076.01}}\"/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/changeToTemporaryMap Custom_Ridgeside_RidgesideVillage false/warp farmer 24 75/stopMusic/playMusic summer_day_ambient/faceDirection farmer 1/warp Freddie 24 73/faceDirection Freddie 2/pause 500/fade/viewport 24 74/pause 500/animate farmer false true 200 30 30 31 31 32 32 33 33 34 34 35 35/pause 2000/speak Freddie \"{{i18n:event-75160076.02}}\"/emote farmer 28/pause 2000/speak Freddie \"{{i18n:event-75160076.03}}\"/emote farmer 56/pause 2000/stopAnimation farmer 0/faceDirection farmer 0/emote Freddie 56/pause 500/speak Freddie \"{{i18n:event-75160076.04}}\"/emote farmer 32/pause 1000/move Freddie 1 0 1/faceDirection farmer 1/pause 1000/speak Freddie \"{{i18n:event-75160076.05}}\"/emote farmer 32/pause 500/speak Freddie \"{{i18n:event-75160076.06}}\"/emote farmer 56/pause 500/speak Freddie \"{{i18n:event-75160076.07}}\"/faceDirection farmer 0/emote farmer 8/pause 500/faceDirection Freddie 2/speak Freddie \"{{i18n:event-75160076.08}}\"/faceDirection farmer 1/faceDirection Freddie 2/pause 2000/globalFade/viewport -1000 -1000/speak Freddie \"{{i18n:event-75160076.09}}\"/pause 1000/message \"{{i18n:event-75160076.10}}\"/end dialogue Freddie \"{{i18n:event-75160076.11}}\"",
+
+		//Lola knitting (Lola 2 hearts)
+			"75160090/f Lola 500/t 1200 1500": "distantBanjo/12 10/farmer 11 12 0 Lola 15 11 3 Freddie 3 5 3/skippable/pause 500/move farmer 2 0 0/emote Lola 32/pause 500/speak Lola \"{{i18n:event-75160090.01}}\"/emote farmer 32/pause 500/playSound scissors/pause 1000/emote Lola 40/pause 500/speak Lola \"{{i18n:event-75160090.02}}\"/emote farmer 56/pause 500/speak Lola \"{{i18n:event-75160090.03}}\"/emote farmer 8/pause 500/speak Lola \"{{i18n:event-75160090.04}}\"/emote farmer 16/pause 500/emote farmer 40/pause 500/speak Lola \"$q 75160090 null \"#{{i18n:event-75160090.05}}#$r 75160090 30 lola1_1#{{i18n:event-75160090.06}}#$r 75160090 -50 lola1_2#{{i18n:event-75160090.07}}\"/fork LolaSad/pause 500/speak Lola \"{{i18n:event-75160090.08}}\"/emote farmer 56/pause 500/speak Lola \"{{i18n:event-75160090.09}}\"/emote farmer 8/pause 500/speak Lola \"{{i18n:event-75160090.10}}\"/emote farmer 28/pause 500/speak Lola \"{{i18n:event-75160090.11}}\"/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/message \"{{i18n:event-75160090.12}}\"/pause 500/end dialogue Lola \"{{i18n:event-75160090.13}}\"",
+			"LolaSad": "pause 500/speak Lola \"{{i18n:event-75160090.LolaSad.01}}\"/emote farmer 28/pause 2000/end",
+
+		//Lola is sick (Lola 6 hearts)
+			"75160092/f Lola 1500/t 1200 1500/e 75160091": "distantBanjo/10 7/farmer 10 11 0 Freddie 11 8 0 Lola 10 5 0 Harvey -2000 -2000 2/skippable/move farmer 0 -1 0/faceDirection Freddie 2/move Lola 1 0 0/speak Freddie \"{{i18n:event-75160092.01}}\"/emote farmer 56/pause 500/move Lola -1 0 0/emote Lola 56/pause 500/speak Lola \"{{i18n:event-75160092.02}}\"/emote Lola 40/pause 500/stopMusic/speak Lola \"{{i18n:event-75160092.03}}\"/faceDirection Freddie 0/speak Freddie \"{{i18n:event-75160092.04}}\"/faceDirection Lola 2/speak Lola \"{{i18n:event-75160092.05}}\"/move Lola 0 2 2/speak Lola \"{{i18n:event-75160092.06}}\"/showFrame Lola 26/playSound potterySmash/faceDirection Freddie 3/emote farmer 16 true/emote Freddie 16/pause 500/speak Freddie \"{{i18n:event-75160092.07}}\"/speak Lola \"{{i18n:event-75160092.08}}\"/speak Freddie \"{{i18n:event-75160092.09}}\"/emote farmer 16/pause 500/move farmer 0 -1 0/speak Freddie \"{{i18n:event-75160092.10}}\"/pause 1000/globalFade/viewport -1000 -1000/changeToTemporaryMap Hospital false/warp Lola 19 5/showFrame Lola 27/warp Harvey 20 6/faceDirection Harvey 0/warp farmer 19 8/faceDirection farmer 0/warp Freddie 20 8/faceDirection Freddie 0/fade/viewport 18 6/pause 500/move Harvey -1 0 0/emote Harvey 40/pause 1000/move Harvey 1 0 2/speak Harvey \"{{i18n:event-75160092.11}}\"/speak Freddie \"{{i18n:event-75160092.12}}\"/move Harvey -2 0 0/move Harvey 0 -2 2/move Freddie 0 -2 0/move Freddie -1 0 0/move farmer 1 0 0/move farmer 0 -1 0/playMusic desolate/showFrame Lola 0/pause 1000/emote Lola 28/pause 500/emote Freddie 32/pause 500/speak Lola \"{{i18n:event-75160092.13}}\"/speak Freddie \"{{i18n:event-75160092.14}}\"/speak Lola \"{{i18n:event-75160092.15}}\"/message \"{{i18n:event-75160092.16}}\"/emote Lola 20/pause 500/speak Lola \"{{i18n:event-75160092.17}}\"/emote farmer 56 true/emote Harvey 28/pause 2000/globalFade/viewport -1000 -1000/message \"{{i18n:event-75160092.18}}\"/end dialogue Lola \"{{i18n:event-75160092.19}}\"",
+		},
+	},
+
+        {
+                //Event dialogue Freddie 2 hearts
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Freddie",
+                "Entries": {                        
+                        "freddie1_1": "{{i18n:event-75160074.Fork1}}",
+                        "freddie1_2": "{{i18n:event-75160074.Fork2}}",                
+                }
+        },
+
+        {
+                //Event dialogue Lola 2 hearts
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Lola",
+                "Entries": {                        
+                        "lola1_1": "{{i18n:event-75160090.Fork1}}",
+                        "lola1_2": "{{i18n:event-75160090.Fork2}}",                
+                }
+        },
+	
+]
+}

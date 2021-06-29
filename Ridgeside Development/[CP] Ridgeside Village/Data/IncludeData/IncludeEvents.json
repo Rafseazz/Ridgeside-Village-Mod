@@ -1,0 +1,29 @@
+{
+"Changes": [
+	
+
+//Include all the Events
+	{
+		"LogName": "Include all the Events",
+		"Action": "Include",
+		"FromFile": "Data/Events/AdventureGuild.json, Data/Events/ArchaeologyHouse.json, Data/Events/Beach.json, Data/Events/BusStop.json, Data/Events/Farm.json, Data/Events/ManorHouse.json, Data/Events/Saloon.json, Data/Events/SeedShop.json, Data/Events/Town.json, Data/Events/WizardHouse.json, Data/Events/Custom_Ridgeside_RidgesideVillage.json, Data/Events/Custom_Ridgeside_AguarBasement.json, Data/Events/Custom_Ridgeside_AguarLab.json, Data/Events/Custom_Ridgeside_AlissaHouse.json, Data/Events/Custom_Ridgeside_AlissaShed.json, Data/Events/Custom_Ridgeside_BertHouse.json, Data/Events/Custom_Ridgeside_EzekielHouse.json, Data/Events/Custom_Ridgeside_FreddieHouse.json, Data/Events/Custom_Ridgeside_JericHouse.json, Data/Events/Custom_Ridgeside_KennethHouse.json, Data/Events/Custom_Ridgeside_LennyHouse.json, Data/Events/Custom_Ridgeside_LogCabinHotelLobby.json, Data/Events/Custom_Ridgeside_LogCabinHotel2ndFloor.json, Data/Events/Custom_Ridgeside_LogCabinHotel3rdFloor.json, Data/Events/Custom_Ridgeside_LolaShed.json, Data/Events/Custom_Ridgeside_MaddieHouse.json, Data/Events/Custom_Ridgeside_PikaHouse.json, Data/Events/Custom_Ridgeside_RSVCableCar.json, Data/Events/Custom_Ridgeside_RSVCliff.json, Data/Events/Custom_Ridgeside_RSVNinjaHouse.json, Data/Events/Custom_Ridgeside_Ridge.json, Data/Events/Custom_Ridgeside_ShiroHouse.json, Data/Events/Custom_Ridgeside_RSVAbandonedHouse.json, Data/Events/Custom_Ridgeside_RidgeForestQ1.json",
+	},
+
+//Load blank json files for events
+	{
+		"LogName": "Load Blank Jsons for Events",
+		"Action": "Load",
+		"Target": "Data/Events/Custom_Ridgeside_RidgesideVillage, Data/Events/Custom_Ridgeside_AguarBasement, Data/Events/Custom_Ridgeside_AguarLab, Data/Events/Custom_Ridgeside_AlissaHouse, Data/Events/Custom_Ridgeside_AlissaShed, Data/Events/Custom_Ridgeside_BertHouse, Data/Events/Custom_Ridgeside_EzekielHouse, Data/Events/Custom_Ridgeside_FreddieHouse, Data/Events/Custom_Ridgeside_JericHouse, Data/Events/Custom_Ridgeside_KennethHouse, Data/Events/Custom_Ridgeside_LennyHouse, Data/Events/Custom_Ridgeside_LogCabinHotelLobby, Data/Events/Custom_Ridgeside_LogCabinHotel2ndFloor, Data/Events/Custom_Ridgeside_LogCabinHotel3rdFloor, Data/Events/Custom_Ridgeside_LolaShed, Data/Events/Custom_Ridgeside_MaddieHouse, Data/Events/Custom_Ridgeside_PikaHouse, Data/Events/Custom_Ridgeside_RSVCableCar, Data/Events/Custom_Ridgeside_RSVCliff, Data/Events/Custom_Ridgeside_RSVNinjaHouse, Data/Events/Custom_Ridgeside_Ridge, Data/Events/Custom_Ridgeside_ShiroHouse, Data/Events/Custom_Ridgeside_MysticFalls1, Data/Events/Custom_Ridgeside_MysticFalls2, Data/Events/Custom_Ridgeside_MysticFalls3, Data/Events/Custom_Ridgeside_RSVAbandonedHouse, Data/Events/Custom_Ridgeside_RidgeForestQ1, Data/Events/Custom_Ridgeside_RidgeForestQ2, Data/Events/Custom_Ridgeside_RidgeForestQ3, Data/Events/Custom_Ridgeside_RidgeForestQ4",
+		"FromFile": "Assets/EventFiles/{{TargetWithoutPath}}.json",
+	},
+	
+//Special Characters
+	{	
+		"LogName": "Special Characters",
+		"Action": "Load",
+		"Target": "Characters/RSVSpirit1, Characters/RSVSpirit2, Characters/RSVSpirit3, Characters/RSVSpirit4, Characters/RSVFirecracker, Characters/RSVLady1, Characters/RSVFlashback1, Characters/RSVFlashback2, Characters/Beast1, Characters/Beast2, Characters/Beast3, Characters/RSVSummoner1, Characters/RSVtent, Characters/RSVcampfire, Characters/RSVbunny1, Characters/RSVCart1, Characters/RSVCart2, Characters/RSVYsaDance, Characters/RSVMach, Characters/RSVDog, Characters/RSVSurprise, Characters/RSVBonfireLeft, Characters/RSVBonfireRight, Characters/RSVCableCar",
+		"FromFile": "Assets/EventFiles/{{TargetWithoutPath}}.png",
+	},
+	
+]
+}

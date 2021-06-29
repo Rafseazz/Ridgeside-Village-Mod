@@ -1,0 +1,23 @@
+{
+  "Name": "Ridgeside Village Farm Type Manager",
+  "Author": "Rafseazz",
+  "Version": "1.2.8",
+  "Description": "Adds forage rules and monsters to Ridgeside Village",
+  "UniqueID": "Rafseazz.RSVFTM",
+  "MinimumApiVersion": "3.0",
+  "UpdateKeys": [ "Nexus:???" ],
+  "ContentPackFor": {
+    "UniqueID": "Esca.FarmTypeManager",
+    "MinimumVersion": "1.8"
+   },
+	"Dependencies": [
+	 {
+      "UniqueID": "Rafseazz.RSVJA",
+      "IsRequired": true,
+	 },
+	 {
+      "UniqueID": "Rafseazz.RSVCP",
+      "IsRequired": true,
+	 },	
+]
+}

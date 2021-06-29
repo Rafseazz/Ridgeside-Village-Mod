@@ -1,0 +1,43 @@
+{
+"Changes": [
+
+   // add a warp to the new location from Abigail's room
+     {
+        "Action": "EditMap",
+        "Target": "Maps/BusStop",
+        "TextOperations": [
+            {
+              "Operation": "Append",
+              "Target": ["MapProperties", "Warp"],
+              "Value": "27 -1 RSVCableCar 19 28",
+              "Delimiter": " "
+            }
+            {
+              "Operation": "Append",
+              "Target": ["MapProperties", "Warp"],
+              "Value": "28 -1 RSVCableCar 20 28",
+              "Delimiter": " "
+            }
+            {
+              "Operation": "Append",
+              "Target": ["MapProperties", "Warp"],
+              "Value": "29 -1 RSVCableCar 21 28",
+              "Delimiter": " "
+            }
+		
+//Warps
+{
+         "Action": "EditMap",
+         "Target": "assets/Maps/RSVCableCar",
+         "MapProperties": {
+            "Warp": "10 10 Town 0 30",
+            "Warp":	"20 7 RSVCliff 24 19",
+			"Warp": "21 7 RSVCliff 24 19",
+			"Warp": "19 30 BusStop 27 1",
+			"Warp": "20 30 BusStop 28 1",
+			"Warp": "21 30 BusStop 29 1"
+         }
+      },
+	
+]
+}

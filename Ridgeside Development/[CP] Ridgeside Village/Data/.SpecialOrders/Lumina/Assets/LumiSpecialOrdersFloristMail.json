@@ -1,0 +1,27 @@
+{
+    "Changes": [
+        {
+		"Action": "EditData",
+		"Target": "Data/Mail",
+			"Entries": {
+				"Lumisteria.SpecialOrders.LewisFlowersMail": "@,^I wanted to thank you for taking care of my special order. All of the hard work you've done has been a great boost to Pelican Town's image.^There is a 'Bee House' provided by the Pelican Town Agricultural Fund to support your efforts in the future.^^   -Lewis%item bigobject 10 %%[#]Flower Order Thank You",
+				"Lumisteria.SpecialOrders.LewisHundredFlowersMail": "@,^Thanks for your hard work! This really helped to improve Pelican Town's reputation.^There is a 'Iridium Sprinkler' provided by the Pelican Town Agricultural Fund to help you in the future.^^   -Lewis%item object 645 1 %%[#]Hundred Flowers Order Thank You",
+	
+			},
+	  
+        },
+        {
+		"Action": "EditData",
+		"Target": "Data/Mail",
+			"Entries": {
+				"Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowersMail": "@,^I wanted to thank you for taking care of another of my special order.^There is a packet of special seeds provided by the Pelican Town Agricultural Fund to support your efforts in the future.^^   -Lewis%item object {{spacechase0.jsonAssets/ObjectId:Blue Flame Seeds}} 15 %%[#]Flower Order Thank You",
+		
+			},
+			"When": {
+                "HasMod |contains=spacechase0.jsonAssets": true,
+				"HasMod |contains=lumisteria.flowersandcrops": true,
+			},
+	  
+        }
+    ]
+}

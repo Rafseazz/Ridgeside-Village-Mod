@@ -1,0 +1,73 @@
+{
+"Changes": [
+
+	/*********
+	** Schedule Changes
+	*********/	
+
+	{
+		"LogName": "Corine Schedule Change",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Corine",
+		"Entries": {
+			"Thu": "610 Custom_Ridgeside_RidgesideVillage 133 86 2 corine_train/1200 Custom_Ridgeside_RidgesideVillage 140 86 2 corine_meditate/1500 Custom_Ridgeside_RidgesideVillage 135 87 1 corine_slash/1900 Custom_Ridgeside_EzekielHouse 24 5 0/2200 Custom_Ridgeside_Ridge 76 38 2",
+		},
+		"When": { "HasSeenEvent: hostPlayer": 75160125, },
+	},
+	{
+		"LogName": "Ian Schedule Change",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Ian",
+		"Entries": {
+			"Fri": "800 Custom_Ridgeside_LogCabinHotelLobby 2 15 2/1200 ArchaeologyHouse 17 14 2/1800 Custom_Ridgeside_RidgesideVillage 95 65 2/2200 Custom_Ridgeside_IanHouse 17 9 0 ian_sleep",
+		},
+		"When": { "HasSeenEvent: hostPlayer": 75160149, },
+	},
+
+		//Kiwi dynamics
+		{
+			//Temporary Schedule
+			"Action": "Load",
+			"Target": "Characters/Schedules/Kiwi",
+			"FromFile": "Assets/Schedules/BlankSchedule.json",
+			"When": {
+				"HasSeenEvent: hostPlayer |contains=75160188": false
+			},
+		},
+		{
+		//Official Schedule
+			"Action": "Load",
+			"Target": "Characters/Schedules/Kiwi",
+			"FromFile": "Assets/Schedules/Kiwi.json",
+			"When": {
+				"HasSeenEvent: hostPlayer |contains=75160188": true
+			},
+		},
+//	{
+//		"LogName": "Yuuma Shiro Married Schedule",
+//		"Action": "EditData",
+//		"Target": "Characters/Schedules/Yuuma",
+//		"Entries": {
+//			"spring": "900 Custom_Ridgeside_LennyHouse 22 12 0 square_3_1_0/1400 Hospital 13 17 1/1600 Custom_Ridgeside_LennyHouse 3 5 0/2000 Custom_Ridgeside_LennyHouse 14 5 0 yuuma_sleep",
+//			"summer": "900 Custom_Ridgeside_LennyHouse 22 12 0 square_3_1_0/1400 Hospital 13 17 1/1600 Custom_Ridgeside_LennyHouse 3 5 0/2000 Custom_Ridgeside_LennyHouse 14 5 0 yuuma_sleep",
+//			"fall": "900 Custom_Ridgeside_LennyHouse 22 12 0 square_3_1_0/1400 Hospital 13 17 1/1600 Custom_Ridgeside_LennyHouse 3 5 0/2000 Custom_Ridgeside_LennyHouse 14 5 0 yuuma_sleep",
+//			"winter": "900 Custom_Ridgeside_LennyHouse 22 12 0 square_3_1_0/1400 Hospital 13 17 1/1600 Custom_Ridgeside_LennyHouse 3 5 0/2000 Custom_Ridgeside_LennyHouse 14 5 0 yuuma_sleep",
+//		},
+//		"When": {   "Relationship:Shiro": "Married" },
+//	},	
+
+		//Undreya Disposition
+		{
+			"Action": "EditData",
+			"Target": "Characters/Schedules/Undreya",
+			"Entries": {
+				"spring": "{{RANDOMUNDREYA}}"
+			},
+			"When": {
+				"HasSeenEvent: hostPlayer |contains=75160182": true,
+				"DayOfWeek |contains=Thursday": false
+			}
+		},
+
+]
+}

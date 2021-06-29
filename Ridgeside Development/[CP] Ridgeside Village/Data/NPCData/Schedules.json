@@ -1,0 +1,25 @@
+{
+"Changes": [
+	
+//------------------------
+// S C H E D U L E S      
+//------------------------
+
+  {
+	"LogName": "Load Empty Ridgeside Schedule File",
+   	"Action": "Load",
+   	"Target": "Characters/Schedules/Aguar, Characters/Schedules/Alissa, Characters/Schedules/Bert, Characters/Schedules/Corine, Characters/Schedules/Ezekiel, Characters/Schedules/Flor, Characters/Schedules/Freddie, Characters/Schedules/Ian, Characters/Schedules/Jeric, Characters/Schedules/Jio, Characters/Schedules/Keahi, Characters/Schedules/Kenneth, Characters/Schedules/Lenny, Characters/Schedules/Lola, Characters/Schedules/Maddie, Characters/Schedules/Olga, Characters/Schedules/Philip, Characters/Schedules/Pika, Characters/Schedules/Richard, Characters/Schedules/Shiro, Characters/Schedules/Trinnie, Characters/Schedules/Ysabelle, Characters/Schedules/Yuuma, Characters/Schedules/Undreya, Characters/Schedules/Helen, Characters/Schedules/Jason",
+   	"FromFile": "Data/LoadData/LoadSchedules.json"
+  },
+
+	/*********
+	** Include Schedule Files
+	*********/	
+  {
+	"LogName": "Include Ridgeside Schedule Files",
+   	"Action": "Include",
+   	"FromFile": "Assets/Schedules/Alissa.json, Assets/Schedules/Aguar.json, Assets/Schedules/Bert.json, Assets/Schedules/Corine.json, Assets/Schedules/Ezekiel.json, Assets/Schedules/Flor.json, Assets/Schedules/Freddie.json, Assets/Schedules/Ian.json, Assets/Schedules/Jeric.json, Assets/Schedules/Jio.json, Assets/Schedules/Keahi.json, Assets/Schedules/Kenneth.json, Assets/Schedules/Kiwi.json, Assets/Schedules/Lenny.json, Assets/Schedules/Lola.json, Assets/Schedules/Maddie.json, Assets/Schedules/Olga.json, Assets/Schedules/Philip.json, Assets/Schedules/Pika.json, Assets/Schedules/Richard.json, Assets/Schedules/Shiro.json, Assets/Schedules/Trinnie.json, Assets/Schedules/Ysabelle.json, Assets/Schedules/Yuuma.json, Assets/Schedules/Undreya.json,  Assets/Schedules/Helen.json, Assets/Schedules/Jason.json",
+  },  
+
+]
+}

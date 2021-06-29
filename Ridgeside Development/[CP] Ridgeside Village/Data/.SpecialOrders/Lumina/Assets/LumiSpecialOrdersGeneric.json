@@ -1,0 +1,96 @@
+{
+    "Changes": [
+        {
+		"Action": "EditData",
+		"Target": "Data/SpecialOrders",
+			"Entries": {
+				"Lumisteria.SpecialOrders.EmilyDye": {
+					"Name": "[Lumisteria.SpecialOrders.EmilyDye_Name]",
+					"Requester": "Emily",
+					"Duration": "TwoWeeks",
+					"Repeatable": "True",
+					"RequiredTags": "mail_MSB_Lewis",
+					"OrderType": "QF:RsvSpecialOrders",
+					"SpecialRule": "",
+					"Text": "[Lumisteria.SpecialOrders.EmilyDye_Text]",
+					"ItemToRemoveOnEnd": null,
+					"MailToRemoveOnEnd": null,
+					"RandomizedElements": [
+					  {
+						"Name": "DyeItem",
+						"Values": [
+						  {
+							"RequiredTags": "season_spring",
+							"Value": "PICK_ITEM Blue Jazz, Kale, Rhubarb"
+						  },
+						  {
+							"RequiredTags": "season_summer",
+							"Value": "PICK_ITEM Red Cabbage, Blueberry, Poppy"
+						  },
+						  {
+							"RequiredTags": "season_fall",
+							"Value": "PICK_ITEM Amaranth, Grape, Artichoke"
+						  },
+						  {
+							"RequiredTags": "season_winter",
+							"Value": "PICK_ITEM Crocus, Winter Root, Coal"
+						  }
+						]
+					  },
+					  {
+						"Name": "Text",
+						"Values": [
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.EmilyDye_RE_Text_0]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.EmilyDye_RE_Text_1]"
+						  },
+						]
+					  }
+					],
+					"Objectives": [
+					  {
+						"Type": "Collect",
+						"Text": "[Lumisteria.SpecialOrders.EmilyDye_Objective_0_Text]",
+						"RequiredCount": "25",
+						"Data": {
+							"AcceptedContextTags": "{DyeItem:Tags}"
+						}
+					  },
+					  {
+						"Type": "Ship",
+						"Text": "[Lumisteria.SpecialOrders.EmilyDye_Objective_1_Text]",
+						"RequiredCount": "25",
+						"Data": {
+							"AcceptedContextTags": "{DyeItem:Tags}",
+						}
+					  }
+					],
+					"Rewards": [
+					  {
+						"Type": "Money",
+						"Data": {
+						  "Amount": "2500",
+						}
+					  },
+					  {
+						"Type": "Friendship",
+						"Data": {}
+					  },
+					  {
+						"Type": "Mail",
+						"Data": {
+						  "MailReceived": "Lumisteria.SpecialOrders.EmilyDyeMail",
+						  "NoLetter": "false"
+						}
+					  }
+					]
+					},
+				},
+	  
+          }
+    ]
+}

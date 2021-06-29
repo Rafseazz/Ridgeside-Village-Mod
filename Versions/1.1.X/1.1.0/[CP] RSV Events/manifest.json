@@ -1,0 +1,22 @@
+{
+	"Name": "RSV Events",
+	"Author": "Rafseazz",
+	"Version": "1.0",
+	"Description": "RSV Events",
+	"UniqueID": "Rafseazz.RSVEvents",
+	"MinimumApiVersion": "3.0.0",
+	"UpdateKeys": [ "Nexus:???" ],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"Dependencies": [
+	 {
+      "UniqueID": "Rafseazz.RSVCP",
+      "IsRequired": true,
+	 },
+	 {
+	  "UniqueID": "misscoriel.eventrepeater",
+	  "IsRequired": true,
+	 },
+	]
+}

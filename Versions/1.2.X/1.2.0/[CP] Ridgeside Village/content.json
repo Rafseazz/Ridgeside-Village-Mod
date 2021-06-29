@@ -1,0 +1,211 @@
+{
+	"Format": "1.19.0",
+	
+	"ConfigSchema": {
+	
+		"RepeatCableCarCutscene": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Repeat cable car cutscene everytime player uses the Cable Car"
+		},
+		
+		"EnableOtherNPCsInCableCar": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Enable the chances of other NPCs to appear riding the Cable Car (Along with LASV, ES and SVE NPCs)"
+		},
+
+   },
+   
+   "DynamicTokens": [
+   
+	//RANDOM NPC DYNAMIC TOKEN
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma}}",
+		"When": { "EnableOtherNPCsInCableCar": "false" },
+		},
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": true, "HasSeenEvent": "75160015" },
+		},
+		//ES Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Jacob, Eloise}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//SVE Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//ES and SVE Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin, Jacob, Eloise}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//ES and LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Jacob, Eloise, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": true },
+		},
+		//SVE and LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": true },
+		},
+		//ES, SVE, and LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin, Jacob, Eloise, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": true  },
+		},
+   ],
+   
+	"Changes": [
+
+//NPC Exclusions        
+	{
+		"Action": "EditData",
+		"Target": "Data/CustomNPCExclusions",
+		"Entries": {
+			"Kiwi": "ALL",
+			"Jio": "ALL",
+		}
+	},
+	
+
+	
+//Load Files
+
+	//Animations
+	{
+   "Action": "Include",
+   "FromFile": "Data/Animations.json",
+	},
+	
+	//ConversationTopics
+	{
+   "Action": "Include",
+   "FromFile": "Data/ConversationTopics.json",
+	},
+	
+	//Dynamic Changes
+	{
+   "Action": "Include",
+   "FromFile": "Data/DynamicChanges.json",
+	},
+	
+	//Event Data
+	{
+   "Action": "Include",
+   "FromFile": "Data/EventData.json",
+	},
+	
+	//Event Dialogues
+	{
+   "Action": "Include",
+   "FromFile": "Data/EventDialogues.json",
+	},
+	
+	//Festival Dialogue
+	{
+   "Action": "Include",
+   "FromFile": "Data/FestivalDialogue.json",
+	},
+	
+	//FishData
+	{
+   "Action": "Include",
+   "FromFile": "Data/FishData.json",
+	},
+	
+	//Intermod Patches
+	{
+   "Action": "Include",
+   "FromFile": "Data/IntermodPatches.json",
+	},
+	
+	//Mail
+	{
+   "Action": "Include",
+   "FromFile": "Data/Mail.json",
+	},
+	
+	//Map Patches
+	{
+   "Action": "Include",
+   "FromFile": "Data/MapPatches.json",
+	},
+	
+	//Map Strings
+	{
+   "Action": "Include",
+   "FromFile": "Data/MapStrings.json",
+	},
+	
+	//Movie Data
+	{
+   "Action": "Include",
+   "FromFile": "Data/MovieData.json",
+	},
+	
+	//NPC Data
+	{
+   "Action": "Include",
+   "FromFile": "Data/NPCData.json",
+	},
+	
+	//Romance
+	{
+   "Action": "Include",
+   "FromFile": "Data/Romance.json",
+	},
+	
+	//World Map
+	{
+   "Action": "Include",
+   "FromFile": "Data/WorldMap.json",
+	},
+	
+//Config Changes
+
+	{
+		//Cutscene to RidgesideVillage Disable
+		"Action": "EditData",
+		"Target": "Data/Events/RidgesideVillage",
+		"Entries": {
+		
+			"75160060": "continue/-100 -100/farmer 0 0 0/skippable/pause 100/end",
+		
+		},
+		"When": { "RepeatCableCarCutscene": "false" },
+	},
+	//{
+		//Cutscene to RidgesideVillage Randomizer
+		//"Action": "Include",
+		//"FromFile": "Data/Randomized/CableCar_{{Random:Alone, Kiwi, }}.json",
+		//"When": { "RepeatCableCarCutscene": "true" },
+	//},
+
+],
+
+//Event Repeater
+"RepeatEvents": [
+75160060,
+75160175,
+75160176
+]
+}

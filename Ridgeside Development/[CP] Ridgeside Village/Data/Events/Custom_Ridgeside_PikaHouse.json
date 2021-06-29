@@ -1,0 +1,42 @@
+{
+"Changes": [
+	
+	{
+		"LogName": "PikaHouse Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_PikaHouse",
+		"Entries": {
+		//Keahi wants to make up to Trinnie (Keahi 4 hearts)
+			"75160083/f Keahi 1000/t 1200 1400/e 75160082/w sunny": "playful/5 12/farmer -100 -100 0 Trinnie -101 -100 0 Keahi 5 12 0/skippable/pause 200/move Keahi -1 0 0/move Keahi 2 0 0/move Keahi -1 0 0/emote Keahi 28/pause 500/playSound doorClose/warp farmer 5 16/faceDirection farmer 0/emote farmer 8/pause 500/speak Keahi \"{{i18n:event-75160083.01}}\"/pause 800/faceDirection Keahi 2/emote Keahi 16/pause 500/speak Keahi \"{{i18n:event-75160083.02}}\"/move farmer 0 -2 0/emote farmer 8/pause 500/speak Keahi \"{{i18n:event-75160083.03}}\"/emote farmer 28/emote Keahi 16/pause 500/speak Keahi \"{{i18n:event-75160083.04}}\"/emote farmer 8/pause 500/speak Keahi \"{{i18n:event-75160083.05}}\"/pause 500/speak Keahi \"$q 75160083 null \"#{{i18n:event-75160083.06}}#$r 75160083 50 keahi1_1#{{i18n:event-75160083.07}}#$r 75160083 -50 keahi1_2#{{i18n:event-75160083.08}}\"/fork KeahiSad/pause 500/speak Keahi \"{{i18n:event-75160083.09}}\"/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/changeToTemporaryMap Custom_Ridgeside_RidgesideVillage false/warp Trinnie 76 115/faceDirection Trinnie 2/warp Keahi 76 118/faceDirection Keahi 0/warp farmer 79 118/faceDirection farmer 3/fade/viewport 76 117/pause 500/move Keahi 0 -2 0/faceDirection farmer 0/emote Trinnie 40/emote Keahi 28/pause 500/speak Trinnie \"{{i18n:event-75160083.10}}\"/faceDirection Trinnie 3/pause 1000/speak Keahi \"{{i18n:event-75160083.11}}\"/emote Trinnie 16/pause 500/faceDirection Trinnie 2/speak Keahi \"{{i18n:event-75160083.12}}\"/emote Trinnie 20/pause 500/speak Trinnie \"{{i18n:event-75160083.13}}\"/emote Keahi 28/pause 500/speak Keahi \"{{i18n:event-75160083.14}}\"/emote Trinnie 12/emote Keahi 28/pause 500/speak Keahi \"{{i18n:event-75160083.15}}\"/speak Trinnie \"{{i18n:event-75160083.16}}\"/faceDirection Trinnie 0/pause 500/playSound doorClose/warp Trinnie -100 -100/move Keahi 0 2 1/move Keahi 2 0 1/faceDirection farmer 3/emote Keahi 56/pause 500/speak Keahi \"{{i18n:event-75160083.17}}\"/addConversationTopic keahi_sorry 3/emote farmer 56/pause 1000/end dialogue Keahi \"{{i18n:event-75160083.18}}\"",
+			"KeahiSad": "pause 500/speak Keahi \"{{i18n:event-75160083.KeahiSad.01}}\"/addConversationTopic keahi_nosorry 3/emote Keahi 28/pause 1000/end dialogue Keahi \"{{i18n:event-75160083.KeahiSad.02}}\"",
+
+		//Keahi cooks (Keahi 6 hearts)
+			"75160084/f Keahi 1500/t 1200 1400/e 75160083": "playful/5 12/farmer 5 16 0 Keahi 5 12 1 Pika 6 12 3/skippable/pause 500/playSound doorClose/speak Keahi \"{{i18n:event-75160084.01}}\"/speak Pika \"{{i18n:event-75160084.02}}\"/emote farmer 8/pause 500/faceDirection Pika 2/faceDirection Keahi 2/speak Keahi \"{{i18n:event-75160084.03}}\"/speak Pika \"{{i18n:event-75160084.04}}\"/emote farmer 32/pause 500/move farmer 0 -2 0/faceDirection Pika 3/faceDirection Keahi 1/speak Pika \"{{i18n:event-75160084.05}}\"/speak Keahi \"{{i18n:event-75160084.06}}\"/move Keahi -3 0 0/move Keahi 0 -4 0 true/pause 600/globalFade/viewport -1000 -1000/warp farmer 7 8/faceDirection farmer 0/warp Keahi 5 5/faceDirection Keahi 0/warp Pika 9 5/faceDirection Pika 3/fade/viewport 6 6/pause 500/move Keahi 1 0 0/speak Keahi \"{{i18n:event-75160084.07}}\"/playSound wateringCan/pause 1000/move Keahi -4 0 0/speak Keahi \"{{i18n:event-75160084.08}}\"/playSound axchop/emote Pika 40 true/emote farmer 56/pause 1000/move Keahi 2 0 0/speak Keahi \"{{i18n:event-75160084.09}}\"/playSound furnace/pause 1000/playSound waterSlosh/pause 1000/speak Keahi \"{{i18n:event-75160084.10}}\"/pause 800/move Keahi 3 0 2/playSound pickUpItem/addObject 7 6 237/speak Keahi \"{{i18n:event-75160084.11}}\"/emote farmer 56 true/emote Pika 56/pause 500/speak Pika \"{{i18n:event-75160084.12}}\"/faceDirection Pika 2/speak Pika \"{{i18n:event-75160084.13}}\"/emote farmer 32/pause 500/faceDirection farmer 2/animate farmer false false 200 84 85 86 87 88/pause 1000/faceDirection farmer 0/emote farmer 20/pause 500/speak Keahi \"{{i18n:event-75160084.14}}\"/emote Pika 20/pause 500/speak Pika \"{{i18n:event-75160084.15}}\"/faceDirection Keahi 1/speak Keahi \"{{i18n:event-75160084.16}}\"/emote Pika 56/pause 500/speak Pika \"{{i18n:event-75160084.17}}\"/emote Keahi 32/pause 800/globalFade/viewport -1000 -1000/message \"{{i18n:event-75160084.18}}\"/pause 500/end dialogue Keahi \"{{i18n:event-75160084.19}}\"",
+
+		//Pika misses wife (Pika 8 hearts)
+			"75160101/f Pika 2000/t 800 900/e 75160100": "none/13 6/farmer -100 -100 0 Pika 16 5 1 Keahi 6 12 0/skippable/pause 500/faceDirection Pika 2/emote Pika 40/pause 500/speak Pika \"{{i18n:event-75160101.01}}\"/pause 500/move Pika -4 0 0/emote Pika 32/pause 1000/speak Pika \"{{i18n:event-75160101.02}}\"/emote Pika 40/pause 1000/speak Pika \"{{i18n:event-75160101.03}}\"/pause 1000/emote Pika 40/pause 1000/speak Pika \"{{i18n:event-75160101.04}}\"/pause 1000/fade/viewport 5 12/pause 500/emote Keahi 40/pause 500/speak Keahi \"{{i18n:event-75160101.05}}\"/warp farmer 5 16/playSound doorClose/emote Keahi 16/pause 500/faceDirection Keahi 2/speak Keahi \"{{i18n:event-75160101.06}}\"/emote farmer 32/pause 500/move farmer 0 -2 0/emote farmer 8/pause 500/emote Keahi 28/pause 500/speak Keahi \"{{i18n:event-75160101.07}}\"/emote farmer 40/pause 1000/globalFade/viewport -1000 -1000/pause 1000/playSound doorClose/speak Pika \"{{i18n:event-75160101.08}}\"/warp Pika 9 14/faceDirection Pika 3/fade/viewport 6 13/faceDirection farmer 1/faceDirection Keahi 2/move Pika -2 0 3/emote Pika 8/speak Pika \"{{i18n:event-75160101.09}}\"/speak Keahi \"{{i18n:event-75160101.10}}\"/emote Pika 8/pause 500/speak Pika \"{{i18n:event-75160101.11}}\"/faceDirection farmer 0/emote Keahi 40/pause 1000/speak Keahi \"{{i18n:event-75160101.12}}\"/faceDirection farmer 1/emote farmer 32/pause 500/emote Pika 28/pause 500/speak Pika \"{{i18n:event-75160101.13}}\"/emote Keahi 12/move Keahi 1 0 2/move Keahi 0 1 2/speak Pika \"{{i18n:event-75160101.14}}\"/message \"{{i18n:event-75160101.15}}\"/speak Keahi \"{{i18n:event-75160101.16}}\"/speak Pika \"{{i18n:event-75160101.17}}\"/showFrame Pika 26/showFrame Keahi 25/playMusic desolate/pause 1000/message \"{{i18n:event-75160101.18}}\"/pause 1000/speak Pika \"{{i18n:event-75160101.19}}\"/message \"{{i18n:event-75160101.20}}\"/speak Pika \"{{i18n:event-75160101.21}}\"/pause 1000/globalFade/viewport -1000 -1000/pause 500/message \"{{i18n:event-75160101.22}}\"/end dialogue Pika \"{{i18n:event-75160101.23}}\"",
+		},
+	},
+
+        {
+                //Event dialogue Keahi 4 hearts
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Keahi",
+                "Entries": {                        
+                        "keahi1_1": "{{i18n:event-75160083.Fork1}}",
+                        "keahi1_2": "{{i18n:event-75160083.Fork2}}",                
+                }
+        },
+
+        {
+                //Event dialogue Pika 8 hearts
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Pika",
+                "Entries": {                        
+                        "pika1_1": "{{i18n:event-75160100.Fork1}}",
+                        "pika1_2": "{{i18n:event-75160100.Fork2}}",                
+                }
+        },
+	
+]
+}

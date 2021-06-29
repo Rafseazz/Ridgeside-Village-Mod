@@ -1,0 +1,29 @@
+{
+"Changes": [
+
+	{
+   "Action": "EditData",
+   "Target": "Data/Festivals/spring24",
+   "TextOperations": [
+   
+   //SetUp
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Aguar 44 41 down/Alissa 27 20 right/Bert 30 22 down/Corine 37 25 right/Ezekiel 31 28 down/Flor 34 30 left/Freddie 36 28 down/Ian 31 33 down/Jeric 38 23 down/Jio 28 32 down/Keahi 31 24 left/Kenneth 41 20 down/Kiwi 27 33 down/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 up/Olga 29 20 left/Philip 42 21 left/Pika 33 28 down/Richard 36 21 down/Shiro 34 26 left/Trinnie 29 24 right/Ysabelle 39 25 left/Yuuma 33 25 down",
+         "Delimiter": "/"
+		},
+
+   //MainEevent
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "MainEvent_additionalCharacters"],
+         "Value": "Aguar 44 41 left/Alissa 27 20 left/Bert 30 22 left/Corine 37 25 left/Ezekiel 31 28 left/Flor 34 30 left/Freddie 36 28 left/Ian 31 33 left/Jeric 38 23 left/Jio 28 32 left/Keahi 31 24 left/Kenneth 41 20 left/Kiwi 27 33 left/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 left/Olga 29 20 left/Philip 42 21 left/Pika 33 28 left/Richard 36 21 left/Shiro 34 26 left/Trinnie 29 24 left/Ysabelle 39 25 left/Yuuma 33 25 left",
+         "Delimiter": "/"
+		},
+
+	]	
+	},
+	
+]
+}

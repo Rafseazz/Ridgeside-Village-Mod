@@ -1,0 +1,313 @@
+{
+    "Changes": [
+        {
+		"Action": "EditData",
+		"Target": "Data/SpecialOrders",
+			"Entries": {
+				"Lumisteria.SpecialOrders.LewisFlowers": {
+					"Name": "[Lumisteria.SpecialOrders.LewisFlowers_Name]",
+					"Requester": "Lewis",
+					"Duration": "TwoWeeks",
+					"Repeatable": "True",
+					"RequiredTags": "!season_winter, mail_MSB_Lewis",
+					"OrderType": "QF:RsvSpecialOrders",
+					"SpecialRule": "",
+					"Text": "[Lumisteria.SpecialOrders.LewisFlowers_Text]",
+					"ItemToRemoveOnEnd": null,
+					"MailToRemoveOnEnd": null,
+					"RandomizedElements": [
+						{
+						"Name": "Crop",
+						"Values": [
+						  {
+							"RequiredTags": "season_spring",
+							"Value": "PICK_ITEM Blue Jazz, Tulip"
+						  },
+						  {
+							"RequiredTags": "season_summer",
+							"Value": "PICK_ITEM Poppy, Summer Spangle, Sunflower"
+						  },
+						  {
+							"RequiredTags": "season_fall",
+							"Value": "PICK_ITEM Sunflower, Fairy Rose"
+						  }
+						]
+					  },
+					  {
+						"Name": "Text",
+						"Values": [
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowers_RE_Text_0]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowers_RE_Text_1]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowers_RE_Text_2]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowers_RE_Text_3]"
+						  },
+						  {
+							"RequiredTags": "season_spring",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowers_RE_Text_4_Spring]"
+						  },
+						  {
+							"RequiredTags": "season_summer",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowers_RE_Text_4_Summer]"
+						  },
+						  {
+							"RequiredTags": "season_fall",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowers_RE_Text_4_Fall]"
+						  }
+						]
+					  }
+					],
+					"Objectives": [
+					  {
+						"Type": "Collect",
+						"Text": "[Lumisteria.SpecialOrders.LewisFlowers_Objective_1_Text]",
+						"RequiredCount": "40",
+						"Data": {
+						  "AcceptedContextTags": "{Crop:Tags}"
+						}
+					  },
+					  {
+						"Type": "Ship",
+						"Text": "[Lumisteria.SpecialOrders.LewisFlowers_Objective_0_Text]",
+						"RequiredCount": "40",
+						"Data": {
+						  "AcceptedContextTags": "{Crop:Tags}"
+						}
+					  }
+					],
+					"Rewards": [
+					  {
+						"Type": "Money",
+						"Data": {
+						  "Amount": "{Crop:Price}",
+						  "Multiplier": "50"
+						}
+					  },
+					  {
+						"Type": "Mail",
+						"Data": {
+						  "MailReceived": "Lumisteria.SpecialOrders.LewisFlowersMail",
+						  "NoLetter": "false"
+						}
+					  }
+					]
+					},
+				//
+				
+				"Lumisteria.SpecialOrders.LewisHundredFlowers": {
+					"Name": "[Lumisteria.SpecialOrders.LewisHundredFlowers_Name]",
+					"Requester": "Lewis",
+					"Duration": "Month",
+					"Repeatable": "True",
+					"RequiredTags": "!season_winter, mail_MSB_Lewis",
+					"OrderType": "QF:RsvSpecialOrders",
+					"SpecialRule": "",
+					"Text": "[Lumisteria.SpecialOrders.LewisHundredFlowers_Text]",
+					"ItemToRemoveOnEnd": null,
+					"MailToRemoveOnEnd": null,
+					"RandomizedElements": [
+					  {
+						"Name": "Text",
+						"Values": [
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisHundredFlowers_RE_Text_0]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisHundredFlowers_RE_Text_1]"
+						  },
+						  {
+							"RequiredTags": "season_spring",
+							"Value": "[Lumisteria.SpecialOrders.LewisHundredFlowers_RE_Text_2_Spring]"
+						  },
+						  {
+							"RequiredTags": "season_summer",
+							"Value": "[Lumisteria.SpecialOrders.LewisHundredFlowers_RE_Text_2_Summer]"
+						  },
+						  {
+							"RequiredTags": "season_fall",
+							"Value": "[Lumisteria.SpecialOrders.LewisHundredFlowers_RE_Text_2_Fall]"
+						  }
+						]
+					  }
+					],
+					"Objectives": [
+					  {
+						"Type": "Collect",
+						"Text": "[Lumisteria.SpecialOrders.LewisHundredFlowers_Objective_1_Text]",
+						"RequiredCount": "100",
+						"Data": {
+						  "AcceptedContextTags": "category_flowers"
+						}
+					  },
+					  {
+						"Type": "Ship",
+						"Text": "[Lumisteria.SpecialOrders.LewisHundredFlowers_Objective_0_Text]",
+						"RequiredCount": "100",
+						"Data": {
+						  "AcceptedContextTags": "category_flowers"
+						}
+					  }
+					],
+					"Rewards": [
+					  {
+						"Type": "Money",
+						"Data": {
+							"Amount": "8000"
+
+						}
+					  },
+					  {
+						"Type": "Mail",
+						"Data": {
+						  "MailReceived": "Lumisteria.SpecialOrders.LewisHundredFlowersMail",
+						  "NoLetter": "false"
+						}
+					  }
+					]
+					},
+				//
+		
+		
+		
+		
+		
+		
+		
+					
+				},
+	  
+        },
+        {
+		"Action": "EditData",
+		"Target": "Data/SpecialOrders",
+			"Entries": {
+				"Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers": {
+					"Name": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_Name]",
+					"Requester": "Lewis",
+					"Duration": "TwoWeeks",
+					"Repeatable": "True",
+					"RequiredTags": "Lumisteria.SpecialOrders.LewisFlowersMail",
+					"OrderType": "QF:RsvSpecialOrders",
+					"SpecialRule": "",
+					"Text": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_Text]",
+					"ItemToRemoveOnEnd": null,
+					"MailToRemoveOnEnd": null,
+					"RandomizedElements": [
+						{
+						"Name": "Crop",
+						"Values": [
+						  {
+							"RequiredTags": "season_spring",
+							"Value": "PICK_ITEM Blue Borage, Blue Forget Me Not, Giant Spring Bells, Purple Iris"
+						  },
+						  {
+							"RequiredTags": "season_summer",
+							"Value": "PICK_ITEM Golden Calendula, Tall Mallow, Butterfly Lavender, Sugar Plum Foxglove"
+						  },
+						  {
+							"RequiredTags": "season_fall",
+							"Value": "PICK_ITEM Pink Clematis, Azure Cornflower"
+						  },
+						  {
+							"RequiredTags": "season_winter",
+							"Value": "PICK_ITEM Giant Snowdrop, Lilac Pansy"
+						  }
+						]
+					  },
+					  {
+						"Name": "Text",
+						"Values": [
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_0]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_1]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_2]"
+						  },
+						  {
+							"RequiredTags": "",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_3]"
+						  },
+						  {
+							"RequiredTags": "season_spring",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_4_Spring]"
+						  },
+						  {
+							"RequiredTags": "season_summer",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_4_Summer]"
+						  },
+						  {
+							"RequiredTags": "season_fall",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_4_Fall]"
+						  },
+						  {
+							"RequiredTags": "season_winter",
+							"Value": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_RE_Text_4_Winter]"
+						  }
+						]
+					  }
+					],
+					"Objectives": [
+					  {
+						"Type": "Collect",
+						"Text": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_Objective_1_Text]",
+						"RequiredCount": "40",
+						"Data": {
+						  "AcceptedContextTags": "{Crop:Tags}"
+						}
+					  },
+					  {
+						"Type": "Ship",
+						"Text": "[Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowers_Objective_0_Text]",
+						"RequiredCount": "40",
+						"Data": {
+						  "AcceptedContextTags": "{Crop:Tags}"
+						}
+					  }
+					],
+					"Rewards": [
+					  {
+						"Type": "Money",
+						"Data": {
+						  "Amount": "{Crop:Price}",
+						  "Multiplier": "50"
+						}
+					  },
+					  {
+						"Type": "Mail",
+						"Data": {
+						  "MailReceived": "Lumisteria.SpecialOrders.LewisFlowersLumisteriaFlowersMail",
+						  "NoLetter": "false"
+						}
+					  }
+					]
+					},
+				//
+				
+				},
+				"When": {
+					"HasMod": "lumisteria.flowersandcrops",
+				},
+		  
+        }
+		  
+		  
+    ]
+}

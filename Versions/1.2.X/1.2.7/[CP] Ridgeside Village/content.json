@@ -1,0 +1,524 @@
+{
+	"Format": "1.19.0",
+	
+	"ConfigSchema": {
+	
+		"RepeatCableCarCutscene": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Repeat cable car cutscene everytime player uses the Cable Car"
+		},
+		
+		"EnableOtherNPCsInCableCar": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Enable the chances of other NPCs to appear riding the Cable Car (Along with LASV, ES and SVE NPCs)"
+		},
+		
+		"EnableVillageMusic": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Enable the custom music to play in Ridgeside Village"
+		},
+		
+		"PortraitType": {
+			"AllowValues": "Default, Realism",
+			"Default": "Default",
+			"Description": "Change Portrait Type (Default by Rafseazz / Realism by avislone)"
+		},
+		
+		"IndividualRealismPortrait": {
+			"AllowMultiple": "true",
+			"AllowBlank": "true",
+			"Description": "List down RSV NPC names that you want to load in their Realism Portraits by avislone. (Ex. Alissa, Philip)"
+		},
+		
+		"MaddieGlasses": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Give Maddie some glasses"
+		},
+		
+		"KennethBeard": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Give Kenneth a beard"
+		},
+		
+		"BrandonIan": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "bodyartbrandon's Alternate Ian Portrait"
+		},
+
+   },
+   
+   "DynamicTokens": [
+   
+	//RANDOM NPC DYNAMIC TOKEN
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma}}",
+		"When": { "EnableOtherNPCsInCableCar": "false" },
+		},
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": true, "HasSeenEvent": "75160015" },
+		},
+		//ES Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Jacob, Eloise}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//SVE Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//ES and SVE Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin, Jacob, Eloise}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": false },
+		},
+		//ES and LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Jacob, Eloise, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "HasMod: |contains=Rafseazz.LunnaCP": true },
+		},
+		//SVE and LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": true },
+		},
+		//ES, SVE, and LASV Only
+		{
+        "Name": "RANDOMRSVNPC",
+        "Value": "{{Random:Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin, Jacob, Eloise, Lunna, Raphael, Dianna, Bianka}}",
+		"When": { "EnableOtherNPCsInCableCar": "true", "HasMod: |contains=Lemurkat.JacobEloise.CP": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Rafseazz.LunnaCP": true  },
+		},
+		
+//		{
+//		"Name": "SPOUSECHECK",
+//		"Value": "Alex, Elliot, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Alissa, Corine, Flor, Maddie, Ysabelle, Ian, Jeric, Kenneth, Philip, Shiro",
+//		},
+		
+	//EMBER OF RESOLUTIONS TOKENS
+		{
+		//Alone
+		"Name": "BONFIREEVENT",
+		"Value": "/warp farmer 40 49/faceDirection farmer 0/fade/viewport 39 46/pause 2000/move farmer 0 -5 0/pause 1000/playSound backpackIN/addObject 40 42 294/pause 2000/message \"..And my new year resolutions are..\"/pause 3000/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/warp farmer 40 48/faceDirection farmer 0/",
+		},
+//		{
+		//With Spouse
+//		"Name": "BONFIREEVENT",
+//		"Value": "/warp farmer 40 49/warp {{spouse}} 39 49/faceDirection farmer 0/faceDirection {{spouse}} 0/fade/viewport 39 46/pause 2000/move {{spouse}} 0 -5 2/move farmer 0 -5 3/faceDirection {{spouse}} 1/pause 1000/faceDirection farmer 0/faceDirection {{spouse}} 0/pause 1000/playSound backpackIN/addObject 39 42 294/pause 1000/playSound backpackIN/addObject 40 42 294/pause 1000/message \"..And my new year resolutions are..\"/pause 3000/faceDirection {{spouse}} 1/pause 2000/faceDirection farmer 3/speak {{spouse}} \"I'm looking forward for another year with you..$l\"/emote {{spouse}} 20/emote farmer 20/pause 3000/globalFade/viewport -1000 -1000/warp farmer 40 48/faceDirection farmer 0/warp {{spouse}} 39 48/faceDirection {{spouse}} 0/",
+//		"When": { "HasValue:{{spouse}}": "true", "Spouse": "Alex, Elliot, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Alissa, Corine, Flor, Maddie, Ysabelle, Ian, Jeric, Kenneth, Philip, Shiro" }
+//		},
+		
+	//RIDGESIDE GATHERING TOKENS
+		//Sam Band Only
+		{
+		"Name": "RSVGATHER",
+		"Value": "/warp Sam 85 40/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 85 43/pause 800/speak Sam \"..and a one.. and a two.. and a..\"/",
+		"When": { "HasSeenEvent: |contains=75160120": false },
+		},
+		{
+		"Name": "RSVGATHERDANCE",
+		"Value": "/animate Abigail false true 118 49 34 35 48/animate Sam false true 236 20 21/animate Sebastian false true 118 42 43 52 53/",
+		"When": { "HasSeenEvent: |contains=75160120": false },
+		},
+		//Sam Band and Alissa
+		{
+		"Name": "RSVGATHER",
+		"Value": "/warp Alissa 85 40/faceDirection Alissa 2/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 85 43/pause 800/speak Sam \"..and a one.. and a two.. and a..\"/",
+		"When": { "HasSeenEvent: |contains=75160120": true },
+		},
+		{
+		"Name": "RSVGATHERDANCE",
+		"Value": "/animate Alissa false true 400 19 19 19 27 27 19/animate Abigail false true 118 49 34 35 48/animate Sam false true 236 20 21/animate Sebastian false true 118 42 43 52 53/",
+		"When": { "HasSeenEvent: |contains=75160120": true },
+		},
+		//Sam Band and farmer (bugged)
+		//{
+		//"Name": "RSVGATHER",
+		//"Value": "/warp farmer 83 40/faceDirection farmer 2/warp Sam 85 40/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 85 43/pause 800/speak Sam \"..and a one.. and a two.. and a..\"/",
+		//"When": { "HasDialogueAnswer": 75161001 },
+		//"Update": "OnLocationChange",
+		//},
+		//{
+		//"Name": "RSVGATHERDANCE",
+		//"Value": "/animate farmer false true 300 27 55 55 55 55 27 27/animate Abigail false true 118 49 34 35 48/animate Sam false true 236 20 21/animate Sebastian false true 118 42 43 52 53/",
+		//"When": { "HasDialogueAnswer": 75161001 },
+		//"Update": "OnLocationChange",
+		//},
+		//Sam Band, Alissa, and farmer (bugged)
+		//{
+		//"Name": "RSVGATHER",
+		//"Value": "/warp farmer 83 40/faceDirection farmer 2/warp Alissa 85 40/faceDirection Alissa 2/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 85 43/pause 800/speak Sam \"..and a one.. and a two.. and a..\"/",
+		//"When": { "HasSeenEvent": 75160120, "HasDialogueAnswer": 75161001 },
+		//"Update": "OnLocationChange",
+		//},
+		//{
+		//"Name": "RSVGATHERDANCE",
+		//"Value": "/animate farmer false true 300 27 55 55 55 55 27 27/animate Alissa false true 400 19 19 19 27 27 19/animate Abigail false true 118 49 34 35 48/animate Sam false true 236 20 21/animate Sebastian false true 118 42 43 52 53/",
+		//"When": { "HasSeenEvent": 75160120, "HasDialogueAnswer": 75161001 },
+		//"Update": "OnLocationChange",
+		//},
+	
+	//RANDOM MUSIC
+		{
+		"Name": "RANDOMMUSIC",
+		"Value": "{{Random:poppy, shimmeringbastion, honkytonky, heavy}}",
+		"When": { "HasSeenEvent: |contains=75160120": false },
+		},
+		{
+		"Name": "RANDOMMUSIC",
+		"Value": "{{Random:poppy, shimmeringbastion, honkytonky, heavy, cm:AlissaConcert}}",
+		"When": { "HasSeenEvent: |contains=75160120": true },
+		},
+		
+	//ODD YEAR	
+		{
+		"Name": "IsOddYear",
+		"Value": "{{Query: {{Year}} % 2 = 1}}"
+		},
+		
+	//Random Undreya Spawn
+		{
+		"Name": "RANDOMUNDREYA",
+		"Value": "{{Random:0 RidgesideVillage 47 22 0/2600 RSVAbandonedHouse 5 5 0, 0 RidgesideVillage 81 70 0/2600 RSVAbandonedHouse 5 5 0, 0 Town 98 85 0/2600 RSVAbandonedHouse 5 5 0, 0 RSVCliff 17 15 0/2600 RSVAbandonedHouse 5 5 0, 0 BusStop 29 16 0/2600 RSVAbandonedHouse 5 5 0, 0 Ridge 51 24, RSVCableCar 9 14 0/2600 RSVAbandonedHouse 5 5 0, 0 RidgesideVillage 131 105 0/2600 RSVAbandonedHouse 5 5 0, 0 Mountain 31 5 0/2600 RSVAbandonedHouse 5 5 0, 0 Mountain 87 33 0/2600 RSVAbandonedHouse 5 5 0, 0 Mountain 51 37 0/2600 RSVAbandonedHouse 5 5 0, 0 Beach 69 5 0/2600 RSVAbandonedHouse 5 5 0, 0 Beach 37 31 0/2600 RSVAbandonedHouse 5 5 0, 0 RidgesideVillage 134 42 0/2600 RSVAbandonedHouse 5 5 0, 0 Town 46 15 0/2600 RSVAbandonedHouse 5 5 0, 0 RidgesideVillage 13 83 0/2600 RSVAbandonedHouse 5 5 0, 0 RidgesideVillage 134 23 0/2600 RSVAbandonedHouse 5 5 0, 0 RidgesideVillage 74 35 0/2600 RSVAbandonedHouse 5 5 0, 0 Town 18 8 0/2600 RSVAbandonedHouse 5 5 0, 0 Town 6 78 0/2600 RSVAbandonedHouse 5 5 0}}",
+		},
+		
+	//Portrait Type
+		{
+		"Name": "PTYPE",
+		"Value": "Legacy",
+		"When": { "PortraitType": "Default" }
+		},
+		{
+		"Name": "PTYPE",
+		"Value": "Official",
+		"When": { "PortraitType": "Realism" }
+		},
+   ],
+   
+	"Changes": [
+
+//NPC Exclusions        
+	{
+		"Action": "EditData",
+		"Target": "Data/CustomNPCExclusions",
+		"Entries": {
+			"Kiwi": "ALL",
+			"Jio": "ALL",
+			"Undreya": "ALL",
+			"Helen": "ALL",
+		}
+	},
+	
+//Antisociality
+	{
+		"LogName": "Antisocial NPCs",
+		"Action": "EditData",
+		"Target": "Data/AntiSocialNPCs",
+		"Entries": {
+			"Undreya": true,
+			"Helen": true,
+			"Kiwi": true,
+			}
+	},
+	
+
+	
+//Load Files
+
+	//Animations
+	{
+   "Action": "Include",
+   "FromFile": "Data/Animations.json",
+	},
+	
+	//ConversationTopics
+	{
+   "Action": "Include",
+   "FromFile": "Data/ConversationTopics.json",
+	},
+	
+	//Dynamic Changes
+	{
+   "Action": "Include",
+   "FromFile": "Data/DynamicChanges.json",
+	},
+	
+	//Event Data
+	{
+   "Action": "Include",
+   "FromFile": "Data/EventData.json",
+	},
+	
+	//Event Dialogues
+	{
+   "Action": "Include",
+   "FromFile": "Data/EventDialogues.json",
+	},
+	
+	//Festival Dialogue
+	{
+   "Action": "Include",
+   "FromFile": "Data/FestivalDialogue.json",
+	},
+	
+	//FishData
+	{
+   "Action": "Include",
+   "FromFile": "Data/FishData.json",
+	},
+	
+	//Intermod Patches
+	{
+   "Action": "Include",
+   "FromFile": "Data/IntermodPatches.json",
+	},
+	
+	//Load Festival
+	{
+   "Action": "Include",
+   "FromFile": "Data/LoadFestival.json",
+	},
+	
+	//Mail
+	{
+   "Action": "Include",
+   "FromFile": "Data/Mail.json",
+	},
+	
+	//Map Patches
+	{
+   "Action": "Include",
+   "FromFile": "Data/MapPatches.json",
+	},
+	
+	//Map Strings
+	{
+   "Action": "Include",
+   "FromFile": "Data/MapStrings.json",
+	},
+	
+	//Monsters
+	{
+   "Action": "Include",
+   "FromFile": "Data/MonsterData.json",
+	},
+	
+	//Movie Data
+	{
+   "Action": "Include",
+   "FromFile": "Data/MovieData.json",
+	},
+	
+	//NPC Data
+	{
+   "Action": "Include",
+   "FromFile": "Data/NPCData.json",
+	},
+	
+	//Romance
+	{
+   "Action": "Include",
+   "FromFile": "Data/Romance.json",
+	},
+	
+	//World Map
+	{
+   "Action": "Include",
+   "FromFile": "Data/WorldMap.json",
+	},
+	
+//Config Changes
+
+	{
+		//Cutscene to RidgesideVillage Disable
+		"Action": "EditData",
+		"Target": "Data/Events/RSVCliff",
+		"Entries": {
+		
+			"75160060": "continue/-100 -100/farmer 0 0 0/skippable/pause 100/end",
+		
+		},
+		"When": { "RepeatCableCarCutscene": "false" },
+	},
+	
+	{
+		//Maddie Glasses Portrait
+		"Action": "EditImage",
+		"Target": "Portraits/Maddie",
+		"FromFile": "assets/ConfigOptions/Misc/{{PTYPE}}_Glasses_Maddie.png",
+		"PatchMode": "Replace",
+		"When": { "MaddieGlasses": "true" },
+	},
+	{
+		//Maddie Glasses Sprite
+		"Action": "EditImage",
+		"Target": "Characters/Maddie",
+		"FromFile": "assets/ConfigOptions/Misc/Glasses_MaddieSprite.png",
+		"PatchMode": "Replace",
+		"When": { "MaddieGlasses": "true" },
+	},
+	
+	{
+		//Kenneth Beard
+		"Action": "EditImage",
+		"Target": "Portraits/Kenneth",
+		"FromFile": "assets/ConfigOptions/Misc/{{PTYPE}}_Beard_Kenneth.png",
+		"PatchMode": "Replace",
+		"When": { "KennethBeard": "true" },
+	},
+	
+	{
+		//Brandon's Ian
+		"Action": "EditImage",
+		"Target": "Portraits/Ian",
+		"FromFile": "assets/ConfigOptions/Misc/Brandon_Ian.png",
+		"PatchMode": "Replace",
+		"When": { "BrandonIan": "true" },
+	},
+
+//===================================
+//Festival Locations                 
+//===================================
+
+	//Egg Festival
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/EggFestival.json",
+	},
+	
+	//Flower Dance
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/FlowerDance.json",
+	},
+	
+	//Luau
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/Luau.json",
+	},
+	
+	//Dance of the Moonlight Jellies
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/MoonlightJellies.json",
+	},
+	
+	//SVFair
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/SVFair.json",
+	},
+	
+	//SpiritEve
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/SpiritEve.json",
+	},
+	
+	//IceFestival
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/IceFestival.json",
+	},
+	
+	//WinterStar
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/WinterStar.json",
+	},
+	
+	//Enber of Resolutions
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/EmberOfResolutions.json",
+	},
+
+	//Ridgeside Gathering
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/Gathering.json",
+	},
+	
+//Undreya dynamics
+	//DISPOSITIONS
+	{
+		"Action": "EditData",
+		"Target": "Characters/schedules/Undreya",
+		"Entries": { "spring": "{{RANDOMUNDREYA}}", },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160182": true, "DayOfWeek: |contains=Thursday": false },
+	},
+	{
+	//SPRITE RANDOMIZE
+		"Action": "EditImage",
+		"Target": "Characters/Undreya",
+		"FromFile": "Data/Undreya/Undreya{{Random:1, 2, 3, 4, 5, 6, 7, 8}}.png",
+		"When": { "HasSeenEvent: hostPlayer": 75160182, "DayOfWeek: |contains=Thursday": false },
+	},
+	
+//Kiwi dynamics
+	{
+	//Temporary Schedule
+		"Action": "Load",
+		"Target": "Characters/schedules/Kiwi",
+		"FromFile": "assets/schedules/BlankSchedule.json",
+		"When": { "HasSeenEvent: hostPlayer |contains=75160188": false },
+	},
+	{
+	//Official Schedule
+		"Action": "Load",
+		"Target": "Characters/schedules/Kiwi",
+		"FromFile": "assets/schedules/Kiwi.json",
+		"When": { "HasSeenEvent: hostPlayer |contains=75160188": true },
+	},
+	
+	{
+		"Action": "EditData",
+		"Target": "Data/AntiSocialNPCs",
+		"When": { "HasSeenEvent": "75160188" },
+		"Entries": {
+			"Kiwi": false
+			}
+	},
+	
+//Load custom boards
+	{
+		"Action": "Load",
+		"Target": "LooseSprites/RSVQuestBoard, LooseSprites/RSVNinjaBoard",
+		"FromFile": "assets/{{Target}}.png",
+	},
+	
+
+
+],
+
+//Event Repeater
+"RepeatEvents": [
+75160060,
+75160175,
+75160176
+],
+"RepeatResponse": [
+75161001,
+75161002,
+]
+}

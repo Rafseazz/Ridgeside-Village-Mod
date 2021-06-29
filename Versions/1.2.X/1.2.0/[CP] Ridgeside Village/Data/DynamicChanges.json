@@ -1,0 +1,76 @@
+{
+"Changes": [
+	
+//Schedule changes
+	{
+		"LogName": "Corine Schedule Change",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Corine",
+		"Entries": {
+			"Thu": "610 RidgesideVillage 133 86 2 corine_train/1200 RidgesideVillage 140 86 2 corine_meditate/1500 RidgesideVillage 135 87 1 corine_slash/1900 EzekielHouse 24 5 0/2200 Ridge 76 38 2",
+		},
+		"When": { "HasSeenEvent: hostPlayer": 75160125, },
+	},
+	{
+		"LogName": "Ian Schedule Change",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Ian",
+		"Entries": {
+			"Fri": "800 LogCabinHotelLobby 2 15 2/1200 ArchaeologyHouse 17 14 2/1800 RidgesideVillage 95 65 2/2200 IanHouse 17 9 0 ian_sleep",
+		},
+		"When": { "HasSeenEvent: hostPlayer": 75160149, },
+	},
+	
+//Cliff Sky
+	{
+		"Action": "EditMap",
+		"Target": "Maps/RSVCliff",
+		"FromFile": "assets/Map/RSVCliffNight.tbin",
+		"FromArea": { "X": 15, "Y": 0, "Width": 20, "Height": 20 },
+		"ToArea": { "X": 15, "Y": 0, "Width": 20, "Height": 20 },
+		"PatchMode": "ReplaceByLayer",
+		"When": { "Time": "{{Range: 1900, 2600}}" },
+		"Update": "OnLocationChange, OnTimeChange"
+	},
+	
+//Ride Sky
+	{
+		"Action": "EditMap",
+		"Target": "Maps/RSVTheRide",
+		"FromFile": "assets/Map/RSVTheRideNight.tbin",
+		"ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 20 },
+		"PatchMode": "Overlay",
+		"When": { "Time": "{{Range: 1900, 2600}}" },
+		"Update": "OnLocationChange, OnTimeChange"
+	},
+	
+//Cliff House Peek (11PM-11:30PM Thursday)
+	{
+		"Action": "EditMap",
+		"Target": "Maps/RSVCliff",
+		"FromFile": "assets/Map/CliffHousePeek.tbin",
+		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 2 },
+		"ToArea": { "X": 28, "Y": 32, "Width": 2, "Height": 2 },
+		"PatchMode": "ReplaceByLayer",
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday" },
+		"Update": "OnLocationChange, OnTimeChange"
+	},
+	{
+        "Action": "EditMap",
+        "Target": "Maps/RSVCliff",
+        "MapTiles": [
+			{
+				"Position": { "X": 28, "Y": 32 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "Message rsv.undreyapeek"
+               }
+            }
+		],
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday" },
+		"Update": "OnLocationChange, OnTimeChange"
+    },
+
+	
+]
+}

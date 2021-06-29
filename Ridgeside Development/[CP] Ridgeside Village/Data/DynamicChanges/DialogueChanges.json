@@ -1,0 +1,17 @@
+{
+"Changes": [
+
+	/*********
+	** Dialogue Changes
+	*********/
+	{
+		"LogName": "Aguar Tuesday Dialogue Change (Marlon)",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Aguar",
+		"When": { "HasSeenEvent": "100162" },		
+		"Entries": {
+			"Tue6": "{{i18n:DynamicChanges.Aguar.Dialogue.Tue6}}",
+		},
+	},
+]
+}

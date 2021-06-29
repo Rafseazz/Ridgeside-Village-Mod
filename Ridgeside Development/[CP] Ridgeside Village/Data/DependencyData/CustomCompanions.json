@@ -1,0 +1,251 @@
+{
+"Changes": [
+	// Custom Companions - Content Patcher
+	{
+		"LogName": "Ridgeside Village Custom Companions",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"MapTiles": [
+            {
+               "Position": { "X": 21, "Y": 36 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownChicken"
+               }
+            },
+            {
+               "Position": { "X": 23, "Y": 38 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownChicken"
+               }
+            },
+            {
+               "Position": { "X": 30, "Y": 38 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownChicken"
+               }
+            },
+            {
+               "Position": { "X": 37, "Y": 37 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownChicken"
+               }
+            },
+            {
+               "Position": { "X": 37, "Y": 41 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownChicken"
+               }
+            },
+            {
+               "Position": { "X": 26, "Y": 40 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteChicken"
+               }
+            },
+            {
+               "Position": { "X": 30, "Y": 36 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteChicken"
+               }
+            },
+            {
+               "Position": { "X": 39, "Y": 42 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteChicken"
+               }
+            },
+            {
+               "Position": { "X": 40, "Y": 38 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteChicken"
+               }
+            },
+            {
+               "Position": { "X": 32, "Y": 99 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownCow"
+               }
+            },
+            {
+               "Position": { "X": 37, "Y": 100 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownCow"
+               }
+            },
+            {
+               "Position": { "X": 35, "Y": 105 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownCow"
+               }
+            },
+            {
+               "Position": { "X": 43, "Y": 106 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.BrownCow"
+               }
+            },
+            {
+               "Position": { "X": 32, "Y": 103 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteCow"
+               }
+            },
+            {
+               "Position": { "X": 34, "Y": 107 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteCow"
+               }
+            },
+            {
+               "Position": { "X": 49, "Y": 106 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteCow"
+               }
+            },
+         ],
+		"When": {
+			"Weather": "Sun, Wind",
+			},
+		"Update": "OnLocationChange"
+	},
+		{
+		"LogName": "Ridgeside Village Custom Companions",
+		"Action": "EditMap",
+		"Target": "Maps/RidgesideVillage",
+		"MapTiles": [
+            {
+               "Position": { "X": 21, "Y": 36 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 23, "Y": 38 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 30, "Y": 38 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 37, "Y": 37 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 37, "Y": 41 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 26, "Y": 40 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 30, "Y": 36 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 39, "Y": 42 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 40, "Y": 38 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 32, "Y": 99 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 37, "Y": 100 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 35, "Y": 105 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 43, "Y": 106 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 32, "Y": 103 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 34, "Y": 107 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+            {
+               "Position": { "X": 49, "Y": 106 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
+         ],
+		"When": {
+			"Weather: |contains=Sun,Wind": false,
+			},
+		"Update": "OnLocationChange"
+	}
+]
+}
