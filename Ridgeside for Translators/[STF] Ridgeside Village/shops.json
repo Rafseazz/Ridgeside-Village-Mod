@@ -10,15 +10,14 @@
 	"CategoriesToSell": [ -19,-74 ],
 	"PortraitPath": "assets/JericShop.png",
 	"Quote": "Hey! How can I help you?",
-	"ClosedMessage": "Sorry, we're closed!",
 	"ShopPrice": -1,
-	"MaxNumItemsSoldInStore": 3,
+	"MaxNumItemsSoldInStore": 5,
 	"DefaultSellPriceMultiplier": 0.7,
 	"PriceMultiplierWhen": {
 		"0.6": ["f Jeric 2000"] 
 		},
 	"When": ["NPCAt Jeric 2 13/t 900 2000"],
-    "LocalizedQuote": {
+	"LocalizedQuote": {
     	//remove the "//" from your language
         //"es": "PLACEHOLDER",
         //"ko": "PLACEHOLDER",
@@ -67,7 +66,7 @@
 				],
 			"Stock": 6,
 			"StockPrice": 100,
-			"When": [ "f Jeric 1500/!z spring" ] 
+			"When": [ "f Jeric 2000/!z spring" ] 
 		},
 		//Summer
 		{
@@ -90,7 +89,7 @@
 				],
 			"Stock": 6,
 			"StockPrice": 100,
-			"When": [ "f Jeric 1500/!z summer" ] 
+			"When": [ "f Jeric 2000/!z summer" ] 
 		},
 		//Fall
 		{
@@ -113,10 +112,487 @@
 			"Stock": 6,
 			"StockPrice": 100,
 			"When": [ "!z winter" ] 
-		},		
+		},
+		//PPJA Fruit & Veg - Spring Jeric less than 8 hearts Y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Basil Seeds",
+				"Cabbage Seeds",
+				"Onion Seeds",
+				"Parsley Seeds",
+				"Spinach Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z spring" ] 
+		},
+		//PPJA Fruit & Veg - Spring Jeric 8 hearts Y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Passion Fruit Seeds",	
+				],
+			"Stock": 6,
+			"StockPrice": 100,
+			"When": [ "f Jeric 2000/!z spring" ] 
+		},
+		//PPJA Fruit & Veg - Spring Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Buckwheat Seeds",
+				"Muskmelon Seeds",
+				"Suager Beet Seeds",
+				"Sweet Canary Melon Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z spring/y 2" ] 
+		},
+		//PPJA Fruit & Veg - Spring Y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Red Onion Seeds",
+				"Rapeseed Flower Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z spring/y 3" ] 
+		},
+		//PPJA Fruit & Veg - Spring Y4
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Bamboo Cutting",
+				"Licorice Seeds",
+				"Maguey Seeds",
+				"Shallot Seeds",
+				"Shiitake Mushroom Starter",
+				],
+			"Stock": 6,
+			"When": [ "!z spring/y 4" ] 
+		},
+		//PPJA Fruit & Veg - Summer Jeric less than 8 hearts Y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Adzuki Bean Seeds",
+				"Chive Seeds",
+				"Lettuce Seeds",
+				"Navy Bean Seeds",
+				"Oregano Seeds",
+				"Perilla Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z summer" ] 
+		},
+		//PPJA Fruit & Veg - Summer Jeric 8 hearts Y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cotton Seeds",
+				"Kiwi Seeds",
+				"Wasabi Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 2000/!z summer" ] 
+		},
+		//PPJA Fruit & Veg - Summer Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cassava Seeds",
+				"Cucumber Starter",
+				"Gooseberry Seeds",
+				"Raspberry Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z summer/y 2" ] 
+		},
+		//PPJA Fruit & Veg - Summer Y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Butternut Squash Seeds",
+				"Okra Seeds",
+				"Rapeseed Seeds",
+				"Zucchini Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z summer/y 3" ] 
+		},
+		//PPJA Fruit & Veg - Summer Y4
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Asparagus Seeds",
+				"Bamboo Cutting",
+				"Chickpea Seeds",
+				"Green Pea Seeds",
+				"Maguey Seeds",
+				"Quinoa Seeds",
+				"Sulfur Shelf Mushroom Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z summer/y 4" ] 
+		},
+		//PPJA Fruit & Veg - Fall Jeric less than 8 hearts y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cabbage Seeds",
+				"Carrot Seeds",
+				"Rosemary Seeds",
+				"Sage Seeds",
+				"Spinach Seeds",
+				"Sweet Potato Seeds",
+				"Thyme Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z fall" ] 
+		},
+		//PPJA Fruit & Veg - Fall Jeric 8 hearts y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Bell Pepper Seeds",
+				"Cotton Seeds",
+				"Kiwi Seeds",
+				"Watermelon Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 2000/!z fall" ] 
+		},
+		//PPJA Fruit & Veg - Fall Jeric less than 8 hearts y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Blackberry Seeds",
+				"Broccoli Seeds",
+				"Celery Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z fall/y 2" ] 
+		},
+		//PPJA Fruit & Veg - Fall Jeric 8 hearts y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Barley Seeds",
+				"Fennel Seeds",
+				"Peanut Seeds",
+				"Soybean Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 2000/!z fall/y 2" ] 
+		},
+		//PPJA Fruit & Veg - Fall y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Habanero Seeds",
+				"Jalapeno Seeds",
+				"Oat Seeds",
+				"Okra Seeds",
+				"Tabasco Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z fall/y 3" ] 
+		},
+		//PPJA Fruit & Veg - Fall y4
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Durum Seeds",
+				"Kidney Bean Starter",
+				"Shiitake Mushroom Starter",
+				"Sulfur Shelf Mushroom Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z fall/y 4" ] 
+		},
+		//PPJA Fruit & Veg - Winter Y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Juniper Berry Seeds",
+				"Mint Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z winter" ] 
+		},
+		//PPJA Fruit & Veg - Winter Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Elderberry Seeds",
+				],
+			"Stock": 6,
+			"When": [ "!z winter/y 2" ] 
+		},
+		//Grapes of Ferngill - All year 
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Dried Crackle Berry Grapes",
+				"Crackle Berry Grape Sparkling Wine",
+				"Crackle Berry Grape Vinegar",
+				"Crackle Berry Grape Wine",
+				],
+			"Stock": 6,
+		},
+		//Grapes of Ferngill - Summer
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Crackle Berry Grape Grappa",
+				],
+			"Stock": 6,
+			"When": [ "!z summer" ] 
+		},
+		//Grapes of Ferngill - Winter
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Crackle Berry Grape",
+				"Crackle Berry Grape Fortified Wine",
+				"Crackle Berry Grape Sweet Wine",
+				],
+			"Stock": 6,
+			"When": [ "!z winter" ] 
+		},
+		//PPJA More Trees - Spring Y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Fragrant Wisteria Sapling",
+				"Lemon Sapling",
+				"Lime Sapling",
+				"Melaleuca Sapling",
+				"Vanilla Sapling",
+				],
+			"Stock": 6,
+			"When": [ "!z spring" ] 
+		},
+		//PPJA More Trees - Spring Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cocoa Sapling",
+				],
+			"Stock": 6,
+			"When": [ "!z spring/y 2" ] 
+		},
+		//PPJA More Trees - Summer
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Ume Sapling",
+				],
+			"Stock": 6,
+			"When": [ "!z summer" ] 
+		},
+		//PPJA More Trees - Summer Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Avocado Sapling",
+				],
+			"Stock": 6,
+			"When": [ "!z summer/y 2" ] 
+		},
+		//PPJA More Trees - fall Y1
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Almond Sapling",
+				"Asian Pear Sapling",
+				"Cashew Sapling",
+				"Granny Smith Sapling",
+				"Walnut Sapling",
+				],
+			"Stock": 2,
+			"When": [ "!z fall" ] 
+		},
+		//PPJA More Trees - fall Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Grapefruit Sapling",
+				"Olive Sapling",
+				],
+			"Stock": 2,
+			"When": [ "!z fall/y 2" ] 
+		},
+		//PPJA More Trees - fall Y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Pecan Sapling",
+				],
+			"Stock": 2,
+			"When": [ "!z fall/y 3" ] 
+		},
+		//PPJA More Trees - Winter
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Persimmon Sapling",
+				"Yuzu Sapling",
+				],
+			"Stock": 2,
+			"When": [ "!z winter" ] 
+		},
+		//PPJA More Trees - Winter Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cinnamonn Sapling",
+				"Fig Sapling",
+				"Pear Sapling",
+				"Pomelo Sapling",
+				],
+			"Stock": 2,
+			"When": [ "!z winter/Y2" ] 
+		},
+		//PPJA More Trees - Winter Y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Camphor Sapling",
+				],
+			"Stock": 2,
+			"When": [ "!z winter/Y3" ] 
+		},
+		//Bonsters Crops - Spring Jeric 4 hearts Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Chayote Seeds",
+				"Cloudberry Seeds",
+				"Lingonberry Seeds",
+				"White Apline Strawberry Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 1000/!z spring/y 2" ] 
+		},
+		//Bonsters Crops - Spring Jeric 8 hearts Y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cranberry Seeds",
+				"Red Currant Seeds",
+				"Rose Hip Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 2000/z spring/y 3" ] 
+		},
+		//Bonsters Crops - Summer Jeric 4 hearts Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Benne Sesame Seeds",
+				"BLue Corn Seeds",
+				"Cardamom Seeds",
+				"Chayote Seeds",
+				"Cowpeas Seeds",
+				"Peppercorn Seeds",
+				"Prickly Pear Seeds",
+				"Scotch Bonnet Seeds",
+				"Summer Squash Seeds",
+				"Sunchoke Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 1000/!z summer/y 2" ] 
+		},
+		//Bonsters Crops - Summer Jeric 8 hearts Y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Blackcurrant Seeds",
+				"Maypop Passion Fruit Seeds",
+				"Rose Hip Seeds",
+				"Roselle Hibiscus Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 2000/!z summer/y 3" ] 
+		},
+		//Bonsters Crops - Fall Jeric 4 hearts Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Black Bean Seeds",
+				"Blue Corn Seeds",
+				"Candy Rooster Squash Seeds",
+				"Cowpeas Seeds",
+				"Green Chile Seeds",
+				"Oats Seeds",
+				"Peppercorn Seeds",
+				"Salsify Seeds",
+				"Sunchoke Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 1000/!z fall/y 2" ] 
+		},
+		//Bonsters Crops - Fall Jeric 8 hearts Y3
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"White Currant Seeds",
+				],
+			"Stock": 6,
+			"When": [ "f Jeric 2000/!z fall/y 3" ] 
+		},
+		//Bonsters Trees - Spring Jeric 4 hearts Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Jujube Sapling",
+				"Mamey Sapote Sapling",
+				"Mangosteen Sapling",
+				"Mayhaw Sapling",
+				"Pandan Sapling",
+				"Tamarind Sapling",
+				],
+			"Stock": 2,
+			"When": [ "f Jeric 1000//!z spring/y 2" ] 
+		},
+		//Bonsters Trees - Summer Jeric 4 hearts Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cherimoya Sapling",
+				"Date Sapling Sapling",
+				"Plantain Sapling",
+				"Purple Pluot Sapling",
+				],
+			"Stock": 2,
+			"When": [ "f Jeric 1000//!z summer/y 2" ] 
+		},
+		//Bonsters Trees - Fall Jeric 4 hearts Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Blood Orange Sapling",
+				"Chestnut Sapling",
+				"Clove Sapling",
+				"Jackfruit Sapling",
+				"Pawpaw Sapling",
+				],
+			"Stock": 2,
+			"When": [ "f Jeric 1000//!z fall/y 2" ] 
+		},
+		//Bonsters Trees - Winter Jeric 4 hearts Y2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Stone Pine Sapling",
+				"Quince Sapling",
+				],
+			"Stock": 2,
+			"When": [ "f Jeric 1000//!z winter/y 2" ] 
+		},
 	],
 	},
-	
 	//------------
 	//PikaShop    
 	//------------

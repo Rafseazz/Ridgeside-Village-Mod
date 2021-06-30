@@ -1,5 +1,5 @@
 {
-	"Name": "Ridgeside Village [EN] <-- Put your language here in 2 letters (like EN)",
+	"Name": "Ridgeside Village",
 	"Author": "Rafseazz",
 	"Version": "1.2.8",
 	"Description": "Adds Ridgeside Village to the game. A Stardew Valley Expansion mod.",
@@ -15,6 +15,10 @@
 		"IsRequired": true,
 	   },
 	   {
+		"UniqueID": "Esca.FarmTypeManager",
+		"IsRequired": true,
+	   },	   
+	   {
 		"UniqueID": "spacechase0.CustomNPCFixes",
 		"IsRequired": true,
 	   },
@@ -23,13 +27,25 @@
         "IsRequired": true,
 	   },
 	   {
-		"UniqueID": "MoreFish",
-		"IsRequired": false,
+        "UniqueID": "PurrplingCat.QuestFramework",
+        "IsRequired": true,
 	   },
 	   {
-		"UniqueID": "FlashShifter.StardewValleyExpandedCP",
-		"IsRequired": false,
-	   },
+        "UniqueID": "PurrplingCat.CustomGiftDialogue",
+        "IsRequired": false,
+	   },	   	  	   	   
+	   {
+        "UniqueID": "Platonymous.TMXLoader",
+        "IsRequired": true,
+	   },	 
+	   {
+        "UniqueID": "Platonymous.CustomMusic",
+        "IsRequired": true,
+	   },	 	   	   
+	   {
+        "UniqueID": "Platonymous.Toolkit",
+        "IsRequired": true,
+	   },	 	   	   	   
 	   {
 		"UniqueID": "misscoriel.eventrepeater",
 		"IsRequired": true,
@@ -39,12 +55,48 @@
 		"IsRequired": true,
 	   },
 	   {
+        "UniqueID": "PeacefulEnd.CustomCompanions",
+        "IsRequired": true,
+       },  
+	   {
+		"UniqueID": "MoreFish",
+		"IsRequired": false,
+	   },
+	   {
+		"UniqueID": "FlashShifter.StardewValleyExpandedCP",
+		"IsRequired": false,
+	   },
+	   {
 		"UniqueID": "flashshifter.immersivefarm2remastered",
 		"IsRequired": false,
 	   },
        {
+        "UniqueID": "flashshifter.GrandpasFarm",
+        "IsRequired": false,
+       }, 	   
+       {
         "UniqueID": "Bouhm.NPCMapLocations",
-        "IsRequired": false
-       }	   
+        "IsRequired": false,
+       },	   
+       {
+        "UniqueID": "Lemurkat.JacobEloise.CP",
+        "IsRequired": false,
+       },	
+       {
+        "UniqueID": "Karmylla.ImmersiveMaps",
+        "IsRequired": false,
+       },	              
+       {
+        "UniqueID": "EduAnttunes.TownSchool.CP",
+        "IsRequired": false,
+       },    
+       {
+        "UniqueID": "grapeponta.VibrantPastoralRecolor",
+        "IsRequired": false,
+       },   
+       {
+        "UniqueID": "grapeponta.VibrantPastoralSVE",
+        "IsRequired": false,
+       }, 
    ]
 }

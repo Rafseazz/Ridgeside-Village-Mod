@@ -2,7 +2,7 @@
   "Format": "1.0",
 
 //---------
-//QUESTS   
+//QUESTS   quests_accept <QuestName>@Rafseazz.RSVQF quests_complete lenny_minecart3@Rafseazz.RSVQF
 //---------
 
   "Quests": [
@@ -66,7 +66,7 @@
 	"RewardType": "Money",
 	"RewardDescription": "200g",	
     "Cancelable": true, 
-    "Trigger": "Yuuma 530 Custom_Ridgeside_RidgesideVillage 19 21", 
+    "Trigger": "Yuuma {{ja: Yuuma's Ring}} Custom_Ridgeside_RidgesideVillage 19 21", 
     "ReactionText": "You found it!? Thank you so much, @! I'm really grateful!$h"
     },
 	
@@ -75,7 +75,7 @@
     "Name": "olga_tuna", 
     "Type": "ItemDelivery", 
     "Title": "Tuna Craving",
-    "Description": "The Liden's are craving Tuna. They have asked you to deliver one to them. Take the Tuna to Olga.",
+    "Description": "The Lidens are craving Tuna. They have asked you to deliver one to them. Take the Tuna to Olga.",
     "Objective": "Deliver 1 Tuna to Olga",
     "DaysLeft": 0, 
     "Reward": 400,
@@ -114,7 +114,7 @@
 	"RewardType": "Money",
 	"RewardDescription": "500g",	
     "Cancelable": true, 
-    "Trigger": "Freddie 109 Custom_Ridgeside_RidgesideVillage 65 108", 
+    "Trigger": "Freddie {{ja: Freddie's Sword}} Custom_Ridgeside_RidgesideVillage 65 108", 
     "ReactionText": "There you are, old friend. Thank you, @!$h"
     },
 	
@@ -146,7 +146,7 @@
 	"RewardType": "Money",
 	"RewardDescription": "300g",	
     "Cancelable": true, 
-    "Trigger": "Richard 170 Custom_Ridgeside_LogCabinHotel2ndFloor 1 24", 
+    "Trigger": "Richard {{ja: Richard's Glasses}} Custom_Ridgeside_LogCabinHotel2ndFloor 1 24", 
     "ReactionText": "You found them? Ah! I am eternally grateful, @!$h"
     },
 	
@@ -186,7 +186,7 @@
 	"Type": "ItemDelivery",
 	"Title": "Orange Man Bert",
 	"Description": "I want to start an Orange Juice business! I need someone to supply me with some oranges... At least 3 of 'em!\n        -Bert.\n\n- 900g on Delivery\n- Bert will be thankful",
-	"Objective": "Deliver 5 oranges to Bert",
+	"Objective": "Deliver 3 oranges to Bert",
 	"DaysLeft": 0,
 	"Reward": 900,
 	"RewardType": "Money",
@@ -275,7 +275,7 @@
 	"Description": "I saw this intriguing recipe for an eggplant salad and it requires an eggplant. Bring me an eggplant. I'll pay! .\n        -Lenny.\n\n- 200g on Delivery\n- Lenny will be thankful",
 	"Objective": "Deliver an Eggplant to Lenny",
 	"DaysLeft": 0,
-	"Reward": 500,
+	"Reward": 200,
 	"RewardType": "Money",
 	"RewardDescription": "200g",
 	"Cancelable": true,
@@ -473,7 +473,7 @@
 	"RewardType": "Object",
 	"RewardDescription": "A rare colorful stone",
 	"Cancelable": false,
-	"Trigger": "MysticFalls1",
+	"Trigger": "Custom_Ridgeside_MysticFalls1",
 	},
 	{
 	"Name": "mysticfalls_2",
@@ -486,7 +486,7 @@
 	"RewardType": "Money",
 	"RewardDescription": "Affection from the bachelors and bachelorettes of the valley",
 	"Cancelable": false,
-	"Trigger": "MysticFalls2",
+	"Trigger": "Custom_Ridgeside_MysticFalls2",
 	"FriendshipGain": { 
 		"Alissa": 250,
 		"Corine": 250,
@@ -523,10 +523,10 @@
 	"RewardType": "Weapon",
 	"RewardDescription": "Obsidian Edge",
 	"Cancelable": false,
-	"Trigger": "MysticFalls3",
+	"Trigger": "Custom_Ridgeside_MysticFalls3",
 	},
 	
-	//Minecarft Restoration
+/*	//Minecarft Restoration
 	  //Wood x 200
 	{
     "Name": "lenny_minecart1", 
@@ -567,7 +567,7 @@
 	"ConversationTopic": {
 		"AddWhenQuestCompleted": "RSV_startminecartfix 10"
 		}
-    },
+    },*/
   ],
 
  
@@ -576,15 +576,7 @@
 //---------
   
   "Offers": [
-	{
-      "QuestName": "bert_honey",
-      "OfferedBy": "Bulletinboard",
-      "When": {
-        "Days": "21",
-        "Seasons": "spring",
-		"QuestNeverCompleted": "yes"
-      }
-    },
+
 	
 	{
       "QuestName": "trinnie_sunflower",
@@ -596,7 +588,8 @@
       "When": {
         "Seasons": "fall",
         "Days": "5",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 	
@@ -610,7 +603,8 @@
       "When": {
         "Days": "10",
         "Seasons": "summer fall winter",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 	
@@ -623,7 +617,8 @@
       },
       "When": {
         "FriendshipLevel": "Yuuma 2",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 	
@@ -636,7 +631,8 @@
       },
       "When": {
         "FriendshipLevel": "Olga 4",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 		
@@ -645,11 +641,12 @@
       "OfferedBy": "Mail",
       "OfferDetails": {
         "Topic": "Aguar asks for essence",
-        "Text": "@, ^I require your assistance in collecting some void essence for my next research project. I don't want to blow my cover so I need to rely on you. I await your delivery. Of course there will be a monetary benefit.^^- Mr. Aguar, RSV WRF"
+        "Text": "@, ^I require your assistance in collecting some void essence for my next research project. I don't want to blow my cover so I need to rely on you. I await your delivery. Of course there will be a monetary benefit.^^- Mr. Aguar, Ridgeside Water Research Facility"
       },
       "When": {
         "FriendshipLevel": "Aguar 4",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 	
@@ -662,7 +659,8 @@
       },
       "When": {
         "FriendshipLevel": "Freddie 4",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 	
@@ -675,7 +673,8 @@
       },
       "When": {
         "FriendshipLevel": "Pika 6",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 	
@@ -688,11 +687,22 @@
       },
       "When": {
         "FriendshipLevel": "Richard 6",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
     },
 	
 //RSVBoard Offers
+	{
+      "QuestName": "bert_honey",
+      "OfferedBy": "Board:RSVQuestBoard",
+      "When": {
+        "Days": "21",
+        "Seasons": "spring",
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
+      }
+    },
 	{
 	"QuestName": "aguar_gem",
 	"OfferedBy": "Board:RSVQuestBoard",
@@ -867,25 +877,28 @@
 	"QuestName": "mysticfalls_1",
 	"OfferedBy": "Board:RSVNinjaBoard",
 	"When": {
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
 		}
 	},
 	{
 	"QuestName": "mysticfalls_2",
 	"OfferedBy": "Board:RSVNinjaBoard",
 	"When": {
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
 		}
 	},
 	{
 	"QuestName": "mysticfalls_3",
 	"OfferedBy": "Board:RSVNinjaBoard",
 	"When": {
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
 		}
 	},
 	
-//Unlock Minecarft Offer
+/*//Unlock Minecarft Offer
 	{
       "QuestName": "lenny_minecart1",
       "OfferedBy": "Mail",
@@ -895,10 +908,10 @@
       },
       "When": {
         "EventSeen": "75160189",
-		"QuestNeverCompleted": "yes"
+		"QuestNeverCompleted": "yes",
+		"QuestNeverAccepted": "yes"
       }
-    },
-	
+    },*/
   ],
   
   
@@ -925,8 +938,14 @@
 	"IndicatorOffset": "0,-1",
 	"UnlockWhen": {
 		"EventSeen": "75160187",
-		}
-	}
-]
-
+		},
+	},
+    {
+    "BoardName": "RSVSpecialOrders", // This is custom special order board
+    "BoardType": "SpecialOrders",
+    "Location": "Custom_Ridgeside_RidgesideVillage",
+    "Tile": "118,40",
+    "IndicatorOffset": "11,-19",
+    },
+  ],
 }
