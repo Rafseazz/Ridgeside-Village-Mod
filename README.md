@@ -10,8 +10,11 @@ Meet new interesting people with immersive backstories, engaging dialogue and ex
 ## Learn more about Ridgeside on the Ridgeside Wiki!
 [Ridgeside Wiki!](https://ridgeside.fandom.com/wiki/Ridgeside_Village_Wiki)
 
-## Support Ridgeside Village!
-(Thank you so much!)
+## Support me!
+[Ko-Fi](https://ko-fi.com/rafseazz)
+
+## Support Ridgeside Village Team!
+(They help me with the mod)
 
 [Ko-Fi](https://ko-fi.com/ridgesidevillage) - [Patreon](https://www.patreon.com/RidgesideVillage)
 
