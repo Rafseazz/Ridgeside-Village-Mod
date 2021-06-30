@@ -1,159 +1,6 @@
 {
 	"Format": "1.22.0",
 
-/*********
-** Ridgeside Village
-*********/
-	/*********
-	** Content.Json- Contains everything you can't use an Include for.
-	*********/
-		/*********
-		** ConfigSchema - Contains the config options for Ridgeside.
-		*********/
-		/*********
-		** DynamicTokens - Contains tokens you can call upon via CP code.
-		*********/
-		/*********
-		** CustomLocations - Loads all the custom maps  (excluding patches).
-		*********/
-		/*********
-		** Changes - All the Includes are here.
-		*********/						
-		/*********
-		** Event Repeater - Handles the repeating events. (Cable Car Cutscene).
-		*********/
-
-	/*********
-	** Includes
-	*********/
-		/*********
-		** Festivals - Ridge's custom festivals are added here and the festival locations.
-		*********/
-		/*********
-		** Special Orders - All the special orders are handled here temporarily until I create a custom json for them.
-		*********/
-		/*********
-		** Animations
-		*********/
-		/*********
-		** ConfigChanges
-		*********/					
-		/*********
-		** ConversationTopics
-		*********/
-		/*********
-		** DynamicChanges
-		*********/	
-		/*********
-		** EventData
-		*********/
-		/*********
-		** EventDialogues
-		*********/	
-		/*********
-		** FestivalDialogue
-		*********/
-		/*********
-		** FishData
-		*********/	
-		/*********
-		** IntermodPatches
-		*********/
-		/*********
-		** LoadDialogue
-		*********/
-		/*********
-		** LoadFestival
-		*********/	
-		/*********
-		** Mail
-		*********/
-		/*********
-		** MapPatches
-		*********/	
-		/*********
-		** MapStrings
-		*********/
-		/*********
-		** MonsterData
-		*********/
-		/*********
-		** MovieData
-		*********/
-		/*********
-		** Music
-		*********/
-		/*********
-		** NPCData
-		*********/
-		/*********
-		** QuestEvents
-		*********/
-		/*********
-		** Romance
-		*********/
-		/*********
-		** Warps
-		*********/
-		/*********
-		** WorldMap
-		*********/
-
-	/*********
-	** Assets
-	*********/
-		/*********
-		** BeachCharacters
-		*********/
-		/*********
-		** BeachPortraits
-		*********/
-		/*********
-		** Characters
-		*********/
-		/*********
-		** ConfigOptions
-		*********/
-		/*********
-		** Dialogue
-		*********/
-		/*********
-		** EventFiles
-		*********/	
-		/*********
-		** LooseSprites
-		*********/
-		/*********
-		** MapPatches
-		*********/
-		/*********
-		** Maps
-		*********/
-			/*********
-			** EventMaps
-			*********/
-			/*********
-			** FestivalMaps
-			*********/
-			/*********
-			** InterModMaps
-			*********/
-			/*********
-			** QuestMaps
-			*********/
-		/*********
-		** MarriageDialogue
-		*********/	
-		/*********
-		** Portraits
-		*********/
-		/*********
-		** Schedule
-		*********/
-		/*********
-		** Undreya
-		*********/
-
 	/*********
 	** Configuration
 	*********/
@@ -409,16 +256,6 @@
 			"Value": "{{Random: {{PossibleCableCarNPCs}} }}"
 		},
 
-
-		/*********
-		** Spouse check?
-		*********/		
-		//{
-		//	"Name": "SPOUSECHECK",
-		//	"Value": "Alex, Elliot, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Alissa, Corine, Flor, Maddie, Ysabelle, Ian, Jeric, Kenneth, Philip, Shiro",
-		//},
-		
-
 		/*********
 		** Ember of resolutions tokens
 		*********/
@@ -427,18 +264,7 @@
 			"Name": "BONFIREEVENT",
 			"Value": "/warp farmer 40 49/faceDirection farmer 0/fade/viewport 39 46/pause 2000/move farmer 0 -5 0/pause 1000/playSound backpackIN/addObject 40 42 294/pause 2000/message \"{{i18n:EoR.19}}\"/pause 3000/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/warp farmer 40 48/faceDirection farmer 0/",
 		},
-
-		//With Spouse
-		//{
-		//	"Name": "BONFIREEVENT",
-		//	"Value": "/warp farmer 40 49/warp {{spouse}} 39 49/faceDirection farmer 0/faceDirection {{spouse}} 0/fade/viewport 39 46/pause 2000/move {{spouse}} 0 -5 2/move farmer 0 -5 3/faceDirection {{spouse}} 1/pause 1000/faceDirection farmer 0/faceDirection {{spouse}} 0/pause 1000/playSound backpackIN/addObject 39 42 294/pause 1000/playSound backpackIN/addObject 40 42 294/pause 1000/message \"..And my new year resolutions are..\"/pause 3000/faceDirection {{spouse}} 1/pause 2000/faceDirection farmer 3/speak {{spouse}} \"I'm looking forward for another year with you..$l\"/emote {{spouse}} 20/emote farmer 20/pause 3000/globalFade/viewport -1000 -1000/warp farmer 40 48/faceDirection farmer 0/warp {{spouse}} 39 48/faceDirection {{spouse}} 0/",
-		//	"When": {
-		//		"HasValue:{{spouse}}": true,
-		//		"Spouse": "Alex, Elliot, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Alissa, Corine, Flor, Maddie, Ysabelle, Ian, Jeric, Kenneth, Philip, Shiro"
-		//	}
-		//},
 		
-
 		/*********
 		** Ridgeside gathering tokens
 		*********/
@@ -862,10 +688,95 @@
 	/*********
 	** Include Data
 	*********/
+
+	//Include Depenency Data
+	/*
+		Loads cp code for Custom Companions, Farm Type Manager, NPCMapLocations, Questframework, AntisocialNPCs, and Custom NPC Exclusions.
+	*/
 	{
 		"Action": "Include",
-		"FromFile": "Data/IncludeData/IncludeDependencyData.json, Data/IncludeData/IncludeDynamicChanges.json, Data/IncludeData/IncludeEvents.json, Data/IncludeData/IncludeFestival.json, Data/IncludeData/IncludeInterModCompat.json, Data/IncludeData/IncludeMapData.json, Data/IncludeData/IncludeNPCData.json, Data/IncludeData/IncludeTilesheets.json"
+		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/NPCMapLocations.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
 	},
+
+	//Include Event Data
+	/*
+		Loads event fork dialogies, blank files, special characters, and event scripts for versions up to 1.2.8.
+	*/
+	{
+		"LogName": "Include all the Events",
+		"Action": "Include",
+		"FromFile": "Data/Events/EventDialogue.json, Data/Events/EventExtras.json, Data/Events/Events.json",
+	},
+
+	//Include Festival Data
+	/*
+		Loads json file that adds RSV festivals, their main events and edits, festival locations and festival dialogue.
+	*/
+	{
+		"LogName": "Include all the Events",
+		"Action": "Include",
+		"FromFile": "Data/Festivals/FestivalData.json",
+	},
+
+	//Include Fish Data
+	/*
+		Loads fish data including spawn locations, fishpond, and aquarium data.
+	*/
+	{
+		"LogName": "Include Fish Data",
+		"Action": "Include",
+		"FromFile": "Data/Fish/Aquarium, Data/Fish/FishData, Data/Fish/FishPond"
+	},
+
+	//Include Dynamic Changes
+	/*
+		Loads json files that dynamically change the mod/game as the player meets certain requirements.
+	*/
+	{
+		"LogName": "Include Dynamic Changes",
+		"Action": "Include",
+		"FromFile": "Data/DynamicChanges/DialogueChanges.json, Data/DynamicChanges/DispositionChanges.json, Data/DynamicChanges/MapChanges.json, Data/DynamicChanges/MapStringChanges.json, Data/DynamicChanges/MusicChanges.json, Data/DynamicChanges/PortraitChanges.json, Data/DynamicChanges/ScheduleChanges.json, Data/DynamicChanges/SpriteChanges.json"
+	},
+
+	//Include Intermod Compatibility Files
+	/*
+		Loads files that ensure/apply compatibilities with other mods.
+	*/
+	{
+		"LogName": "Include all InterModCompat files",		
+		"Action": "Include",
+		"FromFile": "Data/InterModCompat/CustomGiftDialogue.json, Data/InterModCompat/DaisyNikoEarthyRecolor.json, Data/InterModCompat/EastScarpe.json, Data/InterModCompat/KarmyllasImmersiveMaps.json, Data/InterModCompat/StardewValleyExpanded.json, Data/InterModCompat/TownSchool.json, Data/InterModCompat/VibrantPastoralRecolor.json",
+	},
+
+	//Includes Map Data
+	/*
+		Loads files for loading maps, map music, map patches, strings, and warps.
+	*/
+	{
+		"LogName": "Include all the Map Data",		
+		"Action": "Include",
+		"FromFile": "Data/MapData/MapMusic.json, Data/MapData/MapPatches.json, Data/MapData/MapStrings.json, Data/MapData/MapWarps.json",
+	},
+
+	//Includes NPC Data
+	/*
+		Includes all data that concerns the NPCs, that includes: Animations, Conversation Topics, Dialogue, Dispositions, GiftTastes, Mail, Movie Data, Portraits, Romance, Schedules, and Sprites
+	*/
+	{
+		"LogName": "Include all the NPCData",
+   		"Action": "Include",
+   		"FromFile": "Data/NPCData/Animations.json, Data/NPCData/ConversationTopics.json, Data/NPCData/Dialogue.json, Data/NPCData/Dispositions.json, Data/NPCData/GiftTasteData.json, Data/NPCData/Mail.json, Data/NPCData/MovieData.json, Data/NPCData/Portraits.json, Data/NPCData/Romance.json, Data/NPCData/Schedules.json, Data/NPCData/Sprites.json",
+  	},  
+
+  	//Includes Tilesheets
+	/*
+		Loads tilesheets
+	*/
+  	{
+  		"LogName": "Include Tilesheets",		
+		"Action": "Include",
+		"FromFile": "Data/Tilesheets.json",
+  	}
 
 ],
 
