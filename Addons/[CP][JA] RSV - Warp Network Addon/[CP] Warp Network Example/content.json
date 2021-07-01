@@ -1,0 +1,34 @@
+{
+	"Format": "1.21.0",
+	"Changes": [
+		{
+			"LogName": "Register location with warp network",
+			"Action": "EditData",
+			"Target": "Data/WarpNetwork/Destinations",
+			"Entries": {
+				"RidgesideVillage": {
+					"location": "Custom_Ridgeside_RidgesideVillage",
+					"x": 114,
+					"y": 41,
+					"enabled": true,
+					"label": "Ridgeside Village Plaza"
+				}
+			}
+		},
+		{
+			"LogName": "Register warp item",
+			"Action": "EditData",
+			"Target": "Data/WarpNetwork/WarpItems",
+			"Entries": {
+				"{{spacechase0.JsonAssets/ObjectId:Ridgeside Warp Totem}}": {
+					"Destination": "RidgesideVillage",
+					"IgnoreDisabled": true,
+					"Color": "#b602e2"
+				}
+			},
+			"When":{
+				"HasMod":"spacechase0.JsonAssets"
+			}
+		}
+	]
+}
