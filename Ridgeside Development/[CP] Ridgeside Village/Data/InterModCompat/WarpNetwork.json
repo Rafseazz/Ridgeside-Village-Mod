@@ -1,0 +1,41 @@
+{
+	"Changes": [
+		{
+			"LogName": "Register location with warp network",
+			"Action": "EditData",
+			"Target": "Data/WarpNetwork/Destinations",
+			"Entries": {
+				"Ridge": {
+					"location": "Custom_Ridgeside_Ridge",
+					"x": 16,
+					"y": 16,
+					"enabled": true,
+					"label": "Ridge"
+				}
+			},
+			"When":{
+				"HasMod":"tlitookilakin.warpnetwork"
+			}
+		},
+        {
+            "LogName": "Add warp",
+            "Action": "EditMap",
+            "Target": "Maps/Custom_Ridgeside_Ridge",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 16,
+                        "Y": 15
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "WarpNetwork"
+                    }
+                }
+            ],
+            "When":{
+				"HasMod":"tlitookilakin.warpnetwork"
+			}
+        }
+	]
+}
