@@ -227,7 +227,7 @@
          "FromFile": "Assets/Maps/EventMaps/UnlockGH1.tmx",
          "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 10 },
          "ToArea": { "X": 50, "Y": 57, "Width": 7, "Height": 10 },
-         "PatchMode": "Replace",
+         "PatchMode": "Overlay",
          "When": {
 			 "HasFlag": "GH1letter",
 		}         
@@ -238,7 +238,7 @@
          "FromFile": "Assets/Maps/EventMaps/UnlockGH2.tmx",
          "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 10 },
          "ToArea": { "X": 35, "Y": 14, "Width": 7, "Height": 10 },
-         "PatchMode": "Replace",
+         "PatchMode": "Overlay",
     	 "When": {
              "Year": "3",
              "Time": "{{Range: 2000, 2600}}",
