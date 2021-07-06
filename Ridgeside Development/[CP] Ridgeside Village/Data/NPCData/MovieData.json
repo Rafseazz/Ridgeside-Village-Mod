@@ -5,8 +5,8 @@
 //------------------------
 //ConcessionTastes        
 //------------------------
-
-	//Aavailable General Tags:  Sweet, Sour, Salty, Fatty, Joja, Healthy, Gourmet, Hot, Candy
+	
+	//Available General Tags:  Sweet, Sour, Salty, Fatty, Joja, Healthy, Gourmet, Hot, Candy
 	{	
 	"Action": "EditData",
 	"Target": "Data/ConcessionTastes",
@@ -893,17 +893,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Aguar.SpringMovie1.Like.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Corine.SpringMovie1.Like.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Aguar.SpringMovie1.Like.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Corine.SpringMovie1.Like.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Aguar.SpringMovie1.Like.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Corine.SpringMovie1.Like.AfterMovie}}"
                 }
               },
               "ID": "reaction_4"
@@ -1733,17 +1733,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Keahi.FallMovie1.Dislike.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Ian.FallMovie1.Dislike.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Keahi.FallMovie1.Dislike.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Ian.FallMovie1.Dislike.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Keahi.FallMovie1.Dislike.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Ian.FallMovie1.Dislike.AfterMovie}}"
                 }
               },
               "ID": "reaction_6"
@@ -1974,7 +1974,7 @@
         },
 		
 		"Jio": {
-			"Jio": "Jio",
+			"NPCName": "Jio",
 			"Reactions": [
 			{
 				"Tag": "*", 
@@ -1984,17 +1984,17 @@
 				"BeforeMovie": {
 					"ResponsePoint": null,
 					"Script": "",
-					"Text": "Hm. A movie, huh?"
+					"MovieData.Jio.*.Like.BeforeMovie}}"
 				},
 				"DuringMovie": {
 					"ResponsePoint": null,
 					"Script": "",
-					"Text": "Shh. I'm trying to watch here.$a"
+					"MovieData.Jio.*.Like.DuringMovie}}"
 				},
 				"AfterMovie": {
 					"ResponsePoint": null,
 					"Script": "",
-					"Text": "That was an interesting experience. I'm grateful @."
+					"MovieData.Jio.*.Like.AfterMovie}}"
 				}
 				},
 				"ID": "reaction_0"
@@ -2201,7 +2201,7 @@
         },
 		
 		"Kenneth": {
-			"Kenneth": "Kenneth",
+			"NPCName": "Kenneth",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -2399,7 +2399,7 @@
         },
 		
 		"Kiwi": {
-			"Kiwi": "Kiwi",
+			"NPCName": "Kiwi",
 			"Reactions": [
 			{
 				"Tag": "*", 
@@ -2409,17 +2409,17 @@
 				"BeforeMovie": {
 					"ResponsePoint": null,
 					"Script": "",
-					"Text": "Kiwi like movie. But Jio never take!$s"
+					"Text": "{{i18n:MovieData.Kiwi.*.Love.BeforeMovie}}"
 				},
 				"DuringMovie": {
 					"ResponsePoint": null,
 					"Script": "",
-					"Text": "THIS KIWI FAVORITE PART!$h"
+					"Text": "{{i18n:MovieData.Kiwi.*.Love.DuringMovie}}"
 				},
 				"AfterMovie": {
 					"ResponsePoint": null,
 					"Script": "",
-					"Text": "Kiwi like friend @! Kiwi want to watch more!$h"
+					"Text": "{{i18n:MovieData.Kiwi.*.Love.AfterMovie}}"
 				}
 				},
 				"ID": "reaction_0"
@@ -2428,7 +2428,7 @@
 		},
 		
 		"Lenny": {
-			"Lenny": "Lenny",
+			"NPCName": "Lenny",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -2626,7 +2626,7 @@
         },
 		
 		"Lola": {
-			"Lola": "Lola",
+			"NPCName": "Lola",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -2733,17 +2733,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Maddie.SpringMovie1.Like.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Lola.SpringMovie1.Love.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Maddie.SpringMovie1.Like.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Lola.SpringMovie1.Love.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Maddie.SpringMovie1.Like.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Lola.SpringMovie1.Love.AfterMovie}}"
                 }
               },
               "ID": "reaction_4"
@@ -2824,7 +2824,7 @@
         },
 		
 		"Maddie": {
-			"Maddie": "Maddie",
+			"NPCName": "Maddie",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -3022,7 +3022,7 @@
         },
 		
 		"Olga": {
-			"Olga": "Olga",
+			"NPCName": "Olga",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -3105,17 +3105,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Aguar.WinterMovie0.Love.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Olga.WinterMovie0.Love.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Aguar.WinterMovie0.Love.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Olga.WinterMovie0.Love.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Aguar.WinterMovie0.Love.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Olga.WinterMovie0.Love.AfterMovie}}"
                 }
               },
               "ID": "reaction_3"
@@ -3220,7 +3220,7 @@
         },
 		
 		"Philip": {
-			"Philip": "Philip",
+			"NPCName": "Philip",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -3231,17 +3231,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SpringMovie0.Love.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SpringMovie0.Love.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SpringMovie0.Love.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SpringMovie0.Love.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SpringMovie0.Love.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SpringMovie0.Love.AfterMovie}}"
                 }
               },
               "ID": "reaction_0"
@@ -3255,17 +3255,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SummerMovie0.Love.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SummerMovie0.Love.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SummerMovie0.Love.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SummerMovie0.Love.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SummerMovie0.Love.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SummerMovie0.Love.AfterMovie}}"
                 }
               },
               "ID": "reaction_1"
@@ -3279,17 +3279,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.FallMovie0.Dislike.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.FallMovie0.Dislike.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.FallMovie0.Dislike.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.FallMovie0.Dislike.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.FallMovie0.Dislike.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.FallMovie0.Dislike.AfterMovie}}"
                 }
               },
               "ID": "reaction_2"
@@ -3303,17 +3303,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.WinterMovie0.Like.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.WinterMovie0.Like.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.WinterMovie0.Like.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.WinterMovie0.Like.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.WinterMovie0.Like.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.WinterMovie0.Like.AfterMovie}}"
                 }
               },
               "ID": "reaction_3"
@@ -3327,17 +3327,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SpringMovie1.Dislike.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SpringMovie1.Dislike.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SpringMovie1.Dislike.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SpringMovie1.Dislike.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SpringMovie1.Dislike.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SpringMovie1.Dislike.AfterMovie}}"
                 }
               },
               "ID": "reaction_4"
@@ -3351,17 +3351,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SummerMovie1.Love.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SummerMovie1.Love.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SummerMovie1.Love.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SummerMovie1.Love.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.SummerMovie1.Love.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.SummerMovie1.Love.AfterMovie}}"
                 }
               },
               "ID": "reaction_5"
@@ -3375,17 +3375,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.FallMovie1.Like.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.FallMovie1.Like.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.FallMovie1.Like.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.FallMovie1.Like.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.FallMovie1.Like.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.FallMovie1.Like.AfterMovie}}"
                 }
               },
               "ID": "reaction_6"
@@ -3399,17 +3399,17 @@
                 "BeforeMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.WinterMovie1.Dislike.BeforeMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.WinterMovie1.Dislike.BeforeMovie}}"
                 },
                 "DuringMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.WinterMovie1.Dislike.DuringMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.WinterMovie1.Dislike.DuringMovie}}"
                 },
                 "AfterMovie": {
                   "ResponsePoint": null,
                   "Script": "",
-                  "Text": "{{i18n:MovieData.Olga.WinterMovie1.Dislike.AfterMovie}}"
+                  "Text": "{{i18n:MovieData.Philip.WinterMovie1.Dislike.AfterMovie}}"
                 }
               },
               "ID": "reaction_7"
@@ -3418,7 +3418,7 @@
         },
 		
 		"Pika": {
-			"Pika": "Pika",
+			"NPCName": "Pika",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -3616,7 +3616,7 @@
         },
 		
 		"Richard": {
-			"Richard": "Richard",
+			"NPCName": "Richard",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -3814,7 +3814,7 @@
         },
 		
 		"Shiro": {
-			"Shiro": "Shiro",
+			"NPCName": "Shiro",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -4012,7 +4012,7 @@
         },
 		
 		"Trinnie": {
-			"Trinnie": "Trinnie",
+			"NPCName": "Trinnie",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -4210,7 +4210,7 @@
         },
 		
 		"Ysabelle": {
-			"Ysabelle": "Ysabelle",
+			"NPCName": "Ysabelle",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -4408,7 +4408,7 @@
         },
 		
 		"Yuuma": {
-			"Yuuma": "Yuuma",
+			"NPCName": "Yuuma",
 			"Reactions": [
             //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
             {
@@ -4604,8 +4604,6 @@
             }
           ]
         },
-
-	
 	},
 	},
 	
