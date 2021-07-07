@@ -29,6 +29,25 @@
 		"FromFile": "Assets/EventFiles/{{TargetWithoutPath}}.png",
 	},
 
+  	{    //Summit RSV spouse dialogue additions
+	 	"Action": "EditData",
+     	"Target": "Data/ExtraDialogue",
+     	"Entries": { 
+     		//Coded as events
+	    	"SummitEvent_Dialogue3_Alissa": "Isn't this view wonderful, love?...$l\"/pause 500/faceDirection farmer 1/pause 500/speak Alissa \"All my life, I never thought that I could be as confident and happy as I am right now...$l#$b#You don't know how much you've made my life as beautiful, or even more, as this view...$h\"/pause 500/faceDirection Alissa 3/pause 300/speak Alissa \"I'm happy and contented, @...$l#$b#Thank you...$l#$b#I love you...$l",
+	    	"SummitEvent_Dialogue3_Corine": "Hey... I didn't expect you to find me here.$l\"/pause 500/faceDirection farmer 1/emote farmer 28/faceDirection Corine 3/emote Corine 20/speak Corine \"Hey, no... I wanted you to find me.$l\"/emote farmer 20/speak Corine \"A lot of stuff has happened in my life.#$b#But whatever and however those events affected my life, All I know is they led me to you.$h\"/faceDirection Corine 0/emote Corine 60/speak Corine \"...and...$l\"/faceDirection Corine 3/pause 300/speak Corine \"I wouldn't want it any other way...$l",
+	    	"SummitEvent_Dialogue3_Flor": "",
+	    	"SummitEvent_Dialogue3_Maddie": "",
+	    	"SummitEvent_Dialogue3_Ysabelle": "",
+
+	    	"SummitEvent_Dialogue3_Ian": "",
+	    	"SummitEvent_Dialogue3_Jeric": "",
+	    	"SummitEvent_Dialogue3_Kenneth": "",
+	    	"SummitEvent_Dialogue3_Philip": "",
+	    	"SummitEvent_Dialogue3_Shiro": "",
+			}
+	},
+
 	
 ]
 }
