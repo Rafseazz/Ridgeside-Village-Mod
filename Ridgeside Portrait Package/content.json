@@ -1,0 +1,530 @@
+{
+	"Format": "1.22.0",
+
+//Portrait Style		
+"AguarPortraitStyle": {
+	"AllowValues": "Default, Legacy, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Aguar Portrait"
+},
+
+"AlissaPortraitStyle" :{
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Alissa Portrait"
+},
+
+"BertPortraitStyle": { 
+	"AllowValues": "Default, Legacy, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Bert Portrait"
+},
+
+"CorinePortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Corine Portrait"
+},
+
+"EzekielPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Ezekiel Portrait"
+},
+
+"FlorPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Flor Portrait"
+},
+
+"FreddiePortraitStyle": {
+	"AllowValues": "Default, Legacy, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Freddie Portrait"
+},
+
+"HelenPortraitStyle": {
+	"AllowValues": "Default,",
+	"Default": "Default",
+	"Description": "Pick your preferred Helen Portrait"
+},	
+
+"IanPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, BodyArtBrandon, OnePointOne, Blyaaa",
+	"Default": "Default",
+	"Description": "Pick your preferred Ian Portrait"
+},
+
+"JericPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Jeric Portrait"
+},
+
+"JioPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne, Blyaaa",
+	"Default": "Default",
+	"Description": "Pick your preferred Jio Portrait"
+},
+
+"KeahiPortraitStyle": {
+	"AllowValues": "Default, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Keahi Portrait"
+},
+
+"KennethPortraitStyle": {
+	"AllowValues": "Default, Legacy, LegacyBeard, Avislone, OnePointOne, Blyaaa",
+	"Default": "Default",
+	"Description": "Pick your preferred Kenneth Portrait"
+},
+
+"KiwiPortraitStyle": {
+	"AllowValues": "Default, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Kiwi Portrait"
+},
+
+"LennyPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Lenny Portrait"
+},
+
+"LolaPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne, Blyaaa",
+	"Default": "Default",
+	"Description": "Pick your preferred Lola Portrait"
+},
+
+"MaddiePortraitStyle": {
+	"AllowValues": "Default, Legacy, LegacyGlasses, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Maddie Portrait"
+},
+
+"OlgaPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Olga Portrait"
+},
+
+"PhilipPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Philip Portrait"
+},
+
+"PikaPortraitStyle": {
+	"AllowValues": "Default, Legacy, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Pika Portrait"
+},
+
+"RichardPortraitStyle": {
+	"AllowValues": "Default, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Richard Portrait"
+},
+
+"ShiroPortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Shiro Portrait"
+},
+
+"TrinniePortraitStyle": {
+	"AllowValues": "Default, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Trinnie Portrait"
+},
+
+"UndreyaPortraitStyle": {
+	"AllowValues": "Default",
+	"Default": "Default",
+	"Description": "Pick your preferred Undreya Portrait"
+},		
+
+"YsabellePortraitStyle": {
+	"AllowValues": "Default, Legacy, Avislone, OnePointOne, Blyaaa",
+	"Default": "Default",
+	"Description": "Pick your preferred Ysabelle Portrait"
+},
+
+"YuumaPortraitStyle": {
+	"AllowValues": "Default, OnePointOne",
+	"Default": "Default",
+	"Description": "Pick your preferred Yuuma Portrait"
+},
+
+//Sprite Style					
+"FlorSpriteStyle": {
+	"AllowValues": "Default, Legacy",
+	"Default": "Default",
+	"Description": "Pick your preferred Flor Sprite"
+},							
+					
+	"Changes": [
+// Regular Portraits
+
+	/*********
+	** Bachelor Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Ian",
+			"FromFile": "Assets/Portraits/Ian/{{IanPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jeric",
+			"FromFile": "Assets/Portraits/Jeric/{{JericPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Kenneth",
+			"FromFile": "Assets/Portraits/Kenneth/{{KennethPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Philip",
+			"FromFile": "Assets/Portraits/Philip/{{PhilipPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Shiro",
+			"FromFile": "Assets/Portraits/Shiro/{{ShiroPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		
+	/*********
+	** Bachelorette Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Alissa",
+			"FromFile": "Assets/Portraits/Alissa/{{AlissaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Corine",
+			"FromFile": "Assets/Portraits/Corine/{{CorinePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Flor",
+			"FromFile": "Assets/Portraits/Flor/{{FlorPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Maddie",
+			"FromFile": "Assets/Portraits/Maddie/{{MaddiePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle",
+			"FromFile": "Assets/Portraits/Ysabelle/{{YsabellePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		
+	/*********
+	** Non-Marriage Candidates Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar",
+			"FromFile": "Assets/Portraits/Aguar/{{AguarPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Bert",
+			"FromFile": "Assets/Portraits//Bert/{{BertPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Ezekiel",
+			"FromFile": "Assets/Portraits/Ezekiel/{{EzekielPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Freddie",
+			"FromFile": "Assets/Portraits/Freddie/{{FreddiePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jio",
+			"FromFile": "Assets/Portraits/Jio/{{JioPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Kiwi",
+			"FromFile": "Assets/Portraits/Kiwi/{{KiwiPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Lenny",
+			"FromFile": "Assets/Portraits/Lenny/{{LennyPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Lola",
+			"FromFile": "Assets/Portraits/Lola/{{LolaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Olga",
+			"FromFile": "Assets/Portraits/Olga/{{OlgaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Pika",
+			"FromFile": "Assets/Portraits/Pika/{{PikaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Richard",
+			"FromFile": "Assets/Portraits/Richard/{{RichardPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		
+	/*********
+	** Children Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Keahi",
+			"FromFile": "Assets/Portraits/Keahi/{{KeahiPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Trinnie",
+			"FromFile": "Assets/Portraits/Trinnie/{{TrinniePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Yuuma",
+			"FromFile": "Assets/Portraits/Yuuma/{{YuumaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+
+// Beach Portraits
+
+	/*********
+	** Bachelor Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Ian_Beach",
+			"FromFile": "Assets/BeachPortraits/Ian/{{IanPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jeric_Beach",
+			"FromFile": "Assets/BeachPortraits/Jeric/{{JericPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Kenneth_Beach",
+			"FromFile": "Assets/BeachPortraits/Kenneth/{{KennethPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Philip_Beach",
+			"FromFile": "Assets/BeachPortraits/Philip/{{PhilipPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Shiro_Beach",
+			"FromFile": "Assets/BeachPortraits/Shiro/{{ShiroPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		
+	/*********
+	** Bachelorette Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Alissa_Beach",
+			"FromFile": "Assets/BeachPortraits/Alissa/{{AlissaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Corine_Beach",
+			"FromFile": "Assets/BeachPortraits/Corine/{{CorinePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Flor_Beach",
+			"FromFile": "Assets/BeachPortraits/Flor/{{FlorPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Maddie_Beach",
+			"FromFile": "Assets/BeachPortraits/Maddie/{{MaddiePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle_Beach",
+			"FromFile": "Assets/BeachPortraits/Ysabelle/{{YsabellePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		
+	/*********
+	** Non-Marriage Candidates Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar_Beach",
+			"FromFile": "Assets/BeachPortraits/Aguar/{{AguarPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Bert_Beach",
+			"FromFile": "Assets/BeachPortraits//Bert/{{BertPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Ezekiel_Beach",
+			"FromFile": "Assets/BeachPortraits/Ezekiel/{{EzekielPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Freddie_Beach",
+			"FromFile": "Assets/BeachPortraits/Freddie/{{FreddiePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jio_Beach",
+			"FromFile": "Assets/BeachPortraits/Jio/{{JioPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Kiwi_Beach",
+			"FromFile": "Assets/BeachPortraits/Kiwi/{{KiwiPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Lenny_Beach",
+			"FromFile": "Assets/BeachPortraits/Lenny/{{LennyPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Lola_Beach",
+			"FromFile": "Assets/BeachPortraits/Lola/{{LolaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Olga_Beach",
+			"FromFile": "Assets/BeachPortraits/Olga/{{OlgaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Pika_Beach",
+			"FromFile": "Assets/BeachPortraits/Pika/{{PikaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Richard_Beach",
+			"FromFile": "Assets/BeachPortraits/Richard/{{RichardPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		
+	/*********
+	** Children Portraits
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Keahi_Beach",
+			"FromFile": "Assets/BeachPortraits/Keahi/{{KeahiPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Trinnie_Beach",
+			"FromFile": "Assets/BeachPortraits/Trinnie/{{TrinniePortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Yuuma_Beach",
+			"FromFile": "Assets/BeachPortraits/Yuuma/{{YuumaPortraitStyle}}.png",
+			"PatchMode": "Replace",
+		},
+
+
+	/*********
+	** Sprites Config Changes
+	*********/
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Maddie",
+			"FromFile": "Assets/Characters/Maddie_Glasses.png",
+			"PatchMode": "Replace",
+			"When": { "MaddiePortraitStyle": "LegacyGlasses" },
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Philip",
+			"FromFile": "Assets/Characters/Philip_Legacy.png",
+			"PatchMode": "Replace",
+			"When": { "PhilipPortraitStyle": "Legacy" },
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Flor",
+			"FromFile": "Assets/Characters/Flor_{{FlorSpriteStyle}}.png",
+			"PatchMode": "Replace",
+			"When": { "FlorSpriteStyle": "Legacy" },
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Flor_Beach",
+			"FromFile": "Assets/Characters/Flor_Beach_{{FlorSpriteStyle}}.png",
+			"PatchMode": "Replace",
+			"When": { "FlorSpriteStyle": "Legacy" },
+		},
+
+],
+}
