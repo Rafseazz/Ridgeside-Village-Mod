@@ -2,41 +2,6 @@
 "Changes": [
 
 	/*********
-	** Sprites Config Changes
-	*********/
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Maddie",
-			"FromFile": "Assets/Characters/Maddie_Glasses.png",
-			"PatchMode": "Replace",
-			"When": { "MaddiePortraitStyle": "LegacyGlasses" },
-		},
-
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Philip",
-			"FromFile": "Assets/Characters/Philip_Legacy.png",
-			"PatchMode": "Replace",
-			"When": { "PhilipPortraitStyle": "Legacy" },
-		},
-
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Flor",
-			"FromFile": "Assets/Characters/Flor_{{FlorSpriteStyle}}.png",
-			"PatchMode": "Replace",
-			"When": { "FlorSpriteStyle": "Legacy" },
-		},
-
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Flor_Beach",
-			"FromFile": "Assets/Characters/Flor_Beach_{{FlorSpriteStyle}}.png",
-			"PatchMode": "Replace",
-			"When": { "FlorSpriteStyle": "Legacy" },
-		},
-
-	/*********
 	** Sprite Changes
 	*********/	
 		//Corine Ninja Change

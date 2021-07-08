@@ -1,6 +1,7 @@
 {
 	"Format": "1.22.0",
 
+"ConfigSchema": {
 //Portrait Style		
 "AguarPortraitStyle": {
 	"AllowValues": "Default, Legacy, OnePointOne",
@@ -163,7 +164,8 @@
 	"AllowValues": "Default, Legacy",
 	"Default": "Default",
 	"Description": "Pick your preferred Flor Sprite"
-},							
+},
+},						
 					
 	"Changes": [
 // Regular Portraits
@@ -497,7 +499,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Maddie",
-			"FromFile": "Assets/Characters/Maddie_Glasses.png",
+			"FromFile": "Assets/Characters/Maddie/Maddie_Glasses.png",
 			"PatchMode": "Replace",
 			"When": { "MaddiePortraitStyle": "LegacyGlasses" },
 		},
@@ -505,7 +507,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Philip",
-			"FromFile": "Assets/Characters/Philip_Legacy.png",
+			"FromFile": "Assets/Characters/Philip/Philip_Legacy.png",
 			"PatchMode": "Replace",
 			"When": { "PhilipPortraitStyle": "Legacy" },
 		},
@@ -513,7 +515,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Flor",
-			"FromFile": "Assets/Characters/Flor_{{FlorSpriteStyle}}.png",
+			"FromFile": "Assets/Characters/Flor/Flor_{{FlorSpriteStyle}}.png",
 			"PatchMode": "Replace",
 			"When": { "FlorSpriteStyle": "Legacy" },
 		},
