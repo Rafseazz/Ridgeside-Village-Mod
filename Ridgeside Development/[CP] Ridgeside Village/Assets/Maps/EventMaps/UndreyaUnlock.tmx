@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="144">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="144">
  <properties>
   <property name="Light" value="12 10 4 20 19 4 5 34 4"/>
   <property name="NightTiles" value="AlwaysFront 12 10 908 AlwaysFront 20 19 908 AlwaysFront 5 34 908"/>
@@ -875,13 +875,6 @@
    </properties>
   </tile>
  </tileset>
- <layer id="1" name="Back" width="1" height="2">
-  <data encoding="csv">
-3576,
-3576
-</data>
- </layer>
- <objectgroup id="6" name="Back"/>
  <layer id="2" name="Buildings" width="1" height="2">
   <data encoding="csv">
 3208,
@@ -891,29 +884,8 @@
  <objectgroup id="7" name="Buildings">
   <object id="143" name="TileData" x="0" y="16" width="16" height="16">
    <properties>
-    <property name="Action" value="Warp Custom_Ridgeside_RSVAbandonedHouse 6 10"/>
+    <property name="Action" value="Warp 6 10 Custom_Ridgeside_RSVAbandonedHouse"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="3" name="Paths" width="1" height="2">
-  <data encoding="csv">
-0,
-0
-</data>
- </layer>
- <objectgroup id="8" name="Paths"/>
- <layer id="4" name="Front" width="1" height="2">
-  <data encoding="csv">
-0,
-0
-</data>
- </layer>
- <objectgroup id="9" name="Front"/>
- <layer id="5" name="AlwaysFront" width="1" height="2">
-  <data encoding="csv">
-0,
-0
-</data>
- </layer>
- <objectgroup id="10" name="AlwaysFront"/>
 </map>

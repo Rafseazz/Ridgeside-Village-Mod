@@ -65,7 +65,7 @@
         "Target": "Maps/Custom_Ridgeside_RSVCliff",
         "MapTiles": [
 			{
-				"Position": { "X": 28, "Y": 32 },
+				"Position": { "X": 28, "Y": 33 },
 				"Layer": "Buildings",
 				"SetProperties": {
 				"Action": "MessageOnce 75160181 '???: {{i18n:Find.Undreya}}'"
@@ -80,7 +80,7 @@
         "Target": "Maps/Custom_Ridgeside_RSVCliff",
         "MapTiles": [
 			{
-				"Position": { "X": 28, "Y": 32 },
+				"Position": { "X": 28, "Y": 33 },
 				"Layer": "Buildings",
 				"SetProperties": {
 				"Action": "Message rsv.undreyapeek"
@@ -95,25 +95,9 @@
 		"Target": "Maps/Custom_Ridgeside_RSVCliff",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
 		"ToArea": { "X": 31, "Y": 32, "Width": 1, "Height": 2 },
-		"PatchMode": "ReplaceByLayer",
 		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent: |contains=75160181": true },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
-	{
-        "Action": "EditMap",
-        "Target": "Maps/Custom_Ridgeside_RSVCliff",
-        "MapTiles": [
-			{
-				"Position": { "X": 31, "Y": 33 },
-				"Layer": "Buildings",
-				"SetProperties": {
-				"Action": "Warp 6 10 Custom_Ridgeside_RSVAbandonedHouse"
-               }
-            }
-		],
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160181": true },
-		"Update": "OnLocationChange, OnTimeChange"
-    },
 	
 //Unlock Minecarts
 	{
