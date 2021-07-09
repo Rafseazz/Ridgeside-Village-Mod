@@ -315,24 +315,6 @@
 
 //SVE Versions of Festivals
 
-	//Egg Fest
-
-	/*********
-	** Egg Festival
-	*********/
-
-	{
-		"LogName": "Egg Festival SVE Patch",
-		"Action": "EditMap",
-		"Target": "Maps/Town-EggFestival",
-		"FromFile": "Assets/Maps/InterModMaps/EggFestival-Patch_SVE.tmx",
-		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 9 },
-		"ToArea": { "X": 10, "Y": 60, "Width": 2, "Height": 9 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "DayEvent": "egg festival", "LocationName": "Temp" },
-		"PatchMode": "Overlay",
-		"Update": "OnLocationChange"
-	},
-
 	/*********
 	** Flower Festival
 	*********/
@@ -342,7 +324,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/FlowerFestival-Patch_SVE.tmx",
 		"FromArea": { "X": 25, "Y": 8, "Width": 25, "Height": 37 },
 		"ToArea": { "X": 25, "Y": 8, "Width": 25, "Height": 37 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -351,7 +333,7 @@
 	{
    "Action": "EditData",
    "Target": "Data/Festivals/summer11",
-   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent": "6665292"},
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent": "6665292", "RSVNPCSAttendFestivals": true},
    "TextOperations": [
    
    //SetUp
@@ -377,7 +359,7 @@
 	{
    "Action": "EditData",
    "Target": "Data/Festivals/winter8",
-   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true},
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true},
    "TextOperations": [
    
    //SetUp
@@ -405,7 +387,7 @@
 
 		"Action": "EditData",
 		"Target": "Data/Festivals/fall27",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "IsOddYear": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "IsOddYear": true, "RSVNPCSAttendFestivals": true },
 		"TextOperations": [
 
    //SetUp
@@ -441,7 +423,7 @@
 	{
 		"Action": "EditData",
 		"Target": "Data/Festivals/fall16",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true},
 		"TextOperations": [
 
    //SetUp
@@ -459,7 +441,7 @@
 {
 	"Action": "EditData",
 	"Target": "Data/Festivals/winter25",
-	"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+	"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true},
 	"TextOperations": [
 
    //SetUp
@@ -478,7 +460,7 @@
 	//WITH SVE
 	"Action": "EditData",
 	"Target": "Data/Festivals/spring13",
-	"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+	"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
 	"TextOperations": [
 
    //SetUp
