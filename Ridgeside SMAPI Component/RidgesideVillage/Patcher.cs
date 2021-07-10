@@ -33,6 +33,8 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
                 postfix: new HarmonyMethod(typeof(Patcher), nameof(Patcher.GetFish_Postfix))
                 );
+
+            HarmonyPatch_EventMessage.ApplyPatch(harmony, Helper);
             }
 
         [HarmonyPostfix]
