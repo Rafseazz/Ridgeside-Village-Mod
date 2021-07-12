@@ -224,27 +224,9 @@
          "ToArea": { "X": 35, "Y": 14, "Width": 7, "Height": 10 },
          "PatchMode": "Overlay",
     	 "When": {
-             "Year": "3",
+             "Year": "2",
              "Time": "{{Range: 2000, 2600}}",
       	}
-      	},       	      	      	      	   
-     	{
-         "Action": "EditMap",
-         "Target": "Maps/Forest",
-         "FromFile": "Assets/Maps/DynamicMaps/MouseHouse.tmx",
-         "FromArea": { "X": 0, "Y": 0, "Width": 3, "Height": 3 },
-         "ToArea": { "X": 33, "Y": 93, "Width": 3, "Height": 3 },
-         "PatchMode": "Replace",
-         "When": {
-			 "HasFlag": "hatter",
-		},
-		"Update": "OnLocationChange"		         
-      	},
-		{
-         "Action": "EditImage",
-         "Target": "LooseSprites/cursors",
-         "FromFile": "Assets/LooseSprites/MouseHouseEdit.png",
-         "ToArea": { "X": 600, "Y": 1957, "Width": 64, "Height": 32 },
-		},      	
+      	},       	      	      	      	       	
 ]
 }
