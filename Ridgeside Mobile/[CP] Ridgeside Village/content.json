@@ -221,8 +221,8 @@
 		"Action": "EditData",
 		"Target": "Data/CustomNPCExclusions",
 		"Entries": {
-			"Kiwi": "MovieInvite",
-			"Jio": "MovieInvite",
+			"Kiwi": "ALL",
+			"Jio": "ALL",
 			"Undreya": "ALL",
 			"Helen": "ALL",
 		}
@@ -395,6 +395,69 @@
 		"When": { "BrandonIan": "true" },
 	},
 
+//===================================
+//Festival Locations                 
+//===================================
+
+	//Egg Festival
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/EggFestival.json",
+	},
+	
+	//Flower Dance
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/FlowerDance.json",
+	},
+	
+	//Luau
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/Luau.json",
+	},
+	
+	//Dance of the Moonlight Jellies
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/MoonlightJellies.json",
+	},
+	
+	//SVFair
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/SVFair.json",
+	},
+	
+	//SpiritEve
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/SpiritEve.json",
+	},
+	
+	//IceFestival
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/IceFestival.json",
+	},
+	
+	//WinterStar
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/WinterStar.json",
+	},
+	
+	//Enber of Resolutions
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/EmberOfResolutions.json",
+	},
+
+	//Ridgeside Gathering
+	{
+   "Action": "Include",
+   "FromFile": "Data/Festivals/locations/Gathering.json",
+	},
 	
 //Undreya dynamics
 	//DISPOSITIONS

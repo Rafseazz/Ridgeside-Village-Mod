@@ -1,0 +1,471 @@
+{
+"Changes": [
+
+	{
+	//NO SVE
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+   "TextOperations": [
+   
+   //SetUp
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Aguar 22 100 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Alissa 15 25 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Bert 23 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Corine 33 73 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ezekiel 34 73 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Flor 34 38 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Freddie 16 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ian 32 56 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Jeric 31 64 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Jio 34 4 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Keahi 24 73 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Kenneth 36 74 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Kiwi 33 4 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Lenny 27 69 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Lola 17 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Maddie 20 47 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Olga 22 64 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Philip 27 50 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Pika 31 72 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Richard 28 72 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Shiro 23 50 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Trinnie 23 72 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ysabelle 28 64 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Yuuma 23 74 left",
+         "Delimiter": "/"
+		},
+	]	
+	},
+	
+	
+	{
+	//With SVE
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "IsOddYear": true },
+   "TextOperations": [
+   
+   //SetUp
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Aguar 22 100 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Alissa 15 27 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Bert 23 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Corine 33 73 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ezekiel 34 75 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Flor 34 38 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Freddie 16 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ian 32 56 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Jeric 31 64 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Jio 34 4 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Keahi 24 73 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Kenneth 36 74 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Kiwi 33 4 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Lenny 27 69 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Lola 17 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Maddie 20 47 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Olga 22 64 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Philip 22 49 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Pika 31 72 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Richard 28 72 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Shiro 23 49 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Trinnie 23 72 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ysabelle 28 64 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Yuuma 23 74 left",
+         "Delimiter": "/"
+		},
+	]	
+	},
+	
+	{
+	//With SVE variant 2
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "IsOddYear": false },
+   "TextOperations": [
+   
+   //SetUp
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Aguar 71 62 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Alissa 22 65 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Bert 24 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Corine 27 67 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ezekiel 26 67 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Flor 50 36 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Freddie 36 69 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ian 27 54 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Jeric 41 60 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Jio 68 76 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Keahi 73 30 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Kenneth 50 64 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Kiwi 72 77 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Lenny 32 64 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Lola 36 70 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Maddie 50 68 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Olga 23 64 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Philip 77 38 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Pika 26 58 right",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Richard 35 64 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Shiro 75 38 up",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Trinnie 76 30 left",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Ysabelle 28 67 down",
+         "Delimiter": "/"
+		},
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters"],
+         "Value": "Yuuma 75 32 up",
+         "Delimiter": "/"
+		},
+	]	
+	},
+	
+]
+}
