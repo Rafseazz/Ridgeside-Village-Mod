@@ -26,7 +26,7 @@ namespace RidgesideVillage
             );
         }
 
-        internal static void ShowGlobalMessage_Prefix(ref Game1 __instance, ref string message)
+        internal static void ShowGlobalMessage_Prefix(ref string message)
         {
             try
             {
