@@ -223,6 +223,7 @@
          "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 10 },
          "ToArea": { "X": 35, "Y": 14, "Width": 7, "Height": 10 },
          "PatchMode": "Overlay",
+         "Update": "OnTimeChange, OnLocationChange",
     	 "When": {
              "Year": "2",
              "Time": "{{Range: 2000, 2600}}",
