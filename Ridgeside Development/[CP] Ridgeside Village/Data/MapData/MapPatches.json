@@ -25,7 +25,8 @@
 			"FromFile": "Assets/Maps/MapPatches/RSVLine.tmx",
 			"FromArea": { "X": 0, "Y": 0, "Width": 50, "Height": 12 },
 			"ToArea": { "X": 0, "Y": 0, "Width": 50, "Height": 12 },
-			"PatchMode": "Overlay"
+			"PatchMode": "Overlay",
+			"When": { "HasMod: |contains=DaisyNiko.SVR2": false}
 		},
 
 	]
