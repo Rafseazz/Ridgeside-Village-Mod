@@ -129,9 +129,9 @@
 		"When": {
 			"Weather": "Sun, Wind",
 			},
-		"Update": "OnLocationChange"
+		"Update": "OnDayStart"
 	},
-		{
+	{
 		"LogName": "Ridgeside Village Custom Companions",
 		"Action": "EditMap",
 		"Target": "Maps/RidgesideVillage",
@@ -158,7 +158,7 @@
                }
             },
             {
-               "Position": { "X": 37, "Y": 37 },
+               "Position": { "X": 37, "Y": 38 },
                "Layer": "Back",
                "SetProperties": {
                   "CustomCompanions": null
@@ -248,11 +248,85 @@
                   "CustomCompanions": null
                }
             },
+            {
+               "Position": { "X": 22, "Y": 27 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": null
+               }
+            },
          ],
 		"When": {
 			"Weather: |contains=Sun,Wind": false,
 			},
-		"Update": "OnLocationChange"
-	}
+		"Update": "OnDayStart"
+	},
+   {
+      "LogName": "Ridgeside Village Custom Companions",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteCow}}",
+      "Entries": {
+        "Companion": {
+          "DespawnOnTile": [ 44, 105, 0 ],
+          "IdleBehavior": "Simple_Path",
+          "IdleArguments": [ 44, 105, 0 ]
+        }
+      },
+      "When": {
+         "Time": "{{Range: 2000, 2600}}",
+      },
+      "Update": "OnLocationChange, OnTimeChange"
+   },
+   {
+      "LogName": "Ridgeside Village Custom Companions",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:PeacefulEnd.CustomCompanions.RidgesideVillage.BrownCow}}",
+      "Entries": {
+        "Companion": {
+          "Respawn": false,
+          "DespawnOnTile": [ 37, 98, 100 ],
+          "IdleBehavior": "Simple_Path",
+          "IdleArguments": [ 37, 98, 100 ]
+        }
+      },
+      "When": {
+         "Time": "{{Range: 2000, 2600}}",
+      },
+      "Update": "OnLocationChange, OnTimeChange"
+   },
+   {
+      "LogName": "Ridgeside Village Custom Companions",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:PeacefulEnd.CustomCompanions.RidgesideVillage.WhiteChicken}}",
+      "Entries": {
+        "Companion": {
+          "Respawn": false,
+          "DespawnOnTile": [ 26, 38, 100 ],
+          "IdleBehavior": "Simple_Path",
+          "IdleArguments": [ 26, 38, 100 ]
+        }
+      },
+      "When": {
+         "Time": "{{Range: 2000, 2600}}",
+      },
+      "Update": "OnLocationChange, OnTimeChange"
+   },
+   {
+      "LogName": "Ridgeside Village Custom Companions",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:PeacefulEnd.CustomCompanions.RidgesideVillage.BrownChicken}}",
+      "Entries": {
+        "Companion": {
+          "Respawn": false,
+          "DespawnOnTile": [ 35, 38, 100 ],
+          "IdleBehavior": "Simple_Path",
+          "IdleArguments": [ 35, 38, 100 ]
+        }
+      },
+      "When": {
+         "Time": "{{Range: 2000, 2600}}",
+      },
+      "Update": "OnLocationChange, OnTimeChange"
+   }
 ]
 }
