@@ -752,6 +752,20 @@
 		},
 		    "When": {"Relationship:Maddie |contains=Dating, Engaged, Married": "false",}
 	},
+
+	/*-----------------------------------------
+	1.3 Events!!
+	-----------------------------------------*/
+	{
+		"LogName": "Wedding Reception",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Update": "OnLocationChange",
+		"Entries": {
+			"75160245": "playful/15 12/farmer 15 12 2 {{spouse}} 16 12 2/skippable/changeLocation Custom_Ridgeside_LogCabinEventHall_WeddingReception/pause 5000/end",
+		},
+		    "When": {"DayEvent": "wedding"}
+	},
 	
 ]
 }
