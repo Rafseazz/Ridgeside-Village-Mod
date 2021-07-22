@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="ConfigMenu.cs" />
     <Compile Include="CustomCPTokens.cs" />
+    <Compile Include="HarmonyPatch_Obelisk.cs" />
+    <Compile Include="HarmonyPatch_EventMessage.cs" />
     <Compile Include="IGenericModConfigMenuApi.cs" />
     <Compile Include="IContentPatcherApi.cs" />
     <Compile Include="IJsonAssetsApi.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="i18n\default.json" />
     <None Include="manifest.json" />
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewValley;
 using Harmony;
+using StardewModdingAPI.Events;
 
 namespace RidgesideVillage
 {
@@ -31,9 +32,12 @@ namespace RidgesideVillage
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
         }
 
+
+
+
         private void OnGameLaunched(object sender, EventArgs e)
         {
-
+            
             Config = Helper.ReadConfig<ModConfig>();
 
             if (!Helper.ModRegistry.IsLoaded("spacechase0.JsonAssets"))
@@ -47,7 +51,7 @@ namespace RidgesideVillage
             CustomCPTokens.RegisterTokens();
 
             // Generic Mod Config Menu setup
-            ConfigMenu.RegisterMenu();
+            //ConfigMenu.RegisterMenu();
         }
 
         private void OnSaveLoaded(object sender, EventArgs ex)
@@ -60,6 +64,21 @@ namespace RidgesideVillage
             {
                 Log.Debug($"Failed to load config settings. Will use default settings instead. Error: {e}");
                 Config = new ModConfig();
+            }
+
+
+            //mark greenhouses as greenhouses, so trees can be planted
+            List<string> locationsNames = new List<string>() { "Custom_Ridgeside_AguarCaveTemporary", "Custom_Ridgeside_RSVGreenhouse1", "Custom_Ridgeside_RSVGreenhouse2" };
+            foreach (var name in locationsNames)
+            {
+                GameLocation location = Game1.getLocationFromName(name);
+                if (location == null)
+                {
+                    Log.Trace($"{name} is null");
+                    continue;
+                }
+                location.isGreenhouse.Value = true;
+                Log.Trace($"{name} set to greenhouse");
             }
         }
 

@@ -1,0 +1,18 @@
+{
+   "Changes": [
+      {
+		"LogName": "Patch Obelisk Image",
+         "Action": "Load",
+         "Target": "Buildings/RSV Obelisk",
+         "FromFile": "Assets//LooseSprites/RSVObelisk.png"
+      },      
+	  {
+		"LogName": "Patch Obelisk Blueprint",
+         "Action": "EditData",
+         "Target": "Data/Blueprints",
+         "Entries":{
+		   "RSV Obelisk": "388 5 771 10/3/2/-1/-1/-2/-1/null/RSV Obelisk/Warps you to Ridgeside Village./Buildings/none/48/128/-1/null/Farm/10/true",
+		 }
+      },
+   ]
+}

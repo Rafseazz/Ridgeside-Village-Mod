@@ -35,6 +35,7 @@ namespace RidgesideVillage
                 );
 
             HarmonyPatch_EventMessage.ApplyPatch(harmony, Helper);
+            HarmonyPatch_Obelisk.ApplyPatch(harmony, Helper);
             }
 
         [HarmonyPostfix]
