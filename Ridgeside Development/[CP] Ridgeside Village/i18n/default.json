@@ -45,8 +45,18 @@
 "Name.Undreya": "Undreya",
 "Name.Helen": "Helen",
 
+"Name.Daia": "Daia",
+"Name.Belinda": "Belinda",
+"Name.Bliss": "Bliss",
+"Name.Sari": "Sari",
+"Name.Pipo": "Pipo",
+"Name.Acorn": "Acorn",
+"Name.Naomi": "Naomi",
+"Name.Malaya": "Malaya",
+"Name.Kimpoi": "Kimpoi",
+
 // NPC Data
-"NPC_Data.Alissa": "Bert 'uncle' Olga 'aunt' Trinnie 'cousin_Trinnie'",
+"NPC_Data.Alissa": "Kimpoi 'dad' Malaya 'mom' Bert 'uncle' Olga 'aunt' Trinnie 'cousin_Trinnie'",
 "NPC_Data.Bert": " Olga 'wife' Trinnie 'daughter' Alissa 'niece Alissa'",
 "NPC_Data.Corine": "Ezekiel 'dad'",
 "NPC_Data.Ezekiel": "Corine 'daughter'",
@@ -54,15 +64,21 @@
 "NPC_Data.Keahi": "Pika 'dad'",
 "NPC_Data.Lenny": "Lewis 'brother'",
 "NPC_Data.Lola": "Freddie 'husband'",
-"NPC_Data.Olga": "Bert 'husband' Trinnie 'daughter' Alissa 'daughter'",
+"NPC_Data.Olga": "Kimpoi 'brother' Bert 'husband' Trinnie 'daughter' Alissa 'daughter'",
 "NPC_Data.Pika": "Keahi 'son'",
 "NPC_Data.Richard": "Ysabelle 'granddaughter'",
-"NPC_Data.Shiro": "Yuuma 'brother'",
-"NPC_Data.Trinnie": "Bert 'dad' Olga 'mom' Alissa 'sister'",
+"NPC_Data.Shiro": "Naomi 'mother' Yuuma 'brother'",
+"NPC_Data.Trinnie": "Malaya 'aunt' Kimpoi 'uncle' Bert 'dad' Olga 'mom' Alissa 'sister'",
 "NPC_Data.Ysabelle": "Richard 'grandfather'",
 
-"NPC_Data.Yuuma": "Shiro 'brother'",
+"NPC_Data.Yuuma": "Naomi 'mother' Shiro 'brother'",
 "NPC_Data.Helen": "Ezekiel 'husband' Corine 'daughter'",
+
+"Name.Sari": "Pipo 'son'",
+"Name.Pipo": "Sari 'mom'",
+"Name.Naomi": "Shiro 'eldest_son' Yuuma 'youngest_son'",
+"Name.Malaya": "Kimpoi 'husband' Alissa 'daughter' Trinnie 'niece'",
+"Name.Kimpoi": "Malaya 'wife' Alissa 'daughter' Trinnie 'niece' Olga 'sister'",
 
 //--------------------
 //Gift Taste Dialogues
@@ -753,7 +769,7 @@
 
 //Corine starts training (Corine 8 hearts)
 "event-75160125.01": "@? Hey, it's late.#$b#What are you still doing out here?#$b#I'm sorry if I was a bit snappish the last time.$s#$b#I was just really angry about that jerk. He wants me to hurt others? I mean, the nerve!$a",
-"event-75160125.02": "But hey, @.#$b#Thanks for being accompanying me that time.$h#$b#I really appreciate all the things you've been doing for me.#$b#You're too sweet, you know that?$h",
+"event-75160125.02": "But hey, @.#$b#Thanks for accompanying me that time.$h#$b#I really appreciate all the things you've been doing for me.#$b#You're too sweet, you know that?$h",
 "event-75160125.03": "Oh stop it, you!$h",
 "event-75160125.04": "You heard that too, right, @?$a#$b#I have a bad feeling about this.$a#$b#It sounded like it came from the ridge.$a",
 "event-75160125.05": "We should take a look.$a",
@@ -913,7 +929,7 @@
 	//Continue
 "event-75160128.14": "Umm. S-so.$s#$b# Thank you for telling me, @. A-and please, um... please don't tell anyone else?$s#$b#I know you won't, but I just... um. W-wanted to ask...$s#$b#I-I hope you have a good day!$h",
 "event-75160128.15": "C-can I just go back to bed now?$s#$b#Yoba, I hope no one saw me last night...$s",
-"event-75160128.16": "Uhhmm... @... H-hi. $l#$b#I... um... W-well I haven't m-made that mistake since, ha ha!$l",
+"event-75160128.16": "Uhhmm... @... H-hi. $14#$b#I... um... W-well I haven't m-made that mistake since, ha ha!$l",
 
 	//Farmer is being creepy
 "event-75160128.13": "I didn't mind. You're cute.",
@@ -934,10 +950,10 @@
 "event-75160129.10": "And change the bandages right after you shower, okay Flor?",
 "event-75160129.11": "Okay, doctor..",
 "event-75160129.12": "Okay. It seems you're both fine now.$h#$b#You're welcome to leave whenever you're ready.",
-"event-75160129.13": "Hey, uh... @.?#$b#Thank you...$l#$b#I really appreciate you helping me all the way here...$h#$b#I should be able to at least get back on my own, now that my ankle's all wrapped up.$h#$b#So, um... Thank you.$l#$b#And... I'm sorry about all the awkward interactions w-we keep having...$s#$b#I really must seem like a terrible mess...$s",
+"event-75160129.13": "Hey, uh... @.?#$b#Thank you...$l#$b#I really appreciate you helping me all the way here...$h#$b#I should be able to at least get back on my own, now that my ankle's all wrapped up.$h#$b#So, um... Thank you.$14#$b#And... I'm sorry about all the awkward interactions w-we keep having...$s#$b#I really must seem like a terrible mess...$s",
 "event-75160129.14": "So... See you.$h",
 "event-75160129.15": "Ow.$s#$b#Okay, easy does it...$s",
-"event-75160129.16": "What?$u#$b#Um, I wouldn't mind if you accompanied me back to the hotel... That would actually be really helpful...$l#$b#Thank you so much, @.$h",
+"event-75160129.16": "What?$u#$b#Um, I wouldn't mind if you accompanied me back to the hotel... That would actually be really helpful...$14#$b#Thank you so much, @.$h",
 "event-75160129.17": "Thank you again, @.$h#$b#One of these days I'll stop embarrassing myself in front of you...",
 
 //Flor plans a research (Flor 6 hearts)
@@ -5057,7 +5073,7 @@
 //2 Hearts
 "Flor.Dialogue.Mon2": "Oh! Hey @... how's the farm?",
 "Flor.Dialogue.Tue2": "I saw Ysabelle, the girl who stays in the room beside mine, at the hotel gym yesterday.$h#$b#She dances so gracefully.",
-"Flor.Dialogue.Wed2": "I'm sorry but... $s#$b#I'm not... $s#$b#Uh...$s#$b#...It's nice to see you...$l",
+"Flor.Dialogue.Wed2": "I'm sorry but... $s#$b#I'm not... $s#$b#Uh...$s#$b#...It's nice to see you...$14",
 "Flor.Dialogue.Thu2": "Have you met Philip? #$b#I know him from our university. He's a good guy.$h",
 "Flor.Dialogue.Fri2": "I really like it here.$h#$b#How about you? Do you like it here?",
 "Flor.Dialogue.Sat2": "Hi... Hi there!... $h#$b#How's the farm @? Be careful not to overwork yourself!",
@@ -5091,7 +5107,7 @@
 "Flor.Dialogue.Sun8": "Hello, @! You look like you're having a good day!$h#$b# I passed by your farm the other day and snuck a peek. It looks really incredible!$h",
 
 //10 Hearts
-"Flor.Dialogue.Mon10": "H-hi! Um. Hi. Uh, can I... nevermind.$l#$e#C-can I ask for a hug later?$l",
+"Flor.Dialogue.Mon10": "H-hi! Um. Hi. Uh, can I... nevermind.$14#$e#C-can I ask for a hug later?$l",
 "Flor.Dialogue.Tue10": "I technically can't offer you any counseling because we're in a relationship, but please let me know if you ever need anything or are feeling down.$l#$b#I'll do my best to help as your... uh.#$b#What are we, technically? I-I mean, what term do you prefer?$l",
 "Flor.Dialogue.Wed10": "It's kind of wild to think about how all the nerves and butterflies I get around you are really just a mix of brain chemicals and signals firing in our brains... $h#$b#And yet, I can feel it in my whole body.$l",
 "Flor.Dialogue.Thu10": "I've had kind of a strange day... #$b#I really need a dopamine boost. I might go get a coffee or something sweet for a snack...",
@@ -5101,13 +5117,13 @@
 
 //Special Dialogue
 "Flor.Dialogue.breakUp": "Please don't. I need some time.$s",
-"Flor.Dialogue.danceRejection": "No thank you... I... I'm not good at dancing.$l",
+"Flor.Dialogue.danceRejection": "No thank you... I... I'm not good at dancing.$14",
 "Flor.Dialogue.divorced": "I need to set boundaries, so this is me setting them. Leave me alone.$a",
-"Flor.Dialogue.MovieInvitation": "Oh! You're inviting me to a movie?$l#$b#I don't get invited to places often... I'll gladly join you, @!$l",
+"Flor.Dialogue.MovieInvitation": "Oh! You're inviting me to a movie?$14#$b#I don't get invited to places often... I'll gladly join you, @!$h",
 
 //Resort
 "Flor.Dialogue.Resort_Entering": "Oh, wow! It's so pretty!$u#$b#And so hot...$s",
-"Flor.Dialogue.Resort_Leaving": "I'm pretty sure I got sunburned... I'll need to get some aloe at home.$l",
+"Flor.Dialogue.Resort_Leaving": "I'm pretty sure I got sunburned... I'll need to get some aloe at home.$14",
 "Flor.Dialogue.Resort_Leaving_2": "Everyone looks so happy, it's kind of sad that we have to leave. $s",
 "Flor.Dialogue.Resort_Shore": "Is the tide going in or out? I can't tell...",
 "Flor.Dialogue.Resort_Shore_2": "Wow...  look at how blue the water is, @! The way we classify a color is completely up to cultural interpretation, so there's no objective 'blue', but that comes pretty close!$h",
@@ -5115,7 +5131,7 @@
 "Flor.Dialogue.Resort_Umbrella_2": "It'd be impossible to read without this umbrella. I'm glad there's some shade!$h",
 "Flor.Dialogue.Resort_Umbrella_3": "Why do waves sound so soothing? It'd be so easy to fall asleep...",
 "Flor.Dialogue.Resort_Wander": "I'm not really a beach person, but I'm glad I came out here!$h#$b# I'm also really glad I'm wearing sandals. This sand is really hot.$s",
-"Flor.Dialogue.Resort_Bar": "I'm so thirsty! I can't wait to get some lemonade.$l",
+"Flor.Dialogue.Resort_Bar": "I'm so thirsty! I can't wait to get some lemonade.$14",
 "Flor.Dialogue.Resort": "Hi, @! Are you enjoying yourself?$h",
 
 
@@ -7164,12 +7180,12 @@
 ///Spring
 "Flor.MarriageDialogue.spring_1": "Will you help me do some spring cleaning this year?#$b#As much as I love winter, the sunshine and fresh air makes the house feel stuffy after being shut up against the cold for so long.$h",
 "Flor.MarriageDialogue.spring_12": "Tomorrow's the egg festival, right?#$b#I almost forgot... I'm not expected to bring an egg dish on our behalf, am I?$s",
-"Flor.MarriageDialogue.spring_23": "Um... do you... do you feel strongly about dancing, tomorrow?$s#$b#I still don't know how I feel about dancing in front of everyone...$l",
+"Flor.MarriageDialogue.spring_23": "Um... do you... do you feel strongly about dancing, tomorrow?$s#$b#I still don't know how I feel about dancing in front of everyone...$14",
 
 ///Summer
 "Flor.MarriageDialogue.summer_1": "Summer already?$u#$b# I need to order more sunscreen...",
 "Flor.MarriageDialogue.summer_10": "Are you all set for tomorrow, honey?#$b#Do you know what you're bringing?",
-"Flor.MarriageDialogue.summer_27": "Do you want to bring something to drink with us, tomorrow?#$b# I'm okay with anything, I just thought it might be a nice touch...$l",
+"Flor.MarriageDialogue.summer_27": "Do you want to bring something to drink with us, tomorrow?#$b# I'm okay with anything, I just thought it might be a nice touch...$14",
 
 ///Fall
 "Flor.MarriageDialogue.fall_1": "I remember working up on the hotel balcony during the fall. #$b#I like doing it on your porch better. Er. Our porch.$l",
@@ -8233,24 +8249,26 @@
 "Philip.HotelReaction.Small": "The hotel has been spacious lately.#$b#I hope this doesn't happen too often, or else I would need to look for a different place to stay.$s",
 "Flor.HotelReaction.Small": "I must speak to Mr. Richard when he's free.#$b#Maybe I can help come up with strategies for the hotel or something.",
 "Naomi.HotelReaction.Small": "placeholder",
-"Ceina.HotelReaction.Small": "placeholder",
 "Ian.HotelReaction.Small": "People haven't been coming in that much.$s#$b#Maybe I need to clean up more...",
+"Malaya.HotelReaction.Small": "placeholder",
+
 //Moderate amount of guests
 "Richard.HotelReaction.Moderate": "We've seen better days.#$b#But that's alright, I'm happy to serve my dear customers.$h",
 "Ysabelle.HotelReaction.Moderate": "Hmm, I think I'd be free later this afternoon.#$b#There's part of me that feels sad about it, but it gives me time to practice my pirouettes.$h",
 "Philip.HotelReaction.Moderate": "It's nice to see more people here.#$b#Thank Yoba for that.$h",
 "Flor.HotelReaction.Moderate": "This is a nice sign.#$b#I'm pleased to see a lot of people visiting.$h ",
 "Naomi.HotelReaction.Moderate": "placeholder",
-"Ceina.HotelReaction.Moderate": "placeholder",
 "Ian.HotelReaction.Moderate": "Mr. Richard told me that we have to come up with ways to attract more customers.",
+"Malaya.HotelReaction.Moderate": "placeholder",
+
 //Large amount of guests
 "Richard.HotelReaction.Large": "Today is a great day.$h#$b#Excuse me, but I must tend to the customers.#$e#I hope I'm making my dear Angelika proud.$h",
 "Ysabelle.HotelReaction.Large": "I'm glad to see Grandpa happy.$h#$b#Taking care of the hotel's his way to relax, and seeing it flourish makes me feel so proud of him.$h#$e#I wish Grandma was here to see this.$6",
 "Philip.HotelReaction.Large": "Wow, lots of people are here.#$b#Oh well, more people means more customer for them.$h",
 "Flor.HotelReaction.Large": "Oh, this is nice!$h#$b#Now, Mr. Richard won't worry so much.$h",
 "Naomi.HotelReaction.Large": "placeholder",
-"Ceina.HotelReaction.Large": "placeholder",
 "Ian.HotelReaction.Large": "Excuse me, I have to tend to a few things for Mr. Richard.#$e#I'm glad business is good today.#$b#But that just means more work for me.",
+"Malaya.HotelReaction.Large": "placeholder",
 
 //Day after RSV Gathering Festival
 "Richard.HotelReaction.Gathering": "placeholder",
@@ -8258,7 +8276,7 @@
 "Philip.HotelReaction.Gathering": "placeholder",
 "Flor.HotelReaction.Gathering": "placeholder",
 "Naomi.HotelReaction.Gathering": "placeholder",
-"Ceina.HotelReaction.Gathering": "placeholder",
+"Malaya.HotelReaction.Gathering": "placeholder",
 "Ian.HotelReaction.Gathering": "placeholder",
 //Authorities
 "Lenny.HotelReaction.Gathering": "placeholder",
@@ -8279,8 +8297,9 @@
 "Philip.HotelReaction.EoR": "That was great last night.$h#$b#It was a perfect way to start the year.",
 "Flor.HotelReaction.EoR": "Last night was pleasant.#$b#It brought people all over together, and it was a fun way for us to bond.$h",
 "Naomi.HotelReaction.EoR": "placeholder",
-"Ceina.HotelReaction.EoR": "placeholder",
 "Ian.HotelReaction.EoR": "Did you have fun last night?#$b#Being by the fire felt kind of cozy and warm.$l",
+"Malaya.HotelReaction.EoR": "placeholder",
+  
 //Authorities
 "Lenny.HotelReaction.EoR": "We had quite a successful turnout last night.$h#$e#I hope you had a great time and will continue to visit Ridgeside or maybe even live here if you want.$4#$b#Everybody seems to enjoy your company @!$h",
 "Lewis.HotelReaction.EoR": "Lenny did me proud last night.#$b#The festival was a success!#$e#That runs in the family you know.",
@@ -8300,8 +8319,9 @@
 "Philip.HotelReaction.Concert": "Were you at the concert yesterday?#$b#That Alissa sure has a great voice!#$e#She reminds me of the great superhero Operetta from the CDPep comics.$h",
 "Flor.HotelReaction.Concert": "Alissa has a wonderful voice.$l#$e#She definitely resembles the Luscinia Megarhynchos.$h#$b#Oh, that's the scientific term for Nightingale. *giggles*$h",
 "Naomi.HotelReaction.Concert": "placeholder",
-"Ceina.HotelReaction.Concert": "placeholder",
 "Ian.HotelReaction.Concert": "Hello there @.$h#$b#Did you enjoy the ",
+"Malaya.HotelReaction.Concert": "placeholder",
+
 //Authorities
 "Lenny.HotelReaction.Concert": "placeholder",
 "Lewis.HotelReaction.Concert": "placeholder",
@@ -8339,4 +8359,1307 @@
 "Tourist.Dialogue.18": "placeholder",
 "Tourist.Dialogue.19": "placeholder",
 "Tourist.Dialogue.20": "placeholder",
+
+
+//1.3 NPCs Dialogue
+"Gift.Love.Helen": "PLACEHOLDER",
+"Gift.Love.Undreya": "PLACEHOLDER",
+"Gift.Love.Daia": "PLACEHOLDER",
+"Gift.Love.Belinda": "PLACEHOLDER",
+"Gift.Love.Bliss": "PLACEHOLDER",
+"Gift.Love.Sari": "PLACEHOLDER",
+"Gift.Love.Pipo": "PLACEHOLDER",
+"Gift.Love.Acorn": "PLACEHOLDER",
+"Gift.Love.Naomi": "PLACEHOLDER",
+"Gift.Love.Malaya": "PLACEHOLDER",
+"Gift.Love.Kimpoi": "PLACEHOLDER",
+
+"Gift.Like.Helen": "PLACEHOLDER",
+"Gift.Like.Undreya": "PLACEHOLDER",
+"Gift.Like.Daia": "PLACEHOLDER",
+"Gift.Like.Belinda": "PLACEHOLDER",
+"Gift.Like.Bliss": "PLACEHOLDER",
+"Gift.Like.Sari": "PLACEHOLDER",
+"Gift.Like.Pipo": "PLACEHOLDER",
+"Gift.Like.Acorn": "PLACEHOLDER",
+"Gift.Like.Naomi": "PLACEHOLDER",
+"Gift.Like.Malaya": "PLACEHOLDER",
+"Gift.Like.Kimpoi": "PLACEHOLDER",
+
+"Gift.Dislike.Helen": "PLACEHOLDER",
+"Gift.Dislike.Undreya": "PLACEHOLDER",
+"Gift.Dislike.Daia": "PLACEHOLDER",
+"Gift.Dislike.Belinda": "PLACEHOLDER",
+"Gift.Dislike.Bliss": "PLACEHOLDER",
+"Gift.Dislike.Sari": "PLACEHOLDER",
+"Gift.Dislike.Pipo": "PLACEHOLDER",
+"Gift.Dislike.Acorn": "PLACEHOLDER",
+"Gift.Dislike.Naomi": "PLACEHOLDER",
+"Gift.Dislike.Malaya": "PLACEHOLDER",
+"Gift.Dislike.Kimpoi": "PLACEHOLDER",
+
+"Gift.Hate.Helen": "PLACEHOLDER",
+"Gift.Hate.Undreya": "PLACEHOLDER",
+"Gift.Hate.Daia": "PLACEHOLDER",
+"Gift.Hate.Belinda": "PLACEHOLDER",
+"Gift.Hate.Bliss": "PLACEHOLDER",
+"Gift.Hate.Sari": "PLACEHOLDER",
+"Gift.Hate.Pipo": "PLACEHOLDER",
+"Gift.Hate.Acorn": "PLACEHOLDER",
+"Gift.Hate.Naomi": "PLACEHOLDER",
+"Gift.Hate.Malaya": "PLACEHOLDER",
+"Gift.Hate.Kimpoi": "PLACEHOLDER",
+
+"Gift.Neutral.Helen": "PLACEHOLDER",
+"Gift.Neutral.Undreya": "PLACEHOLDER",
+"Gift.Neutral.Daia": "PLACEHOLDER",
+"Gift.Neutral.Belinda": "PLACEHOLDER",
+"Gift.Neutral.Bliss": "PLACEHOLDER",
+"Gift.Neutral.Sari": "PLACEHOLDER",
+"Gift.Neutral.Pipo": "PLACEHOLDER",
+"Gift.Neutral.Acorn": "PLACEHOLDER",
+"Gift.Neutral.Naomi": "PLACEHOLDER",
+"Gift.Neutral.Malaya": "PLACEHOLDER",
+"Gift.Neutral.Kimpoi": "PLACEHOLDER",
+
+//Keahi prank
+"keahiprank.Helen": "PLACEHOLDER",
+"keahiprank.Undreya": "PLACEHOLDER",
+"keahiprank.Daia": "PLACEHOLDER",
+"keahiprank.Belinda": "PLACEHOLDER",
+"keahiprank.Bliss": "PLACEHOLDER",
+"keahiprank.Sari": "PLACEHOLDER",
+"keahiprank.Pipo": "PLACEHOLDER",
+"keahiprank.Acorn": "PLACEHOLDER",
+"keahiprank.Naomi": "PLACEHOLDER",
+"keahiprank.Malaya": "PLACEHOLDER",
+"keahiprank.Kimpoi": "PLACEHOLDER",
+
+//Romance
+"Romance.Engagement.Jio0": "PLACEHOLDER",
+"Romance.Engagement.Jio1": "PLACEHOLDER",
+
+"Romance.Engagement.Daia0": "PLACEHOLDER",
+"Romance.Engagement.Daia1": "PLACEHOLDER",
+
+"Romance.FemaleWeddingFix.MaleFarmer1.Daia": "PLACEHOLDER",
+"Romance.FemaleWeddingFix.FemaleFarmer1.Daia": "PLACEHOLDER",
+"Romance.FemaleWeddingFix.MaleFarmer2.Daia": "PLACEHOLDER",
+"Romance.FemaleWeddingFix.FemaleFarmer2.Daia": "PLACEHOLDER",
+
+"Romance.give.flowersA.Daia": "PLACEHOLDER",
+"Romance.give.flowersB.Daia": "PLACEHOLDER",
+"Romance.stardrop.gift.Daia": "PLACEHOLDER",
+"Romance.rejectNPCA.Daia": "PLACEHOLDER",
+"Romance.rejectNPCB.Daia": "PLACEHOLDER",
+
+"Romance.give.flowersA.Jio": "PLACEHOLDER",
+"Romance.give.flowersB.Jio": "PLACEHOLDER",
+"Romance.stardrop.gift.Jio": "PLACEHOLDER",
+"Romance.rejectNPCA.Jio": "PLACEHOLDER",
+"Romance.rejectNPCB.Jio": "PLACEHOLDER",
+
+"Romance.MovieInvite.Spouse.Daia": "PLACEHOLDER",
+"Romance.MovieInvite.Spouse.Jio": "PLACEHOLDER",
+
+//Marriage
+///Spring
+"Daia.MarriageDialogue.spring_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.spring_12": "PLACEHOLDER",
+"Daia.MarriageDialogue.spring_23": "PLACEHOLDER",
+
+///Summer
+"Daia.MarriageDialogue.summer_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.summer_10": "PLACEHOLDER",
+"Daia.MarriageDialogue.summer_27": "PLACEHOLDER",
+
+///Fall
+"Daia.MarriageDialogue.fall_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.fall_15": "PLACEHOLDERh",
+"Daia.MarriageDialogue.fall_26": "PLACEHOLDER",
+
+///Winter
+"Daia.MarriageDialogue.winter_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.winter_7": "PLACEHOLDER",
+"Daia.MarriageDialogue.winter_24": "PLACEHOLDER",
+
+///Room
+"Daia.MarriageDialogue.spouseRoom_Daia": "PLACEHOLDER",
+
+///Patio
+"Daia.MarriageDialogue.patio_Daia": "PLACEHOLDER",
+
+///Rainy Day
+"Daia.MarriageDialogue.Rainy_Day_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Day_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Day_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Day_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Day_4": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Day_Daia": "PLACEHOLDER",
+
+///Rainy Night
+"Daia.MarriageDialogue.Rainy_Night_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Night_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Night_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Night_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Night_4": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Night_5": "PLACEHOLDER",
+"Daia.MarriageDialogue.Rainy_Night_Daia": "PLACEHOLDER",
+
+///Indoor Day
+"Daia.MarriageDialogue.Indoor_Day_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Day_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Day_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Day_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Day_4": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Day_Daia": "PLACEHOLDER",
+
+//Indoor Night
+"Daia.MarriageDialogue.Indoor_Night_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Night_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Night_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Night_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Night_4": "PLACEHOLDER",
+"Daia.MarriageDialogue.Indoor_Night_Daia": "PLACEHOLDER",
+
+///Outdoors
+"Daia.MarriageDialogue.Outdoor_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Outdoor_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Outdoor_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Outdoor_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Outdoor_4": "PLACEHOLDER",
+
+//Leaving
+"Daia.MarriageDialogue.funLeave_Daia": "PLACEHOLDER",
+
+//Returning
+"Daia.MarriageDialogue.funReturn_Daia": "PLACEHOLDER",
+
+//One kid
+"Daia.MarriageDialogue.OneKid_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.OneKid_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.OneKid_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.OneKid_3": "PLACEHOLDER",
+
+//Two kids
+"Daia.MarriageDialogue.TwoKids_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.TwoKids_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.TwoKids_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.TwoKids_3": "PLACEHOLDER",
+
+//Relationship-dependent
+///Good
+"Daia.MarriageDialogue.Good_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_4": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_5": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_6": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_7": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_8": "PLACEHOLDER",
+"Daia.MarriageDialogue.Good_9": "PLACEHOLDER",
+
+///Neutral
+"Daia.MarriageDialogue.Neutral_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_4": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_5": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_6": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_7": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_8": "PLACEHOLDER",
+"Daia.MarriageDialogue.Neutral_9": "PLACEHOLDER",
+
+///Bad
+"Daia.MarriageDialogue.Bad_0": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_1": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_2": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_3": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_4": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_5": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_6": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_7": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_8": "PLACEHOLDER",
+"Daia.MarriageDialogue.Bad_9": "PLACEHOLDER",
+
+///Spring
+"Jio.MarriageDialogue.spring_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.spring_12": "PLACEHOLDER",
+"Jio.MarriageDialogue.spring_23": "PLACEHOLDER",
+
+///Summer
+"Jio.MarriageDialogue.summer_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.summer_10": "PLACEHOLDER",
+"Jio.MarriageDialogue.summer_27": "PLACEHOLDER",
+
+///Fall
+"Jio.MarriageDialogue.fall_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.fall_15": "PLACEHOLDERh",
+"Jio.MarriageDialogue.fall_26": "PLACEHOLDER",
+
+///Winter
+"Jio.MarriageDialogue.winter_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.winter_7": "PLACEHOLDER",
+"Jio.MarriageDialogue.winter_17": "PLACEHOLDER",
+"Jio.MarriageDialogue.winter_24": "PLACEHOLDER",
+
+///Room
+"Jio.MarriageDialogue.spouseRoom_Jio": "PLACEHOLDER",
+
+///Patio
+"Jio.MarriageDialogue.patio_Jio": "PLACEHOLDER",
+
+///Rainy Day
+"Jio.MarriageDialogue.Rainy_Day_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Day_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Day_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Day_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Day_4": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Day_Jio": "PLACEHOLDER",
+
+///Rainy Night
+"Jio.MarriageDialogue.Rainy_Night_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Night_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Night_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Night_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Night_4": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Night_5": "PLACEHOLDER",
+"Jio.MarriageDialogue.Rainy_Night_Jio": "PLACEHOLDER",
+
+///Indoor Day
+"Jio.MarriageDialogue.Indoor_Day_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Day_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Day_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Day_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Day_4": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Day_Jio": "PLACEHOLDER",
+
+//Indoor Night
+"Jio.MarriageDialogue.Indoor_Night_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Night_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Night_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Night_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Night_4": "PLACEHOLDER",
+"Jio.MarriageDialogue.Indoor_Night_Jio": "PLACEHOLDER",
+
+///Outdoors
+"Jio.MarriageDialogue.Outdoor_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Outdoor_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Outdoor_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Outdoor_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Outdoor_4": "PLACEHOLDER",
+
+//Leaving
+"Jio.MarriageDialogue.funLeave_Jio": "PLACEHOLDER",
+
+//Returning
+"Jio.MarriageDialogue.funReturn_Jio": "PLACEHOLDER",
+
+//One kid
+"Jio.MarriageDialogue.OneKid_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.OneKid_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.OneKid_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.OneKid_3": "PLACEHOLDER",
+
+//Two kids
+"Jio.MarriageDialogue.TwoKids_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.TwoKids_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.TwoKids_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.TwoKids_3": "PLACEHOLDER",
+
+//Relationship-dependent
+///Good
+"Jio.MarriageDialogue.Good_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_4": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_5": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_6": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_7": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_8": "PLACEHOLDER",
+"Jio.MarriageDialogue.Good_9": "PLACEHOLDER",
+
+///Neutral
+"Jio.MarriageDialogue.Neutral_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_4": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_5": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_6": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_7": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_8": "PLACEHOLDER",
+"Jio.MarriageDialogue.Neutral_9": "PLACEHOLDER",
+
+///Bad
+"Jio.MarriageDialogue.Bad_0": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_1": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_2": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_3": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_4": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_5": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_6": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_7": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_8": "PLACEHOLDER",
+"Jio.MarriageDialogue.Bad_9": "PLACEHOLDER",
+
+	//Daia
+			//Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY) LIKE
+"MovieData.Daia.SpringMovie0.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.SpringMovie0.Like.DuringMovie": "PLACEHOLDER",
+"MovieData.Daia.SpringMovie0.Like.AfterMovie": "PLACEHOLDER",
+
+			//Journey of the Praire King (VIDEOGAME) LOVE
+"MovieData.Daia.SummerMovie0.Dislike.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.SummerMovie0.Dislike.DuringMovie": "PLACEHOLDER",
+"MovieData.Daia.SummerMovie0.Dislike.AfterMovie": "PLACEHOLDER",
+
+			//Mysterium (MINDFUCK) (MYSTERY) DISLIKE
+"MovieData.Daia.FallMovie0.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.FallMovie0.Like.DuringMovie": "PLACEHOLDER",
+"MovieData.Daia.FallMovie0.Like.AfterMovie": "PLACEHOLDER",
+
+			//Miracle at Coldstar Ranch (WHOLESOME) (TEAR JERKER) (FAMILY) DISLIKE
+"MovieData.Daia.WinterMovie0.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.WinterMovie0.Like.DuringMovie": "*PLACEHOLDER",
+"MovieData.Daia.WinterMovie0.Like.AfterMovie": "PLACEHOLDER",
+
+			//Natural Wonders: Exploring Our Vibrant World (TOUR) (EDUCATIONAL) LIKE
+"MovieData.Daia.SpringMovie1.Dislike.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.SpringMovie1.Dislike.DuringMovie": "PLACEHOLDER",
+"MovieData.Daia.SpringMovie1.Dislike.AfterMovie": "PLACEHOLDER",
+
+			//Wumbus (SCI-FI) (COMEDY) LIKE
+"MovieData.Daia.SummerMovie1.Love.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.SummerMovie1.Love.DuringMovie": "PLACEHOLDER",
+"MovieData.Daia.SummerMovie1.Love.AfterMovie": "PLACEHOLDER",
+
+			//Howls in the Rain (HORROR) LOVE
+"MovieData.Daia.FallMovie1.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.FallMovie1.Like.DuringMovie": "PLACEHOLDER",
+"MovieData.Daia.FallMovie1.Like.AfterMovie": "PLACEHOLDER",
+
+			//Zuzu City Express (CLASSIC) (ROMANCE) LOVE
+"MovieData.Daia.WinterMovie1.Love.BeforeMovie": "PLACEHOLDER",
+"MovieData.Daia.WinterMovie1.Love.DuringMovie": "PLACEHOLDER",
+"MovieData.Daia.WinterMovie1.Love.AfterMovie": "PLACEHOLDER",
+
+	//Jio
+			//Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY) LIKE
+"MovieData.Jio.SpringMovie0.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.SpringMovie0.Like.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.SpringMovie0.Like.AfterMovie": "PLACEHOLDER",
+
+			//Journey of the Praire King (VIDEOGAME) LIKE
+"MovieData.Jio.SummerMovie0.Dislike.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.SummerMovie0.Dislike.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.SummerMovie0.Dislike.AfterMovie": "PLACEHOLDER",
+
+			//Mysterium (MINDFUCK) (MYSTERY) LOVE
+"MovieData.Jio.FallMovie0.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.FallMovie0.Like.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.FallMovie0.Like.AfterMovie": "PLACEHOLDER",
+
+			//Miracle at Coldstar Ranch (WHOLESOME) (TEAR JERKER) (FAMILY) LIKE
+"MovieData.Jio.WinterMovie0.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.WinterMovie0.Like.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.WinterMovie0.Like.AfterMovie": "PLACEHOLDER",
+
+			//Natural Wonders: Exploring Our Vibrant World (TOUR) (EDUCATIONAL) DISLIKE
+"MovieData.Jio.SpringMovie1.Dislike.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.SpringMovie1.Dislike.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.SpringMovie1.Dislike.AfterMovie": "PLACEHOLDER",
+
+			//Wumbus (SCI-FI) (COMEDY) DISLIKE
+"MovieData.Jio.SummerMovie1.Love.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.SummerMovie1.Love.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.SummerMovie1.Love.AfterMovie": "PLACEHOLDER",
+
+			//Howls in the Rain (HORROR) LIKE
+"MovieData.Jio.FallMovie1.Like.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.FallMovie1.Like.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.FallMovie1.Like.AfterMovie": "PLACEHOLDER",
+
+			//Zuzu City Express (CLASSIC) (ROMANCE) DISLIKE
+"MovieData.Jio.WinterMovie1.Love.BeforeMovie": "PLACEHOLDER",
+"MovieData.Jio.WinterMovie1.Love.DuringMovie": "PLACEHOLDER",
+"MovieData.Jio.WinterMovie1.Love.AfterMovie": "PLACEHOLDER",
+
+//Daily Dialogue
+//Daia
+//Spring
+"Daia.Dialogue.spring_1": "PLACEHOLDER",
+"Daia.Dialogue.spring_12": "PLACEHOLDER",
+"Daia.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Daia.Dialogue.summer_1": "PLACEHOLDER",
+"Daia.Dialogue.summer_10": "PLACEHOLDER",
+"Daia.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Daia.Dialogue.fall_1": "PLACEHOLDER",
+"Daia.Dialogue.fall_15": "PLACEHOLDER",
+"Daia.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Daia.Dialogue.winter_1": "PLACEHOLDER",
+"Daia.Dialogue.winter_7": "PLACEHOLDER",
+"Daia.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Daia.Dialogue.Mon": "PLACEHOLDER",
+"Daia.Dialogue.Tue": "PLACEHOLDER",
+"Daia.Dialogue.Wed": "PLACEHOLDER",
+"Daia.Dialogue.Thu": "PLACEHOLDER",
+"Daia.Dialogue.Fri": "PLACEHOLDER",
+"Daia.Dialogue.Sat": "PLACEHOLDER",
+"Daia.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Daia.Dialogue.Mon2": "PLACEHOLDER",
+"Daia.Dialogue.Tue2": "PLACEHOLDER",
+"Daia.Dialogue.Wed2": "PLACEHOLDER",
+"Daia.Dialogue.Thu2": "PLACEHOLDER",
+"Daia.Dialogue.Fri2": "PLACEHOLDER",
+"Daia.Dialogue.Sat2": "PLACEHOLDER",
+"Daia.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Daia.Dialogue.Mon4": "PLACEHOLDER",
+"Daia.Dialogue.Tue4": "PLACEHOLDER",
+"Daia.Dialogue.Wed4": "PLACEHOLDER",
+"Daia.Dialogue.Thu4": "PLACEHOLDER",
+"Daia.Dialogue.Fri4": "PLACEHOLDER",
+"Daia.Dialogue.Sat4": "PLACEHOLDER",
+"Daia.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Daia.Dialogue.Mon6": "PLACEHOLDER",
+"Daia.Dialogue.Tue6": "PLACEHOLDER",
+"Daia.Dialogue.Wed6": "PLACEHOLDER",
+"Daia.Dialogue.Thu6": "PLACEHOLDER",
+"Daia.Dialogue.Fri6": "PLACEHOLDER",
+"Daia.Dialogue.Sat6": "PLACEHOLDER",
+"Daia.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Daia.Dialogue.Mon8": "PLACEHOLDER",
+"Daia.Dialogue.Tue8": "PLACEHOLDER",
+"Daia.Dialogue.Wed8": "PLACEHOLDER",
+"Daia.Dialogue.Thu8": "PLACEHOLDER",
+"Daia.Dialogue.Fri8": "PLACEHOLDER",
+"Daia.Dialogue.Sat8": "PLACEHOLDER",
+"Daia.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Daia.Dialogue.Mon10": "PLACEHOLDER",
+"Daia.Dialogue.Tue10": "PLACEHOLDER",
+"Daia.Dialogue.Wed10": "PLACEHOLDER",
+"Daia.Dialogue.Thu10": "PLACEHOLDER",
+"Daia.Dialogue.Fri10": "PLACEHOLDER",
+"Daia.Dialogue.Sat10": "PLACEHOLDER",
+"Daia.Dialogue.Sun10": "PLACEHOLDER",
+
+//Special Dialogue
+"Daia.Dialogue.breakUp": "PLACEHOLDER",
+"Daia.Dialogue.danceRejection": "PLACEHOLDER",
+"Daia.Dialogue.divorced": "PLACEHOLDER",
+"Daia.Dialogue.MovieInvitation": "PLACEHOLDER",
+
+//Resort
+"Daia.Dialogue.Resort_Entering": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Leaving": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Leaving_2": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Shore": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Shore_2": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Umbrella": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Umbrella_2": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Umbrella_3": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Wander": "PLACEHOLDER",
+"Daia.Dialogue.Resort_Bar": "PLACEHOLDER",
+"Daia.Dialogue.Resort": "PLACEHOLDER",
+
+//Jio
+//Special Dialogue
+"Jio.Dialogue.breakUp": "PLACEHOLDER",
+"Jio.Dialogue.danceRejection": "PLACEHOLDER",
+"Jio.Dialogue.divorced": "PLACEHOLDER",
+"Jio.Dialogue.MovieInvitation": "PLACEHOLDER",
+
+//Belinda
+//Spring
+"Belinda.Dialogue.spring_1": "PLACEHOLDER",
+"Belinda.Dialogue.spring_12": "PLACEHOLDER",
+"Belinda.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Belinda.Dialogue.summer_1": "PLACEHOLDER",
+"Belinda.Dialogue.summer_10": "PLACEHOLDER",
+"Belinda.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Belinda.Dialogue.fall_1": "PLACEHOLDER",
+"Belinda.Dialogue.fall_15": "PLACEHOLDER",
+"Belinda.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Belinda.Dialogue.winter_1": "PLACEHOLDER",
+"Belinda.Dialogue.winter_7": "PLACEHOLDER",
+"Belinda.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Belinda.Dialogue.Mon": "PLACEHOLDER",
+"Belinda.Dialogue.Tue": "PLACEHOLDER",
+"Belinda.Dialogue.Wed": "PLACEHOLDER",
+"Belinda.Dialogue.Thu": "PLACEHOLDER",
+"Belinda.Dialogue.Fri": "PLACEHOLDER",
+"Belinda.Dialogue.Sat": "PLACEHOLDER",
+"Belinda.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Belinda.Dialogue.Mon2": "PLACEHOLDER",
+"Belinda.Dialogue.Tue2": "PLACEHOLDER",
+"Belinda.Dialogue.Wed2": "PLACEHOLDER",
+"Belinda.Dialogue.Thu2": "PLACEHOLDER",
+"Belinda.Dialogue.Fri2": "PLACEHOLDER",
+"Belinda.Dialogue.Sat2": "PLACEHOLDER",
+"Belinda.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Belinda.Dialogue.Mon4": "PLACEHOLDER",
+"Belinda.Dialogue.Tue4": "PLACEHOLDER",
+"Belinda.Dialogue.Wed4": "PLACEHOLDER",
+"Belinda.Dialogue.Thu4": "PLACEHOLDER",
+"Belinda.Dialogue.Fri4": "PLACEHOLDER",
+"Belinda.Dialogue.Sat4": "PLACEHOLDER",
+"Belinda.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Belinda.Dialogue.Mon6": "PLACEHOLDER",
+"Belinda.Dialogue.Tue6": "PLACEHOLDER",
+"Belinda.Dialogue.Wed6": "PLACEHOLDER",
+"Belinda.Dialogue.Thu6": "PLACEHOLDER",
+"Belinda.Dialogue.Fri6": "PLACEHOLDER",
+"Belinda.Dialogue.Sat6": "PLACEHOLDER",
+"Belinda.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Belinda.Dialogue.Mon8": "PLACEHOLDER",
+"Belinda.Dialogue.Tue8": "PLACEHOLDER",
+"Belinda.Dialogue.Wed8": "PLACEHOLDER",
+"Belinda.Dialogue.Thu8": "PLACEHOLDER",
+"Belinda.Dialogue.Fri8": "PLACEHOLDER",
+"Belinda.Dialogue.Sat8": "PLACEHOLDER",
+"Belinda.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Belinda.Dialogue.Mon10": "PLACEHOLDER",
+"Belinda.Dialogue.Tue10": "PLACEHOLDER",
+"Belinda.Dialogue.Wed10": "PLACEHOLDER",
+"Belinda.Dialogue.Thu10": "PLACEHOLDER",
+"Belinda.Dialogue.Fri10": "PLACEHOLDER",
+"Belinda.Dialogue.Sat10": "PLACEHOLDER",
+"Belinda.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Bliss
+//Spring
+"Bliss.Dialogue.spring_1": "PLACEHOLDER",
+"Bliss.Dialogue.spring_12": "PLACEHOLDER",
+"Bliss.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Bliss.Dialogue.summer_1": "PLACEHOLDER",
+"Bliss.Dialogue.summer_10": "PLACEHOLDER",
+"Bliss.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Bliss.Dialogue.fall_1": "PLACEHOLDER",
+"Bliss.Dialogue.fall_15": "PLACEHOLDER",
+"Bliss.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Bliss.Dialogue.winter_1": "PLACEHOLDER",
+"Bliss.Dialogue.winter_7": "PLACEHOLDER",
+"Bliss.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Bliss.Dialogue.Mon": "PLACEHOLDER",
+"Bliss.Dialogue.Tue": "PLACEHOLDER",
+"Bliss.Dialogue.Wed": "PLACEHOLDER",
+"Bliss.Dialogue.Thu": "PLACEHOLDER",
+"Bliss.Dialogue.Fri": "PLACEHOLDER",
+"Bliss.Dialogue.Sat": "PLACEHOLDER",
+"Bliss.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Bliss.Dialogue.Mon2": "PLACEHOLDER",
+"Bliss.Dialogue.Tue2": "PLACEHOLDER",
+"Bliss.Dialogue.Wed2": "PLACEHOLDER",
+"Bliss.Dialogue.Thu2": "PLACEHOLDER",
+"Bliss.Dialogue.Fri2": "PLACEHOLDER",
+"Bliss.Dialogue.Sat2": "PLACEHOLDER",
+"Bliss.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Bliss.Dialogue.Mon4": "PLACEHOLDER",
+"Bliss.Dialogue.Tue4": "PLACEHOLDER",
+"Bliss.Dialogue.Wed4": "PLACEHOLDER",
+"Bliss.Dialogue.Thu4": "PLACEHOLDER",
+"Bliss.Dialogue.Fri4": "PLACEHOLDER",
+"Bliss.Dialogue.Sat4": "PLACEHOLDER",
+"Bliss.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Bliss.Dialogue.Mon6": "PLACEHOLDER",
+"Bliss.Dialogue.Tue6": "PLACEHOLDER",
+"Bliss.Dialogue.Wed6": "PLACEHOLDER",
+"Bliss.Dialogue.Thu6": "PLACEHOLDER",
+"Bliss.Dialogue.Fri6": "PLACEHOLDER",
+"Bliss.Dialogue.Sat6": "PLACEHOLDER",
+"Bliss.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Bliss.Dialogue.Mon8": "PLACEHOLDER",
+"Bliss.Dialogue.Tue8": "PLACEHOLDER",
+"Bliss.Dialogue.Wed8": "PLACEHOLDER",
+"Bliss.Dialogue.Thu8": "PLACEHOLDER",
+"Bliss.Dialogue.Fri8": "PLACEHOLDER",
+"Bliss.Dialogue.Sat8": "PLACEHOLDER",
+"Bliss.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Bliss.Dialogue.Mon10": "PLACEHOLDER",
+"Bliss.Dialogue.Tue10": "PLACEHOLDER",
+"Bliss.Dialogue.Wed10": "PLACEHOLDER",
+"Bliss.Dialogue.Thu10": "PLACEHOLDER",
+"Bliss.Dialogue.Fri10": "PLACEHOLDER",
+"Bliss.Dialogue.Sat10": "PLACEHOLDER",
+"Bliss.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Sari
+//Spring
+"Sari.Dialogue.spring_1": "PLACEHOLDER",
+"Sari.Dialogue.spring_12": "PLACEHOLDER",
+"Sari.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Sari.Dialogue.summer_1": "PLACEHOLDER",
+"Sari.Dialogue.summer_10": "PLACEHOLDER",
+"Sari.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Sari.Dialogue.fall_1": "PLACEHOLDER",
+"Sari.Dialogue.fall_15": "PLACEHOLDER",
+"Sari.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Sari.Dialogue.winter_1": "PLACEHOLDER",
+"Sari.Dialogue.winter_7": "PLACEHOLDER",
+"Sari.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Sari.Dialogue.Mon": "PLACEHOLDER",
+"Sari.Dialogue.Tue": "PLACEHOLDER",
+"Sari.Dialogue.Wed": "PLACEHOLDER",
+"Sari.Dialogue.Thu": "PLACEHOLDER",
+"Sari.Dialogue.Fri": "PLACEHOLDER",
+"Sari.Dialogue.Sat": "PLACEHOLDER",
+"Sari.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Sari.Dialogue.Mon2": "PLACEHOLDER",
+"Sari.Dialogue.Tue2": "PLACEHOLDER",
+"Sari.Dialogue.Wed2": "PLACEHOLDER",
+"Sari.Dialogue.Thu2": "PLACEHOLDER",
+"Sari.Dialogue.Fri2": "PLACEHOLDER",
+"Sari.Dialogue.Sat2": "PLACEHOLDER",
+"Sari.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Sari.Dialogue.Mon4": "PLACEHOLDER",
+"Sari.Dialogue.Tue4": "PLACEHOLDER",
+"Sari.Dialogue.Wed4": "PLACEHOLDER",
+"Sari.Dialogue.Thu4": "PLACEHOLDER",
+"Sari.Dialogue.Fri4": "PLACEHOLDER",
+"Sari.Dialogue.Sat4": "PLACEHOLDER",
+"Sari.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Sari.Dialogue.Mon6": "PLACEHOLDER",
+"Sari.Dialogue.Tue6": "PLACEHOLDER",
+"Sari.Dialogue.Wed6": "PLACEHOLDER",
+"Sari.Dialogue.Thu6": "PLACEHOLDER",
+"Sari.Dialogue.Fri6": "PLACEHOLDER",
+"Sari.Dialogue.Sat6": "PLACEHOLDER",
+"Sari.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Sari.Dialogue.Mon8": "PLACEHOLDER",
+"Sari.Dialogue.Tue8": "PLACEHOLDER",
+"Sari.Dialogue.Wed8": "PLACEHOLDER",
+"Sari.Dialogue.Thu8": "PLACEHOLDER",
+"Sari.Dialogue.Fri8": "PLACEHOLDER",
+"Sari.Dialogue.Sat8": "PLACEHOLDER",
+"Sari.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Sari.Dialogue.Mon10": "PLACEHOLDER",
+"Sari.Dialogue.Tue10": "PLACEHOLDER",
+"Sari.Dialogue.Wed10": "PLACEHOLDER",
+"Sari.Dialogue.Thu10": "PLACEHOLDER",
+"Sari.Dialogue.Fri10": "PLACEHOLDER",
+"Sari.Dialogue.Sat10": "PLACEHOLDER",
+"Sari.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Pipo
+//Spring
+"Pipo.Dialogue.spring_1": "PLACEHOLDER",
+"Pipo.Dialogue.spring_12": "PLACEHOLDER",
+"Pipo.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Pipo.Dialogue.summer_1": "PLACEHOLDER",
+"Pipo.Dialogue.summer_10": "PLACEHOLDER",
+"Pipo.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Pipo.Dialogue.fall_1": "PLACEHOLDER",
+"Pipo.Dialogue.fall_15": "PLACEHOLDER",
+"Pipo.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Pipo.Dialogue.winter_1": "PLACEHOLDER",
+"Pipo.Dialogue.winter_7": "PLACEHOLDER",
+"Pipo.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Pipo.Dialogue.Mon": "PLACEHOLDER",
+"Pipo.Dialogue.Tue": "PLACEHOLDER",
+"Pipo.Dialogue.Wed": "PLACEHOLDER",
+"Pipo.Dialogue.Thu": "PLACEHOLDER",
+"Pipo.Dialogue.Fri": "PLACEHOLDER",
+"Pipo.Dialogue.Sat": "PLACEHOLDER",
+"Pipo.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Pipo.Dialogue.Mon2": "PLACEHOLDER",
+"Pipo.Dialogue.Tue2": "PLACEHOLDER",
+"Pipo.Dialogue.Wed2": "PLACEHOLDER",
+"Pipo.Dialogue.Thu2": "PLACEHOLDER",
+"Pipo.Dialogue.Fri2": "PLACEHOLDER",
+"Pipo.Dialogue.Sat2": "PLACEHOLDER",
+"Pipo.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Pipo.Dialogue.Mon4": "PLACEHOLDER",
+"Pipo.Dialogue.Tue4": "PLACEHOLDER",
+"Pipo.Dialogue.Wed4": "PLACEHOLDER",
+"Pipo.Dialogue.Thu4": "PLACEHOLDER",
+"Pipo.Dialogue.Fri4": "PLACEHOLDER",
+"Pipo.Dialogue.Sat4": "PLACEHOLDER",
+"Pipo.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Pipo.Dialogue.Mon6": "PLACEHOLDER",
+"Pipo.Dialogue.Tue6": "PLACEHOLDER",
+"Pipo.Dialogue.Wed6": "PLACEHOLDER",
+"Pipo.Dialogue.Thu6": "PLACEHOLDER",
+"Pipo.Dialogue.Fri6": "PLACEHOLDER",
+"Pipo.Dialogue.Sat6": "PLACEHOLDER",
+"Pipo.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Pipo.Dialogue.Mon8": "PLACEHOLDER",
+"Pipo.Dialogue.Tue8": "PLACEHOLDER",
+"Pipo.Dialogue.Wed8": "PLACEHOLDER",
+"Pipo.Dialogue.Thu8": "PLACEHOLDER",
+"Pipo.Dialogue.Fri8": "PLACEHOLDER",
+"Pipo.Dialogue.Sat8": "PLACEHOLDER",
+"Pipo.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Pipo.Dialogue.Mon10": "PLACEHOLDER",
+"Pipo.Dialogue.Tue10": "PLACEHOLDER",
+"Pipo.Dialogue.Wed10": "PLACEHOLDER",
+"Pipo.Dialogue.Thu10": "PLACEHOLDER",
+"Pipo.Dialogue.Fri10": "PLACEHOLDER",
+"Pipo.Dialogue.Sat10": "PLACEHOLDER",
+"Pipo.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Acorn
+//Spring
+"Acorn.Dialogue.spring_1": "PLACEHOLDER",
+"Acorn.Dialogue.spring_12": "PLACEHOLDER",
+"Acorn.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Acorn.Dialogue.summer_1": "PLACEHOLDER",
+"Acorn.Dialogue.summer_10": "PLACEHOLDER",
+"Acorn.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Acorn.Dialogue.fall_1": "PLACEHOLDER",
+"Acorn.Dialogue.fall_15": "PLACEHOLDER",
+"Acorn.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Acorn.Dialogue.winter_1": "PLACEHOLDER",
+"Acorn.Dialogue.winter_7": "PLACEHOLDER",
+"Acorn.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Acorn.Dialogue.Mon": "PLACEHOLDER",
+"Acorn.Dialogue.Tue": "PLACEHOLDER",
+"Acorn.Dialogue.Wed": "PLACEHOLDER",
+"Acorn.Dialogue.Thu": "PLACEHOLDER",
+"Acorn.Dialogue.Fri": "PLACEHOLDER",
+"Acorn.Dialogue.Sat": "PLACEHOLDER",
+"Acorn.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Acorn.Dialogue.Mon2": "PLACEHOLDER",
+"Acorn.Dialogue.Tue2": "PLACEHOLDER",
+"Acorn.Dialogue.Wed2": "PLACEHOLDER",
+"Acorn.Dialogue.Thu2": "PLACEHOLDER",
+"Acorn.Dialogue.Fri2": "PLACEHOLDER",
+"Acorn.Dialogue.Sat2": "PLACEHOLDER",
+"Acorn.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Acorn.Dialogue.Mon4": "PLACEHOLDER",
+"Acorn.Dialogue.Tue4": "PLACEHOLDER",
+"Acorn.Dialogue.Wed4": "PLACEHOLDER",
+"Acorn.Dialogue.Thu4": "PLACEHOLDER",
+"Acorn.Dialogue.Fri4": "PLACEHOLDER",
+"Acorn.Dialogue.Sat4": "PLACEHOLDER",
+"Acorn.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Acorn.Dialogue.Mon6": "PLACEHOLDER",
+"Acorn.Dialogue.Tue6": "PLACEHOLDER",
+"Acorn.Dialogue.Wed6": "PLACEHOLDER",
+"Acorn.Dialogue.Thu6": "PLACEHOLDER",
+"Acorn.Dialogue.Fri6": "PLACEHOLDER",
+"Acorn.Dialogue.Sat6": "PLACEHOLDER",
+"Acorn.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Acorn.Dialogue.Mon8": "PLACEHOLDER",
+"Acorn.Dialogue.Tue8": "PLACEHOLDER",
+"Acorn.Dialogue.Wed8": "PLACEHOLDER",
+"Acorn.Dialogue.Thu8": "PLACEHOLDER",
+"Acorn.Dialogue.Fri8": "PLACEHOLDER",
+"Acorn.Dialogue.Sat8": "PLACEHOLDER",
+"Acorn.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Acorn.Dialogue.Mon10": "PLACEHOLDER",
+"Acorn.Dialogue.Tue10": "PLACEHOLDER",
+"Acorn.Dialogue.Wed10": "PLACEHOLDER",
+"Acorn.Dialogue.Thu10": "PLACEHOLDER",
+"Acorn.Dialogue.Fri10": "PLACEHOLDER",
+"Acorn.Dialogue.Sat10": "PLACEHOLDER",
+"Acorn.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Naomi
+//Spring
+"Naomi.Dialogue.spring_1": "PLACEHOLDER",
+"Naomi.Dialogue.spring_12": "PLACEHOLDER",
+"Naomi.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Naomi.Dialogue.summer_1": "PLACEHOLDER",
+"Naomi.Dialogue.summer_10": "PLACEHOLDER",
+"Naomi.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Naomi.Dialogue.fall_1": "PLACEHOLDER",
+"Naomi.Dialogue.fall_15": "PLACEHOLDER",
+"Naomi.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Naomi.Dialogue.winter_1": "PLACEHOLDER",
+"Naomi.Dialogue.winter_7": "PLACEHOLDER",
+"Naomi.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Naomi.Dialogue.Mon": "PLACEHOLDER",
+"Naomi.Dialogue.Tue": "PLACEHOLDER",
+"Naomi.Dialogue.Wed": "PLACEHOLDER",
+"Naomi.Dialogue.Thu": "PLACEHOLDER",
+"Naomi.Dialogue.Fri": "PLACEHOLDER",
+"Naomi.Dialogue.Sat": "PLACEHOLDER",
+"Naomi.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Naomi.Dialogue.Mon2": "PLACEHOLDER",
+"Naomi.Dialogue.Tue2": "PLACEHOLDER",
+"Naomi.Dialogue.Wed2": "PLACEHOLDER",
+"Naomi.Dialogue.Thu2": "PLACEHOLDER",
+"Naomi.Dialogue.Fri2": "PLACEHOLDER",
+"Naomi.Dialogue.Sat2": "PLACEHOLDER",
+"Naomi.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Naomi.Dialogue.Mon4": "PLACEHOLDER",
+"Naomi.Dialogue.Tue4": "PLACEHOLDER",
+"Naomi.Dialogue.Wed4": "PLACEHOLDER",
+"Naomi.Dialogue.Thu4": "PLACEHOLDER",
+"Naomi.Dialogue.Fri4": "PLACEHOLDER",
+"Naomi.Dialogue.Sat4": "PLACEHOLDER",
+"Naomi.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Naomi.Dialogue.Mon6": "PLACEHOLDER",
+"Naomi.Dialogue.Tue6": "PLACEHOLDER",
+"Naomi.Dialogue.Wed6": "PLACEHOLDER",
+"Naomi.Dialogue.Thu6": "PLACEHOLDER",
+"Naomi.Dialogue.Fri6": "PLACEHOLDER",
+"Naomi.Dialogue.Sat6": "PLACEHOLDER",
+"Naomi.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Naomi.Dialogue.Mon8": "PLACEHOLDER",
+"Naomi.Dialogue.Tue8": "PLACEHOLDER",
+"Naomi.Dialogue.Wed8": "PLACEHOLDER",
+"Naomi.Dialogue.Thu8": "PLACEHOLDER",
+"Naomi.Dialogue.Fri8": "PLACEHOLDER",
+"Naomi.Dialogue.Sat8": "PLACEHOLDER",
+"Naomi.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Naomi.Dialogue.Mon10": "PLACEHOLDER",
+"Naomi.Dialogue.Tue10": "PLACEHOLDER",
+"Naomi.Dialogue.Wed10": "PLACEHOLDER",
+"Naomi.Dialogue.Thu10": "PLACEHOLDER",
+"Naomi.Dialogue.Fri10": "PLACEHOLDER",
+"Naomi.Dialogue.Sat10": "PLACEHOLDER",
+"Naomi.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Malaya
+//Spring
+"Malaya.Dialogue.spring_1": "PLACEHOLDER",
+"Malaya.Dialogue.spring_12": "PLACEHOLDER",
+"Malaya.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Malaya.Dialogue.summer_1": "PLACEHOLDER",
+"Malaya.Dialogue.summer_10": "PLACEHOLDER",
+"Malaya.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Malaya.Dialogue.fall_1": "PLACEHOLDER",
+"Malaya.Dialogue.fall_15": "PLACEHOLDER",
+"Malaya.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Malaya.Dialogue.winter_1": "PLACEHOLDER",
+"Malaya.Dialogue.winter_7": "PLACEHOLDER",
+"Malaya.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Malaya.Dialogue.Mon": "PLACEHOLDER",
+"Malaya.Dialogue.Tue": "PLACEHOLDER",
+"Malaya.Dialogue.Wed": "PLACEHOLDER",
+"Malaya.Dialogue.Thu": "PLACEHOLDER",
+"Malaya.Dialogue.Fri": "PLACEHOLDER",
+"Malaya.Dialogue.Sat": "PLACEHOLDER",
+"Malaya.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Malaya.Dialogue.Mon2": "PLACEHOLDER",
+"Malaya.Dialogue.Tue2": "PLACEHOLDER",
+"Malaya.Dialogue.Wed2": "PLACEHOLDER",
+"Malaya.Dialogue.Thu2": "PLACEHOLDER",
+"Malaya.Dialogue.Fri2": "PLACEHOLDER",
+"Malaya.Dialogue.Sat2": "PLACEHOLDER",
+"Malaya.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Malaya.Dialogue.Mon4": "PLACEHOLDER",
+"Malaya.Dialogue.Tue4": "PLACEHOLDER",
+"Malaya.Dialogue.Wed4": "PLACEHOLDER",
+"Malaya.Dialogue.Thu4": "PLACEHOLDER",
+"Malaya.Dialogue.Fri4": "PLACEHOLDER",
+"Malaya.Dialogue.Sat4": "PLACEHOLDER",
+"Malaya.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Malaya.Dialogue.Mon6": "PLACEHOLDER",
+"Malaya.Dialogue.Tue6": "PLACEHOLDER",
+"Malaya.Dialogue.Wed6": "PLACEHOLDER",
+"Malaya.Dialogue.Thu6": "PLACEHOLDER",
+"Malaya.Dialogue.Fri6": "PLACEHOLDER",
+"Malaya.Dialogue.Sat6": "PLACEHOLDER",
+"Malaya.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Malaya.Dialogue.Mon8": "PLACEHOLDER",
+"Malaya.Dialogue.Tue8": "PLACEHOLDER",
+"Malaya.Dialogue.Wed8": "PLACEHOLDER",
+"Malaya.Dialogue.Thu8": "PLACEHOLDER",
+"Malaya.Dialogue.Fri8": "PLACEHOLDER",
+"Malaya.Dialogue.Sat8": "PLACEHOLDER",
+"Malaya.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Malaya.Dialogue.Mon10": "PLACEHOLDER",
+"Malaya.Dialogue.Tue10": "PLACEHOLDER",
+"Malaya.Dialogue.Wed10": "PLACEHOLDER",
+"Malaya.Dialogue.Thu10": "PLACEHOLDER",
+"Malaya.Dialogue.Fri10": "PLACEHOLDER",
+"Malaya.Dialogue.Sat10": "PLACEHOLDER",
+"Malaya.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Kimpoi
+//Spring
+"Kimpoi.Dialogue.spring_1": "PLACEHOLDER",
+"Kimpoi.Dialogue.spring_12": "PLACEHOLDER",
+"Kimpoi.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Kimpoi.Dialogue.summer_1": "PLACEHOLDER",
+"Kimpoi.Dialogue.summer_10": "PLACEHOLDER",
+"Kimpoi.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Kimpoi.Dialogue.fall_1": "PLACEHOLDER",
+"Kimpoi.Dialogue.fall_15": "PLACEHOLDER",
+"Kimpoi.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Kimpoi.Dialogue.winter_1": "PLACEHOLDER",
+"Kimpoi.Dialogue.winter_7": "PLACEHOLDER",
+"Kimpoi.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Kimpoi.Dialogue.Mon": "PLACEHOLDER",
+"Kimpoi.Dialogue.Tue": "PLACEHOLDER",
+"Kimpoi.Dialogue.Wed": "PLACEHOLDER",
+"Kimpoi.Dialogue.Thu": "PLACEHOLDER",
+"Kimpoi.Dialogue.Fri": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sat": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Kimpoi.Dialogue.Mon2": "PLACEHOLDER",
+"Kimpoi.Dialogue.Tue2": "PLACEHOLDER",
+"Kimpoi.Dialogue.Wed2": "PLACEHOLDER",
+"Kimpoi.Dialogue.Thu2": "PLACEHOLDER",
+"Kimpoi.Dialogue.Fri2": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sat2": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Kimpoi.Dialogue.Mon4": "PLACEHOLDER",
+"Kimpoi.Dialogue.Tue4": "PLACEHOLDER",
+"Kimpoi.Dialogue.Wed4": "PLACEHOLDER",
+"Kimpoi.Dialogue.Thu4": "PLACEHOLDER",
+"Kimpoi.Dialogue.Fri4": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sat4": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Kimpoi.Dialogue.Mon6": "PLACEHOLDER",
+"Kimpoi.Dialogue.Tue6": "PLACEHOLDER",
+"Kimpoi.Dialogue.Wed6": "PLACEHOLDER",
+"Kimpoi.Dialogue.Thu6": "PLACEHOLDER",
+"Kimpoi.Dialogue.Fri6": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sat6": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Kimpoi.Dialogue.Mon8": "PLACEHOLDER",
+"Kimpoi.Dialogue.Tue8": "PLACEHOLDER",
+"Kimpoi.Dialogue.Wed8": "PLACEHOLDER",
+"Kimpoi.Dialogue.Thu8": "PLACEHOLDER",
+"Kimpoi.Dialogue.Fri8": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sat8": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Kimpoi.Dialogue.Mon10": "PLACEHOLDER",
+"Kimpoi.Dialogue.Tue10": "PLACEHOLDER",
+"Kimpoi.Dialogue.Wed10": "PLACEHOLDER",
+"Kimpoi.Dialogue.Thu10": "PLACEHOLDER",
+"Kimpoi.Dialogue.Fri10": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sat10": "PLACEHOLDER",
+"Kimpoi.Dialogue.Sun10": "PLACEHOLDER",
+
+//Helen
+//Spring
+"Helen.Dialogue.spring_1": "PLACEHOLDER",
+"Helen.Dialogue.spring_12": "PLACEHOLDER",
+"Helen.Dialogue.spring_23": "PLACEHOLDER",
+
+//Summer
+"Helen.Dialogue.summer_1": "PLACEHOLDER",
+"Helen.Dialogue.summer_10": "PLACEHOLDER",
+"Helen.Dialogue.summer_27": "PLACEHOLDER",
+
+//Fall
+"Helen.Dialogue.fall_1": "PLACEHOLDER",
+"Helen.Dialogue.fall_15": "PLACEHOLDER",
+"Helen.Dialogue.fall_26": "PLACEHOLDER",
+
+//Winter
+"Helen.Dialogue.winter_1": "PLACEHOLDER",
+"Helen.Dialogue.winter_7": "PLACEHOLDER",
+"Helen.Dialogue.winter_24": "PLACEHOLDER",
+
+//Days of the Week
+
+//0 Hearts
+"Helen.Dialogue.Mon": "PLACEHOLDER",
+"Helen.Dialogue.Tue": "PLACEHOLDER",
+"Helen.Dialogue.Wed": "PLACEHOLDER",
+"Helen.Dialogue.Thu": "PLACEHOLDER",
+"Helen.Dialogue.Fri": "PLACEHOLDER",
+"Helen.Dialogue.Sat": "PLACEHOLDER",
+"Helen.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Helen.Dialogue.Mon2": "PLACEHOLDER",
+"Helen.Dialogue.Tue2": "PLACEHOLDER",
+"Helen.Dialogue.Wed2": "PLACEHOLDER",
+"Helen.Dialogue.Thu2": "PLACEHOLDER",
+"Helen.Dialogue.Fri2": "PLACEHOLDER",
+"Helen.Dialogue.Sat2": "PLACEHOLDER",
+"Helen.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Helen.Dialogue.Mon4": "PLACEHOLDER",
+"Helen.Dialogue.Tue4": "PLACEHOLDER",
+"Helen.Dialogue.Wed4": "PLACEHOLDER",
+"Helen.Dialogue.Thu4": "PLACEHOLDER",
+"Helen.Dialogue.Fri4": "PLACEHOLDER",
+"Helen.Dialogue.Sat4": "PLACEHOLDER",
+"Helen.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Helen.Dialogue.Mon6": "PLACEHOLDER",
+"Helen.Dialogue.Tue6": "PLACEHOLDER",
+"Helen.Dialogue.Wed6": "PLACEHOLDER",
+"Helen.Dialogue.Thu6": "PLACEHOLDER",
+"Helen.Dialogue.Fri6": "PLACEHOLDER",
+"Helen.Dialogue.Sat6": "PLACEHOLDER",
+"Helen.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Helen.Dialogue.Mon8": "PLACEHOLDER",
+"Helen.Dialogue.Tue8": "PLACEHOLDER",
+"Helen.Dialogue.Wed8": "PLACEHOLDER",
+"Helen.Dialogue.Thu8": "PLACEHOLDER",
+"Helen.Dialogue.Fri8": "PLACEHOLDER",
+"Helen.Dialogue.Sat8": "PLACEHOLDER",
+"Helen.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Helen.Dialogue.Mon10": "PLACEHOLDER",
+"Helen.Dialogue.Tue10": "PLACEHOLDER",
+"Helen.Dialogue.Wed10": "PLACEHOLDER",
+"Helen.Dialogue.Thu10": "PLACEHOLDER",
+"Helen.Dialogue.Fri10": "PLACEHOLDER",
+"Helen.Dialogue.Sat10": "PLACEHOLDER",
+"Helen.Dialogue.Sun10": "PLACEHOLDER",
+
+
+//Undreya
+//Day before Festivals
+"Undreya.Dialogue.spring_12": "Don't go collecting eggs without checking them tomorrow.#$b#You might hand me over to the townsfolk by accident!$u",
+"Undreya.Dialogue.summer_10": "I always attend the Luau. I love the soup!$h#$b#I also like the spare change that purple balloon has.#$b#He should visit more often.$h",
+"Undreya.Dialogue.summer_27": "I wanna see the jellies too!$h#$b#Of course I'll be there tomorrow! You'll just have a hard time finding me!$h",
+"Undreya.Dialogue.fall_26": "Uhmmm... I don't like tomorrow..$s",
+"Undreya.Dialogue.winter_7": "I hate fish. Yuck!$a#$b#I'm not interested in the festival tomorrow.",
+"Undreya.Dialogue.winter_14": "Ooh! I've been looking forward for the merchants to come!$h#$b#So many pockets to pick! Teehee < $h",
+"Undreya.Dialogue.winter_24": "I should learn to be a good elf from time to time.#$b#My friend wouldn't like it if I overstole...$s#$e#Yeah... I should learn to be good once in a while...$s",
+//Days of the Week
+
+//0 Hearts
+"Undreya.Dialogue.Mon": "PLACEHOLDER",
+"Undreya.Dialogue.Tue": "PLACEHOLDER",
+"Undreya.Dialogue.Wed": "PLACEHOLDER",
+"Undreya.Dialogue.Thu": "PLACEHOLDER",
+"Undreya.Dialogue.Fri": "PLACEHOLDER",
+"Undreya.Dialogue.Sat": "PLACEHOLDER",
+"Undreya.Dialogue.Sun": "PLACEHOLDER",
+
+//2 Hearts
+"Undreya.Dialogue.Mon2": "PLACEHOLDER",
+"Undreya.Dialogue.Tue2": "PLACEHOLDER",
+"Undreya.Dialogue.Wed2": "PLACEHOLDER",
+"Undreya.Dialogue.Thu2": "PLACEHOLDER",
+"Undreya.Dialogue.Fri2": "PLACEHOLDER",
+"Undreya.Dialogue.Sat2": "PLACEHOLDER",
+"Undreya.Dialogue.Sun2": "PLACEHOLDER",
+
+//4 Hearts
+"Undreya.Dialogue.Mon4": "PLACEHOLDER",
+"Undreya.Dialogue.Tue4": "PLACEHOLDER",
+"Undreya.Dialogue.Wed4": "PLACEHOLDER",
+"Undreya.Dialogue.Thu4": "PLACEHOLDER",
+"Undreya.Dialogue.Fri4": "PLACEHOLDER",
+"Undreya.Dialogue.Sat4": "PLACEHOLDER",
+"Undreya.Dialogue.Sun4": "PLACEHOLDER",
+
+//6 Hearts
+"Undreya.Dialogue.Mon6": "PLACEHOLDER",
+"Undreya.Dialogue.Tue6": "PLACEHOLDER",
+"Undreya.Dialogue.Wed6": "PLACEHOLDER",
+"Undreya.Dialogue.Thu6": "PLACEHOLDER",
+"Undreya.Dialogue.Fri6": "PLACEHOLDER",
+"Undreya.Dialogue.Sat6": "PLACEHOLDER",
+"Undreya.Dialogue.Sun6": "PLACEHOLDER",
+
+//8 Hearts
+"Undreya.Dialogue.Mon8": "PLACEHOLDER",
+"Undreya.Dialogue.Tue8": "PLACEHOLDER",
+"Undreya.Dialogue.Wed8": "PLACEHOLDER",
+"Undreya.Dialogue.Thu8": "PLACEHOLDER",
+"Undreya.Dialogue.Fri8": "PLACEHOLDER",
+"Undreya.Dialogue.Sat8": "PLACEHOLDER",
+"Undreya.Dialogue.Sun8": "PLACEHOLDER",
+
+//10 Hearts
+"Undreya.Dialogue.Mon10": "PLACEHOLDER",
+"Undreya.Dialogue.Tue10": "PLACEHOLDER",
+"Undreya.Dialogue.Wed10": "PLACEHOLDER",
+"Undreya.Dialogue.Thu10": "PLACEHOLDER",
+"Undreya.Dialogue.Fri10": "PLACEHOLDER",
+"Undreya.Dialogue.Sat10": "PLACEHOLDER",
+"Undreya.Dialogue.Sun10": "PLACEHOLDER",
+
+
+
+
+
 }
