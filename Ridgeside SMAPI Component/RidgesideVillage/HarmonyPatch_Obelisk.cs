@@ -32,7 +32,7 @@ namespace RidgesideVillage
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.Display.MenuChanged += OnMenuChanged;
 
-            Log.Trace($"Applying Harmony Patch \"{nameof(obeliskWarpForReal_Prefix)}\" prefixing SDV method \"SpecialOrders.IsTimedQuest()\".");
+            Log.Trace($"Applying Harmony Patch \"{nameof(obeliskWarpForReal_Prefix)}\" prefixing SDV method \"obeliskWarpForReal_Prefix\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Building), "obeliskWarpForReal"),
                 prefix: new HarmonyMethod(typeof(HarmonyPatch_Obelisk), nameof(obeliskWarpForReal_Prefix))

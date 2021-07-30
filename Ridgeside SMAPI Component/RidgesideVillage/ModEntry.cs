@@ -28,8 +28,10 @@ namespace RidgesideVillage
             CustomCPTokens = new CustomCPTokens(this);
             Patcher = new Patcher(this);
 
+            new HotelMenu().Initialize(this);
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+
         }
 
 
