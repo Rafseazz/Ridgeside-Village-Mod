@@ -463,6 +463,31 @@
 		},
 		},
 	},
+	{
+	//Ridgeside Bass
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Bladetail Sturgeon": {
+		"RequiredTags": [ "item_ridgeside_bass" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+        "RequiredPopulation": 0,
+        "Chance": 0.9,
+        "ItemID": 812,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+		],
+		"PopulationGates": {
+		"4": [ "309 3", "310 3", "311 3", "684 10" ],
+      	"6": [ "384 3", "724", "770 5" ],
+      	"8": [ "70 2", "340", "716", "722" ]
+		},
+		},
+		},
+	},
 
 	{
 		"Action": "EditData",
@@ -477,7 +502,8 @@
 			{ "ID": "item_golden_rose_fin", "AfterID": "item_fixer_eel" },
 			{ "ID": "item_harvester_trout", "AfterID": "item_golden_rose_fin" },
 			{ "ID": "item_lullaby_carp", "AfterID": "item_harvester_trout" },
-			{ "ID": "item_pebble_back_crab", "AfterID": "item_lullaby_carp" }
+			{ "ID": "item_pebble_back_crab", "AfterID": "item_lullaby_carp" },
+			{ "ID": "item_ridgeside_bass", "AfterID": "item_pebble_back_crab" }
 		]
 	},
 

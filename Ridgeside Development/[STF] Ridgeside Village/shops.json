@@ -674,6 +674,72 @@
 		},
 	],
 	},
+	//------------
+	//PikaShop Recipes 
+	//------------
+	{
+	"ShopName": "RSVPikaRecipes",
+	"StoreCurrency": "Money",
+	"CategoriesToSell": [ -7 ],
+	"PortraitPath": "assets/PikaShop.png",
+	"Quote": "Welcome to Pika's!",
+	"ClosedMessage": "Sorry, we're closed!",
+	"ShopPrice": -1,
+	"DefaultSellPriceMultiplier": 0.5,
+	"PriceMultiplierWhen": {
+		"0.6": ["f Pika 2000"] 
+		},
+	"When": ["t 930 2300/w sunny"],
+    "LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+   "LocalizedClosedMessage": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},	
+	"ItemStocks": [
+		//Food
+		{
+			"ItemType": "Object",
+			"IsRecipe": true,
+			"ItemNames": [
+				"Ridgeside Shaketini",
+				"Autumn Dew Drop Juice",
+				"Cherry Berry Shakey",
+				"Snowball Slurpee",
+				"Arugula Roll",
+				"Fried Fish a la Ridge",
+				"Fried Mountain Greens",
+				"Highland Ice Cream",
+				"Honey Glazed Salad",
+				"Ridge Fruity Plate",
+				"Snow Bowl Surprise",
+				"Zesty Tuna",
+				],
+		},
+	],
+	},
 
 	//------------
 	//LolaShop    
