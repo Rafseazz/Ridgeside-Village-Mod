@@ -238,6 +238,30 @@
              "Year": "2",
              "Time": "{{Range: 2000, 2600}}",
       	}
-      	}, 	      	      	      	       	
+      	},
+
+//Hotel Room
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+        "MapTiles": [
+			{
+				"Position": { "X": 4, "Y": 21 },
+				"Layer": "Back",
+				"SetProperties": {
+				"TouchAction": "Sleep"
+               }
+            },
+            {
+				"Position": { "X": 4, "Y": 22 },
+				"Layer": "Back",
+				"SetProperties": {
+				"TouchAction": "Sleep"
+               }
+            }
+		],
+		"When": { "HasFlag: currentPlayer": "RSV.HotelRoomBooked" },
+		"Update": "OnLocationChange, OnTimeChange"
+    },      	      	      	       	
 ]
 }
