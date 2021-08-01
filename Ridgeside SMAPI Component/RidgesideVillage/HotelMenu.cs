@@ -37,31 +37,33 @@ namespace RidgesideVillage
                 Game1.player.mailReceived.Remove(ROOMMAILFLAG);
             }
 
+            //Removes wedding reception ID from being seen AFTER seeing it.
+            if (Game1.player.eventsSeen.Contains(75160245))
+            {
+                Game1.player.eventsSeen.Remove(75160245);
+                Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
+            }
+
             //Adds flag if player is engaged so the mail can be sent to the player
             if (Game1.player.isEngaged())
             {
                 Game1.player.mailReceived.Add(ENGAGEDFLAG);
             }
 
-            //Removes flags if player isn't engaged anymore and attended the reception
-            if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && Game1.player.eventsSeen.Contains(75160245))
+            //Removes flags if player isn't engaged anymore
+            //Removes the flags that identify the player has reserved an event and has seen the mail about the reception
+            //Removes the wedding reception event so player can see new one after remarry
+            if (!Game1.player.isEngaged())
             {
                 Game1.player.mailReceived.Remove(ENGAGEDFLAG);
-                Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
                 Game1.player.mailReceived.Remove(RECEIVEDMAILWR);
-                Game1.player.eventsSeen.Remove(75160245);
                 Game1.player.eventsSeen.Remove(75160246);
             }
 
-            //Removes flags if player isn't engaged anymore and but didn't attend the reception
-            //Removes the flags that identify the player has reserved an event and has seen the mail about the reception
-            //Removes the wedding reception event so player can see new one after remarry
-            if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && !Game1.player.eventsSeen.Contains(75160245))
+            //If it's after wedding day and the player didn't attend their booked Wedding Reception
+            if (!Game1.player.eventsSeen.Contains(75160245) && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONMAILFLAG))
             {
-                Game1.player.mailReceived.Remove(ENGAGEDFLAG);
                 Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
-                Game1.player.mailReceived.Remove(RECEIVEDMAILWR);
-                Game1.player.eventsSeen.Remove(75160246);
             }
         }
 
@@ -131,8 +133,8 @@ namespace RidgesideVillage
             //Reserving an event in event hall
             if (str != null && str.Contains("EventHallCounter"))
             {
-                //If player hasn't seen reception mail and hasn't booked birthday event
-                if (Game1.player.Money >= 2000 && !Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(RECEIVEDMAILWR))
+                //If player isn't engaged and hasn't booked birthday event
+                if (Game1.player.Money >= 2000 && !Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(ENGAGEDFLAG))
                 {
                     var responses = new List<Response>
                     {
@@ -168,8 +170,8 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), eventChoices, eventActions);
                 }
 
-                //If player has seen reception mail and hasn't booked both events
-                else if (Game1.player.Money >= 2000 && !Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(RECEPTIONMAILFLAG) && Game1.player.mailReceived.Contains(RECEIVEDMAILWR))
+                //If player is engaged and hasn't booked both events
+                else if (Game1.player.Money >= 2000 && !Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(RECEPTIONMAILFLAG) && Game1.player.mailReceived.Contains(ENGAGEDFLAG))
                 {
                     var responsesBDAY = new List<Response>
                     {
@@ -227,8 +229,8 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), eventChoices, eventActions);
                 }
 
-                //If player has seen mail and already has reserved birthday event
-                else if (Game1.player.Money >= 2000 && Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(RECEPTIONMAILFLAG) && Game1.player.mailReceived.Contains(RECEIVEDMAILWR))
+                //If player is engaged and already reserved birthday event
+                else if (Game1.player.Money >= 2000 && Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(RECEPTIONMAILFLAG) && Game1.player.mailReceived.Contains(ENGAGEDFLAG))
                 {
                     var responses = new List<Response>
                     {
@@ -311,8 +313,8 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), eventChoices, eventActions);
                 }
 
-                //If player hasn't seen reception mail and has booked birthday event
-                else if (Game1.player.Money >= 2000 && Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(RECEIVEDMAILWR))
+                //If player isn't and has booked birthday event
+                else if (Game1.player.Money >= 2000 && Game1.player.mailReceived.Contains(BIRTHDAYMAILFLAG) && !Game1.player.mailReceived.Contains(ENGAGEDFLAG))
                 {
                     Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.AlreadyBooked"));
                 }
