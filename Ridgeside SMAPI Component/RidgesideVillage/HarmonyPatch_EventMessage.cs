@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Harmony;
+using HarmonyLib;
 using StardewValley;
 
 namespace RidgesideVillage
@@ -15,7 +15,7 @@ namespace RidgesideVillage
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
-        internal static void ApplyPatch(HarmonyInstance harmony, IModHelper helper)
+        internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
 

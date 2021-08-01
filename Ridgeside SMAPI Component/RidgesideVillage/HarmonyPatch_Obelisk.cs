@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Harmony;
+using HarmonyLib;
 using StardewValley;
 using StardewValley.Buildings;
 using StardewModdingAPI.Events;
@@ -21,7 +21,7 @@ namespace RidgesideVillage
         private static string obeliskReplacement = "Earth Obelisk";
         private static string obeliskKey = "RSVObelisk";
 
-        internal static void ApplyPatch(HarmonyInstance harmony, IModHelper helper)
+        internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
 
