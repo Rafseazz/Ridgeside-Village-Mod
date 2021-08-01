@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewValley;
@@ -28,7 +28,7 @@ namespace RidgesideVillage
 
         public void PerformPatching() {
             JsonAssetsAPI = Helper.ModRegistry.GetApi<IJsonAssetsApi>("spacechase0.JsonAssets");
-            var harmony = HarmonyInstance.Create(Manifest.UniqueID);
+            var harmony = new Harmony(Manifest.UniqueID);
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
                 postfix: new HarmonyMethod(typeof(Patcher), nameof(Patcher.GetFish_Postfix))

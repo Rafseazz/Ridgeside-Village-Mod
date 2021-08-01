@@ -101,20 +101,20 @@ namespace RidgesideVillage
                 if (Game1.player.Money >= 500 && !Game1.player.mailReceived.Contains(ROOMMAILFLAG))
                 {
                     var responses = new List<Response>
-                {
-                    new Response("yes", Helper.Translation.Get("HotelCounter.Booking.Yes")),
-                    new Response("no", Helper.Translation.Get("HotelCounter.Booking.No"))
-                };
-                    var responseActions = new List<Action>
-                {
-                    delegate
                     {
-                        Game1.player.Money -= 500;
-                        Game1.player.mailReceived.Add(ROOMMAILFLAG);
-                        Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AfterBooking"));
-                    },
-                    delegate { }
-                };
+                        new Response("yes", Helper.Translation.Get("HotelCounter.Booking.Yes")),
+                        new Response("no", Helper.Translation.Get("HotelCounter.Booking.No"))
+                    };
+                    var responseActions = new List<Action>
+                    {
+                        delegate
+                        {
+                            Game1.player.Money -= 500;
+                            Game1.player.mailReceived.Add(ROOMMAILFLAG);
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AfterBooking"));
+                        },
+                        delegate { }
+                    };
 
                     Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("HotelCounter.Booking.Question"), responses, responseActions);
                 }
