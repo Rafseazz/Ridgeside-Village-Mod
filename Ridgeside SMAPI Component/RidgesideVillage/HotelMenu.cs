@@ -37,25 +37,29 @@ namespace RidgesideVillage
                 Game1.player.mailReceived.Remove(ROOMMAILFLAG);
             }
 
-            if (Game1.player.eventsSeen.Contains(75160245))
-            {
-                //Removes the flags that identify the player has reserved an event and has seen the mail about the reception
-                //Removes the wedding reception event so player can see new one after remarry
-                Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
-                Game1.player.mailReceived.Remove(RECEIVEDMAILWR);
-                Game1.player.eventsSeen.Remove(75160245);
-                Game1.player.eventsSeen.Remove(75160246);
-            }
-
             //Adds flag if player is engaged so the mail can be sent to the player
             if (Game1.player.isEngaged())
             {
                 Game1.player.mailReceived.Add(ENGAGEDFLAG);
             }
-            //Removes flag if player isn't engaged anymore
-            else if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG))
+            //Removes flags if player isn't engaged anymore and attended the reception
+            else if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && Game1.player.eventsSeen.Contains(75160245))
             {
                 Game1.player.mailReceived.Remove(ENGAGEDFLAG);
+                Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
+                Game1.player.mailReceived.Remove(RECEIVEDMAILWR);
+                Game1.player.eventsSeen.Remove(75160245);
+                Game1.player.eventsSeen.Remove(75160246);
+            }
+            //Removes flags if player isn't engaged anymore and but didn't attend the reception
+            //Removes the flags that identify the player has reserved an event and has seen the mail about the reception
+            //Removes the wedding reception event so player can see new one after remarry
+            else if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && !Game1.player.eventsSeen.Contains(75160245))
+            {
+                Game1.player.mailReceived.Remove(ENGAGEDFLAG);
+                Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
+                Game1.player.mailReceived.Remove(RECEIVEDMAILWR);
+                Game1.player.eventsSeen.Remove(75160246);
             }
         }
 
