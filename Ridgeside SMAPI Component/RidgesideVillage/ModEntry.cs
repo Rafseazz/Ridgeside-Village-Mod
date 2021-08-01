@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewValley;
-using Harmony;
 using StardewModdingAPI.Events;
 
 namespace RidgesideVillage
