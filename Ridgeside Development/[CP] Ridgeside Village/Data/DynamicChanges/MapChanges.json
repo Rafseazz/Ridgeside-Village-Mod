@@ -158,17 +158,6 @@
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 
-	//Opened RidgeForest Entrance 
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_Ridge",
-		"FromFile": "Assets/Maps/EventMaps/RidgeOpen.tmx",
-		"ToArea": { "X": 26, "Y": 15, "Width": 2, "Height": 2 },
-		"PatchMode": "Replace",
-		"When": { "HasSeenEvent: hostPlayer": 75160188 },
-		"Update": "OnLocationChange, OnTimeChange"
-	},
-
 //Event changes
      	 {
          "Action": "EditMap",
