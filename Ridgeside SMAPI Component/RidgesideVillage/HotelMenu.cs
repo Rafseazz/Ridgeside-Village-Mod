@@ -16,7 +16,7 @@ namespace RidgesideVillage
         const string ROOMMAILFLAG = "RSV.HotelRoomBooked";
         const string RECEPTIONMAILFLAG = "RSV.ReservedReception";
         const string RECEIVEDMAILWR = "WedReceptionMail";
-        const string BIRTHDAYMAILFLAG = "RSV.BirthdayBooekd";
+        const string BIRTHDAYMAILFLAG = "RSV.BirthdayBooked";
         const string ENGAGEDFLAG = "RSV.IsEngagedFlag";
 
         IModHelper Helper;
@@ -42,8 +42,9 @@ namespace RidgesideVillage
             {
                 Game1.player.mailReceived.Add(ENGAGEDFLAG);
             }
+
             //Removes flags if player isn't engaged anymore and attended the reception
-            else if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && Game1.player.eventsSeen.Contains(75160245))
+            if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && Game1.player.eventsSeen.Contains(75160245))
             {
                 Game1.player.mailReceived.Remove(ENGAGEDFLAG);
                 Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
@@ -51,10 +52,11 @@ namespace RidgesideVillage
                 Game1.player.eventsSeen.Remove(75160245);
                 Game1.player.eventsSeen.Remove(75160246);
             }
+
             //Removes flags if player isn't engaged anymore and but didn't attend the reception
             //Removes the flags that identify the player has reserved an event and has seen the mail about the reception
             //Removes the wedding reception event so player can see new one after remarry
-            else if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && !Game1.player.eventsSeen.Contains(75160245))
+            if (!Game1.player.isEngaged() && Game1.player.mailReceived.Contains(ENGAGEDFLAG) && !Game1.player.eventsSeen.Contains(75160245))
             {
                 Game1.player.mailReceived.Remove(ENGAGEDFLAG);
                 Game1.player.mailReceived.Remove(RECEPTIONMAILFLAG);
