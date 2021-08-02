@@ -150,5 +150,5 @@ namespace RidgesideVillage
                 return new[] { "" };
             });
         }
-        }
     }
+}
