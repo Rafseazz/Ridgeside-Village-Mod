@@ -29,6 +29,17 @@
 			},
 		},
 
+	{
+		"LogName": "Maddie Lab Outfit Character",
+		"Action": "EditImage",
+		"Target": "Characters/Maddie",
+		"FromFile": "Assets/Characters/Maddie_Lab.png",
+		"Update": "OnLocationChange",
+		"When": {
+			"LocationName": "Custom_Ridgeside_AguarLab"
+		},
+	},
+
 
 
 ]

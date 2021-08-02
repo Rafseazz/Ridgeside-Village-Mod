@@ -18,5 +18,16 @@
 		},
 	},
 
+	{
+		"LogName": "Maddie Lab Outfit Portrait",
+		"Action": "EditImage",
+		"Target": "Portraits/Maddie",
+		"FromFile": "Assets/Portraits/Maddie_Lab.png",
+		"Update": "OnLocationChange",
+		"When": {
+			"LocationName": "Custom_Ridgeside_AguarLab"
+		},
+	},
+
 ]
 }
