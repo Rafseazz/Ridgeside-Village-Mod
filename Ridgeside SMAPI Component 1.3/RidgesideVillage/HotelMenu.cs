@@ -252,6 +252,7 @@ namespace RidgesideVillage
                     Game1.player.Money -= BIRTHDAYPRICE;
                     Game1.player.mailReceived.Add(BIRTHDAYBOOKED + NPCName + "." + NPCtuple.Item2);
                     Game1.player.mailReceived.Add(BIRTHDAYBOOKEDFLAG);
+                    Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.Bday.AfterBooking"));
                 });
             }
             responses.Add(new Response("", Helper.Translation.Get("Exit.Text")));

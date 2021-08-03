@@ -798,7 +798,18 @@
 			"75160246/x WedReceptionMail": "null",
 		},
 		"When": {"HasFlag": "RSV.IsEngagedFlag"}
-	}
+	},
+
+	{
+		"LogName": "Birthday Party",
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_LogCabinHotelLobby",
+		"Update": "OnLocationChange",
+		"Entries": {
+			"75160245": "summer_day_ambient/10 10/farmer 10 10 2 {{Rafseazz.RidgesideVillage/Celebrant}} 11 11 2/pause 5000/end",
+		},
+		"When": {"Query: {{Rafseazz.RidgesideVillage/Celebrant}} IN ({{Rafseazz.RidgesideVillage/NPCBirthday}})": true}
+	},
 	
 ]
 }
