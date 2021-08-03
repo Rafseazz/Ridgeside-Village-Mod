@@ -248,7 +248,7 @@
 		"FromFile": "Assets/Maps/EventMaps/LogCabinHotelLobbyExpanded.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 46, "Height": 18 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 46, "Height": 18 },
-		"When": { "Year |contains=1": false },
+		"When": { "Year |contains=1": true },
 		"Update": "OnLocationChange"
 	},
 //Spouse Picture during wedding reception
@@ -257,6 +257,56 @@
 		"Target": "Maps/z_RSVspousePic",
 		"FromFile": "{{FirstValidFile: Assets/WeddingReception/NPCs/{{spouse}}.png, Assets/WeddingReception/z_RSVspousePic.png }}",
 		"Update": "OnLocationChange, OnTimeChange",
-	},     	      	       	
+	}, 
+
+//Event Hall Sign
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+        "MapTiles": [
+			{
+				"Position": { "X": 31, "Y": 5 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "Message rsv.eventhall1"
+               }
+            }
+		],
+		"When": { 
+			"HasFlag |contains=RSV.ReservedReception": false,
+			"HasFlag |contains=RSV.BirthdayBooked": false 
+		},
+		"Update": "OnLocationChange"
+    }, 
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+        "MapTiles": [
+			{
+				"Position": { "X": 31, "Y": 5 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "Message rsv.eventhall2"
+               }
+            }
+		],
+		"When": { "HasFlag": "RSV.ReservedReception" },
+		"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+        "MapTiles": [
+			{
+				"Position": { "X": 31, "Y": 5 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "Message rsv.eventhall3"
+               }
+            }
+		],
+		"When": { "HasFlag": "RSV.BirthdayBooked" },
+		"Update": "OnLocationChange"
+    },    	      	       	
 ]
 }

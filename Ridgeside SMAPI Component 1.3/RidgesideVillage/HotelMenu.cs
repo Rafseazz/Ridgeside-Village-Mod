@@ -17,7 +17,7 @@ namespace RidgesideVillage
         const string ROOMBOOKEDFLAG = "RSV.HotelRoomBooked";
         const string RECEPTIONBOOKEDFLAG = "RSV.ReservedReception";
         const string RECEIVEDMAILWR = "WedReceptionMail";
-        //const string BIRTHDAYBOOKEDFLAG = "RSV.BirthdayBooked";
+        const string BIRTHDAYBOOKEDFLAG = "RSV.BirthdayBooked";
         const string ENGAGEDFLAG = "RSV.IsEngagedFlag";
         const string BIRTHDAYBOOKED = "RSV.BirthdayBooked.";
 
@@ -251,6 +251,7 @@ namespace RidgesideVillage
                 {
                     Game1.player.Money -= BIRTHDAYPRICE;
                     Game1.player.mailReceived.Add(BIRTHDAYBOOKED + NPCName + "." + NPCtuple.Item2);
+                    Game1.player.mailReceived.Add(BIRTHDAYBOOKEDFLAG);
                 });
             }
             responses.Add(new Response("", Helper.Translation.Get("Exit.Text")));
@@ -259,7 +260,7 @@ namespace RidgesideVillage
                 HandleBirthdayEventMenu();
             });
 
-            Game1.activeClickableMenu = new DialogueBoxWithActions("Imagine a dialogue to choose a birthday NPC here.", responses, responseActions);
+            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Bday.List"), responses, responseActions);
         }
 
         private HashSet<Tuple<string, string>> NPCBirthdaysInNextNDays(int n)
