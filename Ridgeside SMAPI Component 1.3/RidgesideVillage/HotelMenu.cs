@@ -67,7 +67,7 @@ namespace RidgesideVillage
             }
 
             //If it's after wedding day and the player didn't attend their booked Wedding Reception
-            if (!Game1.player.eventsSeen.Contains(75160245) && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isEngaged())
+            if (!Game1.player.eventsSeen.Contains(75160245) && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isMarried())
             {
                 Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
             }
