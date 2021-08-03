@@ -219,21 +219,24 @@
 			"Value": "female",
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'female'": true
-			}
+			},
+			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "SpouseGender",
 			"Value": "male",
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'male'": true
-			}
+			},
+			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "SpouseGender",
 			"Value": "undefined",
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'undefined'": true
-			}
+			},
+			"Update": "OnLocationChange, OnTimeChange"
 		},
 	],
 

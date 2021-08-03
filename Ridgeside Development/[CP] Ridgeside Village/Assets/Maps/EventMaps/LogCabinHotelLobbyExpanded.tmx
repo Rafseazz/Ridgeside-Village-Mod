@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="46" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="146">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="46" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="149">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
  </properties>
@@ -170,7 +170,7 @@
     <property name="Action" value="Message &quot;rsv.hotel3&quot;"/>
    </properties>
   </object>
-  <object id="133" name="TileData" x="208" y="112" width="16" height="16">
+  <object id="133" name="TileData" x="192" y="112" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.hotel4&quot;"/>
    </properties>
@@ -223,6 +223,21 @@
   <object id="144" name="TileData" x="176" y="112" width="16" height="16">
    <properties>
     <property name="Action" value="HotelCounter"/>
+   </properties>
+  </object>
+  <object id="146" name="TileData" x="160" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="HotelCounter"/>
+   </properties>
+  </object>
+  <object id="147" name="TileData" x="208" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="EventHallCounter"/>
+   </properties>
+  </object>
+  <object id="148" name="TileData" x="224" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="EventHallCounter"/>
    </properties>
   </object>
  </objectgroup>

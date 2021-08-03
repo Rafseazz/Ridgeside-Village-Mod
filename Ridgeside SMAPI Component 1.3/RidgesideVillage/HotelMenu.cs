@@ -67,7 +67,7 @@ namespace RidgesideVillage
             }
 
             //If it's after wedding day and the player didn't attend their booked Wedding Reception
-            if (!Game1.player.eventsSeen.Contains(75160245) && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG))
+            if (!Game1.player.eventsSeen.Contains(75160245) && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isEngaged())
             {
                 Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
             }
@@ -180,7 +180,7 @@ namespace RidgesideVillage
                 }
                 if(!Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isEngaged())
                 {
-                    Response receptionesponse = new Response("bday", Helper.Translation.Get("EventHallCounter.Booking.BirthdayParty"));
+                    Response receptionesponse = new Response("weddingReception", Helper.Translation.Get("EventHallCounter.Booking.WeddingReception"));
                     responses.Add(receptionesponse);
 
                     Action receptionAction = delegate {
@@ -259,7 +259,7 @@ namespace RidgesideVillage
                 HandleBirthdayEventMenu();
             });
 
-            Game1.activeClickableMenu = new DialogueBoxWithActions("Imagine a dialogue to chose a birthday NPC here.", responses, responseActions);
+            Game1.activeClickableMenu = new DialogueBoxWithActions("Imagine a dialogue to choose a birthday NPC here.", responses, responseActions);
         }
 
         private HashSet<Tuple<string, string>> NPCBirthdaysInNextNDays(int n)
