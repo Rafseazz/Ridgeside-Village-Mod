@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StardewValley;
 
 namespace RidgesideVillage
     {
@@ -91,6 +92,63 @@ namespace RidgesideVillage
 
             cp.RegisterToken(this.ModManifest, "FlorSpriteStyle", () => new string[] { Config.florSpriteStyle ?? "Default" });
 
-            }
+            cp.RegisterToken(this.ModManifest, "SpouseGender", () =>
+            {
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null || Context.IsWorldReady)
+                {
+                    var Spouse = Game1.getCharacterFromName(Game1.player.spouse);
+                    if (Spouse != null)
+                    {
+                        string gender;
+                        switch (Spouse.Gender)
+                        {
+                            case 0:
+                                gender = "male";
+                                break;
+                            case 1:
+                                gender = "female";
+                                break;
+                            default:
+                                gender = "undefined";
+                                break;
+                        }
+                        return new[] { gender };
+                    }
+                }
+                // no save loaded (e.g. on the title screen)
+                return null;
+            });
+
+            cp.RegisterToken(this.ModManifest, "NPCBirthday", () =>
+            {
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null || Context.IsWorldReady)
+                {
+                    List<string> birthDays = new List<string>();
+                    foreach (NPC k in Utility.getAllCharacters())
+                    {
+                        if (k.isVillager() && Game1.player.friendshipData.ContainsKey(k.Name) && k.Birthday_Season != null && k.Birthday_Season.Equals(Game1.currentSeason) && k.Birthday_Day.Equals(Game1.dayOfMonth))
+                        {
+                            birthDays.Add(k.Name);
+                        }
+                    }
+                    return birthDays;
+                }
+                // no save loaded (e.g. on the title screen)
+                return null;
+            });
+
+            cp.RegisterToken(this.ModManifest, "Celebrant", () =>
+            {
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null || Context.IsWorldReady)
+                {
+                    return new[] { HotelMenu.GetTodaysBirthdayNPC() };
+                }
+                // no save loaded (e.g. on the title screen)
+                return new[] { "" };
+            });
         }
     }
+}
