@@ -212,6 +212,29 @@
 			"Name": "RANDOMUNDREYA",
 			"Value": "{{Random:0 Custom_Ridgeside_RidgesideVillage 47 22 0, 0 Custom_Ridgeside_RidgesideVillage 81 70 0, 0 Town 98 85 0, 0 Custom_Ridgeside_RSVCliff 17 15 0, 0 BusStop 29 16 0, 0 Custom_Ridgeside_Ridge 51 24, 0 Custom_Ridgeside_RSVCableCar 9 14 0, 0 Custom_Ridgeside_RidgesideVillage 131 105 0, 0 Mountain 31 5 0, 0 Mountain 87 33 0, 0 Mountain 51 37 0, 0 Beach 69 5 0, 0 Beach 37 31 0, 0 Custom_Ridgeside_RidgesideVillage 134 42 0, 0 Town 46 15 0, 0 Custom_Ridgeside_RidgesideVillage 13 83 0, 0 Custom_Ridgeside_RidgesideVillage 134 23 0, 0 Custom_Ridgeside_RidgesideVillage 74 35 0, 0 Town 18 8 0, 0 Town 6 78 0}}",
 		},
+
+		//Spouse Genders	
+		{
+			"Name": "SpouseGender",
+			"Value": "female",
+			"When": {
+				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'female'": true
+			}
+		},
+		{
+			"Name": "SpouseGender",
+			"Value": "male",
+			"When": {
+				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'male'": true
+			}
+		},
+		{
+			"Name": "SpouseGender",
+			"Value": "undefined",
+			"When": {
+				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'undefined'": true
+			}
+		},
 	],
 
 	/*********
@@ -515,6 +538,10 @@
 			"Name": "Custom_Ridgeside_RSVHiddenWarp2",
 			"FromMapFile": "Assets/Maps/DynamicMaps/RSVHiddenWarp2.tmx",
 			"MigrateLegacyNames": [ "RSVHiddenWarp2" ]
+		},
+		{
+			"Name": "Custom_Ridgeside_WeddingReceptionPic",
+			"FromMapFile": "Assets/Maps/EventMaps/WeddingReceptionPic.tmx",
 		},        	 	   
 
 	],

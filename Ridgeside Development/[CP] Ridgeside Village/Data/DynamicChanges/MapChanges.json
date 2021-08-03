@@ -250,6 +250,13 @@
 		"ToArea": { "X": 0, "Y": 0, "Width": 46, "Height": 18 },
 		"When": { "Year |contains=1": false },
 		"Update": "OnLocationChange"
+	},
+//Spouse Picture during wedding reception
+	{
+		"Action": "EditImage",
+		"Target": "Maps/z_RSVspousePic",
+		"FromFile": "{{FirstValidFile: Assets/WeddingReception/NPCs/{{spouse}}.png, Assets/WeddingReception/z_RSVspousePic.png }}",
+		"Update": "OnLocationChange, OnTimeChange",
 	},     	      	       	
 ]
 }
