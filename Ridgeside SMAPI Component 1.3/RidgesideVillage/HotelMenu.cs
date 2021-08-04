@@ -112,6 +112,16 @@ namespace RidgesideVillage
             {
                 HandleEventHallMenu();
             }
+
+            if (str != null && str.Contains("RatesCounter"))
+            {
+                HandleRatesMenu();
+            }
+        }
+
+        private void HandleRatesMenu()
+        {
+            Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("LogCabinHotel.Rates.Expanded"));
         }
 
         private void HandleHotelCounterMenu()
