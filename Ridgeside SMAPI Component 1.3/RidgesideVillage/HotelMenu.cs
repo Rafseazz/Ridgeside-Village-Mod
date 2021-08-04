@@ -23,7 +23,7 @@ namespace RidgesideVillage
 
         const int ROOMPRICE = 500;
         const int WEDDINGPRICE = 2000;
-        const int BIRTHDAYPRICE = 2000;
+        const int BIRTHDAYPRICE = 1500;
 
         IModHelper Helper;
         IMonitor Monitor;
@@ -126,7 +126,7 @@ namespace RidgesideVillage
 
         private void HandleHotelCounterMenu()
         {
-            if (Game1.player.Money >= 500 && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
             {
                 var responses = new List<Response>
                     {
@@ -137,7 +137,7 @@ namespace RidgesideVillage
                     {
                         delegate
                         {
-                            Game1.player.Money -= 500;
+                            Game1.player.Money -= ROOMPRICE;
                             Game1.player.mailReceived.Add(ROOMBOOKEDFLAG);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AfterBooking"));
                         },
@@ -150,7 +150,7 @@ namespace RidgesideVillage
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AlreadyBooked"));
             }
-            else if (Game1.player.Money < 500)
+            else if (Game1.player.Money < ROOMPRICE)
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.NotEnoughMoney"));
 
@@ -160,7 +160,7 @@ namespace RidgesideVillage
         private void HandleEventHallMenu()
         {
             //If player doesn't have enough money to book an event
-            if (Game1.player.Money < 2000)
+            if (Game1.player.Money < 1500)
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.NotEnoughMoney"));
             }            
@@ -251,7 +251,7 @@ namespace RidgesideVillage
 
             var responses = new List<Response>();
             var responseActions = new List<Action>();
-            var NPCList = NPCBirthdaysInNextNDays(10);
+            var NPCList = NPCBirthdaysInNextNDays(3);
 
             foreach(var NPCtuple in NPCList)
             {
