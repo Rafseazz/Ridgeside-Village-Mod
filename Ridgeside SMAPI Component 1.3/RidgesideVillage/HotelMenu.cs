@@ -241,7 +241,7 @@ namespace RidgesideVillage
                         {
                             HandleBirthDayNPCSelectionMenu();
                         },
-                        delegate { HandleHotelCounterMenu(); }
+                        delegate { HandleEventHallMenu(); }
                     };
 
             Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), responses, responseActions);
