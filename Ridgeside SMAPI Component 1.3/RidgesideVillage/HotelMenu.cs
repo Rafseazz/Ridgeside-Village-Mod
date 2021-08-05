@@ -107,8 +107,8 @@ namespace RidgesideVillage
                 NPC npc = Game1.getCharacterFromName(npcName);
                 if (npc != null)
                 {
-                    string alterText = Helper.Translation.Get("EventHall.TodayBirthday", new { name = npc.displayName });
-                    Game1.activeClickableMenu = new DialogueBox(alterText);
+                    string alertText = Helper.Translation.Get("EventHall.TodayBirthday", new { name = npc.displayName });
+                    Game1.activeClickableMenu = new DialogueBox(alertText);
                 }
             }
         }
