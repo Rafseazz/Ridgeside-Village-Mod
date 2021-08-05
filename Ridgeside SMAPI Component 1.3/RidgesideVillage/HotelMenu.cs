@@ -99,6 +99,15 @@ namespace RidgesideVillage
                 Game1.player.mailReceived.Remove(ANNIVERSARYTODAY);
                 Game1.player.eventsSeen.Remove(75160248);
             }
+
+            //Alerts player on wake up about birthday party
+            if (GetTodaysBirthdayNPC() != null && Game1.player.mailReceived.Contains(BIRTHDAYBOOKEDFLAG))
+            {
+                if (Game1.getCharacterFromName(GetTodaysBirthdayNPC()).Birthday_Season == Game1.currentSeason && Game1.getCharacterFromName(GetTodaysBirthdayNPC()).Birthday_Day == Game1.dayOfMonth)
+                {
+                    Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHall.TodayBirthday"));
+                }
+            }
         }
 
         internal void OnButtonPressed(object sender, ButtonPressedEventArgs e)

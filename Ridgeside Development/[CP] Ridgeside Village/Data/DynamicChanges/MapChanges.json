@@ -307,6 +307,59 @@
 		],
 		"When": { "HasFlag": "RSV.BirthdayBooked" },
 		"Update": "OnLocationChange"
-    },    	      	       	
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+        "MapTiles": [
+			{
+				"Position": { "X": 31, "Y": 5 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "Message rsv.eventhallbdaytoday"
+               }
+            }
+		],
+		"When": { "HasFlag": "RSV.BirthdayBooked", "HasValue:{{Rafseazz.RidgesideVillage/Celebrant}}": true },
+		"Update": "OnLocationChange"
+    },
+    //After Bday Party
+    {
+    	"Action": "EditMap",
+    	"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+    	"MapTiles": [
+    		{
+    			"Position": { "X": 33, "Y": 3},
+    			"Layer": "Buildings",
+    			"SetProperties": {
+    				"Action": "Message rsv.eventhall.closed"
+    			}
+    		},
+    		{
+    			"Position": { "X": 34, "Y": 3},
+    			"Layer": "Buildings",
+    			"SetProperties": {
+    				"Action": "Message rsv.eventhall.closed"
+    			}
+    		}
+    	],
+    	"When": { "HasSeenEvent": 75160247, "HasValue:{{Rafseazz.RidgesideVillage/Celebrant}}": true },
+    	"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+        "MapTiles": [
+			{
+				"Position": { "X": 31, "Y": 5 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "Message rsv.eventhall1"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160247, "HasValue:{{Rafseazz.RidgesideVillage/Celebrant}}": true },
+		"Update": "OnLocationChange"
+    },       	       	
 ]
 }
