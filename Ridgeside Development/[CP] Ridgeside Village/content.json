@@ -659,6 +659,16 @@
   		"LogName": "Include Tilesheets",		
 		"Action": "Include",
 		"FromFile": "Data/Tilesheets.json",
+  	},
+
+  	//Includes Special Orders
+	/*
+		Loads special order files
+	*/
+  	{
+  		"LogName": "Include Special Orders",		
+		"Action": "Include",
+		"FromFile": "Data/SpecialOrders/SpecialOrders.json, Data/SpecialOrders/SOStrings.json",
   	}
 
 ],

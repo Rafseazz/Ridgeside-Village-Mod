@@ -129,8 +129,8 @@
                }
             }
 		],
-		"When": { "HasSeenEvent: hostPlayer": 75160190 },
-		"Update": "OnLocationChange, OnTimeChange"
+		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"Update": "OnLocationChange"
     },
 	{
         "Action": "EditMap",
@@ -144,8 +144,8 @@
                }
             }
 		],
-		"When": { "HasSeenEvent: hostPlayer": 75160190 },
-		"Update": "OnLocationChange, OnTimeChange"
+		"When": { "HasSeenEvent: hostPlayer": 75160191 },
+		"Update": "OnLocationChange"
 	},
 	//Open Entrance
 	{
@@ -155,7 +155,18 @@
 		"ToArea": { "X": 68, "Y": 18, "Width": 3, "Height": 2 },
 		"PatchMode": "Replace",
 		"When": { "HasSeenEvent: hostPlayer": 75160189 },
-		"Update": "OnLocationChange, OnTimeChange"
+		"Update": "OnLocationChange"
+	},
+	//Remove minecart donation box when done
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"FromFile": "Assets/Maps/EventMaps/RSVFixedMinecart.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 3 },
+		"ToArea": { "X": 67, "Y": 14, "Width": 2, "Height": 3 },
+		"PatchMode": "ReplaceByLayer",
+		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"Update": "OnLocationChange"
 	},
 
 //Event changes

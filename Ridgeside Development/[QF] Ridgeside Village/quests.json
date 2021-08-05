@@ -897,22 +897,7 @@
 		"QuestNeverAccepted": "yes"
 		}
 	},
-	
-/*//Unlock Minecarft Offer
-	{
-      "QuestName": "lenny_minecart1",
-      "OfferedBy": "Mail",
-      "OfferDetails": {
-        "Topic": "Restoration of the Ridge Minecart",
-        "Text": "Dear @, ^For the restoration of the minecart system we need: 200 pieces of Wood. ^You can hand them over to me when you've gathered them all.^^- Lenny"
-      },
-      "When": {
-        "EventSeen": "75160189",
-		"QuestNeverCompleted": "yes",
-		"QuestNeverAccepted": "yes"
-      }
-    },*/
-  ],
+],
   
   
 //---------
@@ -941,4 +926,12 @@
 		},
 	},
   ],
+
+"CustomDropBoxes": [
+	{
+		"Name": "RSVMinecartRepair",
+		"Location": "Custom_Ridgeside_RidgesideVillage",
+		"Tile": "68,16"
+	}
+]
 }
