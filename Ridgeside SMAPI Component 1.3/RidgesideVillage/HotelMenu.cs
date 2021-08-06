@@ -101,11 +101,14 @@ namespace RidgesideVillage
             }
 
             //Alerts player on wake up about birthday party
-            if (GetTodaysBirthdayNPC() != null && Game1.player.mailReceived.Contains(BIRTHDAYBOOKEDFLAG))
+            string npcName = GetTodaysBirthdayNPC();
+            if ( npcName != null)
             {
-                if (Game1.getCharacterFromName(GetTodaysBirthdayNPC()).Birthday_Season == Game1.currentSeason && Game1.getCharacterFromName(GetTodaysBirthdayNPC()).Birthday_Day == Game1.dayOfMonth)
+                NPC npc = Game1.getCharacterFromName(npcName);
+                if (npc != null)
                 {
-                    Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHall.TodayBirthday"));
+                    string alertText = Helper.Translation.Get("EventHall.TodayBirthday", new { name = npc.displayName });
+                    Game1.activeClickableMenu = new DialogueBox(alertText);
                 }
             }
         }
@@ -346,7 +349,7 @@ namespace RidgesideVillage
                         //if birthday in the past, add a year
                         birthday = birthday.AddDays(112);
                     }
-                    if(startDate < birthday && birthday <= endDate)
+                    if(startDate <= birthday && birthday <= endDate)
                     {
                         birthdayNPCs.Add(new Tuple<string, string>(k.Name, $"{birthday.Day}-{birthday.Season}-{birthday.Year}"));
                     }
@@ -412,6 +415,7 @@ namespace RidgesideVillage
             return false;
         }
 
+        //returns name of NPC if it has birthday today AND there is a birthdayevent booked
         internal static string GetTodaysBirthdayNPC()
         {
             SDate today = SDate.Now();
