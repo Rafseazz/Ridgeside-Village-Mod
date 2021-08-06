@@ -45,6 +45,7 @@ namespace RidgesideVillage
             if (Game1.currentLocation.Name.Contains("Custom_Ridgeside_LogCabinHotel2ndFloor") && Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelRoom.DirectionsAlert"));
+                //Game1.addHUDMessage(new HUDMessage("TESTING", HUDMessage.newQuest_type));
             }
         }
 
