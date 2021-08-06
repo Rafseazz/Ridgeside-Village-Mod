@@ -36,6 +36,16 @@ namespace RidgesideVillage
 
             Helper.Events.Input.ButtonPressed += OnButtonPressed;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            Helper.Events.Player.Warped += OnWarped;
+        }
+
+        //Informs player where there room is upon entering the 2nd floor
+        private void OnWarped(object sender, WarpedEventArgs e)
+        {
+            if (Game1.currentLocation.Name.Contains("Custom_Ridgeside_LogCabinHotel2ndFloor") && Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelRoom.DirectionsAlert"));
+            }
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
