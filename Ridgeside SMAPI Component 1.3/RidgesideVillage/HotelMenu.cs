@@ -74,6 +74,18 @@ namespace RidgesideVillage
                 Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
             }
 
+            //removes booked flag next day
+            if (!Game1.player.mailReceived.Contains(BIRTHDAYBOOKEDFLAG))
+            {
+                foreach (var entry in Game1.player.mailReceived)
+                {
+                    if (entry.StartsWith(BIRTHDAYBOOKED))
+                    {
+                        Game1.player.mailReceived.Remove(entry);
+                    }
+                }
+            }
+
             if (Game1.player.eventsSeen.Contains(75160247) && Game1.player.mailReceived.Contains(BIRTHDAYBOOKEDFLAG))
             {
                 Game1.player.eventsSeen.Remove(75160247);
