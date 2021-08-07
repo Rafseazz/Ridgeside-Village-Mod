@@ -38,6 +38,10 @@ namespace RidgesideVillage
             new SpecialOrders().Initialize(this);
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+
+            new IanShop().Initialize(this);
+            helper.Events.GameLoop.GameLaunched += OnGameLaunched;
+            helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
         }
 
 

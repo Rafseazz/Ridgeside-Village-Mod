@@ -1,52 +1,45 @@
 {
-	"Name": "Zesty Tuna",
-	"Description": "Smoked Tuna with citrus sauce! It's a local ridgeside delicacy.",
+	"Name": "Ridge Mosaic Cake",
+	"Description": "A sweet treat made up of cocoa and biscuits.",
 	"Category": "Cooking",
-	"Edibility": 60,
+	"Edibility": 10,
 	"EdibleIsDrink": false,
 	"EdibleBuffs": {
     "Farming": 0,
-    "Fishing": 4,
-    "Mining": 1,
+    "Fishing": 0,
+    "Mining": 0,
     "Luck": 0,
 	"Foraging": 0,
-	"MaxStamina": 1,
+	"MaxStamina": 0,
     "MagnetRadius": 0,
 	"Speed": 0,
-	"Defense": 0,
+	"Defense": 1,
 	"Attack": 0,
     "Duration": 300,
 	},
-	"Price": 560,
-	"IsColored": false,
+	"Price": 150,
+	"IsColored": true,
 	"GiftTastes":
 	{
-		"Love": ["Ysabelle", "Richard"],
+		"Love": ["Maddie", "Elliott", "Shane", "Evelyn", "Keahi", "Bliss"],
+        "Like": ["Jio", "Penny", "Haley"]
 	},
     "Recipe":
     {
-        "ResultCount": 1,
+        "ResultCount": 3,
         "Ingredients": [
         {
-            "Object": 130,
+            "Object": 245,
             "Count": 1,
         },
         {
-            "Object": "Ridgeside Clementine",
+            "Object": 246,
             "Count": 1,
         },
         {
-            "Object": "Ridge Cherry",
+            "Object": 176,
             "Count": 1,
-        },
-        {
-            "Object": "Mountain Chico",
-            "Count": 1,
-        },
-        {
-            "Object": "Autumn Drop Berry",
-            "Count": 1,
-        },
+        }
         ],
         "CanPurchase": false,
     },
