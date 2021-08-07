@@ -335,7 +335,9 @@
 		"Update": "OnLocationChange"
     },
     //After Bday Party
-    {
+
+    //Closes event hall (disabled due to potential multiplayer bugs)
+    /*{
     	"Action": "EditMap",
     	"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
     	"MapTiles": [
@@ -356,7 +358,7 @@
     	],
     	"When": { "HasSeenEvent": 75160247, "HasValue:{{Rafseazz.RidgesideVillage/Celebrant}}": true },
     	"Update": "OnLocationChange"
-    },
+    },*/
     {
         "Action": "EditMap",
         "Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
@@ -371,6 +373,7 @@
 		],
 		"When": { "HasSeenEvent": 75160247, "HasValue:{{Rafseazz.RidgesideVillage/Celebrant}}": true },
 		"Update": "OnLocationChange"
-    },       	       	
+    },
+
 ]
 }

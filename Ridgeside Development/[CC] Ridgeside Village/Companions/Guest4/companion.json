@@ -1,0 +1,132 @@
+{
+  "Name": "Guest4",
+  "Type": "Walking",
+  "FrameSizeWidth": 16,
+  "FrameSizeHeight": 32,
+  "TileSheetPath": "Characters\\RSVTourists\\Guest4",
+  "TravelSpeed": 1,
+
+  "IdleBehavior": "Wander",
+  "MaxIdleDistance": 2000,
+  "MaxDistanceBeforeTeleport": -1,
+
+  "EnableBreathing": true,
+  "Shadow": {
+    "OffsetX": 0,
+    "OffsetY": 8,
+    "Scale": 1,
+    "Alpha": 255
+  },
+
+  "DirectionChangeChanceWhileMoving": 0.003,
+  "DirectionChangeChanceWhileIdle": 0.05,
+  "ChanceForHalting": 0.1,
+  "MinHaltTime": 8000,
+  "MaxHaltTime": 20000,
+
+
+  "DownAnimation": {
+    "StartingFrame": 0,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 0,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  "RightAnimation": {
+    "StartingFrame": 4,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 4,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  "UpAnimation": {
+    "StartingFrame": 8,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 8,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  "LeftAnimation": {
+    "StartingFrame": 12,
+    "NumberOfFrames": 4,
+    "Duration": 150,
+
+    "IdleAnimation": {
+      "StartingFrame": 12,
+      "NumberOfFrames": 1,
+      "Duration": 500
+    }
+  },
+
+  /*"OverheadTextCheckInterval": 10000,
+  "OverheadTextChance": 0.1,
+  "OverheadTexts": [
+    {
+      "Text": "text1.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text2.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text3.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text4.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text5.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text6.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text7.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text8.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text9.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+    {
+      "Text": "text10.translation.string",
+      "ChanceWeight": 0.1,
+      "TextLifetime": 3000
+    },
+  ]*/
+
+
+}

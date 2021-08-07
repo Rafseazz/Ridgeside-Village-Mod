@@ -242,6 +242,52 @@
 			"Name": "NPCListCheck",
 			"Value": "'Aguar', 'Alissa', 'Bert', 'Corine', 'Ezekiel', 'Flor', 'Freddie', 'Ian', 'Jeric', 'Keahi', 'Kenneth', 'Lenny', 'Lola', 'Maddie', 'Olga', 'Philip', 'Pika', 'Richard', 'Shiro', 'Trinnie', 'Ysabelle', 'Yuuma', 'Naomi', 'Kimpoi', 'Malaya', 'Alex', 'Elliott', 'Harvey', 'Sam', 'Sebastian', 'Shane', 'Abigail', 'Emily', 'Haley', 'Leah', 'Maru', 'Penny', 'Caroline', 'Clint', 'Demetrius', 'Evelyn', 'George', 'Gus', 'Jas', 'Jodi', 'Kenneth', 'Lewis', 'Linus', 'Marnie', 'Pam', 'Pierre', 'Robin', 'Vincent', 'Willy'"
 		},
+
+		//Hotel Guests
+		{
+			"Name": "RandomNumber",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber1",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber2",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber3",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber4",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber5",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber6",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber7",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber8",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber9",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+		{
+			"Name": "RandomGuestNumber10",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
 	],
 
 	/*********
@@ -568,7 +614,7 @@
 	*/
 	{
 		"Action": "Include",
-		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/NPCMapLocations.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
+		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/CustomCompanionsTourists.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/NPCMapLocations.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
 	},
 
 	//Include Event Data
