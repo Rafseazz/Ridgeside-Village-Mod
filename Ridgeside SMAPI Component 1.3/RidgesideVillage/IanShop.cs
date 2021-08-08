@@ -50,8 +50,6 @@ namespace RidgesideVillage
             if (Game1.player.mailReceived.Contains(willWaterPlants))
             {
                 WaterThePlants();
-                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
-
                 string daysPassed = $"{Game1.Date.TotalDays}";
                 foreach (var entry in Game1.player.mailReceived)
                 {
@@ -115,7 +113,14 @@ namespace RidgesideVillage
             //Booking a room
             if (str != null && str.Contains("IanCounter"))
             {
-                IanCounterMenu();
+                if (Context.IsMainPlayer)
+                {
+                    IanCounterMenu();
+                }
+                else
+                {
+                    Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("OnlyFarmOwner"));
+                }
             }
         }
 
@@ -222,11 +227,24 @@ namespace RidgesideVillage
         {
             if (Game1.IsRainingHere(Game1.getLocationFromName("Farm")))
             {
-                Game1.addHUDMessage(new HUDMessage("IanShop.Raining", HUDMessage.newQuest_type));
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.Raining"), HUDMessage.newQuest_type));
+                if (Game1.player.mailReceived.Contains(waterPlantsFlagSmall))
+                {
+                    Game1.player.Money += (waterPlantsPriceSmall / 3);
+                }
+                else if (Game1.player.mailReceived.Contains(waterPlantsFlagMedium))
+                {
+                    Game1.player.Money += (waterPlantsPriceMedium / 3);
+                }
+                else if (Game1.player.mailReceived.Contains(waterPlantsFlagLarge))
+                {
+                    Game1.player.Money += (waterPlantsPriceLarge / 3);
+                }
             }
             //small package (it's okay, it's how you use it <3)
             else if (Game1.player.mailReceived.Contains(waterPlantsFlagSmall))
             {
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
                 int n = 0;
                 foreach (var pair in Game1.getLocationFromName("Farm").terrainFeatures.Pairs)
                 {
@@ -240,6 +258,7 @@ namespace RidgesideVillage
             //medium package (eh, not bad.)
             else if (Game1.player.mailReceived.Contains(waterPlantsFlagMedium))
             {
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
                 int n = 0;
                 foreach (var pair in Game1.getLocationFromName("Farm").terrainFeatures.Pairs)
                 {
@@ -253,6 +272,7 @@ namespace RidgesideVillage
             //large package (ooolala ;))
             else if (Game1.player.mailReceived.Contains(waterPlantsFlagLarge))
             {
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
                 int n = 0;
                 foreach (var pair in Game1.getLocationFromName("Farm").terrainFeatures.Pairs)
                 {
