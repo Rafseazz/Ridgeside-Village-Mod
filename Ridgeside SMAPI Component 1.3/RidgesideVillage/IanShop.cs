@@ -10,6 +10,8 @@ using Microsoft.Xna.Framework;
 using StardewValley.Menus;
 using StardewValley.TerrainFeatures;
 using StardewModdingAPI.Utilities;
+using StardewValley.Locations;
+using StardewValley.Buildings;
 
 namespace RidgesideVillage
 {
@@ -27,6 +29,9 @@ namespace RidgesideVillage
         const int wpmedium = 480;
         const int wplarge = 960;
         const int daysWillWater = 3;
+
+        const string willFixFences = "RSV.WillFixFences";
+        const int perfenceprice = 6;
 
         IModHelper Helper;
         IMonitor Monitor;
@@ -69,7 +74,14 @@ namespace RidgesideVillage
                         Game1.player.mailReceived.Remove(entry);
                     }
                 }
-            }  
+            }
+            
+            if (Game1.player.mailReceived.Contains(willFixFences))
+            {
+                FixTheFences();
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasFixedFences"), HUDMessage.newQuest_type));
+                Game1.player.mailReceived.Remove(willFixFences);
+            }
         }
 
         internal void OnButtonPressed(object sender, ButtonPressedEventArgs e)
@@ -112,6 +124,7 @@ namespace RidgesideVillage
             var responses = new List<Response>
             {
                 new Response("waterPlants", Helper.Translation.Get("IanShop.WaterPlants")),
+                new Response("fixFences", Helper.Translation.Get("IanShop.fixFences")),
                 new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
             };
             var responseActions = new List<Action>
@@ -119,6 +132,10 @@ namespace RidgesideVillage
                 delegate
                 {
                     WaterPlantsMenu();
+                },
+                delegate
+                {
+                    FixFencesMenu();
                 },
                 delegate
                 {
@@ -187,6 +204,10 @@ namespace RidgesideVillage
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Thankyou"));
                         };
                     },
+                    delegate
+                    {
+                        IanCounterMenu();
+                    }
                 };
 
                 Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanWaterPlantsMenu"), responses, responseActions);
@@ -241,6 +262,65 @@ namespace RidgesideVillage
                         n++;
                     }
                 }
+            }
+        }
+
+        private void FixFencesMenu()
+        {
+            int n = 0;
+            foreach (Fence fence in Game1.getFarm().Objects.Values.OfType<Fence>())
+            {
+                n++;
+            }
+
+            if (!Game1.player.mailReceived.Contains(willFixFences) && n > 0)
+            {
+                var responses = new List<Response>
+                {
+                    new Response("fixFence", n + Helper.Translation.Get("IanShop.Fences") + (n * perfenceprice) + "$"),
+                    new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
+                };
+                var responseActions = new List<Action>
+                {
+                    delegate
+                    {
+                        if(Game1.player.Money >= n * perfenceprice)
+                        {
+                            Game1.player.Money -= (n * perfenceprice);
+                            Game1.player.mailReceived.Add(willFixFences);
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.FenceThanks"));
+                        }
+                        else
+                        {
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
+                        }
+                    },
+                    delegate
+                    {
+                        IanCounterMenu();
+                    }
+                };
+                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.FenceMenu"), responses, responseActions);
+            }
+            else if (n <= 0)
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.YouHaveNoFences"));
+            }
+            else
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.AlreadyWillFix"));
+            }
+        }
+
+        private void FixTheFences()
+        {;
+            foreach (Fence fence in Game1.getFarm().Objects.Values.OfType<Fence>())
+            {
+                fence.repair();
+                fence.health.Value *= 2f;
+                fence.maxHealth.Value = fence.health.Value;
+                if (fence.isGate.Value)
+                    fence.health.Value *= 2f;
             }
         }
     }
