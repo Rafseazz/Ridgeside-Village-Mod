@@ -1,22 +1,47 @@
 {
-  "Name": "Apricot Juice",
-  "Description": "Refreshing and relaxing!",
-  "Category": "Cooking",
-  "Price": 30,
-  "Edibility": 15,
-  "EdibleIsDrink": true,
-  "IsColored": false,
-  "GiftTastes":{
-    "Love": ["Alissa", "Daia", "Shane", "Corine", "Ysabelle", "Penny", "Vincent", "Jas"],
-    "Like": ["Abigail", "Emily", "Haley", "Leah", "Maru", "Penny", "Caroline", "Jodi", "Sandy", "Demetrius", "Gus", "Pierre"],
-    "Dislike": ["Krobus", "Dwarf"]
-  },
-  "Recipe":
+	"Name": "Fluffy Apple Crumble",
+	"Description": "For a apple-ly ever after.",
+	"Category": "Cooking",
+	"Edibility": 55,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": {
+    "Farming": 0,
+    "Fishing": 0,
+    "Mining": 0,
+    "Luck": 0,
+	"Foraging": 0,
+	"MaxStamina": 0,
+    "MagnetRadius": 2,
+	"Speed": 2,
+	"Defense": 2,
+	"Attack": 0,
+    "Duration": 300,
+	},
+	"Price": 420,
+	"IsColored": true,
+	"GiftTastes":
+	{
+		"Love": ["Daia", "Bliss", "Jio"],
+        "Like": ["Maddie", "Pika", "Flor"]
+	},
+    "Recipe":
     {
         "ResultCount": 1,
         "Ingredients": [
         {
-            "Object": 634,
+            "Object": 246,
+            "Count": 1,
+        },
+        {
+            "Object": 408,
+            "Count": 3,
+        },
+        {
+            "Object": 613,
+            "Count": 1,
+        },
+        {
+            "Object": "Ridge Wild Apple",
             "Count": 1,
         },
         ],
@@ -25,7 +50,7 @@
 
     "NameLocalization":
     { 
-      //remove the "//" from your language
+    	//remove the "//" from your language
         //"es": "PLACEHOLDER",
         //"ko": "PLACEHOLDER",
         //"de": "PLACEHOLDER",
@@ -40,7 +65,7 @@
     },
     "DescriptionLocalization":
     {
-      //remove the "//" from your language      
+    	//remove the "//" from your language    	
         //"es": "PLACEHOLDER",
         //"ko": "PLACEHOLDER",
         //"de": "PLACEHOLDER",

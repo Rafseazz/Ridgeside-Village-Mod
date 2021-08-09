@@ -1,23 +1,24 @@
 {
-  "Name": "Apricot Juice",
-  "Description": "Refreshing and relaxing!",
+  "Name": "Wild Apple Juice",
+  "Description": "Makes you so Apple-ly!",
   "Category": "Cooking",
-  "Price": 30,
-  "Edibility": 15,
+  "Price": 40,
+  "Edibility": 25,
   "EdibleIsDrink": true,
   "IsColored": false,
   "GiftTastes":{
     "Love": ["Alissa", "Daia", "Shane", "Corine", "Ysabelle", "Penny", "Vincent", "Jas"],
     "Like": ["Abigail", "Emily", "Haley", "Leah", "Maru", "Penny", "Caroline", "Jodi", "Sandy", "Demetrius", "Gus", "Pierre"],
-    "Dislike": ["Krobus", "Dwarf"]
+    "Dislike": ["Krobus", "Dwarf"],
+    "Hate": ["Harvey"]
   },
   "Recipe":
     {
         "ResultCount": 1,
         "Ingredients": [
         {
-            "Object": 634,
-            "Count": 1,
+            "Object": "Ridge Wild Apple",
+            "Count": 2,
         },
         ],
         "CanPurchase": false,

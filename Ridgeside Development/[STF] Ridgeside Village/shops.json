@@ -1430,5 +1430,96 @@
 	],
 	},
 
+	//------------
+	//MalayaShop  
+	//------------
+	{
+	"ShopName": "RSVMalayaShop",
+	"StoreCurrency": "Money",
+	"CategoriesToSell": [ -7 ],
+	"PortraitPath": "assets/MalayaShop.png",
+	"Quote": "Welcome! What would you like, dear?",
+	"ClosedMessage": "Sorry, we're closed!",
+	"ShopPrice": -1,
+	"MaxNumItemsSoldInStore": 5,
+	"DefaultSellPriceMultiplier": 0.7,
+	"PriceMultiplierWhen": {
+		"0.6": ["f Malaya 2000"] 
+		},
+	"When": ["t 900 2300"],
+    "LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+   "LocalizedClosedMessage": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},	
+	"ItemStocks": [
+		//Food
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Apricot Juice",
+				"Clementine Juice",
+				"Wild Apple Juice"
+				],
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Clementine Cake",
+				"Crunchy Bagel",
+				"Fluffy Apple Crumble",
+				"Forage Souffle",
+				"Forest Halva",
+				"Highland Blueberry Pie",
+				"Highland Revani",
+				"Holiday Ice",
+				"Jumpy Coffee Cake",
+				"Kedi Delight",
+				"Kek Style Shortcake",
+				"Kek's Small Dream",
+				"Pillowsoft Cheezy Sandwich",
+				"Pink Frosted Sprinkled Doughnut",
+				"Pumpkin Darling Slice",
+				"Ridge Apple Cake",
+				"Ridge Mosaic Cake",
+				"Strawberry Lover Pie",
+				"Sweet Cranberry Cheesecake",
+				"Tropic Mango Cake",
+				],
+			"Stock": 3,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Hundred Flavor Doughnut"
+				],
+			"Stock": 1,
+		},
+	],
+	},
+
   ]
   }
