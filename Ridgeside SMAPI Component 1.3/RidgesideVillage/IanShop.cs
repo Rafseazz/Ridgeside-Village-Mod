@@ -10,8 +10,6 @@ using Microsoft.Xna.Framework;
 using StardewValley.Menus;
 using StardewValley.TerrainFeatures;
 using StardewModdingAPI.Utilities;
-using StardewValley.Locations;
-using StardewValley.Buildings;
 
 namespace RidgesideVillage
 {
