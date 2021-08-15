@@ -54,6 +54,7 @@ namespace RidgesideVillage
                     {
                         new Response("loc2", Helper.Translation.Get("MinecartLocation.2")),
                         new Response("loc3", Helper.Translation.Get("MinecartLocation.3")),
+                        new Response("loc4", Helper.Translation.Get("MinecartLocation.4")),
                         new Response("cancel", Helper.Translation.Get("Exit.Text"))
                     };
                 var selectionAction = new List<Action>
@@ -67,6 +68,11 @@ namespace RidgesideVillage
                         {
                             Game1.playSound("boulderCrack");
                             Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 16, 82, false);
+                        },
+                        delegate
+                        {
+                            Game1.playSound("boulderCrack");
+                            Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 109, 85, false);
                         },
                         delegate { }
                     };
@@ -80,6 +86,7 @@ namespace RidgesideVillage
                     {
                         new Response("loc1", Helper.Translation.Get("MinecartLocation.1")),
                         new Response("loc3", Helper.Translation.Get("MinecartLocation.3")),
+                        new Response("loc4", Helper.Translation.Get("MinecartLocation.4")),
                         new Response("cancel", Helper.Translation.Get("Exit.Text"))
                     };
                 var selectionAction = new List<Action>
@@ -94,6 +101,11 @@ namespace RidgesideVillage
                             Game1.playSound("boulderCrack");
                             Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 16, 82, false);
                         },
+                        delegate
+                        {
+                            Game1.playSound("boulderCrack");
+                            Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 109, 85, false);
+                        },
                         delegate { }
                     };
 
@@ -106,6 +118,7 @@ namespace RidgesideVillage
                     {
                         new Response("loc1", Helper.Translation.Get("MinecartLocation.1")),
                         new Response("loc2", Helper.Translation.Get("MinecartLocation.2")),
+                        new Response("loc4", Helper.Translation.Get("MinecartLocation.4")),
                         new Response("cancel", Helper.Translation.Get("Exit.Text"))
                     };
                 var selectionAction = new List<Action>
@@ -119,6 +132,43 @@ namespace RidgesideVillage
                         {
                             Game1.playSound("boulderCrack");
                             Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 69, 16, false);
+                        },
+                        delegate
+                        {
+                            Game1.playSound("boulderCrack");
+                            Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 109, 85, false);
+                        },
+                        delegate { }
+                    };
+
+                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("RSV.Minecart.Question"), choices, selectionAction);
+            }
+
+            if (str != null && str.Contains("RSVMinecart4"))
+            {
+                var choices = new List<Response>
+                    {
+                        new Response("loc1", Helper.Translation.Get("MinecartLocation.1")),
+                        new Response("loc2", Helper.Translation.Get("MinecartLocation.2")),
+                        new Response("loc4", Helper.Translation.Get("MinecartLocation.3")),
+                        new Response("cancel", Helper.Translation.Get("Exit.Text"))
+                    };
+                var selectionAction = new List<Action>
+                    {
+                        delegate
+                        {
+                            Game1.playSound("boulderCrack");
+                            Game1.warpFarmer("Custom_Ridgeside_RSVCableCar", 25, 18, false);
+                        },
+                        delegate
+                        {
+                            Game1.playSound("boulderCrack");
+                            Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 69, 16, false);
+                        },
+                        delegate
+                        {
+                            Game1.playSound("boulderCrack");
+                            Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 16, 82, false);
                         },
                         delegate { }
                     };

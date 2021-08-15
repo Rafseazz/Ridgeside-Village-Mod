@@ -1,0 +1,88 @@
+{
+	"Name": "Hundred Flavor Doughnut",
+	"Description": "Every sprinkle tastes different!",
+	"Category": "Cooking",
+	"Edibility": 30,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": {
+    "Farming": 1,
+    "Fishing": 1,
+    "Mining": 1,
+    "Luck": 1,
+	"Foraging": 1,
+	"MaxStamina": 1,
+    "MagnetRadius": 1,
+	"Speed": 1,
+	"Defense": 1,
+	"Attack": 1,
+    "Duration": 300,
+	},
+	"Price": 500,
+	"IsColored": false,
+	"GiftTastes":
+	{
+		"Love": ["Bliss", "Keahi", "Yuuma", "Trinnie", "Jas", "Vincent"],
+	},
+    "Recipe":
+    {
+        "ResultCount": 1,
+        "Ingredients": [
+        {
+            "Object": 400,
+            "Count": 1,
+        },
+        {
+            "Object": 246,
+            "Count": 1,
+        },
+        {
+            "Object": 258,
+            "Count": 1,
+        },
+        {
+            "Object": 188,
+            "Count": 1,
+        },
+        {
+            "Object": "Spiritual Essence",
+            "Count": 5,
+        },
+        {
+            "Object": 454,
+            "Count": 5,
+        },
+        ],
+        "CanPurchase": false,
+    },
+
+    "NameLocalization":
+    { 
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    },
+    "DescriptionLocalization":
+    {
+    	//remove the "//" from your language    	
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    }
+}

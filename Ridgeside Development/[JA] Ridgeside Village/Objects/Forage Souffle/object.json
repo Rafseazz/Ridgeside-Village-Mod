@@ -1,0 +1,85 @@
+{
+	"Name": "Forage Souffle",
+	"Description": "Keep quite and nobody will explode.",
+	"Category": "Cooking",
+	"Edibility": 25,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": {
+    "Farming": 0,
+    "Fishing": 0,
+    "Mining": 0,
+    "Luck": 0,
+	"Foraging": 2,
+	"MaxStamina": 0,
+    "MagnetRadius": 1,
+	"Speed": 0,
+	"Defense": 0,
+	"Attack": 0,
+    "Duration": 300,
+	},
+	"Price": 140,
+	"IsColored": false,
+	"GiftTastes":
+	{
+		"Love": ["Leah", "Maddie", "Linus", "Trinnie", "Shiro"],
+        "Like": ["Bert", "Lola", "Jeric"]
+	},
+    "Recipe":
+    {
+        "ResultCount": 2,
+        "Ingredients": [
+        {
+            "Object": 176,
+            "Count": 1,
+        },
+        {
+            "Object": 416,
+            "Count": 1,
+        },
+        {
+            "Object": "Ridge Cherry",
+            "Count": 1,
+        },
+        {
+            "Object": "Ridgeside Clementine",
+            "Count": 1,
+        },
+        {
+            "Object": "Autumn Drop Berry",
+            "Count": 1,
+        },
+        ],
+        "CanPurchase": false,
+    },
+
+    "NameLocalization":
+    { 
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    },
+    "DescriptionLocalization":
+    {
+    	//remove the "//" from your language    	
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    }
+}

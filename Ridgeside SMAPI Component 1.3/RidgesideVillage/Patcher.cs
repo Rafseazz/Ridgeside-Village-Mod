@@ -36,6 +36,7 @@ namespace RidgesideVillage
 
             HarmonyPatch_EventMessage.ApplyPatch(harmony, Helper);
             HarmonyPatch_Obelisk.ApplyPatch(harmony, Helper);
+            HarmonyPatch_UntimedSO.ApplyPatch(harmony, Helper);
             }
 
         [HarmonyPostfix]
@@ -61,6 +62,7 @@ namespace RidgesideVillage
                         fish_names.Add("Harvester Trout");
                         fish_names.Add("Lullaby Carp");
                         fish_names.Add("Pebble Back Crab");
+                        fish_names.Add("Ridgeside Bass");
                         break;
                     case "Ridge":
                         fish_names.Add("Caped Tree Frog");
