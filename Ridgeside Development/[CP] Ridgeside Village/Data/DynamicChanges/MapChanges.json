@@ -279,7 +279,7 @@
 		"FromFile": "Assets/Maps/EventMaps/LogCabinHotelLobbyExpanded.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 46, "Height": 18 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 46, "Height": 18 },
-		"When": { "Year |contains=1": true },
+		"When": { "HasFlag: hostPlayer |contains=RSV.UnlockHotelExpansion": true },
 		"Update": "OnLocationChange"
 	},
 //Spouse Picture during wedding reception
