@@ -190,7 +190,8 @@
 	},
 
 //Event changes
-     	 {
+	//Aguar Events
+     	{
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
          "FromFile": "Assets/Maps/EventMaps/AguarWaterfalls.tmx",
@@ -200,7 +201,7 @@
          "When": { "HasSeenEvent: hostPlayer |contains=75160063": true, },
          "Update": "OnLocationChange, OnTimeChange"         
       	},
-     	 {
+     	{
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_AguarCave",
          "FromFile": "Assets/Maps/EventMaps/AguarCaveFixed.tmx",
@@ -210,7 +211,9 @@
          "When": { "HasSeenEvent: hostPlayer |contains=75160064": true,	},
          "Update": "OnLocationChange, OnTimeChange"
       	},
-     	 {
+
+    //Richard vase
+     	{
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_LogCabinHotel3rdFloor",
          "FromFile": "Assets/Maps/EventMaps/Richard8HeartsEffect.tmx",
@@ -221,8 +224,10 @@
          "When": {
 			"HasSeenEvent: hostPlayer |contains=75160105": true,
 		}         
-      	},        	      	
-     	 {
+      	},
+
+    //Jio shop     	      	
+     	{
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
          "FromFile": "Assets/Maps/QuestMaps/RSVJioShop.tmx",
@@ -235,8 +240,8 @@
 		}         
       	}, 
 
-//Letter Changes
 
+    //Community Greenhouse unlock
      	 {
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
@@ -247,7 +252,9 @@
          "When": {
 			 "HasFlag: hostPlayer |contains=GH1letter": true,
 		}         
-      	}, 
+      	},
+
+    //Hike Greenhouse unlock
      	 {
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVTheHike",
@@ -257,7 +264,7 @@
          "PatchMode": "Overlay",
          "Update": "OnTimeChange, OnLocationChange",
     	 "When": {
-             "Year": "2",
+             "Query: {{Year}} >= 2": true,
              "Time": "{{Range: 2000, 2600}}",
       	}
       	},
