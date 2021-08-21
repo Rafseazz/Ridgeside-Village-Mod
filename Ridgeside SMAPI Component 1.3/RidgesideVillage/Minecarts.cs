@@ -59,8 +59,17 @@ namespace RidgesideVillage
                     Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 16, 82, false);
                 });
             }
+            if (!tileActionString.Contains("4"))
+            {
+                choices.Add(new Response("loc4", Helper.Translation.Get("MinecartLocation.4")));
+                selectionActions.Add(delegate
+                {
+                    Game1.playSound("boulderCrack");
+                    Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 109, 85, false);
+                });
+            }
 
-         choices.Add(new Response("cancel", Helper.Translation.Get("Exit.Text")));
+            choices.Add(new Response("cancel", Helper.Translation.Get("Exit.Text")));
          selectionActions.Add(delegate { });
 
 
