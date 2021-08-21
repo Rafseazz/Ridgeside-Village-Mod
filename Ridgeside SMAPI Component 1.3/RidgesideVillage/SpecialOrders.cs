@@ -11,13 +11,13 @@ using StardewValley.Menus;
 
 namespace RidgesideVillage
 {
-    internal class SpecialOrders
+    internal static class SpecialOrders
     {
         const string FIXMINECART = "RSV.SpecialOrder.FixMinecart";
 
-        IModHelper Helper;
-        IMonitor Monitor;
-        internal void Initialize(IMod ModInstance)
+        static IModHelper Helper;
+        static IMonitor Monitor;
+        internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
@@ -26,7 +26,7 @@ namespace RidgesideVillage
             Helper.Events.GameLoop.OneSecondUpdateTicked += OnUpdate;
         }
 
-        private void OnUpdate(object sender, OneSecondUpdateTickedEventArgs e)
+        private static void OnUpdate(object sender, OneSecondUpdateTickedEventArgs e)
         {
             if (Game1.player.eventsSeen.Contains(75160190) && !Game1.player.team.SpecialOrderActive(FIXMINECART) && !Game1.player.team.completedSpecialOrders.ContainsKey(FIXMINECART))
             {

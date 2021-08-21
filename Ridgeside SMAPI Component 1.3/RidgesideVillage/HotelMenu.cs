@@ -12,7 +12,7 @@ using StardewModdingAPI.Utilities;
 
 namespace RidgesideVillage
 {
-    internal class HotelMenu
+    internal static class HotelMenu
     {
         const string ROOMBOOKEDFLAG = "RSV.HotelRoomBooked";
         const string RECEPTIONBOOKEDFLAG = "RSV.ReservedReception";
@@ -27,20 +27,24 @@ namespace RidgesideVillage
         const int WEDDINGPRICE = 2000;
         const int BIRTHDAYPRICE = 1500;
 
-        IModHelper Helper;
-        IMonitor Monitor;
-        internal void Initialize(IMod ModInstance)
+        static IModHelper Helper;
+        static IMonitor Monitor;
+        internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
 
-            Helper.Events.Input.ButtonPressed += OnButtonPressed;
+            //Helper.Events.Input.ButtonPressed += OnButtonPressed;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.Player.Warped += OnWarped;
+
+            TileActionHandler.RegisterTileAction("HotelCounter", HandleHotelCounterMenu);
+            TileActionHandler.RegisterTileAction("EventHallCounter", HandleEventHallMenu);
+            TileActionHandler.RegisterTileAction("RatesCounter", HandleRatesMenu);
         }
 
         //Informs player where there room is upon entering the 2nd floor
-        private void OnWarped(object sender, WarpedEventArgs e)
+        private static void OnWarped(object sender, WarpedEventArgs e)
         {
             if (!Context.IsMainPlayer)
                 return;
@@ -51,7 +55,7 @@ namespace RidgesideVillage
             }
         }
 
-        private void OnDayStarted(object sender, DayStartedEventArgs e)
+        private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             if (Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
             {
@@ -138,58 +142,12 @@ namespace RidgesideVillage
             }
         }
 
-        internal void OnButtonPressed(object sender, ButtonPressedEventArgs e)
-        {
-            // ignore if player hasn't loaded a save yet
-            if (!Context.IsWorldReady)
-                return;
-
-            if (!Game1.currentLocation.Name.Equals("Custom_Ridgeside_LogCabinHotelLobby"))
-            {
-                return;
-            }
-            //Checks if player can move
-            bool probablyDontCheck =
-            !StardewModdingAPI.Context.CanPlayerMove
-            || Game1.player.isRidingHorse()
-            || Game1.currentLocation == null
-            || Game1.eventUp
-            || Game1.isFestival()
-            || Game1.IsFading();
-            //Will only trigger if player can move
-            if (probablyDontCheck)
-            {
-                return;
-            }
-
-            if (!e.Button.IsActionButton())
-                return;
-            Vector2 clickedTile = Helper.Input.GetCursorPosition().GrabTile;
-            string str = Game1.currentLocation.doesTileHaveProperty(((int)clickedTile.X), ((int)clickedTile.Y), "Action", "Buildings");
-            //Booking a room
-            if (str != null && str.Contains("HotelCounter"))
-            {
-                HandleHotelCounterMenu();
-            }
-
-            //Reserving an event in event hall
-            if (str != null && str.Contains("EventHallCounter"))
-            {
-                HandleEventHallMenu();
-            }
-
-            if (str != null && str.Contains("RatesCounter"))
-            {
-                HandleRatesMenu();
-            }
-        }
-
-        private void HandleRatesMenu()
+        private static void HandleRatesMenu(string tileActionString = "")
         {
             Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("LogCabinHotel.Rates.Expanded"));
         }
 
-        private void HandleHotelCounterMenu()
+        private static void HandleHotelCounterMenu(string tileActionString = "")
         {
             if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
             {
@@ -222,7 +180,7 @@ namespace RidgesideVillage
             }
         }
 
-        private void HandleEventHallMenu()
+        private static void HandleEventHallMenu(string tileActionString = "")
         {
             //If player doesn't have enough money to book an event
             if (Game1.player.Money < 1500)
@@ -282,7 +240,7 @@ namespace RidgesideVillage
             }
         }
 
-        private void HandleReceptionEventMenu()
+        private static void HandleReceptionEventMenu()
         {
             var responses = new List<Response>
                     {
@@ -303,7 +261,7 @@ namespace RidgesideVillage
             Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), responses, responseActions);
         }
 
-        private void HandleBirthdayEventMenu()
+        private static void HandleBirthdayEventMenu()
         {
             //Do you want to throw party for 2k?
             var responses = new List<Response>
@@ -323,7 +281,7 @@ namespace RidgesideVillage
 
             Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), responses, responseActions);
         }
-        private void HandleBirthDayNPCSelectionMenu()
+        private static void HandleBirthDayNPCSelectionMenu()
         {
 
             var responses = new List<Response>();
@@ -351,7 +309,7 @@ namespace RidgesideVillage
             Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Bday.List"), responses, responseActions);
         }
 
-        private HashSet<Tuple<string, string>> NPCBirthdaysInNextNDays(int n)
+        private static HashSet<Tuple<string, string>> NPCBirthdaysInNextNDays(int n)
         {
             HashSet<Tuple<string, string>> birthdayNPCs = new HashSet<Tuple<string, string>>();
             SDate startDate = SDate.Now().AddDays(1);
@@ -389,7 +347,7 @@ namespace RidgesideVillage
             return birthdayNPCs;
         }
 
-        private void HandleAnniversaryMenu()
+        private static void HandleAnniversaryMenu()
         {
             var responses = new List<Response>
             {
