@@ -34,7 +34,13 @@
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "Allows RSV NPCs to attend Pelican Town Festivals"
-		}				
+		},
+
+		"EnableWorldMapEdit": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Allow world map patch."
+		}		
 },
 
 	/*********
@@ -113,7 +119,7 @@
 		//Sam Band Only
 		{
 			"Name": "RSVGATHER",
-			"Value": "/warp Sam 85 40/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 85 43/pause 800/speak Sam \"{{i18n:RSVG.14}}\"/",
+			"Value": "/warp Sam 74 38/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 74 39/pause 800/speak Sam \"{{i18n:RSVG.14}}\"/",
 			"When": {
 				"HasSeenEvent |contains=75160120": false
 			}
@@ -129,7 +135,7 @@
 		//Sam Band and Alissa
 		{
 			"Name": "RSVGATHER",
-			"Value": "/warp Alissa 85 40/faceDirection Alissa 2/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 85 43/pause 800/speak Sam \"{{i18n:RSVG.14}}\"/",
+			"Value": "/warp Alissa 74 38/warp Sam 72 38/faceDirection Alissa 2/showFrame Sam 20/showFrame Abigail 49/showFrame Sebastian 42/fade/viewport 74 39/pause 800/speak Sam \"{{i18n:RSVG.14}}\"/",
 			"When": {
 				"HasSeenEvent |contains=75160120": true
 			}

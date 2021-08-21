@@ -46,6 +46,9 @@ namespace RidgesideVillage
         //Informs player where there room is upon entering the 2nd floor
         private static void OnWarped(object sender, WarpedEventArgs e)
         {
+            if (!Context.IsMainPlayer)
+                return;
+
             if (Game1.currentLocation.Name.Contains("Custom_Ridgeside_LogCabinHotel2ndFloor") && Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelRoom.DirectionsAlert"));
