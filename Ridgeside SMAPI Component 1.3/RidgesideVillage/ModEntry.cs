@@ -27,21 +27,18 @@ namespace RidgesideVillage
             CustomCPTokens = new CustomCPTokens(this);
             Patcher = new Patcher(this);
 
-            new HotelMenu().Initialize(this);
+            HotelMenu.Initialize(this);
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
 
-            new Minecarts().Initialize(this);
-            helper.Events.GameLoop.GameLaunched += OnGameLaunched;
-            helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            Minecarts.Initialize(this);
 
-            new SpecialOrders().Initialize(this);
-            helper.Events.GameLoop.GameLaunched += OnGameLaunched;
-            helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            SpecialOrders.Initialize(this);
 
-            new IanShop().Initialize(this);
-            helper.Events.GameLoop.GameLaunched += OnGameLaunched;
-            helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            IanShop.Initialize(this);
+
+            //not done (yet?)
+            //new CliffBackground();
         }
 
 
@@ -49,7 +46,10 @@ namespace RidgesideVillage
 
         private void OnGameLaunched(object sender, EventArgs e)
         {
-            
+            TileActionHandler.Initialize(this);
+            ImageMenu.Setup();
+
+
             Config = Helper.ReadConfig<ModConfig>();
 
             if (!Helper.ModRegistry.IsLoaded("spacechase0.JsonAssets"))
