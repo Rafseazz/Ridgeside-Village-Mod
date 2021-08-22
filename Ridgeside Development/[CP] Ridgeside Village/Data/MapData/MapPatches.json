@@ -29,5 +29,12 @@
 			"When": { "HasMod: |contains=DaisyNiko.SVR2": false}
 		},
 
+	//Load Contest Winner Painting
+		{
+			"Action": "Load",
+			"Target": "LooseSprites/RSVContestWinnerPic",
+			"FromFile": "Assets/{{Target}}.png",
+		}
+
 	]
 }

@@ -10,17 +10,5 @@
 					},
 	},
 
-	{
-		//Temp schedule for after event
-		"Action": "EditData",
-		"Target": "Characters/Schedules/Naomi",
-		"Entries": {
-			"spring": "0 Custom_Ridgeside_LogCabinHotelLobby 14 5 2/700 Custom_Ridgeside_LogCabinHotelLobby 14 6 2/2600 Custom_Ridgeside_RSVHiddenWarp2 1 1 2" 
-		},
-		"When": {
-			"Query: {{Year}} > 1": true, "HasSeenEvent: hostPlayer |contains=75160250": false 
-		}
-	},
-
 ]
 }

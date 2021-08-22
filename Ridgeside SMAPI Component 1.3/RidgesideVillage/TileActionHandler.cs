@@ -30,7 +30,7 @@ namespace RidgesideVillage
 
         private static void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
-            Log.Debug("Button pressed");
+            //Log.Debug("Button pressed");
             var Helper = ModRef.Helper;
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady)

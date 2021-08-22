@@ -1521,5 +1521,74 @@
 	],
 	},
 
+	//------------
+	//KimpoiShop   
+	//------------
+	{
+	"ShopName": "RSVKimpoiShop",
+	"StoreCurrency": "Money",
+	"CategoriesToSell": [ -19,-74 ],
+	"PortraitPath": "assets/KimpoiShop.png",
+	"Quote": "Seeds from our travels. Come take your pick.",
+	"ShopPrice": -1,
+	"DefaultSellPriceMultiplier": 0.5,
+	"PriceMultiplierWhen": {
+		"0.3": ["f Kimpoi 2000"] 
+		},
+	"When": ["t 900 2000"],
+	"ClosedMessage": "Sorry, we're closed!",
+    "LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+   "LocalizedClosedMessage": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},	
+	
+	"ItemStocks": [
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Cherry Pluot Sapling",
+				"Highland Jostaberry Sapling",
+				"Mountain Plumcot Sapling",
+				"Northern Limequat Sapling",
+				"Paradise Rangpur Sapling",
+				"Tropi Ugli Fruit Sapling",
+				],
+		},
+		//Year 2
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Desert Tangelo Sapling",
+				"Ember Blood Lime Sapling",
+				],
+			"When": [ "y 2" ] 
+		},
+	],
+	},
+
   ]
   }
