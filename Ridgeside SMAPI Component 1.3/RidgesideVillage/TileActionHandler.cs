@@ -59,7 +59,7 @@ namespace RidgesideVillage
             if (actionString != null && actionString != "")
             {
 
-                Log.Debug($"FOUND ACTION {actionString}");
+                //Log.Debug($"FOUND ACTION {actionString}");
                 foreach (var key in tileActions.Keys)
                 {
                     if (actionString.Contains(key))

@@ -37,6 +37,8 @@ namespace RidgesideVillage
 
             IanShop.Initialize(this);
 
+            Greenhouses.Initialize(this);
+
             //not done (yet?)
             //new CliffBackground();
         }

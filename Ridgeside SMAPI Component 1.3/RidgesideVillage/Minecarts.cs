@@ -37,7 +37,7 @@ namespace RidgesideVillage
                 choices.Add(new Response("loc1", Helper.Translation.Get("MinecartLocation.1")));
                 selectionActions.Add(delegate
                 {
-                    Game1.playSound("boulderCrack");
+                    Game1.playSound("stairsdown");
                     Game1.warpFarmer("Custom_Ridgeside_RSVCableCar", 25, 18, false);
                 });
             }
@@ -46,7 +46,7 @@ namespace RidgesideVillage
                 choices.Add(new Response("loc2", Helper.Translation.Get("MinecartLocation.2")));
                 selectionActions.Add(delegate
                 {
-                    Game1.playSound("boulderCrack");
+                    Game1.playSound("stairsdown");
                     Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 69, 16, false);
                 });
             }
@@ -55,7 +55,7 @@ namespace RidgesideVillage
                 choices.Add(new Response("loc3", Helper.Translation.Get("MinecartLocation.3")));
                 selectionActions.Add(delegate
                 {
-                    Game1.playSound("boulderCrack");
+                    Game1.playSound("stairsdown");
                     Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 16, 82, false);
                 });
             }
@@ -64,7 +64,7 @@ namespace RidgesideVillage
                 choices.Add(new Response("loc4", Helper.Translation.Get("MinecartLocation.4")));
                 selectionActions.Add(delegate
                 {
-                    Game1.playSound("boulderCrack");
+                    Game1.playSound("stairsdown");
                     Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 109, 85, false);
                 });
             }

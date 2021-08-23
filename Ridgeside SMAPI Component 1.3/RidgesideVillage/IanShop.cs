@@ -72,8 +72,33 @@ namespace RidgesideVillage
                         }
                         toRemove.Add(entry);
                     }
+
+                    else if (entry.StartsWith(waterDeadline) && !entry.Contains(daysPassed))
+                    {
+                        int n;
+                        var split = entry.Split('.');
+                        n = Int32.Parse(split[1]);
+                        if (Int32.Parse(daysPassed) > n)
+                        {
+                            Log.Debug("Removed Odd Jobs Watering Service Flag due to time travel.");
+                            Game1.player.mailReceived.Remove(willWaterPlants);
+                            if (Game1.player.mailReceived.Contains(waterPlantsFlagSmall))
+                            {
+                                toRemove.Add(waterPlantsFlagSmall);
+                            }
+                            if (Game1.player.mailReceived.Contains(waterPlantsFlagMedium))
+                            {
+                                toRemove.Add(waterPlantsFlagMedium);
+                            }
+                            if (Game1.player.mailReceived.Contains(waterPlantsFlagLarge))
+                            {
+                                toRemove.Add(waterPlantsFlagLarge);
+                            }
+                            toRemove.Add(entry);
+                        }
+                    }
                 }
-                foreach(var entry in toRemove)
+                foreach (var entry in toRemove)
                 {
                     Game1.player.mailReceived.Remove(entry);
                 }

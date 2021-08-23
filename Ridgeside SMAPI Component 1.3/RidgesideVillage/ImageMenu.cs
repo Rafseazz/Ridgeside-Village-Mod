@@ -51,7 +51,7 @@ namespace RidgesideVillage
                 }
 
             }
-            Log.Debug($"{tileAction}");
+            //Log.Debug($"{tileAction}");
             Texture2D image = ModEntry.Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath(path), ContentSource.GameContent);
             Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width *scale), (int)(image.Height * scale));
             Game1.activeClickableMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image);
