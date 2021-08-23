@@ -2671,14 +2671,14 @@
 "MapString.rsv.noquestboard": "There's a note in the board. It reads...#'Closed until further notice - Lenny'",
 
 "MapString.rsv.1": "Welcome to Ridgeside Village!",
-"MapString.rsv.2": "Log Cabin Hotel #The ultimate mountainside experience!#Residents: Richard, Philip, Ysabelle and Flor.",
+"MapString.rsv.2": "Log Cabin Hotel #The ultimate mountainside experience!",
 "MapString.rsv.3": "Lenny's Mailbox #Ridgeside Village Admin",
-"MapString.rsv.4": "Kobayashi Residence #Shiro and Yuuma live here.",
+"MapString.rsv.4": "Kobayashi Residence",
 "MapString.rsv.5": "This swing looks like it's never been used.",
 "MapString.rsv.6": "Eubank Residence#Kenneth lives here.#'Need anything fixed? Come on in!'",
 "MapString.rsv.7": "This a doghouse with no dog.#Who let the dog out?",
 "MapString.rsv.8": "Someone lit a bonfire here recently.",
-"MapString.rsv.9": "Winters Residence#Ian lives here.#'You call, I haul!'",
+"MapString.rsv.9": "Odd Jobs Services.#'You call, we haul!'",
 "MapString.rsv.10": "The sign has been cut cleanly in half.#It looks like it was cut with some sort of blade...",
 "MapString.rsv.11": "The statue is spooky.#You'd rather not touch it.",
 "MapString.rsv.12": "Someone seems to be living inside this grassy hut.#It seems a little small for a human, though.",
@@ -2691,7 +2691,7 @@
 "MapString.rsv.19": "Liden Residence#Bert, Olga and Trinnie live here.",
 "MapString.rsv.20": "The jars are full of fruit preserves.#They smell good!",
 "MapString.rsv.21": "Fruit drops when it's ripe.#Then it gets collected and made into preserves.",
-"MapString.rsv.22": "Alissa's Mailbox#Nightingale Orchard",
+"MapString.rsv.22": "Nightingale Orchard",
 "MapString.rsv.23.spring": "These crops look very healthy.",
 "MapString.rsv.23.summer": "These crops look very healthy.",
 "MapString.rsv.23.fall": "These crops look very healthy.",
@@ -2707,7 +2707,7 @@
 "MapString.rsv.32": "Well, well, well.#It's a well.",
 "MapString.rsv.33": "Akina Residence#Pika and Keahi live here.",
 "MapString.rsv.34": "Pretty sure I saw this horse walk into the Stardrop Saloon.",
-"MapString.rsv.35": "Jeric's Shop#Blooming Hill Farm",
+"MapString.rsv.35": "Blooming Hill Farm#Farm supplies available inside!",
 "MapString.rsv.36": "A worn-down workbench#Jeric sure keeps busy.",
 "MapString.rsv.37": "An old motorcycle.#Looks like Jeric's working on it.",
 "MapString.rsv.38": "This chicken is free from society's yoke.",
@@ -8242,105 +8242,6 @@
 "InterModDialogue.EmberNightDialogue.Olivia": "PLACEHOLDER",
 "InterModDialogue.EmberNightDialogue.Andy": "PLACEHOLDER",
 "InterModDialogue.EmberNightDialogue.Susan": "PLACEHOLDER",
-
-//Hotel Tourist population dialogues (CANCELLED) (No need to translate)
-/*
-//General Days
-//Small amount of guests
-"Richard.HotelReaction.Small": "Hmm, business has been slow these days.$h#$e#I wonder what I should do to attract more customers.#$b#If you have any ideas, please let me know.$h",
-"Ysabelle.HotelReaction.Small": "I sincerely hope the coming days are better.$6#$b#I worry for Grandpa. He's been stressing about the lack of customers for a while now.$s",
-"Philip.HotelReaction.Small": "The hotel has been spacious lately.#$b#I hope this doesn't happen too often, or else I would need to look for a different place to stay.$s",
-"Flor.HotelReaction.Small": "I must speak to Mr. Richard when he's free.#$b#Maybe I can help come up with strategies for the hotel or something.",
-"Naomi.HotelReaction.Small": "placeholder",
-"Ian.HotelReaction.Small": "People haven't been coming in that much.$s#$b#Maybe I need to clean up more...",
-"Malaya.HotelReaction.Small": "placeholder",
-
-//Moderate amount of guests
-"Richard.HotelReaction.Moderate": "We've seen better days.#$b#But that's alright, I'm happy to serve my dear customers.$h",
-"Ysabelle.HotelReaction.Moderate": "Hmm, I think I'd be free later this afternoon.#$b#There's part of me that feels sad about it, but it gives me time to practice my pirouettes.$h",
-"Philip.HotelReaction.Moderate": "It's nice to see more people here.#$b#Thank Yoba for that.$h",
-"Flor.HotelReaction.Moderate": "This is a nice sign.#$b#I'm pleased to see a lot of people visiting.$h ",
-"Naomi.HotelReaction.Moderate": "placeholder",
-"Ian.HotelReaction.Moderate": "Mr. Richard told me that we have to come up with ways to attract more customers.",
-"Malaya.HotelReaction.Moderate": "placeholder",
-
-//Large amount of guests
-"Richard.HotelReaction.Large": "Today is a great day.$h#$b#Excuse me, but I must tend to the customers.#$e#I hope I'm making my dear Angelika proud.$h",
-"Ysabelle.HotelReaction.Large": "I'm glad to see Grandpa happy.$h#$b#Taking care of the hotel's his way to relax, and seeing it flourish makes me feel so proud of him.$h#$e#I wish Grandma was here to see this.$6",
-"Philip.HotelReaction.Large": "Wow, lots of people are here.#$b#Oh well, more people means more customer for them.$h",
-"Flor.HotelReaction.Large": "Oh, this is nice!$h#$b#Now, Mr. Richard won't worry so much.$h",
-"Naomi.HotelReaction.Large": "placeholder",
-"Ian.HotelReaction.Large": "Excuse me, I have to tend to a few things for Mr. Richard.#$e#I'm glad business is good today.#$b#But that just means more work for me.",
-"Malaya.HotelReaction.Large": "placeholder",
-
-//Day after RSV Gathering Festival
-"Richard.HotelReaction.Gathering": "placeholder",
-"Ysabelle.HotelReaction.Gathering": "placeholder",
-"Philip.HotelReaction.Gathering": "placeholder",
-"Flor.HotelReaction.Gathering": "placeholder",
-"Naomi.HotelReaction.Gathering": "placeholder",
-"Malaya.HotelReaction.Gathering": "placeholder",
-"Ian.HotelReaction.Gathering": "placeholder",
-//Authorities
-"Lenny.HotelReaction.Gathering": "placeholder",
-"Lewis.HotelReaction.Gathering": "placeholder",
-//Civilians
-"Ezekiel.HotelReaction.Gathering": "placeholder",
-"Aguar.HotelReaction.Gathering": "placeholder",
-"Freddie.HotelReaction.Gathering": "placeholder",
-"Lola.HotelReaction.Gathering": "placeholder",
-"Pika.HotelReaction.Gathering": "placeholder",
-"Keahi.HotelReaction.Gathering": "placeholder",
-"Trinnie.HotelReaction.Gathering": "placeholder",
-"Yuuma.HotelReaction.Gathering": "placeholder",
-
-//Day after Ember of Resolutions Festival
-"Richard.HotelReaction.EoR": "That was quite the gathering last night wasn't it?#$b#I hope you'll be able to commit to your reolutions.$4",
-"Ysabelle.HotelReaction.EoR": "Last night was breathtaking.#$b#It was as if the fire was a silent ignition to our spirits.$h",
-"Philip.HotelReaction.EoR": "That was great last night.$h#$b#It was a perfect way to start the year.",
-"Flor.HotelReaction.EoR": "Last night was pleasant.#$b#It brought people all over together, and it was a fun way for us to bond.$h",
-"Naomi.HotelReaction.EoR": "placeholder",
-"Ian.HotelReaction.EoR": "Did you have fun last night?#$b#Being by the fire felt kind of cozy and warm.$l",
-"Malaya.HotelReaction.EoR": "placeholder",
-  
-//Authorities
-"Lenny.HotelReaction.EoR": "We had quite a successful turnout last night.$h#$e#I hope you had a great time and will continue to visit Ridgeside or maybe even live here if you want.$4#$b#Everybody seems to enjoy your company @!$h",
-"Lewis.HotelReaction.EoR": "Lenny did me proud last night.#$b#The festival was a success!#$e#That runs in the family you know.",
-//Civilians
-"Ezekiel.HotelReaction.EoR": "Last night was quite good...#$e#I hope Corine had a good time last night.$h",
-"Aguar.HotelReaction.EoR": "Were you able to decide on your actions for the new year?#$e#You must decide on the best course of action for yourself.#$b#You wouldn't want to be a disappointment now, would you?",
-"Freddie.HotelReaction.EoR": "What a great day to start the new year!#$b#Were you able to ponder on your resolutions when you went home?#$e#The missus had a lot of thinking last night. I had to help her relax...#$b#If you know what I mean.$4",
-"Lola.HotelReaction.EoR": "Last night was wonderful.#$b#It was a beautiful way to start the year.$h",
-"Pika.HotelReaction.EoR": "So did you enjoy the feast Gus and I prepared last night?#$e#Which food did you like better?#$b#Mine right?$h",
-"Keahi.HotelReaction.EoR": "Last night was so cool!$h#$b#The fire was like WOAH!$u#$b#It was so big and we were able to make smores with the food that I snuck in teehee!$h",
-"Trinnie.HotelReaction.EoR": "Did you see Keahi last night?$4#$e#He had this yummy treat that he taught us how to do.$h#$b#Oh it was SO YUMMY! I think he even made it for me.$4",
-"Yuuma.HotelReaction.EoR": "Yesterday was quite festive, right?$h#$e#It made me kind of miss our parents...$s#$b#But I believe this year is going to bring new beginnings... I hope.",
-
-//Day after Alissa's Concert Festival
-"Richard.HotelReaction.Concert": "That young lady has quite the talent, doesn't she?#$b#Maybe I should ask her to sing at the cabin when we hold events here.",
-"Ysabelle.HotelReaction.Concert": "Alissa sang really well yesterday!$h#$b#Her voice was incredibly angelic. It's as if you were soothed like a baby.$h",
-"Philip.HotelReaction.Concert": "Were you at the concert yesterday?#$b#That Alissa sure has a great voice!#$e#She reminds me of the great superhero Operetta from the CDPep comics.$h",
-"Flor.HotelReaction.Concert": "Alissa has a wonderful voice.$l#$e#She definitely resembles the Luscinia Megarhynchos.$h#$b#Oh, that's the scientific term for Nightingale. *giggles*$h",
-"Naomi.HotelReaction.Concert": "placeholder",
-"Ian.HotelReaction.Concert": "Hello there @.$h#$b#Did you enjoy the ",
-"Malaya.HotelReaction.Concert": "placeholder",
-
-//Authorities
-"Lenny.HotelReaction.Concert": "placeholder",
-"Lewis.HotelReaction.Concert": "placeholder",
-//Civilians
-"Ezekiel.HotelReaction.Concert": "placeholder",
-"Aguar.HotelReaction.Concert": "placeholder",
-"Freddie.HotelReaction.Concert": "placeholder",
-"Lola.HotelReaction.Concert": "placeholder",
-"Pika.HotelReaction.Concert": "placeholder",
-"Keahi.HotelReaction.Concert": "placeholder",
-"Trinnie.HotelReaction.Concert": "placeholder",
-"Yuuma.HotelReaction.Concert": "placeholder",
-"Alissa.HotelReaction.Concert": "placeholder",
-"Olga.HotelReaction.Concert": "placeholder",
-"Bert.HotelReaction.Concert": "placeholder",
-*/
 
 //1.3 NPCs Dialogue
 "Gift.Love.Undreya": "PLACEHOLDER",
