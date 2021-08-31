@@ -40,7 +40,13 @@
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "Allow world map patch."
-		}		
+		},
+
+		"EasierFishes": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Removes the specific day requirements for the ridgeside fishes."
+		}			
 },
 
 	/*********
@@ -506,6 +512,23 @@
 			"Name": "Custom_Ridgeside_LogCabinEventHall",
 			"FromMapFile": "Assets/Maps/IndoorMaps/LogCabinEventHall.tmx",
 		},
+		{
+			"Name": "Custom_Ridgeside_BlairHouse",
+			"FromMapFile": "Assets/Maps/IndoorMaps/BlairHouse.tmx",
+		},
+		{
+			"Name": "Custom_Ridgeside_FayeHouse",
+			"FromMapFile": "Assets/Maps/IndoorMaps/FayeHouse.tmx",
+		},
+		{
+			"Name": "Custom_Ridgeside_PurpleMansion",
+			"FromMapFile": "Assets/Maps/IndoorMaps/PurpleMansion.tmx",
+		},
+		{
+			"Name": "Custom_Ridgeside_PurpleMansion2ndFloor",
+			"FromMapFile": "Assets/Maps/IndoorMaps/PurpleMansion2ndFloor.tmx",
+		},
+
 
 		/*********
 		** QuestMaps
@@ -651,6 +674,18 @@
 		"LogName": "Include Fish Data",
 		"Action": "Include",
 		"FromFile": "Data/Fish/Aquarium.json, Data/Fish/FishData.json, Data/Fish/FishPond.json"
+	},
+	{
+		"LogName": "Normal Spawn Settings - Fish",
+		"Action": "Include",
+		"FromFile": "Data/Fish/FishData.json",
+		"When": { "EasierFishes": false }
+	},
+	{
+		"LogName": "Easier Fish Config",
+		"Action": "Include",
+		"FromFile": "Data/Fish/EasierFishData.json",
+		"When": { "EasierFishes": true }
 	},
 
 	//Include Dynamic Changes

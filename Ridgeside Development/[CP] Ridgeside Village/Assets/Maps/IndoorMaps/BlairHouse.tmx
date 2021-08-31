@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="32" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="3">
+ <properties>
+  <property name="AmbientLight" value="95 95 95"/>
+  <property name="Doors" value="4 12 indoor 120 15 12 indoor 120"/>
+ </properties>
+ <tileset firstgid="1" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior.png" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2177" name="walls_and_floors" tilewidth="16" tileheight="16" tilecount="560" columns="16">
+  <image source="zrsvwallsfloorcopy.png" width="256" height="560"/>
+ </tileset>
+ <layer id="1" name="Back" width="32" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztk01OAkEQhYsxkO7e6s4/Ek3UhXoA5WeHnkEEdsKSE8ABPAJH8FYewRX+oK8TK102XT0hZna85Mubrql0zZvpIdrq1eRhnYFzhQux32WN6KqE61rofzN5WD1wp3D/j/k79u/7mP4S33sCY8FUMInmp/aTyPm7jmjP6c5a4lnere6sdkHUAd2MD4rQf4IZp053lsW1c7qzhth7VASPZ3O9qvwz7D0vgsfPw/Wq83/UiT7BF1iBb0CN9fxSMm+ZljZd53z7mHUADsEROAbNxnr+ZxPweeU6h1V6Od8NZt2CFmiDDugm8i9MwOeX6xw+f6rO+R4wqw8ewcDPBaNE/hcT8PnlOodVeuNzpp1DPitl/+qmXnbuZf64Jn2WWGu9c8Em+atQ/H3jurz/A4nBlHQ=
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Buildings" width="32" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzFlbtOwzAUhu04RYi36MCCGGjhBYoEYgQm1kptZ2CiMyDRDXVtn4DrA9CJTlwWLp3oS9DCzm9sK/FRjlukqBzpU3PST/4dx1akEEL+MxFQDHHOHvWLYEnwtQwWc/SoXwHbYIdhF2zk6GX5++AgRR0L05Dm+jDgxVjIAphTYe8FY72CN/AOBtL3z4HCS4sjf4220LeJd4Z7LeLpot4mnBNwCj6RNwJj8AW+pe8XyXgV/L8uk955tGp47jpoKN9rywyZzlfy49LivGvM+wbcRmEvNG51Cu/Yekd4zqYKe1z+QsY74+Z7Lyaf3z7j9lPjtLDGF+DSckXei8vv2L5rfzticnGuvr9XSPpHZD5ZnsFDxr66E+ZM9ux914fg3B7JD5XL/xDmnA5BM9WH4NzhdNG/c3T5tXmDq26c7DV9vYK9U7KUyT5ag1MCZbCqTP+X/Krws2dVOlOfl1l/a915d9k/38hfFQ==
+  </data>
+ </layer>
+ <layer id="9" name="Buildings2" width="32" height="16">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4CB4TEjA8MTRlQxDaaBcctQAbnA8MkD4vzRcBoFo2AUDEEAAOB5A0Q=
+  </data>
+ </layer>
+ <objectgroup id="4" name="Buildings">
+  <object id="1" name="TileData" x="64" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door"/>
+   </properties>
+  </object>
+  <object id="2" name="TileData" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="7" name="Front" width="32" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF01gZGCbjwFNZyVMHAuhqkAGy+m1ocq6MDAxujBD2VjzqkAGx6rCpBwEmJgaGR1A7k4F0ChA/ZCRsDi6gxkS+3magvS0U2F1EhF5i1BACoPBhZIKEHT1ABDMDQyQzeXpfUcG/pIJMoJ1dQNwNxT10coMFUtqGpelEaBytxOKGSdD8OYUVlY8Pw9R+YUIVB/EtiMh/yMCFgzT1yEAEmB4+Au38BMSfmSB8YgCyG1M4MN0QhpTWBIDmCkKxEFpaB9knCMRCQCzMTJ79lPifXDAQdg5GAACz/TA+
+  </data>
+ </layer>
+ <layer id="5" name="Front2" width="32" height="16">
+  <properties>
+   <property name="Draw" value="Front"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFyOA1C2E1L4FqXkDVXcWhZjIrA4MLEwODKxALA7EIE0QMhqkBngDNfArEz5iwy6cAxVOB2BiITYB4OyMDwxYg3spIvp0ZQHMyofapMDMwqAKxGjN++9mBYXUJaOd1IL4CxFcpsB8ZuADtdQViNxz2jwLiwFEoXgzlL0ESO4pFHS615AAuIGaG4sNkmkFNYIlF7CVSmfACiY2slphygxgQSSO1owA3OEpHjJxvBgqA3NEMZQMAulo5bg==
+  </data>
+ </layer>
+ <objectgroup id="8" name="Front"/>
+ <layer id="10" name="AlwaysFront" width="32" height="16">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUgDAAgAAAE=
+  </data>
+ </layer>
+</map>
