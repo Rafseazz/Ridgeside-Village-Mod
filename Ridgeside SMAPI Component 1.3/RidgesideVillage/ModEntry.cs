@@ -49,7 +49,7 @@ namespace RidgesideVillage
         private void OnGameLaunched(object sender, EventArgs e)
         {
             TileActionHandler.Initialize(this);
-            ImageMenu.Setup();
+            ImageMenu.Setup(Helper);
 
 
             Config = Helper.ReadConfig<ModConfig>();

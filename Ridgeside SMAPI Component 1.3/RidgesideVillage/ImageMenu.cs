@@ -17,44 +17,69 @@ namespace RidgesideVillage
 
 
         const string PictureFolder = "RSV/Pictures";
+        static IModHelper Helper;
 
         Texture2D image;
         Rectangle targetRectangle;
         Vector2 topLeft;
         float scale;
 
-        internal static void Setup()
+        internal static void Setup(IModHelper Helper)
         {
+            ImageMenu.Helper = Helper;
             TileActionHandler.RegisterTileAction("ShowImage", Open);
         }
 
         internal static void Open(string tileAction)
         {
             //parse string
-            //has form "ShowImage "path/to/file" [scale]"
-            var split = tileAction.Split('"');
-            string parameters;
-            if (split.Length < 3)
+            //has form "ShowImage "path/to/file" scale [i18nkey]"
+
+            var quoteSplit = tileAction.Split('"');
+            if (quoteSplit.Length < 3)
             {
-                Log.Debug($"Error in {tileAction}");
+                Log.Debug($"Error in {tileAction}. (Perhaps you missed a \"?");
                 return;
             }
-            string path = split[1];
-            float scale = 1f;
-            if(split[2].Length > 0)
-            {
-                var parameterSplit = split[2].Split(' ');
-                if(!float.TryParse(parameterSplit[1],out scale))
-                {
-                    Log.Debug("Failed parsing sale {parameterSplit[0]}, showing in 4f");
-                    scale = 4f;
-                }
 
+            string path = quoteSplit[1];
+
+            var split = quoteSplit[2].Trim().Split(' ');
+
+            float scale = 1f;
+
+            if(!float.TryParse(split[0],out scale))
+            {
+                scale = 4f;
             }
-            //Log.Debug($"{tileAction}");
-            Texture2D image = ModEntry.Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath(path), ContentSource.GameContent);
-            Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width *scale), (int)(image.Height * scale));
-            Game1.activeClickableMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image);
+
+            bool showTextBefore = false;
+            if (split.Length >= 2  && split[1].Length > 0)
+            {
+                Log.Debug("has i18n key argument");
+                var i18n_key = split[1];
+                string text = Helper.Translation.Get(i18n_key);
+                if (text != null && !text.StartsWith("(no"))
+                {
+                    showTextBefore = true;
+                    string tileActionShortened = $"ShowImage \"{path}\" {scale}";
+                    Game1.activeClickableMenu = new DialogueBox(text);
+                    Game1.afterDialogues = delegate
+                    {
+                        ImageMenu.Open(tileActionShortened);
+                    };
+                }
+                else
+                {
+                    Log.Debug($"No translation found for {i18n_key}: {text}");
+                }
+            }
+            if (!showTextBefore)
+            {
+                Texture2D image = ModEntry.Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath(path), ContentSource.GameContent);
+                Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * scale), (int)(image.Height * scale));
+                Game1.activeClickableMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image);
+            }
             
         }
         internal ImageMenu(int x, int y, float scale, Texture2D image):base(x, y, (int) (image.Width * scale), (int) (image.Height * scale), true)
