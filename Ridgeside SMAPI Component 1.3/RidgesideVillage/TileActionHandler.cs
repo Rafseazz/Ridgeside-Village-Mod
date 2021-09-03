@@ -62,7 +62,7 @@ namespace RidgesideVillage
                 //Log.Debug($"FOUND ACTION {actionString}");
                 foreach (var key in tileActions.Keys)
                 {
-                    if (actionString.Contains(key))
+                    if (actionString.StartsWith(key))
                     {
                         tileActions[key](actionString);
                         break;
