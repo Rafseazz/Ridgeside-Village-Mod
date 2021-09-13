@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="170" height="150" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="2375">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="170" height="150" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="2377">
  <properties>
   <property name="Outdoors" type="bool" value="true"/>
  </properties>
@@ -5353,6 +5353,16 @@
   <object id="2374" name="TileData" x="2160" y="560" width="16" height="16">
    <properties>
     <property name="Action" value="LockedDoorWarp 19 17 Custom_Ridgeside_PaulaClinic 800 2000"/>
+   </properties>
+  </object>
+  <object id="2375" name="TileData" x="2192" y="384" width="16" height="16">
+   <properties>
+    <property name="Action" value="ShowImage &quot;LooseSprites/RSVMap&quot; 1.0"/>
+   </properties>
+  </object>
+  <object id="2376" name="TileData" x="2208" y="384" width="16" height="16">
+   <properties>
+    <property name="Action" value="ShowImage &quot;LooseSprites/RSVMap&quot; 1.0"/>
    </properties>
   </object>
  </objectgroup>

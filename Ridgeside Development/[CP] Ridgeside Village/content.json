@@ -749,10 +749,15 @@
 		Includes all data that concerns Extras, that includes: Obelisks,
 	*/
 	{
-		"LogName": "Include all Extras",
+		"LogName": "Include Obelisk",
    		"Action": "Include",
    		"FromFile": "Data/Extras/Obelisks.json",
-  	},  
+  	},
+  	{
+		"LogName": "Include RSVMap",
+   		"Action": "Include",
+   		"FromFile": "Data/Extras/RSVMap.json",
+  	},    
 
   	//Includes Tilesheets
 	/*
