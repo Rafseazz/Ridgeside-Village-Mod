@@ -143,7 +143,7 @@
 			"ItemNames": [
 				"Buckwheat Seeds",
 				"Muskmelon Seeds",
-				"Suager Beet Seeds",
+				"Suger Beet Seeds",
 				"Sweet Canary Melon Seeds",
 				],
 			"Stock": 6,
@@ -1587,6 +1587,78 @@
 				],
 			"When": [ "y 2" ] 
 		},
+	],
+	},
+
+	//------------
+	//HeapsShop 
+	//------------
+	{
+	"ShopName": "RSVHeapsStore",
+	"StoreCurrency": "Money",
+	"CategoriesToSell": [ -2,-12,-5,-6,-14,-18,-26,-27,-28,-74,-75,-79,-80,-81 ],
+	"PortraitPath": "assets/HeapsShop.png",
+	"Quote": "Welcome! You can sell almost anything here too!",
+	"DefaultSellPriceMultiplier": 0.8,
+	"PriceMultiplierWhen": {
+		"0.6": ["f Lorenzo 2000"] 
+		},
+	"When": ["p Lorenzo"],
+	"ClosedMessage": "Sorry, we're closed!",
+    "LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+   "LocalizedClosedMessage": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},	
+	
+	"ItemStocks": [
+		{
+			"ItemType": "Object",
+			"ItemNames":[
+				"Grass Starter",
+				"Sugar",
+				"Wheat Flour",
+				"Rice",
+				"Oil",
+				"Vinegar",
+				"Basic Fertilizer",
+				"Basic Retaining Soil",
+				"Quality Retaining Soil",
+				"Speed-Gro",
+				"Deluxe Speed-Gro",
+			],
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Quality Fertilizer"
+			],
+			//"Stock": 6,
+			"When": [ "y 2" ] 
+		}
 	],
 	},
 

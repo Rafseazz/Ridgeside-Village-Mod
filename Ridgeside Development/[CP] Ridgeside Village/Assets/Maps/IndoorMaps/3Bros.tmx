@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="24" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="16">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="24" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="18">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
  </properties>
@@ -138,7 +138,20 @@
 </data>
  </layer>
  <objectgroup id="6" name="Back"/>
- <objectgroup id="7" name="Buildings"/>
+ <objectgroup id="7" name="Buildings">
+  <object id="16" name="TileData" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value=""/>
+    <property name="Shop" value="RSVHeapsStore"/>
+   </properties>
+  </object>
+  <object id="17" name="TileData" x="128" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value=""/>
+    <property name="Shop" value="RSVHeapsStore"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="8" name="Front"/>
  <objectgroup id="9" name="Paths"/>
  <objectgroup id="10" name="AlwaysFront"/>
