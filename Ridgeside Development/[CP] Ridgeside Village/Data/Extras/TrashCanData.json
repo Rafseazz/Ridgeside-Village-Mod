@@ -1,0 +1,22 @@
+{
+  "Changes": [
+    
+    {
+      "LogName": "Load Trash Can Data",
+      "Action": "Load",
+      "Target": "RSV/TrashCanData",
+      "FromFile": "Data/LoadData/LoadTrashCanData.json"
+    },
+    {
+      "LogName": "Edit Trash Can Data",
+      "Action": "EditData",
+      "Target": "RSV/TrashCanData",
+      "Entries": {
+		//Format is "weight itemID amount/weight itemID amount"
+		//itemID -1 for nothing
+		"-1" : "50 -1 0/10 72 2/30 770 5"
+		"1" : "100 72 20"
+      }
+    },
+  ]
+}
