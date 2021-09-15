@@ -53,6 +53,7 @@ namespace RidgesideVillage
             TileActionHandler.Initialize(this);
             ImageMenu.Setup(Helper);
             MapMenu.Setup(Helper);
+            TrashCans.Setup(Helper);
             //var mapData = new MapData();
             //Helper.Data.WriteJsonFile("MapData.json", mapData);
 

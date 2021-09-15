@@ -147,6 +147,19 @@ namespace RidgesideVillage
             Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("LogCabinHotel.Rates.Expanded"));
         }
 
+        private static void HandleEventHallMenu(string tileActionString, Vector2 position)
+        {
+            HandleEventHallMenu(tileActionString);
+        }
+        private static void HandleHotelCounterMenu(string tileActionString, Vector2 position)
+        {
+            HandleHotelCounterMenu(tileActionString);
+        }
+
+        private static void HandleRatesMenu(string tileActionString, Vector2 position)
+        {
+            HandleRatesMenu(tileActionString);
+        }
         private static void HandleHotelCounterMenu(string tileActionString = "")
         {
             if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))

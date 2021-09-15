@@ -13,7 +13,7 @@ namespace RidgesideVillage
     public static class TileActionHandler
     {
 
-        static Dictionary<string, Action<string>> tileActions = new Dictionary<string, Action<string>>();
+        static Dictionary<string, Action<string, Vector2>> tileActions = new Dictionary<string, Action<string, Vector2>>();
 
         static Mod ModRef;
         internal static void Initialize(Mod Mod)
@@ -22,7 +22,7 @@ namespace RidgesideVillage
             ModRef.Helper.Events.Input.ButtonPressed += OnButtonPressed;
         }
 
-        internal static void RegisterTileAction(string name, Action<string> actionFunction)
+        internal static void RegisterTileAction(string name, Action<string, Vector2> actionFunction)
         {
             Log.Debug($"Registered {name}");
             tileActions.Add(name, actionFunction);
@@ -58,13 +58,12 @@ namespace RidgesideVillage
 
             if (actionString != null && actionString != "")
             {
-
-                //Log.Debug($"FOUND ACTION {actionString}");
+                Log.Trace($"Checking for {actionString}");
                 foreach (var key in tileActions.Keys)
                 {
                     if (actionString.StartsWith(key))
                     {
-                        tileActions[key](actionString);
+                        tileActions[key](actionString, clickedTile);
                         break;
                     }
                 }

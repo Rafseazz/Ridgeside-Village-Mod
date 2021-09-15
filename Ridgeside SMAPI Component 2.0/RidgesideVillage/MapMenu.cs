@@ -31,7 +31,7 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("ShowMap", Open);
         }
 
-        internal static void Open(string tileAction)
+        internal static void Open(string tileAction, Vector2 position)
         {
             Texture2D image = Helper.Content.Load<Texture2D>(MapPath, ContentSource.GameContent);
             Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width), (int)(image.Height));

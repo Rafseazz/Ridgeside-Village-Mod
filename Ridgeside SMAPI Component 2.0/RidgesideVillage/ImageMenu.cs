@@ -30,7 +30,7 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("ShowImage", Open);
         }
 
-        internal static void Open(string tileAction)
+        internal static void Open(string tileAction, Vector2 position)
         {
             //parse string
             //has form "ShowImage "path/to/file" scale [i18nkey]"
@@ -66,7 +66,7 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu = new DialogueBox(text);
                     Game1.afterDialogues = delegate
                     {
-                        ImageMenu.Open(tileActionShortened);
+                        ImageMenu.Open(tileActionShortened, position);
                     };
                 }
                 else

@@ -23,7 +23,7 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("RSVMinecart", OpenMinecartDialogue);
         }
         
-        internal static void OpenMinecartDialogue(string tileActionString)
+        internal static void OpenMinecartDialogue(string tileActionString, Vector2 position)
         {
             if (tileActionString.Contains("Repair"))
             {

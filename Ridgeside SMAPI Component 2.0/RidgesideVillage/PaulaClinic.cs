@@ -27,7 +27,7 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("PaulaCounter", OpenPaulaMenu);
         }
 
-        private static void OpenPaulaMenu(string tileActionString = "")
+        private static void OpenPaulaMenu(string tileActionString, Vector2 position)
         {
             if (Game1.player.health < (Game1.player.maxHealth * 0.8) || Game1.player.stamina < (Game1.player.MaxStamina * 0.8))
             {

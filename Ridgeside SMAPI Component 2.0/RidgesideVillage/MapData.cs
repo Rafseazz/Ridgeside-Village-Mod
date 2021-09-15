@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StardewModdingAPI;
+using StardewValley;
 
 namespace RidgesideVillage
 {
@@ -15,7 +16,7 @@ namespace RidgesideVillage
 
         public MapData()
         {
-            Locations = ModEntry.Helper.Content.Load<Dictionary<string, MapLocation>>(PathUtilities.NormalizeAssetName("RSV/RSVMapData"), ContentSource.GameContent);
+            Locations = Game1.content.Load<Dictionary<string, MapLocation>>(PathUtilities.NormalizeAssetName("RSV/RSVMapData"));
 
             foreach (var entry in this.Locations.Values)
             {
