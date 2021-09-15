@@ -1,10 +1,239 @@
 {
-   "Changes": [
-      {
-		"LogName": "Load RSV World Map",
-         "Action": "Load",
-         "Target": "LooseSprites/RSVMap",
-         "FromFile": "Assets/LooseSprites/RSVMap.png"
-      },      
-   ]
+  "Changes": [
+    {
+      "LogName": "Load RSV World Map",
+      "Action": "Load",
+      "Target": "LooseSprites/RSVMap",
+      "FromFile": "Assets/LooseSprites/RSVMap.png"
+    },
+    {
+      "LogName": "Load RSV Map Data",
+      "Action": "Load",
+      "Target": "RSV/RSVMapData",
+      "FromFile": "Data/LoadData/LoadRSVMapData.json"
+    },
+    {
+      "LogName": "Edit RSV Map Data",
+      "Action": "EditData",
+      "Target": "RSV/RSVMapData",
+      "Entries": {
+        "BloomingHill": {
+          "Area": {
+            "X": 91,
+            "Y": 67,
+            "Width": 52,
+            "Height": 46
+          },
+          "Inhabitants": "Jeric",
+          "Text": "Blooming Hill Farm"
+        },
+        "JericCoop": {
+          "Area": {
+            "X": 121,
+            "Y": 160,
+            "Width": 70,
+            "Height": 48
+          },
+          "Inhabitants": "A:Brown Chicken/A:White Chicken/A:White Chicken/A:Brown Chicken",
+          "Text": "Jeric's Chicken Coop"
+        },
+        "Heaps": {
+          "Area": {
+            "X": 367,
+            "Y": 26,
+            "Width": 40,
+            "Height": 69
+          },
+          "Inhabitants": "Lorenzo/Shanice/Anton/Kiarra",
+          "Text": "Heaps Convenience Store"
+        },
+        "Daniels": {
+          "Area": {
+            "X": 414,
+            "Y": 32,
+            "Width": 53,
+            "Height": 58
+          },
+          "Inhabitants": "Corine/Ezekiel/Helen",
+          "Text": "Daniel's Residence"
+        },
+        "Pickens": {
+          "Area": {
+            "X": 446,
+            "Y": 93,
+            "Width": 51,
+            "Height": 44
+          },
+          "Inhabitants": "Maddie",
+          "Text": "Picken's Residence"
+        },
+        "LogCabinHotel": {
+          "Area": {
+            "X": 538,
+            "Y": 55,
+            "Width": 94,
+            "Height": 71
+          },
+          "Inhabitants": "Richard/Ysabelle/Flor/Philip",
+          "Text": "Log Cabin Hotel"
+        },
+        "OddJobs": {
+          "Area": {
+            "X": 656,
+            "Y": 58,
+            "Width": 38,
+            "Height": 56
+          },
+          "Inhabitants": "Ian/Sean",
+          "Text": "Odd Jobs"
+        },
+        "VillageOffice": {
+          "Area": {
+            "X": 544,
+            "Y": 167,
+            "Width": 71,
+            "Height": 50
+          },
+          "Inhabitants": "Lenny",
+          "Text": "Village Office"
+        },
+        "Clinic": {
+          "Area": {
+            "X": 649,
+            "Y": 134,
+            "Width": 77,
+            "Height": 51
+          },
+          "Inhabitants": "Paula",
+          "Text": "Ridgeside Clinic"
+        },
+        "Kobayashi": {
+          "Area": {
+            "X": 642,
+            "Y": 193,
+            "Width": 35,
+            "Height": 47
+          },
+          "Inhabitants": "Shiro/Yuuma/Naomi",
+          "Text": " Kobayashi Residence"
+        },
+        "Amethyne": {
+          "Area": {
+            "X": 628,
+            "Y": 286,
+            "Width": 70,
+            "Height": 92
+          },
+          "Inhabitants": "Maive/Zayne/Ariah/Louie/Sonny/Irene",
+          "Text": "Amethyne Mansion       "
+        },
+        "Yojeong": {
+          "Area": {
+            "X": 505,
+            "Y": 259,
+            "Width": 29,
+            "Height": 52
+          },
+          "Inhabitants": "Faye",
+          "Text": "Yojeong Residence"
+        },
+        "Akina": {
+          "Area": {
+            "X": 368,
+            "Y": 270,
+            "Width": 33,
+            "Height": 42
+          },
+          "Inhabitants": "Pika/Keahi",
+          "Text": "Akina Residence"
+        },
+        "Rivera": {
+          "Area": {
+            "X": 361,
+            "Y": 327,
+            "Width": 45,
+            "Height": 52
+          },
+          "Inhabitants": "Carmen/Blair",
+          "Text": "Rivera Residence"
+        },
+        "Bladebane": {
+          "Area": {
+            "X": 58,
+            "Y": 280,
+            "Width": 31,
+            "Height": 44
+          },
+          "Inhabitants": "Freddie/Lola",
+          "Text": "Bladebane Residence"
+        },
+        "LolaCabin": {
+          "Area": {
+            "X": 20,
+            "Y": 200,
+            "Width": 40,
+            "Height": 44
+          },
+          "Text": "Lola's Cabin"
+        },
+        "Nightingale": {
+          "Area": {
+            "X": 80,
+            "Y": 436,
+            "Width": 73,
+            "Height": 72
+          },
+          "Inhabitants": "Alissa/Kimpoi/Malaya",
+          "Text": "Nightingale Orchard"
+        },
+        "Liden": {
+          "Area": {
+            "X": 349,
+            "Y": 544,
+            "Width": 56,
+            "Height": 50
+          },
+          "Inhabitants": "Bert/Olga/Trinnie",
+          "Text": "Liden's Residence"
+        },
+        "WaterResearch": {
+          "Area": {
+            "X": 490,
+            "Y": 500,
+            "Width": 221,
+            "Height": 90
+          },
+          "Inhabitants": "Aguar",
+          "Text": "Water Research Facility"
+        },
+        "GreenHouse": {
+          "Area": {
+            "X": 456,
+            "Y": 322,
+            "Width": 64,
+            "Height": 58
+          },
+          "Text": "Community Greenhouse"
+        },
+        "Pikas": {
+          "Area": {
+            "X": 440,
+            "Y": 160,
+            "Width": 64,
+            "Height": 48
+          },
+          "Text": "Pika's"
+        },
+        "Stage": {
+          "Area": {
+            "X": 332,
+            "Y": 138,
+            "Width": 86,
+            "Height": 70
+          },
+          "Text": "Festival Stage"
+        }
+      }
+    },
+  ]
 }
