@@ -15,13 +15,13 @@
     {
       "LogName": "Load RSV Map Data",
       "Action": "Load",
-      "Target": "RSV/RSVMapData",
+      "Target": "RSV/RSVMapData, RSV/RSVWorldMapData",
       "FromFile": "Data/LoadData/LoadRSVMapData.json"
     },
     {
       "LogName": "Edit RSV Map Data",
       "Action": "EditData",
-      "Target": "RSV/RSVMapData",
+      "Target": "RSV/RSVMapData, RSV/RSVWorldMapData",
       "Entries": {
         "BloomingHill": {
           "Area": {

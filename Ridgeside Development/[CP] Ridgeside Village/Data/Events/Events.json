@@ -915,6 +915,15 @@
 			"75160253/y 2": "continue/64 15/farmer 64 16 2 Kimpoi 64 18 0/pause 1000/speak Kimpoi \"Hello there, @.\"/emote farmer 32/pause 800/speak Kimpoi \"I came by to tell you that the Nightingale Orchard will have new wares starting this year.#$b#More saplings that my wife and I have collected during our travels.#$b#If you're interested, come by anytime.$h\"/emote farmer 32/pause 1000/end"
 		}
 	},
+	
+	//health checkup event Paula
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_PaulaClinic",
+		"Entries": {
+			"healthCheckup" : "none/15 15/farmer 16 15 0 Paula 16 13 2/skippable/fade unfade/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end"
+		}
+	},
 
 	
 ]
