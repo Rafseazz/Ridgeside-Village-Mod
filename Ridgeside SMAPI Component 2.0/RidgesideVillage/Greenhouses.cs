@@ -5,7 +5,7 @@ using StardewValley;
 using StardewValley.Menus;
 using StardewModdingAPI.Events;
 using System.Reflection;
-
+using Microsoft.Xna.Framework;
 
 namespace RidgesideVillage
 {
@@ -23,7 +23,7 @@ namespace RidgesideVillage
             //Helper.Events.Input.ButtonPressed += OnButtonPressed;
         }
 
-        private static void ShipmentBin(string tileActionString = "")
+        private static void ShipmentBin(string tileActionString, Vector2 position)
         {
             MethodInfo method = typeof(Farm).GetMethod("shipItem");
             ItemGrabMenu itemGrabMenu = new ItemGrabMenu((List<Item>)null, true, false, new InventoryMenu.highlightThisItem(Utility.highlightShippableObjects), (ItemGrabMenu.behaviorOnItemSelect)Delegate.CreateDelegate(typeof(ItemGrabMenu.behaviorOnItemSelect), (object)Game1.getFarm(), method), "", (ItemGrabMenu.behaviorOnItemSelect)null, true, true, false, true, false, 0, (Item)null, -1, (object)null);

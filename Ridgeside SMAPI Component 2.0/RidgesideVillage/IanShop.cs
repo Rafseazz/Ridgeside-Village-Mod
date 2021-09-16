@@ -115,8 +115,11 @@ namespace RidgesideVillage
                 Game1.player.mailReceived.Remove(willFixFences);
             }
         }
-       
 
+        private static void OpenIanMenu(string tileActionString, Vector2 position)
+        {
+            OpenIanMenu(tileActionString);
+        }
         private static void OpenIanMenu(string tileActionString = "")
         {
             if (Context.IsMainPlayer)
