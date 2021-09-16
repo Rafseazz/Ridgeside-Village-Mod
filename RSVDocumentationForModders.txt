@@ -1,0 +1,24 @@
+RSV Documentation for tile data other mods can use
+
+Action | ShowImage "gamepath" [scale (float)] [string ID]
+Action | RSV.TrashCan [id] (default is -1 if omitted) config at [CP] Ridgeside Village\Data\Extras\TrashCanData.json
+
+You can edit the RSVworld maps by patching;
+"Assets/LooseSprites/RSVMap.png" for the village map and/or
+"Assets/LooseSprites/RSVWorldMap.png" for the RSV world map.
+
+Mod authors can add their own NPC's wedding reception image with the simple CP patch
+
+//Change spouse picture during wedding reception
+      //For use for other NPC modders who want to add a wedding reception picture of their NPC
+    {
+        "Action": "EditImage",
+        "Target": "Maps/z_RSVspousePic",
+        "FromFile": "assets/Abigail.png", //Your spouse's picture! It should be 144x112 pixels w/ transparent background(If you want to use the default background)
+        "When": {
+            "Query: '{{Spouse}}' = 'Abigail'": true //Change spouse name to the name of your NPC
+        },
+        "Update": "OnLocationChange, OnTimeChange",
+    },
+	
+They can edit existing images as well using the same patch.
