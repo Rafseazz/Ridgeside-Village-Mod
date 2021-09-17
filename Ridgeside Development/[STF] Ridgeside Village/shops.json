@@ -1662,5 +1662,50 @@
 	],
 	},
 
+	//------------      
+	//Faye Shop   
+	//------------      
+	{
+	"ShopName": "RSVFayeShop",
+	"StoreCurrency": "Money",
+	"CategoriesToSell": [ -98, -95 ],
+	"Quote": "Place your order! Designs change everyday!",
+	"MaxNumItemsSoldInStore": 2,
+    "LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},	
+	"ItemStocks": [
+		{
+			"ItemType": "Clothing",
+			"ItemNames": [ "Juninja Shirt", ],
+			"StockPrice": 3000,
+			"Stock": 1,
+		},
+		{
+			"ItemType": "Clothing",
+			"ItemNames": [ "Pika Impersonation Shirt", ],
+			"StockPrice": 3000,
+			"Stock": 1,
+		},
+		{
+			"ItemType": "Clothing",
+			"ItemNames": [ "Village Color Shirt", ],
+			"StockPrice": 3000,
+			"Stock": 1,
+		},
+	],
+	},
+
   ]
   }
