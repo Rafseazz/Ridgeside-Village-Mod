@@ -43,10 +43,27 @@ namespace RidgesideVillage
 
             //not done (yet?)
             //new CliffBackground();
+
+            Helper.ConsoleCommands.Add("LocationModData", "show ModData of given location", printLocationModData);
         }
 
-
-
+        private void printLocationModData(string arg1, string[] arg2)
+        {
+            if (arg2.Length < 1)
+            {
+                Log.Info("Location parameter needed");
+                return;
+            }
+            GameLocation location = Game1.getLocationFromName(arg2[0]);
+            if(location != null)
+            {
+                foreach(var key in location.modData.Keys)
+                {
+                    Log.Info($"{key}: {location.modData[key]}");
+                }
+            }
+            Log.Info("Done");
+        }
 
         private void OnGameLaunched(object sender, EventArgs e)
         {
@@ -54,6 +71,7 @@ namespace RidgesideVillage
             ImageMenu.Setup(Helper);
             MapMenu.Setup(Helper);
             TrashCans.Setup(Helper);
+            RSVWorldMap.Setup(Helper);
             //var mapData = new MapData();
             //Helper.Data.WriteJsonFile("MapData.json", mapData);
 

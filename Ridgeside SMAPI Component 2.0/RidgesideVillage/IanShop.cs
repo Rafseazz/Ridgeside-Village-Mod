@@ -16,10 +16,6 @@ namespace RidgesideVillage
     internal static class IanShop
     {
         const string willWaterPlants = "RSV.WillWaterPlants";
-        const string waterDeadline = "RSVwaterdl.";
-        const string waterPlantsFlagSmall = "RSV.WaterPlantsJobSmall";
-        const string waterPlantsFlagMedium = "RSV.WaterPlantsJobMedium";
-        const string waterPlantsFlagLarge = "RSV.WaterPlantsJobLarge";
         const int waterPlantsPriceSmall = 1000;
         const int waterPlantsPriceMedium = 2500;
         const int waterPlantsPriceLarge = 5000;
@@ -27,9 +23,12 @@ namespace RidgesideVillage
         const int wpmedium = 480;
         const int wplarge = 960;
         const int daysWillWater = 3;
+        const int daysWillPet = 7;
 
         const string willFixFences = "RSV.WillFixFences";
-        const int perfenceprice = 6;
+        const string willPetAnimals = "RSV.PetAnimals";
+        const int perFencePrice = 6;
+        const int perAnimalPrice = 50;
 
         static IModHelper Helper;
         static IMonitor Monitor;
@@ -40,79 +39,93 @@ namespace RidgesideVillage
 
             TileActionHandler.RegisterTileAction("IanCounter", OpenIanMenu);
 
-            //Helper.Events.Input.ButtonPressed += OnButtonPressed;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            //Will water plots if player has flag
-            if (Game1.player.mailReceived.Contains(willWaterPlants))
+            if (!Game1.player.IsMainPlayer)
             {
-                WaterThePlants();
-                string daysPassed = $"{Game1.Date.TotalDays}";
-                var toRemove = new List<string>();
-                foreach (var entry in Game1.player.mailReceived)
-                {
-                    if (entry.StartsWith(waterDeadline) && entry.Contains(daysPassed))
-                    {
-                        Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.Deadline"), HUDMessage.newQuest_type));
-                        Game1.player.mailReceived.Remove(willWaterPlants);
-                        if (Game1.player.mailReceived.Contains(waterPlantsFlagSmall))
-                        {
-                            toRemove.Add(waterPlantsFlagSmall);
-                        }
-                        if (Game1.player.mailReceived.Contains(waterPlantsFlagMedium))
-                        {
-                            toRemove.Add(waterPlantsFlagMedium);
-                        }
-                        if (Game1.player.mailReceived.Contains(waterPlantsFlagLarge))
-                        {
-                            toRemove.Add(waterPlantsFlagLarge);
-                        }
-                        toRemove.Add(entry);
-                    }
-
-                    else if (entry.StartsWith(waterDeadline) && !entry.Contains(daysPassed))
-                    {
-                        int n;
-                        var split = entry.Split('.');
-                        n = Int32.Parse(split[1]);
-                        if (Int32.Parse(daysPassed) > n)
-                        {
-                            Log.Debug("Removed Odd Jobs Watering Service Flag due to time travel.");
-                            Game1.player.mailReceived.Remove(willWaterPlants);
-                            if (Game1.player.mailReceived.Contains(waterPlantsFlagSmall))
-                            {
-                                toRemove.Add(waterPlantsFlagSmall);
-                            }
-                            if (Game1.player.mailReceived.Contains(waterPlantsFlagMedium))
-                            {
-                                toRemove.Add(waterPlantsFlagMedium);
-                            }
-                            if (Game1.player.mailReceived.Contains(waterPlantsFlagLarge))
-                            {
-                                toRemove.Add(waterPlantsFlagLarge);
-                            }
-                            toRemove.Add(entry);
-                        }
-                    }
-                }
-                foreach (var entry in toRemove)
-                {
-                    Game1.player.mailReceived.Remove(entry);
-                }
-                if (toRemove.Count > 0)
-                {
-                    Game1.player.mailReceived.Remove(willWaterPlants);
-                }
+                return;
             }
+
+            var FarmModData = Game1.getFarm().modData;
+            waterPlantsIfNeeded(FarmModData);
             
-            if (Game1.player.mailReceived.Contains(willFixFences))
+            
+            if (FarmModData.ContainsKey(willFixFences))
             {
                 FixTheFences();
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasFixedFences"), HUDMessage.newQuest_type));
-                Game1.player.mailReceived.Remove(willFixFences);
+                FarmModData.Remove(willFixFences);
+            }
+
+            if (FarmModData.ContainsKey(willPetAnimals))
+            {
+                if(!FarmModData.TryGetValue(willPetAnimals, out string value) || !int.TryParse(value, out int daysLeft) || daysLeft <= 0)
+                {
+                    FarmModData.Remove(willPetAnimals);
+                    return;
+                }else if(daysLeft == 1)
+                {
+                    FarmModData.Remove(willPetAnimals);
+                }
+                else
+                {
+                    FarmModData[willPetAnimals] = (daysLeft - 1).ToString();
+                }
+                petAnimals();
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasPetAnimals"), HUDMessage.newQuest_type));
+            }
+        }
+
+        private static void petAnimals()
+        {
+            var FarmAnimals = Game1.getFarm().getAllFarmAnimals();
+            foreach(var farmAnimal in FarmAnimals)
+            {
+                farmAnimal.pet(Game1.player, is_auto_pet: true);
+            }
+        }
+
+        //Will water plots if player has flag
+        //format is daysLeft/Size
+        private static void waterPlantsIfNeeded(ModDataDictionary farmModData)
+        {
+            if (Game1.IsRainingHere(Game1.getFarm()))
+            {
+                return;
+            }
+            if (farmModData.TryGetValue(willWaterPlants, out string value))
+            {
+                var valueSplit = value.Split('/');
+                if (valueSplit.Length != 2)
+                {
+                    return;
+                }
+
+                int wateringDaysLeft = int.Parse(valueSplit[0]);
+                int amountOfTiles = int.Parse(valueSplit[1]);
+
+                if(wateringDaysLeft <= 0)
+                {
+                    //shouldnt happen
+                    farmModData.Remove(willWaterPlants);
+                    return;
+                }
+                else if(wateringDaysLeft == 0)
+                {
+                    //last day. remove flag
+                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.Deadline"), HUDMessage.newQuest_type));
+                    farmModData.Remove(willWaterPlants);
+                }
+                else
+                {
+                    wateringDaysLeft--;
+                    farmModData[willWaterPlants] = $"{wateringDaysLeft}/{amountOfTiles}";
+
+                }
+                WaterThePlants(amountOfTiles);
             }
         }
 
@@ -122,14 +135,18 @@ namespace RidgesideVillage
         }
         private static void OpenIanMenu(string tileActionString = "")
         {
+            IanCounterMenu();
+            //should be fine now for non-host players, too
+
+
+            /*
             if (Context.IsMainPlayer)
             {
-                IanCounterMenu();
             }
             else
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("OnlyFarmOwner"));
-            }
+            }*/
         }
         private static void IanCounterMenu()
         {
@@ -137,6 +154,7 @@ namespace RidgesideVillage
             {
                 new Response("waterPlants", Helper.Translation.Get("IanShop.WaterPlants")),
                 new Response("fixFences", Helper.Translation.Get("IanShop.fixFences")),
+                new Response("willPet", Helper.Translation.Get("IanShop.PetAnimals")),
                 new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
             };
             var responseActions = new List<Action>
@@ -151,11 +169,58 @@ namespace RidgesideVillage
                 },
                 delegate
                 {
+                    PetAnimalsMenu();
+                },
+                delegate
+                {
                     Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShopBye"));
                 }
             };
 
             Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("OpenIanShop"), responses, responseActions);
+        }
+
+        private static void PetAnimalsMenu()
+        {
+            int n = Game1.getFarm().getAllFarmAnimals().Count();
+
+            if (!Game1.getFarm().modData.ContainsKey(willPetAnimals) && n > 0)
+            {
+                var responses = new List<Response>
+                {
+                    new Response("petAnimals", n + Helper.Translation.Get("IanShop.PetAnimals") + (n * perAnimalPrice) + "$"),
+                    new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
+                };
+                var responseActions = new List<Action>
+                {
+                    delegate
+                    {
+                        if(Game1.player.Money >= n * perAnimalPrice)
+                        {
+                            Game1.player.Money -= (n * perAnimalPrice);
+                            Game1.getFarm().modData.Add(willPetAnimals, daysWillPet.ToString());
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.PetThanks"));
+                        }
+                        else
+                        {
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
+                        }
+                    },
+                    delegate
+                    {
+                        IanCounterMenu();
+                    }
+                };
+                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.PetMenu"), responses, responseActions);
+            }
+            else if (n <= 0)
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.YouHaveNoAnimals"));
+            }
+            else
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.AlreadyWillPet"));
+            }
         }
 
         private static void WaterPlantsMenu()
@@ -180,9 +245,7 @@ namespace RidgesideVillage
                         else
                         {
                             Game1.player.Money -= waterPlantsPriceSmall;
-                            Game1.player.mailReceived.Add(waterPlantsFlagSmall);
-                            Game1.player.mailReceived.Add(willWaterPlants);
-                            Game1.player.mailReceived.Add(waterDeadline + (Game1.Date.TotalDays + daysWillWater));
+                            Game1.getFarm().modData.Add(willWaterPlants, $"{daysWillWater}/{wpsmall}");
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Thankyou"));
                         };
                     },
@@ -195,9 +258,7 @@ namespace RidgesideVillage
                         else
                         {
                             Game1.player.Money -= waterPlantsPriceMedium;
-                            Game1.player.mailReceived.Add(waterPlantsFlagMedium);
-                            Game1.player.mailReceived.Add(willWaterPlants);
-                            Game1.player.mailReceived.Add(waterDeadline + (Game1.Date.TotalDays + daysWillWater));
+                            Game1.getFarm().modData.Add(willWaterPlants, $"{daysWillWater}/{wpmedium}");
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Thankyou"));
                         };
                     },
@@ -210,9 +271,7 @@ namespace RidgesideVillage
                         else
                         {
                             Game1.player.Money -= waterPlantsPriceLarge;
-                            Game1.player.mailReceived.Add(waterPlantsFlagLarge);
-                            Game1.player.mailReceived.Add(willWaterPlants);
-                            Game1.player.mailReceived.Add(waterDeadline + (Game1.Date.TotalDays + daysWillWater));
+                            Game1.getFarm().modData.Add(willWaterPlants, $"{daysWillWater}/{wplarge}");
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Thankyou"));
                         };
                     },
@@ -230,81 +289,45 @@ namespace RidgesideVillage
             }
         }
 
-        private static void WaterThePlants()
+        private static void WaterThePlants(int maxNumberToWater)
         {
-            if (Game1.IsRainingHere(Game1.getLocationFromName("Farm")))
+                
+            Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
+            int n = 0;
+            foreach (var pair in Game1.getFarm().terrainFeatures.Pairs)
             {
-                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.Raining"), HUDMessage.newQuest_type));
-                if (Game1.player.mailReceived.Contains(waterPlantsFlagSmall))
+                if(n >= maxNumberToWater)
                 {
-                    Game1.player.Money += (waterPlantsPriceSmall / 3);
+                    break;
                 }
-                else if (Game1.player.mailReceived.Contains(waterPlantsFlagMedium))
+                if (pair.Value is HoeDirt dirt && dirt.state.Value == 0)
                 {
-                    Game1.player.Money += (waterPlantsPriceMedium / 3);
-                }
-                else if (Game1.player.mailReceived.Contains(waterPlantsFlagLarge))
-                {
-                    Game1.player.Money += (waterPlantsPriceLarge / 3);
+                    dirt.state.Value = 1;
+                    n++;
                 }
             }
-
-            else //water plants
-            {
-                int limit = 0;
-                var receivedMail = Game1.player.mailReceived;
-                if (receivedMail.Contains(waterPlantsFlagSmall))
-                {
-                    limit = wpsmall + 1;
-                }
-                else if (receivedMail.Contains(waterPlantsFlagMedium))
-                {
-                    limit = wpmedium + 1;
-                }
-                else if (receivedMail.Contains(waterPlantsFlagLarge))
-                {
-                    limit = wplarge + 1;
-                }
-                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
-                int n = 0;
-                foreach (var pair in Game1.getLocationFromName("Farm").terrainFeatures.Pairs)
-                {
-                    if(n >= limit)
-                    {
-                        break;
-                    }
-                    if (pair.Value is HoeDirt dirt && dirt.state.Value == 0)
-                    {
-                        dirt.state.Value = 1;
-                        n++;
-                    }
-                }
-            }
+            
         }
       
         private static void FixFencesMenu()
         {
-            int n = 0;
-            foreach (Fence fence in Game1.getFarm().Objects.Values.OfType<Fence>())
-            {
-                n++;
-            }
+            int n = Game1.getFarm().Objects.Values.OfType<Fence>().Count();
 
-            if (!Game1.player.mailReceived.Contains(willFixFences) && n > 0)
+            if (!Game1.getFarm().modData.ContainsKey(willFixFences) && n > 0)
             {
                 var responses = new List<Response>
                 {
-                    new Response("fixFence", n + Helper.Translation.Get("IanShop.Fences") + (n * perfenceprice) + "$"),
+                    new Response("fixFence", n + Helper.Translation.Get("IanShop.Fences") + (n * perFencePrice) + "$"),
                     new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
                 };
                 var responseActions = new List<Action>
                 {
                     delegate
                     {
-                        if(Game1.player.Money >= n * perfenceprice)
+                        if(Game1.player.Money >= n * perFencePrice)
                         {
-                            Game1.player.Money -= (n * perfenceprice);
-                            Game1.player.mailReceived.Add(willFixFences);
+                            Game1.player.Money -= (n * perFencePrice);
+                            Game1.getFarm().modData.Add(willFixFences, "");
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.FenceThanks"));
                         }
                         else
