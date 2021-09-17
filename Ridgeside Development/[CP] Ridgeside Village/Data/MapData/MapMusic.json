@@ -60,7 +60,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "{{Random:winter1, winter2, winter3}}"
+				"Music": "{{Random:winter1, winter2, winter3, cm:WinterMountain}}"
 				},
 			"When": {
 				"Weather": "Sun",
@@ -77,7 +77,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": null
+				"Music": "cm:AweAmbience"
 				},
 			"When": {
 				"Weather: |contains=Sun": false,
@@ -91,7 +91,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": null
+				"Music": "cm:AweAmbience"
 				},
 			"When": {
 				"Time": "{{Range: 1900, 2600}}",
