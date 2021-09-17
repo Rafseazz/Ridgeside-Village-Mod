@@ -91,14 +91,30 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": null
+				"Music": "spring_night_ambient"
 				},
 			"When": {
 				"Time": "{{Range: 1900, 2600}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
+				"Season |contains=winter": false
 				},
 			"Update": "OnLocationChange, OnTimeChange"
 		},
+		{
+			"LogName": "Ridgeside Village Music Night - Winter",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapProperties": {
+				"Music": "cm:AweAmbience"
+				},
+			"When": {
+				"Time": "{{Range: 1900, 2600}}",
+				"EnableRidgesideMusic": true,
+				"Season |contains=winter": true
+				},
+			"Update": "OnLocationChange, OnTimeChange"
+		},
+
 
 		/*********
 		** Aguar's Lab
