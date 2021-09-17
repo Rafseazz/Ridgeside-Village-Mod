@@ -68,7 +68,7 @@
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/CliffHousePeek.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 2 },
-		"ToArea": { "X": 59, "Y": 53, "Width": 2, "Height": 2 },
+		"ToArea": { "X": 56, "Y": 41, "Width": 2, "Height": 2 },
 		"PatchMode": "ReplaceByLayer",
 		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday" },
 		"Update": "OnLocationChange, OnTimeChange"
@@ -78,7 +78,7 @@
         "Target": "Maps/Custom_Ridgeside_RSVTheHike",
         "MapTiles": [
 			{
-				"Position": { "X": 60, "Y": 54 },
+				"Position": { "X": 57, "Y": 42 },
 				"Layer": "Buildings",
 				"SetProperties": {
 				"Action": "MessageOnce 75160181 '???: {{i18n:Find.Undreya}}'"
@@ -93,7 +93,7 @@
         "Target": "Maps/Custom_Ridgeside_RSVTheHike",
         "MapTiles": [
 			{
-				"Position": { "X": 60, "Y": 54 },
+				"Position": { "X": 57, "Y": 42 },
 				"Layer": "Buildings",
 				"SetProperties": {
 				"Action": "Message rsv.undreyapeek"
@@ -108,7 +108,7 @@
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
-		"ToArea": { "X": 63, "Y": 53, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
 		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent: |contains=75160181": true, "HasSeenEvent: |contains=75160182": false, "DayOfWeek: |contains=Thursday": false },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
@@ -117,7 +117,7 @@
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
-		"ToArea": { "X": 63, "Y": 53, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
 		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent: |contains=75160182": true },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
