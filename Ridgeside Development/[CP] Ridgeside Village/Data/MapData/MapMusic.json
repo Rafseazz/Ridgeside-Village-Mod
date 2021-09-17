@@ -94,11 +94,11 @@
 				"Music": "spring_night_ambient"
 				},
 			"When": {
-				"Time": "{{Range: 1900, 2600}}",
+				"Time": "{{Range: 1900, 2400}}",
 				"EnableRidgesideMusic": true,
 				"Season |contains=winter": false
 				},
-			"Update": "OnLocationChange, OnTimeChange"
+			"Update": "OnTimeChange"
 		},
 		{
 			"LogName": "Ridgeside Village Music Night - Winter",
@@ -108,11 +108,11 @@
 				"Music": "cm:AweAmbience"
 				},
 			"When": {
-				"Time": "{{Range: 1900, 2600}}",
+				"Time": "{{Range: 1900, 2400}}",
 				"EnableRidgesideMusic": true,
 				"Season |contains=winter": true
 				},
-			"Update": "OnLocationChange, OnTimeChange"
+			"Update": "OnTimeChange"
 		},
 
 
