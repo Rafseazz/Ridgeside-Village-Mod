@@ -14,9 +14,9 @@ namespace RidgesideVillage
     {
         public Dictionary<string, MapLocation> Locations { get; set; }
 
-        public MapData()
+        public MapData(string dataPath = "RSV/RSVMapData")
         {
-            Locations = Game1.content.Load<Dictionary<string, MapLocation>>(PathUtilities.NormalizeAssetName("RSV/RSVMapData"));
+            Locations = Game1.content.Load<Dictionary<string, MapLocation>>(PathUtilities.NormalizeAssetName(dataPath));
 
             foreach (var entry in this.Locations.Values)
             {
