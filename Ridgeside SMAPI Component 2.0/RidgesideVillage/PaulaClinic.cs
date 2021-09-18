@@ -83,21 +83,6 @@ namespace RidgesideVillage
 
                     Game1.player.health = Game1.player.maxHealth;
                 });
-                /*
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Clinic.Look"));
-                Game1.player.Money -= cost;
-                Game1.fadeScreenToBlack();
-                Task.Delay(2000);
-                Game1.playSound("pickUpItem");
-                Task.Delay(1000);
-                Game1.playSound("axe");
-                Task.Delay(1000);
-                Game1.player.health = Game1.player.maxHealth;
-                Game1.playSound("healSound");
-                Task.Delay(1000);
-                Game1.fadeClear();
-                Task.Delay(2000);
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Clinic.Done"));*/
             }
             else if(Game1.player.health >= 100 && Game1.player.Money >= cost)
             {
@@ -111,22 +96,25 @@ namespace RidgesideVillage
 
         private static void StaminaCheckup()
         {
-            if (Game1.player.stamina < (Game1.player.MaxStamina * 0.8) && Game1.player.Money >= cost)
+            if (true || Game1.player.stamina < (Game1.player.MaxStamina * 0.8) && Game1.player.Money >= cost)
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Clinic.Look"));
-                Game1.player.Money -= cost;
-                Game1.fadeScreenToBlack();
-                Task.Delay(2000);
-                Game1.playSound("pickUpItem");
-                Task.Delay(1000);
-                Game1.playSound("axe");
-                Task.Delay(1000);
-                Game1.player.stamina = Game1.player.MaxStamina;
-                Game1.playSound("healSound");
-                Task.Delay(1000);
-                Game1.fadeClear();
-                Task.Delay(2000);
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Clinic.Done"));
+                var location = Game1.getLocationFromName("Custom_Ridgeside_PaulaClinic");
+
+                var events = location.GetLocationEvents();///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade
+                //string eventString = $"none/15 15/farmer 16 15 0 Paula 16 13 2/skippable/pause 250/money -{cost}/globalFade 0.007 false/viewport -1000 -1000/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear 0.007 true/viewport 15 15/pause 1000/speak Paula \"All done!\"/pause 500/end";
+                //string eventString = $"none/15 15/farmer 16 15 0 Paula 16 13 2/skippable/fade unfade/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end";
+                foreach (var key in events.Keys)
+                {
+                    Log.Debug($"{key}: {events[key]}");
+                }
+                string eventString = events["staminaCheckup"].Replace("{cost}", cost.ToString());
+                Log.Debug(eventString);
+                Game1.globalFadeToBlack(delegate
+                {
+                    location.startEvent(new Event(eventString));
+
+                    Game1.player.stamina = Game1.player.MaxStamina;
+                });
             }
             else if (Game1.player.stamina >= 100 && Game1.player.Money >= cost)
             {

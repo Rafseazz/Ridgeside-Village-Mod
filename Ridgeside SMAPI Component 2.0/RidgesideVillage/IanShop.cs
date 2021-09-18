@@ -28,7 +28,7 @@ namespace RidgesideVillage
         const string willFixFences = "RSV.WillFixFences";
         const string willPetAnimals = "RSV.PetAnimals";
         const int perFencePrice = 6;
-        const int perAnimalPrice = 50;
+        const int perAnimalPrice = 60;
 
         static IModHelper Helper;
         static IMonitor Monitor;
@@ -188,7 +188,7 @@ namespace RidgesideVillage
             {
                 var responses = new List<Response>
                 {
-                    new Response("petAnimals", n + Helper.Translation.Get("IanShop.PetAnimals") + (n * perAnimalPrice) + "$"),
+                    new Response("petAnimals", n + Helper.Translation.Get("IanShop.PetAnimalsSelection") + (n * perAnimalPrice) + "$"),
                     new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
                 };
                 var responseActions = new List<Action>
