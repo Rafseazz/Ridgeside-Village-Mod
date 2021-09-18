@@ -921,7 +921,8 @@
 		"Action": "EditData",
 		"Target": "Data/Events/Custom_Ridgeside_PaulaClinic",
 		"Entries": {
-			"healthCheckup" : "none/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/fade unfade/pause 50/viewport 15 15/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end"
+			"healthCheckup" : "continue/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/pause 50/fade/viewport 11 13/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All patched up!$h#$b#You should be more careful next time.#$b#Okay?$h\"/emote farmer 32/pause 500/end",
+			"staminaCheckup" : "continue/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/pause 50/fade/viewport 11 13/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"There, all better!$h#$b#You should take it easy from time to time.#$b#Okay?$h\"/emote farmer 32/pause 500/end",
 		}
 	},
 
