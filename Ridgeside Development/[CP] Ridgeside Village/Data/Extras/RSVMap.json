@@ -21,7 +21,7 @@
     {
       "LogName": "Edit RSV Map Data",
       "Action": "EditData",
-      "Target": "RSV/RSVMapData, RSV/RSVWorldMapData",
+      "Target": "RSV/RSVMapData",
       "Entries": {
         "BloomingHill": {
           "Area": {
@@ -239,6 +239,85 @@
           },
           "Text": "Starbound Stage"
         }
+      }
+    },
+
+    {
+      "LogName": "Edit RSV Map Data",
+      "Action": "EditData",
+      "Target": "RSV/RSVWorldMapData",
+      "Entries": {
+
+        "RidgeForest": {
+          "Area": {
+            "X": 272,
+            "Y": 0,
+            "Width": 231,
+            "Height": 59
+          },
+          "Text": "Ridge Forest"
+        },
+
+        "Ridge": {
+          "Area": {
+            "X": 272,
+            "Y": 59,
+            "Width": 231,
+            "Height": 91
+          },
+          "Text": "Ridge"
+        },
+
+        "BloomingHill": {
+          "Area": {
+            "X": 47,
+            "Y": 81,
+            "Width": 129,
+            "Height": 131
+          },
+          "Text": "Blooming Hill Farm"
+        },
+
+        "Village": {
+          "Area": {
+            "X": 210,
+            "Y": 160,
+            "Width": 346,
+            "Height": 459
+          },
+          "Text": "Ridgeside Village"
+        },
+
+        "Nightingale": {
+          "Area": {
+            "X": 15,
+            "Y": 431,
+            "Width": 191,
+            "Height": 203
+          },
+          "Text": "Nightingale Orchard"
+        },
+
+        "Cliff": {
+          "Area": {
+            "X": 659,
+            "Y": 191,
+            "Width": 208,
+            "Height": 154
+          },
+          "Text": "Cliff"
+        },
+
+        "Hike": {
+          "Area": {
+            "X": 610,
+            "Y": 361,
+            "Width": 249,
+            "Height": 233
+          },
+          "Text": "Hike Trail"
+        },
+
       }
     },
   ]
