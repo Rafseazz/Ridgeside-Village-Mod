@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewValley;
 using StardewModdingAPI.Events;
+using StardewModdingAPI.Utilities;
 
 namespace RidgesideVillage
 {
@@ -30,6 +31,7 @@ namespace RidgesideVillage
             HotelMenu.Initialize(this);
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            helper.Events.GameLoop.DayStarted += OnDayStarted;
 
             Minecarts.Initialize(this);
 
@@ -45,6 +47,32 @@ namespace RidgesideVillage
             //new CliffBackground();
 
             Helper.ConsoleCommands.Add("LocationModData", "show ModData of given location", printLocationModData);
+        }
+
+        private void OnDayStarted(object sender, DayStartedEventArgs e)
+        {
+            forgetRepeatableEvents();
+        }
+
+        private void forgetRepeatableEvents()
+        {
+            string path = PathUtilities.NormalizePath("assets/RepeatableEvents.json");
+            var data = Helper.Content.Load<Dictionary<string, List<int>>>(path);
+            if(data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
+            {
+                foreach(var entry in repeatableEvents)
+                {
+                    Game1.player.eventsSeen.Remove(entry);
+                }
+            }
+            if (data.TryGetValue("RepeatResponses", out List<int> repeatableResponses))
+            {
+                foreach (var entry in repeatableResponses)
+                {
+                    Game1.player.dialogueQuestionsAnswered.Remove(entry);
+                }
+            }
+            Log.Trace("Removed all repeatable events");
         }
 
         private void printLocationModData(string arg1, string[] arg2)
