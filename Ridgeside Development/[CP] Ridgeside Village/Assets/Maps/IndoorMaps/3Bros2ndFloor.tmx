@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="24" height="22" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="19">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="24" height="22" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="32">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
   <property name="Doors" value="11 10 indoor 120 16 10 indoor 120"/>
@@ -52,9 +52,9 @@
 1,1,1,1,10,11,11,11,11,11,12,10,11,11,11,11,11,12,10,11,11,11,11,12,
 1,1,1,1,65,0,0,0,0,0,69,65,0,0,0,0,0,69,65,0,0,0,0,69,
 1,1,1,1,65,81,81,81,81,81,194,195,81,81,81,81,81,194,195,75,75,75,75,69,
-1,1,1,1,65,740,741,742,489,113,155,156,113,113,113,113,113,55,56,483,484,325,326,69,
-1,1,1,1,65,772,773,774,521,496,187,188,582,0,2269,646,647,87,88,515,516,357,358,69,
-1,1,1,1,65,0,0,0,0,0,219,220,0,0,0,0,0,119,120,0,0,0,0,69,
+1,1,1,1,65,740,741,742,489,113,155,156,113,113,113,113,113,55,56,682,107,325,326,69,
+1,1,1,1,65,772,773,774,521,496,187,188,582,0,2269,646,647,87,88,714,492,357,358,69,
+1,1,1,1,65,0,0,0,0,0,219,220,0,0,0,0,0,119,120,746,0,0,0,69,
 1,1,1,1,97,868,869,870,0,0,0,0,0,0,0,0,0,0,0,0,0,321,322,131,
 1,1,10,11,11,11,11,11,11,11,195,0,194,11,12,65,0,194,11,11,12,1,1,1,
 1,1,65,0,0,0,0,0,0,0,156,0,155,35,69,65,0,155,302,302,69,1,1,1,
@@ -78,8 +78,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,153,154,0,0,1346,0,0,0,1346,0,1346,0,0,0,1346,0,183,177,0,
 0,0,0,0,0,185,186,216,0,0,0,0,0,0,0,0,0,0,0,0,216,0,0,0,
-0,0,0,0,0,0,0,0,513,464,0,0,550,0,2253,614,615,0,0,482,0,0,0,0,
-0,0,0,0,0,804,805,806,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,513,464,0,0,550,0,2253,614,615,0,0,513,0,0,0,0,
+0,0,0,0,0,804,805,806,0,0,0,0,0,0,0,0,0,0,0,745,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,166,166,166,166,166,163,0,164,166,166,163,0,164,166,166,166,166,166,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -160,12 +160,77 @@
   </object>
   <object id="17" name="TileData" x="176" y="160" width="16" height="16">
    <properties>
-    <property name="Action" value="Door"/>
+    <property name="Action" value="Door Lorenzo Shanice Kiarra"/>
    </properties>
   </object>
   <object id="18" name="TileData" x="256" y="160" width="16" height="16">
    <properties>
-    <property name="Action" value="Door"/>
+    <property name="Action" value="Door Anton"/>
+   </properties>
+  </object>
+  <object id="19" name="TileData" x="64" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros9&quot;"/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="208" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros10&quot;"/>
+   </properties>
+  </object>
+  <object id="21" name="TileData" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros4&quot;"/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="144" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros4&quot;"/>
+   </properties>
+  </object>
+  <object id="23" name="TileData" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros12&quot;"/>
+   </properties>
+  </object>
+  <object id="24" name="TileData" x="128" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros11&quot;"/>
+   </properties>
+  </object>
+  <object id="25" name="TileData" x="48" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros14&quot;"/>
+   </properties>
+  </object>
+  <object id="26" name="TileData" x="304" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros15&quot;"/>
+   </properties>
+  </object>
+  <object id="27" name="TileData" x="256" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros13&quot;"/>
+   </properties>
+  </object>
+  <object id="28" name="TileData" x="256" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros16&quot;"/>
+   </properties>
+  </object>
+  <object id="29" name="TileData" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros16&quot;"/>
+   </properties>
+  </object>
+  <object id="30" name="TileData" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros17&quot;"/>
+   </properties>
+  </object>
+  <object id="31" name="TileData" x="192" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.3bros18&quot;"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="3">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="23">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
   <property name="Doors" value="9 12 indoor 120"/>
@@ -62,7 +62,7 @@
 0,1766,1766,1766,1766,1766,1766,2147485982,2334,0,1872,1766,3108,1766,0,
 1718,2149,2150,2151,2152,2153,2154,2147486014,2366,0,0,2450,2451,2237,1722,
 1718,0,0,0,0,0,0,0,0,0,0,0,0,0,1722,
-1718,0,0,0,0,0,0,0,1427,0,2097,0,2240,2241,1722,
+1718,0,0,0,0,0,0,0,1427,0,0,0,2240,2241,1722,
 1718,2055,0,1070,2158,2159,2160,0,0,0,2129,0,2272,2273,1722,
 1718,2367,0,0,2190,2191,2192,0,0,0,0,0,0,0,1722,
 1750,2399,0,0,0,0,2433,0,0,0,0,0,2189,2106,1784,
@@ -87,7 +87,7 @@
 1718,2117,2118,2119,2120,2121,2122,2166,2328,0,0,2418,2419,3108,1722,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,1408,0,0,0,2208,2209,0,
-0,2023,0,1051,2126,2127,2128,0,0,0,0,0,0,0,0,
+0,2023,0,1051,2126,2127,2128,0,0,0,2097,0,0,0,0,
 0,2335,0,0,2147485634,1074,1212,0,0,0,0,0,0,0,0,
 0,2303,0,0,0,0,2401,0,0,0,0,0,2157,3000,0,
 0,1819,1819,1819,1819,1819,1819,1819,1816,0,1817,1819,1819,1819,0,
@@ -155,6 +155,101 @@
    <properties>
     <property name="Action" value=""/>
     <property name="Shop" value="RSVFayeShop"/>
+   </properties>
+  </object>
+  <object id="3" name="TileData" x="16" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye1&quot;"/>
+   </properties>
+  </object>
+  <object id="4" name="TileData" x="80" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye2&quot;"/>
+   </properties>
+  </object>
+  <object id="5" name="TileData" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye2&quot;"/>
+   </properties>
+  </object>
+  <object id="6" name="TileData" x="160" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Tailoring"/>
+   </properties>
+  </object>
+  <object id="7" name="TileData" x="208" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="DyePot"/>
+   </properties>
+  </object>
+  <object id="8" name="TileData" x="208" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="DyePot"/>
+   </properties>
+  </object>
+  <object id="9" name="TileData" x="96" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye3&quot;"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="112" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye4&quot;"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="176" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye5&quot;"/>
+   </properties>
+  </object>
+  <object id="12" name="TileData" x="192" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye5&quot;"/>
+   </properties>
+  </object>
+  <object id="13" name="TileData" x="192" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye6&quot;"/>
+   </properties>
+  </object>
+  <object id="14" name="TileData" x="64" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye7&quot;"/>
+   </properties>
+  </object>
+  <object id="15" name="TileData" x="208" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye8&quot;"/>
+   </properties>
+  </object>
+  <object id="16" name="TileData" x="160" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye9&quot;"/>
+   </properties>
+  </object>
+  <object id="18" name="TileData" x="96" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye10&quot;"/>
+   </properties>
+  </object>
+  <object id="19" name="TileData" x="16" y="288" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye11&quot;"/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="128" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye12&quot;"/>
+   </properties>
+  </object>
+  <object id="21" name="TileData" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye13&quot;"/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.faye14&quot;"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="23" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="157">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="23" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="166">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
   <property name="Doors" value="19 11 indoor 120 11 16 indoor 120"/>
@@ -119,14 +119,14 @@
 4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4037,4046,0,0,0,0,0,0,4048,4041,
 4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4069,0,0,4845,0,0,4878,0,0,4073,
 4014,4007,4007,4007,4007,4007,4007,4007,4007,4007,4007,4007,4016,4069,2147487800,4047,4047,4047,4047,4047,4047,4152,4073,
-4069,0,0,0,11983,11984,0,0,0,0,0,0,4073,4069,5013,4944,4945,4500,0,5072,5073,5012,4073,
+4069,0,0,0,11983,11984,0,0,0,0,0,0,4073,4069,5013,4944,4945,4500,0,0,0,5012,4073,
 4069,0,0,0,12015,12016,0,0,0,0,0,0,4073,4069,4847,0,0,0,0,5104,5105,4849,4073,
 4069,10116,10116,10116,10116,10116,10116,10116,10116,10116,10116,10116,4073,4069,0,0,0,0,0,0,0,0,4073,
 4069,0,0,0,0,4368,4500,4635,4636,4637,4638,4639,4073,4165,5010,5010,5010,5010,0,0,4405,0,4172,
 4069,4325,4326,0,0,0,0,0,0,0,0,0,4073,4005,4006,4007,4007,4007,4199,0,4198,4008,4005,
 4069,11180,0,0,0,0,0,0,0,4433,4435,0,4073,4037,4046,0,0,0,4739,0,4740,4048,4041,
 4069,11212,0,0,0,0,0,0,4397,4465,4467,4461,4073,4069,0,0,0,0,4739,0,4740,0,4073,
-4069,0,0,0,0,0,0,0,0,0,0,0,4073,4069,2147487800,4047,4047,4047,4771,4843,4772,4152,4073,
+4069,0,0,0,7758,7759,0,0,0,0,0,0,4073,4069,2147487800,4047,4047,4047,4771,4843,4772,4152,4073,
 4069,10909,10910,0,11658,11659,0,0,0,0,0,0,4073,4069,5013,4944,4945,0,0,0,4879,5012,4073,
 4165,10941,10942,0,11690,11691,0,2147494425,2147494424,0,0,0,4198,4199,0,0,0,0,0,0,0,4848,4073,
 4005,4005,4005,4005,4005,4005,4005,4005,4005,4005,4069,0,4740,4739,5010,5010,4976,5011,0,0,0,4848,4073,
@@ -156,6 +156,51 @@
   <object id="156" name="TileData" x="240" y="224" width="16" height="16">
    <properties>
     <property name="Action" value="PaulaCounter"/>
+   </properties>
+  </object>
+  <object id="157" name="TileData" x="272" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic1&quot;"/>
+   </properties>
+  </object>
+  <object id="158" name="TileData" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic2&quot;"/>
+   </properties>
+  </object>
+  <object id="159" name="TileData" x="256" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic2&quot;"/>
+   </properties>
+  </object>
+  <object id="160" name="TileData" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic3&quot;"/>
+   </properties>
+  </object>
+  <object id="161" name="TileData" x="128" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic4&quot;"/>
+   </properties>
+  </object>
+  <object id="162" name="TileData" x="16" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic5&quot;"/>
+   </properties>
+  </object>
+  <object id="163" name="TileData" x="16" y="160" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic5&quot;"/>
+   </properties>
+  </object>
+  <object id="164" name="TileData" x="64" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic6&quot;"/>
+   </properties>
+  </object>
+  <object id="165" name="TileData" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.clinic7&quot;"/>
    </properties>
   </object>
  </objectgroup>
@@ -217,13 +262,13 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4230,4230,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4679,4656,4468,0,5040,5041,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,4815,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,4815,0,0,0,0,5072,5073,0,0,
 0,0,0,0,0,0,0,4313,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,4336,4468,6431,4604,4605,4606,4607,0,0,5008,5008,5008,5009,0,0,4373,0,0,
 0,4455,4456,0,0,0,0,0,0,0,0,0,0,0,4166,4170,4170,4170,4167,0,4168,4171,0,
 0,0,0,0,0,0,0,0,0,4401,4403,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,4365,0,0,4429,0,0,0,0,0,0,0,4779,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4813,0,4811,0,0,0,
+0,0,0,0,7694,7695,0,0,0,0,0,0,0,0,0,0,0,4813,0,4811,0,0,0,
 0,10877,10878,0,0,0,0,0,0,0,0,0,0,0,0,4880,4881,0,0,0,0,0,0,
 0,0,0,0,4339,0,0,2147494393,2147494392,0,0,0,0,0,0,0,0,0,0,0,0,4816,0,
 0,4166,4170,4170,4170,4170,4170,4170,4170,4170,4167,0,0,0,4978,5008,5008,5136,0,0,0,4816,0,

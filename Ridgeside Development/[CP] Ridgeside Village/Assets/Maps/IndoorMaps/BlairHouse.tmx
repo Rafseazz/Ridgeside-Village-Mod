@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="32" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="3">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="32" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="17">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
   <property name="Doors" value="4 12 indoor 120 15 12 indoor 120"/>
@@ -13,7 +13,7 @@
  <tileset firstgid="2737" name="p" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
  </tileset>
- <layer id="1" name="Back" width="32" height="16" visible="0">
+ <layer id="1" name="Back" width="32" height="16">
   <data encoding="base64" compression="zlib">
    eJztk01OAkEQhYsxkO7e6s4/Ek3UhXoA5WeHnkEEdsKSE8ABPAJH8FYewRX+oK8TK102XT0hZna85Mubrql0zZvpIdrq1eRhnYFzhQux32WN6KqE61rofzN5WD1wp3D/j/k79u/7mP4S33sCY8FUMInmp/aTyPm7jmjP6c5a4lnere6sdkHUAd2MD4rQf4IZp053lsW1c7qzhth7VASPZ3O9qvwz7D0vgsfPw/Wq83/UiT7BF1iBb0CN9fxSMm+ZljZd53z7mHUADsEROAbNxnr+ZxPweeU6h1V6Od8NZt2CFmiDDugm8i9MwOeX6xw+f6rO+R4wqw8ewcDPBaNE/hcT8PnlOodVeuNzpp1DPitl/+qmXnbuZf64Jn2WWGu9c8Em+atQ/H3jurz/A4nBlHQ=
   </data>
@@ -35,12 +35,77 @@
  <objectgroup id="4" name="Buildings">
   <object id="1" name="TileData" x="64" y="192" width="16" height="16">
    <properties>
-    <property name="Action" value="Door"/>
+    <property name="Action" value="Door Blair"/>
    </properties>
   </object>
   <object id="2" name="TileData" x="240" y="192" width="16" height="16">
    <properties>
-    <property name="Action" value="Door"/>
+    <property name="Action" value="Door Carmen"/>
+   </properties>
+  </object>
+  <object id="3" name="TileData" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse1&quot;"/>
+   </properties>
+  </object>
+  <object id="4" name="TileData" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse1&quot;"/>
+   </properties>
+  </object>
+  <object id="5" name="TileData" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse2&quot;"/>
+   </properties>
+  </object>
+  <object id="6" name="TileData" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse3&quot;"/>
+   </properties>
+  </object>
+  <object id="7" name="TileData" x="32" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse4&quot;"/>
+   </properties>
+  </object>
+  <object id="9" name="TileData" x="16" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse4&quot;"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="192" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse5&quot;"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="208" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse5&quot;"/>
+   </properties>
+  </object>
+  <object id="12" name="TileData" x="288" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse6&quot;"/>
+   </properties>
+  </object>
+  <object id="13" name="TileData" x="272" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse6&quot;"/>
+   </properties>
+  </object>
+  <object id="14" name="TileData" x="304" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse6&quot;"/>
+   </properties>
+  </object>
+  <object id="15" name="TileData" x="368" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse7&quot;"/>
+   </properties>
+  </object>
+  <object id="16" name="TileData" x="384" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.blairhouse8&quot;"/>
    </properties>
   </object>
  </objectgroup>
