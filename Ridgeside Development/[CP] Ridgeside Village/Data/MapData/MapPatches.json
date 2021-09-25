@@ -17,7 +17,21 @@
 			"FromFile": "Assets/Maps/MapPatches/RSVBusStop.tmx",
 			"FromArea": { "X": 23, "Y": 0, "Width": 12, "Height": 6 },
 			"ToArea": { "X": 23, "Y": 0, "Width": 12, "Height": 6 },
-			"PatchMode": "Replace"
+			"PatchMode": "Replace",
+			"When": {
+				"EnableBetterBusStop": false
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/BusStop",
+			"FromFile": "Assets/Maps/MapPatches/RSVBusStopNew.tmx",
+			"FromArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
+			"ToArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
+			"PatchMode": "Replace",
+			"When": {
+				"EnableBetterBusStop": true
+			}
 		},
 		{
 			"Action": "EditMap",
