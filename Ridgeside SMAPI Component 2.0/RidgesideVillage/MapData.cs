@@ -10,6 +10,9 @@ using StardewValley;
 
 namespace RidgesideVillage
 {
+    /// <summary>
+    /// class for loading data for hover info shown on world map and village map
+    /// </summary>
     internal class MapData
     {
         public Dictionary<string, MapLocation> Locations { get; set; }
@@ -40,6 +43,7 @@ namespace RidgesideVillage
         public string Text { get; set; }
 
     }
+
 
     public struct JsonRectangle
     {
