@@ -34,6 +34,7 @@ namespace RidgesideVillage
             helper.Events.GameLoop.DayStarted += OnDayStarted;
 
             Minecarts.Initialize(this);
+            SpiritRealm.Initialize(this);
 
             SpecialOrders.Initialize(this);
 
