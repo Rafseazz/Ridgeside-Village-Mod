@@ -44,6 +44,7 @@ namespace RidgesideVillage
             else if(IsRenderingFog)
             {
                 IsRenderingFog = false;
+                Helper.Events.Display.RenderedWorld -= DrawFog;
             }
         }
 
