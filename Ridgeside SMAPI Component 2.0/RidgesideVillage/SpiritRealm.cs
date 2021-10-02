@@ -18,19 +18,19 @@ namespace RidgesideVillage
         static IModHelper Helper;
         static IMonitor Monitor;
         static bool IsRenderingFog;
-        static Texture2D FogTexture;
-        static Vector2 FogPosition;
+        /*static Texture2D FogTexture;
+        static Vector2 FogPosition;*/
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
-            FogTexture = Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath("assets/SpiritRealmFog.png"));
+            //FogTexture = Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath("assets/SpiritRealmFog.png"));
 
             TileActionHandler.RegisterTileAction("RSVWarp", RSVWarp);
-            Helper.Events.Player.Warped += OnWarped;
+            //Helper.Events.Player.Warped += OnWarped;
         }
 
-        private static void OnWarped(object sender, WarpedEventArgs e)
+        /*private static void OnWarped(object sender, WarpedEventArgs e)
         {
             if (e.NewLocation != null && e.NewLocation.Name.Equals("Custom_Ridgeside_RSVSpiritRealm"))
             {
@@ -63,7 +63,7 @@ namespace RidgesideVillage
                     e.SpriteBatch.Draw(FogTexture, new Vector2(x, y), null, Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 1f);
                 }
             }
-        }
+        }*/
 
         internal static void RSVWarp(string tileActionString, Vector2 position)
         {
