@@ -76,13 +76,15 @@ namespace RidgesideVillage
                     Log.Debug($"{key}: {events[key]}");
                 }
                 string eventString = events["healthCheckup"].Replace("{cost}", cost.ToString());
-                Log.Debug(eventString);
-                Game1.globalFadeToBlack(delegate
-                {
+
+                Game1.delayedActions.Add(new DelayedAction(1500, delegate {
+                    Game1.fadeScreenToBlack();
+                }));
+                Game1.delayedActions.Add(new DelayedAction(2000, delegate {
                     location.startEvent(new Event(eventString));
 
                     Game1.player.health = Game1.player.maxHealth;
-                });
+                }));
             }
             else if(Game1.player.health >= 100 && Game1.player.Money >= cost)
             {
