@@ -922,7 +922,11 @@
 		"Action": "EditData",
 		"Target": "Data/Events/Custom_Ridgeside_RidgeFalls",
 		"Entries": {
-			"hello" : "continue/39 18/farmer 39 20 0 Trinnie 39 17 2/skippable/pause 5000/end",
+			"normalOffering" : "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.RandomGratitude.{{Random: 1, 2, 3, 4, 5, 6, 7, 8}}}}\"/pause 500/end",
+
+			"trashOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.Trash.{{Random: 1, 2}}}}\"/pause 500/end",
+
+			"mealOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.Meal.1\"/pause 500/end",
 		}
 	},
 

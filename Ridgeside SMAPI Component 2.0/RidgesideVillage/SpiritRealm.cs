@@ -83,7 +83,7 @@ namespace RidgesideVillage
 
 
             Farmer who = Game1.player;
-            if(Game1.random.NextDouble() < 0.05)
+            if(Game1.random.NextDouble() < 0.02)
             {
                 who.currentLocation.playSound("cow");                
             }
