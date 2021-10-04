@@ -23,7 +23,7 @@ namespace RidgesideVillage
             int responseIndex = this.selectedResponse;
             base.receiveLeftClick(x, y, playSound);
             //Log.Debug($"selected response {responseIndex}");
-            if(responseIndex > -1 && responseIndex < this.ResponseActions.Count && this.ResponseActions[responseIndex] != null)
+            if(base.safetyTimer <= 0 && responseIndex > -1 && responseIndex < this.ResponseActions.Count && this.ResponseActions[responseIndex] != null)
             {
                 this.ResponseActions[responseIndex]();
             }

@@ -125,6 +125,8 @@ namespace RidgesideVillage
                     farmModData[willWaterPlants] = $"{wateringDaysLeft}/{amountOfTiles}";
 
                 }
+
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
                 WaterThePlants(amountOfTiles);
             }
         }
@@ -289,10 +291,8 @@ namespace RidgesideVillage
             }
         }
 
-        private static void WaterThePlants(int maxNumberToWater)
+        internal static void WaterThePlants(int maxNumberToWater)
         {
-                
-            Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
             int n = 0;
             foreach (var pair in Game1.getFarm().terrainFeatures.Pairs)
             {

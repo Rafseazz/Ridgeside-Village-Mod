@@ -43,7 +43,7 @@ namespace RidgesideVillage
             Greenhouses.Initialize(this);
 
             PaulaClinic.Initialize(this);
-
+            Offering.OfferingTileAction.Initialize(this);
             //not done (yet?)
             //new CliffBackground();
 
