@@ -352,6 +352,127 @@
             "InspectionDialogue": "{{i18n:Torts.{{Season}}{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}}}"
          }
       }
-   }
+   },
+
+   {
+      "LogName": "Spirit Realm Custom Companions",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+      "MapTiles": [
+            {
+               "Position": { "X": 28, "Y": 58 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit1"
+               }
+            },
+            {
+               "Position": { "X": 28, "Y": 58 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit2"
+               }
+            },
+            {
+               "Position": { "X": 28, "Y": 58 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit3"
+               }
+            },
+            {
+               "Position": { "X": 28, "Y": 58 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit4"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 43 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit1"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 43 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit2"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 43 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit3"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 43 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit4"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 70 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit1"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 70 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit2"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 70 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit3"
+               }
+            },
+            {
+               "Position": { "X": 60, "Y": 70 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit4"
+               }
+            },
+            {
+               "Position": { "X": 31, "Y": 76 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit1"
+               }
+            },
+            {
+               "Position": { "X": 31, "Y": 76 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit2"
+               }
+            },
+            {
+               "Position": { "X": 31, "Y": 76 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit3"
+               }
+            },
+            {
+               "Position": { "X": 31, "Y": 76 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Spirit4"
+               }
+            },
+         ],
+      "Update": "OnDayStart"
+   },
 ]
 }
