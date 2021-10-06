@@ -1,6 +1,12 @@
 {
    "Changes": [
 
+   {
+      "Action": "Load",
+      "Target": "LooseSprites/RSVNinjaSOBoard",
+      "FromFile": "Assets/LooseSprites/RSVNinjaSOBoard.png"
+   },
+
    //Fix Minecart Special Order
    {
       "Action": "EditData",
@@ -61,6 +67,40 @@
                   "Type": "Mail",
                   "Data": {
                      "MailReceived": "RSV.FixedMinecart",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //Daia Quest
+         "RSV.SpecialOrder.DaiaQuest": {
+            "Name": "[RSV.SpecialOrder.DaiaQuest_Name]",
+            "Requester": "Daia",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160187",
+            "OrderType": "QF:RSVDaiaBook",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.DaiaQuest_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Collect",
+                  "Text": "[RSV.SpecialOrder.DaiaQuest_Objective1_Text]",
+                  "RequiredCount": "50",
+                  "Data": {
+                     "AcceptedContextTags": "item_mountain_mistbloom"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompleteDaiaQuest",
                      "NoLetter": "true",
                   }
                },

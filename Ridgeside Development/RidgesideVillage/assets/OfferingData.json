@@ -1,4 +1,5 @@
 {
+  //Specific Items
   "Diamond": {
     "Effect": "Buff",
     "Value": 5,
@@ -11,19 +12,25 @@
     "Effect": "GrowPlants",
     "ScriptKey": "normalOffering"
   },
-  "category_flower": {
+  
+  //categories
+  //Offer a meal
+  "category_cooking": {
+    "Effect": "Buff",
+    "Value": 1,
+    "Duration": 2000,
+    "BuffType": "Luck",
+    "ScriptKey": "mealOffering"
+  },
+
+  //Offer produce
+  "category_flowers": {
     "ScriptKey": "normalOffering"
   },
-  "category_fruit": {
+  "category_fruits": {
     "ScriptKey": "normalOffering"
   },
   "category_vegetable": {
-    "ScriptKey": "normalOffering"
-  },
-  "category_gem": {
-    "ScriptKey": "normalOffering"
-  },
-  "category_fish": {
     "ScriptKey": "normalOffering"
   },
   "category_egg": {
@@ -32,17 +39,29 @@
   "category_milk": {
     "ScriptKey": "normalOffering"
   },
-  "category_cooking": {
-    "Effect": "Buff",
-    "Value": 1,
-    "Duration": 2000,
-    "BuffType": "Luck",
-    "ScriptKey": "mealOffering"
+  "category_fish": {
+    "ScriptKey": "normalOffering"
   },
+  "category_sell_at_pierres_and_marnies": {
+    "ScriptKey": "normalOffering"
+  },
+  "category_sell_at_pierres": {
+    "ScriptKey": "normalOffering"
+  },
+
+  //Offer artisan goods
+  "category_syrup": {
+    "ScriptKey": "normalOffering"
+  },
+  "category_artisan_goods": {
+    "ScriptKey": "normalOffering"
+  },
+  
+  //Offer materials
   "category_crafting": {
     "ScriptKey": "normalOffering"
   },
-  "category_mineral": {
+  "category_minerals": {
     "ScriptKey": "normalOffering"
   },
   "category_meat": {
@@ -51,25 +70,27 @@
   "category_metal": {
     "ScriptKey": "normalOffering"
   },
+
+  //Offer trash
   "category_junk": {
     "ScriptKey": "trashOffering"
   },
-  "category_syrup": {
+  
+  //Offer monster loot
+  "category_monster_loot": {
     "ScriptKey": "normalOffering"
   },
-  "category_monsterloot": {
-    "ScriptKey": "normalOffering"
-  },
-  "category_artisangoods": {
-    "ScriptKey": "normalOffering"
-  },
-  "category_greens": {
-    "ScriptKey": "normalOffering"
-  },
-  "category_animalgoods": {
-    "ScriptKey": "normalOffering"
-  },
+  
+  //Offer seeds
   "category_seeds": {
     "ScriptKey": "normalOffering"
   },
+
+  //Offer weapon
+  "category_weapon": {
+    "ScriptKey": "normalOffering"
+  },
+
+  //Offer clothes
+  
 }

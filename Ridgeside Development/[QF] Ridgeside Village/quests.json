@@ -913,7 +913,7 @@
     "Tile": "109,40",
     "IndicatorOffset": "10,-20",
     "Texture": "LooseSprites/RSVQuestBoard"
-    },
+  },
 	{
 	"BoardName": "RSVNinjaBoard",
 	"BoardType": "Quests",
@@ -925,6 +925,16 @@
 		"EventSeen": "75160187",
 		},
 	},
+	{
+      "BoardName": "RSVDaiaBook",
+      "BoardType": "SpecialOrders",
+      "Location": "Custom_Ridgeside_RSVNinjaHouse",
+      "Tile": "12,4",
+      "Texture": "LooseSprites/RSVNinjaSOBoard", // This texture is added with Content Patcher
+      "UnlockWhen": {
+        "EventSeen": "75160187",
+      }
+    }
   ],
 
 "CustomDropBoxes": [
