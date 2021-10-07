@@ -14,6 +14,7 @@ namespace RidgesideVillage
     internal static class SpecialOrders
     {
         const string FIXMINECART = "RSV.SpecialOrder.FixMinecart";
+        const string DAIAQUEST = "RSV.SpecialOrder.DaiaQuest";
 
         static IModHelper Helper;
         static IMonitor Monitor;
@@ -31,6 +32,11 @@ namespace RidgesideVillage
             if (Game1.player.eventsSeen.Contains(75160190) && !Game1.player.team.SpecialOrderActive(FIXMINECART) && !Game1.player.team.completedSpecialOrders.ContainsKey(FIXMINECART))
             {
                 Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(FIXMINECART, null));
+            }
+
+            if (Game1.player.eventsSeen.Contains(75160254) && !Game1.player.team.SpecialOrderActive(DAIAQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(DAIAQUEST))
+            {
+                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(DAIAQUEST, null));
             }
         }
     }
