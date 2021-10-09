@@ -101,6 +101,7 @@ namespace RidgesideVillage
             MapMenu.Setup(Helper);
             TrashCans.Setup(Helper);
             RSVWorldMap.Setup(Helper);
+            ExternalAPIs.Initialize(Helper);
             //var mapData = new MapData();
             //Helper.Data.WriteJsonFile("MapData.json", mapData);
 

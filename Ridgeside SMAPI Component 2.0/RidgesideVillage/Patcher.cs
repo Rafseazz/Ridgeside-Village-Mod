@@ -31,6 +31,7 @@ namespace RidgesideVillage
             HarmonyPatch_UntimedSO.ApplyPatch(harmony, Helper);
             HarmonyPatch_EventDetection.ApplyPatch(harmony, Helper);
             HarmonyPatch_Fish.ApplyPatch(harmony, Helper);
+            HarmonyPatch_TreasureItems.ApplyPatch(harmony, Helper);
         }
     }        
 }
