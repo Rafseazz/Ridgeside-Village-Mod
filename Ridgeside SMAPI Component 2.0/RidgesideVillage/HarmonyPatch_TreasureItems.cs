@@ -45,6 +45,7 @@ namespace RidgesideVillage
             Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             Helper.Events.Player.Warped += OnWarped;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            Helper.Events.GameLoop.ReturnedToTitle += OnReturnToTitle;
 
             Log.Trace($"Applying Harmony Patch from \"{nameof(HarmonyPatch_TreasureItems)}\".");
             harmony.Patch(
@@ -72,6 +73,13 @@ namespace RidgesideVillage
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_TreasureItems), nameof(GameLocation_GetFish_Postifx))
             );
 
+        }
+
+        private static void OnReturnToTitle(object sender, ReturnedToTitleEventArgs e)
+        {
+            FoxStatueCounter = 0;
+            OnFoxStatueMap = false;
+            Helper.Events.GameLoop.TimeChanged -= OnTimeChanged;
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)

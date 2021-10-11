@@ -19,6 +19,8 @@ namespace RidgesideVillage
         private CustomCPTokens CustomCPTokens;
         private Patcher Patcher;
 
+        private SpiritShrine SpiritShrine;
+
         public override void Entry(IModHelper helper)
         {
             ModMonitor = Monitor;
@@ -96,14 +98,13 @@ namespace RidgesideVillage
 
         private void OnGameLaunched(object sender, EventArgs e)
         {
-            TileActionHandler.Initialize(this);
+            TileActionHandler.Initialize(Helper);
             ImageMenu.Setup(Helper);
             MapMenu.Setup(Helper);
             TrashCans.Setup(Helper);
             RSVWorldMap.Setup(Helper);
             ExternalAPIs.Initialize(Helper);
-            //var mapData = new MapData();
-            //Helper.Data.WriteJsonFile("MapData.json", mapData);
+
 
 
             Config = Helper.ReadConfig<ModConfig>();
@@ -118,8 +119,27 @@ namespace RidgesideVillage
             // Custom CP Token Set-up
             CustomCPTokens.RegisterTokens();
 
+            Helper.ConsoleCommands.Add("RSV_reset_pedestals", "", this.ResetPedestals);
+            Helper.ConsoleCommands.Add("RSV_open_portal", "", this.OpenPortal);
+
             // Generic Mod Config Menu setup
             //ConfigMenu.RegisterMenu();
+        }
+
+        private void OpenPortal(string arg1, string[] arg2)
+        {
+            if (Context.IsWorldReady && this.SpiritShrine != null)
+            {
+                this.SpiritShrine.OpenPortal(arg1, arg2);
+            }
+        }
+
+        private void ResetPedestals(string arg1, string[] arg2)
+        {
+            if (Context.IsWorldReady && this.SpiritShrine != null)
+            {
+                this.SpiritShrine.ResetPedestals(arg1, arg2);
+            }
         }
 
         private void OnSaveLoaded(object sender, EventArgs ex)
@@ -133,6 +153,9 @@ namespace RidgesideVillage
                 Log.Debug($"Failed to load config settings. Will use default settings instead. Error: {e}");
                 Config = new ModConfig();
             }
+
+
+            SpiritShrine = new SpiritShrine(this);
 
 
             //mark greenhouses as greenhouses, so trees can be planted

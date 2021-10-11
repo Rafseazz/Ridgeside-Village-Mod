@@ -921,8 +921,8 @@
 		"Action": "EditData",
 		"Target": "Data/Events/Custom_Ridgeside_PaulaClinic",
 		"Entries": {
-			"healthCheckup" : "continue/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/pause 50/viewport 11 13/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All patched up!$h#$b#You should be more careful next time.#$b#Okay?$h\"/emote farmer 32/pause 500/end",
-			"staminaCheckup" : "continue/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/pause 50/fade/viewport 11 13/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"There, all better!$h#$b#You should take it easy from time to time.#$b#Okay?$h\"/emote farmer 32/pause 500/end",
+			"healthCheckup" : "continue/11 13/farmer 16 15 0 Paula 16 13 2/skippable/pause 1000/money -{cost}/globalFade .01/viewport -1000 -1000/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear .01 true/viewport 11 13/pause 1000/speak Paula \"All patched up!$h#$b#You should be more careful next time.#$b#Okay?$h\"/emote farmer 32/pause 500/end",
+			"staminaCheckup" : "continue/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/money -{cost}/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear .01 true/viewport 11 13/pause 1000/speak Paula \"All patched up!$h#$b#You should be more careful next time.#$b#Okay?$h\"/emote farmer 32/pause 500/end",
 		}
 	},
 	
@@ -938,6 +938,8 @@
 			"mealOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.Meal.1}}\"/pause 500/end",
 
 			"haloOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.Opal.1}} [{{spacechase0.JsonAssets/ObjectId:Opal Halo}}]\"/pause 500/end",
+			
+			"75160256/y 2/n InexistentMailFlag": "continue/15 43/farmer 15 47 0 Raeriyala 9 45 1/broadcastEvent/viewport 15 44/pause 1500/message \"some cool event\"/addMailReceived RSV.Opened_Portal/pause 2000/end warpOut",
 		}
 	},
 

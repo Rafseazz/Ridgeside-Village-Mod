@@ -10,28 +10,26 @@ using StardewValley;
 
 namespace RidgesideVillage
 {
-    public static class TileActionHandler
+    public class TileActionHandler
     {
 
         static Dictionary<string, Action<string, Vector2>> tileActions = new Dictionary<string, Action<string, Vector2>>();
 
-        static Mod ModRef;
-        internal static void Initialize(Mod Mod)
+        static IModHelper Helper;
+        internal static void Initialize(IModHelper Helper)
         {
-            ModRef = Mod;
-            ModRef.Helper.Events.Input.ButtonPressed += OnButtonPressed;
+            TileActionHandler.Helper = Helper;
+            TileActionHandler.Helper.Events.Input.ButtonPressed += OnButtonPressed;
         }
 
         internal static void RegisterTileAction(string name, Action<string, Vector2> actionFunction)
         {
-            Log.Debug($"Registered {name}");
+            Log.Trace($"Registered {name}");
             tileActions.Add(name, actionFunction);
         }
 
         private static void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
-            //Log.Debug("Button pressed");
-            var Helper = ModRef.Helper;
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady)
                 return;
