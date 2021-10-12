@@ -21,8 +21,7 @@ namespace RidgesideVillage
         static Texture2D FogTexture;
         static Vector2 FogPosition;
 
-        const string Relics1 = "BelRelicHints";
-        const string Relics2 = "RaeRelicHints";
+        const string MoreRelics = "RaeRelicHints";
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -30,23 +29,20 @@ namespace RidgesideVillage
             FogTexture = Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath("assets/SpiritRealmFog.png"));
 
             TileActionHandler.RegisterTileAction("RSVWarp", RSVWarp);
-            TileActionHandler.RegisterTileAction("DaiaBook", RSVOpenDaiaBook);
+            TileActionHandler.RegisterTileAction("RSVOpenDaiaBook", RSVOpenDaiaBook);
             Helper.Events.Player.Warped += OnWarped;
         }
 
         private static void RSVOpenDaiaBook(string tileActionString, Vector2 position)
         {
-            if (Game1.player.mailReceived.Contains(Relics1))
-            {
-                Game1.playSound("shadowpeep");
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
-                OpenBook();
-            }
+            Game1.playSound("shadowpeep");
+            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
+            OpenBook();
         }
 
         private static void OpenBook()
         {
-            if (Game1.player.mailReceived.Contains(Relics2) == false)
+            if (Game1.player.mailReceived.Contains(MoreRelics) == false)
             {
                 var responses = new List<Response>
                 {
@@ -108,7 +104,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        //Show LooseSprites/RSVDaiaPage4.png here
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4.png\" 4f", Vector2.Zero);
                     },
                     delegate
                     {
@@ -120,7 +116,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        //Show LooseSprites/RSVDaiaPage7.png here
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage7.png\" 4f", Vector2.Zero);
                     },
                     delegate{}
                 };
