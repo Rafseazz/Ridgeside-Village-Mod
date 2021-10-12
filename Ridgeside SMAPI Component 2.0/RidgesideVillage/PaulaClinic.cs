@@ -69,20 +69,12 @@ namespace RidgesideVillage
                 var location = Game1.getLocationFromName("Custom_Ridgeside_PaulaClinic");
                 
                 var events = location.GetLocationEvents();///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade
-                //string eventString = $"none/15 15/farmer 16 15 0 Paula 16 13 2/skippable/pause 250/money -{cost}/globalFade 0.007 false/viewport -1000 -1000/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear 0.007 true/viewport 15 15/pause 1000/speak Paula \"All done!\"/pause 500/end";
-                //string eventString = $"none/15 15/farmer 16 15 0 Paula 16 13 2/skippable/fade unfade/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end";
-                foreach(var key in events.Keys)
-                {
-                    Log.Debug($"{key}: {events[key]}");
-                }
+                
                 string eventString = events["healthCheckup"].Replace("{cost}", cost.ToString());
 
-                Game1.delayedActions.Add(new DelayedAction(1500, delegate {
-                    Game1.fadeScreenToBlack();
-                }));
-                Game1.delayedActions.Add(new DelayedAction(2000, delegate {
-                    location.startEvent(new Event(eventString));
+                UtilFunctions.StartEvent(new Event(eventString), "Custom_Ridgeside_PaulaClinic", 16, 15);
 
+                Game1.delayedActions.Add(new DelayedAction(2000, delegate {
                     Game1.player.health = Game1.player.maxHealth;
                 }));
             }
@@ -102,21 +94,15 @@ namespace RidgesideVillage
             {
                 var location = Game1.getLocationFromName("Custom_Ridgeside_PaulaClinic");
 
-                var events = location.GetLocationEvents();///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade
-                //string eventString = $"none/15 15/farmer 16 15 0 Paula 16 13 2/skippable/pause 250/money -{cost}/globalFade 0.007 false/viewport -1000 -1000/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear 0.007 true/viewport 15 15/pause 1000/speak Paula \"All done!\"/pause 500/end";
-                //string eventString = $"none/15 15/farmer 16 15 0 Paula 16 13 2/skippable/fade unfade/pause 250/money -{cost}/fade/pause 400/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end";
-                foreach (var key in events.Keys)
-                {
-                    Log.Debug($"{key}: {events[key]}");
-                }
+                var events = location.GetLocationEvents();///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end";
+               
                 string eventString = events["staminaCheckup"].Replace("{cost}", cost.ToString());
-                Log.Debug(eventString);
-                Game1.globalFadeToBlack(delegate
-                {
-                    location.startEvent(new Event(eventString));
 
-                    Game1.player.stamina = Game1.player.MaxStamina;
-                });
+                UtilFunctions.StartEvent(new Event(eventString), "Custom_Ridgeside_PaulaClinic", 16, 15);
+
+                Game1.delayedActions.Add(new DelayedAction(2000, delegate {
+                    Game1.player.health = Game1.player.maxHealth;
+                }));
             }
             else if (Game1.player.stamina >= 100 && Game1.player.Money >= cost)
             {
