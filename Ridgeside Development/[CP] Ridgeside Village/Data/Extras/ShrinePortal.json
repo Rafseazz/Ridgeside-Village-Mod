@@ -1,0 +1,37 @@
+{
+  "Changes": [
+    {
+      "LogName": "Patch Pedestal Texture",
+      "Action": "EditImage",
+      "Target": "TileSheets/Craftables",
+      "FromFile": "Assets/LooseSprites/FoxPedestal.png",
+      "ToArea": {
+        "X": 80,
+        "Y": 864,
+        "Width": 32,
+        "Height": 32
+      },
+      "When":{
+        "LocationName": "Custom_Ridgeside_RidgeFalls"
+
+      },
+      "Update": "OnLocationChange",
+    },
+    {
+      "LogName": "Patch Portal",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgeFalls",
+      "FromFile": "Assets/Maps/QuestMaps/RidgeFallsOpenPortal.tmx",
+      "ToArea": {
+        "X": 14,
+        "Y": 43,
+        "Width": 3,
+        "Height": 3
+      },
+      "When":{
+        "HasFlag:hostPlayer": "RSV.Opened_Portal"
+      },
+      "Update": "OnLocationChange",
+    },
+  ]
+}
