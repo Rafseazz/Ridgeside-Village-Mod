@@ -108,7 +108,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        //Show RSVDaiaPage4.png here
+                        //Show LooseSprites/RSVDaiaPage4.png here
                     },
                     delegate
                     {
@@ -120,7 +120,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        //Show RSVDaiaPage7.png here
+                        //Show LooseSprites/RSVDaiaPage7.png here
                     },
                     delegate{}
                 };
