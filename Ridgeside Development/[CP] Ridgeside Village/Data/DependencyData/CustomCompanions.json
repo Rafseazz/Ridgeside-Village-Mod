@@ -474,5 +474,34 @@
          ],
       "Update": "OnDayStart"
    },
+
+   {
+      "LogName": "Lover's Sorrow Relic Spirit Spawn",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgeForest",
+      "MapTiles": [
+            {
+               "Position": { "X": 77, "Y": 70 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.RelicSpirit"
+               }
+            },
+         ],
+      "When": { 
+         "Day": "3, 6, 9, 12, 15, 18, 21, 24, 27" 
+      },
+      "Update": "OnDayStart"
+   },
+   {
+      "LogName": "Lover's Sorrow Relic Spirit Dialogue",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.RelicSpirit}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:RelicSpiritTalk}} [{{spacechase0.JsonAssets/ObjectId:Lover's Sorrow}}]"
+         }
+      }
+   },
 ]
 }
