@@ -68,7 +68,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4.png\" 4f", Vector2.Zero);
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4\" 4f", Vector2.Zero);
                     },
                     delegate{}
                 };
