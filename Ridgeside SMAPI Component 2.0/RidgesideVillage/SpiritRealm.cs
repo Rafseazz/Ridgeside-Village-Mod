@@ -36,12 +36,12 @@ namespace RidgesideVillage
         private static void RSVOpenDaiaBook(string tileActionString, Vector2 position)
         {
             Game1.playSound("shadowpeep");
-            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
             OpenBook();
         }
 
         private static void OpenBook()
         {
+            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
             if (Game1.player.mailReceived.Contains(MoreRelics) == false)
             {
                 var responses = new List<Response>
@@ -68,7 +68,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        //Show image here
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4.png\" 4f", Vector2.Zero);
                     },
                     delegate{}
                 };
@@ -104,7 +104,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4.png\" 4f", Vector2.Zero);
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4\" 4f", Vector2.Zero);
                     },
                     delegate
                     {
@@ -116,7 +116,7 @@ namespace RidgesideVillage
                     },
                     delegate
                     {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage7.png\" 4f", Vector2.Zero);
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage7\" 4f", Vector2.Zero);
                     },
                     delegate{}
                 };
