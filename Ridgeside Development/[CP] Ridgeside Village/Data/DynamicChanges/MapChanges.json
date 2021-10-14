@@ -85,7 +85,7 @@
                }
             }
 		],
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160181": false },
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent |contains=75160181": false },
 		"Update": "OnLocationChange, OnTimeChange"
     },
 	{
@@ -100,7 +100,7 @@
                }
             }
 		],
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160181": true },
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent |contains=75160181": true },
 		"Update": "OnLocationChange, OnTimeChange"
     },
     //Undreya's house unlock nextday
@@ -109,7 +109,7 @@
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
 		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
-		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent: |contains=75160181": true, "HasSeenEvent: |contains=75160182": false, "DayOfWeek: |contains=Thursday": false },
+		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent |contains=75160181": true, "HasSeenEvent: |contains=75160182": false, "DayOfWeek: |contains=Thursday": false },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	//Undreya house unlock with time change
@@ -118,7 +118,7 @@
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
 		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
-		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent: |contains=75160182": true },
+		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent |contains=75160182": true },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	
@@ -174,7 +174,7 @@
 		"FromFile": "Assets/Maps/EventMaps/RSVOpenPlot.tmx",
 		"ToArea": { "X": 68, "Y": 18, "Width": 3, "Height": 2 },
 		"PatchMode": "Replace",
-		"When": { "HasSeenEvent: hostPlayer": 75160189 },
+		"When": { "HasSeenEvent": 75160189 },
 		"Update": "OnLocationChange"
 	},
 	//Remove minecart donation box when done
@@ -185,7 +185,7 @@
 		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 3 },
 		"ToArea": { "X": 67, "Y": 14, "Width": 2, "Height": 3 },
 		"PatchMode": "ReplaceByLayer",
-		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"When": { "HasFlag": "RSV.FixedMinecart" },
 		"Update": "OnLocationChange"
 	},
 
@@ -198,7 +198,7 @@
          "FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 1 },
          "ToArea": { "X": 64, "Y": 106, "Width": 1, "Height": 1 },
          "PatchMode": "Overlay",
-         "When": { "HasSeenEvent: hostPlayer |contains=75160063": true, },
+         "When": { "HasSeenEvent |contains=75160063": true, },
          "Update": "OnLocationChange, OnTimeChange"         
       	},
      	{
@@ -208,7 +208,7 @@
          "FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
          "ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
          "PatchMode": "Replace",
-         "When": { "HasSeenEvent: hostPlayer |contains=75160064": true,	},
+         "When": { "HasSeenEvent |contains=75160064": true,	},
          "Update": "OnLocationChange, OnTimeChange"
       	},
 
@@ -222,7 +222,7 @@
          "PatchMode": "Replace",
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
-			"HasSeenEvent: hostPlayer |contains=75160105": true,
+			"HasSeenEvent": 75160105,
 		}         
       	},
 
@@ -448,5 +448,102 @@
 		"Update": "OnLocationChange"
 	},
 
+//Open bridge to Ridgefalls
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_Ridge",
+		"FromFile": "Assets/Maps/EventMaps/RidgeOpenBridge.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 5 },
+		"ToArea": { "X": 0, "Y": 20, "Width": 2, "Height": 5 },
+		"When": { "HasSeenEvent |contains=75160258": true },
+		"PatchMode": "Replace",
+		"Update": "OnLocationChange"
+	},
+
+//Corrupt Spirit Realm
+	{
+		"Action": "EditImage",
+		"Target": "Maps/zrsvspiritrealm",
+		"FromFile": "Assets/Maps/TileSheets/{{TargetWithoutPath}}_corrupt.png",
+		"When": {
+			"HasSeenEvent |contains=75160263": false,
+			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
+		},
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditImage",
+		"Target": "Maps/spring_zridgeside, Maps/summer_zridgeside, Maps/fall_zridgeside, Maps/winter_zridgeside",
+		"FromFile": "Assets/Maps/TileSheets/zrsvspiritrealm_corruptfalls.png",
+		"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 288,
+				"Height": 144
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 272,
+				"Width": 288,
+				"Height": 144
+			},
+		"When": {
+			"HasSeenEvent |contains=75160263": false,
+			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
+		},
+		"Update": "OnLocationChange"
+	},
+
+//Corrupt Flames
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 5, "Y": 67, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 15, "Y": 23, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 48, "Y": 19, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 96, "Y": 23, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 94, "Y": 65, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
 ]
 }

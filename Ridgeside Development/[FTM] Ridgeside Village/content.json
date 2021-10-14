@@ -13,32 +13,32 @@
         "SpringItemIndex": [
           "Ridge Cherry",
           "Mountain Arugula",
-          16,
-          18,
+          "Ridge Azorean Bellflower",
+          "Ridgeside Monkshood",
           20,
           22
         ],
         "SummerItemIndex": [
           "Mountain Chico",
           "Ridge Wild Apple",
-          396,
-          398,
-          402,
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
           404
         ],
         "FallItemIndex": [
           "Autumn Drop Berry",
           "Highland Chard",
-          406,
-          408,
-          404,
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
           410
         ],
         "WinterItemIndex": [
           "Frost Clump Berry",
           "Ridgeside Clementine",
-          414,
-          418,
+          "Aurorean Iris",
+          "Sierra Wintergreen",
           283
         ],
         "UniqueAreaID": "RSV Hike Forage",
@@ -185,32 +185,32 @@
         "SpringItemIndex": [
           "Ridge Cherry",
           "Mountain Arugula",
-          16,
-          18,
+          "Ridge Azorean Bellflower",
+          "Ridgeside Monkshood",
           20,
           22
         ],
         "SummerItemIndex": [
           "Mountain Chico",
           "Ridge Wild Apple",
-          396,
-          398,
-          402,
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
           404
         ],
         "FallItemIndex": [
           "Autumn Drop Berry",
           "Highland Chard",
-          406,
-          408,
-          404,
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
           410
         ],
         "WinterItemIndex": [
           "Frost Clump Berry",
           "Ridgeside Clementine",
-          414,
-          418,
+          "Aurorean Iris",
+          "Sierra Wintergreen",
           283
         ],
         "UniqueAreaID": "RSV Ridge Forage",
@@ -256,6 +256,74 @@
 //===============================================================
 
 //===============================================================
+//Start Ridge Falls Forage Data
+//===============================================================
+      {
+        "SpringItemIndex": [
+          "Ridge Cherry",
+          "Mountain Arugula",
+          "Ridge Azorean Bellflower",
+          "Ridgeside Monkshood",
+        ],
+        "SummerItemIndex": [
+          "Mountain Chico",
+          "Ridge Wild Apple",
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
+        ],
+        "FallItemIndex": [
+          "Autumn Drop Berry",
+          "Highland Chard",
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
+        ],
+        "WinterItemIndex": [
+          "Frost Clump Berry",
+          "Ridgeside Clementine",
+          "Aurorean Iris",
+          "Sierra Wintergreen",
+        ],
+        "UniqueAreaID": "RSV Ridge Forage",
+        "MapName": "Custom_Ridgeside_Ridge",
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 10,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "11, 40; 19, 48",
+          "33, 20; 44, 36"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+//===============================================================
+//End Ridge Falls Forage Data
+//===============================================================
+
+//===============================================================
 //Start Ridge Forest Forage Data
 //===============================================================
 //Ridge Forest Forage  
@@ -263,24 +331,34 @@
         "SpringItemIndex": [
           "Ridge Cherry",
           "Mountain Arugula",
+          "Ridge Azorean Bellflower",
+          "Ridgeside Monkshood",
           16,
           20
         ],
         "SummerItemIndex": [
           "Mountain Chico",
           "Ridge Wild Apple",
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
           396,
           398
         ],
         "FallItemIndex": [
           "Autumn Drop Berry",
           "Highland Chard",
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
           406,
           408
         ],
         "WinterItemIndex": [
           "Frost Clump Berry",
           "Ridgeside Clementine",
+          "Aurorean Iris",
+          "Sierra Wintergreen",
           414,
           418,
           283

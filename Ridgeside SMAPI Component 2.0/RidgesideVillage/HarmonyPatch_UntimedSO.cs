@@ -10,11 +10,8 @@ using StardewValley;
 
 namespace RidgesideVillage
 {
-    //Corrects the location name in the "X has begun in Y" message
     internal static class HarmonyPatch_UntimedSO
     {
-        const string FIXMINECART = "RSV.SpecialOrder.FixMinecart";
-
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
@@ -32,7 +29,7 @@ namespace RidgesideVillage
 
             foreach(SpecialOrder o in Game1.player.team.specialOrders)
             {
-                if (o.questKey.Value.Contains(FIXMINECART))
+                if (o.questKey.Value.StartsWith("RSV.UntimedSpecialOrder"))
                 {
                     o.dueDate.Value = Game1.Date.TotalDays + 100;
                 }

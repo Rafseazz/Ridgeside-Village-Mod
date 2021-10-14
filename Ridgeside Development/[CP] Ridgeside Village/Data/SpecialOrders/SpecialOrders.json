@@ -21,7 +21,7 @@
       "Entries": {
 
          //Minecart Fix
-         "RSV.SpecialOrder.FixMinecart": {
+         "RSV.UntimedSpecialOrder.FixMinecart": {
             "Name": "[RSV.SpecialOrder.FixMinecart_Name]",
             "Requester": "Lenny",
             "Duration": "Month",
@@ -80,7 +80,7 @@
          },
 
          //Daia Quest
-         "RSV.SpecialOrder.DaiaQuest": {
+         "RSV.UntimedSpecialOrder.DaiaQuest": {
             "Name": "[RSV.SpecialOrder.DaiaQuest_Name]",
             "Requester": "Daia",
             "Duration": "Month",
@@ -211,6 +211,297 @@
                },
             ]
          },
+      }
+   },
+
+   //Ridge Forest Crystals Special order
+   {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "Entries": {
+
+         //RED
+         "RSV.UntimedSpecialOrder.ColorCrystalRed": {
+            "Name": "[RSV.SpecialOrder.ColorCrystals_Name_Red]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160257",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ColorCrystals_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+
+               //Prismatic is applicable everywhere
+               //Red or Pink or Dark Red
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ColorCrystals_Red_Text]",
+                  "RequiredCount": "30",
+                  "Data": {
+                     "DropBox": "RSVRedCrystal",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgeForest",
+                     "DropBoxIndicatorLocation": "84 124.4",
+                     "AcceptedContextTags": "color_prismatic/color_red/color_pink/color_dark_red"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompleteRedCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //ORANGE
+         "RSV.UntimedSpecialOrder.ColorCrystalOrange": {
+            "Name": "[RSV.SpecialOrder.ColorCrystals_Name_Orange]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160257",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ColorCrystals_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+
+               //Prismatic is applicable everywhere
+               //Orange or Brown or Dark Brown
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ColorCrystals_Orange_Text]",
+                  "RequiredCount": "30",
+                  "Data": {
+                     "DropBox": "RSVOrangeCrystal",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgeForest",
+                     "DropBoxIndicatorLocation": "146 97.4",
+                     "AcceptedContextTags": "color_prismatic/color_orange/color_brown/color_copper/color_dark_brown/color_dark_orange"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompleteOrangeCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //YELLOW
+         "RSV.UntimedSpecialOrder.ColorCrystalYellow": {
+            "Name": "[RSV.SpecialOrder.ColorCrystals_Name_Yellow]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160257",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ColorCrystals_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+
+               //Prismatic is applicable everywhere
+               //Yellow or Gold or Dark Yellow
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ColorCrystals_Yellow_Text]",
+                  "RequiredCount": "30",
+                  "Data": {
+                     "DropBox": "RSVYellowCrystal",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgeForest",
+                     "DropBoxIndicatorLocation": "108 56.4",
+                     "AcceptedContextTags": "color_prismatic/color_yellow/color_gold/color_dark_yellow"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompleteYellowCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //GREEN
+         "RSV.UntimedSpecialOrder.ColorCrystalGreen": {
+            "Name": "[RSV.SpecialOrder.ColorCrystals_Name_Green]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160257",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ColorCrystals_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+
+               //Prismatic is applicable everywhere
+               //Green or Lime or Jade or Dark Green
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ColorCrystals_Green_Text]",
+                  "RequiredCount": "30",
+                  "Data": {
+                     "DropBox": "RSVGreenCrystal",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgeForest",
+                     "DropBoxIndicatorLocation": "118 42.4",
+                     "AcceptedContextTags": "color_prismatic/color_green/color_jade/color_dark_green/color_yellow_green"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompleteGreenCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //Blue
+         "RSV.UntimedSpecialOrder.ColorCrystalBlue": {
+            "Name": "[RSV.SpecialOrder.ColorCrystals_Name_Blue]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160257",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ColorCrystals_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+
+               //Prismatic is applicable everywhere
+               //Blue or Cyan or Dark Blue
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ColorCrystals_Blue_Text]",
+                  "RequiredCount": "30",
+                  "Data": {
+                     "DropBox": "RSVBlueCrystal",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgeForest",
+                     "DropBoxIndicatorLocation": "58 9.4",
+                     "AcceptedContextTags": "color_prismatic/color_blue/color_dark_blue/color_cyan/color_dark_cyan/color_light_cyan/color_aquamarine"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompleteBlueCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //Purple
+         "RSV.UntimedSpecialOrder.ColorCrystalPurple": {
+            "Name": "[RSV.SpecialOrder.ColorCrystals_Name_Purple]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160257",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ColorCrystals_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+
+               //Prismatic is applicable everywhere
+               //Purple or Dark Pink or Dark Purple
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ColorCrystals_Purple_Text]",
+                  "RequiredCount": "30",
+                  "Data": {
+                     "DropBox": "RSVPurpleCrystal",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgeForest",
+                     "DropBoxIndicatorLocation": "18 74.4",
+                     "AcceptedContextTags": "color_prismatic/color_purple/color_dark_pink/color_dark_purple/color_pale_violet_red/color_poppyseed/color_iridium"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompletePurpleCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //Gray
+         "RSV.UntimedSpecialOrder.ColorCrystalGray": {
+            "Name": "[RSV.SpecialOrder.ColorCrystals_Name_Gray]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160257",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ColorCrystals_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+
+               //Prismatic is applicable everywhere
+               //White or Gray or Dark gray or Black
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ColorCrystals_Gray_Text]",
+                  "RequiredCount": "30",
+                  "Data": {
+                     "DropBox": "RSVGrayCrystal",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgeForest",
+                     "DropBoxIndicatorLocation": "37 94.4",
+                     "AcceptedContextTags": "color_prismatic/color_white/color_gray/color_dark_gray/color_black/color_iron"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.CompleteGrayCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+
       }
    }
 

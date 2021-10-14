@@ -21,7 +21,7 @@ namespace RidgesideVillage
         static Texture2D FogTexture;
         static Vector2 FogPosition;
 
-        const string MoreRelics = "RaeRelicHints";
+        const int HasUnsealedRae = 75160259;
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -42,7 +42,7 @@ namespace RidgesideVillage
         private static void OpenBook()
         {
             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
-            if (Game1.player.mailReceived.Contains(MoreRelics) == false)
+            if (Game1.player.eventsSeen.Contains(HasUnsealedRae) == false)
             {
                 var responses = new List<Response>
                 {
@@ -129,7 +129,16 @@ namespace RidgesideVillage
         {
             if (e.NewLocation != null && e.NewLocation.Name.Equals("Custom_Ridgeside_RSVSpiritRealm"))
             {
-                e.NewLocation.waterColor.Value = new Color(35, 214, 213, 120);
+                if (Game1.player.eventsSeen.Contains(75160263) == false)
+                {
+                    e.NewLocation.waterColor.Value = new Color(250, 0, 100, 120);
+                }
+                else
+                {
+                    e.NewLocation.waterColor.Value = new Color(35, 214, 213, 120);
+                }
+
+                //e.NewLocation.waterColor.Value = new Color(35, 214, 213, 120);
                 if (!IsRenderingFog)
                 {
                     IsRenderingFog = true;
