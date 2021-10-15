@@ -1042,6 +1042,108 @@
         "DaysUntilSpawnsExpire": 1
       },
 
+  //Wraith
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "putrid ghost",
+            "Settings": {
+              "SpawnWeight": 2,
+              "HP": 200,
+              "Damage": 10,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 30,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVWraith",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+        ],
+        "UniqueAreaID": "RSV RidgeForest Wraith",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 20,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2300,
+          "MinimumTimeBetweenSpawns": 20,
+          "MaximumSimultaneousSpawns": 2,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
+  //Viperial
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "pepper rex",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 2000,
+              "Damage": 20,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 0,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVViperial",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+        ],
+        "UniqueAreaID": "RSV RidgeForest Viperial",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 3,
+        "MaximumSpawnsPerDay": 8,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2300,
+          "MinimumTimeBetweenSpawns": 30,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
   //Beasts
       {
         "MonsterTypes": [
@@ -1209,6 +1311,252 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": null
+      },
+
+//=====================================
+//Spirit Realm Monsters - Corrupted
+//=====================================
+  
+  //Corrupted Spirit
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "ghost",
+            "Settings": {
+              "SpawnWeight": 3,
+              "HP": 100,
+              "Damage": 30,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 30,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVCorruptSpirit",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+        ],
+        "UniqueAreaID": "RSV SpiritRealm Corrupted Spirit",
+        "MapName": "Custom_Ridgeside_RSVSpiritRealm",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 50,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2300,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 2,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [
+            "k 75160263"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
+  //Wraith
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "putrid ghost",
+            "Settings": {
+              "SpawnWeight": 2,
+              "HP": 200,
+              "Damage": 10,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 30,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVWraith",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+        ],
+        "UniqueAreaID": "RSV SpiritRealm Wraith",
+        "MapName": "Custom_Ridgeside_RSVSpiritRealm",
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 20,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2300,
+          "MinimumTimeBetweenSpawns": 20,
+          "MaximumSimultaneousSpawns": 2,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [
+            "k 75160263"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
+  //Viperial
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "pepper rex",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 2000,
+              "Damage": 20,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 0,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVViperial",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+        ],
+        "UniqueAreaID": "RSV SpiritRealm Viperial",
+        "MapName": "Custom_Ridgeside_RSVSpiritRealm",
+        "MinimumSpawnsPerDay": 3,
+        "MaximumSpawnsPerDay": 8,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2300,
+          "MinimumTimeBetweenSpawns": 30,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [
+            "k 75160263"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
+  //Beasts
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "shadow brute",
+            "Settings": {
+              "SpawnWeight": 2,
+              "HP": 400,
+              "Damage": 15,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 10,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVBeast1",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+          {
+            "MonsterName": "shadow brute",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 550,
+              "Damage": 35,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 10,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVBeast2",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+          {
+            "MonsterName": "shadow brute",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 700,
+              "Damage": 50,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 10,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVBeast3",
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          },
+        ],
+        "UniqueAreaID": "RSV SpiritRealm Beasts",
+        "MapName": "Custom_Ridgeside_RSVSpiritRealm",
+        "MinimumSpawnsPerDay": 50,
+        "MaximumSpawnsPerDay": 50,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2300,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": 2,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [
+            "k 75160263"
+          ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
