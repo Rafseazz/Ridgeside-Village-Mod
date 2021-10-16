@@ -167,6 +167,21 @@
 		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
 		"Update": "OnLocationChange"
 	},
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_SummitFarm",
+        "MapTiles": [
+			{
+				"Position": { "X": 77, "Y": 47 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVMinecart5"
+               }
+            }
+		],
+		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"Update": "OnLocationChange"
+	},
 	//Open Entrance
 	{
 		"Action": "EditMap",
@@ -543,6 +558,18 @@
 		"ToArea": { "X": 94, "Y": 65, "Width": 1, "Height": 2 },
 		"When": { "HasSeenEvent |contains=75160263": false },
 		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+
+//Open summit farm
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgeForest",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVSummitEntrance.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 3 },
+		"ToArea": { "X": 95, "Y": 4, "Width": 6, "Height": 3 },
+		"When": { "HasSeenEvent |contains=75160263": true },
+		"PatchMode": "Replace",
 		"Update": "OnLocationChange"
 	},
 ]

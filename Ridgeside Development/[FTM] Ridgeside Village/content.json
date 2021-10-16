@@ -798,6 +798,8 @@
   },
   "Large_Object_Spawn_Settings": {
     "Areas": [
+
+      //Spawn log to block ridgeforest
       {
         "ObjectTypes": [
           "Log"
@@ -833,6 +835,43 @@
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
+        },
+        "DaysUntilSpawnsExpire": 0
+      },
+
+      //Spawn large objects on SummitFarm
+      {
+        "ObjectTypes": [
+          "Log", "Boulder"
+        ],
+        "FindExistingObjectLocations": false,
+        "UniqueAreaID": "Summit Farm large objects",
+        "MapName": "Custom_Ridgeside_SummitFarm",
+        "MinimumSpawnsPerDay": 0,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Dirt"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [],
         },
         "DaysUntilSpawnsExpire": 0
       }
