@@ -285,8 +285,8 @@
           "Aurorean Iris",
           "Sierra Wintergreen",
         ],
-        "UniqueAreaID": "RSV Ridge Forage",
-        "MapName": "Custom_Ridgeside_Ridge",
+        "UniqueAreaID": "RSV RidgeFalls Forage",
+        "MapName": "Custom_Ridgeside_RidgeFalls",
         "MinimumSpawnsPerDay": 5,
         "MaximumSpawnsPerDay": 10,
         "IncludeTerrainTypes": [
@@ -321,6 +321,63 @@
       },
 //===============================================================
 //End Ridge Falls Forage Data
+//===============================================================
+
+//===============================================================
+//Start Foxbloom
+//===============================================================
+      {
+        "SpringItemIndex": [
+          "Foxbloom"
+        ],
+        "SummerItemIndex": [
+          "Foxbloom"
+        ],
+        "FallItemIndex": [
+          "Foxbloom"
+        ],
+        "WinterItemIndex": [
+          "Foxbloom"
+        ],
+        "UniqueAreaID": "RSV Foxbloom RidgeForest",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 0,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [
+            "1", "28"
+          ],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "Sun"
+          ],
+          "WeatherTomorrow": [],
+          "EPUPreconditions": [
+            "HasItem Fox Mask" 
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+//===============================================================
+//End Foxbloom
 //===============================================================
 
 //===============================================================
