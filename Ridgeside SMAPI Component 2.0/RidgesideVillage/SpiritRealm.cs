@@ -30,7 +30,116 @@ namespace RidgesideVillage
 
             TileActionHandler.RegisterTileAction("RSVWarp", RSVWarp);
             TileActionHandler.RegisterTileAction("RSVOpenDaiaBook", RSVOpenDaiaBook);
+            TileActionHandler.RegisterTileAction("RSVCorruptedFire", CleanseCorruptedFire);
             Helper.Events.Player.Warped += OnWarped;
+        }
+
+        private static void CleanseCorruptedFire(string arg1, Vector2 arg2)
+        {
+            var location = Game1.getLocationFromName("Custom_Ridgeside_RSVSpiritRealm");
+            int Xcoord = (int)arg2.X;
+            int Ycoord = (int)arg2.Y;
+
+            string key = $"cleansed {Xcoord} {Ycoord}";
+            if (location.modData.ContainsKey($"cleansed {Xcoord} {Ycoord}")){
+                //return;
+            }
+            location.modData[key] = "t";
+            Game1.playSound("shadowpeep");
+            location.removeTile(Xcoord, Ycoord - 1, "Front");
+            location.removeTile(Xcoord, Ycoord, "Buildings");
+
+            var tilesheets = location.map.TileSheets;
+            int i = 0;
+            int index = -1;
+            foreach(var tilesheet in tilesheets)
+            {
+                if (tilesheet.Id.Equals("zrsvspiritrealm"))
+                {
+                    index = i;
+                }
+                i++;
+            }
+
+            location.setMapTile(Xcoord, Ycoord, 1715, "Buildings", null, whichTileSheet: index);
+
+            var extinguishSprite = new TemporaryAnimatedSprite("LooseSprites\\RSVSmoke", new Rectangle(0, 0, 16, 32), 100f, 10, 1, new Vector2(Xcoord, Ycoord - 1) * 64, false, false, ((Ycoord+0.1f) * 64f) / 10000f, 0f, Color.White, 4f, 0f, 0f, 0f)
+            {
+                delayBeforeAnimationStart = 0,
+                drawAboveAlwaysFront = false
+            };
+            var multiplayer = Helper.Reflection.GetField<Multiplayer>(typeof(Game1), "multiplayer").GetValue();
+            multiplayer.broadcastSprites(location, extinguishSprite);
+
+            checkForCorruptedFireEvent();
+        }
+
+        static void removeCorruptedFireTiles()
+        {
+
+            var location = Game1.getLocationFromName("Custom_Ridgeside_RSVSpiritRealm");
+            var modData = location.modData;
+
+            var tilesheets = location.map.TileSheets;
+            int i = 0;
+            int tileSheetIndex = -1;
+            foreach (var tilesheet in tilesheets)
+            {
+                if (tilesheet.Id.Equals("zrsvspiritrealm"))
+                {
+                    tileSheetIndex = i;
+                }
+                i++;
+            }
+
+            foreach (var key in modData.Keys)
+            {
+                if (key.StartsWith("cleansed"))
+                {
+                    var split = key.Split('/');
+                    int xCoord = int.Parse(split[1]);
+                    int yCoord = int.Parse(split[2]);
+                    location.removeTile(xCoord, yCoord - 1, "Front");
+                    location.removeTile(xCoord, yCoord, "Buildings");
+
+                    location.setMapTile(xCoord, yCoord, 1715, "Buildings", null, whichTileSheet: tileSheetIndex);
+                }
+            }
+        }
+
+        static void checkForCorruptedFireEvent()
+        {
+            var location = Game1.getLocationFromName("Custom_Ridgeside_RSVSpiritRealm");
+            var modData = location.modData;
+            int counter = 0;
+            foreach(var key in modData.Keys)
+            {
+                if (key.StartsWith("cleansed")){
+                    counter++;
+                }
+            }
+            if(counter >= 5)
+            {
+                var events = location.GetLocationEvents();
+                string eventScript = null;
+                foreach(var key in events.Keys)
+                {
+                    if (key.StartsWith("75160263"))
+                    {
+                        eventScript = events[key];
+                    }
+                }
+                if (!String.IsNullOrEmpty(eventScript))
+                {
+                    Log.Error($"{eventScript}");
+                    UtilFunctions.StartEvent(new Event(eventScript, 75160263), "Custom_Ridgeside_RSVSpiritRealm", 10, 10);
+                }
+                else
+                {
+                    Log.Error("Event not found");
+                }
+               
+            }
         }
 
         private static void RSVOpenDaiaBook(string tileActionString, Vector2 position)
@@ -129,13 +238,14 @@ namespace RidgesideVillage
         {
             if (e.NewLocation != null && e.NewLocation.Name.Equals("Custom_Ridgeside_RSVSpiritRealm"))
             {
-                if (Game1.player.eventsSeen.Contains(75160263) == false)
+                if (!Game1.player.eventsSeen.Contains(75160263))
                 {
                     e.NewLocation.waterColor.Value = new Color(250, 0, 100, 120);
                 }
                 else
                 {
                     e.NewLocation.waterColor.Value = new Color(35, 214, 213, 120);
+                    removeCorruptedFireTiles();
                 }
 
                 //e.NewLocation.waterColor.Value = new Color(35, 214, 213, 120);
@@ -209,19 +319,18 @@ namespace RidgesideVillage
                 Game1.flashAlpha = 1f;
                 DelayedAction.fadeAfterDelay(delegate { WarpFarmerToDifferentMap(split[1], xCoord, yCoord); }, 1000);
             }
-            int j = 0;
-            for (int x = who.getTileX() + 8; x >= who.getTileX() - 8; x--)
-            {
-                who.currentLocation.temporarySprites.Add(new TemporaryAnimatedSprite(6, new Vector2(x, who.getTileY()) * 64f, Color.White, 8, flipped: false, 50f)
-                {
-                    layerDepth = 1f,
-                    delayBeforeAnimationStart = j * 25,
-                    motion = new Vector2(-0.25f, 0f)
-                });
-                j++;
-            }
 
             //draw stuff
+            var boundingBox = Game1.player.GetBoundingBox();
+            var warpEffect = new TemporaryAnimatedSprite("LooseSprites\\RSVWarp", new Rectangle(0, 0, 16, 32), 100f, 10, 1, new Vector2(boundingBox.X - 8f, boundingBox.Y-90f), false, false, ((yCoord + 0.1f) * 64f) / 10000f, 0f, Color.White, 4f, 0f, 0f, 0f)
+            {
+                delayBeforeAnimationStart = 0,
+                drawAboveAlwaysFront = false
+            };
+
+
+            var multiplayer = Helper.Reflection.GetField<Multiplayer>(typeof(Game1), "multiplayer").GetValue();
+            multiplayer.broadcastSprites(who.currentLocation, warpEffect);
 
         }
 
