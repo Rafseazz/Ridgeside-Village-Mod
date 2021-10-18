@@ -21,6 +21,13 @@
 		}
 	},
 
+//Load Loose sprites
+	{
+		"Action": "Load",
+		"Target": "LooseSprites/RSVWarp, LooseSprites/RSVSmoke",
+		"FromFile": "Assets/{{Target}}.png"
+	}
+
 //Special Characters
 	{
 		"LogName": "Special Characters",
