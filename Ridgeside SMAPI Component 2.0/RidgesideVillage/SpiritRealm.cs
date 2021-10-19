@@ -31,7 +31,13 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("RSVWarp", RSVWarp);
             TileActionHandler.RegisterTileAction("RSVOpenDaiaBook", RSVOpenDaiaBook);
             TileActionHandler.RegisterTileAction("RSVCorruptedFire", CleanseCorruptedFire);
+            TileActionHandler.RegisterTileAction("MyLetter", MyLetter);
             Helper.Events.Player.Warped += OnWarped;
+        }
+
+        private static void MyLetter(string tileActionString, Vector2 position)
+        {
+            Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("RSV.MyLetter"));
         }
 
         private static void CleanseCorruptedFire(string arg1, Vector2 arg2)

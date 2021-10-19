@@ -3,12 +3,12 @@
  <properties>
   <property name="Arch" value="111 .01 113 .009"/>
   <property name="Debris" value="8 .01 3"/>
-  <property name="EnableGrassSpread" type="bool" value="true"/>
-  <property name="ForceAllowTreePlanting" type="bool" value="true"/>
-  <property name="IsFarm" type="bool" value="true"/>
-  <property name="Outdoors" type="bool" value="true"/>
-  <property name="SpawnDebrisOnNewMonth" type="bool" value="true"/>
-  <property name="SpawnRandomGrassOnNewYear" type="bool" value="true"/>
+  <property name="EnableGrassSpread" value="T"/>
+  <property name="ForceAllowTreePlanting" value="T"/>
+  <property name="IsFarm" value="T"/>
+  <property name="Outdoors" value="T"/>
+  <property name="SpawnDebrisOnNewMonth" value="T"/>
+  <property name="SpawnRandomGrassOnNewYear" value="T"/>
  </properties>
  <tileset firstgid="1" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
