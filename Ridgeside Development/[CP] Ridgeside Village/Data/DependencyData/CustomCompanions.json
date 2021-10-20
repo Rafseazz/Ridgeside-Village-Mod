@@ -527,7 +527,7 @@
             }
          }
       ],
-      "When": { "Query: {{RandomNumber}} = 1, 2": true }
+      "When": { "RandomNumber": "{{Range: 1,2}}" }
    },
    {
       "Action": "EditMap",
@@ -541,7 +541,7 @@
             }
          }
       ],
-      "When": { "Query: {{RandomNumber}} = 3, 4": true }
+      "When": { "RandomNumber": "{{Range: 3,4}}" }
    },
    {
       "Action": "EditMap",
@@ -555,7 +555,7 @@
             }
          }
       ],
-      "When": { "Query: {{RandomNumber}} = 5, 6": true }
+      "When": { "RandomNumber": "{{Range: 5,6}}" }
    },
    {
       "Action": "EditMap",
@@ -569,7 +569,7 @@
             }
          }
       ],
-      "When": { "Query: {{RandomNumber}} = 7, 8": true }
+      "When": { "RandomNumber": "{{Range: 7,8}}" }
    },
    {
       "Action": "EditMap",
@@ -583,7 +583,7 @@
             }
          }
       ],
-      "When": { "Query: {{RandomNumber}} = 9, 10": true }
+      "When": { "RandomNumber": "{{Range: 9,10}}" }
    },
 ]
 }
