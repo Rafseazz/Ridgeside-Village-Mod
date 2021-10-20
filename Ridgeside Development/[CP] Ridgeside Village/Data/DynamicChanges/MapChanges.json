@@ -585,6 +585,69 @@
 		"Update": "OnLocationChange"
 	},
 
+//Open crystals at mountain
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+        "MapTiles": [
+			{
+				"Position": { "X": 125, "Y": 12 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 46 72"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+        "MapTiles": [
+			{
+				"Position": { "X": 45, "Y": 72 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 67 123"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+        "MapTiles": [
+			{
+				"Position": { "X": 67, "Y": 124 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RSVTheHike 60 27"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RSVTheHike",
+        "MapTiles": [
+			{
+				"Position": { "X": 60, "Y": 26 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 125 13"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+
+
 
 ]
 }

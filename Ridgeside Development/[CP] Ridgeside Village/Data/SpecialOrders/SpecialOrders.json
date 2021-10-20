@@ -79,6 +79,66 @@
             ]
          },
 
+         //Minecart Fix
+         "RSV.UntimedSpecialOrder.FixGreenhouse": {
+            "Name": "[RSV.SpecialOrder.FixGreenhouse_Name]",
+            "Requester": "Lenny",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160089",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.FixGreenhouse_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.FixGreenhouse_Objective1_Text]",
+                  "RequiredCount": "60",
+                  "Data": {
+                     "DropBox": "RSVLennyHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgesideVillage",
+                     "DropBoxIndicatorLocation": "18.5 9.4",
+                     "AcceptedContextTags": "item_hardwood"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.FixGreenhouse_Objective2_Text]",
+                  "RequiredCount": "100",
+                  "Data": {
+                     "DropBox": "RSVLennyHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgesideVillage",
+                     "DropBoxIndicatorLocation": "18.5 9.4",
+                     "AcceptedContextTags": "item_stone"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.FixGreenhouse_Objective3_Text]",
+                  "RequiredCount": "50",
+                  "Data": {
+                     "DropBox": "RSVLennyHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RidgesideVillage",
+                     "DropBoxIndicatorLocation": "18.5 9.4",
+                     "AcceptedContextTags": "item_iron_bar"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.FixedGreenhouse",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+
          //Daia Quest
          "RSV.UntimedSpecialOrder.DaiaQuest": {
             "Name": "[RSV.SpecialOrder.DaiaQuest_Name]",

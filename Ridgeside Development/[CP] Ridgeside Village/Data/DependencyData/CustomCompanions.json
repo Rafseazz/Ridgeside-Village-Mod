@@ -353,6 +353,16 @@
          }
       }
    },
+   {
+      "LogName": "Howdy random dialogue",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Howdy}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:Howdy.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}}}"
+         }
+      }
+   },
 
    {
       "LogName": "Spirit Realm Custom Companions",
@@ -502,6 +512,78 @@
             "InspectionDialogue": "{{i18n:RelicSpiritTalk}} [{{spacechase0.JsonAssets/ObjectId:Lover's Sorrow}}]"
          }
       }
+   },
+
+   //Howdy spawn
+   {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RSVCliff",
+      "MapTiles": [
+         {
+            "Position": { "X": 43, "Y": 30 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Howdy"
+            }
+         }
+      ],
+      "When": { "Query: {{RandomNumber}} = 1, 2": true }
+   },
+   {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_KennethHouse",
+      "MapTiles": [
+         {
+            "Position": { "X": 7, "Y": 4 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Howdy"
+            }
+         }
+      ],
+      "When": { "Query: {{RandomNumber}} = 3, 4": true }
+   },
+   {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+      "MapTiles": [
+         {
+            "Position": { "X": 74, "Y": 37 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Howdy"
+            }
+         }
+      ],
+      "When": { "Query: {{RandomNumber}} = 5, 6": true }
+   },
+   {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+      "MapTiles": [
+         {
+            "Position": { "X": 114, "Y": 47 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Howdy"
+            }
+         }
+      ],
+      "When": { "Query: {{RandomNumber}} = 7, 8": true }
+   },
+   {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RSVCableCar",
+      "MapTiles": [
+         {
+            "Position": { "X": 24, "Y": 11 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Howdy"
+            }
+         }
+      ],
+      "When": { "Query: {{RandomNumber}} = 9, 10": true }
    },
 ]
 }

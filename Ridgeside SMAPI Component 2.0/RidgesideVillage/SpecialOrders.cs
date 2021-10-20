@@ -14,6 +14,7 @@ namespace RidgesideVillage
     internal static class SpecialOrders
     {
         const string FIXMINECART = "RSV.UntimedSpecialOrder.FixMinecart";
+        const string FIXGREENHOUSE = "RSV.UntimedSpecialOrder.FixGreenhouse";
         const string DAIAQUEST = "RSV.UntimedSpecialOrder.DaiaQuest";
         const string RedCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalRed";
         const string OrangeCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalOrange";
@@ -39,6 +40,11 @@ namespace RidgesideVillage
             if (Game1.player.eventsSeen.Contains(75160190) && !Game1.player.team.SpecialOrderActive(FIXMINECART) && !Game1.player.team.completedSpecialOrders.ContainsKey(FIXMINECART))
             {
                 Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(FIXMINECART, null));
+            }
+
+            if (Game1.player.eventsSeen.Contains(75160089) && !Game1.player.team.SpecialOrderActive(FIXGREENHOUSE) && !Game1.player.team.completedSpecialOrders.ContainsKey(FIXGREENHOUSE))
+            {
+                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(FIXGREENHOUSE, null));
             }
 
             if (Game1.player.eventsSeen.Contains(75160254) && !Game1.player.team.SpecialOrderActive(DAIAQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(DAIAQUEST))
