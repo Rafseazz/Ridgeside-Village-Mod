@@ -647,6 +647,18 @@
 		"Update": "OnLocationChange"
     },
 
+//Greenhouse 2 Corrupted
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVGreenhouse2",
+		"FromFile": "Assets/Maps/EventMaps/RSVGreenhouse2_Corrupt.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 24 },
+		"ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 24 },
+		"PatchMode": "Replace",
+		"When": { "HasSeenEvent |contains=75160270": false },
+		"Update": "OnLocationChange"
+	},
+
 
 
 ]
