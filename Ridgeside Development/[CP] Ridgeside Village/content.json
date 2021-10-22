@@ -336,6 +336,10 @@
 			{
 				"Name": "Custom_Ridgeside_RSVCorineDate",
 				"FromMapFile": "Assets/Maps/EventMaps/RSVCorineDate.tmx",
+			},
+			{
+				"Name": "Custom_Ridgeside_RidgesideVillage_Event",
+				"FromMapFile": "Assets/Maps/EventMaps/RidgesideVillage_Event.tmx",
 			},    
 
 			/*********
@@ -777,6 +781,11 @@
 		"LogName": "Include ShrinePortal",
    		"Action": "Include",
    		"FromFile": "Data/Extras/ShrinePortal.json",
+  	},
+  	{
+		"LogName": "Include Context Tags",
+   		"Action": "Include",
+   		"FromFile": "Data/Extras/ContextTags.json",
   	}, 
 
   	//Includes Tilesheets
