@@ -25,27 +25,26 @@ namespace RidgesideVillage
             Log.Trace($"Applying Harmony Patch from \"{nameof(HarmonyPatch_SummitFarm)}\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlantTreesHere)),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_SummitFarm), nameof(GameLocation_CanPlanTreesHere_Prefix))
+                postfix: new HarmonyMethod(typeof(HarmonyPatch_SummitFarm), nameof(GameLocation_CanPlanTreesHere_Postfix))
             );
         }
 
-        private static bool GameLocation_CanPlanTreesHere_Prefix(ref GameLocation __instance, int sapling_index, int tile_x, int tile_y, ref bool __result)
+        private static void GameLocation_CanPlanTreesHere_Postfix(ref GameLocation __instance, int sapling_index, int tile_x, int tile_y, ref bool __result)
         {
             try
             {
                 if(__instance != null && __instance.Name.Equals("Custom_Ridgeside_SummitFarm"))
                 {
-                    //set result to true and dont execute vanilla method
-                    __result = true;  
-                    return false;
+                    //set result to true
+                    __result = true;
                 }
-                return true;
+                return;
             }
             catch(Exception e)
             {
 
-                Log.Error($"Harmony patch \"{nameof(GameLocation_CanPlanTreesHere_Prefix)}\" has encountered an error. \n{e.ToString()}");
-                return true;
+                Log.Error($"Harmony patch \"{nameof(GameLocation_CanPlanTreesHere_Postfix)}\" has encountered an error. \n{e.ToString()}");
+                return;
             }
         }
     }
