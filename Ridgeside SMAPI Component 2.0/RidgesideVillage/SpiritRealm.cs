@@ -165,6 +165,7 @@ namespace RidgesideVillage
                     new Response("page2", Helper.Translation.Get("Daia.Page2")),
                     new Response("page3", Helper.Translation.Get("Daia.Page3")),
                     new Response("page4", Helper.Translation.Get("Daia.Page4")),
+                    new Response("page8", Helper.Translation.Get("Daia.LegendFishes")),
                     new Response("cancel", Helper.Translation.Get("Daia.BookClose")),
                 };
                 var responseActions = new List<Action>
@@ -185,6 +186,10 @@ namespace RidgesideVillage
                     {
                         ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4\" 4f", Vector2.Zero);
                     },
+                    delegate
+                    {
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage8\" 4f", Vector2.Zero);
+                    },
                     delegate{}
                 };
 
@@ -201,6 +206,7 @@ namespace RidgesideVillage
                     new Response("page5", Helper.Translation.Get("Daia.Page5")),
                     new Response("page6", Helper.Translation.Get("Daia.Page6")),
                     new Response("page7", Helper.Translation.Get("Daia.Page7")),
+                    new Response("page8", Helper.Translation.Get("Daia.LegendFishes")),
                     new Response("cancel", Helper.Translation.Get("Daia.BookClose")),
                 };
                 var responseActions = new List<Action>
@@ -232,6 +238,10 @@ namespace RidgesideVillage
                     delegate
                     {
                         ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage7\" 4f", Vector2.Zero);
+                    },
+                    delegate
+                    {
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage8\" 4f", Vector2.Zero);
                     },
                     delegate{}
                 };
