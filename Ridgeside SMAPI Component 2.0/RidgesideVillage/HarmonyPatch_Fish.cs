@@ -73,7 +73,12 @@ namespace RidgesideVillage
                         }
                         break;
                     case "Custom_Ridgeside_RidgesideForest":
-                        //not done yet
+                        fishID = GetFishID("Deep Ridge Angler");
+                        if (who.FishingLevel >= MIN_FISHING && !who.fishCaught.ContainsKey(fishID) && new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y)
+                            && (Game1.currentSeason.Equals("winter") && Game1.timeOfDay >= 1200))
+                        {
+                            replaceByFishID = fishID;
+                        }
                         break;
                     default:
                         return;

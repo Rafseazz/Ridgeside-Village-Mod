@@ -30,8 +30,8 @@
 		"RequiredPopulation": 3,
 		"Chance": 0.20,
 		"ItemID": 441,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
+		"MinQuantity": 0,
+		"MaxQuantity": 1
 		},
 		{
 		"RequiredPopulation": 0,
@@ -62,8 +62,8 @@
 		"RequiredPopulation": 10,	//# of fish
 		"Chance": 0.10,				//Chance to produce item
 		"ItemID": 349,				//Item ID
-		"MinQuantity": 1,			//Min #
-		"MaxQuantity": 2,			//Max #
+		"MinQuantity": 0,			//Min #
+		"MaxQuantity": 1,			//Max #
 		},
 		{
 		"RequiredPopulation": 6,
@@ -76,7 +76,7 @@
 		"RequiredPopulation": 3,
 		"Chance": 0.50,
 		"ItemID": 60,
-		"MinQuantity": 1,
+		"MinQuantity": 0,
 		"MaxQuantity": 2
 		},
 		{
@@ -108,7 +108,7 @@
 		"RequiredPopulation": 10,	//# of fish
 		"Chance": 0.10,				//Chance to produce item
 		"ItemID": 577,				//Item ID
-		"MinQuantity": 3,			//Min #
+		"MinQuantity": 1,			//Min #
 		"MaxQuantity": 4,			//Max #
 		},
 		{
@@ -122,8 +122,8 @@
 		"RequiredPopulation": 3,
 		"Chance": 0.10,
 		"ItemID": 456,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
+		"MinQuantity": 0,
+		"MaxQuantity": 1
 		},
 		{
 		"RequiredPopulation": 0,
@@ -154,8 +154,8 @@
 		"RequiredPopulation": 10,	//# of fish
 		"Chance": 0.10,				//Chance to produce item
 		"ItemID": 64,				//Item ID
-		"MinQuantity": 4,			//Min #
-		"MaxQuantity": 6,			//Max #
+		"MinQuantity": 2,			//Min #
+		"MaxQuantity": 5,			//Max #
 		},
 		{
 		"RequiredPopulation": 6,
@@ -168,7 +168,7 @@
 		"RequiredPopulation": 3,
 		"Chance": 0.10,
 		"ItemID": 64,
-		"MinQuantity": 1,
+		"MinQuantity": 0,
 		"MaxQuantity": 2
 		},
 		{
@@ -200,7 +200,7 @@
 		"RequiredPopulation": 10,	//# of fish
 		"Chance": 0.02,				//Chance to produce item
 		"ItemID": 74,				//Item ID
-		"MinQuantity": 1,			//Min #
+		"MinQuantity": 0,			//Min #
 		"MaxQuantity": 1,			//Max #
 		},
 		{
@@ -214,7 +214,7 @@
 		"RequiredPopulation": 3,
 		"Chance": 0.50,
 		"ItemID": 445,
-		"MinQuantity": 1,
+		"MinQuantity": 0,
 		"MaxQuantity": 2
 		},
 		{
@@ -430,15 +430,15 @@
 		"RequiredPopulation": 10,	//# of fish
 		"Chance": 0.10,				//Chance to produce item
 		"ItemID": 386,				//Item ID
-		"MinQuantity": 2,			//Min #
-		"MaxQuantity": 4,			//Max #
+		"MinQuantity": 0,			//Min #
+		"MaxQuantity": 2,			//Max #
 		},
 		{
 		"RequiredPopulation": 6,
 		"Chance": 0.45,
 		"ItemID": 72,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
+		"MinQuantity": 1,
+		"MaxQuantity": 2
 		},
 		{
 		"RequiredPopulation": 3,
@@ -468,7 +468,7 @@
 		"Action": "EditData",
 		"Target": "Data/FishPondData",
 		"Entries": { 
-		"Bladetail Sturgeon": {
+		"Ridgeside Bass": {
 		"RequiredTags": [ "item_ridgeside_bass" ],
 		"SpawnTime": -1,
 		"ProducedItems": [
@@ -488,6 +488,159 @@
 		},
 		},
 	},
+	{
+	//Ridge Bluegill
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Ridge Bluegill": {
+		"RequiredTags": [ "item_ridge_bluegill" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+        "RequiredPopulation": 0,
+        "Chance": 0.9,
+        "ItemID": 812,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+      	{
+        "RequiredPopulation": 6,
+        "Chance": 0.9,
+        "ItemID": 258,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+		],
+		"PopulationGates": {
+		"4": [ "309 3", "310 3", "311 3", "684 10" ],
+      	"6": [ "597 3" ],
+      	"8": [ "70 2", "340", "716", "722" ]
+		},
+		},
+		},
+	},
+	{
+	//Cutthroat Trout
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Cutthroat Trout": {
+		"RequiredTags": [ "item_cutthroat_trout" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+        "RequiredPopulation": 0,
+        "Chance": 0.9,
+        "ItemID": 812,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+		],
+		"PopulationGates": {
+		"4": [ "309 3", "310 3", "311 3", "684 10" ],
+      	"6": [ "384 3", "724", "770 5" ],
+      	"8": [ "109", "716", "722" ]
+		},
+		},
+		},
+	},
+	{
+	//Skulpin Fish
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Skulpin Fish": {
+		"RequiredTags": [ "item_skulpin_fish" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+        "RequiredPopulation": 0,
+        "Chance": 0.9,
+        "ItemID": 812,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+      	{
+        "RequiredPopulation": 3,
+        "Chance": 0.9,
+        "ItemID": 709,
+        "MinQuantity": 0,
+        "MaxQuantity": 1
+      	},
+		],
+		"PopulationGates": {
+		"4": [ "309 3", "310 3", "311 3", "684 10" ],
+      	"6": [ "384 3", "724", "770 5" ],
+      	"8": [ "254", "340", "716", "722" ]
+		},
+		},
+		},
+	},
+	{
+	//Mountain Redbelly Dace
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Mountain Redbelly Dace": {
+		"RequiredTags": [ "item_mountain_redbelly_dace" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+        "RequiredPopulation": 0,
+        "Chance": 0.9,
+        "ItemID": 812,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+      	{
+        "RequiredPopulation": 5,
+        "Chance": 0.9,
+        "ItemID": 420,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+		],
+		"PopulationGates": {
+		"4": [ "309 6", "310 6", "311 6", "684 20" ],
+      	"6": [ "384 3", "724", "770 5" ],
+      	"8": [ "70 4", "340", "716", "722" ]
+		},
+		},
+		},
+	},
+	{
+	//Mountain Whitefish
+		"Action": "EditData",
+		"Target": "Data/FishPondData",
+		"Entries": { 
+		"Mountain Whitefish": {
+		"RequiredTags": [ "item_mountain_whitefish" ],
+		"SpawnTime": -1,
+		"ProducedItems": [
+		{
+        "RequiredPopulation": 0,
+        "Chance": 0.9,
+        "ItemID": 812,
+        "MinQuantity": 1,
+        "MaxQuantity": 1
+      	},
+      	{
+        "RequiredPopulation": 0,
+        "Chance": 0.9,
+        "ItemID": 157,
+        "MinQuantity": 2,
+        "MaxQuantity": 4
+      	},
+		],
+		"PopulationGates": {
+		"4": [ "309 6", "310 6", "311 6", "684 20" ],
+      	"6": [ "384 3", "724", "770 5" ],
+      	"8": [ "70 4", "340", "716", "722" ]
+		},
+		},
+		},
+	},
 
 	{
 		"Action": "EditData",
@@ -503,7 +656,13 @@
 			{ "ID": "item_harvester_trout", "AfterID": "item_golden_rose_fin" },
 			{ "ID": "item_lullaby_carp", "AfterID": "item_harvester_trout" },
 			{ "ID": "item_pebble_back_crab", "AfterID": "item_lullaby_carp" },
-			{ "ID": "item_ridgeside_bass", "AfterID": "item_pebble_back_crab" }
+			{ "ID": "item_ridgeside_bass", "AfterID": "item_pebble_back_crab" },
+
+			{ "ID": "item_ridge_bluegill", "AfterID": "item_ridgeside_bass" },
+			{ "ID": "item_cutthroat_trout", "AfterID": "item_ridge_bluegill" },
+			{ "ID": "item_skulpin_fish", "AfterID": "item_cutthroat_trout" },
+			{ "ID": "item_mountain_redbelly_dace", "AfterID": "item_skulpin_fish" },
+			{ "ID": "item_mountain_whitefish", "AfterID": "item_mountain_redbelly_dace" },
 		]
 	},
 
