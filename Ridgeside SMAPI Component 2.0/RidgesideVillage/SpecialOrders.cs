@@ -23,6 +23,7 @@ namespace RidgesideVillage
         const string BlueCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalBlue";
         const string PurpleCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalPurple";
         const string GrayCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalGray";
+        const string HAUNTEDGH = "RSV.UntimedSpecialOrder.HauntedGH";
 
         static IModHelper Helper;
         static IMonitor Monitor;
@@ -94,6 +95,11 @@ namespace RidgesideVillage
                 Game1.player.mailReceived.Remove("CrystalsFlagOngoing");
                 Game1.playSound("healSound");
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("CompleteCrystalsNotif"));
+            }
+
+            if (Game1.player.eventsSeen.Contains(75160269) && !Game1.player.team.SpecialOrderActive(HAUNTEDGH) && !Game1.player.team.completedSpecialOrders.ContainsKey(HAUNTEDGH))
+            {
+                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(HAUNTEDGH, null));
             }
         }
     }

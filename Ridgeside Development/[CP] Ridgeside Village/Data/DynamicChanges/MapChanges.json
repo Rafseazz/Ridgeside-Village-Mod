@@ -315,10 +315,25 @@
          "PatchMode": "Overlay",
          "Update": "OnTimeChange, OnLocationChange",
     	 "When": {
-             "Query: {{Year}} >= 2": true,
-             "Time": "{{Range: 2000, 2600}}",
+             "Time": "{{Range: 2400, 2600}}",
+             "HasSeenEvent": 75160266,
+             "HasSeenEvent |contains=75160271": false
       	}
       	},
+      	//Permanent unlock (after finishing quest)
+      	{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVTheHike",
+         "FromFile": "Assets/Maps/EventMaps/UnlockGH2.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 10 },
+         "ToArea": { "X": 35, "Y": 14, "Width": 7, "Height": 10 },
+         "PatchMode": "Overlay",
+         "Update": "OnLocationChange",
+    	 "When": {
+             "HasSeenEvent": 75160271,
+      	}
+      	},
+
 
 //Hotel Room
 	{

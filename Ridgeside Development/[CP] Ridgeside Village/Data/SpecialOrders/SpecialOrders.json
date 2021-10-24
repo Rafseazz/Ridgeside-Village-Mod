@@ -79,7 +79,7 @@
             ]
          },
 
-         //Minecart Fix
+         //Community Greenhouse Fix
          "RSV.UntimedSpecialOrder.FixGreenhouse": {
             "Name": "[RSV.SpecialOrder.FixGreenhouse_Name]",
             "Requester": "Lenny",
@@ -555,6 +555,56 @@
                   "Type": "Mail",
                   "Data": {
                      "MailReceived": "RSV.CompleteGrayCrystal",
+                     "NoLetter": "true",
+                  }
+               },
+            ]
+         },
+
+         //Haunted Greenhouse Quest
+         "RSV.UntimedSpecialOrder.HauntedGH": {
+            "Name": "[RSV.SpecialOrder.HauntedGH_Name]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "False",
+            "RequiredTags": "event_75160269",
+            "OrderType": "",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.HauntedGH_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Collect",
+                  "Text": "[RSV.SpecialOrder.HauntedGH_Objective1_Text]",
+                  "RequiredCount": "50",
+                  "Data": {
+                     "AcceptedContextTags": "item_mountain_mistbloom"
+                  }
+               },
+               {
+                  "Type": "Collect",
+                  "Text": "[RSV.SpecialOrder.HauntedGH_Objective2_Text]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "AcceptedContextTags": "item_sweet_gem_berry"
+                  }
+               },
+               {
+                  "Type": "Collect",
+                  "Text": "[RSV.SpecialOrder.HauntedGH_Objective3_Text]",
+                  "RequiredCount": "5",
+                  "Data": {
+                     "AcceptedContextTags": "item_ruby"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Mail",
+                  "Data": {
+                     "MailReceived": "RSV.HauntedGHFix",
                      "NoLetter": "true",
                   }
                },
