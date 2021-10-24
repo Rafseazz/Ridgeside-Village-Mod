@@ -925,16 +925,28 @@
 		"EventSeen": "75160187",
 		},
 	},
-	/*{
-      "BoardName": "RSVDaiaBook",
+
+	{
+      "BoardName": "RSVTownSO",
+      "BoardType": "SpecialOrders",
+      "Location": "Custom_Ridgeside_RidgesideVillage",
+      "Tile": "119,40",
+      "Texture": "LooseSprites/RSVTownSO",
+      "UnlockWhen": {
+        "EventSeen": "75160086",
+      }
+  },
+
+  {
+      "BoardName": "RSVNinjaSO",
       "BoardType": "SpecialOrders",
       "Location": "Custom_Ridgeside_RSVNinjaHouse",
-      "Tile": "12,4",
-      "Texture": "LooseSprites/RSVNinjaSOBoard", // This texture is added with Content Patcher
+      "Tile": "3,4",
+      "Texture": "LooseSprites/RSVNinjaSOBoard",
       "UnlockWhen": {
-        "EventSeen": "75160187",
+        "EventSeen": "75160264",
       }
-    }*/
+  },
   ],
 
 "CustomDropBoxes": [
