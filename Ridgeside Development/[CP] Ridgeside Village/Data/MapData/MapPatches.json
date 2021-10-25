@@ -48,6 +48,18 @@
 			"Action": "Load",
 			"Target": "LooseSprites/RSVContestWinnerPic",
 			"FromFile": "Assets/{{Target}}.png",
+		},
+
+	//CHAIRS!!!!
+		{
+			"Action": "EditData",
+			"Target": "Data/ChairTiles",
+			"Entries": {
+				//Format: "tilesheet/x index/y index": "width/height/type/x offset/y offset/bool (can pass true?)"
+				//types: bench, stool, chair, picnic, swings, playground, booth, couch, (maybe just a name?)
+
+				"zridgesidefurniture/11/23": "3/1/up/summitbench/2/6/false",
+			}
 		}
 
 	]
