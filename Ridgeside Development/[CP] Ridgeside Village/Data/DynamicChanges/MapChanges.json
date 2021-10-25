@@ -289,6 +289,20 @@
 			"HasFlag": "RSV.CompleteDaiaQuest",
 			"HasSeenEvent |contains=75160255": false,
 		}         
+      	},
+
+    //Sewer Open
+    	{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVCableCar",
+         "FromFile": "Assets/Maps/DynamicMaps/RSVCableCar_SewerEntrance.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 5, "Height": 4 },
+         "ToArea": { "X": 1, "Y": 2, "Width": 5, "Height": 4 },
+         "PatchMode": "Replace",
+         "Update": "OnLocationChange, OnTimeChange",
+         "When": {
+			"HasWalletItem": "RustyKey",
+		}         
       	}, 
 
 
