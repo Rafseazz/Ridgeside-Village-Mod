@@ -323,7 +323,7 @@
 },
 
 //Gathering Dialogue
-/*{
+{
 	"LogName": "Ridgeside Gathering Dialogue for SVE",
 	"Action": "EditData",
 	"Target": "Data/Festivals/fall20",
@@ -331,8 +331,15 @@
 		"Sophia": "{{i18n:InterModDialogue.GatheringDialogue.Sophia}}",
 		"Victor": "{{i18n:InterModDialogue.GatheringDialogue.Victor}}",
 		"Olivia": "{{i18n:InterModDialogue.GatheringDialogue.Olivia}}",
+		"Claire": "{{i18n:InterModDialogue.GatheringDialogue.Claire}}",
+		"Sophia_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Sophia_spouse}}",
+		"Victor_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Victor_spouse}}",
+		"Olivia_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Olivia_spouse}}",
+		"Claire_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Claire_spouse}}",
 		"Andy": "{{i18n:InterModDialogue.GatheringDialogue.Andy}}",
+		"Martin": "{{i18n:InterModDialogue.GatheringDialogue.Martin}}",
 		"Susan": "{{i18n:InterModDialogue.GatheringDialogue.Susan}}",
+		"Gunther": "{{i18n:InterModDialogue.GatheringDialogue.Gunther}}",
 	},
 },
 //Gathering Locations
@@ -345,7 +352,7 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Yuuma 115 45 left",
+   	"Value": "Sophia 108 47 up/Victor 122 54 right/Olivia 86 51 left/Claire 74 49 up/Andy 81 46 down/Martin 102 61 up/Susan 99 60 right/Gunther 99 51 right",
    	"Delimiter": "/"
    },
 
@@ -354,15 +361,15 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "MainEvent_additionalCharacters"],
-   	"Value": "Yuuma 96 44 left",
+   	"Value": "Sophia 88 40 right/Victor 88 41 left/Olivia 77 45 up/Claire 62 40 right/Andy 62 43 right/Martin 61 39 right/Susan 85 43 left/Gunther 87 37 left",
    	"Delimiter": "/"
    },
 
 ]	
-},*/
+},
 
 //Ember of Resolutions Dialogue
-/*{
+{
 	"LogName": "EmberOfResolutions",
 	"Action": "EditData",
 	"Target": "Data/Festivals/winter28",
@@ -370,8 +377,15 @@
 		"Sophia": "{{i18n:InterModDialogue.EmberNightDialogue.Sophia}}",
 		"Victor": "{{i18n:InterModDialogue.EmberNightDialogue.Victor}}",
 		"Olivia": "{{i18n:InterModDialogue.EmberNightDialogue.Olivia}}",
+		"Claire": "{{i18n:InterModDialogue.EmberNightDialogue.Claire}}",
+		"Sophia_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Sophia_spouse}}",
+		"Victor_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Victor_spouse}}",
+		"Olivia_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Olivia_spouse}}",
+		"Claire_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Claire_spouse}}",
 		"Andy": "{{i18n:InterModDialogue.EmberNightDialogue.Andy}}",
+		"Martin": "{{i18n:InterModDialogue.EmberNightDialogue.Martin}}",
 		"Susan": "{{i18n:InterModDialogue.EmberNightDialogue.Susan}}",
+		"Gunther": "{{i18n:InterModDialogue.EmberNightDialogue.Gunther}}",
 	},
 },		
 
@@ -385,7 +399,7 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Sophia 43 34 down",
+   	"Value": "Sophia 37 28 down/Victor 58 45 down/Olivia 35 45 left/Claire 25 44 right/Andy 52 30 left/Martin 25 45 left/Susan 35 35 left/Gunther 29 28 down",
    	"Delimiter": "/"
    },
 
@@ -393,12 +407,12 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "MainEvent_additionalCharacters"],
-   	"Value": "Sophia 43 34 down",
+   	"Value": "Sophia 29 44 right/Victor 35 51 up/Olivia 36 51 up/Claire 25 44 right/Andy 53 48 left/Martin 25 45 left/Susan 29 45 right/Gunther 56 47 left",
    	"Delimiter": "/"
    },
 
 ]	
-},*/
+},
 
 
 
