@@ -86,7 +86,7 @@ namespace RidgesideVillage
                 return;
             }
             GameLocation location = Game1.getLocationFromName(arg2[0]);
-            if(location != null)
+            if (location != null)
             {
                 foreach(var key in location.modData.Keys)
                 {

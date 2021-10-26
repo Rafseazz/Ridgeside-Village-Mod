@@ -29,9 +29,21 @@ namespace RidgesideVillage
 
         private static void OpenPaulaMenu(string tileActionString, Vector2 position)
         {
-            if (true || Game1.player.health < (Game1.player.maxHealth * 0.8) || Game1.player.stamina < (Game1.player.MaxStamina * 0.8))
+            Character Paula = Game1.currentLocation.characters.Where(npc => npc.Name.Equals("Paula")).FirstOrDefault();
+            bool isPaulaHere = false;
+            if (Paula != null)
+            {
+                //Tiles in Rectangle(14, 12, 3, 2) are behind the counter
+                Rectangle behindCounterArea = new Rectangle(14 * 64, 12 * 64, 3 * 64, 2 * 64);
+                isPaulaHere = behindCounterArea.Contains((int)Paula.Position.X, (int)Paula.Position.Y);
+            }
+            if (isPaulaHere && (Game1.player.health < (Game1.player.maxHealth * 0.8) || Game1.player.stamina < (Game1.player.MaxStamina * 0.8)))
             {
                 ClinicChoices();
+            }
+            else if (!isPaulaHere)
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Clinic.PaulaNotHere"));
             }
             else
             {
@@ -64,11 +76,11 @@ namespace RidgesideVillage
 
         private static void HealthCheckup()
         {
-            if(true || Game1.player.health < (Game1.player.maxHealth * 0.8) && Game1.player.Money >= cost)
+            if(Game1.player.health < (Game1.player.maxHealth * 0.8) && Game1.player.Money >= cost)
             {
                 var location = Game1.getLocationFromName("Custom_Ridgeside_PaulaClinic");
                 
-                var events = location.GetLocationEvents();///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade
+                var events = location.GetLocationEvents();
                 
                 string eventString = events["healthCheckup"].Replace("{cost}", cost.ToString());
 
@@ -90,7 +102,7 @@ namespace RidgesideVillage
 
         private static void StaminaCheckup()
         {
-            if (true || Game1.player.stamina < (Game1.player.MaxStamina * 0.8) && Game1.player.Money >= cost)
+            if (Game1.player.stamina < (Game1.player.MaxStamina * 0.8) && Game1.player.Money >= cost)
             {
                 var location = Game1.getLocationFromName("Custom_Ridgeside_PaulaClinic");
 
