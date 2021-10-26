@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="23">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="23">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
   <property name="Doors" value="9 12 indoor 120"/>
@@ -18,6 +18,9 @@
  </tileset>
  <tileset firstgid="3830" name="p" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
+ </tileset>
+ <tileset firstgid="3866" name="RafNPCSheet" tilewidth="16" tileheight="16" tilecount="144" columns="8">
+  <image source="RafNPCSheet.png" width="128" height="288"/>
  </tileset>
  <layer id="1" name="Back" width="15" height="21">
   <data encoding="csv">
@@ -42,6 +45,31 @@
 1654,2292,2293,2292,2293,2292,2293,2292,2293,2292,3410,3411,3412,3413,1654,
 1654,2260,2261,2260,2261,2260,2261,2260,2261,2260,3442,3443,3444,3445,1654,
 0,0,0,0,0,0,0,0,0,2292,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="11" name="Schedule" width="15" height="21">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,3914,0,0,0,3914,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,3914,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <layer id="2" name="Buildings" width="15" height="21">
