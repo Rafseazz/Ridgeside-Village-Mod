@@ -29,5 +29,13 @@
 		},
 	},
 
+	{
+		"LogName": "Jio random take off mask",
+		"Action": "EditImage",
+		"Target": "Portraits/Jio",
+		"FromFile": "Assets/Portraits/Jio_Unmask.png",
+		"When": { "RandomNumber": "{{Range: 4,6}}" }
+	},
+
 ]
 }
