@@ -33,6 +33,7 @@ namespace RidgesideVillage
             HarmonyPatch_Fish.ApplyPatch(harmony, Helper);
             HarmonyPatch_TreasureItems.ApplyPatch(harmony, Helper);
             HarmonyPatch_SummitFarm.ApplyPatch(harmony, Helper);
+            HarmonyPatch_WeddingGuests.ApplyPatch(harmony, Helper);
         }
     }        
 }
