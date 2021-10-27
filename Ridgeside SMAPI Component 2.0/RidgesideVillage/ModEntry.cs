@@ -42,6 +42,8 @@ namespace RidgesideVillage
 
             IanShop.Initialize(this);
 
+            Elves.Initialize(this);
+
             Greenhouses.Initialize(this);
 
             PaulaClinic.Initialize(this);
