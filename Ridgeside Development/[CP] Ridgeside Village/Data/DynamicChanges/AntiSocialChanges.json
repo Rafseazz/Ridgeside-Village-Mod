@@ -28,6 +28,29 @@
 				"Daia": false,
 			}
 		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": "75160251"
+			},
+			"Entries": {
+				"Malaya": false,
+				"Kimpoi": false,
+			}
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": "75160249"
+			},
+			"Entries": {
+				"Naomi": false
+			}
+		},
 			
 
 
