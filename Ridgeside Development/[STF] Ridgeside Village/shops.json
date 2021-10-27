@@ -749,11 +749,10 @@
 	"StoreCurrency": "Money",
 	"CategoriesToSell": [ -7,-98 ],
 	"PortraitPath": "assets/LolaShop.png",
-	"Quote": "How can I help you, dear?",
-	"ClosedMessage": "Sorry, I'm too tired, dear.",
+	"Quote": "Weapons available today.",
+	"MaxNumItemsSoldInStore": 2,
 	"ShopPrice": -1,
 	"DefaultSellPriceMultiplier": 1.0,
-	"When": ["t 600 2600"],
     "LocalizedQuote": {
     	//remove the "//" from your language
         //"es": "PLACEHOLDER",
@@ -783,20 +782,16 @@
         //"zh": "PLACEHOLDER",
     	},	
 	"ItemStocks": [
-		//Bars
-		{
-			"ItemType": "Object",
-			"ItemNames": [
-				"Copper Bar",
-				"Iron Bar",
-				"Gold Bar",
-				],
-			"Stock": 100,
-		},
 		//Weapons
 		{
 			"ItemType": "Weapon",
 			"ItemNames": [
+				"Blade of Rubies",
+				"Celestine Sword",
+				"Frost Queen's Blade",
+				"Pearlskin Blade",
+				"Reaper Bane",
+				"Runic Greatsword",
 				"Lava Katana",
 				"Steel Falchion",
 				"Bone Sword",
@@ -1441,7 +1436,7 @@
 	"Quote": "Welcome! What would you like, dear?",
 	"ClosedMessage": "Sorry, we're closed!",
 	"ShopPrice": -1,
-	"MaxNumItemsSoldInStore": 5,
+	"MaxNumItemsSoldInStore": 7,
 	"DefaultSellPriceMultiplier": 0.7,
 	"PriceMultiplierWhen": {
 		"0.6": ["f Malaya 2000"] 
@@ -1523,26 +1518,11 @@
 			"ItemType": "Object",
 			"IsRecipe": true,
 			"ItemNames": [
-				"Clementine Cake",
-				"Crunchy Bagel",
-				"Fluffy Apple Crumble",
-				"Forage Souffle",
-				"Forest Halva",
-				"Highland Blueberry Pie",
-				"Highland Revani",
-				"Holiday Ice",
-				"Jumpy Coffee Cake",
 				"Kedi Delight",
 				"Keks Style Shortcake",
 				"Kek's Small Dream",
 				"Pillowsoft Cheezy Sandwich",
 				"Pink Frosted Sprinkled Doughnut",
-				"Pumpkin Darling Slice",
-				"Ridge Apple Cake",
-				"Ridge Mosaic Cake",
-				"Strawberry Lover Pie",
-				"Sweet Cranberry Cheesecake",
-				"Tropic Mango Cake",
 				"Hundred Flavor Doughnut",
 				"Apricot Juice",
 				"Clementine Juice",
