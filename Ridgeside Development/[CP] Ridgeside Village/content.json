@@ -42,6 +42,12 @@
 			"Description": "RSV NPCs don't appear in Introduction quest."
 		},
 
+		"FullFestivals": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "The true RSV experience. Almost all of RSV NPCs attend the vanilla festivals. Might be incompatible with some mods."
+		},
+
 		"EnableBetterBusStop": {
 			"AllowValues": "true, false",
 			"Default": "true",
@@ -116,7 +122,7 @@
 		//Alone
 		{
 			"Name": "BONFIREEVENT",
-			"Value": "/warp farmer 40 49/faceDirection farmer 0/fade/viewport 39 46/pause 2000/move farmer 0 -5 0/pause 1000/playSound backpackIN/addObject 40 42 294/pause 2000/message \"{{i18n:EoR.19}}\"/pause 3000/emote farmer 32/pause 1000/globalFade/viewport -1000 -1000/warp farmer 40 48/faceDirection farmer 0/",
+			"Value": "/warp farmer1 40 49/warp farmer2 39 49/warp farmer3 38 49/warp farmer4 41 49/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 0/faceDirection farmer 0/fade/viewport 39 46/pause 2000/move farmer1 0 -5 0/pause 1000/playSound backpackIN/addObject 40 42 294/pause 2000/message \"{{i18n:EoR.19}}\"/pause 3000/emote farmer1 32/pause 1000/globalFade/viewport -1000 -1000/warp farmer1 40 49/warp farmer2 39 49/warp farmer3 38 49/warp farmer4 41 49/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 0/",
 		},
 		
 		/*********

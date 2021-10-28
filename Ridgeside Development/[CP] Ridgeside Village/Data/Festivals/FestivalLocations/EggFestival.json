@@ -26,6 +26,92 @@
 
 	]	
 	},
+
+
+    //2.0 Pips spots! THE TRUE RSV EXPERIENCE!
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "HasSeenEvent": 75160249, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 25 55 right/Malaya 25 54 right/Sonny 23 71 right/Louie 11 61 up/Maive 24 70 right/Ariah 42 78 down/Lorenzo 34 60 right/Shanice 37 60 left/Anton 9 66 up/Kiarra 9 61 right/Paula 8 65 right/Carmen 38 72 left/Blair 9 60 right/Sean 13 60 left/Faye 35 66 left/Irene 29 62 up",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Kimpoi 24 55 down/Malaya 25 54 down/Sonny 23 71 right/Louie 24 71 right/Maive 24 70 right/Ariah 42 78 down/Lorenzo 34 60 down/Shanice 35 60 down/Anton 9 66 right/Kiarra 9 61 right/Paula 9 95 right/Carmen 38 72 left/Blair 9 60 right/Sean 9 62 right/Faye 35 66 left/Irene 35 67 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "HasSeenEvent": 75160249, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 26 69 left",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Naomi 21 79 up",
+                "Delimiter": "/"
+            }
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "HasSeenEvent": 75160254, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 52 61 left",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Daia 52 61 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //RSV Kids play
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "FullFestivals": true
+        },
+        "Entries": {
+             "mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 27 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 26 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"It's time for the highlight of today's festivities... The Annual Spring Egg Hunt!$h\"/pause 100/jump Jas/jump Vincent/pause 1000/speak Lewis \"Calm down now, kiddos. You're going to need all your energy if you hope to find the most eggs and take home the exclusive prize.\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 /pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lewis 2/pause 800/speak Lewis \"Now... Is everyone ready?\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"Let the egg hunt begin!$h\"/advancedMove Maru false 0 2 -1 0 4 0 -10 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -7 3 0/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -15 -9 0 9 0 0 18/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -20 -6 0 0 3/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 19 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 21 9 0 0 4 -20 0 20 0 -20 0/advancedMove Leo false 0 -10 -1 0 0 -3 -6 0 0 -2 -3 0 0 -3 -1 0 0 20 -5 0 0 -10 -2 0/advancedMove Keahi false 0 18 3 0 0 -2 3 0 0 3 -11 0 0 8 3 0 0 -3 -9 0 0 -5 20 0/advancedMove Lenny false -1 0 0 -1 -2 0 0 2 1 0 0 9 -13 0 0 -4 -9 0 10 0 -10 0 10 0 -10 0/advancedMove Trinnie false 0 3 -3 0 0 6 7 0 0 12 9 0 -11 0 0 8 -6 0 0 -6 6 0 0 8 13 0 0 -6 0 7 0 -7 0 7/advancedMove Kiarra false 8 0 -3 0 0 4 7 0 0 5 11 0 0 -7 26 0 0 -4 2 0 0 -4 -1 0 0 -1 -10 0 0 -11 -18 0/advancedMove Blair false 0 -6 3 0 -9 0 7 0 0 -8 -15 0 0 3 -1 0 0 5 6 0 0 -2 3 0 0 17 3 0 0 21 11 0/advancedMove Sean false 3 0 0 1 0 -2 2 0 0 14 12 0 0 -1 -13 0 0 8 2 0 0 -1 -2 0 0 -6 -9 0 0 6 3 0 0 -11 1 0 -13 0 0 -3/playSound whistle/jump Keahi/jump Blair/playMusic tickTock/playerControl eggHunt",
+        }
+    }
 	
 ]
 }
