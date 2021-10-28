@@ -123,6 +123,20 @@
         //Miscellaneous
         "Spiritual Essence": "color_light_blue",
       }
+    },
+
+    //Foxbloom Universal
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Universal_Love"],
+          "Value": "{{spacechase0.JsonAssets/ObjectId:Foxbloom}}",
+          "Delimiter": " "
+        }
+      ]
     }
   ]
 }
