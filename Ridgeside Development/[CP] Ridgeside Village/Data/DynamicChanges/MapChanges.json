@@ -70,7 +70,7 @@
 		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 2 },
 		"ToArea": { "X": 57, "Y": 41, "Width": 2, "Height": 2 },
 		"PatchMode": "ReplaceByLayer",
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday" },
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160182": false },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	{
@@ -125,7 +125,7 @@
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVAbandonedHouse",
-		"FromFile": "Assets/Maps/EventMaps/RSVAbandonedHouse.tmx",
+		"FromFile": "Assets/Maps/EventMaps/RSVAbandonedHouse_Sched.tmx",
 		"ToArea": { "X": 2, "Y": 3, "Width": 1, "Height": 2 },
 		"PatchMode": "Replace",
 		"When": { "HasSeenEvent": 75160273 },
