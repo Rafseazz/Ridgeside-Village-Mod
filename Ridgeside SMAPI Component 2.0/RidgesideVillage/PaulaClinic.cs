@@ -113,7 +113,7 @@ namespace RidgesideVillage
                 UtilFunctions.StartEvent(new Event(eventString), "Custom_Ridgeside_PaulaClinic", 16, 15);
 
                 Game1.delayedActions.Add(new DelayedAction(2000, delegate {
-                    Game1.player.health = Game1.player.maxHealth;
+                    Game1.player.Stamina = Game1.player.MaxStamina;
                 }));
             }
             else if (Game1.player.stamina >= 100 && Game1.player.Money >= cost)

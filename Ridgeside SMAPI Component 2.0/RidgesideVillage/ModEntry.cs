@@ -30,6 +30,8 @@ namespace RidgesideVillage
             CustomCPTokens = new CustomCPTokens(this);
             Patcher = new Patcher(this);
 
+            Patcher.PerformPatching();
+
             HotelMenu.Initialize(this);
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
@@ -116,7 +118,6 @@ namespace RidgesideVillage
                 Log.Error("JSON Assets is not loaded! This mod *requires* JSON Assets!");
                 return;
             }
-            Patcher.PerformPatching();
 
             // Custom CP Token Set-up
             CustomCPTokens.RegisterTokens();
