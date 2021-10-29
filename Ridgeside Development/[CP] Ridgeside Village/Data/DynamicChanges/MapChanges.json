@@ -70,7 +70,7 @@
 		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 2 },
 		"ToArea": { "X": 57, "Y": 41, "Width": 2, "Height": 2 },
 		"PatchMode": "ReplaceByLayer",
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday" },
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160182": false },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	{
