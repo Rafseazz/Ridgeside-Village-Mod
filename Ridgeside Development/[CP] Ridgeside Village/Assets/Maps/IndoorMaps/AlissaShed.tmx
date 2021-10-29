@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="146">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="146">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
  </properties>
@@ -48,8 +48,11 @@
  <tileset firstgid="7117" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior" width="512" height="1088"/>
  </tileset>
- <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="437" columns="19">
-  <image source="z_rsvinterior.png" width="304" height="368"/>
+ <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="589" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="496"/>
+ </tileset>
+ <tileset firstgid="9882" name="RafNPCSheet" tilewidth="16" tileheight="16" tilecount="144" columns="8">
+  <image source="RafNPCSheet.png" width="128" height="288"/>
  </tileset>
  <layer id="1" name="Back" width="16" height="18">
   <data encoding="csv">
@@ -71,6 +74,28 @@
 0,4611,4612,4611,4612,4611,4612,4611,0,0,0,0,0,0,0,0,
 0,4643,4644,4643,4644,4643,4644,4643,0,0,0,0,0,0,0,0,
 0,4611,4612,4611,4612,4611,4612,4611,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="12" name="Schedule" width="16" height="18">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,9899,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
  <objectgroup id="6" name="Back"/>

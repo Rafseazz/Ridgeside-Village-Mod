@@ -913,7 +913,7 @@
     "Tile": "109,40",
     "IndicatorOffset": "10,-20",
     "Texture": "LooseSprites/RSVQuestBoard"
-    },
+  },
 	{
 	"BoardName": "RSVNinjaBoard",
 	"BoardType": "Quests",
@@ -925,6 +925,28 @@
 		"EventSeen": "75160187",
 		},
 	},
+
+	{
+      "BoardName": "RSVTownSO",
+      "BoardType": "SpecialOrders",
+      "Location": "Custom_Ridgeside_RidgesideVillage",
+      "Tile": "119,40",
+      "Texture": "LooseSprites/RSVTownSO",
+      "UnlockWhen": {
+        "EventSeen": "75160086",
+      }
+  },
+
+  {
+      "BoardName": "RSVNinjaSO",
+      "BoardType": "SpecialOrders",
+      "Location": "Custom_Ridgeside_RSVNinjaHouse",
+      "Tile": "3,4",
+      "Texture": "LooseSprites/RSVNinjaSOBoard",
+      "UnlockWhen": {
+        "EventSeen": "75160264",
+      }
+  },
   ],
 
 "CustomDropBoxes": [

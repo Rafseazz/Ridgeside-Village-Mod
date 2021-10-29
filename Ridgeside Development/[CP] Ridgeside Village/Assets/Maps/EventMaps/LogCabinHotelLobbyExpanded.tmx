@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="46" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="157">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="46" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="164">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
  </properties>
@@ -48,8 +48,8 @@
  <tileset firstgid="7117" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior" width="512" height="1088"/>
  </tileset>
- <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="437" columns="19">
-  <image source="z_rsvinterior.png" width="304" height="368"/>
+ <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="589" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="496"/>
  </tileset>
  <layer id="1" name="Back" width="46" height="18">
   <data encoding="csv">
@@ -113,7 +113,7 @@
 7181,0,0,0,7271,0,0,7272,8010,0,8034,0,0,0,0,0,7271,0,0,7272,0,0,0,0,7271,0,0,0,7272,0,0,0,0,0,0,0,0,0,0,7185,7117,7117,7117,7117,7117,7117,
 7181,0,0,0,7303,7197,7197,7304,8042,0,8066,8067,8067,8067,8067,8067,7303,7197,7197,7304,0,0,0,0,7303,7849,7850,7197,7304,0,0,0,0,0,0,0,0,0,0,7310,7127,7127,7127,7127,7127,7128,
 7181,0,0,0,7335,7229,7229,7336,0,0,0,0,0,0,0,7652,7335,7229,7229,7336,0,0,0,0,7335,7881,7882,8538,7336,0,0,0,0,0,0,0,0,0,0,7271,0,0,0,0,4443,7185,
-7181,0,0,0,7480,0,0,7480,0,0,0,0,0,0,0,0,7480,0,0,7480,0,0,0,0,0,7913,7914,0,0,0,0,0,0,0,0,0,0,0,0,7303,7197,7197,7197,7197,7197,7185,
+7181,0,0,0,7480,9863,9864,7480,0,0,0,0,0,0,0,0,7480,0,0,7480,0,0,0,0,0,7913,7914,0,0,0,0,0,0,0,0,0,0,0,0,7303,7197,7197,7197,7197,7197,7185,
 7181,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7335,7229,7229,7229,7229,7229,7185,
 7181,0,0,8189,8190,8191,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9350,9389,9351,0,9350,9388,9351,0,0,4500,9338,9339,9340,9341,4505,7185,
 7181,0,0,8221,8222,8223,0,0,0,0,0,0,9099,9100,9099,9100,0,0,9099,9100,9099,9100,9099,9100,9099,9100,9099,9100,7480,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7185,
@@ -244,22 +244,57 @@
   </object>
   <object id="153" name="TileData" x="288" y="128" width="16" height="16">
    <properties>
-    <property name="Action" value="ShowImage &quot;LooseSprites/RSVContestWinnerPic&quot; 1.0"/>
+    <property name="Action" value="ShowImage &quot;LooseSprites/RSVContestWinnerPic&quot; 1.0 ShowImage.Arknir"/>
    </properties>
   </object>
   <object id="154" name="TileData" x="272" y="128" width="16" height="16">
    <properties>
-    <property name="Action" value="ShowImage &quot;LooseSprites/RSVContestWinnerPic&quot; 1.0"/>
+    <property name="Action" value="ShowImage &quot;LooseSprites/RSVContestWinnerPic&quot; 1.0 ShowImage.Arknir"/>
    </properties>
   </object>
-  <object id="155" name="TileData" x="80" y="128" width="16" height="16">
+  <object id="155" name="TileData" x="64" y="128" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.hotel2&quot;"/>
    </properties>
   </object>
-  <object id="156" name="TileData" x="96" y="128" width="16" height="16">
+  <object id="156" name="TileData" x="112" y="128" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.hotel2&quot;"/>
+   </properties>
+  </object>
+  <object id="157" name="TileData" x="640" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.hotel34&quot;"/>
+   </properties>
+  </object>
+  <object id="158" name="TileData" x="656" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.hotel35&quot;"/>
+   </properties>
+  </object>
+  <object id="159" name="TileData" x="656" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.hotel36&quot;"/>
+   </properties>
+  </object>
+  <object id="160" name="TileData" x="672" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.hotel36&quot;"/>
+   </properties>
+  </object>
+  <object id="161" name="TileData" x="688" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.hotel36&quot;"/>
+   </properties>
+  </object>
+  <object id="162" name="TileData" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="DropBox RSVLogCabinHotel"/>
+   </properties>
+  </object>
+  <object id="163" name="TileData" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="Action" value="DropBox RSVLogCabinHotel"/>
    </properties>
   </object>
  </objectgroup>
@@ -347,9 +382,9 @@
 0,0,0,0,0,0,0,0,4890,0,4890,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4673,4674,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,4831,7356,7357,4831,0,0,0,4924,4923,4923,4924,4923,4831,0,0,4831,0,0,0,0,4831,4705,4706,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,7388,7389,0,0,0,0,0,0,0,0,4508,0,0,0,0,0,0,0,0,0,0,0,5394,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,4336,0,0,4336,0,0,0,0,0,0,0,0,4336,0,0,4336,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4831,9301,9302,9303,9304,0,0,
+0,0,0,0,4336,9844,9845,4336,0,0,0,0,0,0,0,0,4336,0,0,4336,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4831,9301,9302,9303,9304,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9300,0,0,0,4441,0,
-0,0,0,5045,5046,5047,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5381,5382,0,0,0,0,0,0,9331,9370,9332,0,9331,9369,9332,0,0,4468,9319,9320,9321,9322,4473,0,
+0,0,0,5045,5046,5047,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9331,9370,9332,0,9331,9369,9332,0,0,4468,9319,9320,9321,9322,4473,0,
 0,0,0,4831,0,4831,0,0,0,0,0,0,5955,5956,5955,5956,0,0,5955,5956,5955,5956,5955,5956,5955,5956,5955,5956,4336,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,2181,2182,2183,2184,0,0,0,4497,4498,4499,5445,5446,4497,4498,4499,0,0,0,0,0,0,0,0,0,0,0,0,9337,0,0,0,0,9323,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4559,4560,0,9331,9369,9332,0,9331,9370,9332,0,0,0,9357,9358,9359,9360,0,0,
@@ -372,7 +407,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5381,5382,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8525,8526,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

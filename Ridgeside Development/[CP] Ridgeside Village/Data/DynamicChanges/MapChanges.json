@@ -68,9 +68,9 @@
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/CliffHousePeek.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 2 },
-		"ToArea": { "X": 59, "Y": 53, "Width": 2, "Height": 2 },
+		"ToArea": { "X": 57, "Y": 41, "Width": 2, "Height": 2 },
 		"PatchMode": "ReplaceByLayer",
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday" },
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160182": false },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	{
@@ -78,14 +78,14 @@
         "Target": "Maps/Custom_Ridgeside_RSVTheHike",
         "MapTiles": [
 			{
-				"Position": { "X": 60, "Y": 54 },
+				"Position": { "X": 57, "Y": 42 },
 				"Layer": "Buildings",
 				"SetProperties": {
 				"Action": "MessageOnce 75160181 '???: {{i18n:Find.Undreya}}'"
                }
             }
 		],
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160181": false },
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent |contains=75160181": false },
 		"Update": "OnLocationChange, OnTimeChange"
     },
 	{
@@ -93,14 +93,14 @@
         "Target": "Maps/Custom_Ridgeside_RSVTheHike",
         "MapTiles": [
 			{
-				"Position": { "X": 60, "Y": 54 },
+				"Position": { "X": 57, "Y": 42 },
 				"Layer": "Buildings",
 				"SetProperties": {
 				"Action": "Message rsv.undreyapeek"
                }
             }
 		],
-		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent: |contains=75160181": true },
+		"When": { "Time": "{{Range: 2300, 2330}}", "DayOfWeek": "Thursday", "HasSeenEvent |contains=75160181": true },
 		"Update": "OnLocationChange, OnTimeChange"
     },
     //Undreya's house unlock nextday
@@ -108,8 +108,8 @@
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
-		"ToArea": { "X": 63, "Y": 53, "Width": 1, "Height": 2 },
-		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent: |contains=75160181": true, "HasSeenEvent: |contains=75160182": false, "DayOfWeek: |contains=Thursday": false },
+		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
+		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent |contains=75160181": true, "HasSeenEvent: |contains=75160182": false, "DayOfWeek: |contains=Thursday": false },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	//Undreya house unlock with time change
@@ -117,9 +117,19 @@
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
-		"ToArea": { "X": 63, "Y": 53, "Width": 1, "Height": 2 },
-		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent: |contains=75160182": true },
+		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
+		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent |contains=75160182": true },
 		"Update": "OnLocationChange, OnTimeChange"
+	},
+	//Undreya calendar
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVAbandonedHouse",
+		"FromFile": "Assets/Maps/EventMaps/RSVAbandonedHouse_Sched.tmx",
+		"ToArea": { "X": 2, "Y": 3, "Width": 1, "Height": 2 },
+		"PatchMode": "Replace",
+		"When": { "HasSeenEvent": 75160273 },
+		"Update": "OnLocationChange"
 	},
 	
 //Unlock Minecarts
@@ -167,6 +177,21 @@
 		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
 		"Update": "OnLocationChange"
 	},
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_SummitFarm",
+        "MapTiles": [
+			{
+				"Position": { "X": 77, "Y": 47 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVMinecart5"
+               }
+            }
+		],
+		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"Update": "OnLocationChange"
+	},
 	//Open Entrance
 	{
 		"Action": "EditMap",
@@ -174,7 +199,7 @@
 		"FromFile": "Assets/Maps/EventMaps/RSVOpenPlot.tmx",
 		"ToArea": { "X": 68, "Y": 18, "Width": 3, "Height": 2 },
 		"PatchMode": "Replace",
-		"When": { "HasSeenEvent: hostPlayer": 75160189 },
+		"When": { "HasSeenEvent": 75160189 },
 		"Update": "OnLocationChange"
 	},
 	//Remove minecart donation box when done
@@ -185,7 +210,7 @@
 		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 3 },
 		"ToArea": { "X": 67, "Y": 14, "Width": 2, "Height": 3 },
 		"PatchMode": "ReplaceByLayer",
-		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"When": { "HasFlag": "RSV.FixedMinecart" },
 		"Update": "OnLocationChange"
 	},
 
@@ -198,7 +223,7 @@
          "FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 1 },
          "ToArea": { "X": 64, "Y": 106, "Width": 1, "Height": 1 },
          "PatchMode": "Overlay",
-         "When": { "HasSeenEvent: hostPlayer |contains=75160063": true, },
+         "When": { "HasSeenEvent |contains=75160063": true, },
          "Update": "OnLocationChange, OnTimeChange"         
       	},
      	{
@@ -208,7 +233,7 @@
          "FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
          "ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
          "PatchMode": "Replace",
-         "When": { "HasSeenEvent: hostPlayer |contains=75160064": true,	},
+         "When": { "HasSeenEvent |contains=75160064": true,	},
          "Update": "OnLocationChange, OnTimeChange"
       	},
 
@@ -222,7 +247,7 @@
          "PatchMode": "Replace",
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
-			"HasSeenEvent: hostPlayer |contains=75160105": true,
+			"HasSeenEvent": 75160105,
 		}         
       	},
 
@@ -236,7 +261,57 @@
          "PatchMode": "Replace",
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
-			"HasSeenEvent: hostPlayer |contains=75160187": true,
+			"HasSeenEvent": 75160187,
+		}         
+      	}, 
+      	{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
+         "FromFile": "Assets/Maps/QuestMaps/RSVDaiaBook.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+         "ToArea": { "X": 12, "Y": 3, "Width": 1, "Height": 2 },
+         "PatchMode": "Replace",
+         "Update": "OnLocationChange, OnTimeChange",
+         "When": {
+			"HasSeenEvent": 75160187,
+		}         
+      	},
+      	{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
+         "FromFile": "Assets/Maps/EventMaps/RSVNinjaHouse_SOBoard.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 3, "Height": 2 },
+         "ToArea": { "X": 2, "Y": 3, "Width": 3, "Height": 2 },
+         "PatchMode": "Replace",
+         "Update": "OnLocationChange, OnTimeChange",
+         "When": {
+			"HasSeenEvent": 75160264,
+		}         
+      	},
+      	{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_Ridge",
+         "FromFile": "Assets/Maps/DynamicMaps/LockedNinjaHouse.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+         "ToArea": { "X": 89, "Y": 18, "Width": 1, "Height": 2 },
+         "PatchMode": "Replace",
+         "When": {
+			"HasFlag": "RSV.CompleteDaiaQuest",
+			"HasSeenEvent |contains=75160255": false,
+		}         
+      	},
+
+    //Sewer Open
+    	{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVCableCar",
+         "FromFile": "Assets/Maps/DynamicMaps/RSVCableCar_SewerEntrance.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 5, "Height": 4 },
+         "ToArea": { "X": 1, "Y": 2, "Width": 5, "Height": 4 },
+         "PatchMode": "Replace",
+         "Update": "OnLocationChange, OnTimeChange",
+         "When": {
+			"HasWalletItem": "RustyKey",
 		}         
       	}, 
 
@@ -264,10 +339,25 @@
          "PatchMode": "Overlay",
          "Update": "OnTimeChange, OnLocationChange",
     	 "When": {
-             "Query: {{Year}} >= 2": true,
-             "Time": "{{Range: 2000, 2600}}",
+             "Time": "{{Range: 2400, 2600}}",
+             "HasSeenEvent": 75160266,
+             "HasSeenEvent |contains=75160271": false
       	}
       	},
+      	//Permanent unlock (after finishing quest)
+      	{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVTheHike",
+         "FromFile": "Assets/Maps/EventMaps/UnlockGH2.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 7, "Height": 10 },
+         "ToArea": { "X": 35, "Y": 14, "Width": 7, "Height": 10 },
+         "PatchMode": "Overlay",
+         "Update": "OnLocationChange",
+    	 "When": {
+             "HasSeenEvent": 75160271,
+      	}
+      	},
+
 
 //Hotel Room
 	{
@@ -423,6 +513,192 @@
 		"When": { "HasFlag: hostPlayer |contains=RSV.UnlockOrchardShop": true },
 		"Update": "OnLocationChange"
 	},
+
+//Open bridge to Ridgefalls
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_Ridge",
+		"FromFile": "Assets/Maps/EventMaps/RidgeOpenBridge.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 5 },
+		"ToArea": { "X": 0, "Y": 20, "Width": 2, "Height": 5 },
+		"When": { "HasSeenEvent |contains=75160258": true },
+		"PatchMode": "Replace",
+		"Update": "OnLocationChange"
+	},
+
+//Corrupt Spirit Realm
+	{
+		"Action": "EditImage",
+		"Target": "Maps/zrsvspiritrealm",
+		"FromFile": "Assets/Maps/TileSheets/{{TargetWithoutPath}}_corrupt.png",
+		"When": {
+			"HasSeenEvent |contains=75160263": false,
+			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
+		},
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditImage",
+		"Target": "Maps/spring_zridgeside, Maps/summer_zridgeside, Maps/fall_zridgeside, Maps/winter_zridgeside",
+		"FromFile": "Assets/Maps/TileSheets/zrsvspiritrealm_corruptfalls.png",
+		"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 288,
+				"Height": 144
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 272,
+				"Width": 288,
+				"Height": 144
+			},
+		"When": {
+			"HasSeenEvent |contains=75160263": false,
+			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
+		},
+		"Update": "OnLocationChange"
+	},
+
+//Corrupt Flames
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 5, "Y": 67, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 15, "Y": 23, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 48, "Y": 19, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 96, "Y": 23, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
+		"ToArea": { "X": 94, "Y": 65, "Width": 1, "Height": 2 },
+		"When": { "HasSeenEvent |contains=75160263": false },
+		"PatchMode": "Overlay",
+		"Update": "OnLocationChange"
+	},
+
+//Open summit farm
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgeForest",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVSummitEntrance.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 3 },
+		"ToArea": { "X": 95, "Y": 4, "Width": 6, "Height": 3 },
+		"When": { "HasSeenEvent |contains=75160263": true },
+		"PatchMode": "Replace",
+		"Update": "OnLocationChange"
+	},
+
+//Open crystals at mountain
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+        "MapTiles": [
+			{
+				"Position": { "X": 125, "Y": 12 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 46 72"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+        "MapTiles": [
+			{
+				"Position": { "X": 45, "Y": 72 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 67 123"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+        "MapTiles": [
+			{
+				"Position": { "X": 67, "Y": 124 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RSVTheHike 60 27"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+    {
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RSVTheHike",
+        "MapTiles": [
+			{
+				"Position": { "X": 60, "Y": 26 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 125 13"
+               }
+            }
+		],
+		"When": { "HasSeenEvent": 75160265 },
+		"Update": "OnLocationChange"
+    },
+
+//Greenhouse 2 Corrupted
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVGreenhouse2",
+		"FromFile": "Assets/Maps/EventMaps/RSVGreenhouse2_Corrupt.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 24 },
+		"ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 24 },
+		"PatchMode": "Replace",
+		"When": { "HasSeenEvent |contains=75160270": false },
+		"Update": "OnLocationChange"
+	},
+
+
 
 ]
 }

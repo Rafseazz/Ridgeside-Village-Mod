@@ -1,0 +1,23 @@
+{
+"Changes": [
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Zayne",
+		"Entries": {
+			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+					},
+	},
+
+	//Random Visit 20% chance after 20 days from start of game
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Zayne",
+		"Entries": {
+			"spring": "0 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2/610 Custom_Ridgeside_RidgesideVillage 120 67 3/1000 Custom_Ridgeside_RidgesideVillage 100 42 0/1400 Custom_Ridgeside_PurpleMansion 47 32 0/2000 Custom_Ridgeside_PurpleMansion 55 32 0",
+					},
+		"When": { "Query: {{RandomNumber}} >= 9": true, "DaysPlayed": "20" }
+	},
+
+]
+}

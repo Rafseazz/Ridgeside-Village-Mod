@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="171">
+ <tileset firstgid="1" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <layer id="1" name="Back" width="1" height="2">
+  <data encoding="csv">
+0,
+2080
+</data>
+ </layer>
+ <objectgroup id="6" name="Back"/>
+ <layer id="2" name="Buildings" width="1" height="2">
+  <properties>
+   <property name="AmbientLight" value="255 255 255"/>
+  </properties>
+  <data encoding="csv">
+1472,
+2176
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings">
+  <object id="170" name="TileData" x="0" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="RSVUndreyaSched"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="Paths" width="1" height="2">
+  <data encoding="csv">
+0,
+0
+</data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <layer id="4" name="Front" width="1" height="2">
+  <data encoding="csv">
+2144,
+0
+</data>
+ </layer>
+ <objectgroup id="9" name="Front"/>
+ <layer id="5" name="AlwaysFront" width="1" height="2">
+  <data encoding="csv">
+0,
+0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

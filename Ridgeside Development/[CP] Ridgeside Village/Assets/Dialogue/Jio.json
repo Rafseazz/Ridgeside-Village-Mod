@@ -1,10 +1,31 @@
 {
 "Changes": [
+	//Antisocial
 	{
    
    "Action": "EditData",
    "Target": "Characters/Dialogue/Jio",
    "Entries": {
+   	"Introduction": "{{i18n:{{TargetWithoutPath}}.Dialogue.Introduction}}",
+
+   	"Mon": "{{i18n:Jio.Dialogue.random.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}",
+   	"Tue": "{{i18n:Jio.Dialogue.random.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}",
+   	"Wed": "{{i18n:Jio.Dialogue.random.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}",
+   	"Thu": "{{i18n:Jio.Dialogue.random.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}",
+   	"Fri": "{{i18n:Jio.Dialogue.random.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}",
+   	"Sat": "{{i18n:Jio.Dialogue.random.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}",
+   	"Sun": "{{i18n:Jio.Dialogue.random.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}}}",
+		},
+	},
+
+	//Romanceable
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Jio",
+   "When": { "HasSeenEvent": "75160264" },
+   "Entries": {
+   	"Introduction": "{{i18n:{{TargetWithoutPath}}.Dialogue.Introduction}}",
 
 
 //Spring
@@ -87,6 +108,7 @@
 	"Sat10": "{{i18n:Jio.Dialogue.Sat10}}",
 	"Sun10": "{{i18n:Jio.Dialogue.Sun10}}",
 
+/* Disabled because it doesn't fit well with their character
 //Special Dialogue
 	"MovieInvitation": "{{i18n:Jio.Dialogue.MovieInvitation}}",
 	
@@ -97,6 +119,7 @@
 	"Resort_Chair": "{{i18n:Jio.Dialogue.Resort_Chair}}",
 	"Resort_Bar": "{{i18n:Jio.Dialogue.Resort_Bar}}",
 	"Resort": "{{i18n:Jio.Dialogue.Resort}}",
+*/
 
 		},
 	},

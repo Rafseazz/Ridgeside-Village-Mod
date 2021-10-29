@@ -6,36 +6,43 @@
 	{
 		"LogName": "Load Blank Jsons for Events",
 		"Action": "Load",
-		"Target": "Data/Events/Custom_Ridgeside_RidgesideVillage, Data/Events/Custom_Ridgeside_AguarBasement, Data/Events/Custom_Ridgeside_AguarLab, Data/Events/Custom_Ridgeside_AlissaHouse, Data/Events/Custom_Ridgeside_AlissaShed, Data/Events/Custom_Ridgeside_BertHouse, Data/Events/Custom_Ridgeside_EzekielHouse, Data/Events/Custom_Ridgeside_FreddieHouse, Data/Events/Custom_Ridgeside_JericHouse, Data/Events/Custom_Ridgeside_KennethHouse, Data/Events/Custom_Ridgeside_LennyHouse, Data/Events/Custom_Ridgeside_LogCabinHotelLobby, Data/Events/Custom_Ridgeside_LogCabinHotel2ndFloor, Data/Events/Custom_Ridgeside_LogCabinHotel3rdFloor, Data/Events/Custom_Ridgeside_LolaShed, Data/Events/Custom_Ridgeside_MaddieHouse, Data/Events/Custom_Ridgeside_PikaHouse, Data/Events/Custom_Ridgeside_RSVCableCar, Data/Events/Custom_Ridgeside_RSVCliff, Data/Events/Custom_Ridgeside_RSVNinjaHouse, Data/Events/Custom_Ridgeside_Ridge, Data/Events/Custom_Ridgeside_ShiroHouse, Data/Events/Custom_Ridgeside_MysticFalls1, Data/Events/Custom_Ridgeside_MysticFalls2, Data/Events/Custom_Ridgeside_MysticFalls3, Data/Events/Custom_Ridgeside_RSVAbandonedHouse, Data/Events/Custom_Ridgeside_RidgeForestQ1, Data/Events/Custom_Ridgeside_RidgeForestQ2, Data/Events/Custom_Ridgeside_RidgeForestQ3, Data/Events/Custom_Ridgeside_RidgeForestQ4, Data/Events/Custom_Ridgeside_LogCabinEventHall",
-		"FromFile": "Assets/EventFiles/{{TargetWithoutPath}}.json",
+		"Target": "Data/Events/Custom_Ridgeside_RidgesideVillage, Data/Events/Custom_Ridgeside_AguarBasement, Data/Events/Custom_Ridgeside_AguarLab, Data/Events/Custom_Ridgeside_AlissaHouse, Data/Events/Custom_Ridgeside_AlissaShed, Data/Events/Custom_Ridgeside_BertHouse, Data/Events/Custom_Ridgeside_EzekielHouse, Data/Events/Custom_Ridgeside_FreddieHouse, Data/Events/Custom_Ridgeside_JericHouse, Data/Events/Custom_Ridgeside_KennethHouse, Data/Events/Custom_Ridgeside_LennyHouse, Data/Events/Custom_Ridgeside_LogCabinHotelLobby, Data/Events/Custom_Ridgeside_LogCabinHotel2ndFloor, Data/Events/Custom_Ridgeside_LogCabinHotel3rdFloor, Data/Events/Custom_Ridgeside_LolaShed, Data/Events/Custom_Ridgeside_MaddieHouse, Data/Events/Custom_Ridgeside_PikaHouse, Data/Events/Custom_Ridgeside_RSVCableCar, Data/Events/Custom_Ridgeside_RSVCliff, Data/Events/Custom_Ridgeside_RSVNinjaHouse, Data/Events/Custom_Ridgeside_Ridge, Data/Events/Custom_Ridgeside_ShiroHouse, Data/Events/Custom_Ridgeside_MysticFalls1, Data/Events/Custom_Ridgeside_MysticFalls2, Data/Events/Custom_Ridgeside_MysticFalls3, Data/Events/Custom_Ridgeside_RSVAbandonedHouse, Data/Events/Custom_Ridgeside_RidgeForest, Data/Events/Custom_Ridgeside_LogCabinEventHall, Data/Events/Custom_Ridgeside_BlairHouse, Data/Events/Custom_Ridgeside_FayeHouse, Data/Events/Custom_Ridgeside_PurpleMansion, Data/Events/Custom_Ridgeside_PurpleMansion2ndFloor, Data/Events/Custom_Ridgeside_3Bros, Data/Events/Custom_Ridgeside_3Bros2ndFloor, Data/Events/Custom_Ridgeside_RSVSewers, Data/Events/Custom_Ridgeside_PaulaClinic, Data/Events/Custom_Ridgeside_RidgeFalls, Data/Events/Custom_Ridgeside_RSVTheHike, Data/Events/Custom_Ridgeside_RSVGreenhouse1, Data/Events/Custom_Ridgeside_RSVGreenhouse2, Data/Events/Custom_Ridgeside_RSVSpiritRealm",
+		"FromFile": "Data/LoadData/EmptyJson.json",
 	},
 
 //Load blank AdventureGuild json for events
 	{
-		"Action": "Load blank AdventureGuild.json for events",
+		"LogName": "Load blank AdventureGuild.json for events",
 		"Action": "Load",
 		"Target": "Data/Events/AdventureGuild",
-		"FromFile": "Assets/EventFiles/AdventureGuild.json",
+		"FromFile": "Data/LoadData/EmptyJson.json",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, Wolf.Marlon, Yoshimax.BefriendMarlon": false,
 		}
 	},
-	
+
+//Load Loose sprites
+	{
+		"Action": "Load",
+		"Target": "LooseSprites/RSVWarp, LooseSprites/RSVSmoke",
+		"FromFile": "Assets/{{Target}}.png"
+	},
+
 //Special Characters
-	{	
+	{
 		"LogName": "Special Characters",
 		"Action": "Load",
-		"Target": "Characters/RSVSpirit1, Characters/RSVSpirit2, Characters/RSVSpirit3, Characters/RSVSpirit4, Characters/RSVFirecracker, Characters/RSVLady1, Characters/RSVFlashback1, Characters/RSVFlashback2, Characters/Beast1, Characters/Beast2, Characters/Beast3, Characters/RSVSummoner1, Characters/RSVtent, Characters/RSVcampfire, Characters/RSVbunny1, Characters/RSVCart1, Characters/RSVCart2, Characters/RSVYsaDance, Characters/RSVMach, Characters/RSVDog, Characters/RSVSurprise, Characters/RSVBonfireLeft, Characters/RSVBonfireRight, Characters/RSVCableCar",
+		"Target": "Characters/RSVSpirit1, Characters/RSVSpirit2, Characters/RSVSpirit3, Characters/RSVSpirit4, Characters/RSVFirecracker, Characters/RSVLady1, Characters/RSVFlashback1, Characters/RSVFlashback2, Characters/Beast1, Characters/Beast2, Characters/Beast3, Characters/RSVSummoner1, Characters/RSVtent, Characters/RSVcampfire, Characters/RSVbunny1, Characters/RSVCart1, Characters/RSVCart2, Characters/RSVYsaDance, Characters/RSVMach, Characters/RSVDog, Characters/RSVSurprise, Characters/RSVBonfireLeft, Characters/RSVBonfireRight, Characters/RSVCableCar, Characters/RSVTemp1, Characters/RSVTemp2, Characters/RSVViperial",
 		"FromFile": "Assets/EventFiles/{{TargetWithoutPath}}.png",
 	},
 
   	{    //Summit RSV spouse dialogue additions
 	 	"Action": "EditData",
      	"Target": "Data/ExtraDialogue",
-     	"Entries": { 
+     	"Entries": {
      		//Coded as events
 	    	"SummitEvent_Dialogue3_Alissa": "{{i18n:Alissa.summit.1}}\"/pause 500/faceDirection farmer 1/pause 500/speak Alissa \"{{i18n:Alissa.summit.2}}\"/pause 500/faceDirection Alissa 3/pause 300/speak Alissa \"{{i18n:Alissa.summit.3}}",
-	    	
+
 	    	"SummitEvent_Dialogue3_Corine": "{{i18n:Corine.summit.1}}\"/pause 500/faceDirection farmer 1/emote farmer 28/faceDirection Corine 3/emote Corine 20/speak Corine \"{{i18n:Corine.summit.2}}\"/emote farmer 20/speak Corine \"{{i18n:Corine.summit.3}}\"/faceDirection Corine 0/emote Corine 60/speak Corine \"{{i18n:Corine.summit.4}}\"/faceDirection Corine 3/pause 300/speak Corine \"{{i18n:Corine.summit.5}}",
 
 	    	"SummitEvent_Dialogue3_Flor": "{{i18n:Flor.summit.1}}\"/faceDirection farmer 1/faceDirection Flor 3/pause 300/speak Flor \"{{i18n:Flor.summit.2}}\"/faceDirection Flor 0/faceDirection farmer 0/speak Flor \"{{i18n:Flor.summit.3}}\"/faceDirection Flor 1/emote Flor 60/faceDirection Flor 3/pause 300/speak Flor \"{{i18n:Flor.summit.4}}",
@@ -51,11 +58,11 @@
 	    	"SummitEvent_Dialogue3_Kenneth": "{{i18n:Kenneth.summit.1}}\"/faceDirection farmer 1/emote farmer 12/faceDirection Kenneth 3/speak Kenneth \"{{i18n:Kenneth.summit.2}}\"/emote farmer 8/speak Kenneth \"{{i18n:Kenneth.summit.3}}",
 
 	    	"SummitEvent_Dialogue3_Philip": "{{i18n:Philip.summit.1}}\"/faceDirection farmer 1/pause 500/faceDirection Philip 3/pause 300/speak Philip \"{{i18n:Philip.summit.2}}\"/emote farmer 20/emote Philip 20/speak Philip \"{{i18n:Philip.summit.3}}",
-	    	
+
 	    	"SummitEvent_Dialogue3_Shiro": "{{i18n:Shiro.summit.1}}\"/faceDirection farmer 1/pause 300/faceDirection Shiro 3/pause 400/speak Shiro \"{{i18n:Shiro.summit.2}}",
 			}
 	},
 
-	
+
 ]
 }

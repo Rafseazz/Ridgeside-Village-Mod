@@ -13,199 +13,20 @@
 		"Entries": {
 			"spring": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 80 38 3/1400 Custom_Ridgeside_RidgesideVillage 89 38 1/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
 			"summer": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 84 61 2/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
-			"fall": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 ScienceHouse 2 22 1/1500 Mountain 20 26 2/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
-			"winter": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Mountain 30 21 0/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
+			"fall": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 ScienceHouse 2 22 1/1500 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
+			"winter": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
 			"marriage_Mon": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 80 38 3/1400 Custom_Ridgeside_RidgesideVillage 89 38 1/2200 BusStop -1 23 3",
 		},
 		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
 	},
 
-	//SVE World Map Compatibility.
-	{
-		"LogName": "Map Replaces SVE Map with NPC Map Locations installed",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/SVEcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
-		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": true, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "SVE Map Overlay 2 with NPC Map Locations installed",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/SVEcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": true, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "SVE Map Overlay 3",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/SVEcompat/{{season}}_map.png",
-		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Replaces SVE MAP",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/SVEcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
-		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 2",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/SVEcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=grapeponta.VibrantPastoralSVE": false, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 3",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/SVEcompat/{{season}}_map.png",
-		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-
-	//GPF Compat
-	{
-		"LogName": "Map Replace SVE",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/GPFcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
-		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.GrandpasFarm": true, "HasMod: |contains=Bouhm.NPCMapLocations": true, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 2",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/GPFcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.GrandpasFarm": true, "HasMod: |contains=Bouhm.NPCMapLocations": true, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 3",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/GPFcompat/{{season}}_map.png",
-		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.GrandpasFarm": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Replace SVE",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/GPFcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
-		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.GrandpasFarm": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 2",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/GPFcompat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.GrandpasFarm": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 3",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/GPFcompat/{{season}}_map.png",
-		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.GrandpasFarm": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},	
-	//IFR2 Compat
-	{
-		"LogName": "Map Replace SVE",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/IFR2compat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
-		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.immersivefarm2remastered": true, "HasMod: |contains=Bouhm.NPCMapLocations": true, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 2",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/IFR2compat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.immersivefarm2remastered": true, "HasMod: |contains=Bouhm.NPCMapLocations": true, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 3",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/IFR2compat/{{season}}_map.png",
-		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.immersivefarm2remastered": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Replace SVE",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/IFR2compat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 }, 
-		"ToArea": { "X": 0, "Y": 53, "Width": 58, "Height": 78 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.immersivefarm2remastered": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 2",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/IFR2compat/{{season}}_map.png",
-		"FromArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 0, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.immersivefarm2remastered": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},
-	{
-		"LogName": "Map Overlay 3",
-		"Action": "EditImage",
-		"Target": "LooseSprites/map",
-		"FromFile": "Assets/Maps/WorldMaps/IFR2compat/{{season}}_map.png",
-		"FromArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 }, 
-		"ToArea": { "X": 131, "Y": 180, "Width": 58, "Height": 183 },
-		"PatchMode": "Overlay",
-		"When": { "HasMod: |contains=flashshifter.immersivefarm2remastered": true, "HasMod: |contains=Bouhm.NPCMapLocations": false, "EnableWorldMapEdit": true },
-	},	
-
 	//Custom Wedding Patches (Not sure if this actually works)
+	{
+		"Action": "Load",
+		"Target": "Data/CustomWeddingGuestPositions",
+		"FromFile": "Data/LoadData/EmptyJson.json",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, },
+	},
 	{
 		"Action": "EditData",
 		"Target": "Data/CustomWeddingGuestPositions",
@@ -340,7 +161,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Jio 38 31 down/Keahi 13 8 down/Kenneth 22 6 down/Kiwi 37 31 down/Lenny 34 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Keahi 13 8 down/Kenneth 22 6 down/Lenny 34 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 	
@@ -348,7 +169,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Jio 38 31 down/Keahi 13 8 down/Kenneth 22 6 right/Kiwi 37 31 down/Lenny 32 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Keahi 13 8 down/Kenneth 22 6 right/Lenny 32 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 
@@ -391,7 +212,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 94 37 left/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 53 51 down/Keahi 91 33 up/Kenneth 78 44 left/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 77 24 down/Pika 63 53 up/Richard 61 53 right/Shiro 88 26 left/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 87 30 right",
+         "Value": "Aguar 94 37 left/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 53 51 down/Keahi 91 33 up/Kenneth 78 44 left/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 78 23 down/Pika 63 53 up/Richard 61 53 right/Shiro 88 26 left/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 87 30 right",
          "Delimiter": "/"
 		},
 	
@@ -399,7 +220,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "Main-Event_additionalCharacters"],
-         "Value": "Aguar 94 37 left/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 31 left/Jeric 53 51 down/Keahi 91 33 up/Kenneth 78 44 left/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 77 24 down/Pika 63 53 up/Richard 61 53 right/Shiro 88 26 left/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 87 30 right",
+         "Value": "Aguar 94 37 left/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 31 left/Jeric 53 51 down/Keahi 91 33 up/Kenneth 78 44 left/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 78 23 down/Pika 63 53 up/Richard 61 53 right/Shiro 88 26 left/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 87 30 right",
          "Delimiter": "/"
 		},
 
@@ -492,7 +313,7 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Aguar 38 84 up/Alissa 29 55 left/Bert 27 54 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Jio 94 45 down/Keahi 12 59 left/Kenneth 20 74 right/Kiwi 95 45 down/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 54 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 10 59 right/Ysabelle 32 79 right/Yuuma 20 79 up",
+   	"Value": "Aguar 38 84 up/Alissa 29 55 left/Bert 27 54 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Keahi 12 59 left/Kenneth 20 74 right/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 54 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 10 59 right/Ysabelle 32 79 right/Yuuma 20 78 left",
    	"Delimiter": "/"
    },
 
@@ -500,7 +321,7 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "MainEvent_additionalCharacters"],
-   	"Value": "Aguar 38 84 up/Alissa 29 55 down/Bert 27 54 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Jio 94 45 down/Keahi 12 59 right/Kenneth 20 74 right/Kiwi 95 45 downLenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 54 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 12 60 right/Ysabelle 32 79 down/Yuuma 20 79 up",
+   	"Value": "Aguar 38 84 up/Alissa 29 55 down/Bert 27 54 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Keahi 12 59 right/Kenneth 20 74 right/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 54 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 12 60 right/Ysabelle 32 79 down/Yuuma 20 78 left",
    	"Delimiter": "/"
    },
 
@@ -508,7 +329,7 @@
 },
 
 //Gathering Dialogue
-/*{
+{
 	"LogName": "Ridgeside Gathering Dialogue for SVE",
 	"Action": "EditData",
 	"Target": "Data/Festivals/fall20",
@@ -516,8 +337,15 @@
 		"Sophia": "{{i18n:InterModDialogue.GatheringDialogue.Sophia}}",
 		"Victor": "{{i18n:InterModDialogue.GatheringDialogue.Victor}}",
 		"Olivia": "{{i18n:InterModDialogue.GatheringDialogue.Olivia}}",
+		"Claire": "{{i18n:InterModDialogue.GatheringDialogue.Claire}}",
+		"Sophia_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Sophia_spouse}}",
+		"Victor_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Victor_spouse}}",
+		"Olivia_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Olivia_spouse}}",
+		"Claire_spouse": "{{i18n:InterModDialogue.GatheringDialogue.Claire_spouse}}",
 		"Andy": "{{i18n:InterModDialogue.GatheringDialogue.Andy}}",
+		"Martin": "{{i18n:InterModDialogue.GatheringDialogue.Martin}}",
 		"Susan": "{{i18n:InterModDialogue.GatheringDialogue.Susan}}",
+		"Gunther": "{{i18n:InterModDialogue.GatheringDialogue.Gunther}}",
 	},
 },
 //Gathering Locations
@@ -530,7 +358,7 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Yuuma 115 45 left",
+   	"Value": "Sophia 108 47 up/Victor 122 54 right/Olivia 86 51 left/Claire 74 49 up/Andy 81 46 down/Martin 102 61 up/Susan 99 60 right/Gunther 99 51 right",
    	"Delimiter": "/"
    },
 
@@ -539,15 +367,15 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "MainEvent_additionalCharacters"],
-   	"Value": "Yuuma 96 44 left",
+   	"Value": "Sophia 88 40 right/Victor 88 41 left/Olivia 77 45 up/Claire 62 40 right/Andy 62 43 right/Martin 61 39 right/Susan 85 43 left/Gunther 87 37 left",
    	"Delimiter": "/"
    },
 
 ]	
-},*/
+},
 
 //Ember of Resolutions Dialogue
-/*{
+{
 	"LogName": "EmberOfResolutions",
 	"Action": "EditData",
 	"Target": "Data/Festivals/winter28",
@@ -555,8 +383,15 @@
 		"Sophia": "{{i18n:InterModDialogue.EmberNightDialogue.Sophia}}",
 		"Victor": "{{i18n:InterModDialogue.EmberNightDialogue.Victor}}",
 		"Olivia": "{{i18n:InterModDialogue.EmberNightDialogue.Olivia}}",
+		"Claire": "{{i18n:InterModDialogue.EmberNightDialogue.Claire}}",
+		"Sophia_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Sophia_spouse}}",
+		"Victor_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Victor_spouse}}",
+		"Olivia_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Olivia_spouse}}",
+		"Claire_spouse": "{{i18n:InterModDialogue.EmberNightDialogue.Claire_spouse}}",
 		"Andy": "{{i18n:InterModDialogue.EmberNightDialogue.Andy}}",
+		"Martin": "{{i18n:InterModDialogue.EmberNightDialogue.Martin}}",
 		"Susan": "{{i18n:InterModDialogue.EmberNightDialogue.Susan}}",
+		"Gunther": "{{i18n:InterModDialogue.EmberNightDialogue.Gunther}}",
 	},
 },		
 
@@ -570,7 +405,7 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Sophia 43 34 down",
+   	"Value": "Sophia 37 28 down/Victor 58 45 down/Olivia 35 45 left/Claire 25 44 right/Andy 52 30 left/Martin 25 45 left/Susan 35 35 left/Gunther 29 28 down",
    	"Delimiter": "/"
    },
 
@@ -578,12 +413,12 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "MainEvent_additionalCharacters"],
-   	"Value": "Sophia 43 34 down",
+   	"Value": "Sophia 29 44 right/Victor 35 51 up/Olivia 36 51 up/Claire 25 44 right/Andy 53 48 left/Martin 25 45 left/Susan 29 45 right/Gunther 56 47 left",
    	"Delimiter": "/"
    },
 
 ]	
-},*/
+},
 
 
 

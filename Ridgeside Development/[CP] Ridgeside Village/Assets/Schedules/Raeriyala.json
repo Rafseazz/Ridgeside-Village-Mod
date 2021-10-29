@@ -1,0 +1,28 @@
+{
+"Changes": [
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Raeriyala",
+		"Entries": {
+			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+					},
+	},
+
+	//Antisocial schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Belinda",
+		"Entries": {
+			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+			"Mon": "0 Custom_Ridgeside_RSVSpiritRealm 76 34 2/610 Custom_Ridgeside_RSVSpiritRealm 76 35 2",
+			"Wed": "0 Custom_Ridgeside_RSVSpiritRealm 13 38 2/610 Custom_Ridgeside_RSVSpiritRealm 13 39 3",
+			"Sun": "0 Custom_Ridgeside_RSVSpiritRealm 55 79 2/610 Custom_Ridgeside_RSVSpiritRealm 55 80 3"
+					},
+		"When": {
+			"HasSeenEvent": 75160265,
+		}  
+	},
+
+]
+}

@@ -9,5 +9,20 @@
 					},
 	},
 
+	//Antisocial schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Belinda",
+		"Entries": {
+			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+			"Mon": "0 Custom_Ridgeside_RSVSpiritRealm 75 34 2/610 Custom_Ridgeside_RSVSpiritRealm 75 35 2",
+			"Wed": "0 Custom_Ridgeside_RSVSpiritRealm 12 38 2/610 Custom_Ridgeside_RSVSpiritRealm 12 39 1",
+			"Sun": "0 Custom_Ridgeside_RSVSpiritRealm 54 79 2/610 Custom_Ridgeside_RSVSpiritRealm 54 80 1"
+					},
+		"When": {
+			"HasSeenEvent": 75160265,
+		}  
+	},
+
 ]
 }

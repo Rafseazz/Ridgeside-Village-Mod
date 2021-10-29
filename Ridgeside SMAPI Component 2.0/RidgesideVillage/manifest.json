@@ -1,0 +1,19 @@
+﻿{
+    "Name": "Ridgeside Village SMAPI",
+    "Author": "Rafseazz",
+    "Version": "2.0",
+    "Description": "Ridgeside Village SMAPI and Harmony Component",
+    "UniqueID": "Rafseazz.RidgesideVillage",
+    "EntryDll": "RidgesideVillage.dll",
+    "MinimumApiVersion": "3.0.0",
+    "UpdateKeys": [7286],
+	"Dependencies": [
+		{
+      "UniqueID": "Pathoschild.ContentPatcher",
+		},
+		{
+        "UniqueID": "PurrplingCat.QuestFramework",
+        "IsRequired": false,
+		}
+	]
+}

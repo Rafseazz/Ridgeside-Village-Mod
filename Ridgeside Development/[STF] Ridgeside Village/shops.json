@@ -17,7 +17,7 @@
 	"PriceMultiplierWhen": {
 		"0.6": ["f Jeric 2000"] 
 		},
-	"When": ["NPCAt Jeric 2 13/t 900 2000"],
+	"When": ["NPCAt Jeric 2 13/t 900 1600"],
 	"LocalizedQuote": {
     	//remove the "//" from your language
         //"es": "PLACEHOLDER",
@@ -143,7 +143,7 @@
 			"ItemNames": [
 				"Buckwheat Seeds",
 				"Muskmelon Seeds",
-				"Suager Beet Seeds",
+				"Suger Beet Seeds",
 				"Sweet Canary Melon Seeds",
 				],
 			"Stock": 6,
@@ -749,11 +749,10 @@
 	"StoreCurrency": "Money",
 	"CategoriesToSell": [ -7,-98 ],
 	"PortraitPath": "assets/LolaShop.png",
-	"Quote": "How can I help you, dear?",
-	"ClosedMessage": "Sorry, I'm too tired, dear.",
+	"Quote": "Weapons available today.",
+	"MaxNumItemsSoldInStore": 2,
 	"ShopPrice": -1,
 	"DefaultSellPriceMultiplier": 1.0,
-	"When": ["t 600 2600"],
     "LocalizedQuote": {
     	//remove the "//" from your language
         //"es": "PLACEHOLDER",
@@ -783,20 +782,16 @@
         //"zh": "PLACEHOLDER",
     	},	
 	"ItemStocks": [
-		//Bars
-		{
-			"ItemType": "Object",
-			"ItemNames": [
-				"Copper Bar",
-				"Iron Bar",
-				"Gold Bar",
-				],
-			"Stock": 100,
-		},
 		//Weapons
 		{
 			"ItemType": "Weapon",
 			"ItemNames": [
+				"Blade of Rubies",
+				"Celestine Sword",
+				"Frost Queen's Blade",
+				"Pearlskin Blade",
+				"Reaper Bane",
+				"Runic Greatsword",
 				"Lava Katana",
 				"Steel Falchion",
 				"Bone Sword",
@@ -1441,12 +1436,12 @@
 	"Quote": "Welcome! What would you like, dear?",
 	"ClosedMessage": "Sorry, we're closed!",
 	"ShopPrice": -1,
-	"MaxNumItemsSoldInStore": 5,
+	"MaxNumItemsSoldInStore": 7,
 	"DefaultSellPriceMultiplier": 0.7,
 	"PriceMultiplierWhen": {
 		"0.6": ["f Malaya 2000"] 
 		},
-	"When": ["t 900 2300"],
+	"When": ["t 900 1600"],
     "LocalizedQuote": {
     	//remove the "//" from your language
         //"es": "PLACEHOLDER",
@@ -1498,7 +1493,7 @@
 				"Holiday Ice",
 				"Jumpy Coffee Cake",
 				"Kedi Delight",
-				"Kek Style Shortcake",
+				"Keks Style Shortcake",
 				"Kek's Small Dream",
 				"Pillowsoft Cheezy Sandwich",
 				"Pink Frosted Sprinkled Doughnut",
@@ -1518,6 +1513,23 @@
 				],
 			"Stock": 1,
 		},
+		//Pastry Recipes
+		{
+			"ItemType": "Object",
+			"IsRecipe": true,
+			"ItemNames": [
+				"Kedi Delight",
+				"Keks Style Shortcake",
+				"Kek's Small Dream",
+				"Pillowsoft Cheezy Sandwich",
+				"Pink Frosted Sprinkled Doughnut",
+				"Hundred Flavor Doughnut",
+				"Apricot Juice",
+				"Clementine Juice",
+				"Wild Apple Juice"
+				],
+			"When": [ "y 2" ], 
+		},
 	],
 	},
 
@@ -1535,7 +1547,7 @@
 	"PriceMultiplierWhen": {
 		"0.3": ["f Kimpoi 2000"] 
 		},
-	"When": ["t 900 2000"],
+	"When": ["t 900 1600"],
 	"ClosedMessage": "Sorry, we're closed!",
     "LocalizedQuote": {
     	//remove the "//" from your language
@@ -1586,6 +1598,147 @@
 				"Ember Blood Lime Sapling",
 				],
 			"When": [ "y 2" ] 
+		},
+	],
+	},
+
+	//------------
+	//HeapsShop 
+	//------------
+	{
+	"ShopName": "RSVHeapsStore",
+	"StoreCurrency": "Money",
+	"CategoriesToSell": [ -2,-12,-5,-6,-14,-18,-26,-27,-28,-74,-75,-79,-80,-81 ],
+	"PortraitPath": "assets/HeapsShop.png",
+	"Quote": "Welcome! You can sell almost anything here too!",
+	"DefaultSellPriceMultiplier": 0.8,
+	"PriceMultiplierWhen": {
+		"0.6": ["f Lorenzo 2000"] 
+		},
+	"When": ["t 900 1600/d Sat"],
+	"ClosedMessage": "Sorry, we're closed!",
+    "LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+   "LocalizedClosedMessage": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},	
+	
+	"ItemStocks": [
+		{
+			"ItemType": "Object",
+			"ItemNames":[
+				"Grass Starter",
+				"Sugar",
+				"Wheat Flour",
+				"Rice",
+				"Oil",
+				"Vinegar",
+			],
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames":[
+				"Basic Fertilizer",
+			],
+			"StockPrice": 100,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames":[
+				"Basic Retaining Soil",
+			],
+			"StockPrice": 100,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames":[
+				"Quality Retaining Soil",
+			],
+			"StockPrice": 150,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames":[
+				"Speed-Gro",
+			],
+			"StockPrice": 100,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames":[
+				"Deluxe Speed-Gro",
+			],
+			"StockPrice": 150,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Quality Fertilizer"
+			],
+			"StockPrice": 150,
+			//"Stock": 6,
+			"When": [ "y 2" ] 
+		}
+	],
+	},
+
+	//------------      
+	//Faye Shop   
+	//------------      
+	{
+	"ShopName": "RSVFayeShop",
+	"StoreCurrency": "Money",
+	"CategoriesToSell": [ -98, -95 ],
+	"Quote": "Place your order! Designs change everyday!",
+	"MaxNumItemsSoldInStore": 2,
+    "LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},	
+	"ItemStocks": [
+		{
+			"ItemType": "Clothing",
+			"ItemNames": [ 
+				"Juninja Shirt",
+				"Flora Golda Shirt",
+				"Pika Impersonation Shirt",
+				"Village Color Shirt",
+				 ],
+			"StockPrice": 3000,
+			"Stock": 1,
 		},
 	],
 	},

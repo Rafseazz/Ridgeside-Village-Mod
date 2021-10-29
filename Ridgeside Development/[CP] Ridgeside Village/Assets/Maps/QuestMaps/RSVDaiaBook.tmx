@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="158">
+ <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+  <tile id="0">
+   <properties>
+    <property name="PathType" value="NE"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="PathType" value="SE"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="PathType" value="WS"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="PathType" value="WN"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="PathType" value="Crossroad"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="PathType" value="End"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="37" name="spring_zridgesidebuildings" tilewidth="16" tileheight="16" tilecount="3968" columns="62">
+  <image source="spring_zridgesidebuildings" width="992" height="1024"/>
+ </tileset>
+ <tileset firstgid="4005" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="6181" name="springobjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
+  <image source="springobjects" width="384" height="624"/>
+ </tileset>
+ <tileset firstgid="7117" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="9293" name="FreddieShedItems" tilewidth="16" tileheight="16" tilecount="54" columns="9">
+  <image source="FreddieShedItems" width="144" height="96"/>
+ </tileset>
+ <tileset firstgid="9347" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="589" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="496"/>
+ </tileset>
+ <layer id="1" name="Back" width="1" height="2">
+  <data encoding="csv">
+7285,
+7285
+</data>
+ </layer>
+ <layer id="11" name="Back2" width="1" height="2">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="csv">
+0,
+0
+</data>
+ </layer>
+ <objectgroup id="6" name="Back"/>
+ <layer id="2" name="Buildings" width="1" height="2">
+  <properties>
+   <property name="AmbientLight" value="255 255 255"/>
+  </properties>
+  <data encoding="csv">
+7418,
+9929
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings">
+  <object id="157" name="TileData" x="0" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="RSVOpenDaiaBook"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="3" name="Paths" width="1" height="2">
+  <data encoding="csv">
+0,
+0
+</data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <layer id="4" name="Front" width="1" height="2">
+  <data encoding="csv">
+9910,
+0
+</data>
+ </layer>
+ <objectgroup id="9" name="Front"/>
+ <layer id="5" name="AlwaysFront" width="1" height="2">
+  <data encoding="csv">
+0,
+0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

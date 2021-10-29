@@ -16,6 +16,58 @@
 
 	]	
 	},
+
+    //2.0 Pips spots! THE TRUE RSV EXPERIENCE!
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/summer28",
+        "When": {
+            "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 88 33 right/Malaya 88 35 right/Sonny 40 20 down/Louie 39 21 down/Maive 41 21 down/Ariah 42 21 down/Lorenzo 16 15 down/Shanice 17 15 down/Anton 20 18 down/Kiarra 18 18 down/Paula 21 18 down/Carmen 49 22 down/Blair 50 22 down/Sean 80 22 down/Faye 54 20 down/Irene 43 21 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/summer28",
+        "When": {
+            "HasSeenEvent": 75160249, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 65 20 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/summer28",
+        "When": {
+            "HasSeenEvent": 75160254, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 69 6 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
 	
 ]
 }

@@ -13,7 +13,7 @@
 		"Update": "OnLocationChange",
 		"When": {
 			"HasSeenEvent: hostPlayer": 75160125,
-			"LocationName": "Custom_Ridgeside_RidgesideVillage, Custom_Ridgeside_Ridge, Farm, FarmHouse",
+			"LocationName": "Custom_Ridgeside_RidgesideVillage, Custom_Ridgeside_Ridge, Farm, FarmHouse, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVCorineDate",
 			"DayOfWeek": "Thursday",
 		},
 	},
@@ -27,6 +27,14 @@
 		"When": {
 			"LocationName": "Custom_Ridgeside_AguarLab"
 		},
+	},
+
+	{
+		"LogName": "Jio random take off mask",
+		"Action": "EditImage",
+		"Target": "Portraits/Jio",
+		"FromFile": "Assets/Portraits/Jio_Unmask.png",
+		"When": { "RandomNumber": "{{Range: 4,6}}" }
 	},
 
 ]

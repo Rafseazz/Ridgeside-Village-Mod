@@ -1,0 +1,75 @@
+{
+  "Name": "Spirit4",
+  "Type": "Flying",
+  "FrameSizeWidth": 16,
+  "FrameSizeHeight": 32,
+  "TravelSpeed": 1,
+
+  "IdleBehavior": "Wander",
+  "MaxIdleDistance": 800,
+  "MaxDistanceBeforeTeleport": -1,
+
+  "EnableBreathing": true,
+  "EnableFarmerCollision": false,
+  "EnableShadow": true,
+  "Shadow": {
+    "OffsetX": 0,
+    "OffsetY": 8,
+    "Scale": 1,
+    "Alpha": 255
+  },
+
+  "DirectionChangeChanceWhileMoving": 0.003,
+  "DirectionChangeChanceWhileIdle": 0.05,
+  "ChanceForHalting": 0.1,
+  "MinHaltTime": 10000,
+  "MaxHaltTime": 20000,
+
+  "DownAnimation": {
+    "StartingFrame": 0,
+    "NumberOfFrames": 4,
+    "Duration": 500,
+
+    "IdleAnimation": {
+      "StartingFrame": 0,
+      "NumberOfFrames": 4,
+      "Duration": 800
+    }
+  },
+
+  "RightAnimation": {
+    "StartingFrame": 4,
+    "NumberOfFrames": 4,
+    "Duration": 500,
+
+    "IdleAnimation": {
+      "StartingFrame": 0,
+      "NumberOfFrames": 4,
+      "Duration": 800
+    }
+  },
+
+  "UpAnimation": {
+    "StartingFrame": 8,
+    "NumberOfFrames": 4,
+    "Duration": 500,
+
+    "IdleAnimation": {
+      "StartingFrame": 0,
+      "NumberOfFrames": 4,
+      "Duration": 800
+    }
+  },
+
+  "LeftAnimation": {
+    "StartingFrame": 12,
+    "NumberOfFrames": 4,
+    "Duration": 500,
+
+    "IdleAnimation": {
+      "StartingFrame": 0,
+      "NumberOfFrames": 4,
+      "Duration": 800
+    }
+  },
+}

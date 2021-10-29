@@ -10,7 +10,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 44 41 down/Alissa 27 20 right/Bert 30 22 down/Corine 37 25 right/Ezekiel 31 28 down/Flor 34 30 left/Freddie 36 28 down/Ian 31 33 down/Jeric 38 23 down/Jio 28 32 down/Keahi 31 24 left/Kenneth 41 20 down/Kiwi 27 33 down/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 up/Olga 29 20 left/Philip 42 21 left/Pika 33 28 down/Richard 36 21 down/Shiro 34 26 left/Trinnie 29 24 right/Ysabelle 39 25 left/Yuuma 33 25 down",
+         "Value": "Aguar 44 41 down/Alissa 27 20 right/Bert 30 22 down/Corine 37 25 right/Ezekiel 31 28 down/Flor 34 30 left/Freddie 36 28 down/Ian 31 33 down/Jeric 38 23 down/Jio 49 18 down/Keahi 31 24 left/Kenneth 41 20 down/Kiwi 50 18 down/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 up/Olga 29 20 left/Philip 42 21 left/Pika 33 28 down/Richard 36 21 down/Shiro 34 26 left/Trinnie 29 24 right/Ysabelle 39 25 left/Yuuma 33 25 down",
          "Delimiter": "/"
 		},
 
@@ -18,12 +18,119 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 44 41 left/Alissa 27 20 left/Bert 30 22 left/Corine 37 25 left/Ezekiel 31 28 left/Flor 34 30 left/Freddie 36 28 left/Ian 31 33 left/Jeric 38 23 left/Jio 28 32 left/Keahi 31 24 left/Kenneth 41 20 left/Kiwi 27 33 left/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 left/Olga 29 20 left/Philip 42 21 left/Pika 33 28 left/Richard 36 21 left/Shiro 34 26 left/Trinnie 29 24 left/Ysabelle 39 25 left/Yuuma 33 25 left",
+         "Value": "Aguar 44 41 left/Alissa 27 20 left/Bert 30 22 left/Corine 37 25 left/Ezekiel 31 28 left/Flor 34 30 left/Freddie 36 28 left/Ian 31 33 left/Jeric 38 23 left/Jio 15 11 down/Keahi 31 24 left/Kenneth 41 20 left/Kiwi 16 11 down/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 left/Olga 29 20 left/Philip 42 21 left/Pika 33 28 left/Richard 36 21 left/Shiro 34 26 left/Trinnie 29 24 left/Ysabelle 39 25 left/Yuuma 33 25 left",
          "Delimiter": "/"
 		},
 
 	]	
 	},
+
+    //2.0 Pips spots! THE TRUE RSV EXPERIENCE! (Enabled by default since RSV has own spot)
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Sonny 33 20 left/Louie 32 20 down/Maive 34 22 right/Ariah 31 20 down/Lorenzo 43 27 left/Shanice 42 27 right/Anton 45 27 left/Kiarra 44 26 down/Paula 45 28 left/Carmen 29 32 up/Blair 28 24 left/Sean 27 24 right/Faye 38 30 down/Irene 40 21 right",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Sonny 33 20 left/Louie 32 20 left/Maive 34 22 left/Ariah 31 20 left/Lorenzo 43 27 left/Shanice 42 27 left/Anton 45 27 left/Kiarra 44 26 left/Paula 45 28 left/Carmen 29 32 left/Blair 28 24 left/Sean 27 24 left/Faye 38 30 left/Irene 40 21 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "When": {
+            "HasSeenEvent": 75160249,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 34 23 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Naomi 34 23 left",
+                "Delimiter": "/"
+            }
+        ]
+    },
+
+    {
+        //Malaya and Kimpoi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "When": {
+            "HasSeenEvent": 75160251,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 26 22 right/Malaya 28 20 right",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Kimpoi 26 22 left/Malaya 28 20 left",
+                "Delimiter": "/"
+            }
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "When": {
+            "HasSeenEvent": 75160254,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 48 19 right",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Daia 48 19 right",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //RSV Animations
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "TextOperations": [
+          {
+             "Operation": "Append",
+             "Target": ["Fields", "set-up", 5],
+             "Value": "/animate Shanice false true 500 16 17/animate Lorenzo false true 500 16 17/animate Keahi false true 236 16 17 18 17/animate Ariah false true 200 17 17 17 17 17 17 17 17 17 17 17 18/advancedMove Kiarra true 0 3 -10 0 3 8000 10 0 0 -3 2 6000/advancedMove Ezekiel true -2 0 2 6000 1 0 2 3000 1 0 2 5000/advancedMove Carmen true 4 0 4 5000 -4 0 4 6000",
+          },
+        ]
+    }
 	
 ]
 }

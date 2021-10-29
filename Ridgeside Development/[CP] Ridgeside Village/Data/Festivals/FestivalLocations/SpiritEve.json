@@ -12,12 +12,64 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 22 100 down/Alissa 15 25 left/Bert 23 64 down/Corine 38 69 left/Ezekiel 38 70 left/Flor 34 38 up/Freddie 16 64 down/Ian 32 56 down/Jeric 31 64 right/Jio 34 4 down/Keahi 24 73 up/Kenneth 36 74 right/Kiwi 33 4 down/Lenny 27 69 down/Lola 17 64 down/Maddie 20 47 up/Olga 22 64 right/Philip 27 50 left/Pika 31 72 right/Richard 28 72 left/Shiro 23 50 down/Trinnie 23 72 right/Ysabelle 28 64 left/Yuuma 23 74 left",
+         "Value": "Aguar 22 100 down/Alissa 15 25 left/Bert 23 64 down/Corine 37 69 left/Ezekiel 37 70 left/Flor 34 36 up/Freddie 25 58 right/Ian 27 53 down/Jeric 31 64 right/Jio 34 4 down/Keahi 24 73 up/Kenneth 36 74 right/Kiwi 33 4 down/Lenny 27 69 down/Lola 25 57 right/Maddie 20 47 up/Olga 22 64 right/Philip 27 50 left/Pika 31 72 right/Richard 28 72 left/Shiro 23 50 down/Trinnie 23 72 right/Ysabelle 28 64 left/Yuuma 23 74 left",
          "Delimiter": "/"
 		},
 
 	]	
 	},
+
+	//2.0 Pips spots! THE TRUE RSV EXPERIENCE!
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 33 69 down/Malaya 32 69 down/Sonny 23 62 down/Louie 27 73 up/Maive 25 63 down/Ariah 27 63 down/Lorenzo 14 51 down/Shanice 15 51 down/Anton 13 52 right/Kiarra 10 23 left/Paula 25 69 down/Carmen 36 72 left/Blair 31 33 up/Sean 17 17 right/Faye 20 45 down/Irene 33 73 up",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160249, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 22 51 right",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160254, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 31 22 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
 
 	
 ]

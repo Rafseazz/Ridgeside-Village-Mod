@@ -1,0 +1,24 @@
+{
+"Changes": [
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Bryle",
+		"Entries": {
+			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+					},
+	},
+
+	//Random Visit 20% chance after 20 days from start of game
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Bryle",
+		"Entries": {
+			"spring": "0 BusStop 11 10 2/610 Custom_Ridgeside_JericHouse 8 5 1/1400 Custom_Ridgeside_RidgesideVillage 71 50 3/1800 Custom_Ridgeside_RidgesideVillage 29 9 0/2200 Custom_Ridgeside_JericHouse 8 5 1",
+					},
+		"When": { "Query: {{RandomNumber}} <= 2": true, "DaysPlayed": "20" }
+	},
+
+
+]
+}

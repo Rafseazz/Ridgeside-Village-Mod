@@ -10,11 +10,50 @@
 			"Action": "EditData",
 			"Target": "Data/AntiSocialNPCs",
 			"When": {
-				"HasSeenEvent": "75160188"
+				"HasSeenEvent": 75160188
 			},
 			"Entries": {
 				"Kiwi": false
-			}
+			},
+			"Update": "OnLocationChange"
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": 75160264
+			},
+			"Entries": {
+				"Jio": false,
+				"Daia": false,
+			},
+			"Update": "OnLocationChange"
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": 75160251
+			},
+			"Entries": {
+				"Malaya": false,
+				"Kimpoi": false,
+			},
+			"Update": "OnLocationChange"
+		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": 75160249
+			},
+			"Entries": {
+				"Naomi": false
+			},
+			"Update": "OnLocationChange"
 		},
 			
 
