@@ -75,6 +75,7 @@ namespace RidgesideVillage
                         var npc = Game1.getCharacterFromName(inhabitant);
                         if(npc == null || (npc.isMarried() || !npc.CanSocialize))
                         {
+                            Log.Trace($"excluded {inhabitant} married: {npc.isMarried()}, canSocialize: {npc.CanSocialize}");
                             continue;
                         }
                         this.NameTexturePairs[inhabitant] = Game1.content.Load<Texture2D>("Characters\\" + inhabitant);
