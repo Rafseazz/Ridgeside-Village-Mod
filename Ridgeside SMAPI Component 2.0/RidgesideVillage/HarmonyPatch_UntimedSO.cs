@@ -32,7 +32,6 @@ namespace RidgesideVillage
             Helper = helper;
 
             Helper.Events.GameLoop.DayEnding += OnDayEnd;
-            Helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_UntimedSO)}\" prefixing SDV method.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
@@ -51,12 +50,6 @@ namespace RidgesideVillage
                 Log.Warn("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
             }
            
-        }
-
-        
-        private static void OnGameLaunched(object sender, GameLaunchedEventArgs e)
-        {
-            HarmonyPatch_UntimedSO.RSVemojis = Helper.Content.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis"), ContentSource.GameContent);
         }
         
         private static void SpecialOrdersBoard_GetPortrait_postifx(SpecialOrdersBoard __instance, string requester_name, ref KeyValuePair<Texture2D, Rectangle>?  __result)
