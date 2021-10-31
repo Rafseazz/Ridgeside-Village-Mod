@@ -51,7 +51,16 @@ namespace RidgesideVillage
 
             if (!e.Button.IsActionButton())
                 return;
-            Vector2 clickedTile = Helper.Input.GetCursorPosition().GrabTile;
+            Vector2 clickedTile;
+            if (Game1.options.gamepadControls)
+            {
+                clickedTile = Game1.player.GetGrabTile();
+            }
+            else
+            {
+                clickedTile = Helper.Input.GetCursorPosition().GrabTile;
+            }
+
             string actionString = Game1.currentLocation.doesTileHaveProperty(((int)clickedTile.X), ((int)clickedTile.Y), "Action", "Buildings");
 
             if (actionString != null && actionString != "")

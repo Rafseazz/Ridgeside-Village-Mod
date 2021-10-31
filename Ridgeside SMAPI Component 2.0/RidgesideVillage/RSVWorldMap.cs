@@ -245,6 +245,7 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu.exitThisMenu();
                     break;
             }
+            base.receiveKeyPress(key);
         }
 
     }
