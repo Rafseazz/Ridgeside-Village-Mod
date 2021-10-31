@@ -49,6 +49,7 @@
 		"Entries": {
 			
 			"Custom_Ridgeside_RidgesideVillage": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+			"Custom_Ridgeside_RidgesideVillage": "-1/-1/-1/-1/-1 3042 -1 3069 -1 3098 -1 3019 -1/-1 3029 -1 3069 -1 3106 -1 3098 -1 3019 -1/-1 3029 -1 3042 -1 3069 -1 3106 -1 3098 -1 3019 -1/-1 3029 -1 3042 -1 3069 -1 3106 -1 3098 -1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
 			"Custom_Ridgeside_SummitFarm": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
 			"Custom_Ridgeside_RidgeForest": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
 			"Custom_Ridgeside_Ridge": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
@@ -65,6 +66,7 @@
 	},
 
 	//Set Spawn
+	//Note: Prepend is used so the existing "-1" is the -1 for the last fish
 	{
 		"Action": "EditData",
 		"Target": "Data/Locations",
@@ -74,41 +76,41 @@
 		//-----------------
 			//Ridgeside Village
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgesideVillage", 4],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//Summit Farm
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_SummitFarm", 4],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//RidgeForest
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeForest", 4],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}}",
 				"Delimiter": " "
 			},
 
 			//Ridge
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_Ridge", 4],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//RidgeFalls
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeFalls", 4],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}}",
 				"Delimiter": " "
 			},
 
@@ -117,41 +119,41 @@
 		//-----------------
 			//Ridgeside Village
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgesideVillage", 5],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//Summit Farm
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_SummitFarm", 5],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//RidgeForest
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeForest", 5],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//Ridge
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_Ridge", 5],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//RidgeFalls
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeFalls", 5],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
@@ -160,41 +162,41 @@
 		//-----------------
 			//Ridgeside Village
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgesideVillage", 6],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//Summit Farm
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_SummitFarm", 6],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//RidgeForest
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeForest", 6],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}}",
 				"Delimiter": " "
 			},
 
 			//Ridge
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_Ridge", 6],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}}",
 				"Delimiter": " "
 			},
 
 			//RidgeFalls
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeFalls", 6],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}}",
 				"Delimiter": " "
 			},
 
@@ -203,41 +205,41 @@
 		//-----------------
 			//Ridgeside Village
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgesideVillage", 7],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}}",
 				"Delimiter": " "
 			},
 
 			//Summit Farm
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_SummitFarm", 7],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}}",
 				"Delimiter": " "
 			},
 
 			//RidgeForest
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeForest", 7],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}}",
 				"Delimiter": " "
 			},
 
 			//Ridge
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_Ridge", 7],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}}",
 				"Delimiter": " "
 			},
 
 			//RidgeFalls
 			{
-				"Operation": "Append",
+				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeFalls", 7],
-				"Value": "{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1",
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}}",
 				"Delimiter": " "
 			},
 		]
