@@ -227,7 +227,7 @@ namespace RidgesideVillage
 
         private static void WaterPlantsMenu()
         {
-            if (!Game1.player.mailReceived.Contains(willWaterPlants))
+            if (!Game1.getFarm().modData.ContainsKey(willWaterPlants))
             {
                 var responses = new List<Response>
                 {
