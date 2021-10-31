@@ -23,13 +23,6 @@
 			"Description": "Enables music for Ridgeside Village"
 		},		
 
-		//Map Style		
-		"PastoralMapStyle": {
-			"AllowValues": "PastoralBase, PastoralGreen",
-			"Default": "PastoralBase",
-			"Description": "Pick your preferred Pastoral fall season map-style"
-		},
-
 		"RSVNPCSAttendFestivals": {
 			"AllowValues": "true, false",
 			"Default": "true",
@@ -44,13 +37,13 @@
 
 		"FullFestivals": {
 			"AllowValues": "true, false",
-			"Default": "true",
+			"Default": "false",
 			"Description": "The true RSV experience. Almost all of RSV NPCs attend the vanilla festivals. Might be incompatible with some mods."
 		},
 
 		"EnableBetterBusStop": {
 			"AllowValues": "true, false",
-			"Default": "true",
+			"Default": "false",
 			"Description": "Uses Ridgeside Village's official patch for the Bus Stop. Might be incompatible with some mods."
 		}			
 },
