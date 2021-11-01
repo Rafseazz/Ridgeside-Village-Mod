@@ -224,6 +224,10 @@ namespace RidgesideVillage
         {
             try
             {
+                if(who.UniqueMultiplayerID != Game1.player.UniqueMultiplayerID)
+                {
+                    return;
+                }
                 int tileX = x / 64;
                 int tileY = y / 64;
 
