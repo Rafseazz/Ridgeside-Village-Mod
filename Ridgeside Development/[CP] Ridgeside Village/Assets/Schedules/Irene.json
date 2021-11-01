@@ -13,5 +13,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Irene",
+		"Entries": {
+			"Wed": "730 Custom_Ridgeside_PurpleMansion 31 6 square_3_1_0/900 Custom_Ridgeside_RSVGreenhouse1 23 11 0/1500 Custom_Ridgeside_RidgesideVillage 69 52 0/1900 Custom_Ridgeside_PurpleMansion 31 6 square_3_1_0/2100 Custom_Ridgeside_PurpleMansion 2 44 2 irene_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

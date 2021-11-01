@@ -22,5 +22,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Trinnie",
+		"Entries": {
+			"Sat": "900 Custom_Ridgeside_RidgesideVillage 12 96 1 square_1_5_1/1200 Custom_Ridgeside_RSVGreenhouse1 27 11 square_1_3_1/1600 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

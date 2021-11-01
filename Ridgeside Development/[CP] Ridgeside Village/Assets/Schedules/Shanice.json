@@ -13,5 +13,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Shanice",
+		"Entries": {
+			"Wed": "610 Custom_Ridgeside_3Bros2ndFloor 6 12 0/900 Custom_Ridgeside_RSVGreenhouse1 24 9 2 shanice_list/1400 Custom_Ridgeside_3Bros 15 16 2 shanice_list/2200 Custom_Ridgeside_3Bros2ndFloor 6 5 2 shanice_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

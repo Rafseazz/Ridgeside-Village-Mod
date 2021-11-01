@@ -24,5 +24,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Ysabelle",
+		"Entries": {
+			"Tue": "700 Custom_Ridgeside_LogCabinHotelLobby 11 6 2/1400 Custom_Ridgeside_RSVGreenhouse1 20 21 2/1800 Custom_Ridgeside_LogCabinHotel3rdFloor 21 11 1 ysabelle_ballet/2100 Custom_Ridgeside_LogCabinHotel2ndFloor 14 5 0 ysabelle_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }
