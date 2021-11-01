@@ -26,5 +26,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Corine",
+		"Entries": {
+			"Tue": "610 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/1400 Custom_Ridgeside_RSVGreenhouse1 19 22 1/1800 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/2200 Custom_Ridgeside_EzekielHouse 31 5 0 corine_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

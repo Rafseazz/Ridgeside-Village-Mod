@@ -22,5 +22,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Keahi",
+		"Entries": {
+			"Sat": "610 Custom_Ridgeside_PikaHouse 7 10 3/900 Custom_Ridgeside_RidgesideVillage 98 38 2/1200 Custom_Ridgeside_RSVGreenhouse1 24 9 1 keahi_jump/1600 Custom_Ridgeside_PikaHouse 7 10 3/2200 Custom_Ridgeside_PikaHouse 26 5 0 keahi_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

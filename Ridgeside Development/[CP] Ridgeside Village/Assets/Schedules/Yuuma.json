@@ -19,5 +19,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Yuuma",
+		"Entries": {
+			"Wed": "900 Custom_Ridgeside_RSVGreenhouse1 23 19 2 yuuma_read/1400 Custom_Ridgeside_LennyHouse 7 9 1/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

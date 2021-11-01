@@ -19,5 +19,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Olga",
+		"Entries": {
+			"Sun": "700 Custom_Ridgeside_RidgesideVillage 18 110 3 square_1_6_3/1200 Custom_Ridgeside_RSVGreenhouse1 37 9 2 square_5_1_2/1800 Custom_Ridgeside_BertHouse 4 5 0/2200 Custom_Ridgeside_BertHouse2ndFloor 3 5 0 olga_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

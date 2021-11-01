@@ -15,5 +15,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Sonny",
+		"Entries": {
+			"Thu": "610 Custom_Ridgeside_PurpleMansion 53 5 2/800 Custom_Ridgeside_RSVGreenhouse1 22 21 3/1400 Custom_Ridgeside_PurpleMansion 31 10 0/1700 Custom_Ridgeside_PurpleMansion 53 5 2/2000 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

@@ -27,5 +27,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Jeric",
+		"Entries": {
+			"Mon": "610 Custom_Ridgeside_RSVGreenhouse1 39 22 0 square_5_1_0/1000 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

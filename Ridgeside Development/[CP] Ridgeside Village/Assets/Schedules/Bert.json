@@ -20,5 +20,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Bert",
+		"Entries": {
+			"Sat": "610 Custom_Ridgeside_BertHouse 6 8 3/1000 Custom_Ridgeside_RSVGreenhouse1 37 9 2 square_5_1_2/1500 Custom_Ridgeside_RidgesideVillage 88 40 3/2200 Custom_Ridgeside_BertHouse2ndFloor 1 5 0 bert_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

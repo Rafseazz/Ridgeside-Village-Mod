@@ -27,5 +27,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Maddie",
+		"Entries": {
+			"Mon": "610 Custom_Ridgeside_RSVGreenhouse1 39 25 2 square_6_1_2/1100 Custom_Ridgeside_AguarLab 23 6 0 square_3_1_0/1400 Custom_Ridgeside_RidgesideVillage 107 123 1/1700 Custom_Ridgeside_AguarLab 22 9 0/1900 Custom_Ridgeside_MaddieHouse 6 11 1/2200 Custom_Ridgeside_MaddieHouse 20 5 0 maddie_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }
