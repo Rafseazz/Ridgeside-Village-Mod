@@ -13,5 +13,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Paula",
+		"Entries": {
+			"Fri": "800 Custom_Ridgeside_PaulaClinic 16 13 2/1400 Custom_Ridgeside_RSVGreenhouse1 35 25 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

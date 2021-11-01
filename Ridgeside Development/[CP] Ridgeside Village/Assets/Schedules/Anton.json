@@ -13,5 +13,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Anton",
+		"Entries": {
+			"Fri": "900 Custom_Ridgeside_3Bros2ndFloor 6 14 1/1400 Custom_Ridgeside_RSVGreenhouse1 36 25 2/1700 Custom_Ridgeside_RidgesideVillage 89 48 2/2200 Custom_Ridgeside_3Bros2ndFloor 18 12 0 anton_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

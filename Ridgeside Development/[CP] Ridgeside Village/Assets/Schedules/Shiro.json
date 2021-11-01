@@ -25,5 +25,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Shiro",
+		"Entries": {
+			"Wed": "900 Custom_Ridgeside_RSVGreenhouse1 27 23 3/1530 Custom_Ridgeside_RidgesideVillage 127 35 3/1800 Custom_Ridgeside_ShiroHouse 3 6 2/2200 Custom_Ridgeside_ShiroHouse 10 5 0 shiro_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

@@ -13,5 +13,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Faye",
+		"Entries": {
+			"Tue": "700 Custom_Ridgeside_FayeHouse 4 15 square_2_1_0/900 Custom_Ridgeside_RidgesideVillage 90 38 2 faye_fan/1400 Custom_Ridgeside_RSVGreenhouse1 21 22 3/1800 Custom_Ridgeside_RidgesideVillage 90 38 2 faye_fan/2300 Custom_Ridgeside_FayeHouse 3 5 2 faye_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }
