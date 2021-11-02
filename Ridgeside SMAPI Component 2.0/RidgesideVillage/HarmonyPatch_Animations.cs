@@ -44,6 +44,10 @@ namespace RidgesideVillage
                 {
                     case "carmen_fish":
                     case "blair_fish":
+                    case "kenneth_fixfront":
+                    case "kenneth_fixright":
+                    case "kenneth_fixback":
+                    case "kenneth_fixleft":
                         __instance.reloadSprite();
                         __instance.Sprite.SpriteWidth = 16;
                         __instance.Sprite.SpriteHeight = 32;
@@ -75,6 +79,10 @@ namespace RidgesideVillage
                 {
                     case "carmen_fish":
                     case "blair_fish":
+                    case "kenneth_fixfront":
+                    case "kenneth_fixright":
+                    case "kenneth_fixback":
+                    case "kenneth_fixleft":
                         __instance.extendSourceRect(0, 32);
                         __instance.Sprite.tempSpriteHeight = 64;
                         __instance.drawOffset.Value = new Vector2(0f, 96f);
