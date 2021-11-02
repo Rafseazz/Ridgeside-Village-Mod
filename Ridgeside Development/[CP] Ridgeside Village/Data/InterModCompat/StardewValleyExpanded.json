@@ -20,6 +20,18 @@
 		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
 	},
 
+	//Flor SVE schedule
+	{
+		"LogName": "Flor SVE sched",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Flor",
+		"Entries": { 
+			"Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 90 100 1 flor_read2/1600 Custom_Ridgeside_LogCabinHotel2ndFloor 2 9 1/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 3 5 0 flor_sleep", 
+			"marriage_Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 90 100 1 flor_read2/1800 BusStop -1 23 3",
+			},
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
+	},
+
 	//Custom Wedding Patches (Not sure if this actually works)
 	{
 		"Action": "Load",
