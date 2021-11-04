@@ -19,5 +19,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Aguar",
+		"Entries": {
+			"Fri": "610 Custom_Ridgeside_RidgesideVillage 122 105 2 aguar_drink/1200 Custom_Ridgeside_RSVGreenhouse1 20 15 2 aguar_drink/1600 Custom_Ridgeside_AguarLab 12 8 0 square_2_1_0/2300 Custom_Ridgeside_AguarBasement 1 8 2 aguar_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

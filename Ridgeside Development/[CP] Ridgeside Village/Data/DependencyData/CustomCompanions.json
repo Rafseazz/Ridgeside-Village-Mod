@@ -514,6 +514,18 @@
       }
    },
 
+   //Howdy follow Kenneth
+   {
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Howdy}}",
+      "When": { "RandomNumber": "{{Range: 7,8}}" },
+      "Entries": {
+         "Companion": {
+            "TargetNpcName": "Kenneth"
+         }
+      }
+   },
+
    //Howdy spawn
    {
       "Action": "EditMap",
@@ -559,10 +571,10 @@
    },
    {
       "Action": "EditMap",
-      "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+      "Target": "Maps/Custom_Ridgeside_RSVCliff",
       "MapTiles": [
          {
-            "Position": { "X": 114, "Y": 47 },
+            "Position": { "X": 43, "Y": 30 },
             "Layer": "Back",
             "SetProperties": {
                "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Howdy"

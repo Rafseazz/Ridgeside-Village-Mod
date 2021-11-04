@@ -27,5 +27,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Philip",
+		"Entries": {
+			"Wed": "610 Custom_Ridgeside_LogCabinHotel2ndFloor 12 22 0/900 Custom_Ridgeside_RSVGreenhouse1 25 23 1/1540 Custom_Ridgeside_LogCabinHotel3rdFloor 21 6 2 philip_gym/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 14 22 0 philip_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

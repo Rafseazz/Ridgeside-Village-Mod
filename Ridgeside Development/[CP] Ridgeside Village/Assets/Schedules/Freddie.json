@@ -19,5 +19,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Freddie",
+		"Entries": {
+			"Thu": "800 Custom_Ridgeside_RSVGreenhouse1 20 21 1/1400 Custom_Ridgeside_RidgesideVillage 27 74 3/1900 Custom_Ridgeside_FreddieHouse 5 15 0/2200 Custom_Ridgeside_FreddieHouse 3 5 0 freddie_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }

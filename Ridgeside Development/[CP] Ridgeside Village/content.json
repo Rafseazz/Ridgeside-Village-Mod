@@ -38,13 +38,13 @@
 		"FullFestivals": {
 			"AllowValues": "true, false",
 			"Default": "false",
-			"Description": "The true RSV experience. Almost all of RSV NPCs attend the vanilla festivals. Might be incompatible with some mods."
+			"Description": "The true RSV experience. Almost all of RSV NPCs attend the vanilla festivals. Might be incompatible with most mods, especially SVE."
 		},
 
 		"EnableBetterBusStop": {
 			"AllowValues": "true, false",
 			"Default": "false",
-			"Description": "Uses Ridgeside Village's official patch for the Bus Stop. Might be incompatible with some mods."
+			"Description": "Uses Ridgeside Village's official patch for the Bus Stop. Might be incompatible with most mods."
 		}			
 },
 
@@ -98,6 +98,20 @@
 			"When": {
 				"EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+
+		//World State
+		{
+			"Name": "RSVWorldState",
+			"Value": "firstYear",
+		},
+
+		{
+			"Name": "RSVWorldState",
+			"Value": "naomiArrived",
+			"When": {
+				"HasSeenEvent": "75160249"
 			}
 		},
 

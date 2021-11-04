@@ -29,5 +29,17 @@
 					},
 	},
 
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Lenny",
+		"Entries": {
+			"Thu": "610 Custom_Ridgeside_RidgesideVillage 113 42 3 square_1_2_3/800 Custom_Ridgeside_RSVGreenhouse1 20 15 1/1200 ManorHouse 5 5 0/1600 Saloon 8 20 0/2200 Custom_Ridgeside_LennyHouse 22 5 0 lenny_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}  
+	},
+
 ]
 }
