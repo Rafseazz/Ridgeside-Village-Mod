@@ -47,8 +47,8 @@ namespace RidgesideVillage
             int Ycoord = (int)arg2.Y;
 
             string key = $"cleansed {Xcoord} {Ycoord}";
-            if (location.modData.ContainsKey($"cleansed {Xcoord} {Ycoord}")){
-                //return;
+            if (location.modData.ContainsKey(key)){
+                return;
             }
             location.modData[key] = "t";
             Game1.playSound("shadowpeep");
@@ -102,7 +102,7 @@ namespace RidgesideVillage
             {
                 if (key.StartsWith("cleansed"))
                 {
-                    var split = key.Split('/');
+                    var split = key.Split(' ');
                     int xCoord = int.Parse(split[1]);
                     int yCoord = int.Parse(split[2]);
                     location.removeTile(xCoord, yCoord - 1, "Front");
@@ -137,7 +137,6 @@ namespace RidgesideVillage
                 }
                 if (!String.IsNullOrEmpty(eventScript))
                 {
-                    Log.Error($"{eventScript}");
                     UtilFunctions.StartEvent(new Event(eventScript, 75160263), "Custom_Ridgeside_RSVSpiritRealm", 10, 10);
                 }
                 else
