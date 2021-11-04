@@ -137,6 +137,10 @@ namespace RidgesideVillage
                 }
                 if (!String.IsNullOrEmpty(eventScript))
                 {
+                    if (Game1.player.eventsSeen.Contains(75160263))
+                    {
+                        return;
+                    }
                     UtilFunctions.StartEvent(new Event(eventScript, 75160263), "Custom_Ridgeside_RSVSpiritRealm", 10, 10);
                 }
                 else
@@ -156,7 +160,7 @@ namespace RidgesideVillage
         private static void OpenBook()
         {
             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
-            if (Game1.player.eventsSeen.Contains(HasUnsealedRae) == false)
+            if (!Game1.player.eventsSeen.Contains(HasUnsealedRae))
             {
                 var responses = new List<Response>
                 {
