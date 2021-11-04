@@ -101,6 +101,20 @@
 			}
 		},
 
+		//World State
+		{
+			"Name": "RSVWorldState",
+			"Value": "firstYear",
+		},
+
+		{
+			"Name": "RSVWorldState",
+			"Value": "naomiArrived",
+			"When": {
+				"HasSeenEvent": "75160249"
+			}
+		},
+
 		/*********
 		** Choose random cable car NPC
 		*********/

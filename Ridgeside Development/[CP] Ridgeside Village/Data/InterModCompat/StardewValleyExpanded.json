@@ -11,12 +11,24 @@
 		"Action": "EditData",
 		"Target": "Characters/schedules/Kenneth",
 		"Entries": {
-			"spring": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 80 38 3/1400 Custom_Ridgeside_RidgesideVillage 89 38 1/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
-			"summer": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 84 61 2/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
-			"fall": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 ScienceHouse 2 22 1/1500 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
-			"winter": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
-			"marriage_Mon": "700 Town 24 54 0 kenneth_fixback/900 Town 25 61 3 kenneth_fixleft/930 Town 33 57 0 kenneth_fixback/1000 Town 37 67 1 kenneth_fixright/1030 Town 30 74 2 kenneth_fixfront/1100 Town 27 74 2 kenneth_fixfront/1130 Town 21 67 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 80 38 3/1400 Custom_Ridgeside_RidgesideVillage 89 38 1/2200 BusStop -1 23 3",
+			"spring": "700 Town 24 51 0 kenneth_fixright/900 Town 25 59 3 kenneth_fixleft/930 Town 33 54 0 kenneth_fixright/1000 Town 37 66 1 kenneth_fixright/1030 Town 30 73 2 kenneth_fixleft/1100 Town 27 73 2 kenneth_fixright/1130 Town 21 65 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 80 38 3/1400 Custom_Ridgeside_RidgesideVillage 89 38 1/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
+			"summer": "700 Town 24 51 0 kenneth_fixright/900 Town 25 59 3 kenneth_fixleft/930 Town 33 54 0 kenneth_fixright/1000 Town 37 66 1 kenneth_fixright/1030 Town 30 73 2 kenneth_fixleft/1100 Town 27 73 2 kenneth_fixright/1130 Town 21 65 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 84 61 2/1800 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
+			"fall": "700 Town 24 51 0 kenneth_fixright/900 Town 25 59 3 kenneth_fixleft/930 Town 33 54 0 kenneth_fixright/1000 Town 37 66 1 kenneth_fixright/1030 Town 30 73 2 kenneth_fixleft/1100 Town 27 73 2 kenneth_fixright/1130 Town 21 65 3 kenneth_fixleft/1200 ScienceHouse 2 22 1/1500 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
+			"winter": "700 Town 24 51 0 kenneth_fixright/900 Town 25 59 3 kenneth_fixleft/930 Town 33 54 0 kenneth_fixright/1000 Town 37 66 1 kenneth_fixright/1030 Town 30 73 2 kenneth_fixleft/1100 Town 27 73 2 kenneth_fixright/1130 Town 21 65 3 kenneth_fixleft/1200 Custom_Ridgeside_KennethHouse 5 8 3/2200 Custom_Ridgeside_KennethHouse 16 5 1 kenneth_sleep",
+			"marriage_Mon": "700 Town 24 51 0 kenneth_fixright/900 Town 25 59 3 kenneth_fixleft/930 Town 33 54 0 kenneth_fixright/1000 Town 37 66 1 kenneth_fixright/1030 Town 30 73 2 kenneth_fixleft/1100 Town 27 73 2 kenneth_fixright/1130 Town 21 65 3 kenneth_fixleft/1200 Custom_Ridgeside_RidgesideVillage 80 38 3/1400 Custom_Ridgeside_RidgesideVillage 89 38 1/2200 BusStop -1 23 3",
 		},
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
+	},
+
+	//Flor SVE schedule
+	{
+		"LogName": "Flor SVE sched",
+		"Action": "EditData",
+		"Target": "Characters/schedules/Flor",
+		"Entries": { 
+			"Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 90 100 1 flor_read2/1600 Custom_Ridgeside_LogCabinHotel2ndFloor 2 9 1/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 3 5 0 flor_sleep", 
+			"marriage_Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 90 100 1 flor_read2/1800 BusStop -1 23 3",
+			},
 		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
 	},
 
@@ -161,7 +173,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Keahi 13 8 down/Kenneth 22 6 down/Lenny 34 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 down/Kiwi 37 33 down/Lenny 34 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 	
@@ -169,7 +181,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Keahi 13 8 down/Kenneth 22 6 right/Lenny 32 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 right/Kiwi 37 33 down/Lenny 32 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 
@@ -186,7 +198,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Jio 38 31 down/Keahi 13 8 down/Kenneth 22 6 down/Kiwi 37 31 down/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 down/Kiwi 37 33 down/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 	
@@ -194,7 +206,7 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Jio 38 31 down/Keahi 13 8 down/Kenneth 22 6 right/Kiwi 37 31 down/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 right/Kiwi 37 33 down/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 
