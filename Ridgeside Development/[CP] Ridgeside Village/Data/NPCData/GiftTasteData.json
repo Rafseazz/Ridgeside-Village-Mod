@@ -29,8 +29,6 @@
 			
 			"Jeric": "{{i18n:Gift.Love.Jeric}}/637 224 444 597/{{i18n:Gift.Like.Jeric}}/20 335 266 408/{{i18n:Gift.Dislike.Jeric}}//{{i18n:Gift.Hate.Jeric}}//{{i18n:Gift.Neutral.Jeric}}/-4/ ",
 			
-			"Jio": "{{i18n:Gift.Love.Jio}}/604/{{i18n:Gift.Like.Jio}}/406/{{i18n:Gift.Dislike.Jio}}//{{i18n:Gift.Hate.Jio}}//{{i18n:Gift.Neutral.Jio}}/-4/ ",
-			
 			"Keahi": "{{i18n:Gift.Love.Keahi}}/223 224 372 282/{{i18n:Gift.Like.Keahi}}/396 404 567 430/{{i18n:Gift.Dislike.Keahi}}//{{i18n:Gift.Hate.Keahi}}//{{i18n:Gift.Neutral.Keahi}}/-4/ ",
 			
 			"Kenneth": "{{i18n:Gift.Love.Kenneth}}/206 400 338 576/{{i18n:Gift.Like.Kenneth}}/90 184 395 538/{{i18n:Gift.Dislike.Kenneth}}//{{i18n:Gift.Hate.Kenneth}}//{{i18n:Gift.Neutral.Kenneth}}/-4/ ",
@@ -60,7 +58,7 @@
 			"Yuuma": "{{i18n:Gift.Love.Yuuma}}/194 613 398 216/{{i18n:Gift.Like.Yuuma}}/167 176 92 311/{{i18n:Gift.Dislike.Yuuma}}/346/{{i18n:Gift.Hate.Yuuma}}//{{i18n:Gift.Neutral.Yuuma}}/-4/ ",
 
 			//2.0
-
+			
 			"Undreya": "{{i18n:Gift.Love.Undreya}}/73 124 125 336 384 928/{{i18n:Gift.Like.Undreya}}/-2/{{i18n:Gift.Dislike.Undreya}}/-4/{{i18n:Gift.Hate.Undreya}}/227/{{i18n:Gift.Neutral.Undreya}}/-20/ ",
 
 			"Ariah": "{{i18n:Gift.Love.Ariah}}/433/{{i18n:Gift.Like.Ariah}}/400/{{i18n:Gift.Dislike.Ariah}}/304/{{i18n:Gift.Hate.Ariah}}//{{i18n:Gift.Neutral.Ariah}}/-4/ ",
@@ -97,10 +95,24 @@
 
 			"Naomi": "{{i18n:Gift.Love.Naomi}}/{{spacechase0.JsonAssets/ObjectId:Keks Style Shortcake}} {{spacechase0.JsonAssets/ObjectId:Ridge Mosaic Cake}} {{spacechase0.JsonAssets/ObjectId:Cherry Berry Shakey}} {{spacechase0.JsonAssets/ObjectId:Arugula Roll}} 348/{{i18n:Gift.Like.Naomi}}/227 228/{{i18n:Gift.Dislike.Naomi}}/90/{{i18n:Gift.Hate.Naomi}}/342/{{i18n:Gift.Neutral.Naomi}}/-4/ ",
 
-			"Daia": "{{i18n:Gift.Love.Daia}}/{{spacechase0.JsonAssets/ObjectId:Autumn Drop Berry}} {{spacechase0.JsonAssets/ObjectId:Sweet Cranberry Cheesecake}} 196 64 162/{{i18n:Gift.Like.Daia}}/227 228/{{i18n:Gift.Dislike.Daia}}/304/{{i18n:Gift.Hate.Daia}}/207/{{i18n:Gift.Neutral.Daia}}/-4/ ",
-
 			//"Bliss": "{{i18n:Gift.Love.Bliss}}/{{spacechase0.JsonAssets/ObjectId:Wild Apple Juice}}/{{i18n:Gift.Like.Bliss}}/400/{{i18n:Gift.Dislike.Bliss}}/304/{{i18n:Gift.Hate.Bliss}}/-80/{{i18n:Gift.Neutral.Bliss}}/-4/ ",
 
+
+		},
+	},
+
+	{
+		"LogName": "Gift tastes - Jio and Daia",
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"When": {
+			"HasSeenEvent": 75160265,
+		},
+		"Entries": {
+
+			"Jio": "{{i18n:Gift.Love.Jio}}/604/{{i18n:Gift.Like.Jio}}/406/{{i18n:Gift.Dislike.Jio}}//{{i18n:Gift.Hate.Jio}}//{{i18n:Gift.Neutral.Jio}}/-4/ ",
+
+			"Daia": "{{i18n:Gift.Love.Daia}}/{{spacechase0.JsonAssets/ObjectId:Autumn Drop Berry}} {{spacechase0.JsonAssets/ObjectId:Sweet Cranberry Cheesecake}} 196 64 162/{{i18n:Gift.Like.Daia}}/227 228/{{i18n:Gift.Dislike.Daia}}/304/{{i18n:Gift.Hate.Daia}}/207/{{i18n:Gift.Neutral.Daia}}/-4/ ",
 
 		},
 	},
