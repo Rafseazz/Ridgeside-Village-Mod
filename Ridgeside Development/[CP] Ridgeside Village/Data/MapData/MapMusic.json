@@ -21,7 +21,8 @@
 				"Weather": "Sun",
         		"Season": "spring",
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
+				"LocationName": "Custom_Ridgeside_RidgesideVillage"
 				},
 			"Update": "OnLocationChange"
 		},
@@ -36,7 +37,8 @@
 				"Weather": "Sun",
         		"Season": "summer",				
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
+				"LocationName": "Custom_Ridgeside_RidgesideVillage"
 				},
 			"Update": "OnLocationChange"
 		},
@@ -51,7 +53,8 @@
 				"Weather": "Sun",
         		"Season": "fall",				
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
+				"LocationName": "Custom_Ridgeside_RidgesideVillage"
 				},
 			"Update": "OnLocationChange"
 		},	
@@ -66,7 +69,8 @@
 				"Weather": "Sun",
         		"Season": "winter",				
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
+				"LocationName": "Custom_Ridgeside_RidgesideVillage"
 				},
 			"Update": "OnLocationChange"
 		},							
@@ -81,7 +85,8 @@
 				},
 			"When": {
 				"Weather: |contains=Sun": false,
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
+				"LocationName": "Custom_Ridgeside_RidgesideVillage"
 				},
 			"Update": "OnLocationChange"
 		},
@@ -96,7 +101,8 @@
 			"When": {
 				"Time": "{{Range: 1900, 2400}}",
 				"EnableRidgesideMusic": true,
-				"Season |contains=winter": false
+				"Season |contains=winter": false,
+				"LocationName": "Custom_Ridgeside_RidgesideVillage"
 				},
 			"Update": "OnTimeChange"
 		},
@@ -110,7 +116,8 @@
 			"When": {
 				"Time": "{{Range: 1900, 2400}}",
 				"EnableRidgesideMusic": true,
-				"Season |contains=winter": true
+				"Season |contains=winter": true,
+				"LocationName": "Custom_Ridgeside_RidgesideVillage"
 				},
 			"Update": "OnTimeChange"
 		},
