@@ -29,7 +29,7 @@ namespace RidgesideVillage
                 //SVE is loaded, nothing to do
                 return;
             }
-            Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_WeddingGuests)}\" prefixing SDV method \"SpecialOrders.IsTimedQuest()\".");
+            Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_WeddingGuests)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.getCelebrationPositionsForDatables), new Type[]{ typeof(List<string>) }),
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_WeddingGuests), nameof(getCelebrationPositionsForDatables_Postfix))

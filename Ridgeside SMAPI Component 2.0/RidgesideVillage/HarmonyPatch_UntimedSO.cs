@@ -37,6 +37,10 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
             );
+            harmony.Patch(
+                original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.IsTimedQuest)),
+                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_IsTimed_postifx))
+            );
             try
             {
                 Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
@@ -51,7 +55,15 @@ namespace RidgesideVillage
             }
            
         }
-        
+
+        private static void SpecialOrders_IsTimed_postifx(ref SpecialOrder __instance, ref bool __result)
+        {
+            if (__instance.questKey.Value.StartsWith("RSV.UntimedSpecialOrder"))
+            {
+                __result = false;
+            }
+        }
+
         private static void SpecialOrdersBoard_GetPortrait_postifx(SpecialOrdersBoard __instance, string requester_name, ref KeyValuePair<Texture2D, Rectangle>?  __result)
         {
             try

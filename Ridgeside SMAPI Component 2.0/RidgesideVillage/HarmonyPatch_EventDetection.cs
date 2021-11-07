@@ -20,7 +20,7 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Log.Trace($"Applying Harmony Patch \"{nameof(GameMenu_ChangeTab_PostFix)}\" prefixing SDV method \"SpecialOrders.IsTimedQuest()\".");
+            Log.Trace($"Applying Harmony Patch \"{nameof(GameMenu_ChangeTab_PostFix)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameMenu), nameof(GameMenu.changeTab)),
                 prefix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(GameMenu_ChangeTab_PostFix))
