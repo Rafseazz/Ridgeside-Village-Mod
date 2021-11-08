@@ -109,24 +109,24 @@ namespace RidgesideVillage
                 Game1.player.mailReceived.Remove(BIRTHDAYBOOKEDFLAG);
             }
 
-            //Adds ANNIVERSARYTODAY flag if it's the next day after booking
-            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
-            {
-                Game1.player.mailReceived.Add(ANNIVERSARYTODAY);
-            }
-
+            
             //Removes seeing and booking anniversary event after event
             if (Game1.player.eventsSeen.Contains(75160248) && Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
             {
-                Game1.player.eventsSeen.Remove(75160248);
                 Game1.player.mailReceived.Remove(ANNIVERSARYBOOKEDFLAG);
             }
 
             //Removes anvtoday flag after next day
-            if (Game1.player.mailReceived.Contains(ANNIVERSARYTODAY))
+            if (Game1.player.mailReceived.Contains(ANNIVERSARYTODAY) && Game1.player.eventsSeen.Contains(75160248))
             {
                 Game1.player.mailReceived.Remove(ANNIVERSARYTODAY);
                 Game1.player.eventsSeen.Remove(75160248);
+            }
+
+            //Adds ANNIVERSARYTODAY flag if it's the next day after booking
+            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
+            {
+                Game1.player.mailReceived.Add(ANNIVERSARYTODAY);
             }
 
             //Alerts player on wake up about birthday party
