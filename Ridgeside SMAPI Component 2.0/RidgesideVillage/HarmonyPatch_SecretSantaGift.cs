@@ -15,6 +15,7 @@ namespace RidgesideVillage
     internal static class HarmonyPatch_SecretSantaGift
     {
         private static IModHelper Helper { get; set; }
+        private static readonly string AssetPath = PathUtilities.NormalizeAssetName("RSV/RSVSecretSantaGifts");
 
 
         public static void ApplyPatch(Harmony harmony, IModHelper helper)
@@ -51,16 +52,15 @@ namespace RidgesideVillage
             {
                 Log.Trace($"Choosing gift from {who.Name}");
                 Random r = new Random((int)Game1.uniqueIDForThisGame / 2 + Game1.year + Game1.dayOfMonth + Utility.getSeasonNumber(Game1.currentSeason) + who.getTileX());
-                Log.Trace($"Choosing gift from {who.Name}");
-                Dictionary<string, List<ItemEntry>> thing = new Dictionary<string, List<ItemEntry>>();
 
-                var data = Helper.Content.Load<Dictionary<string, List<ItemEntry>>>(PathUtilities.NormalizeAssetName("assets/SantaGiftData.json"));
-                if (data.TryGetValue(who.Name, out List<ItemEntry> possibleGifts) && possibleGifts.Count > 0)
+                var data = Helper.Content.Load<Dictionary<string, Dictionary<string, ItemEntry>>>(AssetPath, ContentSource.GameContent);
+                if (data.TryGetValue(who.Name, out Dictionary<string, ItemEntry> possibleGifts) && possibleGifts.Count > 0)
                 {
 
                     Log.Trace($"Found gifts from {who.Name}");
-                    ItemEntry itemData = possibleGifts[r.Next(possibleGifts.Count)];
-                    Item giftItem = new StardewValley.Object(itemData.ID, itemData.amount);
+                    string itemName = possibleGifts.Keys.ElementAt(r.Next(possibleGifts.Count));
+                    ItemEntry itemData = possibleGifts[itemName];
+                    Item giftItem = Utility.fuzzyItemSearch(itemName, stack_count:itemData.amount);
                     if(giftItem != null && giftItem.ParentSheetIndex >= 0)
                     {
                         __result = giftItem;
