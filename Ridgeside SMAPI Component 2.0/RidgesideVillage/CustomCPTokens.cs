@@ -130,6 +130,22 @@ namespace RidgesideVillage
                 // no save loaded (e.g. on the title screen)
                 return new[] { "" };
             });
+
+            cp.RegisterToken(this.ModManifest, "CelebrantDisplayName", () =>
+            {
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null || Context.IsWorldReady)
+                {
+                    string NPCName = HotelMenu.GetTodaysBirthdayNPC();
+                    NPC npc = Game1.getCharacterFromName(NPCName);
+                    if(npc != null)
+                    {
+                        return new[] { npc.displayName };
+                    }
+                }
+                // no save loaded (e.g. on the title screen)
+                return new[] { "" };
+            });
         }
     }
 }
