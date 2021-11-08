@@ -300,7 +300,7 @@ namespace RidgesideVillage
                 {
                     break;
                 }
-                if (pair.Value is HoeDirt dirt && dirt.state.Value == 0)
+                if (pair.Value is HoeDirt dirt && dirt.state.Value == 0 && dirt.crop != null)
                 {
                     dirt.state.Value = 1;
                     n++;
