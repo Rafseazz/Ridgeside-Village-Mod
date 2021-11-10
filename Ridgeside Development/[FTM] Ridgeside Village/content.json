@@ -1057,7 +1057,7 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Ghost",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 20,
+        "MinimumSpawnsPerDay": 10,
         "MaximumSpawnsPerDay": 20,
         "IncludeTerrainTypes": [
           "All"
@@ -1069,7 +1069,7 @@
         "SpawnTiming": {
           "StartTime": 600,
           "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 10,
+          "MinimumTimeBetweenSpawns": 20,
           "MaximumSimultaneousSpawns": 2,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
@@ -1108,8 +1108,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 50,
-        "MaximumSpawnsPerDay": 50,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 30,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1120,7 +1120,7 @@
         "SpawnTiming": {
           "StartTime": 600,
           "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 10,
+          "MinimumTimeBetweenSpawns": 20,
           "MaximumSimultaneousSpawns": 2,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
@@ -1171,7 +1171,7 @@
         "SpawnTiming": {
           "StartTime": 600,
           "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 20,
+          "MinimumTimeBetweenSpawns": 50,
           "MaximumSimultaneousSpawns": 2,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
@@ -1190,6 +1190,7 @@
       },
 
   //Viperial
+   //Golden Skull Coral and Entombed Ring
       {
         "MonsterTypes": [
           {
@@ -1203,7 +1204,9 @@
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVViperial",
               "Loot": [
-                "Spiritual Essence"
+                "Spiritual Essence",
+                "Golden Skull Coral",
+                "Entombed Ring"
               ]
             }
           },
@@ -1288,47 +1291,11 @@
               ]
             }
           },
-
-          //Entombed Ring & Golden Skull Coral Drop
-          {
-            "MonsterName": "shadow brute",
-            "Settings": {
-              "SpawnWeight": 1,
-              "HP": 550,
-              "Damage": 35,
-              "SeesPlayersAtSpawn": false,
-              "DodgeChance": 10,
-              "RelatedSkill": "Combat",
-              "Sprite": "Characters/Monsters/RSVBeast2",
-              "Loot": [
-                "Spiritual Essence",
-                "Entombed Ring"
-              ]
-            }
-          },
-          {
-            "MonsterName": "shadow brute",
-            "Settings": {
-              "SpawnWeight": 1,
-              "HP": 700,
-              "Damage": 50,
-              "SeesPlayersAtSpawn": false,
-              "DodgeChance": 10,
-              "RelatedSkill": "Combat",
-              "Sprite": "Characters/Monsters/RSVBeast3",
-              "Loot": [
-                "Spiritual Essence",
-                "Golden Skull Coral"
-              ]
-            }
-          },
-
-
         ],
         "UniqueAreaID": "RSV RidgeForest Beasts",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 50,
-        "MaximumSpawnsPerDay": 50,
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 30,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1339,7 +1306,7 @@
         "SpawnTiming": {
           "StartTime": 600,
           "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 10,
+          "MinimumTimeBetweenSpawns": 20,
           "MaximumSimultaneousSpawns": 2,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
