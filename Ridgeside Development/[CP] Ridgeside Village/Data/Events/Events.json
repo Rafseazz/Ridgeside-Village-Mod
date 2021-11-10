@@ -962,10 +962,10 @@
 		"Target": "Data/Events/Farm",
 		"Entries": {
 			//Inform about Nightingale Orchard Shop
-			"75160252/j 36/e 75160251": "continue/64 15/farmer 64 16 2 Kimpoi 64 18 0/pause 200/addMailReceived RSV.UnlockOrchardShop/pause 1000/emote farmer 16/emote Kimpoi 32/speak Kimpoi \"{{i18n:event-75160252.01}}\"/emote farmer 32/pause 500/speak Kimpoi \"{{i18n:event-75160252.02}}\"/emote farmer 32/pause 1000/end",
+			"75160252/j 36/e 75160251/t 600 1600": "continue/64 15/farmer 64 16 2 Kimpoi 64 18 0/pause 200/addMailReceived RSV.UnlockOrchardShop/pause 1000/emote farmer 16/emote Kimpoi 32/speak Kimpoi \"{{i18n:event-75160252.01}}\"/emote farmer 32/pause 500/speak Kimpoi \"{{i18n:event-75160252.02}}\"/emote farmer 32/pause 1000/end",
 
 			//Inform about new wares at N.O. Shop year 2
-			"75160253/y 2": "continue/64 15/farmer 64 16 2 Kimpoi 64 18 0/pause 1000/speak Kimpoi \"{{i18n:event-75160253.01}}\"/emote farmer 32/pause 800/speak Kimpoi \"{{i18n:event-75160253.02}}\"/emote farmer 32/pause 1000/end",
+			"75160253/y 2/t 600 1600": "continue/64 15/farmer 64 16 2 Kimpoi 64 18 0/pause 1000/speak Kimpoi \"{{i18n:event-75160253.01}}\"/emote farmer 32/pause 800/speak Kimpoi \"{{i18n:event-75160253.02}}\"/emote farmer 32/pause 1000/end",
 		}
 	},
 	
