@@ -341,7 +341,7 @@
         ],
         "UniqueAreaID": "RSV Foxbloom RidgeForest",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 0,
+        "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 1,
         "IncludeTerrainTypes": [
           "Grass"
@@ -1091,16 +1091,15 @@
           "SpawnSound": ""
         },
         "ExtraConditions": {
-          "EPUPreconditions": [
-            "!HasItem Pale Candelabrum" 
-          ],
           "Years": [],
           "Seasons": [],
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "EPUPreconditions": [],
+          "EPUPreconditions": [
+            "!HasItem Pale Candelabrum" 
+          ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -1145,16 +1144,15 @@
           "SpawnSound": ""
         },
         "ExtraConditions": {
-          "EPUPreconditions": [
-            "!HasItem Pale Candelabrum" 
-          ],
           "Years": [],
           "Seasons": [],
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "EPUPreconditions": [],
+          "EPUPreconditions": [
+            "!HasItem Pale Candelabrum" 
+          ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -1199,16 +1197,15 @@
           "SpawnSound": ""
         },
         "ExtraConditions": {
-          "EPUPreconditions": [
-            "!HasItem Everfrost Stone" 
-          ],
           "Years": [],
           "Seasons": [],
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "EPUPreconditions": [],
+          "EPUPreconditions": [
+            "!HasItem Everfrost Stone" 
+          ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -1256,16 +1253,15 @@
           "SpawnSound": ""
         },
         "ExtraConditions": {
-          "EPUPreconditions": [
-            "!HasItem Ancient Music Box" 
-          ],
           "Years": [],
           "Seasons": [],
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "EPUPreconditions": [],
+          "EPUPreconditions": [
+            "!HasItem Ancient Music Box" 
+          ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -1340,16 +1336,15 @@
           "SpawnSound": ""
         },
         "ExtraConditions": {
-          "EPUPreconditions": [
-            "!HasItem Village Hero Sculpture" 
-          ],
           "Years": [],
           "Seasons": [],
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "EPUPreconditions": [],
+          "EPUPreconditions": [
+            "!HasItem Village Hero Sculpture" 
+          ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
