@@ -33,26 +33,37 @@ namespace RidgesideVillage
 
             Helper.Events.GameLoop.DayEnding += OnDayEnd;
             Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_UntimedSO)}\" prefixing SDV method.");
-            harmony.Patch(
-                original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
-            );
+            
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.IsTimedQuest)),
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_IsTimed_postifx))
             );
-            try
+               
+            //causes issues on MAC apparently??
+            if(Constants.TargetPlatform == GamePlatform.Windows) 
             {
-                Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
-                harmony.Patch(
-                    original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
+                 harmony.Patch(
+                    original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
                 );
+                try
+                {
+                    Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
+                    harmony.Patch(
+                        original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
+                        postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
+                    );
+                }
+                catch
+                {
+                    Log.Warn("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
+                }
             }
-            catch
+            else
             {
-                Log.Warn("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
+                Log.Debug($"Not patching GetProtraitForRequester because platform is {Constants.TargetPlatform}");
             }
+            
            
         }
 
@@ -70,7 +81,12 @@ namespace RidgesideVillage
             {
                 if (RSVemojis == null)
                 {
-                    RSVemojis = Game1.content.Load<Texture2D>("LooseSprites\\RSVemojis");
+                    RSVemojis = Helper.Content.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis"), ContentSource.GameContent);
+                    if(RSVemojis== null)
+                    {
+                        Log.Error($"Loading error: Couldn't load {PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis")}");
+                        return;
+                    }
                 }
 
                 if (__result == null)
