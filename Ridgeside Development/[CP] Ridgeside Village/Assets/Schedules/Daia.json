@@ -20,6 +20,18 @@
 			"HasSeenEvent": 75160187,
 		}  
 	},
+	//Temp
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Daia",
+		"Entries": {
+			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+					},
+		"When": {
+			"HasFlag": "RSV.CompleteDaiaQuest",
+			"HasSeenEvent |contains=75160255": false,
+		}   
+	},
 
 	//Social Schedule
 	{

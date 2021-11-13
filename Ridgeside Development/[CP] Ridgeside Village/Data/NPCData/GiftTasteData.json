@@ -59,8 +59,6 @@
 
 			//2.0
 			
-			"Undreya": "{{i18n:Gift.Love.Undreya}}/73 124 125 336 384 928/{{i18n:Gift.Like.Undreya}}/-2/{{i18n:Gift.Dislike.Undreya}}/-4/{{i18n:Gift.Hate.Undreya}}/227/{{i18n:Gift.Neutral.Undreya}}/-20/ ",
-
 			"Ariah": "{{i18n:Gift.Love.Ariah}}/433/{{i18n:Gift.Like.Ariah}}/400/{{i18n:Gift.Dislike.Ariah}}/304/{{i18n:Gift.Hate.Ariah}}//{{i18n:Gift.Neutral.Ariah}}/-4/ ",
 
 			"Maive": "{{i18n:Gift.Love.Maive}}/{{spacechase0.JsonAssets/ObjectId:Honey Glazed Salad}} {{spacechase0.JsonAssets/ObjectId:Zesty Tuna}} {{spacechase0.JsonAssets/ObjectId:Cherry Berry Shakey}}/{{i18n:Gift.Like.Maive}}/{{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} 254 340 426/{{i18n:Gift.Dislike.Maive}}/346 459 {{spacechase0.JsonAssets/ObjectId:Arugula Roll}} {{spacechase0.JsonAssets/ObjectId:Fixer Eel}}/{{i18n:Gift.Hate.Maive}}/306 307 308 807 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} {{spacechase0.JsonAssets/ObjectId:Forage Souffle}}/{{i18n:Gift.Neutral.Maive}}/-4/ ",
@@ -114,6 +112,19 @@
 
 			"Daia": "{{i18n:Gift.Love.Daia}}/{{spacechase0.JsonAssets/ObjectId:Autumn Drop Berry}} {{spacechase0.JsonAssets/ObjectId:Sweet Cranberry Cheesecake}} 196 64 162/{{i18n:Gift.Like.Daia}}/227 228/{{i18n:Gift.Dislike.Daia}}/304/{{i18n:Gift.Hate.Daia}}/207/{{i18n:Gift.Neutral.Daia}}/-4/ ",
 
+		},
+	},
+
+	{
+		"LogName": "Gift tastes - Undreya",
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"When": {
+			"HasSeenEvent": 75160273,
+		},
+		"Entries": {
+
+			"Undreya": "{{i18n:Gift.Love.Undreya}}/73 124 125 336 384 928/{{i18n:Gift.Like.Undreya}}/-2/{{i18n:Gift.Dislike.Undreya}}/-4/{{i18n:Gift.Hate.Undreya}}/227/{{i18n:Gift.Neutral.Undreya}}/-20/ ",
 		},
 	},
 

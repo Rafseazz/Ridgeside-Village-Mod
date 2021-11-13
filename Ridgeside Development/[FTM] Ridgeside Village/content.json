@@ -611,7 +611,7 @@
           ],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": 1
+          "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
@@ -632,8 +632,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Silver Fish Bones",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 2,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -671,7 +671,7 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": 1
+          "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
@@ -692,8 +692,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Inked Fossil",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 2,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -731,7 +731,7 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": 1
+          "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
@@ -752,8 +752,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Nightblack Diamond",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
+        "MinimumSpawnsPerDay": 2,
+        "MaximumSpawnsPerDay": 2,
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
@@ -767,8 +767,8 @@
         "ExcludeCoordinates": [],
         "StrictTileChecking": "None",
         "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
+          "StartTime": 1800,
+          "EndTime": 2550,
           "MinimumTimeBetweenSpawns": 10,
           "MaximumSimultaneousSpawns": null,
           "OnlySpawnIfAPlayerIsPresent": false,
@@ -782,7 +782,7 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": 1
+          "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
@@ -830,7 +830,7 @@
           ],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
-          "LimitedNumberOfSpawns": 1
+          "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
@@ -994,7 +994,7 @@
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
-        "DaysUntilSpawnsExpire": 7
+        "DaysUntilSpawnsExpire": 1
       },
     ],
     "PercentExtraSpawnsPerMiningLevel": 0,
@@ -1070,7 +1070,7 @@
           {
             "MonsterName": "ghost",
             "Settings": {
-              "SpawnWeight": 2,
+              "SpawnWeight": 3,
               "RelatedSkill": "Combat",
               "SeesPlayersAtSpawn": false,
               "Loot": [
@@ -1081,8 +1081,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Ghost",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 10,
-        "MaximumSpawnsPerDay": 20,
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 30,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1119,7 +1119,7 @@
           {
             "MonsterName": "ghost",
             "Settings": {
-              "SpawnWeight": 3,
+              "SpawnWeight": 4,
               "HP": 100,
               "Damage": 30,
               "SeesPlayersAtSpawn": false,
@@ -1134,8 +1134,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 30,
+        "MinimumSpawnsPerDay": 40,
+        "MaximumSpawnsPerDay": 50,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1172,7 +1172,7 @@
           {
             "MonsterName": "putrid ghost",
             "Settings": {
-              "SpawnWeight": 2,
+              "SpawnWeight": 3,
               "HP": 200,
               "Damage": 10,
               "SeesPlayersAtSpawn": false,
@@ -1187,8 +1187,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Wraith",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 10,
-        "MaximumSpawnsPerDay": 20,
+        "MinimumSpawnsPerDay": 30,
+        "MaximumSpawnsPerDay": 40,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1199,7 +1199,7 @@
         "SpawnTiming": {
           "StartTime": 600,
           "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 30,
+          "MinimumTimeBetweenSpawns": 20,
           "MaximumSimultaneousSpawns": 2,
           "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
@@ -1423,7 +1423,7 @@
           {
             "MonsterName": "ghost",
             "Settings": {
-              "SpawnWeight": 3,
+              "SpawnWeight": 4,
               "HP": 100,
               "Damage": 30,
               "SeesPlayersAtSpawn": false,
@@ -1491,8 +1491,8 @@
         ],
         "UniqueAreaID": "RSV SpiritRealm Wraith",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 10,
-        "MaximumSpawnsPerDay": 20,
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 30,
         "IncludeTerrainTypes": [
           "All"
         ],
