@@ -317,7 +317,7 @@ namespace RidgesideVillage
             {
                 var responses = new List<Response>
                 {
-                    new Response("fixFence", Helper.Translation.Get("IanShop.Fences") + (n * perFencePrice) + "$"),
+                    new Response("fixFence", n + Helper.Translation.Get("IanShop.Fences") + (n * perFencePrice) + "$"),
                     new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
                 };
                 var responseActions = new List<Action>
