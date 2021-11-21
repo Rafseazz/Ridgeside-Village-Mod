@@ -82,7 +82,6 @@ namespace RidgesideVillage
             {
                 Game1.player.mailReceived.Remove(ENGAGEDFLAG);
                 Game1.player.mailReceived.Remove(RECEIVEDMAILWR);
-                Game1.player.eventsSeen.Remove(75160246);
             }
 
             //If it's after wedding day and the player didn't attend their booked Wedding Reception
