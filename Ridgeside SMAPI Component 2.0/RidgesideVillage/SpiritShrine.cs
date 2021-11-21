@@ -2,6 +2,7 @@
 using Netcode;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
+using StardewModdingAPI.Utilities;
 using StardewValley;
 using StardewValley.Objects;
 using System;
@@ -20,7 +21,7 @@ namespace RidgesideVillage
         const string PORTALFLAG = "RSV.Opened_Portal";
         //whether we have to check for portal finish
         internal bool StartedOpeningEvent = false;
-        List<PedestalTemplate> PedestalTemplates;
+        static List<PedestalTemplate> PedestalTemplates;
 
         public SpiritShrine(IMod Mod)
         {
@@ -32,7 +33,11 @@ namespace RidgesideVillage
             if (Game1.player.IsMainPlayer)
             {
 
-                PedestalTemplates = Helper.Data.ReadJsonFile<List<PedestalTemplate>>("assets/PedestalInfo.json");
+                PedestalTemplates = Helper.Data.ReadJsonFile<List<PedestalTemplate>>(PathUtilities.NormalizePath("assets/PedestalInfo.json"));
+                if(PedestalTemplates == null)
+                {
+                    Log.Error("Couldnt load PedestalData. Please write a comment on the ridgeside discord or nexusmods page :)");
+                }
                 AddMissingPedestals();
                 StartedOpeningEvent = Game1.player.mailReceived.Contains(PORTALFLAG);
                 if (!StartedOpeningEvent)
@@ -69,9 +74,11 @@ namespace RidgesideVillage
             if (Game1.IsMasterGame)
             {
                 GameLocation location = Game1.getLocationFromName("Custom_Ridgeside_RidgeFalls");
-                foreach(var pedestal in this.PedestalTemplates)
+                Log.Trace($"Resetting pedestal in {location.Name}");
+                foreach(var pedestal in PedestalTemplates)
                 {
                     location.Objects.Remove(pedestal.tilePosition);
+                    Log.Trace($"Removing pedestal at pedestal at {pedestal.tilePosition}");
                 }
                 this.AddMissingPedestals();
             }
@@ -80,7 +87,7 @@ namespace RidgesideVillage
        
         internal void OnOneSecondUpdateTicked(object sender, OneSecondUpdateTickedEventArgs e)
         {
-            if (!Context.IsWorldReady)
+            if (!Context.IsWorldReady || !Game1.player.IsMainPlayer)
             {
                 return;
             }else if (StartedOpeningEvent)
@@ -91,7 +98,7 @@ namespace RidgesideVillage
             {
                 GameLocation location = Game1.getLocationFromName("Custom_Ridgeside_RidgeFalls");
                 bool all_done = true;
-                foreach (var pedestal in this.PedestalTemplates)
+                foreach (var pedestal in PedestalTemplates)
                 {
                     ItemPedestal itemPedestal = (ItemPedestal)location.Objects[pedestal.tilePosition];
                     if (!itemPedestal.match.Value)
@@ -107,7 +114,7 @@ namespace RidgesideVillage
                     {
                         return;
                     }
-                    foreach (var pedestal in this.PedestalTemplates)
+                    foreach (var pedestal in PedestalTemplates)
                     {
                         ItemPedestal itemPedestal = (ItemPedestal)location.Objects[pedestal.tilePosition];
                         itemPedestal.locked.Value = true;
@@ -123,6 +130,7 @@ namespace RidgesideVillage
             catch (Exception exception) { Log.Warn("Issue with pedestals detected in OneSecondUpdate. Check Trace for Details");
                 Log.Trace(exception.Message);
                 Log.Trace(exception.StackTrace);
+                Helper.Events.GameLoop.OneSecondUpdateTicked -= OnOneSecondUpdateTicked;
             }
             
         }
@@ -132,7 +140,7 @@ namespace RidgesideVillage
         {
             Log.Trace("Adding pedestals");
             GameLocation location = Game1.getLocationFromName("Custom_Ridgeside_RidgeFalls");
-            foreach (var pedestal in this.PedestalTemplates)
+            foreach (var pedestal in PedestalTemplates)
             {
                 location.Objects.TryGetValue(pedestal.tilePosition, out SObject existing_object);
                 if (existing_object != null && !(existing_object is ItemPedestal)){
@@ -147,7 +155,7 @@ namespace RidgesideVillage
             }
             try
             {
-                foreach (var pedestal in this.PedestalTemplates)
+                foreach (var pedestal in PedestalTemplates)
                 {
                     ItemPedestal itemPedestal = (ItemPedestal)location.Objects[pedestal.tilePosition];
                     itemPedestal.requiredItem.Value = new SObject(ExternalAPIs.JA.GetObjectId(pedestal.RequiredItemName), 1);
