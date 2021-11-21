@@ -509,10 +509,10 @@
       "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.RelicSpirit}}",
       "Entries": {
          "Companion": {
-            "InspectionDialogue": "{{i18n:RelicSpiritTalk}} [{{spacechase0.JsonAssets/ObjectId:Lover's Sorrow}}]"
+            "InspectionDialogue": "{{i18n:RelicSpiritTalk}}[{{spacechase0.JsonAssets/ObjectId:Lover's Sorrow}}]"
          }
       },
-      "Update": "OnLocationChange",
+      "Update": "OnLocationChange, OnTimeChange, OnDayStart",
    },
 
    //Howdy follow Kenneth
