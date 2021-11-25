@@ -39,12 +39,8 @@ namespace RidgesideVillage
         {
             try
             {
-                if (!__instance.IsUsingMagicBait(who))
-                {
-                    return;
-                }
                 string nameToUse = locationName ?? __instance.Name;
-                Log.Trace($"Player {who.Name} using magic bait at {nameToUse} with original fish result is {__result.Name}");
+                Log.Trace($"Player {who.Name} is fishing at {nameToUse} {bobberTile} with original fish result is {__result.Name}");
 
                 double catchChance =
                     (who.CurrentTool is StardewValley.Tools.FishingRod rod && rod.getBobberAttachmentIndex() == CURIOSITY_LURE)
