@@ -209,10 +209,38 @@
 			"Jio": "teen/neutral/neutral/neutral/male/datable/null/Other/null//Custom_Ridgeside_RSVNinjaHouse 14 5/{{i18n:Name.Jio}}",
 		},
 		"When": {
-			"HasSeenEvent": 75160265,
+			"HasSeenEvent |contains=75160265": true,
 		}
-	}
+	},
 
+
+//SpouseRooms
+	//Load SpouseRooms
+    {
+        "Action": "EditData",
+        "Target": "Data/SpouseRooms",
+        "Entries": {
+            "Alissa": "RidgesideSpouseRooms/0",
+            "Corine": "RidgesideSpouseRooms/1",
+            "Daia": "RidgesideSpouseRooms/2",
+            "Flor": "RidgesideSpouseRooms/3",
+            "Ian": "RidgesideSpouseRooms/4",
+            "Jeric": "RidgesideSpouseRooms/5",
+            "Jio": "RidgesideSpouseRooms/6",
+            "Kenneth": "RidgesideSpouseRooms/7",
+            "Maddie": "RidgesideSpouseRooms/8",
+            "Philip": "RidgesideSpouseRooms/9",
+            "Shiro": "RidgesideSpouseRooms/10",
+            "Ysabelle": "RidgesideSpouseRooms/11",
+        }
+    },
+
+    // Load SpouseRoom Map
+    {
+        "Action": "Load",
+        "Target": "Maps/RidgesideSpouseRooms",
+        "FromFile": "Assets/Maps/SpouseRooms/{{TargetWithoutPath}}.tmx"
+    }	
 
 ]
 }
