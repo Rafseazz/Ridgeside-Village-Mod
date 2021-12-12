@@ -36,17 +36,32 @@ namespace RidgesideVillage
                 prefix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(GameMenu_ChangeTab_PostFix))
             );
             harmony.Patch(
-               original: AccessTools.Method(typeof(MapPage), nameof(MapPage.draw), new Type[]{ typeof(SpriteBatch)}),
-               postfix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_draw_Postfix))
+                original: AccessTools.Method(typeof(MapPage), nameof(MapPage.draw), new Type[]{ typeof(SpriteBatch)}),
+                postfix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_draw_Postfix))
             );
             harmony.Patch(
-               original: AccessTools.Method(typeof(MapPage), nameof(MapPage.receiveLeftClick)),
-               prefix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_receiveLeftClick_Prefix))
-           );            
+                original: AccessTools.Method(typeof(MapPage), nameof(MapPage.receiveLeftClick)),
+                prefix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_receiveLeftClick_Prefix))
+            );            
             harmony.Patch(
               original: AccessTools.Constructor(typeof(MapPage), new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) }),
               postfix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_Constructor_Postfix))
-           );
+            );
+
+            try
+            {
+                Type ModMapPageClass = Type.GetType("NPCMapLocations.Framework.Menus.ModMapPage, NPCMapLocations");
+                harmony.Patch(
+                    original: AccessTools.Method(ModMapPageClass, "draw", new Type[] { typeof(SpriteBatch) }),
+                    postfix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_draw_Postfix))
+                );
+            }
+            catch(Exception e)
+            {
+                Log.Warn("Couldnt patch NPC Map Locations. RSV Button will be invisible on the map");
+                Log.Warn(e.StackTrace);
+                Log.Warn(e.Message);
+            }
 
 
             Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen(1200, 720);
