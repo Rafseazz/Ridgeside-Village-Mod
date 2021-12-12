@@ -43,7 +43,7 @@ namespace RidgesideVillage
         {
             if(e.NewMenu is GameMenu gameMenu)
             {
-                if(gameMenu.currentTab == GameMenu.mapTab)
+                if(gameMenu.currentTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside"))
                 {
                     Open(gameMenu);
                 }
@@ -52,7 +52,7 @@ namespace RidgesideVillage
 
         internal static void Open(IClickableMenu gameMenu)
         {
-            if (Game1.currentLocation.Name.StartsWith("Custom_Ridgeside") && gameMenu is GameMenu menu)
+            if (gameMenu is GameMenu menu)
             {
                 Texture2D image = Helper.Content.Load<Texture2D>(MapPath, ContentSource.GameContent);
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width), (int)(image.Height));
@@ -246,6 +246,11 @@ namespace RidgesideVillage
                     break;
             }
             base.receiveKeyPress(key);
+        }
+
+        public override bool overrideSnappyMenuCursorMovementBan()
+        {
+            return true;
         }
 
     }
