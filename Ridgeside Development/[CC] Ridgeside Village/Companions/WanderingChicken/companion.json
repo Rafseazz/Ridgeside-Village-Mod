@@ -17,7 +17,7 @@
   "MaxDistanceBeforeTeleport": -1, // Optional parameter, determines how far away a companion can be from a player / spawn point before teleporting back | NOTE: -1 will make it never teleport if it gets too far
   "ChanceForHalting": 0.01,
   "MaxHaltTime": 2000,
-  "InspectionDialogue": "This chicken is free from society's yoke.", // Optional parameter, determines what dialogue appears when interacting with the companion | NOTE: Only applicable for map-based spawns
+  "InspectionDialogue": "wanderingchicken.inspection.dialogue", // Optional parameter, determines what dialogue appears when interacting with the companion | NOTE: Only applicable for map-based spawns
   "IdleBehavior": "Wander", // Optional parameter, determines how the companion acts while idle | Options: [Nothing, Hover, Wander, Jumper]
 
   "FrameSizeWidth": 16, // Width of each frame / tile in pixels
