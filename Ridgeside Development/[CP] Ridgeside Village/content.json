@@ -52,8 +52,9 @@
 			"Default": "false",
 			"Description": "Edits vanilla content to integrate Ridgeside with the base game. Might be incompatible with other mods."
 		},		
-},
 */
+},
+
 
 	/*********
 	** Dynamic tokens
@@ -272,7 +273,6 @@
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'female'": true
 			},
-			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "SpouseGender",
@@ -280,7 +280,6 @@
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'male'": true
 			},
-			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "SpouseGender",
@@ -288,7 +287,6 @@
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'undefined'": true
 			},
-			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "NPCListCheck",
@@ -845,5 +843,5 @@
 
 ],
 
-
 }
+
