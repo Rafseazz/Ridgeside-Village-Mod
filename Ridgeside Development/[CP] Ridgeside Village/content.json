@@ -88,13 +88,33 @@
 			}
 		},
 
+		// Leilani
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, Leilani",
+			"When": {
+				"EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=ZoeDoll.NPCLeilani": true
+			}
+		},
+
 		// East Scarpe
 		{
 			"Name": "PossibleCableCarNPCs",
-			"Value": "{{PossibleCableCarNPCs}}, Aideen, Jacob, Eloise",
+			"Value": "{{PossibleCableCarNPCs}}, Aideen, Jacob, Eloise, Leximonster",
 			"When": {
 				"EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=Lemurkat.JacobEloise.CP": true
+			}
+		},
+
+		// Always Raining in the Valley
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, Mia, Sterling, Henry",
+			"When": {
+				"EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=Himetarts.ARV.CP": true
 			}
 		},
 
