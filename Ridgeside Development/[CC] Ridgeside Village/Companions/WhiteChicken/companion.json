@@ -16,7 +16,7 @@
   "MaxHaltTime": 2000,
   "MaxIdleDistance": -1, // Optional parameter, determines how far away a companion can be from a player / spawn point before idle behavior stops | NOTE: -1 will make it always idle if player isn't moving
   "MaxDistanceBeforeTeleport": -1, // Optional parameter, determines how far away a companion can be from a player / spawn point before teleporting back | NOTE: -1 will make it never teleport if it gets too far
-  "InspectionDialogue": "A chicken.", // Optional parameter, determines what dialogue appears when interacting with the companion | NOTE: Only applicable for map-based spawns
+  "InspectionDialogue": "whitechicken.inspection.dialogue", // Optional parameter, determines what dialogue appears when interacting with the companion | NOTE: Only applicable for map-based spawns
   "IdleBehavior": "Wander", // Optional parameter, determines how the companion acts while idle | Options: [Nothing, Hover, Wander, Jumper]
   "EnablePeriodicPatchCheck": true,
   "FrameSizeWidth": 16, // Width of each frame / tile in pixels
