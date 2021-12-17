@@ -56,12 +56,12 @@ namespace RidgesideVillage
                 }
                 catch
                 {
-                    Log.Warn("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
+                    Log.Info("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
                 }
             }
             else
             {
-                Log.Debug($"Not patching GetProtraitForRequester because platform is {Constants.TargetPlatform}");
+                Log.Trace($"Not patching GetProtraitForRequester because platform is {Constants.TargetPlatform}");
             }
             
            
