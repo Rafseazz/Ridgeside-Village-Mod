@@ -307,8 +307,9 @@ namespace RidgesideVillage
                 else
                 {
                     e.NewLocation.waterColor.Value = new Color(35, 214, 213, 120);
-                    removeCorruptedFireTiles();
                 }
+
+                removeCorruptedFireTiles();
 
                 //e.NewLocation.waterColor.Value = new Color(35, 214, 213, 120);
                 if (!IsRenderingFog)
