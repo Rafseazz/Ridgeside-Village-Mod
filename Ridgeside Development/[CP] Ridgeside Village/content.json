@@ -46,13 +46,13 @@
 			"Default": "false",
 			"Description": "Uses Ridgeside Village's official patch for the Bus Stop by TheLimeyDragon and Rafseazz. Might be incompatible with other mods."
 		},
-/*
-		"EnableVanillaEdits": {
+
+/*		"EnableVanillaEdits": {
 			"AllowValues": "true, false",
 			"Default": "false",
 			"Description": "Edits vanilla content to integrate Ridgeside with the base game. Might be incompatible with other mods."
 		},		
-*/
+*/		
 },
 
 
@@ -820,6 +820,12 @@
    		"Action": "Include",
    		"FromFile": "Data/Extras/SantaGiftData.json",
   	},
+/*	{
+		"LogName": "Include Vanilla Edits",
+   		"Action": "Include",
+   		"FromFile": "Data/Extras/VanillaEdits.json",
+  	},
+*/  	
 
   	//Includes Tilesheets
 	/*
