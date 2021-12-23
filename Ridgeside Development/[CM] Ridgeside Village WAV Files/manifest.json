@@ -1,18 +1,22 @@
 ﻿{
-  "Name": "Ridgeside Village Custom Music",
-  "Author": "Rafseazz",
-  "Version": "2.0.3",
-  "Description": "Adds Custom Music to Ridgeside Village",
-  "UniqueID": "Rafseazz.RSVCM",
-  "UpdateKeys": [ "Nexus:???" ],
-  "ContentPackFor": {
-    "UniqueID": "Platonymous.CustomMusic",
-    "MinimumVersion": "1.0.3"
-  },
-	"Dependencies": [
-	 {
-      "UniqueID": "Rafseazz.RSVCP",
-      "IsRequired": true,
-	 }
-]
+    "Name": "Ridgeside Village - Custom Music",
+    "Author": "Rafseazz",
+    "Version": "2.0.3",
+    "Description": "Adds Custom Music to Ridgeside Village",
+    "UniqueID": "Rafseazz.RSVCM",
+    "UpdateKeys": [],
+    
+    "ContentPackFor":
+    {
+        "UniqueID": "Platonymous.CustomMusic",
+        "MinimumVersion": "1.0.3"
+    },
+    
+    "Dependencies":
+    [
+        {
+            "UniqueID": "Rafseazz.RSVCP",
+            "IsRequired": true,
+        }
+    ],
 }

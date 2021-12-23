@@ -1,0 +1,152 @@
+{
+	"Changes":
+	[
+		/*********
+		** Exclusion Changes
+		*********/
+			/*********
+			** Full Festivals
+			*********/		
+			{
+				"Action": "EditData",
+				"Target": "Data/CustomNPCExclusions",			
+				"TextOperations": 
+				[
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Anton"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ariah"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Blair"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Carmen"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Faye"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Irene"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Kiarra"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Lorenzo"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Louie"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Maive"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Paula"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Sean"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Shanice"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Sonny"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+				],
+				"When": { "FullFestivals": false },
+			},
+
+			/*********
+			** Easy Introduction
+			*********/
+			{
+				"Action": "EditData",
+				"Target": "Data/CustomNPCExclusions",
+				"Entries": 
+				{
+	
+					"Ian": "ItemDelivery Socialize",
+					"Jeric": "ItemDelivery Socialize",
+					"Kenneth": "ItemDelivery Socialize",
+					"Philip": "ItemDelivery Socialize",
+					"Shiro": "ItemDelivery Socialize",
+					"Alissa": "ItemDelivery Socialize",
+					"Corine": "ItemDelivery Socialize",
+					"Flor": "ItemDelivery Socialize",
+					"Maddie": "ItemDelivery Socialize",
+					"Ysabelle": "ItemDelivery Socialize",
+					"Aguar": "ItemDelivery Socialize",
+					"Bert": "ItemDelivery Socialize",
+					"Ezekiel": "ItemDelivery Socialize",
+					"Freddie": "ItemDelivery Socialize",
+					"Keahi": "ItemDelivery Socialize",
+					"Lenny": "ItemDelivery Socialize",
+					"Lola": "ItemDelivery Socialize",
+					"Olga": "ItemDelivery Socialize",
+					"Pika": "ItemDelivery Socialize",
+					"Richard": "ItemDelivery Socialize",
+					"Trinnie": "ItemDelivery Socialize",
+					"Yuuma": "ItemDelivery Socialize",
+					"Anton": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Ariah": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Blair": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Carmen": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Faye": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Irene": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Kiarra": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Lorenzo": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Louie": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Maive": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Paula": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Sean": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Shanice": "ItemDelivery Socialize MovieInvite IslandEvent",
+					"Sonny": "ItemDelivery Socialize MovieInvite IslandEvent",
+				},
+					"When": { "EasyIntroduction": true },
+			},
+	]
+}
