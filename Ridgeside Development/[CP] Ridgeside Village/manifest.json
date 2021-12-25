@@ -1,110 +1,235 @@
 {
-	"Name": "Ridgeside Village",
+	/*********
+	** Mod Name
+	*********/	
+	"Name": "Ridgeside Village - Content Patcher",
+
+	/*********
+	** Mod Author
+	*********/	
 	"Author": "Rafseazz",
+
+	/*********
+	** Current Version
+	*********/		
 	"Version": "2.0.3",
+
+	/*********
+	** Content Pack Description
+	*********/		
 	"Description": "Adds Ridgeside Village to the game. A Stardew Valley Expansion mod.",
+
+	/*********
+	** Unique Manifest ID for Content Pack
+	*********/		
 	"UniqueID": "Rafseazz.RSVCP",
-	"MinimumApiVersion": "3.0.0",
+
+	/*********
+	** Update Keys (Currently only on Nexus)
+	*********/			
 	"UpdateKeys": [ "Nexus:7286" ],
-	"ContentPackFor": {
+	
+	"ContentPackFor":
+	{
 		"UniqueID": "Pathoschild.ContentPatcher"
 	},
-   "Dependencies": [
-	   {
-		"UniqueID": "Esca.CustomNPCExclusions",
-		"IsRequired": true,
-	   },
-	   {
-		"UniqueID": "Rafseazz.RidgesideVillage",
-		"IsRequired": true,
-	   },
-	   {
-		"UniqueID": "Esca.FarmTypeManager",
-		"IsRequired": true,
-	   },	   
-	   {
-		"UniqueID": "spacechase0.CustomNPCFixes",
-		"IsRequired": true,
-	   },
-	   {
-        "UniqueID": "spacechase0.JsonAssets",
-        "IsRequired": true,
-	   },
-	   {
-        "UniqueID": "PurrplingCat.QuestFramework",
-        "IsRequired": true,
-	   },
-	   {
-        "UniqueID": "DIGUS.MailFrameworkMod",
-        "IsRequired": true,
-	   },
-	   {
-        "UniqueID": "PurrplingCat.CustomGiftDialogue",
-        "IsRequired": false,
-	   },	   	  	   	   
-	   {
-        "UniqueID": "Platonymous.TMXLoader",
-        "IsRequired": true,
-	   },	 
-	   {
-        "UniqueID": "Platonymous.CustomMusic",
-        "IsRequired": true,
-	   },	 	   	   
-	   {
-        "UniqueID": "Platonymous.Toolkit",
-        "IsRequired": true,
-	   },	 	   	   	   
-	   {
-		"UniqueID": "SuperAardvark.AntiSocial",
-		"IsRequired": true,
-	   },
-	   {
-        "UniqueID": "PeacefulEnd.CustomCompanions",
-        "IsRequired": true,
-       },  
-	   {
-		"UniqueID": "MoreFish",
-		"IsRequired": false,
-	   },
-	   {
-		"UniqueID": "FlashShifter.StardewValleyExpandedCP",
-		"IsRequired": false,
-	   },
-	   {
-		"UniqueID": "flashshifter.immersivefarm2remastered",
-		"IsRequired": false,
-	   },
-       {
-        "UniqueID": "flashshifter.GrandpasFarm",
-        "IsRequired": false,
-       }, 	   
-       {
-        "UniqueID": "Bouhm.NPCMapLocations",
-        "IsRequired": false,
-       },	   
-       {
-        "UniqueID": "Lemurkat.JacobEloise.CP",
-        "IsRequired": false,
-       },	
-       {
-        "UniqueID": "Karmylla.ImmersiveMaps",
-        "IsRequired": false,
-       },	              
-       {
-        "UniqueID": "EduAnttunes.TownSchool.CP",
-        "IsRequired": false,
-       },    
-       {
-        "UniqueID": "grapeponta.VibrantPastoralRecolor",
-        "IsRequired": false,
-       },   
-       {
-        "UniqueID": "grapeponta.VibrantPastoralSVE",
-        "IsRequired": false,
-       }, 
-       {
-		"UniqueID": "tlitookilakin.warpnetwork",
-		"IsRequired": false,
-	   },
+
+	/*********
+	** Minimum Version for Framework
+	*********/		
+	"MinimumApiVersion": "3.0.0",
+
+	/*********
+	** Dependencies - Required mods and optional mods
+	*********/	
+	"Dependencies":
+	[
+		/*********
+		** Ridgeside Components
+		*********/			
+			/*********
+			** Custom Companions
+			*********/
+	  		{
+				"UniqueID": "Rafseazz.RSVCC",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Farm Type Manager
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RidgesideVillage",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Custom Music
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RidgesideVillage",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Mail Framework Mod
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RidgesideVillage",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Quest Framework
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RidgesideVillage",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** JSON Assets
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RidgesideVillage",
+				"IsRequired": true,
+	  		},		  
+	  				
+			/*********
+			** SMAPI Component
+			*********/			
+	  		{
+				"UniqueID": "Rafseazz.RidgesideVillage",
+				"IsRequired": true,
+	  		},
+
+		/*********
+		** Required Mods
+		*********/	
+			/*********
+			** AntiSocialNPCs
+			*********/		
+	  		{
+			"UniqueID": "SuperAardvark.AntiSocial",
+			"IsRequired": true,
+	  		},
+	
+	  		{
+      		 "UniqueID": "PeacefulEnd.CustomCompanions",
+      		 "IsRequired": true,
+      		}, 
+	
+			{
+				"UniqueID": "Esca.CustomNPCExclusions",
+				"IsRequired": true,
+	  		},
+	
+	  		{
+				"UniqueID": "spacechase0.CustomNPCFixes",
+				"IsRequired": true,
+	  		},
+	
+	  		{
+				"UniqueID": "Esca.FarmTypeManager",
+				"IsRequired": true,
+	  		},	   
+	
+	
+	
+	  		{
+      		 	"UniqueID": "spacechase0.JsonAssets",
+      		 	"IsRequired": true,
+	  		},
+	
+	  		{
+      		 	"UniqueID": "PurrplingCat.QuestFramework",
+      		 	"IsRequired": true,
+	  		},
+	
+	  		{
+      		 "UniqueID": "Platonymous.TMXLoader",
+      		 "IsRequired": true,
+	  		},
+	
+	  		{
+      		 "UniqueID": "Platonymous.CustomMusic",
+      		 "IsRequired": true,
+	  		},
+	
+	  		{
+      		 "UniqueID": "Platonymous.Toolkit",
+      		 "IsRequired": true,
+	  		},
+	
+	  		{
+      		 "UniqueID": "DIGUS.MailFrameworkMod",
+      		 "IsRequired": true,
+	  		},
+
+		/*********
+		** Optional Mods - Intermod Compatibility
+		*********/	
+			/*********
+			** Custom Gift Dialogue
+			*********/	
+	  		{
+      		 "UniqueID": "PurrplingCat.CustomGiftDialogue",
+      		 "IsRequired": false,
+	  		},
+	
+	  		{
+			"UniqueID": "MoreFish",
+			"IsRequired": false,
+	  		},
+	
+	  		{
+			"UniqueID": "FlashShifter.StardewValleyExpandedCP",
+			"IsRequired": false,
+	  		},
+	
+	  		{
+			"UniqueID": "flashshifter.immersivefarm2remastered",
+			"IsRequired": false,
+	  		},
+	
+      		{
+      		 "UniqueID": "flashshifter.GrandpasFarm",
+      		 "IsRequired": false,
+      		}, 	 
+	
+      		{
+      		 "UniqueID": "Lemurkat.JacobEloise.CP",
+      		 "IsRequired": false,
+      		},	
+	
+      		{
+      		 "UniqueID": "Karmylla.ImmersiveMaps",
+      		 "IsRequired": false,
+      		},
+	
+      		{
+      		 "UniqueID": "Bouhm.NPCMapLocations",
+      		 "IsRequired": false,
+      		},
+	
+      		{
+      		 "UniqueID": "EduAnttunes.TownSchool.CP",
+      		 "IsRequired": false,
+      		},  
+	
+      		{
+      		 "UniqueID": "grapeponta.VibrantPastoralRecolor",
+      		 "IsRequired": false,
+      		},
+	
+      		{
+      		 "UniqueID": "grapeponta.VibrantPastoralSVE",
+      		 "IsRequired": false,
+      		}, 
+	
+      		{
+			"UniqueID": "tlitookilakin.warpnetwork",
+			"IsRequired": false,
+	  		},
    ]
 }
