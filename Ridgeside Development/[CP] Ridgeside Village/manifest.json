@@ -56,34 +56,26 @@
 	  		},
 
 			/*********
-			** Farm Type Manager
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
-				"IsRequired": true,
-	  		},
-
-			/*********
 			** Custom Music
 			*********/	  		
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
+				"UniqueID": "Rafseazz.RSVCM",
 				"IsRequired": true,
 	  		},
 
 			/*********
-			** Mail Framework Mod
+			** Content Patcher
 			*********/	  		
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
+				"UniqueID": "Rafseazz.RSVCP",
 				"IsRequired": true,
 	  		},
 
 			/*********
-			** Quest Framework
+			** Farm Type Manager
 			*********/	  		
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
+				"UniqueID": "Rafseazz.RSVFTM",
 				"IsRequired": true,
 	  		},
 
@@ -91,10 +83,34 @@
 			** JSON Assets
 			*********/	  		
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
+				"UniqueID": "Rafseazz.RSVJA",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Mail Framework Mod
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RSVMFM",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Quest Framework 
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RSVQF",
 				"IsRequired": true,
 	  		},		  
 	  				
+			/*********
+			** Shop Tile Framework
+			*********/			
+	  		{
+				"UniqueID": "Rafseazz.RSVSTF",
+				"IsRequired": true,
+	  		},
+
 			/*********
 			** SMAPI Component
 			*********/			
@@ -110,14 +126,19 @@
 			** AntiSocialNPCs
 			*********/		
 	  		{
-			"UniqueID": "SuperAardvark.AntiSocial",
-			"IsRequired": true,
+				"UniqueID": "SuperAardvark.AntiSocial",
+				"IsRequired": true,
 	  		},
 	
 	  		{
-      		 "UniqueID": "PeacefulEnd.CustomCompanions",
-      		 "IsRequired": true,
+      		 	"UniqueID": "PeacefulEnd.CustomCompanions",
+      		 	"IsRequired": true,
       		}, 
+
+	  		{
+      		 	"UniqueID": "Platonymous.CustomMusic",
+      		 	"IsRequired": true,
+	  		},
 	
 			{
 				"UniqueID": "Esca.CustomNPCExclusions",
@@ -134,10 +155,13 @@
 				"IsRequired": true,
 	  		},	   
 	
-	
-	
 	  		{
       		 	"UniqueID": "spacechase0.JsonAssets",
+      		 	"IsRequired": true,
+	  		},
+
+	  		{
+      		 	"UniqueID": "DIGUS.MailFrameworkMod",
       		 	"IsRequired": true,
 	  		},
 	
@@ -147,89 +171,113 @@
 	  		},
 	
 	  		{
-      		 "UniqueID": "Platonymous.TMXLoader",
-      		 "IsRequired": true,
+      		 	"UniqueID": "Platonymous.TMXLoader",
+      		 	"IsRequired": true,
 	  		},
 	
 	  		{
-      		 "UniqueID": "Platonymous.CustomMusic",
-      		 "IsRequired": true,
-	  		},
-	
-	  		{
-      		 "UniqueID": "Platonymous.Toolkit",
-      		 "IsRequired": true,
-	  		},
-	
-	  		{
-      		 "UniqueID": "DIGUS.MailFrameworkMod",
-      		 "IsRequired": true,
+      		 	"UniqueID": "Platonymous.Toolkit",
+      		 	"IsRequired": true,
 	  		},
 
 		/*********
-		** Optional Mods - Intermod Compatibility
+		** Optional Mods & Intermod Compatibility
 		*********/	
 			/*********
 			** Custom Gift Dialogue
 			*********/	
 	  		{
-      		 "UniqueID": "PurrplingCat.CustomGiftDialogue",
-      		 "IsRequired": false,
+      		 	"UniqueID": "PurrplingCat.CustomGiftDialogue",
+      		 	"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** Custom
+			*********/
 	  		{
-			"UniqueID": "MoreFish",
-			"IsRequired": false,
+				"UniqueID": "MoreFish",
+				"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** Custom
+			*********/	
 	  		{
-			"UniqueID": "FlashShifter.StardewValleyExpandedCP",
-			"IsRequired": false,
+				"UniqueID": "FlashShifter.StardewValleyExpandedCP",
+				"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** Custom
+			*********/	
 	  		{
-			"UniqueID": "flashshifter.immersivefarm2remastered",
-			"IsRequired": false,
+				"UniqueID": "flashshifter.immersivefarm2remastered",
+				"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-      		 "UniqueID": "flashshifter.GrandpasFarm",
-      		 "IsRequired": false,
+      		 	"UniqueID": "flashshifter.GrandpasFarm",
+      		 	"IsRequired": false,
       		}, 	 
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-      		 "UniqueID": "Lemurkat.JacobEloise.CP",
-      		 "IsRequired": false,
+      		 	"UniqueID": "Lemurkat.JacobEloise.CP",
+      		 	"IsRequired": false,
       		},	
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-      		 "UniqueID": "Karmylla.ImmersiveMaps",
-      		 "IsRequired": false,
+      		 	"UniqueID": "Karmylla.ImmersiveMaps",
+      		 	"IsRequired": false,
       		},
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-      		 "UniqueID": "Bouhm.NPCMapLocations",
-      		 "IsRequired": false,
+      		 	"UniqueID": "Bouhm.NPCMapLocations",
+      		 	"IsRequired": false,
       		},
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-      		 "UniqueID": "EduAnttunes.TownSchool.CP",
-      		 "IsRequired": false,
+      		 	"UniqueID": "EduAnttunes.TownSchool.CP",
+      		 	"IsRequired": false,
       		},  
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-      		 "UniqueID": "grapeponta.VibrantPastoralRecolor",
-      		 "IsRequired": false,
+      		 	"UniqueID": "grapeponta.VibrantPastoralRecolor",
+      		 	"IsRequired": false,
       		},
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-      		 "UniqueID": "grapeponta.VibrantPastoralSVE",
-      		 "IsRequired": false,
+      		 	"UniqueID": "grapeponta.VibrantPastoralSVE",
+      		 	"IsRequired": false,
       		}, 
-	
+
+			/*********
+			** Custom
+			*********/	
       		{
-			"UniqueID": "tlitookilakin.warpnetwork",
-			"IsRequired": false,
+				"UniqueID": "tlitookilakin.warpnetwork",
+				"IsRequired": false,
 	  		},
+
    ]
 }
