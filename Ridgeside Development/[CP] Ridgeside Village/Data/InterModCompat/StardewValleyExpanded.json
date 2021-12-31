@@ -252,12 +252,52 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Aguar 22 100 down/Alissa 15 27 left/Bert 23 64 down/Corine 38 69 left/Ezekiel 38 70 left/Flor 34 38 up/Freddie 16 64 down/Ian 32 56 down/Jeric 31 64 right/Jio 34 4 down/Keahi 24 73 up/Kenneth 36 74 right/Kiwi 33 4 down/Lenny 27 69 down/Lola 17 64 down/Maddie 20 47 up/Olga 22 64 right/Philip 22 49 right/Pika 31 72 right/Richard 28 72 left/Shiro 23 49 up/Trinnie 23 72 right/Ysabelle 28 64 left/Yuuma 23 74 left",
+   	"Value": "Aguar 32 53 down/Alissa 15 27 left/Bert 23 64 down/Corine 38 69 left/Ezekiel 38 70 left/Flor 34 38 up/Freddie 16 64 down/Ian 32 56 down/Jeric 31 64 right/Jio 51 72 down/Keahi 24 73 up/Kenneth 38 74 left/Kiwi 52 72 down/Lenny 27 69 down/Lola 17 64 down/Maddie 20 47 up/Olga 22 64 right/Philip 22 49 right/Pika 31 72 right/Richard 28 72 left/Shiro 23 49 up/Trinnie 23 72 right/Ysabelle 28 64 left/Yuuma 23 74 left",
    	"Delimiter": "/"
    },
 
 ]	
 	},
+
+	//2.0 Pips spots! THE TRUE RSV EXPERIENCE!
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "FullFestivals": true,
+            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+            "IsOddYear": true, },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 32 73 up/Malaya 32 69 down/Sonny 23 62 down/Louie 27 73 up/Maive 25 63 down/Ariah 27 63 down/Lorenzo 14 51 down/Shanice 15 51 down/Anton 13 52 right/Kiarra 14 20 left/Paula 25 69 down/Carmen 36 72 left/Blair 34 25 down/Sean 30 60 down/Faye 20 45 down/Irene 34 73 up",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160254,
+            "FullFestivals": true,
+            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+            "IsOddYear": true,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 53 72 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
 	
 	{
 	//With SVE variant 2
@@ -276,6 +316,46 @@
 
 ]	
 },
+
+	//2.0 Pips spots! THE TRUE RSV EXPERIENCE!
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "FullFestivals": true,
+            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+        	"IsOddYear": false },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 33 69 down/Malaya 32 69 down/Sonny 23 62 down/Louie 27 73 up/Maive 25 63 down/Ariah 27 63 down/Lorenzo 14 51 down/Shanice 15 51 down/Anton 13 52 right/Kiarra 10 23 left/Paula 25 69 down/Carmen 36 72 left/Blair 31 33 up/Sean 17 17 right/Faye 20 45 down/Irene 33 73 up",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160254,
+            "FullFestivals": true,
+            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+        	"IsOddYear": false            
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 31 22 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
 
 	//Stardew Valley Fair
 	{
