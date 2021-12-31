@@ -28,14 +28,17 @@
 	** Update Keys (Currently only on Nexus)
 	*********/			
 	"UpdateKeys": [ "Nexus:7286" ],
-	
+
+	/*********
+	** Framework Manifest ID
+	*********/		
 	"ContentPackFor":
 	{
 		"UniqueID": "Pathoschild.ContentPatcher"
 	},
 
 	/*********
-	** Minimum Version for Framework
+	** Minimum Version for SMAPI
 	*********/		
 	"MinimumApiVersion": "3.0.0",
 
@@ -60,14 +63,6 @@
 			*********/	  		
 	  		{
 				"UniqueID": "Rafseazz.RSVCM",
-				"IsRequired": true,
-	  		},
-
-			/*********
-			** Content Patcher
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RSVCP",
 				"IsRequired": true,
 	  		},
 
@@ -123,58 +118,88 @@
 		** Required Mods
 		*********/	
 			/*********
-			** AntiSocialNPCs
+			** Anti Social NPCs
 			*********/		
 	  		{
 				"UniqueID": "SuperAardvark.AntiSocial",
 				"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Custom Companions (CC)
+			*********/		
 	  		{
       		 	"UniqueID": "PeacefulEnd.CustomCompanions",
       		 	"IsRequired": true,
       		}, 
 
+			/*********
+			** Custom Music (CM)
+			*********/
 	  		{
       		 	"UniqueID": "Platonymous.CustomMusic",
       		 	"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Custom NPC Exclusions
+			*********/	
 			{
 				"UniqueID": "Esca.CustomNPCExclusions",
 				"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Custom NPC Fixes
+			*********/	
 	  		{
 				"UniqueID": "spacechase0.CustomNPCFixes",
 				"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Farm Type Manager (FTM)
+			*********/	
 	  		{
 				"UniqueID": "Esca.FarmTypeManager",
 				"IsRequired": true,
 	  		},	   
-	
+
+			/*********
+			** JSON Assets (JA)
+			*********/	
 	  		{
       		 	"UniqueID": "spacechase0.JsonAssets",
       		 	"IsRequired": true,
 	  		},
 
+			/*********
+			** Mail Framework Mod (MFM)
+			*********/
 	  		{
       		 	"UniqueID": "DIGUS.MailFrameworkMod",
       		 	"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Quest Framework (QF)
+			*********/	
 	  		{
       		 	"UniqueID": "PurrplingCat.QuestFramework",
       		 	"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** TMX Loader (TMXL)
+			*********/	
 	  		{
       		 	"UniqueID": "Platonymous.TMXLoader",
       		 	"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Platonymous Toolkt (PyTK)
+			*********/	
 	  		{
       		 	"UniqueID": "Platonymous.Toolkit",
       		 	"IsRequired": true,
@@ -192,7 +217,7 @@
 	  		},
 
 			/*********
-			** Custom
+			** More New Fish
 			*********/
 	  		{
 				"UniqueID": "MoreFish",
@@ -200,7 +225,7 @@
 	  		},
 
 			/*********
-			** Custom
+			** Stardew Valley Expanded
 			*********/	
 	  		{
 				"UniqueID": "FlashShifter.StardewValleyExpandedCP",
@@ -208,7 +233,7 @@
 	  		},
 
 			/*********
-			** Custom
+			** SVE - Immersive Farm Remastered 2
 			*********/	
 	  		{
 				"UniqueID": "flashshifter.immersivefarm2remastered",
@@ -216,7 +241,7 @@
 	  		},
 
 			/*********
-			** Custom
+			** SVE - Grandpa's Farm
 			*********/	
       		{
       		 	"UniqueID": "flashshifter.GrandpasFarm",
@@ -224,15 +249,15 @@
       		}, 	 
 
 			/*********
-			** Custom
+			** East Scarp
 			*********/	
       		{
-      		 	"UniqueID": "Lemurkat.JacobEloise.CP",
+      		 	"UniqueID": "LemurKat.EastScarpe.SMAPI",
       		 	"IsRequired": false,
       		},	
 
 			/*********
-			** Custom
+			** Karmylla's Immersive Maps
 			*********/	
       		{
       		 	"UniqueID": "Karmylla.ImmersiveMaps",
@@ -240,7 +265,7 @@
       		},
 
 			/*********
-			** Custom
+			** NPC Map Locations
 			*********/	
       		{
       		 	"UniqueID": "Bouhm.NPCMapLocations",
@@ -248,7 +273,7 @@
       		},
 
 			/*********
-			** Custom
+			** Town School
 			*********/	
       		{
       		 	"UniqueID": "EduAnttunes.TownSchool.CP",
@@ -256,7 +281,7 @@
       		},  
 
 			/*********
-			** Custom
+			** Vibrant Pastoral Recolor
 			*********/	
       		{
       		 	"UniqueID": "grapeponta.VibrantPastoralRecolor",
@@ -264,7 +289,7 @@
       		},
 
 			/*********
-			** Custom
+			** Vibrant Pastoral Recolor - SVE Version
 			*********/	
       		{
       		 	"UniqueID": "grapeponta.VibrantPastoralSVE",
@@ -272,7 +297,7 @@
       		}, 
 
 			/*********
-			** Custom
+			** Warp Network
 			*********/	
       		{
 				"UniqueID": "tlitookilakin.warpnetwork",

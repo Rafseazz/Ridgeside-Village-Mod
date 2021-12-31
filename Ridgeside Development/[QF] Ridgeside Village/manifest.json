@@ -1,19 +1,210 @@
 {
-  "Name": "Ridgeside Village Quest Framework",
-  "Author": "Rafseazz",
-  "Version": "2.0.3",
-  "Description": "Loads Quest Framework Quests for Ridgeside Village",
-  "UniqueID": "Rafseazz.RSVQF",
-  "MinimumApiVersion": "3.6.0",
-  "UpdateKeys": [ "Nexus:???" ],
-  "ContentPackFor": {
-    "UniqueID": "PurrplingCat.QuestFramework", 
-    "MinimumVersion": "1.3.0" 
-  },
-	"Dependencies": [
-	 {
-      "UniqueID": "Rafseazz.RSVCP",
-      "IsRequired": true,
-	 }
-	]
+    /*********
+    ** Mod Name
+    *********/      
+    "Name": "Ridgeside Village - Quest Framework",
+
+    /*********
+    ** Mod Author
+    *********/  
+    "Author": "Rafseazz",
+
+    /*********
+    ** Current Version
+    *********/      
+    "Version": "2.0.3",
+
+    /*********
+    ** Content Pack Description
+    *********/  
+    "Description": "Loads Quest Framework Quests for Ridgeside Village.",
+
+    /*********
+    ** Unique Manifest ID for Content Pack
+    *********/  
+    "UniqueID": "Rafseazz.RSVQF",
+
+    /*********
+    ** Update Keys (Currently only on Nexus)
+    *********/
+    "UpdateKeys": [ "Nexus:-1" ],
+
+    /*********
+    ** Framework Manifest ID
+    *********/  
+    "ContentPackFor":
+    {
+        "UniqueID": "PurrplingCat.QuestFramework", 
+        "MinimumVersion": "1.4.0"
+    },
+
+    /*********
+    ** Minimum Version for SMAPI
+    *********/  
+    "MinimumApiVersion": "3.6.0",
+
+    /*********
+    ** Dependencies - Required mods and optional mods
+    *********/  
+    "Dependencies":
+    [
+        /*********
+        ** Ridgeside Components
+        *********/          
+            /*********
+            ** Custom Companions
+            *********/
+            {
+                "UniqueID": "Rafseazz.RSVCC",
+                "IsRequired": true,
+            },
+            
+            /*********
+            ** Custom Music
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVCM",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Content Patcher
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVCP",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Farm Type Manager
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVFTM",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** JSON Assets
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVJA",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Mail Framework Mod
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVMFM",
+                "IsRequired": true,
+            },
+                    
+            /*********
+            ** Shop Tile Framework
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVSTF",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** SMAPI Component
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RidgesideVillage",
+                "IsRequired": true,
+            },
+
+        /*********
+        ** Required Mods
+        *********/  
+            /*********
+            ** Anti Social NPCs
+            *********/      
+            {
+                "UniqueID": "SuperAardvark.AntiSocial",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Custom Companions (CC)
+            *********/      
+            {
+                "UniqueID": "PeacefulEnd.CustomCompanions",
+                "IsRequired": true,
+            }, 
+
+            /*********
+            ** Custom Music (CM)
+            *********/
+            {
+                "UniqueID": "Platonymous.CustomMusic",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Custom NPC Exclusions
+            *********/  
+            {
+                "UniqueID": "Esca.CustomNPCExclusions",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Custom NPC Fixes
+            *********/  
+            {
+                "UniqueID": "spacechase0.CustomNPCFixes",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Farm Type Manager (FTM)
+            *********/  
+            {
+                "UniqueID": "Esca.FarmTypeManager",
+                "IsRequired": true,
+            },     
+
+            /*********
+            ** JSON Assets (JA)
+            *********/  
+            {
+                "UniqueID": "spacechase0.JsonAssets",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Mail Framework Mod (MFM)
+            *********/
+            {
+                "UniqueID": "DIGUS.MailFrameworkMod",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Quest Framework (QF)
+            *********/  
+            {
+                "UniqueID": "PurrplingCat.QuestFramework",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** TMX Loader (TMXL)
+            *********/  
+            {
+                "UniqueID": "Platonymous.TMXLoader",
+                "IsRequired": true,
+            },
+
+            /*********
+            ** Platonymous Toolkt (PyTK)
+            *********/  
+            {
+                "UniqueID": "Platonymous.Toolkit",
+                "IsRequired": true,
+            },
+
+   ]
 }

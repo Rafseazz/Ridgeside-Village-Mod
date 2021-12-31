@@ -288,9 +288,26 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Aguar 47 101 down/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 20 27 down/Ian 17 73 down/Jeric 11 62 right/Jio 34 4 down/Keahi 36 78 up/Kenneth 22 49 up/Kiwi 33 4 down/Lenny 27 53 down/Lola 21 27 down/Maddie 24 29 up/Olga 27 60 right/Philip 24 65 up/Pika 25 23 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 34 77 right",
+   	"Value": "Aguar 45 63 up/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 20 27 down/Ian 54 75 down/Jeric 11 62 right/Jio 37 10 down/Keahi 36 78 up/Kenneth 22 49 up/Kiwi 37 10 down/Lenny 27 53 down/Lola 21 27 down/Maddie 24 29 up/Olga 27 60 right/Philip 24 65 up/Pika 25 23 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 34 77 right",
    	"Delimiter": "/"
    },
+
+	//2.0 Pips spots! THE TRUE RSV EXPERIENCE!
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall16",
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "FullFestivals": true},
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 37 35 down/Malaya 36 35 down/Sonny 49 81 down/Louie 56 69 right/Maive 50 81 right/Ariah 51 81 left/Lorenzo 39 37 left/Shanice 39 36 left/Anton 63 65 down/Kiarra 37 32 right/Paula 64 65 down/Carmen 35 37 right/Blair 20 66 up/Sean 21 66 up/Faye 19 66 up/Irene 39 32 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
 
 ]	
 	},
