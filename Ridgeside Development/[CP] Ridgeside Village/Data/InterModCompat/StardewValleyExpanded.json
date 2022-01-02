@@ -1,4 +1,5 @@
 {
+
 	"Changes": [
 
 
@@ -161,6 +162,33 @@
 		"PatchMode": "ReplaceByLayer",
 	},
 
+	/*********
+	** Winterstar Festival
+	*********/
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town-Christmas",
+		"FromFile": "Assets/Maps/InterModMaps/WinterStar-Patch_SVE.tbin",
+		"FromArea": { "X": 0, "Y": 0, "Width": 16, "Height": 15 },
+		"ToArea": { "X": 0, "Y": 55, "Width": 16, "Height": 15 },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
+		"PatchMode": "ReplaceByLayer",
+	},
+
+	//WinterStar----------------------
+	
+		{
+			"LogName": "WinterStar",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
+			"Entries": {
+			
+			//Non-Dateables
+				"Aguar": "{{i18n:InterModFestivalDialogue.StardewValleyExpanded.Winterstar.Aguar}}",
+			},
+		},
+
 
 	//Luau
 	{
@@ -267,7 +295,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
 
-        "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent": 75160249, "FullFestivals": true },        	
+        "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent: |contains=75160249": true, "FullFestivals": true },        	
         "TextOperations": [
             {
                 "Operation": "Append",
@@ -330,7 +358,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasSeenEvent": 75160254,
+            "HasSeenEvent: |contains=75160254": true,
             "FullFestivals": true,
             "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
             "IsOddYear": true,
@@ -388,7 +416,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasSeenEvent": 75160254,
+            "HasSeenEvent: |contains=75160254": true,        	
             "FullFestivals": true,
             "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
         	"IsOddYear": false            
@@ -409,15 +437,17 @@
 		"Action": "EditData",
 		"Target": "Data/Festivals/fall16",
 		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true},
-		"TextOperations": [
-
-   //SetUp
-   {
-   	"Operation": "Append",
-   	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Aguar 45 63 up/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 20 27 down/Ian 54 75 down/Jeric 11 62 right/Jio 37 10 down/Keahi 36 78 up/Kenneth 22 49 up/Kiwi 37 10 down/Lenny 27 53 down/Lola 21 27 down/Maddie 24 29 up/Olga 27 60 right/Philip 24 65 up/Pika 25 23 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 34 77 right",
-   	"Delimiter": "/"
-   },
+		"TextOperations":
+		[
+			//SetUp
+   			{
+   				"Operation": "Append",
+   				"Target": ["Entries", "Set-Up_additionalCharacters"],
+   				"Value": "Aguar 45 63 up/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 20 27 down/Ian 54 75 down/Jeric 11 62 right/Jio 37 10 down/Keahi 36 78 up/Kenneth 22 49 up/Kiwi 37 10 down/Lenny 27 53 down/Lola 21 27 down/Maddie 24 29 up/Olga 27 60 right/Philip 24 65 up/Pika 25 23 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 34 77 right",
+   				"Delimiter": "/"
+   			},
+		]	
+	},
 
 	//2.0 Pips spots! THE TRUE RSV EXPERIENCE!
     {
@@ -425,7 +455,8 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall16",
 		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "FullFestivals": true},
-        "TextOperations": [
+        "TextOperations":
+        [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
@@ -435,9 +466,6 @@
         ]
     },
 
-
-]	
-	},
 
 //WinterStar
 {
@@ -450,12 +478,30 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Aguar 8 64 right/Alissa 25 66 left/Bert 41 57 down/Corine 32 61 left/Corine 32 61 left/Ezekiel 31 60 down/Flor 32 56 down/Freddie 38 72 left/Ian 21 71 right/Jeric 30 61 right/Jio 74 74 right/Keahi 27 70 up/Kenneth 26 55 right/Kiwi 74 75 right/Lenny 26 61 down/Lola 38 73 left/Maddie 23 53 down/Olga 21 66 right/Philip 28 55 right/Pika 33 65 right/Richard 30 74 up/Shiro 41 59 left/Trinnie 42 57 down/Ysabelle 31 74 up/Yuuma 41 60 left",
+   	"Value": "Aguar 8 64 right/Alissa 25 66 left/Bert 41 57 down/Corine 32 61 left/Corine 32 61 left/Ezekiel 31 60 down/Flor 32 56 down/Freddie 38 72 left/Ian 21 71 right/Jeric 30 61 right/Jio 74 74 right/Keahi 27 70 up/Kenneth 23 57 right/Kiwi 74 75 right/Lenny 26 61 down/Lola 38 73 left/Maddie 23 53 down/Olga 21 66 right/Philip 36 56 down/Pika 33 65 right/Richard 30 74 up/Shiro 41 59 left/Trinnie 42 57 down/Ysabelle 31 74 up/Yuuma 41 60 left",
    	"Delimiter": "/"
    },
 
 ]	
 },
+
+    //2.0 Pips spots! THE TRUE RSV EXPERIENCE!
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter25",
+        "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "FullFestivals": true },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Kimpoi 20 64 right/Malaya 20 65 down/Sonny 28 60 down/Louie 28 61 down/Maive 27 61 down/Ariah 18 51 down/Lorenzo 17 62 up/Shanice 16 62 right/Anton 16 64 right/Kiarra 22 61 down/Paula 16 65 right/Carmen 22 49 down/Blair 21 49 down/Sean 16 52 left/Faye 22 53 down/Irene 24 74 up",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+
 
 //Egg Festival
 {
