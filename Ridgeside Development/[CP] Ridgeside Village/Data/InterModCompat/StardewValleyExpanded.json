@@ -478,7 +478,7 @@
    {
    	"Operation": "Append",
    	"Target": ["Entries", "Set-Up_additionalCharacters"],
-   	"Value": "Aguar 8 64 right/Alissa 25 66 left/Bert 41 57 down/Corine 32 61 left/Corine 32 61 left/Ezekiel 31 60 down/Flor 32 56 down/Freddie 38 72 left/Ian 21 71 right/Jeric 30 61 right/Jio 74 74 right/Keahi 27 70 up/Kenneth 23 57 right/Kiwi 74 75 right/Lenny 26 61 down/Lola 38 73 left/Maddie 23 53 down/Olga 21 66 right/Philip 36 56 down/Pika 33 65 right/Richard 30 74 up/Shiro 41 59 left/Trinnie 42 57 down/Ysabelle 31 74 up/Yuuma 41 60 left",
+   	"Value": "Aguar 6 57 right/Alissa 4 61 right/Bert 11 59 down/Corine 5 59 left/Ezekiel 6 59 down/Flor 32 56 down/Freddie 38 72 left/Ian 4 64 right/Jeric 44 59 down/Jio 74 74 right/Keahi 8 60 left/Kenneth 23 57 right/Kiwi 74 75 right/Lenny 26 61 down/Lola 38 73 left/Maddie 23 53 down/Olga 10 59 down/Philip 36 56 down/Pika 7 59 down/Richard 30 74 up/Shiro 11 64 up/Trinnie 9 60 right/Ysabelle 4 59 right/Yuuma 9 63 right",
    	"Delimiter": "/"
    },
 
@@ -495,13 +495,28 @@
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Kimpoi 20 64 right/Malaya 20 65 down/Sonny 28 60 down/Louie 28 61 down/Maive 27 61 down/Ariah 18 51 down/Lorenzo 17 62 up/Shanice 16 62 right/Anton 16 64 right/Kiarra 22 61 down/Paula 16 65 right/Carmen 22 49 down/Blair 21 49 down/Sean 16 52 left/Faye 22 53 down/Irene 24 74 up",
+                "Value": "Kimpoi 4 62 right/Malaya 4 60 right/Sonny 4 63 right/Louie 8 63 left/Maive 7 64 up/Ariah 6 64 up/Lorenzo 13 61 left/Shanice 13 62 left/Anton 13 59 left/Kiarra 13 60 left/Paula 12 59 right/Carmen 13 63 left/Blair 12 64 right/Sean 13 64 left/Faye 22 53 down/Irene 5 64 left",
                 "Delimiter": "/"
             },
         ]
     },
 
-
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter25",
+        "When": {
+            "HasSeenEvent": 75160249, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "FullFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 10 64 up",
+                "Delimiter": "/"
+            },
+        ]
+    },
 
 //Egg Festival
 {
