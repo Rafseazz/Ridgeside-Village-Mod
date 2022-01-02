@@ -28,14 +28,17 @@
 	** Update Keys (Currently only on Nexus)
 	*********/			
 	"UpdateKeys": [ "Nexus:7286" ],
-	
+
+	/*********
+	** Framework Manifest ID
+	*********/		
 	"ContentPackFor":
 	{
 		"UniqueID": "Pathoschild.ContentPatcher"
 	},
 
 	/*********
-	** Minimum Version for Framework
+	** Minimum Version for SMAPI
 	*********/		
 	"MinimumApiVersion": "3.0.0",
 
@@ -56,34 +59,18 @@
 	  		},
 
 			/*********
-			** Farm Type Manager
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
-				"IsRequired": true,
-	  		},
-
-			/*********
 			** Custom Music
 			*********/	  		
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
+				"UniqueID": "Rafseazz.RSVCM",
 				"IsRequired": true,
 	  		},
 
 			/*********
-			** Mail Framework Mod
+			** Farm Type Manager
 			*********/	  		
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
-				"IsRequired": true,
-	  		},
-
-			/*********
-			** Quest Framework
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
+				"UniqueID": "Rafseazz.RSVFTM",
 				"IsRequired": true,
 	  		},
 
@@ -91,10 +78,34 @@
 			** JSON Assets
 			*********/	  		
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
+				"UniqueID": "Rafseazz.RSVJA",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Mail Framework Mod
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RSVMFM",
+				"IsRequired": true,
+	  		},
+
+			/*********
+			** Quest Framework 
+			*********/	  		
+	  		{
+				"UniqueID": "Rafseazz.RSVQF",
 				"IsRequired": true,
 	  		},		  
 	  				
+			/*********
+			** Shop Tile Framework
+			*********/			
+	  		{
+				"UniqueID": "Rafseazz.RSVSTF",
+				"IsRequired": true,
+	  		},
+
 			/*********
 			** SMAPI Component
 			*********/			
@@ -107,129 +118,191 @@
 		** Required Mods
 		*********/	
 			/*********
-			** AntiSocialNPCs
+			** Anti Social NPCs
 			*********/		
 	  		{
-			"UniqueID": "SuperAardvark.AntiSocial",
-			"IsRequired": true,
+				"UniqueID": "SuperAardvark.AntiSocial",
+				"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Custom Companions (CC)
+			*********/		
 	  		{
-      		 "UniqueID": "PeacefulEnd.CustomCompanions",
-      		 "IsRequired": true,
+      		 	"UniqueID": "PeacefulEnd.CustomCompanions",
+      		 	"IsRequired": true,
       		}, 
-	
+
+			/*********
+			** Custom Music (CM)
+			*********/
+	  		{
+      		 	"UniqueID": "Platonymous.CustomMusic",
+      		 	"IsRequired": true,
+	  		},
+
+			/*********
+			** Custom NPC Exclusions
+			*********/	
 			{
 				"UniqueID": "Esca.CustomNPCExclusions",
 				"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Custom NPC Fixes
+			*********/	
 	  		{
 				"UniqueID": "spacechase0.CustomNPCFixes",
 				"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Farm Type Manager (FTM)
+			*********/	
 	  		{
 				"UniqueID": "Esca.FarmTypeManager",
 				"IsRequired": true,
 	  		},	   
-	
-	
-	
+
+			/*********
+			** JSON Assets (JA)
+			*********/	
 	  		{
       		 	"UniqueID": "spacechase0.JsonAssets",
       		 	"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Mail Framework Mod (MFM)
+			*********/
+	  		{
+      		 	"UniqueID": "DIGUS.MailFrameworkMod",
+      		 	"IsRequired": true,
+	  		},
+
+			/*********
+			** Quest Framework (QF)
+			*********/	
 	  		{
       		 	"UniqueID": "PurrplingCat.QuestFramework",
       		 	"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** TMX Loader (TMXL)
+			*********/	
 	  		{
-      		 "UniqueID": "Platonymous.TMXLoader",
-      		 "IsRequired": true,
+      		 	"UniqueID": "Platonymous.TMXLoader",
+      		 	"IsRequired": true,
 	  		},
-	
+
+			/*********
+			** Platonymous Toolkt (PyTK)
+			*********/	
 	  		{
-      		 "UniqueID": "Platonymous.CustomMusic",
-      		 "IsRequired": true,
-	  		},
-	
-	  		{
-      		 "UniqueID": "Platonymous.Toolkit",
-      		 "IsRequired": true,
-	  		},
-	
-	  		{
-      		 "UniqueID": "DIGUS.MailFrameworkMod",
-      		 "IsRequired": true,
+      		 	"UniqueID": "Platonymous.Toolkit",
+      		 	"IsRequired": true,
 	  		},
 
 		/*********
-		** Optional Mods - Intermod Compatibility
+		** Optional Mods & Intermod Compatibility
 		*********/	
 			/*********
 			** Custom Gift Dialogue
 			*********/	
 	  		{
-      		 "UniqueID": "PurrplingCat.CustomGiftDialogue",
-      		 "IsRequired": false,
+      		 	"UniqueID": "PurrplingCat.CustomGiftDialogue",
+      		 	"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** More New Fish
+			*********/
 	  		{
-			"UniqueID": "MoreFish",
-			"IsRequired": false,
+				"UniqueID": "MoreFish",
+				"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** Stardew Valley Expanded
+			*********/	
 	  		{
-			"UniqueID": "FlashShifter.StardewValleyExpandedCP",
-			"IsRequired": false,
+				"UniqueID": "FlashShifter.StardewValleyExpandedCP",
+				"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** SVE - Immersive Farm Remastered 2
+			*********/	
 	  		{
-			"UniqueID": "flashshifter.immersivefarm2remastered",
-			"IsRequired": false,
+				"UniqueID": "flashshifter.immersivefarm2remastered",
+				"IsRequired": false,
 	  		},
-	
+
+			/*********
+			** SVE - Grandpa's Farm
+			*********/	
       		{
-      		 "UniqueID": "flashshifter.GrandpasFarm",
-      		 "IsRequired": false,
+      		 	"UniqueID": "flashshifter.GrandpasFarm",
+      		 	"IsRequired": false,
       		}, 	 
-	
+
+			/*********
+			** East Scarp
+			*********/	
       		{
-      		 "UniqueID": "Lemurkat.JacobEloise.CP",
-      		 "IsRequired": false,
+      		 	"UniqueID": "LemurKat.EastScarpe.SMAPI",
+      		 	"IsRequired": false,
       		},	
-	
+
+			/*********
+			** Karmylla's Immersive Maps
+			*********/	
       		{
-      		 "UniqueID": "Karmylla.ImmersiveMaps",
-      		 "IsRequired": false,
+      		 	"UniqueID": "Karmylla.ImmersiveMaps",
+      		 	"IsRequired": false,
       		},
-	
+
+			/*********
+			** NPC Map Locations
+			*********/	
       		{
-      		 "UniqueID": "Bouhm.NPCMapLocations",
-      		 "IsRequired": false,
+      		 	"UniqueID": "Bouhm.NPCMapLocations",
+      		 	"IsRequired": false,
       		},
-	
+
+			/*********
+			** Town School
+			*********/	
       		{
-      		 "UniqueID": "EduAnttunes.TownSchool.CP",
-      		 "IsRequired": false,
+      		 	"UniqueID": "EduAnttunes.TownSchool.CP",
+      		 	"IsRequired": false,
       		},  
-	
+
+			/*********
+			** Vibrant Pastoral Recolor
+			*********/	
       		{
-      		 "UniqueID": "grapeponta.VibrantPastoralRecolor",
-      		 "IsRequired": false,
+      		 	"UniqueID": "grapeponta.VibrantPastoralRecolor",
+      		 	"IsRequired": false,
       		},
-	
+
+			/*********
+			** Vibrant Pastoral Recolor - SVE Version
+			*********/	
       		{
-      		 "UniqueID": "grapeponta.VibrantPastoralSVE",
-      		 "IsRequired": false,
+      		 	"UniqueID": "grapeponta.VibrantPastoralSVE",
+      		 	"IsRequired": false,
       		}, 
-	
+
+			/*********
+			** Warp Network
+			*********/	
       		{
-			"UniqueID": "tlitookilakin.warpnetwork",
-			"IsRequired": false,
+				"UniqueID": "tlitookilakin.warpnetwork",
+				"IsRequired": false,
 	  		},
+
    ]
 }
