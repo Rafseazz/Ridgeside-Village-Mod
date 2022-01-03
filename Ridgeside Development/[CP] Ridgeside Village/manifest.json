@@ -47,64 +47,64 @@
 	*********/	
 	"Dependencies":
 	[
-		/*********
-		** Ridgeside Components
-		*********/			
-			/*********
-			** Custom Companions
-			*********/
-	  		{
-				"UniqueID": "Rafseazz.RSVCC",
-				"IsRequired": true,
-	  		},
+        /*********
+        ** Ridgeside Components
+        *********/          
+            /*********
+            ** Custom Companions
+            *********/
+            {
+                "UniqueID": "Rafseazz.RSVCC",
+                "IsRequired": true,
+            },
+            
+            /*********
+            ** Custom Music
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVCM",
+                "IsRequired": true,
+            },
 
-			/*********
-			** Custom Music
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RSVCM",
-				"IsRequired": true,
-	  		},
+            /*********
+            ** Farm Type Manager
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVFTM",
+                "IsRequired": true,
+            },
 
-			/*********
-			** Farm Type Manager
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RSVFTM",
-				"IsRequired": true,
-	  		},
+            /*********
+            ** JSON Assets
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVJA",
+                "IsRequired": true,
+            },
 
-			/*********
-			** JSON Assets
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RSVJA",
-				"IsRequired": true,
-	  		},
+            /*********
+            ** Mail Framework Mod
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVMFM",
+                "IsRequired": true,
+            },
 
-			/*********
-			** Mail Framework Mod
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RSVMFM",
-				"IsRequired": true,
-	  		},
-
-			/*********
-			** Quest Framework 
-			*********/	  		
-	  		{
-				"UniqueID": "Rafseazz.RSVQF",
-				"IsRequired": true,
-	  		},		  
-	  				
-			/*********
-			** Shop Tile Framework
-			*********/			
-	  		{
-				"UniqueID": "Rafseazz.RSVSTF",
-				"IsRequired": true,
-	  		},
+            /*********
+            ** Quest Framework 
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVQF",
+                "IsRequired": true,
+            },        
+                    
+            /*********
+            ** Shop Tile Framework
+            *********/          
+            {
+                "UniqueID": "Rafseazz.RSVSTF",
+                "IsRequired": true,
+            },
 
 			/*********
 			** SMAPI Component
@@ -304,5 +304,12 @@
 				"IsRequired": false,
 	  		},
 
+			/*********
+			** Juliet and Jessie
+			*********/	
+      		{
+				"UniqueID": "LemurKat.JulietHouse.NPC",
+				"IsRequired": false,
+	  		},
    ]
 }
