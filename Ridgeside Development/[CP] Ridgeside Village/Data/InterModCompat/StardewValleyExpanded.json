@@ -162,34 +162,6 @@
 		"PatchMode": "ReplaceByLayer",
 	},
 
-	/*********
-	** Winterstar Festival
-	*********/
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Town-Christmas",
-		"FromFile": "Assets/Maps/InterModMaps/WinterStar-Patch_SVE.tbin",
-		"FromArea": { "X": 0, "Y": 0, "Width": 16, "Height": 15 },
-		"ToArea": { "X": 0, "Y": 55, "Width": 16, "Height": 15 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
-		"PatchMode": "ReplaceByLayer",
-	},
-
-	//WinterStar----------------------
-	
-		{
-			"LogName": "WinterStar",
-			"Action": "EditData",
-			"Target": "Data/Festivals/winter25",
-			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
-			"Entries": {
-			
-			//Non-Dateables
-				"Aguar": "{{i18n:InterModFestivalDialogue.StardewValleyExpanded.Winterstar.Aguar}}",
-			},
-		},
-
-
 	//Luau
 	{
    "Action": "EditData",
