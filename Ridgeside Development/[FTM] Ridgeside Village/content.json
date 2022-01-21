@@ -5,10 +5,6 @@
   "MonsterSpawnEnabled": true,
   "Forage_Spawn_Settings": {
     "Areas": [
-
-//===============================================================
-//Start Hike Forage Data
-//===============================================================
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -76,13 +72,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Hike Forage Data
-//===============================================================
-
-//===============================================================
-//Start Ridgeside Village Forage Data
-//===============================================================
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -174,13 +163,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Ridgeside Village Forage Data
-//===============================================================
-
-//===============================================================
-//Start Ridge Forage Data
-//===============================================================
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -251,39 +233,32 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Ridge Forage Data
-//===============================================================
-
-//===============================================================
-//Start Ridge Falls Forage Data
-//===============================================================
       {
         "SpringItemIndex": [
           "Ridge Cherry",
           "Mountain Arugula",
           "Ridge Azorean Flower",
-          "Ridgeside Monkshood",
+          "Ridgeside Monkshood"
         ],
         "SummerItemIndex": [
           "Mountain Chico",
           "Ridge Wild Apple",
           "Forest Amancay",
           "Mountain Hokkaido",
-          "Violet Devil's Claw",
+          "Violet Devil's Claw"
         ],
         "FallItemIndex": [
           "Autumn Drop Berry",
           "Highland Chard",
           "Lava Lily",
           "Summit Snowbell",
-          "Highland Butterwort",
+          "Highland Butterwort"
         ],
         "WinterItemIndex": [
           "Frost Clump Berry",
           "Ridgeside Clementine",
           "Aurorean Iris",
-          "Sierra Wintergreen",
+          "Sierra Wintergreen"
         ],
         "UniqueAreaID": "RSV RidgeFalls Forage",
         "MapName": "Custom_Ridgeside_RidgeFalls",
@@ -319,13 +294,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Ridge Falls Forage Data
-//===============================================================
-
-//===============================================================
-//Start Foxbloom
-//===============================================================
       {
         "SpringItemIndex": [
           "Foxbloom"
@@ -343,9 +311,7 @@
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 1,
-        "IncludeTerrainTypes": [
-          "Grass"
-        ],
+        "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
           "54, 22",
@@ -354,7 +320,7 @@
           "158, 60",
           "33, 110",
           "61, 95",
-          "162, 123",
+          "162, 123"
         ],
         "ExcludeCoordinates": [],
         "StrictTileChecking": "High",
@@ -370,7 +336,8 @@
           "Years": [],
           "Seasons": [],
           "Days": [
-            "1", "28"
+            "1",
+            "28"
           ],
           "WeatherYesterday": [],
           "WeatherToday": [
@@ -378,20 +345,12 @@
           ],
           "WeatherTomorrow": [],
           "EPUPreconditions": [
-            "HasItem Relic Fox Mask" 
+            "HasItem Relic Fox Mask"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Foxbloom
-//===============================================================
-
-//===============================================================
-//Start Ridge Forest Forage Data
-//===============================================================
-//Ridge Forest Forage  
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -459,8 +418,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-//Ridge Forest Treasures
       {
         "SpringItemIndex": [
           74,
@@ -521,8 +478,6 @@
         },
         "DaysUntilSpawnsExpire": 7
       },
-
-      //Ridge Forest - Mistbloom Spawn
       {
         "SpringItemIndex": [
           "Mountain Mistbloom"
@@ -538,8 +493,8 @@
         ],
         "UniqueAreaID": "RSV Mistbloom",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 5,
-        "MaximumSpawnsPerDay": 10,
+        "MinimumSpawnsPerDay": 7,
+        "MaximumSpawnsPerDay": 15,
         "IncludeTerrainTypes": [
           "Grass"
         ],
@@ -560,15 +515,18 @@
           "Seasons": [],
           "Days": [],
           "WeatherYesterday": [],
-          "WeatherToday": ["Rain", "Storm"],
+          "WeatherToday": [
+            "Rain",
+            "Storm"
+          ],
           "WeatherTomorrow": [],
-          "EPUPreconditions": ["e 75160254"],
+          "EPUPreconditions": [
+            "e 75160254"
+          ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-//Yellow Wood Sculpture
       {
         "SpringItemIndex": [
           "Yellow Wood Sculpture"
@@ -607,7 +565,9 @@
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [
-            "Rain", "Storm", "Snow"
+            "Rain",
+            "Storm",
+            "Snow"
           ],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
@@ -615,8 +575,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-//Silver Fish Bones
       {
         "SpringItemIndex": [
           "Silver Fish Bones"
@@ -675,8 +633,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-//Inked Fossil
       {
         "SpringItemIndex": [
           "Inked Fossil"
@@ -735,8 +691,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-//Nightblack Diamond
       {
         "SpringItemIndex": [
           "Nightblack Diamond"
@@ -786,8 +740,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-//Shell Bracelet
       {
         "SpringItemIndex": [
           "Shell Bracelet"
@@ -808,7 +760,7 @@
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
-          "42,12/42,12",
+          "42,12/42,12"
         ],
         "ExcludeCoordinates": [],
         "StrictTileChecking": "None",
@@ -826,18 +778,16 @@
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [
-            "Rain", "Storm", "Snow"
+            "Rain",
+            "Storm",
+            "Snow"
           ],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
-      },
-//===============================================================
-//End Ridge Forest Forage Data
-//===============================================================
-
+      }
     ],
     "PercentExtraSpawnsPerForagingLevel": 0,
     "SpringItemIndex": [
@@ -863,8 +813,6 @@
   },
   "Large_Object_Spawn_Settings": {
     "Areas": [
-
-      //Spawn log to block ridgeforest
       {
         "ObjectTypes": [
           "Log"
@@ -903,13 +851,14 @@
         },
         "DaysUntilSpawnsExpire": 0
       },
-
-      //Spawn large objects on SummitFarm
       {
         "ObjectTypes": [
-          "Log", "Boulder"
+          "Log",
+          "Boulder"
         ],
         "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
         "UniqueAreaID": "Summit Farm large objects",
         "MapName": "Custom_Ridgeside_SummitFarm",
         "MinimumSpawnsPerDay": 0,
@@ -937,6 +886,7 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 0
       }
@@ -995,7 +945,7 @@
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
-      },
+      }
     ],
     "PercentExtraSpawnsPerMiningLevel": 0,
     "MiningLevelRequired": {
@@ -1059,12 +1009,6 @@
   },
   "Monster_Spawn_Settings": {
     "Areas": [
-
-//=====================================
-//Ridge Forest Monsters
-//=====================================
-  
-  //Ghost
       {
         "MonsterTypes": [
           {
@@ -1077,7 +1021,7 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Ghost",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1106,14 +1050,12 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [
-            "!HasItem Pale Candelabrum" 
+            "!HasItem Pale Candelabrum"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-  //Corrupted Spirit
       {
         "MonsterTypes": [
           {
@@ -1130,7 +1072,7 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1159,14 +1101,12 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [
-            "!HasItem Pale Candelabrum" 
+            "!HasItem Pale Candelabrum"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-  //Wraith
       {
         "MonsterTypes": [
           {
@@ -1183,7 +1123,7 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Wraith",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1212,15 +1152,12 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [
-            "!HasItem Everfrost Stone" 
+            "!HasItem Everfrost Stone"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-  //Viperial
-   //Golden Skull Coral and Entombed Ring
       {
         "MonsterTypes": [
           {
@@ -1239,7 +1176,7 @@
                 "Entombed Ring"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Viperial",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1268,14 +1205,12 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [
-            "!HasItem Ancient Music Box" 
+            "!HasItem Ancient Music Box"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-  //Serpentine Beasts
       {
         "MonsterTypes": [
           {
@@ -1322,7 +1257,7 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Beasts",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1351,14 +1286,12 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "EPUPreconditions": [
-            "!HasItem Village Hero Sculpture" 
+            "!HasItem Village Hero Sculpture"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
       },
-
-  //Wild Monsters
       {
         "MonsterTypes": [
           {
@@ -1412,18 +1345,12 @@
         },
         "DaysUntilSpawnsExpire": null
       },
-
-//=====================================
-//Spirit Realm Monsters - Corrupted
-//=====================================
-  
-  //Corrupted Spirit
       {
         "MonsterTypes": [
           {
             "MonsterName": "ghost",
             "Settings": {
-              "SpawnWeight": 4,
+              "SpawnWeight": 3,
               "HP": 100,
               "Damage": 30,
               "SeesPlayersAtSpawn": false,
@@ -1434,12 +1361,12 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 50,
-        "MaximumSpawnsPerDay": 50,
+        "MinimumSpawnsPerDay": 15,
+        "MaximumSpawnsPerDay": 20,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1450,9 +1377,9 @@
         "SpawnTiming": {
           "StartTime": 600,
           "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 10,
+          "MinimumTimeBetweenSpawns": 40,
           "MaximumSimultaneousSpawns": 2,
-          "OnlySpawnIfAPlayerIsPresent": false,
+          "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
         "ExtraConditions": {
@@ -1469,8 +1396,6 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-  //Wraith
       {
         "MonsterTypes": [
           {
@@ -1487,12 +1412,12 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Wraith",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 30,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 15,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1503,9 +1428,9 @@
         "SpawnTiming": {
           "StartTime": 600,
           "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 20,
-          "MaximumSimultaneousSpawns": 2,
-          "OnlySpawnIfAPlayerIsPresent": false,
+          "MinimumTimeBetweenSpawns": 70,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
         "ExtraConditions": {
@@ -1522,14 +1447,12 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-  //Viperial
       {
         "MonsterTypes": [
           {
             "MonsterName": "pepper rex",
             "Settings": {
-              "SpawnWeight": 1,
+              "SpawnWeight": 2,
               "HP": 2000,
               "Damage": 20,
               "SeesPlayersAtSpawn": false,
@@ -1540,24 +1463,28 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Viperial",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 3,
-        "MaximumSpawnsPerDay": 8,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
+        "IncludeCoordinates": [
+          "94,64/94,64",
+          "97,21/97,21",
+          "42,12/42,12",
+          "7,21/7,21",
+          "3,68/3,68"
+        ],
         "ExcludeCoordinates": [],
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 30,
-          "MaximumSimultaneousSpawns": 1,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },
@@ -1575,14 +1502,12 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-
-  //Beasts
       {
         "MonsterTypes": [
           {
             "MonsterName": "shadow brute",
             "Settings": {
-              "SpawnWeight": 2,
+              "SpawnWeight": 4,
               "HP": 400,
               "Damage": 15,
               "SeesPlayersAtSpawn": false,
@@ -1623,12 +1548,12 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Beasts",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 50,
-        "MaximumSpawnsPerDay": 50,
+        "MinimumSpawnsPerDay": 30,
+        "MaximumSpawnsPerDay": 40,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1638,9 +1563,9 @@
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
+          "EndTime": 600,
           "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 2,
+          "MaximumSimultaneousSpawns": null,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },
@@ -1657,8 +1582,7 @@
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
-      },
-      
+      }
     ],
     "CustomTileIndex": []
   },
