@@ -50,6 +50,23 @@
 			"FromFile": "Assets/{{Target}}.png",
 		},
 
+	//Load 1st Anniversary Fanart winners
+		{
+			"Action": "Load",
+			"Target": "LooseSprites/RSVAniv1stArt",
+			"FromFile": "Assets/LooseSprites/RSV1stAniv/{{TargetWithoutPath}}.png",
+		},
+		{
+			"Action": "Load",
+			"Target": "LooseSprites/RSVAniv2ndArt",
+			"FromFile": "Assets/LooseSprites/RSV1stAniv/{{TargetWithoutPath}}.png",
+		},
+		{
+			"Action": "Load",
+			"Target": "LooseSprites/RSVAniv3rdArt",
+			"FromFile": "Assets/LooseSprites/RSV1stAniv/{{TargetWithoutPath}}.png",
+		},
+
 	//CHAIRS!!!!
 		{
 			"Action": "EditData",
