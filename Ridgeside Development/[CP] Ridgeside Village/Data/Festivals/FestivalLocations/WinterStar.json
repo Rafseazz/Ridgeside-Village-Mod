@@ -1,22 +1,22 @@
 {
 "Changes": [
 
-	{
+    {
    "Action": "EditData",
    "Target": "Data/Festivals/winter25",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
    "TextOperations": [
    
    //SetUp
-		{
+        {
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
          "Value": "Aguar 8 64 right/Alissa 21 66 left/Bert 41 57 down/Corine 32 61 left/Ezekiel 31 60 down/Flor 32 56 down/Freddie 38 72 left/Ian 21 71 right/Jeric 30 61 right/Jio 74 74 right/Keahi 27 70 up/Kenneth 26 55 right/Kiwi 74 75 right/Lenny 26 61 down/Lola 38 73 left/Maddie 23 53 down/Olga 20 66 right/Philip 28 55 left/Pika 23 72 up/Richard 30 74 up/Shiro 41 59 left/Trinnie 42 57 down/Ysabelle 31 74 up/Yuuma 41 60 left",
          "Delimiter": "/"
-		},
+        },
 
-	]	
-	},
+    ]   
+    },
 
     //2.0 Pips spots! THE TRUE RSV EXPERIENCE!
     {
@@ -24,8 +24,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "FullFestivals": true,
-            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
+            "FullFestivals": true
         },
         "TextOperations": [
             {
@@ -42,7 +41,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160249, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "FullFestivals": true
+            "HasSeenEvent": 75160249, "FullFestivals": true
         },
         "TextOperations": [
             {
@@ -59,7 +58,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160254, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "FullFestivals": true
+            "HasSeenEvent": 75160254, "FullFestivals": true
         },
         "TextOperations": [
             {
@@ -70,6 +69,6 @@
             },
         ]
     },
-	
+    
 ]
 }
