@@ -146,6 +146,16 @@ namespace RidgesideVillage
                 // no save loaded (e.g. on the title screen)
                 return new[] { "" };
             });
+
+            cp.RegisterToken(this.ModManifest, "FoxbloomDay", () => {
+                int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                if (randomseed is not null)
+                {   //Seed the random with a seed that only changes every 28 days
+                    Random random = new Random((int)Game1.uniqueIDForThisGame + (randomseed.Value / 28));
+                    return new[] { (random.Next(1, 5) * 7).ToString() };
+                }
+                return null; //return null for an unready token.
+            });
         }
     }
 }
