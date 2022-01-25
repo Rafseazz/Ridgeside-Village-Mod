@@ -1071,14 +1071,13 @@
             "RandomizedElements": null,
             "Objectives": [
                {
-                  "Type": "Donate",
+                  "Type": "Deliver",
                   "Text": "[RSV.SpecialOrder.MythFlower_Objective1_Text]",
                   "RequiredCount": "1",
                   "Data": {
-                     "DropBox": "RSVNinja",
-                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
-                     "DropBoxIndicatorLocation": "13.5 4.4",
-                     "AcceptedContextTags": "item_foxbloom"
+                     "AcceptedContextTags": "item_foxbloom",
+                     "TargetName": "Belinda",
+                     "Message": "[RSV.SpecialOrder.MythFlower_BelText]"
                   }
                },
             ],
