@@ -367,7 +367,7 @@ namespace RidgesideVillage
                 if (k.isVillager() && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && (Game1.player.friendshipData.ContainsKey(k.Name)))
                 {
 
-                    SDate birthday = new SDate(k.Birthday_Day, k.Birthday_Season);
+                    SDate birthday = new SDate(k.Birthday_Day, k.Birthday_Season.ToLower());
                     if(birthday < todaysDate)
                     {
                         //if birthday in the past, add a year
