@@ -725,75 +725,6 @@
             ]
          },
 
-         //Pika Exotic Ingredients
-         "RSV.SpecialOrder.ExoticIngredients": {
-            "Name": "[RSV.SpecialOrder.ExoticIngredients_Name]",
-            "Requester": "Pika",
-            "Duration": "Month",
-            "Repeatable": "true",
-            "RequiredTags": "",
-            "OrderType": "QF:RSVTownSO",
-            "SpecialRule": "",
-            "Text": "[RSV.SpecialOrder.ExoticIngredients_Text]",
-            "ItemToRemoveOnEnd": null,
-            "MailToRemoveOnEnd": null,
-            "RandomizedElements": null,
-            "Objectives": [
-               {
-                  "Type": "Donate",
-                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective1_Text]",
-                  "RequiredCount": "1",
-                  "Data": {
-                     "DropBox": "RSVPikaHouse",
-                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
-                     "DropBoxIndicatorLocation": "8.5 8.4",
-                     "AcceptedContextTags": "item_crimson_spiked_clam"
-                  }
-               },
-               {
-                  "Type": "Donate",
-                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective2_Text]",
-                  "RequiredCount": "10",
-                  "Data": {
-                     "DropBox": "RSVPikaHouse",
-                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
-                     "DropBoxIndicatorLocation": "8.5 8.4",
-                     "AcceptedContextTags": "item_cherry_pluot"
-                  }
-               },
-               {
-                  "Type": "Donate",
-                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective3_Text]",
-                  "RequiredCount": "30",
-                  "Data": {
-                     "DropBox": "RSVPikaHouse",
-                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
-                     "DropBoxIndicatorLocation": "8.5 8.4",
-                     "AcceptedContextTags": "item_lava_lily"
-                  }
-               },
-               {
-                  "Type": "Donate",
-                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective4_Text]",
-                  "RequiredCount": "10",
-                  "Data": {
-                     "DropBox": "RSVPikaHouse",
-                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
-                     "DropBoxIndicatorLocation": "8.5 8.4",
-                     "AcceptedContextTags": "item_tropi_ugli_fruit"
-                  }
-               },
-            ],
-            "Rewards": [
-               {
-                  "Type": "Money",
-                  "Data": {
-                     "Amount": "12000"
-                  }
-               },
-            ]
-         },
-
          //Richard Power Hotel
          "RSV.SpecialOrder.HotelPower": {
             "Name": "[RSV.SpecialOrder.HotelPower_Name]",
@@ -1093,7 +1024,331 @@
 
 
       }
-   }
+   },
+
+ //--------------------------------------------------
+ //Seasonal Special Orders
+ //--------------------------------------------------
+
+   // Spring special orders
+   {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "When": { "Season": "spring" },
+      "Entries": {
+
+         //Pika Spring Exotic Ingredients
+         "RSV.SpecialOrder.ExoticIngredients": {
+            "Name": "[RSV.SpecialOrder.ExoticIngredients_Name]",
+            "Requester": "Pika",
+            "Duration": "Month",
+            "Repeatable": "true",
+            "RequiredTags": "",
+            "OrderType": "QF:RSVTownSO",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ExoticIngredients_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective1_Text-spring]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_crimson_spiked_clam"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective2_Text-spring]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_cherry_pluot"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective3_Text-spring]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_mountain_plumcot"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective4_Text-spring]",
+                  "RequiredCount": "20",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_mountain_arugula"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Money",
+                  "Data": {
+                     "Amount": "12000"
+                  }
+               },
+            ]
+         },
+
+      }
+   },
+
+   // Summer special orders
+   {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "When": { "Season": "summer" },
+      "Entries": {
+
+         //Pika Summer Exotic Ingredients
+         "RSV.SpecialOrder.ExoticIngredients": {
+            "Name": "[RSV.SpecialOrder.ExoticIngredients_Name]",
+            "Requester": "Pika",
+            "Duration": "Month",
+            "Repeatable": "true",
+            "RequiredTags": "",
+            "OrderType": "QF:RSVTownSO",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ExoticIngredients_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective1_Text-summer]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_bladetail_sturgeon"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective2_Text-summer]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_paradise_rangpur"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective3_Text-summer]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_tropi_ugli_fruit"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective4_Text-summer]",
+                  "RequiredCount": "20",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_mountain_chico"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Money",
+                  "Data": {
+                     "Amount": "12000"
+                  }
+               },
+            ]
+         },
+
+      }
+   },
+
+   // Fall special orders
+   {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "When": { "Season": "fall" },
+      "Entries": {
+
+         //Pika Fall Exotic Ingredients
+         "RSV.SpecialOrder.ExoticIngredients": {
+            "Name": "[RSV.SpecialOrder.ExoticIngredients_Name]",
+            "Requester": "Pika",
+            "Duration": "Month",
+            "Repeatable": "true",
+            "RequiredTags": "",
+            "OrderType": "QF:RSVTownSO",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ExoticIngredients_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective1_Text-fall]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_fixer_eel"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective2_Text-fall]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_northern_limequat"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective3_Text-fall]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_highland_jostaberry"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective4_Text-fall]",
+                  "RequiredCount": "20",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_lava_lily"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Money",
+                  "Data": {
+                     "Amount": "12000"
+                  }
+               },
+            ]
+         },
+
+      }
+   },
+
+   // Winter special orders
+   {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Update": "OnLocationChange",
+      "When": { "Season": "winter" },
+      "Entries": {
+
+         //Pika Winter Exotic Ingredients
+         "RSV.SpecialOrder.ExoticIngredients": {
+            "Name": "[RSV.SpecialOrder.ExoticIngredients_Name]",
+            "Requester": "Pika",
+            "Duration": "Month",
+            "Repeatable": "true",
+            "RequiredTags": "",
+            "OrderType": "QF:RSVTownSO",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ExoticIngredients_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective1_Text-winter]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_cardia_septal_jellyfish"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective2_Text-winter]",
+                  "RequiredCount": "5",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_mountain_whitefish"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective3_Text-winter]",
+                  "RequiredCount": "20",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_ridgeside_clementine"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective4_Text-winter]",
+                  "RequiredCount": "20",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_frost_clump_berry"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Money",
+                  "Data": {
+                     "Amount": "12000"
+                  }
+               },
+            ]
+         },
+
+      }
+   },
 
 ],
 }
