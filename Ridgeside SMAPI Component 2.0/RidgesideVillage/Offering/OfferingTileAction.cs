@@ -75,7 +75,6 @@ namespace RidgesideVillage.Offering
                 //do standard thing or so?
                 return;
             }
-
             var Events = Game1.currentLocation.GetLocationEvents();
 
             if (Events.TryGetValue(Offer.ScriptKey, out string EventScript))
@@ -115,8 +114,17 @@ namespace RidgesideVillage.Offering
         {
             if (player.CurrentItem != null && player.CurrentItem.canBeDropped())
             {
+                GameLocation location = Game1.currentLocation;
                 Debris thrownItem = Game1.createItemDebris(player.CurrentItem.getOne(), player.getStandingPosition() + new Vector2(0, -32), 0);
                 player.reduceActiveItemByOne();
+
+                //sink the item after 500ms
+                Game1.delayedActions.Add(new DelayedAction(500, () => {
+                    Chunk thrownItemChunk = thrownItem.Chunks[0];
+                    Vector2 chunkTile = thrownItemChunk.position.Value / 64f;
+                    location.sinkDebris(thrownItem, chunkTile, thrownItem.Chunks[0].position);
+                    location.debris.Remove(thrownItem);
+                }));
             }                           
         }
     }

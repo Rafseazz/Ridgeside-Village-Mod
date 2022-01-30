@@ -49,9 +49,7 @@ namespace RidgesideVillage
                 return;
             }
 
-            var FarmModData = Game1.getFarm().modData;
-            waterPlantsIfNeeded(FarmModData);
-            
+            var FarmModData = Game1.getFarm().modData;            
             
             if (FarmModData.ContainsKey(willFixFences))
             {
@@ -77,6 +75,8 @@ namespace RidgesideVillage
                 petAnimals();
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasPetAnimals"), HUDMessage.newQuest_type));
             }
+
+            IanShop.Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
         }
 
         private static void petAnimals()
@@ -88,10 +88,13 @@ namespace RidgesideVillage
             }
         }
 
-        //Will water plots if player has flag
+        //Will water plants if player has flag
         //format is daysLeft/Size
-        private static void waterPlantsIfNeeded(ModDataDictionary farmModData)
+        private static void waterPlantsIfNeeded(object sender, OneSecondUpdateTickedEventArgs e)
         {
+
+            IanShop.Helper.Events.GameLoop.OneSecondUpdateTicked -= waterPlantsIfNeeded;
+            var farmModData = Game1.getFarm().modData;
             if (Game1.IsRainingHere(Game1.getFarm()))
             {
                 return;
@@ -105,7 +108,7 @@ namespace RidgesideVillage
                 }
 
                 int wateringDaysLeft = int.Parse(valueSplit[0]);
-                int amountOfTiles = int.Parse(valueSplit[1]);
+                int numberOfTiles = int.Parse(valueSplit[1]);
 
                 if(wateringDaysLeft <= 0)
                 {
@@ -122,12 +125,11 @@ namespace RidgesideVillage
                 else
                 {
                     wateringDaysLeft--;
-                    farmModData[willWaterPlants] = $"{wateringDaysLeft}/{amountOfTiles}";
+                    farmModData[willWaterPlants] = $"{wateringDaysLeft}/{numberOfTiles}";
 
                 }
-
+                WaterThePlants(numberOfTiles);
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
-                WaterThePlants(amountOfTiles);
             }
         }
 
@@ -300,6 +302,7 @@ namespace RidgesideVillage
                 {
                     break;
                 }
+
                 if (pair.Value is HoeDirt dirt && dirt.state.Value == 0 && dirt.crop != null)
                 {
                     dirt.state.Value = 1;
