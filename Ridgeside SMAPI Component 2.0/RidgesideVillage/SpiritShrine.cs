@@ -124,6 +124,7 @@ namespace RidgesideVillage
                     var Events = location.GetLocationEvents();
                     
                     var PortalEvent = new Event(Events["75160256/y 2/n InexistentMailFlag"], eventID: 75160256);
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder("RSV.UntimedSpecialOrder.SpiritRealmFlames", null));
                     UtilFunctions.StartEvent(PortalEvent, "Custom_Ridgeside_RidgeFalls", 15, 43);
                 }
             }
