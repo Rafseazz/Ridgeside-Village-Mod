@@ -124,6 +124,17 @@ namespace RidgesideVillage
                     counter++;
                 }
             }
+
+            if (Game1.player.team.SpecialOrderActive("RSV.UntimedSpecialOrder.SpiritRealmFlames"))
+            {
+                SpecialOrder corruptedFireQuest = Game1.player.team.specialOrders.Where(so => so.questKey.Equals("RSV.UntimedSpecialOrder.SpiritRealmFlames")).FirstOrDefault();
+                if(corruptedFireQuest != null)
+                {
+                    corruptedFireQuest.objectives[0].currentCount.Value = counter;
+                    corruptedFireQuest.CheckCompletion();
+                }
+            }
+
             if(counter >= 5)
             {
                 var events = location.GetLocationEvents();
