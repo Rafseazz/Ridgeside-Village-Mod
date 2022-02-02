@@ -256,8 +256,8 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="2341" name="spring_zridgesidebuildings" tilewidth="16" tileheight="16" tilecount="2418" columns="62">
-  <image source="spring_zridgesidebuildings.png" width="992" height="624"/>
+ <tileset firstgid="2341" name="spring_zridgesidebuildings" tilewidth="16" tileheight="16" tilecount="3968" columns="62">
+  <image source="spring_zridgesidebuildings.png" width="992" height="1024"/>
   <tile id="1926">
    <animation>
     <frame tileid="1926" duration="100"/>
@@ -315,7 +315,7 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="4759" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+ <tileset firstgid="6309" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
   <tile id="150">
    <properties>
@@ -1516,13 +1516,13 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="6734" name="springobjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
+ <tileset firstgid="8284" name="springobjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
   <image source="springobjects.png" width="384" height="624"/>
  </tileset>
- <tileset firstgid="7670" name="zridgesideCraftables" tilewidth="16" tileheight="16" tilecount="448" columns="8">
+ <tileset firstgid="9220" name="zridgesideCraftables" tilewidth="16" tileheight="16" tilecount="448" columns="8">
   <image source="zridgesideCraftables.png" width="128" height="896"/>
  </tileset>
- <tileset firstgid="8118" name="RVanimals" tilewidth="16" tileheight="16" tilecount="432" columns="24">
+ <tileset firstgid="9668" name="RVanimals" tilewidth="16" tileheight="16" tilecount="432" columns="24">
   <image source="RVanimals.png" width="384" height="288"/>
   <tile id="0">
    <animation>
@@ -1821,8 +1821,8 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="8550" name="spring_zridgeside" tilewidth="16" tileheight="16" tilecount="220" columns="10">
-  <image source="spring_zridgeside.png" width="160" height="352"/>
+ <tileset firstgid="10100" name="spring_zridgeside" tilewidth="16" tileheight="16" tilecount="468" columns="18">
+  <image source="spring_zridgeside.png" width="288" height="416"/>
   <tile id="0">
    <animation>
     <frame tileid="0" duration="100"/>
@@ -1844,25 +1844,18 @@
     <frame tileid="8" duration="100"/>
    </animation>
   </tile>
-  <tile id="10">
+  <tile id="18">
    <animation>
-    <frame tileid="10" duration="100"/>
-    <frame tileid="13" duration="100"/>
-    <frame tileid="16" duration="100"/>
-   </animation>
-  </tile>
-  <tile id="11">
-   <animation>
-    <frame tileid="11" duration="100"/>
-    <frame tileid="14" duration="100"/>
-    <frame tileid="17" duration="100"/>
-   </animation>
-  </tile>
-  <tile id="12">
-   <animation>
-    <frame tileid="12" duration="100"/>
-    <frame tileid="15" duration="100"/>
     <frame tileid="18" duration="100"/>
+    <frame tileid="21" duration="100"/>
+    <frame tileid="24" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="19">
+   <animation>
+    <frame tileid="19" duration="100"/>
+    <frame tileid="22" duration="100"/>
+    <frame tileid="25" duration="100"/>
    </animation>
   </tile>
   <tile id="20">
@@ -1872,73 +1865,80 @@
     <frame tileid="26" duration="100"/>
    </animation>
   </tile>
-  <tile id="21">
+  <tile id="36">
    <animation>
-    <frame tileid="21" duration="100"/>
-    <frame tileid="24" duration="100"/>
-    <frame tileid="27" duration="100"/>
-   </animation>
-  </tile>
-  <tile id="22">
-   <animation>
-    <frame tileid="22" duration="100"/>
-    <frame tileid="25" duration="100"/>
-    <frame tileid="28" duration="100"/>
-   </animation>
-  </tile>
-  <tile id="30">
-   <animation>
-    <frame tileid="30" duration="100"/>
-    <frame tileid="33" duration="100"/>
     <frame tileid="36" duration="100"/>
+    <frame tileid="39" duration="100"/>
+    <frame tileid="42" duration="100"/>
    </animation>
   </tile>
-  <tile id="31">
+  <tile id="37">
    <animation>
-    <frame tileid="31" duration="100"/>
-    <frame tileid="34" duration="100"/>
     <frame tileid="37" duration="100"/>
-   </animation>
-  </tile>
-  <tile id="32">
-   <animation>
-    <frame tileid="32" duration="100"/>
-    <frame tileid="35" duration="100"/>
-    <frame tileid="38" duration="100"/>
-   </animation>
-  </tile>
-  <tile id="40">
-   <animation>
     <frame tileid="40" duration="100"/>
     <frame tileid="43" duration="100"/>
-    <frame tileid="46" duration="100"/>
    </animation>
   </tile>
-  <tile id="41">
+  <tile id="38">
    <animation>
+    <frame tileid="38" duration="100"/>
     <frame tileid="41" duration="100"/>
     <frame tileid="44" duration="100"/>
-    <frame tileid="47" duration="100"/>
    </animation>
   </tile>
-  <tile id="42">
+  <tile id="54">
    <animation>
-    <frame tileid="42" duration="100"/>
-    <frame tileid="45" duration="100"/>
-    <frame tileid="48" duration="100"/>
+    <frame tileid="54" duration="100"/>
+    <frame tileid="57" duration="100"/>
+    <frame tileid="60" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="55">
+   <animation>
+    <frame tileid="55" duration="100"/>
+    <frame tileid="58" duration="100"/>
+    <frame tileid="61" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="56">
+   <animation>
+    <frame tileid="56" duration="100"/>
+    <frame tileid="59" duration="100"/>
+    <frame tileid="62" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="72">
+   <animation>
+    <frame tileid="72" duration="100"/>
+    <frame tileid="75" duration="100"/>
+    <frame tileid="78" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="73">
+   <animation>
+    <frame tileid="73" duration="100"/>
+    <frame tileid="76" duration="100"/>
+    <frame tileid="79" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="74">
+   <animation>
+    <frame tileid="74" duration="100"/>
+    <frame tileid="77" duration="100"/>
+    <frame tileid="80" duration="100"/>
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="8770" name="zrsvshadows" tilewidth="16" tileheight="16" tilecount="1674" columns="62">
+ <tileset firstgid="10568" name="zrsvshadows" tilewidth="16" tileheight="16" tilecount="1674" columns="62">
   <image source="zrsvshadows.png" width="992" height="432"/>
  </tileset>
- <tileset firstgid="10444" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="437" columns="19">
-  <image source="z_rsvinterior.png" width="304" height="368"/>
+ <tileset firstgid="12242" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="665" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="560"/>
  </tileset>
  <layer id="2" name="Buildings" width="2" height="3">
   <data encoding="csv">
-5277,5267,
-5301,5292,
+6827,6817,
+6851,6842,
 0,0
 </data>
  </layer>
