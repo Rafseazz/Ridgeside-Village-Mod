@@ -1021,6 +1021,39 @@
                },
             ]
          },
+		 
+		          //extinguish the flames
+         "RSV.UntimedSpecialOrder.SpiritRealmFlames": {
+            "Name": "[RSV.SpecialOrder.SpiritRealmFlames_Name]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "true",
+            "RequiredTags": "",
+            "OrderType": "QF:RSVNinjaSO",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.SpiritRealmFlames_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Collect",
+                  "Text": "[RSV.SpecialOrder.SpiritRealmFlames_Objective1_Text]",
+                  "RequiredCount": "5",
+                  "Data": {
+                     "AcceptedContextTags": "rsv_inexistent_tag",
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Money",
+                  "Data": {
+                     "Amount": "10000"
+                  }
+               },
+            ]
+         },
 
 
       }
