@@ -48,7 +48,7 @@ namespace RidgesideVillage
                 switch ((string)__instance.buildingType.Value)
                 {
                     case "RSV Obelisk":
-                        Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 114, 45, flip: false);
+                        Game1.warpFarmer("Custom_Ridgeside_Ridge", 18, 10, flip: false);
                         break;
                 }
                 return true;
