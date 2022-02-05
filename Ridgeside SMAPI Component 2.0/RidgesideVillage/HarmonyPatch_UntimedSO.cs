@@ -110,6 +110,14 @@ namespace RidgesideVillage
             
         }
 
+        private static void SpecialOrders_CheckCompletion_postfix(ref SpecialOrder __instance)
+        {
+            if (__instance.questKey.Value == "RSV.UntimedSpecialOrder.DaiaQuest")
+            {
+                Game1.player.questLog.Add(Quest.getQuestFromId(i));
+            }
+        }
+
         public static void OnDayEnd(object sender, DayEndingEventArgs e)
         {
             if (!Context.IsMainPlayer)

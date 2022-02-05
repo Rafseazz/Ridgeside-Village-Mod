@@ -12,6 +12,8 @@ namespace RidgesideVillage
 
         public static IJsonAssetsApi JA;
 
+        public static IQuestFrameworkApi QF;
+
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
@@ -22,6 +24,12 @@ namespace RidgesideVillage
             if(JA == null)
             {
                 Log.Warn("Json Assets API not found. This could lead to issues.");
+            }
+
+            JA = Helper.ModRegistry.GetApi<IQuestFrameworkApi>("purrplingcat.QuestFramework");
+            if (QF == null)
+            {
+                Log.Warn("Quest Framework API not found. This could lead to issues.");
             }
         }
     }

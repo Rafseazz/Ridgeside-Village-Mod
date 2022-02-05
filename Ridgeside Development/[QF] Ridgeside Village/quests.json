@@ -526,41 +526,130 @@
 	"Trigger": "Custom_Ridgeside_MysticFalls3",
 	},
 
-  // Storyline guide quests
+  //---Storyline guide quests---///
+
   {
+    // After Daia's quest, added by finishing SO
      "Name": "preparations_complete",
      "Type": "Basic",
-     "Title": "Preparations Complete!",
-     "Description": "Now that you've collected all the strange objects Daia asked for, return to the ninja house tomorrow for further instruction.",
-     "Objective": "Return to the ninja house tomorrow.",
+     "Title": "%i18n:preparations_complete.title",
+     "Description": "%i18n:preparations_complete.description",
+     "Objective": "%i18n:preparations_complete.objective",
+     "NextQuests": [ "follow_ninja_note" ],
      "Cancelable": true,
      "Hooks": [
-       {
-          "When": "Location",
-          "Has": {
-            "Enter": "Custom_Ridgeside_Ridge",
-            "MailReceived": "RSV.CompleteDaiaQuest"
-          },
-          "Action": "Accept"
-       },
-       {
-          "When": "Location",
-          "Has": {
-            "Enter": "Custom_Ridgeside_Ridge"
-          },
-          "Action": "CheckIfComplete"
-       },
        {
           "When": "Tile",
           "Has": {
             "Location": "Custom_Ridgeside_Ridge",
-            "Area": "89 20 16 16",
-            "QuestAcceptedToday": "no"
+            "Area": "5696 1280 64 64",
+            //"QuestAcceptedToday": "no"
           },
           "Action": "Complete"
       },
+      {
+         "When": "Tile",
+         "Has": {
+           "Location": "Custom_Ridgeside_Ridge",
+           "Area": "0 0 7040 3200",
+           "EventSeen": 75160255
+         },
+         "Action": "Remove"
+     },
      ]
    },
+   {
+     // After reading note
+      "Name": "follow_ninja_note",
+      "Type": "Basic",
+      "Title": "%i18n:follow_ninja_note.title",
+      "Description": "%i18n:follow_ninja_note.description",
+      "Objective": "%i18n:follow_ninja_note.objective",
+      "NextQuests": [ "rae_failed_unseal" ],
+      "Cancelable": true,
+      "Hooks": [
+        {
+           "When": "Tile",
+           "Has": {
+             "Location": "Custom_Ridgeside_Ridge",
+             "Area": "0 0 7040 3200",
+             "EventSeen": 75160255
+           },
+           "Action": "Complete"
+       },
+      ]
+    },
+    {
+      // After meeting Belinda
+       "Name": "rae_failed_unseal",
+       "Type": "Basic",
+       "Title": "%i18n:rae_failed_unseal.title",
+       "Description": "%i18n:rae_failed_unseal.description",
+       "Objective": "%i18n:rae_failed_unseal.objective",
+       "Cancelable": true,
+       "Hooks": [
+         {
+            "When": "Tile",
+            "Has": {
+              "Location": "Custom_Ridgeside_RidgeForest",
+              "Area": "0 0 10880 9600",
+              "EventSeen": 75160257
+            },
+            "Action": "Complete"
+        },
+      ]
+    },
+    {
+      // After completing crystal quests, added by finishing SO
+       "Name": "rae_unseal",
+       "Type": "Basic",
+       "Title": "%i18n:rae_unseal.title",
+       "Description": "%i18n:rae_unseal.description",
+       "Objective": "%i18n:rae_unseal.objective",
+       "NextQuests": [ "open_spirit_portal" ],
+       "Cancelable": true,
+       "Hooks": [
+         {
+            "When": "Tile",
+            "Has": {
+              "Location": "Farm",
+              "Area": "4096 1024 64 64",
+              "EventSeen": 75160258
+            },
+            "Action": "Accept"
+        },
+        {
+           "When": "Tile",
+           "Has": {
+             "Location": "Custom_Ridgeside_Ridge",
+             "Area": "0 0 7040 3200",
+             "EventSeen": 75160259
+           },
+           "Action": "Complete"
+       },
+     ]
+    },
+    {
+      // After unsealing Rae
+       "Name": "open_spirit_portal",
+       "Type": "Basic",
+       "Title": "%i18n:open_spirit_portal.title",
+       "Description": "%i18n:open_spirit_portal.description",
+       "Objective": "%i18n:open_spirit_portal.objective",
+       "Cancelable": true,
+       "Hooks": [
+        {
+           "When": "Tile",
+           "Has": {
+             "Location": "Custom_Ridgeside_RidgeFalls",
+             "Area": "0 0 5120 3904",
+             "EventSeen": 75160256
+           },
+           "Action": "Complete"
+       },
+       ]
+     },
+
   ],
 
 
