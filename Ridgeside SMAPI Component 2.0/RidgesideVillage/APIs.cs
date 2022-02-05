@@ -26,7 +26,7 @@ namespace RidgesideVillage
                 Log.Warn("Json Assets API not found. This could lead to issues.");
             }
 
-            JA = Helper.ModRegistry.GetApi<IQuestFrameworkApi>("purrplingcat.QuestFramework");
+            QF = Helper.ModRegistry.GetApi<IQuestFrameworkApi>("purrplingcat.QuestFramework");
             if (QF == null)
             {
                 Log.Warn("Quest Framework API not found. This could lead to issues.");
