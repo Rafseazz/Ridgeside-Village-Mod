@@ -528,8 +528,8 @@
 
   //---Storyline guide quests---///
 
+  // Reminder to follow up after completing Daia's quest, added in SMAPI
   {
-    // After Daia's quest, added by finishing SO
      "Name": "preparations_complete",
      "Type": "Basic",
      "Title": "%i18n:preparations_complete.title",
@@ -539,14 +539,16 @@
      "Cancelable": true,
      "Hooks": [
        {
+         // Complete when note 'read'
           "When": "Tile",
           "Has": {
             "Location": "Custom_Ridgeside_Ridge",
             "Area": "5696 1280 64 64",
-            //"QuestAcceptedToday": "no"
+            "QuestAcceptedToday": "no"
           },
           "Action": "Complete"
       },
+      // Or complete if player went straight to meeting Belinda
       {
          "When": "Tile",
          "Has": {
@@ -554,21 +556,22 @@
            "Area": "0 0 7040 3200",
            "EventSeen": 75160255
          },
-         "Action": "Remove"
+         "Action": "Complete"
      },
      ]
    },
+   // Reminder to follow up on note
    {
-     // After reading note
       "Name": "follow_ninja_note",
       "Type": "Basic",
       "Title": "%i18n:follow_ninja_note.title",
       "Description": "%i18n:follow_ninja_note.description",
       "Objective": "%i18n:follow_ninja_note.objective",
-      "NextQuests": [ "rae_failed_unseal" ],
+      "NextQuests": [ "rae_pre_unseal" ],
       "Cancelable": true,
       "Hooks": [
         {
+          // Completed when Belinda met
            "When": "Tile",
            "Has": {
              "Location": "Custom_Ridgeside_Ridge",
@@ -579,16 +582,17 @@
        },
       ]
     },
+    // Added after meeting Belinda
     {
-      // After meeting Belinda
-       "Name": "rae_failed_unseal",
+       "Name": "rae_pre_unseal",
        "Type": "Basic",
-       "Title": "%i18n:rae_failed_unseal.title",
-       "Description": "%i18n:rae_failed_unseal.description",
-       "Objective": "%i18n:rae_failed_unseal.objective",
+       "Title": "%i18n:rae_pre_unseal.title",
+       "Description": "%i18n:rae_pre_unseal.description",
+       "Objective": "%i18n:rae_pre_unseal.objective",
        "Cancelable": true,
        "Hooks": [
          {
+           // Completed when crystal quests received
             "When": "Tile",
             "Has": {
               "Location": "Custom_Ridgeside_RidgeForest",
@@ -599,8 +603,8 @@
         },
       ]
     },
+    // Reminder of what Bliss says
     {
-      // After completing crystal quests, added by finishing SO
        "Name": "rae_unseal",
        "Type": "Basic",
        "Title": "%i18n:rae_unseal.title",
@@ -610,15 +614,17 @@
        "Cancelable": true,
        "Hooks": [
          {
+           // Added when Bliss comes to farm
             "When": "Tile",
             "Has": {
               "Location": "Farm",
-              "Area": "4096 1024 64 64",
+              "Area": "0 0 99999 99999",
               "EventSeen": 75160258
             },
             "Action": "Accept"
         },
         {
+          // Completed when Rae unseal event seen
            "When": "Tile",
            "Has": {
              "Location": "Custom_Ridgeside_Ridge",
@@ -629,8 +635,8 @@
        },
      ]
     },
+    // Added after unsealing Rae
     {
-      // After unsealing Rae
        "Name": "open_spirit_portal",
        "Type": "Basic",
        "Title": "%i18n:open_spirit_portal.title",
@@ -639,6 +645,7 @@
        "Cancelable": true,
        "Hooks": [
         {
+          // Completed when spirit portal opened
            "When": "Tile",
            "Has": {
              "Location": "Custom_Ridgeside_RidgeFalls",
