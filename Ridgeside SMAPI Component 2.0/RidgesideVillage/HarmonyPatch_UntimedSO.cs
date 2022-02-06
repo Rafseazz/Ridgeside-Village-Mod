@@ -38,9 +38,15 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.IsTimedQuest)),
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_IsTimed_postifx))
             );
-               
+
+            //only method called once on quest end. Is called for *all* players, not just host.
+            harmony.Patch(
+                original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.HostHandleQuestEnd)),
+                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_HostHandleQuestEnd_postfix))
+            );
+
             //causes issues on MAC apparently??
-            if(Constants.TargetPlatform == GamePlatform.Windows) 
+            if (Constants.TargetPlatform == GamePlatform.Windows) 
             {
                  harmony.Patch(
                     original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
@@ -108,6 +114,26 @@ namespace RidgesideVillage
                 return;
             }
             
+        }
+
+        private static void SpecialOrders_HostHandleQuestEnd_postfix(ref SpecialOrder __instance)
+        {
+            try
+            {
+                if (__instance.questKey.Value == "RSV.UntimedSpecialOrder.DaiaQuest")
+                {
+                    int questID = ExternalAPIs.QF.ResolveQuestId("preparations_complete@Rafseazz.RSVQF");
+                    Game1.player.addQuest((questID));
+                }
+            }
+            catch (Exception e)
+            {
+
+                Log.Error("Error in SpecialOrders_HostHandleQuestEnd_postfix");
+                Log.Error(e.Message);
+                Log.Error(e.StackTrace);
+            }
+           
         }
 
         public static void OnDayEnd(object sender, DayEndingEventArgs e)
