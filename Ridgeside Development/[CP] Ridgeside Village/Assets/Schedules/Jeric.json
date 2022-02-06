@@ -7,11 +7,11 @@
 		"Target": "Characters/Schedules/Jeric",
 		"Entries": {
 
-			"spring": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
-			"summer": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
-			"fall": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
-			"winter": "610 Custom_Ridgeside_RidgesideVillage 11 26 3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 39 20 3/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
-			"rain": "610 Custom_Ridgeside_RidgesideVillage 39 20 3/900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_JericHouse 12 5 0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"spring": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/a900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"summer": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/a900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"fall": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/a900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"winter": "610 Custom_Ridgeside_RidgesideVillage 11 26 3/a900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 39 20 3/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"rain": "610 Custom_Ridgeside_RidgesideVillage 39 20 3/a900 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_JericHouse 12 5 0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
 			"Sat": "800 Town 27 23 2/1500 Beach 41 8 2/1900 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
 			"Tue": "GOTO Sat",
 			"Thu": "610 Custom_Ridgeside_RidgesideVillage 19 27 3 square_1_5_3/800 SeedShop 6 19 0/1300 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
@@ -32,11 +32,11 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Jeric",
 		"Entries": {
-			"Mon": "610 Custom_Ridgeside_RSVGreenhouse1 39 22 0 square_5_1_0/1000 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
+			"Mon": "610 Custom_Ridgeside_RSVGreenhouse1 39 22 0 square_5_1_0/a1000 Custom_Ridgeside_JericHouse 2 13 2/1800 Custom_Ridgeside_RidgesideVillage 38 28 0 square_3_1_0/2000 Custom_Ridgeside_JericHouse 18 5 0 jeric_sleep",
 					},
 		"When": {
 			"HasFlag: hostPlayer |contains=GH1letter": true,
-		}  
+		}
 	},
 
 ]
