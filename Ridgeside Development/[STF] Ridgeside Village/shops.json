@@ -1719,7 +1719,7 @@
 				"Tropi Ugli Fruit Sapling",
 				],
 		},
-		//Year 2
+		//Year Two
 		{
 			"ItemType": "Object",
 			"ItemNames": [
@@ -1899,6 +1899,70 @@
 				"Village Color Shirt",
 				 ],
 			"StockPrice": 3000,
+			"Stock": 1,
+		},
+	],
+	},
+
+  //------------
+	//PikaIslandShop
+	//------------
+	{
+	"ShopName": "RSVPikaIslandShop",
+	"StoreCurrency": "Money",
+	"CategoriesToSellHere": [ -7 ],
+	"PortraitPath": "assets/PikaShop.png",
+	"Quote": "Aloha! How about a nice drink to cool off?",
+	"ShopPrice": -1,
+	"MaxNumItemsSoldInStore": 6,
+	"DefaultSellPriceMultiplier": 0.7,
+	"When": ["NPCAt Pika 14 21"],
+	"LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+	"LocalizedClosedMessage": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+	"ItemStocks": [
+		//Food
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Ridgeside Shaketini",
+				"Autumn Dew Drop Juice",
+				"Cherry Berry Shakey",
+				"Snowball Slurpee",
+        "Summit Iced Tea",
+        "Apricot Juice",
+        "Clementine Juice",
+        "Wild Apple Juice",
+				"Highland Ice Cream",
+				"Snow Bowl Surprise",
+        "Holiday Ice",
+        "Tropic Mango Cake"
+				],
 			"Stock": 1,
 		},
 	],

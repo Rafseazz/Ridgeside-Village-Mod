@@ -1,0 +1,27 @@
+{
+	"Changes": [
+		{
+				"LogName": "Pika Bartends",
+				"Action": "EditData",
+				"Target": "Mods/atravita_Ginger_Island_Adjustments_bartenders",
+				"Entries": {
+					"Pika": "Pika"
+				}
+		},
+		{
+				"LogName": "Pika Island Shop",
+				"Action": "EditMap",
+				"Target": "Maps/Island_Resort",
+				"MapTiles": [
+					 {
+							"Position": { "X": 5, "Y": 7 },
+							"Layer": "Buildings",
+							"SetProperties": {
+								 "Shop": "RSVPikaIslandShop",
+								 "Action": ""
+							}
+					 }
+				]
+		},
+	]
+}
