@@ -112,5 +112,27 @@
 
 		},
 	},
+
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Flor",
+   "When": {  	
+   	"Relationship:Flor": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Flor.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Flor.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Flor.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Flor.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Flor.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Flor.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Flor.Dialogue.Sun8.dating}}",
+		},
+	},
 ]
 }

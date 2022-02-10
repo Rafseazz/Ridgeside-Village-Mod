@@ -92,5 +92,27 @@
 	"Resort": "{{i18n:Sean.Dialogue.Resort}}",
 		},
 	},
+
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Sean",
+   "When": {  	
+   	"Relationship:Sean": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Sean.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Sean.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Sean.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Sean.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Sean.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Sean.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Sean.Dialogue.Sun8.dating}}",
+		},
+	},
 ]
 }

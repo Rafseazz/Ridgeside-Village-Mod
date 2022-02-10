@@ -108,5 +108,27 @@
 	"Resort": "{{i18n:Kiarra.Dialogue.Resort}}",
 		},
 	},
+
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Kiarra",
+   "When": {  	
+   	"Relationship:Kiarra": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Kiarra.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Kiarra.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Kiarra.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Kiarra.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Kiarra.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Kiarra.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Kiarra.Dialogue.Sun8.dating}}",
+		},
+	},
 ]
 }
