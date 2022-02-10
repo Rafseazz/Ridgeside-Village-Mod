@@ -23,5 +23,41 @@
 					 }
 				]
 		},
+		{
+        "LogName": "Explorers",
+        "Action": "EditData",
+        "Target": "Mods/atravita_Ginger_Island_Adjustments_explorers",
+        "Entries": {
+            "Ninjas": "Jio, Kiwi, Daia",
+						"Pranksters": "Blair, Sean, Keahi, Trinnie",
+						"Bladebanes": "Freddie, Lola",
+						"WaterLab": "Aguar, Maddie",
+        }
+    },
+		{
+        "LogName": "Groups",
+        "Action": "EditData",
+        "Target": "Mods/atravita_Ginger_Island_Adjustments_groups",
+        "Entries": {
+            "FunDads": "Bert, Pika, Trinnie, Keahi",
+						"TownBachelors": "Ian, Jeric, Kenneth, Philip, Shiro",
+						"TownBachelorettes": "Alissa, Corine, Flor, Maddie, Ysa",
+						"Amethynes": "Maive, Louie, Ariah, Irene, Sonny",
+						"Kobayashis": "Naomi, Shiro, Yuuma",
+						"Lidens": "Bert, Olga, Trinnie, Malaya, Kimpoi, Alissa",
+						"Legames": "Anton, Kiarra, Lorenzo, Shanice",
+						"FriendDay": "Ysabelle, Corine, Jeric, Faye, Anton, Paula"
+        }
+    },
+		{
+			"Action": "EditData",
+			"Target": "Mods/atravita_Ginger_Island_Adjustments_exclusions",
+			"Entries": {
+				"Sonny": "neveralone", // Sonny only goes when the Amethyne family goes
+				"Trinnie": "neveralone, tue, wed, fri", // Kids don't go alone either
+				"Keahi": "neveralone, tue, wed, fri",
+				"Yuuma": "neveralone, fri",
+			}
+		},
 	]
 }
