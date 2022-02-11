@@ -33,32 +33,66 @@ namespace RidgesideVillage
 
             Helper.Events.GameLoop.DayEnding += OnDayEnd;
             Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_UntimedSO)}\" prefixing SDV method.");
+            
             harmony.Patch(
-                original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
+                original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.IsTimedQuest)),
+                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_IsTimed_postifx))
             );
-            try
+
+            //only method called once on quest end. Is called for *all* players, not just host.
+            harmony.Patch(
+                original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.HostHandleQuestEnd)),
+                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_HostHandleQuestEnd_postfix))
+            );
+
+            //causes issues on MAC apparently??
+            if (Constants.TargetPlatform == GamePlatform.Windows) 
             {
-                Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
-                harmony.Patch(
-                    original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
+                 harmony.Patch(
+                    original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
                     postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
                 );
+                try
+                {
+                    Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
+                    harmony.Patch(
+                        original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
+                        postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
+                    );
+                }
+                catch
+                {
+                    Log.Info("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
+                }
             }
-            catch
+            else
             {
-                Log.Warn("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
+                Log.Trace($"Not patching GetProtraitForRequester because platform is {Constants.TargetPlatform}");
             }
+            
            
         }
-        
+
+        private static void SpecialOrders_IsTimed_postifx(ref SpecialOrder __instance, ref bool __result)
+        {
+            if (__instance.questKey.Value.StartsWith("RSV.UntimedSpecialOrder"))
+            {
+                __result = false;
+            }
+        }
+
         private static void SpecialOrdersBoard_GetPortrait_postifx(SpecialOrdersBoard __instance, string requester_name, ref KeyValuePair<Texture2D, Rectangle>?  __result)
         {
             try
             {
                 if (RSVemojis == null)
                 {
-                    RSVemojis = Game1.content.Load<Texture2D>("LooseSprites\\RSVemojis");
+                    RSVemojis = Helper.Content.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis"), ContentSource.GameContent);
+                    if(RSVemojis== null)
+                    {
+                        Log.Error($"Loading error: Couldn't load {PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis")}");
+                        return;
+                    }
                 }
 
                 if (__result == null)
@@ -80,6 +114,26 @@ namespace RidgesideVillage
                 return;
             }
             
+        }
+
+        private static void SpecialOrders_HostHandleQuestEnd_postfix(ref SpecialOrder __instance)
+        {
+            try
+            {
+                if (__instance.questKey.Value == "RSV.UntimedSpecialOrder.DaiaQuest")
+                {
+                    int questID = ExternalAPIs.QF.ResolveQuestId("preparations_complete@Rafseazz.RSVQF");
+                    Game1.player.addQuest((questID));
+                }
+            }
+            catch (Exception e)
+            {
+
+                Log.Error("Error in SpecialOrders_HostHandleQuestEnd_postfix");
+                Log.Error(e.Message);
+                Log.Error(e.StackTrace);
+            }
+           
         }
 
         public static void OnDayEnd(object sender, DayEndingEventArgs e)

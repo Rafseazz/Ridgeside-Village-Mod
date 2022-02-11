@@ -8,7 +8,7 @@
 		{
 			"Action": "Load",
 			"Target": "LooseSprites/RSVQuestBoard",
-			"FromFile": "Assets/LooseSprites/{{TargetWithoutPath}}_{{Language}}.png",
+			"FromFile": "{{FirstValidFile: Assets/LooseSprites/{{TargetWithoutPath}}_{{Language}}.png, Assets/LooseSprites/{{TargetWithoutPath}}_en.png}}",
 		},
 
 		{

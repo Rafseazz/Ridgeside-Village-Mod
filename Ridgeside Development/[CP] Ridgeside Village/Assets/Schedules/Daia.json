@@ -20,6 +20,18 @@
 			"HasSeenEvent": 75160187,
 		}  
 	},
+	//Temp
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Daia",
+		"Entries": {
+			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+					},
+		"When": {
+			"HasFlag": "RSV.CompleteDaiaQuest",
+			"HasSeenEvent |contains=75160255": false,
+		}   
+	},
 
 	//Social Schedule
 	{
@@ -28,8 +40,8 @@
 		"Entries": {
 			"spring": "0 Custom_Ridgeside_RSVNinjaHouse 14 6 2/610 Custom_Ridgeside_Ridge 97 34 3 daia_train/1000 Custom_Ridgeside_RidgesideVillage 136 132 1/1800 Custom_Ridgeside_Ridge 89 15 2 daia_meditate/2400 Custom_Ridgeside_RSVNinjaHouse 8 5 0",
 			"Fri": "0 Custom_Ridgeside_RSVNinjaHouse 14 6 2/610 Custom_Ridgeside_RSVCliff 82 21 1/1600 Custom_Ridgeside_RidgesideVillage 63 51 1/2400 Custom_Ridgeside_RSVNinjaHouse 8 5 0",
-			"Wed": "0 Custom_Ridgeside_RSVNinjaHouse 14 6 2/610 Custom_Ridgeside_RidgesideVillage 89 59 2/1300 Custom_Ridgeside_Ridge 71 47 0/2000 Custom_Ridgeside_RSVNinjaHouse 8 5 0",
-			"rain": "0 Custom_Ridgeside_RSVNinjaHouse 14 6 2/900 Custom_Ridge_LogCabinHotel2ndFloor 29 21 2/1800 Custom_Ridgeside_Ridge 89 15 2 daia_meditate/2400 Custom_Ridgeside_RSVNinjaHouse",
+			"Wed": "0 Custom_Ridgeside_RSVNinjaHouse 14 6 2/610 Custom_Ridgeside_RidgesideVillage 88 58 2/1300 Custom_Ridgeside_Ridge 71 47 0/2000 Custom_Ridgeside_RSVNinjaHouse 8 5 0",
+			"rain": "0 Custom_Ridgeside_RSVNinjaHouse 14 6 2/900 Custom_Ridge_LogCabinHotel2ndFloor 29 21 2/1800 Custom_Ridgeside_Ridge 89 15 2 daia_meditate/2400 Custom_Ridgeside_RSVNinjaHouse 8 5 0",
 
 
 			//Marriage

@@ -1,5 +1,5 @@
 {
-	"Format": "1.22.0",
+	"Format": "1.24.0",
 
 	/*********
 	** Configuration
@@ -10,18 +10,18 @@
 			"Default": "true",
 			"Description": "Enable Cable Car Cutscene"
 		},
-		
+
 		"EnableOtherNPCsInCableCar": {
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "Enable the chances of other NPCs to appear riding the Cable Car (Along with LASV, ES and SVE NPCs)"
 		},
-		
+
 		"EnableRidgesideMusic": {
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "Enables music for Ridgeside Village"
-		},		
+		},
 
 		"RSVNPCSAttendFestivals": {
 			"AllowValues": "true, false",
@@ -37,16 +37,30 @@
 
 		"FullFestivals": {
 			"AllowValues": "true, false",
-			"Default": "false",
-			"Description": "The true RSV experience. Almost all of RSV NPCs attend the vanilla festivals. Might be incompatible with most mods, especially SVE."
+			"Default": "true",
+			"Description": "The true RSV experience. Almost all of RSV NPCs attend the vanilla festivals. Might be incompatible with other mods, especially SVE."
 		},
 
 		"EnableBetterBusStop": {
 			"AllowValues": "true, false",
 			"Default": "false",
-			"Description": "Uses Ridgeside Village's official patch for the Bus Stop. Might be incompatible with most mods."
-		}			
+			"Description": "Uses Ridgeside Village's official patch for the Bus Stop by TheLimeyDragon and Rafseazz. Might be incompatible with other mods."
+		},
+
+		"AutoWeddingReception": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Whether Naomi automatically takes you to the reception after your wedding, or if you must go there yourself. Recommended setting 'false' for custom farm users."
+		},
+
+/*		"EnableVanillaEdits": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Edits vanilla content to integrate Ridgeside with the base game. Might be incompatible with other mods."
+		},
+*/
 },
+
 
 	/*********
 	** Dynamic tokens
@@ -58,7 +72,7 @@
 		// Ridgeside
 		{
 			"Name": "PossibleCableCarNPCs",
-			"Value": "Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma"
+			"Value": "Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Anton, Ariah, Blair, Carmen, Faye, Irene, Kiarra, Lorenzo, Louie, Paula, Sean, Shanice, Sonny"
 		},
 
 		// Vanilla
@@ -81,13 +95,33 @@
 			}
 		},
 
+		// Leilani
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, Leilani",
+			"When": {
+				"EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=ZoeDoll.NPCLeilani": true
+			}
+		},
+
 		// East Scarpe
 		{
 			"Name": "PossibleCableCarNPCs",
-			"Value": "{{PossibleCableCarNPCs}}, Aideen, Lexi, Jacob, Eloise",
+			"Value": "{{PossibleCableCarNPCs}}, Aideen, Jacob, Eloise, Leximonster",
 			"When": {
 				"EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=Lemurkat.JacobEloise.CP": true
+			}
+		},
+
+		// Always Raining in the Valley
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, Mia, Sterling, Henry",
+			"When": {
+				"EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=Himetarts.ARV.CP": true
 			}
 		},
 
@@ -129,9 +163,9 @@
 		//Alone
 		{
 			"Name": "BONFIREEVENT",
-			"Value": "/warp farmer1 40 49/warp farmer2 39 49/warp farmer3 38 49/warp farmer4 41 49/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 0/faceDirection farmer 0/fade/viewport 39 46/pause 2000/move farmer1 0 -5 0/pause 1000/playSound backpackIN/addObject 40 42 294/pause 2000/message \"{{i18n:EoR.19}}\"/pause 3000/emote farmer1 32/pause 1000/globalFade/viewport -1000 -1000/warp farmer1 40 49/warp farmer2 39 49/warp farmer3 38 49/warp farmer4 41 49/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 0/",
+			"Value": "/warp farmer1 40 49/warp farmer2 39 49/warp farmer3 38 49/warp farmer4 41 49/faceDirection farmer1 0/faceDirection farmer2 0/faceDirection farmer3 0/faceDirection farmer4 0/fade/viewport 39 46/pause 2000/advancedMove farmer1 false 0 -5/pause 3000/faceDirection farmer1 0/playSound backpackIN/addObject 40 42 294/pause 2000/message \"{{i18n:EoR.19}}\"/pause 3000/emote farmer1 32/pause 1000/globalFade/viewport -1000 -1000/warp farmer1 40 49/faceDirection farmer1 0/",
 		},
-		
+
 		/*********
 		** Ridgeside gathering tokens
 		*********/
@@ -217,7 +251,7 @@
 		},
 		{
 			"Name": "RANDOMMUSIC",
-			"Value": "{{Random:poppy, shimmeringbastion, honkytonky, heavy, cm:AlissaConcert}}",
+			"Value": "{{Random:poppy, shimmeringbastion, honkytonky, heavy, AlissaConcert}}",
 			"When": {
 				"HasSeenEvent |contains=75160120": true
 			},
@@ -226,26 +260,25 @@
 		/*********
 		** Various tokens
 		*********/
-		//ODD YEAR	
+		//ODD YEAR
 		{
 			"Name": "IsOddYear",
 			"Value": "{{Query: {{Year}} % 2 = 1}}"
 		},
-		
+
 		//Random Undreya Spawn
 		{
 			"Name": "RANDOMUNDREYA",
-			"Value": "{{Random:0 Custom_Ridgeside_RidgesideVillage 47 22 0, 0 Custom_Ridgeside_RidgesideVillage 73 69 0, 0 Town 98 85 0, 0 Custom_Ridgeside_RSVCliff 21 11 0, 0 BusStop 29 16 0, 0 Custom_Ridgeside_Ridge 39 14, 0 Custom_Ridgeside_RSVCableCar 9 14 0, 0 Custom_Ridgeside_RidgesideVillage 131 105 0, 0 Mountain 31 5 0, 0 Mountain 87 33 0, 0 Mountain 51 37 0, 0 Beach 69 5 0, 0 Beach 37 31 0, 0 Custom_Ridgeside_RidgesideVillage 141 45 0, 0 Town 46 15 0, 0 Custom_Ridgeside_RidgesideVillage 13 82 0, 0 Custom_Ridgeside_RidgesideVillage 127 31 0, 0 Custom_Ridgeside_RidgesideVillage 57 44 0, 0 Town 18 8 0, 0 Town 6 78 0}}",
+			"Value": "{{Random:0 Custom_Ridgeside_RidgesideVillage 47 22 0/610 Custom_Ridgeside_RidgesideVillage 47 22 0, 0 Custom_Ridgeside_RidgesideVillage 73 69 0/610 Custom_Ridgeside_RidgesideVillage 73 69 0, 0 Town 98 85 0/610 Town 98 85 0, 0 Custom_Ridgeside_RSVCliff 21 11 0/610 Custom_Ridgeside_RSVCliff 21 11 0, 0 BusStop 29 16 0/610 BusStop 29 16 0, 0 Custom_Ridgeside_Ridge 39 14 0/610 Custom_Ridgeside_Ridge 39 14 0, 0 Custom_Ridgeside_RSVCableCar 9 14 0/610 Custom_Ridgeside_RSVCableCar 9 14 0, 0 Custom_Ridgeside_RidgesideVillage 131 105 0/610 Custom_Ridgeside_RidgesideVillage 131 105 0, 0 Mountain 31 5 0/610 Mountain 31 5 0, 0 Mountain 87 33 0/610 Mountain 87 33 0, 0 Mountain 51 37 0/610 Mountain 51 37 0, 0 Beach 69 5 0/610 Beach 69 5 0, 0 Beach 37 31 0/610 Beach 37 31 0, 0 Custom_Ridgeside_RidgesideVillage 141 45 0/610 Custom_Ridgeside_RidgesideVillage 141 45 0, 0 Town 46 15 0/610 Town 46 15 0, 0 Custom_Ridgeside_RidgesideVillage 13 82 0/610 Custom_Ridgeside_RidgesideVillage 13 82 0, 0 Custom_Ridgeside_RidgesideVillage 127 31 0/610 Custom_Ridgeside_RidgesideVillage 127 31 0, 0 Custom_Ridgeside_RidgesideVillage 57 44 0/610 Custom_Ridgeside_RidgesideVillage 57 44 0, 0 Town 18 8 0/610 Town 18 8 0, 0 Town 6 78 0/610 Town 6 78 0}}",
 		},
 
-		//Spouse Genders	
+		//Spouse Genders
 		{
 			"Name": "SpouseGender",
 			"Value": "female",
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'female'": true
 			},
-			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "SpouseGender",
@@ -253,7 +286,6 @@
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'male'": true
 			},
-			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "SpouseGender",
@@ -261,7 +293,6 @@
 			"When": {
 				"Query: '{{Rafseazz.RidgesideVillage/SpouseGender}}' = 'undefined'": true
 			},
-			"Update": "OnLocationChange, OnTimeChange"
 		},
 		{
 			"Name": "NPCListCheck",
@@ -327,7 +358,7 @@
 			{
 				"Name": "Custom_Ridgeside_RSVCliff_AlissaDate",
 				"FromMapFile": "Assets/Maps/EventMaps/RSVCliff_AlissaDate.tmx",
-			}, 
+			},
 			{
 				"Name": "Custom_Ridgeside_RSVCorineDate",
 				"FromMapFile": "Assets/Maps/EventMaps/RSVCorineDate.tmx",
@@ -339,27 +370,27 @@
 			{
 				"Name": "Custom_Ridgeside_Ridge_KennethDate_OFF",
 				"FromMapFile": "Assets/Maps/EventMaps/Ridge_KennethDate_OFF.tmx",
-			}, 
+			},
 			{
 				"Name": "Custom_Ridgeside_Ridge_KennethDate_ON",
 				"FromMapFile": "Assets/Maps/EventMaps/Ridge_KennethDate_ON.tmx",
-			},    
+			},
 			/*********
 			** Aguar
-			*********/		
+			*********/
 			{
 				"Name": "Custom_Ridgeside_AguarCave",
 				"FromMapFile": "Assets/Maps/EventMaps/AguarCave.tmx",
 				"MigrateLegacyNames": [ "AguarCave" ]
-			},   
+			},
 			{
 				"Name": "Custom_Ridgeside_AguarCaveTemporary",
 				"FromMapFile": "Assets/Maps/EventMaps/AguarCaveTemporary.tmx",
 				"MigrateLegacyNames": [ "AguarCaveTemporary" ]
-			},  
+			},
 			/*********
 			** Ezekiel
-			*********/	
+			*********/
 			{
 				"Name": "Custom_Ridgeside_EzekielPic",
 				"FromMapFile": "Assets/Maps/EventMaps/EzekielPic.tmx",
@@ -372,10 +403,10 @@
 				"Name": "Custom_Ridgeside_LolaShed",
 				"FromMapFile": "Assets/Maps/EventMaps/LolaShed.tmx",
 				"MigrateLegacyNames": [ "LolaShed" ]
-			},        	
+			},
 			/*********
 			** Undreya
-			*********/	
+			*********/
 			{
 				"Name": "Custom_Ridgeside_RSVAbandonedHouse",
 				"FromMapFile": "Assets/Maps/EventMaps/RSVAbandonedHouse.tmx",
@@ -388,7 +419,7 @@
 				"Name": "Custom_Ridgeside_PrincessVilleDate",
 				"FromMapFile": "Assets/Maps/EventMaps/PrincessVilleDate.tmx",
 				"MigrateLegacyNames": [ "PrincessVilleDate" ]
-			},   
+			},
 			/*********
 			** Public Greenhouses
 			*********/
@@ -404,15 +435,15 @@
 			},
 			/*********
 			** CableCar Cutscene
-			*********/		
+			*********/
 			{
 				"Name": "Custom_Ridgeside_RSVTheRide",
 				"FromMapFile": "Assets/Maps/EventMaps/RSVTheRide.tmx",
 				"MigrateLegacyNames": [ "RSVTheRide" ]
-			}, 
+			},
 			/*********
 			** Event Hall Variants
-			*********/		
+			*********/
 			{
 				"Name": "Custom_Ridgeside_LogCabinEventHall_WeddingReception",
 				"FromMapFile": "Assets/Maps/EventMaps/LogCabinEventHall_WeddingReception.tmx",
@@ -431,7 +462,7 @@
 			},
 		/*********
 		** FestivalMaps
-		*********/    	   
+		*********/
 		{
 			"Name": "Custom_Ridgeside_EmberNight",
 			"FromMapFile": "Assets/Maps/FestivalMaps/EmberNight.tmx",
@@ -441,11 +472,11 @@
 			"Name": "Custom_Ridgeside_RSVGathering",
 			"FromMapFile": "Assets/Maps/FestivalMaps/RSVGathering.tmx",
 			"MigrateLegacyNames": [ "RSVGathering" ]
-		},      	  	   
+		},
 
 		/*********
 		** IndoorMaps
-		*********/    	
+		*********/
 		{
 			"Name": "Custom_Ridgeside_AguarBasement",
 			"FromMapFile": "Assets/Maps/IndoorMaps/AguarBasement.tmx",
@@ -460,12 +491,12 @@
 			"Name": "Custom_Ridgeside_AlissaHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/AlissaHouse.tmx",
 			"MigrateLegacyNames": [ "AlissaHouse" ]
-		},     	   
+		},
 		{
 			"Name": "Custom_Ridgeside_AlissaShed",
 			"FromMapFile": "Assets/Maps/IndoorMaps/AlissaShed.tmx",
 			"MigrateLegacyNames": [ "AlissaShed" ]
-		},     	   	
+		},
 		{
 			"Name": "Custom_Ridgeside_BertHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/BertHouse.tmx",
@@ -495,7 +526,7 @@
 			"Name": "Custom_Ridgeside_JericHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/JericHouse.tmx",
 			"MigrateLegacyNames": [ "JericHouse" ]
-		},     	   
+		},
 		{
 			"Name": "Custom_Ridgeside_KennethHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/KennethHouse.tmx",
@@ -510,7 +541,7 @@
 			"Name": "Custom_Ridgeside_LogCabinHotel2ndFloor",
 			"FromMapFile": "Assets/Maps/IndoorMaps/LogCabinHotel2ndFloor.tmx",
 			"MigrateLegacyNames": [ "LogCabinHotel2ndFloor" ]
-		},        
+		},
 		{
 			"Name": "Custom_Ridgeside_LogCabinHotel3rdFloor",
 			"FromMapFile": "Assets/Maps/IndoorMaps/LogCabinHotel3rdFloor.tmx",
@@ -520,7 +551,7 @@
 			"Name": "Custom_Ridgeside_LogCabinHotelLobby",
 			"FromMapFile": "Assets/Maps/IndoorMaps/LogCabinHotelLobby.tmx",
 			"MigrateLegacyNames": [ "LogCabinHotelLobby" ]
-		},        	
+		},
 		{
 			"Name": "Custom_Ridgeside_MaddieHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/MaddieHouse.tmx",
@@ -530,12 +561,12 @@
 			"Name": "Custom_Ridgeside_PikaHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/PikaHouse.tmx",
 			"MigrateLegacyNames": [ "PikaHouse" ]
-		},        
+		},
 		{
 			"Name": "Custom_Ridgeside_RSVNinjaHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/RSVNinjaHouse.tmx",
 			"MigrateLegacyNames": [ "RSVNinjaHouse" ]
-		},  
+		},
 		{
 			"Name": "Custom_Ridgeside_ShiroHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/ShiroHouse.tmx",
@@ -585,7 +616,7 @@
 
 		/*********
 		** QuestMaps
-		*********/    	
+		*********/
 		{
 			"Name": "Custom_Ridgeside_MysticFalls1",
 			"FromMapFile": "Assets/Maps/QuestMaps/MysticFalls1.tmx",
@@ -595,7 +626,7 @@
 			"Name": "Custom_Ridgeside_MysticFalls2",
 			"FromMapFile": "Assets/Maps/QuestMaps/MysticFalls2.tmx",
 			"MigrateLegacyNames": [ "MysticFalls2" ]
-		},      	   
+		},
 		{
 			"Name": "Custom_Ridgeside_MysticFalls3",
 			"FromMapFile": "Assets/Maps/QuestMaps/MysticFalls3.tmx",
@@ -608,12 +639,12 @@
 
 		/*********
 		** OutdoorMaps
-		*********/    	
+		*********/
 		{
 			"Name": "Custom_Ridgeside_Ridge",
 			"FromMapFile": "Assets/Maps/OutdoorMaps/Ridge.tmx",
 			"MigrateLegacyNames": [ "Ridge" ]
-		},      
+		},
 		{
 			"Name": "Custom_Ridgeside_RidgeFalls",
 			"FromMapFile": "Assets/Maps/OutdoorMaps/RidgeFalls.tmx",
@@ -627,7 +658,7 @@
 			"Name": "Custom_Ridgeside_RidgesideVillage",
 			"FromMapFile": "Assets/Maps/OutdoorMaps/RidgesideVillage.tmx",
 			"MigrateLegacyNames": [ "RidgesideVillage" ]
-		},    
+		},
 		{
 			"Name": "Custom_Ridgeside_RSVCableCar",
 			"FromMapFile": "Assets/Maps/OutdoorMaps/RSVCableCar.tmx",
@@ -637,30 +668,30 @@
 			"Name": "Custom_Ridgeside_RSVCliff",
 			"FromMapFile": "Assets/Maps/OutdoorMaps/RSVCliff.tmx",
 			"MigrateLegacyNames": [ "RSVCliff" ]
-		},       	     	
+		},
 		{
 			"Name": "Custom_Ridgeside_RSVTheHike",
 			"FromMapFile": "Assets/Maps/OutdoorMaps/RSVTheHike.tmx",
 			"MigrateLegacyNames": [ "RSVTheHike" ]
-		},  
+		},
 		{
 			"Name": "Custom_Ridgeside_SummitFarm",
 			"FromMapFile": "Assets/Maps/OutdoorMaps/SummitFarm.tmx",
-		},      	
+		},
 
 		/*********
 		** DynamicMaps
-		*********/    	
+		*********/
 		{
 			"Name": "Custom_Ridgeside_RSVCliffNight",
 			"FromMapFile": "Assets/Maps/DynamicMaps/RSVCliffNight.tmx",
 			"MigrateLegacyNames": [ "RSVCliffNight" ]
-		},      	      	      	      	      	
+		},
 		{
 			"Name": "Custom_Ridgeside_RSVHiddenWarp",
 			"FromMapFile": "Assets/Maps/DynamicMaps/RSVHiddenWarp.tmx",
 			"MigrateLegacyNames": [ "RSVHiddenWarp" ]
-		},     
+		},
 		{
 			"Name": "Custom_Ridgeside_RSVHiddenWarp2",
 			"FromMapFile": "Assets/Maps/DynamicMaps/RSVHiddenWarp2.tmx",
@@ -669,7 +700,7 @@
 		{
 			"Name": "Custom_Ridgeside_WeddingReceptionPic",
 			"FromMapFile": "Assets/Maps/EventMaps/WeddingReceptionPic.tmx",
-		},        	 	   
+		},
 
 	],
 
@@ -684,11 +715,21 @@
 
 	//Include Dependency Data
 	/*
-		Loads cp code for Custom Companions, Farm Type Manager, NPCMapLocations, Questframework, AntisocialNPCs, and Custom NPC Exclusions.
+		Loads cp code for Custom Companions, Farm Type Manager, Questframework, AntisocialNPCs, and Custom NPC Exclusions.
 	*/
 	{
 		"Action": "Include",
-		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/CustomCompanionsTourists.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/NPCMapLocations.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
+		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/CustomCompanionsTourists.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
+	},
+
+	//Include GIMA Data
+	/*
+		Optional stuff for Pika's island shop when he visits.
+	*/
+	{
+		"Action": "Include",
+		"FromFile": "Data/DependencyData/GingerIslandMainlandAdjustments.json",
+		"When": { "HasMod |contains=atravita.GingerIslandMainlandAdjustments": true }
 	},
 
 	//Include Event Data
@@ -728,7 +769,7 @@
 	{
 		"LogName": "Include Dynamic Changes",
 		"Action": "Include",
-		"FromFile": "Data/DynamicChanges/AntiSocialChanges.json, Data/DynamicChanges/DialogueChanges.json, Data/DynamicChanges/MapChanges.json, Data/DynamicChanges/MusicChanges.json, Data/DynamicChanges/PortraitChanges.json, Data/DynamicChanges/ScheduleChanges.json, Data/DynamicChanges/SpriteChanges.json"
+		"FromFile": "Data/DynamicChanges/AntiSocialChanges.json, Data/DynamicChanges/DialogueChanges.json, Data/DynamicChanges/ExclusionChanges.json, Data/DynamicChanges/MapChanges.json, Data/DynamicChanges/MusicChanges.json, Data/DynamicChanges/PortraitChanges.json, Data/DynamicChanges/ScheduleChanges.json, Data/DynamicChanges/SpriteChanges.json"
 	},
 
 	//Include Intermod Compatibility Files
@@ -736,7 +777,7 @@
 		Loads files that ensure/apply compatibilities with other mods.
 	*/
 	{
-		"LogName": "Include all InterModCompat files",		
+		"LogName": "Include all InterModCompat files",
 		"Action": "Include",
 		"FromFile": "Data/InterModCompat/CustomGiftDialogue.json, Data/InterModCompat/EastScarpe.json, Data/InterModCompat/KarmyllasImmersiveMaps.json, Data/InterModCompat/StardewValleyExpanded.json, Data/InterModCompat/TownSchool.json, Data/InterModCompat/WarpNetwork.json",
 	},
@@ -746,7 +787,7 @@
 		Loads files for loading maps, map music, map patches, strings, and warps.
 	*/
 	{
-		"LogName": "Include all the Map Data",		
+		"LogName": "Include all the Map Data",
 		"Action": "Include",
 		"FromFile": "Data/MapData/MapMusic.json, Data/MapData/MapPatches.json, Data/MapData/MapWarps.json, Data/MapData/MapStrings.json",
 	},
@@ -759,8 +800,8 @@
 		"LogName": "Include all the NPCData",
    		"Action": "Include",
    		"FromFile": "Data/NPCData/Animations.json, Data/NPCData/ConversationTopics.json, Data/NPCData/Dialogue.json, Data/NPCData/Dispositions.json, Data/NPCData/GiftTasteData.json, Data/NPCData/Mail.json, Data/NPCData/MovieData.json, Data/NPCData/Portraits.json, Data/NPCData/Romance.json, Data/NPCData/Schedules.json, Data/NPCData/Sprites.json",
-  	},  
-	
+  	},
+
 	//Includes Extras
 	/*
 		Includes all data that concerns Extras, that includes: Obelisks,
@@ -774,12 +815,12 @@
 		"LogName": "Include RSVMap",
    		"Action": "Include",
    		"FromFile": "Data/Extras/RSVMap.json",
-  	},    
+  	},
 	{
 		"LogName": "Include TrashCanData",
    		"Action": "Include",
    		"FromFile": "Data/Extras/TrashCanData.json",
-  	}, 
+  	},
 	{
 		"LogName": "Include ShrinePortal",
    		"Action": "Include",
@@ -789,14 +830,25 @@
 		"LogName": "Include Context Tags",
    		"Action": "Include",
    		"FromFile": "Data/Extras/ContextTags.json",
-  	}, 
+  	},
+	{
+		"LogName": "Include SecretSanta Gifts",
+   		"Action": "Include",
+   		"FromFile": "Data/Extras/SantaGiftData.json",
+  	},
+/*	{
+		"LogName": "Include Vanilla Edits",
+   		"Action": "Include",
+   		"FromFile": "Data/Extras/VanillaEdits.json",
+  	},
+*/
 
   	//Includes Tilesheets
 	/*
 		Loads tilesheets
 	*/
   	{
-  		"LogName": "Include Tilesheets",		
+  		"LogName": "Include Tilesheets",
 		"Action": "Include",
 		"FromFile": "Data/Tilesheets.json",
   	},
@@ -806,12 +858,11 @@
 		Loads special order files
 	*/
   	{
-  		"LogName": "Include Special Orders",		
+  		"LogName": "Include Special Orders",
 		"Action": "Include",
 		"FromFile": "Data/SpecialOrders/SpecialOrders.json, Data/SpecialOrders/SOStrings.json",
   	}
 
 ],
-
 
 }

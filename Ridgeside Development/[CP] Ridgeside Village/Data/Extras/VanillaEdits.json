@@ -1,0 +1,48 @@
+/*{
+    "Changes":
+    [
+    /*********
+    ** VanillaEdits
+    *********/	
+        /*********
+        ** Characters
+        *********/     
+            /*********
+            ** Schedules
+            *********/
+                /*********
+                ** Emily
+                *********/        
+                /*{ 
+                    "LogName": "Emily visits Faye's shop and gets knitting advice from Lola - Schedule Changes", 
+                    "Action": "EditData",
+                    "Target": "Characters/Schedules/Emily",
+                    "Entries":
+                    {
+                        "5": "700 Custom_Ridgeside_FayeHouse 10 15 \"Strings\\Schedules\\Emily:RSV.EnableVanillaEdits.Emily.FayeVisit\"/2330 HaleyHouse 21 4 3 emily_sleep",
+                    },
+                        "When": { "EnableVanillaEdits": true },
+                },
+    
+        /*********
+        ** Strings
+        *********/     
+            /*********
+            ** Schedules
+            *********/
+                /*********
+                ** Emily
+                *********/        
+/*                {
+                    "LogName": "Emily visits Faye's shop and gets knitting advice from Lola - Schedule Dialogue", 
+                    "Action": "EditData",
+                    "Target": "Strings/Schedules/Emily",
+                    "Entries": 
+                    {
+                        "RSV.EnableVanillaEdits.Emily.FayeVisit": "Hiya @! I'm just visiting Faye. I heard she sells sweaters made from reclaimed wool!",   
+                        "RSV.EnableVanillaEdits.Emily.LolaVisit": "Hiya @! I'm just visiting Lola, she's teaching me ancient knitting techniques.",
+                    },
+                        "When": { "EnableVanillaEdits": true },
+                }
+    ]
+}

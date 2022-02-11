@@ -1,0 +1,146 @@
+{
+	"Changes": [
+		{
+			"LogName": "Load Empty Secret Santa Gifts",
+			"Action": "Load",
+			"Target": "RSV/RSVSecretSantaGifts",
+			"FromFile": "Data/LoadData/EmptyJson.json"
+		},
+		{
+			"LogName": "Patch Secret Santa Gifts",
+			"Action": "EditData",
+			"Target": "RSV/RSVSecretSantaGifts",
+			"Entries": {
+				//Note for myself coz I forget shit - Rafseazz
+				//Can be tested via RSVGiftTest <npcname>
+				/* Format:
+			"NPCName": {
+			  "ItemName"{
+				"amount": 1 //amount, duh
+			  }
+			}
+
+			{{spacechase0.JsonAssets/ObjectId:Hundred Flavor Doughnut}}
+		  */
+				"Ian": {
+					"Cloth" :{
+						"amount": 5
+					},
+					"Goat Milk":{
+						"amount": 10
+					},
+				},
+				"Kenneth": {
+					"Battery Pack": {
+						//Battery Pack
+						"amount": 30
+					},
+				},
+				"Philip": {
+					"Energy Tonic":{
+						//Energy Tonic
+						"amount": 5
+					},
+				},
+				"Alissa": {
+					"Peach Sapling":{
+						//Peach Sapling
+						"ID": 631,
+						"amount": 3
+					},
+				},
+				"Aguar": {
+					"Ancient Seed": {
+						//Ancient Seed
+						"ID": 114,
+						"amount": 1
+					},
+				},
+				"Ezekiel": {
+					"Parsnip Seeds": {
+						//Parsnip Seeds
+						"ID": 472,
+						"amount": 5
+					},
+				},
+				"Keahi": {
+					"Trash": {
+						//Trash
+						"amount": 1
+					},
+					"Tomato": {
+						//Tomato
+						"ID": 256,
+						"amount": 1
+					},
+					"Fried Fish a la Ridge": {
+						//Fried Fish a la Ridge
+						"ID": "{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}}",
+						"amount": 1
+					},
+				},
+				"Trinnie": {
+					"Sunflower": {
+						//Sunflower
+						"ID": 421,
+						"amount": 10
+					},
+					"Aurorean Iris":{
+						"ID": "{{spacechase0.JsonAssets/ObjectId:Aurorean Iris}}",
+						"amount": 10
+					},
+					"Forest Amancay": {
+						"ID": "{{spacechase0.JsonAssets/ObjectId:Forest Amancay}}",
+						"amount": 10
+					},
+					"Highland Butterwort": {
+						"ID": "{{spacechase0.JsonAssets/ObjectId:Highland Butterwort}}",
+						"amount": 10
+					},
+					"Lava Lily": {
+						"ID": "{{spacechase0.JsonAssets/ObjectId:Lava Lily}}",
+						"amount": 10
+					},
+					"Mountain Hokkaido":{
+						"ID": "{{spacechase0.JsonAssets/ObjectId:Mountain Hokkaido}}",
+						"amount": 10
+					},
+				},
+				"Blair": {
+					"Dressed Spinner": {
+						//Dressed Spinner
+						"ID": 687,
+						"amount": 1
+					},
+					"Barbed Hook": {
+						//Barbed Hook
+						"ID": 691,
+						"amount": 1
+					},
+					"Wild Bait": {
+						//Wild Bait
+						"ID": 774,
+						"amount": 50
+					},
+				},
+				"Carmen": {
+					"Dressed Spinner": {
+						//Dressed Spinner
+						"ID": 687,
+						"amount": 1
+					},
+					"Barbed Hook": {
+						//Barbed Hook
+						"ID": 691,
+						"amount": 1
+					},
+					"Wild Bait": {
+						//Wild Bait
+						"ID": 774,
+						"amount": 50
+					},
+				},
+			}
+		},
+	]
+}

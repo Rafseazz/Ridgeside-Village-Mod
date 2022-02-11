@@ -15,13 +15,13 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "{{Random:spring1, spring2, spring3}}"
+				"Music": "{{Random: spring1, spring2, spring3}}"
 				},
 			"When": {
 				"Weather": "Sun",
         		"Season": "spring",
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
 				},
 			"Update": "OnLocationChange"
 		},
@@ -30,13 +30,13 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "{{Random:summer1, summer2, summer3}}"
+				"Music": "{{Random: summer1, summer2, summer3}}"
 				},
 			"When": {
 				"Weather": "Sun",
         		"Season": "summer",				
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
 				},
 			"Update": "OnLocationChange"
 		},
@@ -45,13 +45,13 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "{{Random:cm:FallInRidgeside, fall1, fall2, fall3}}"
+				"Music": "{{Random: FallInRidgeside, fall1, fall2, fall3}}"
 				},
 			"When": {
 				"Weather": "Sun",
         		"Season": "fall",				
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
 				},
 			"Update": "OnLocationChange"
 		},	
@@ -60,13 +60,13 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "{{Random:winter1, winter2, winter3, cm:WinterMountain}}"
+				"Music": "{{Random: winter1, winter2, winter3, WinterMountain}}"
 				},
 			"When": {
 				"Weather": "Sun",
         		"Season": "winter",				
 				"Time": "{{Range: 0600, 1900}}",
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
 				},
 			"Update": "OnLocationChange"
 		},							
@@ -81,7 +81,7 @@
 				},
 			"When": {
 				"Weather: |contains=Sun": false,
-				"EnableRidgesideMusic": true
+				"EnableRidgesideMusic": true,
 				},
 			"Update": "OnLocationChange"
 		},
@@ -96,7 +96,8 @@
 			"When": {
 				"Time": "{{Range: 1900, 2400}}",
 				"EnableRidgesideMusic": true,
-				"Season |contains=winter": false
+				"Season |contains=winter": false,
+				"Weather: |contains=Sun": true,
 				},
 			"Update": "OnTimeChange"
 		},
@@ -105,12 +106,12 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "cm:AweAmbience"
+				"Music": "AweAmbience"
 				},
 			"When": {
 				"Time": "{{Range: 1900, 2400}}",
 				"EnableRidgesideMusic": true,
-				"Season |contains=winter": true
+				"Season |contains=winter": true,
 				},
 			"Update": "OnTimeChange"
 		},
@@ -156,7 +157,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_AguarCave, Maps/Custom_Ridgeside_AguarCaveTemporary",
 			"MapProperties": {
-				"Music": "cm:CaveDrip"
+				"Music": "CaveDrip"
 				},
 			"When": {
 				"EnableRidgesideMusic": true

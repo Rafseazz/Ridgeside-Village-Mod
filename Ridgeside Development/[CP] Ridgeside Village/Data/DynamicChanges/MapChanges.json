@@ -4,7 +4,7 @@
 
 	/*********
 	** Map Changes
-	*********/	
+	*********/
 
 //Cliff Sky
 
@@ -60,7 +60,7 @@
 		},
 		"When": { "Time": "{{Range: 1900, 2600}}" },
 		"Update": "OnLocationChange, OnTimeChange"
-	},*/	
+	},*/
 
 //Hike House Peek (11PM-11:30PM Thursday)
 	{
@@ -112,13 +112,13 @@
 		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent |contains=75160181": true, "HasSeenEvent: |contains=75160182": false, "DayOfWeek: |contains=Thursday": false },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
-	//Undreya house unlock with time change
+	//Undreya house unlock permanently
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
 		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
-		"When": { "Time": "{{Range: 2300, 2600}}", "HasSeenEvent |contains=75160182": true },
+		"When": { "HasSeenEvent |contains=75160182": true },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	//Undreya calendar
@@ -131,7 +131,7 @@
 		"When": { "HasSeenEvent": 75160273 },
 		"Update": "OnLocationChange"
 	},
-	
+
 //Unlock Minecarts
 	{
         "Action": "EditMap",
@@ -199,7 +199,7 @@
 		"FromFile": "Assets/Maps/EventMaps/RSVOpenPlot.tmx",
 		"ToArea": { "X": 68, "Y": 18, "Width": 3, "Height": 2 },
 		"PatchMode": "Replace",
-		"When": { "HasSeenEvent": 75160189 },
+		"When": { "HasSeenEvent: hostPlayer": 75160189 },
 		"Update": "OnLocationChange"
 	},
 	//Remove minecart donation box when done
@@ -224,7 +224,7 @@
          "ToArea": { "X": 64, "Y": 106, "Width": 1, "Height": 1 },
          "PatchMode": "Overlay",
          "When": { "HasSeenEvent |contains=75160063": true, },
-         "Update": "OnLocationChange, OnTimeChange"         
+         "Update": "OnLocationChange, OnTimeChange"
       	},
      	{
          "Action": "EditMap",
@@ -248,10 +248,10 @@
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
 			"HasSeenEvent": 75160105,
-		}         
+		}
       	},
 
-    //Jio shop     	      	
+    //Jio shop
      	{
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
@@ -262,8 +262,8 @@
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
 			"HasSeenEvent": 75160187,
-		}         
-      	}, 
+		}
+      	},
       	{
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
@@ -274,7 +274,7 @@
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
 			"HasSeenEvent": 75160187,
-		}         
+		}
       	},
       	{
          "Action": "EditMap",
@@ -286,7 +286,7 @@
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
 			"HasSeenEvent": 75160264,
-		}         
+		}
       	},
       	{
          "Action": "EditMap",
@@ -298,7 +298,7 @@
          "When": {
 			"HasFlag": "RSV.CompleteDaiaQuest",
 			"HasSeenEvent |contains=75160255": false,
-		}         
+		}
       	},
 
     //Sewer Open
@@ -312,8 +312,8 @@
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
 			"HasWalletItem": "RustyKey",
-		}         
-      	}, 
+		}
+      	},
 
 
     //Community Greenhouse unlock
@@ -326,7 +326,7 @@
          "PatchMode": "Overlay",
          "When": {
 			 "HasFlag: hostPlayer |contains=GH1letter": true,
-		}         
+		}
       	},
 
     //Hike Greenhouse unlock
@@ -396,7 +396,7 @@
 		"Target": "Maps/z_RSVspousePic",
 		"FromFile": "{{FirstValidFile: Assets/WeddingReception/NPCs/{{spouse}}.png, Assets/WeddingReception/z_RSVspousePic.png }}",
 		"Update": "OnLocationChange, OnTimeChange",
-	}, 
+	},
 
 //Event Hall Sign
 	{
@@ -411,12 +411,12 @@
                }
             }
 		],
-		"When": { 
+		"When": {
 			"HasFlag |contains=RSV.ReservedReception": false,
-			"HasFlag |contains=RSV.BirthdayBooked": false 
+			"HasFlag |contains=RSV.BirthdayBooked": false
 		},
 		"Update": "OnLocationChange"
-    }, 
+    },
     {
         "Action": "EditMap",
         "Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
@@ -521,7 +521,7 @@
 		"FromFile": "Assets/Maps/EventMaps/RidgeOpenBridge.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 2, "Height": 5 },
 		"ToArea": { "X": 0, "Y": 20, "Width": 2, "Height": 5 },
-		"When": { "HasSeenEvent |contains=75160258": true },
+		"When": { "HasSeenEvent |contains=75160259": true },
 		"PatchMode": "Replace",
 		"Update": "OnLocationChange"
 	},
@@ -684,6 +684,65 @@
 		],
 		"When": { "HasSeenEvent": 75160265 },
 		"Update": "OnLocationChange"
+    },
+
+//Prevent spawn in Foxbloom spots on non-Foxbloom Day
+	{
+        "Action": "EditMap",
+        "Target": "Maps/Custom_Ridgeside_RidgeForest",
+				"When": {
+					"Day |contains={{Rafseazz.RidgesideVillage/FoxbloomDay}}": false },
+        "MapTiles": [
+					{
+						"Position": { "X": 54, "Y": 22 },
+						"Layer": "Back",
+						"SetProperties": {
+							"NoSpawn": "True"
+						}
+					},
+					{
+						"Position": { "X": 153, "Y": 21 },
+						"Layer": "Back",
+						"SetProperties": {
+							"NoSpawn": "True"
+						}
+					},
+					{
+						"Position": { "X": 32, "Y": 79 },
+						"Layer": "Back",
+						"SetProperties": {
+							"NoSpawn": "True"
+						}
+					},
+					{
+						"Position": { "X": 158, "Y": 60 },
+						"Layer": "Back",
+						"SetProperties": {
+							"NoSpawn": "True"
+						}
+					},
+					{
+						"Position": { "X": 33, "Y": 110 },
+						"Layer": "Back",
+						"SetProperties": {
+							"NoSpawn": "True"
+						}
+					},
+					{
+						"Position": { "X": 61, "Y": 95 },
+						"Layer": "Back",
+						"SetProperties": {
+							"NoSpawn": "True"
+						}
+					},
+					{
+						"Position": { "X": 162, "Y": 123 },
+						"Layer": "Back",
+						"SetProperties": {
+							"NoSpawn": "True"
+						}
+					}
+				],
     },
 
 //Greenhouse 2 Corrupted

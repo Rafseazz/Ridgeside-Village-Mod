@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="153">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="154">
  <properties>
   <property name="Outdoors" value="T"/>
  </properties>
@@ -2132,16 +2132,16 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="6448" name="spring_zridgetiles" tilewidth="16" tileheight="16" tilecount="64" columns="8">
-  <image source="spring_zridgetiles.png" width="128" height="128"/>
+ <tileset firstgid="6448" name="spring_zridgetiles" tilewidth="16" tileheight="16" tilecount="589" columns="19">
+  <image source="spring_zridgetiles.png" width="304" height="496"/>
  </tileset>
- <tileset firstgid="6512" name="zrsvshadows" tilewidth="16" tileheight="16" tilecount="1674" columns="62">
+ <tileset firstgid="7037" name="zrsvshadows" tilewidth="16" tileheight="16" tilecount="1674" columns="62">
   <image source="zrsvshadows.png" width="992" height="432"/>
  </tileset>
- <tileset firstgid="8186" name="spring_town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
+ <tileset firstgid="8711" name="spring_town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
   <image source="spring_town.png" width="512" height="1152"/>
  </tileset>
- <tileset firstgid="10490" name="zrsvspecialeffects" tilewidth="16" tileheight="16" tilecount="56" columns="7">
+ <tileset firstgid="11015" name="zrsvspecialeffects" tilewidth="16" tileheight="16" tilecount="56" columns="7">
   <image source="zrsvspecialeffects.png" width="112" height="128"/>
   <tile id="0">
    <animation>
@@ -2256,7 +2256,7 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="10546" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+ <tileset firstgid="11071" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior.png" width="512" height="1088"/>
  </tileset>
  <layer id="2" name="Buildings" width="1" height="2">
@@ -2274,7 +2274,7 @@
  </objectgroup>
  <layer id="18" name="Front" width="1" height="2">
   <data encoding="csv">
-11752,
+12277,
 0
 </data>
  </layer>

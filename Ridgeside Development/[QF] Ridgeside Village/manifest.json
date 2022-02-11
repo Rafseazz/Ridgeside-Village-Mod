@@ -1,19 +1,45 @@
 {
-  "Name": "Ridgside Village Quest Framework",
-  "Author": "Rafseazz",
-  "Version": "2.0",
-  "Description": "Loads Quest Framework Quests for Ridgeside Village",
-  "UniqueID": "Rafseazz.RSVQF",
-  "MinimumApiVersion": "3.6.0",
-  "UpdateKeys": [ "Nexus:???" ],
-  "ContentPackFor": {
-    "UniqueID": "PurrplingCat.QuestFramework", 
-    "MinimumVersion": "1.3.0" 
-  },
-	"Dependencies": [
-	 {
-      "UniqueID": "Rafseazz.RSVCP",
-      "IsRequired": true,
-	 }
-	]
+    /*********
+    ** Mod Name
+    *********/      
+    "Name": "Ridgeside Village - Quest Framework",
+
+    /*********
+    ** Mod Author
+    *********/  
+    "Author": "Rafseazz",
+
+    /*********
+    ** Current Version
+    *********/      
+    "Version": "2.0.5",
+
+    /*********
+    ** Content Pack Description
+    *********/  
+    "Description": "Loads Quest Framework Quests for Ridgeside Village.",
+
+    /*********
+    ** Unique Manifest ID for Content Pack
+    *********/  
+    "UniqueID": "Rafseazz.RSVQF",
+
+    /*********
+    ** Update Keys (Currently only on Nexus)
+    *********/
+    "UpdateKeys": [ "Nexus:-1" ],
+
+    /*********
+    ** Framework Manifest ID
+    *********/  
+    "ContentPackFor":
+    {
+        "UniqueID": "PurrplingCat.QuestFramework", 
+        "MinimumVersion": "1.4.0"
+    },
+
+    /*********
+    ** Minimum Version for SMAPI
+    *********/  
+    "MinimumApiVersion": "3.6.0",
 }

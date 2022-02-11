@@ -69,7 +69,7 @@ namespace RidgesideVillage.Offering
                 {
                     break;
                 }
-                if (pair.Value is HoeDirt dirt && dirt.crop != null && !dirt.crop.fullyGrown.Value && Game1.random.NextDouble() < 0.1)
+                if (pair.Value is HoeDirt dirt && dirt.crop != null && !dirt.crop.fullyGrown.Value)
                 {
                     dirt.crop.growCompletely();
                     n++;

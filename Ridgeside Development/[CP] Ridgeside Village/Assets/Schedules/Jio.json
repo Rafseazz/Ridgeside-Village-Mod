@@ -1,6 +1,7 @@
 {
 "Changes": [
 
+	//Original Schedule
 	{
 		"LogName": "Jio Base Schedule",
 		"Action": "EditData",
@@ -8,9 +9,6 @@
 		"Entries": {
 
 			"spring": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
-			"summer": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
-			"fall": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
-			"winter": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 			"rain": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 			"3": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 86 27 2/2200 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 			"14": "GOTO 3",
@@ -20,17 +18,25 @@
 					},
 	},
 
+	//Temp
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Jio",
 		"Entries": {
 			"spring": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
+			"rain": "GOTO spring",
+			"3": "GOTO spring",
+			"14": "GOTO spring",
+			"20": "GOTO spring",
+			"winter_15": "GOTO spring",
 					},
 		"When": {
-			"HasSeenEvent": 75160187,
-		} 
+			"HasFlag": "RSV.CompleteDaiaQuest",
+			"HasSeenEvent |contains=75160255": false,
+		}   
 	},
 
+	//Schedule after meeting Belinda
 	{
 		"LogName": "Jio Base Schedule",
 		"Action": "EditData",
@@ -38,9 +44,6 @@
 		"Entries": {
 
 			"spring": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
-			"summer": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
-			"fall": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
-			"winter": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 			"rain": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 34 16 2/2000 Custom_Ridgeside_Ridge 86 13 2/2400 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 			"3": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Custom_Ridgeside_Ridge 86 27 2/2200 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 			"14": "GOTO 3",

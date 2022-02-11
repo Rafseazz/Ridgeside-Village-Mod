@@ -4,14 +4,14 @@
 		"LogName": "Patch Obelisk Image",
          "Action": "Load",
          "Target": "Buildings/RSV Obelisk",
-         "FromFile": "Assets//LooseSprites/RSVObelisk.png"
+         "FromFile": "Assets/LooseSprites/RSVObelisk.png"
       },      
 	  {
 		"LogName": "Patch Obelisk Blueprint",
          "Action": "EditData",
          "Target": "Data/Blueprints",
          "Entries":{
-		   "RSV Obelisk": "{{spacechase0.JsonAssets/ObjectId:Autumn Drop Berry}} 10 {{spacechase0.JsonAssets/ObjectId:Frost Clump Berry}} 10 {{spacechase0.JsonAssets/ObjectId:Mountain Chico}} 10 {{spacechase0.JsonAssets/ObjectId:Ridge Cherry}} 10 {{spacechase0.JsonAssets/ObjectId:Spiritual Essence}} 50/3/2/-1/-1/-2/-1/null/RSV Obelisk/Warps you to Ridgeside Village./Buildings/none/48/128/-1/null/Farm/500000/true",
+		   "RSV Obelisk": "{{spacechase0.JsonAssets/ObjectId:Spiritual Essence}} 200 337 10/3/2/-1/-1/-2/-1/null/RSV Obelisk/Warps you to Ridgeside./Buildings/none/48/128/-1/null/Farm/500000/true",
 		 }
       },
    ]

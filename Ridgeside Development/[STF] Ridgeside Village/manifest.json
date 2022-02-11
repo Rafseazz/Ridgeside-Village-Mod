@@ -1,13 +1,45 @@
 ﻿{
-  "Name": "Ridgside Village Shop Tile Framework",
-  "Author": "Rafseazz",
-  "Version": "2.0",
-  "Description": "Adds shops to Ridgeside Village",
-  "UniqueID": "Rafseazz.RSVSTF",
-  "MinimumApiVersion": "2.0",
-  "UpdateKeys": [ "Nexus:???" ],
-  "ContentPackFor": {
-    "UniqueID": "Cherry.ShopTileFramework",
-	"MinimumVersion": "1.0.1"
-  }
+    /*********
+    ** Mod Name
+    *********/      
+    "Name": "Ridgeside Village - Shop Tile Framework",
+    
+    /*********
+    ** Mod Author
+    *********/  
+    "Author": "Rafseazz",
+    
+    /*********
+    ** Current Version
+    *********/  
+    "Version": "2.0.5",
+    
+    /*********
+    ** Content Pack Description
+    *********/  
+    "Description": "Adds shops to Ridgeside Village.",
+    
+    /*********
+    ** Unique Manifest ID for Content Pack
+    *********/  
+    "UniqueID": "Rafseazz.RSVSTF",
+
+    /*********
+    ** Update Keys (Currently only on Nexus)
+    *********/  
+    "UpdateKeys": [ "Nexus:-1" ],
+    
+    /*********
+    ** Framework Manifest ID
+    *********/  
+    "ContentPackFor":
+    {
+        "UniqueID": "Cherry.ShopTileFramework",
+        "MinimumVersion": "1.0.1"
+    },
+
+    /*********
+    ** Minimum Version for SMAPI
+    *********/  
+    "MinimumApiVersion": "2.0",
 }

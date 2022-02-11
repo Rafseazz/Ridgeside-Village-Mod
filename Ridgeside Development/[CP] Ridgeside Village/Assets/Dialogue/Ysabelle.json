@@ -108,5 +108,26 @@
 
 		},
 	},
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Ysabelle",
+   "When": {  	
+   	"Relationship:Ysabelle": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Ysabelle.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Ysabelle.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Ysabelle.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Ysabelle.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Ysabelle.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Ysabelle.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Ysabelle.Dialogue.Sun8.dating}}",
+		},
+	},
 ]
 }

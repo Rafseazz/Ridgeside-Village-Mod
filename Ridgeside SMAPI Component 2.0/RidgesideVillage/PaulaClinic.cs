@@ -54,8 +54,8 @@ namespace RidgesideVillage
         {
             var responses = new List<Response>
             {
-                new Response("healthcheckup", Helper.Translation.Get("Clinic.Health") + $" : ${cost}"),
-                new Response("staminacheckup", Helper.Translation.Get("Clinic.Stamina") + $" : ${cost}"),
+                new Response("healthcheckup", Helper.Translation.Get("Clinic.Health") + $" : {cost}$"),
+                new Response("staminacheckup", Helper.Translation.Get("Clinic.Stamina") + $" : {cost}$"),
                 new Response("cancel", Helper.Translation.Get("Exit.Text"))
             };
             var responseActions = new List<Action>
