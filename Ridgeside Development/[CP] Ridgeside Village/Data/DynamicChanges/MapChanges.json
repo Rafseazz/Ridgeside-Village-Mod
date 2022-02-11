@@ -236,6 +236,27 @@
          "When": { "HasSeenEvent |contains=75160064": true,	},
          "Update": "OnLocationChange, OnTimeChange"
       	},
+			{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_AguarCave",
+         "FromFile": "Assets/Maps/EventMaps/AguarCaveFixed_alt.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
+         "ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
+         "PatchMode": "Replace",
+         "When": { "HasDialogueAnswer|contains=751600641": true,	},
+         "Update": "OnLocationChange, OnTimeChange"
+      	},
+			{
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_AguarCave",
+         "FromFile": "Assets/Maps/EventMaps/AguarCaveFixed_alt.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
+         "ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
+         "PatchMode": "Replace",
+         "When": { "HasDialogueAnswer|contains=751600642": true,	},
+         "Update": "OnLocationChange, OnTimeChange"
+      	},
+
 
     //Richard vase
      	{
