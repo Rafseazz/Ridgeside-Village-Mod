@@ -109,5 +109,27 @@
 
 		},
 	},
+
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Shiro",
+   "When": {  	
+   	"Relationship:Shiro": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Shiro.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Shiro.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Shiro.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Shiro.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Shiro.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Shiro.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Shiro.Dialogue.Sun8.dating}}",
+		},
+	},
 ]
 }
