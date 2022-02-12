@@ -39,7 +39,7 @@
 		"Target": "Data/Events/Farm",
 		"Entries": {
 		//Yuuma notifying the farmer about Lenny's request of minecart fixing
-			"75160189/w sunny/H/j 20/e 75160086": "continue/64 15/farmer 64 16 2 Yuuma 64 18 0/pause 1000/emote farmer 8/speak Yuuma \"{{i18n:event-75160189.01}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.02}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.03}}\"/end",
+			"75160189/H/w sunny/j 20/e 75160086": "continue/64 15/farmer 64 16 2 Yuuma 64 18 0/broadcastEvent/pause 1000/emote farmer 8/speak Yuuma \"{{i18n:event-75160189.01}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.02}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.03}}\"/end",
 		},
 	},
 	{
@@ -664,7 +664,7 @@
 		"Target": "Data/Events/Farm",
 		"Entries": {
 		//Aguar and farmer fix cave (Aguar 8 hearts)
-			"75160064/f Aguar 2000/t 600 1000/e 75160063/w sunny/c 1": "WizardSong/64 15/farmer 64 16 2 Aguar 64 18 0/skippable/pause 1000/speak Aguar \"{{i18n:event-75160064.01}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.02}}\"/globalFade/viewport -1000 -1000/changeToTemporaryMap Custom_Ridgeside_AguarCave false/warp farmer 9 26/warp Aguar 10 24 0/pause 1000/faceDirection farmer 0/faceDirection Aguar 0/playMusic Cavern/fade/viewport 9 20/pause 1000/speak Aguar \"{{i18n:event-75160064.03}}\"/faceDirection Aguar 2/emote farmer 8/pause 500/speak Aguar \"{{i18n:event-75160064.04}}\"/emote farmer 56/pause 500/faceDirection Aguar 0/speak Aguar \"{{i18n:event-75160064.05}}\"/pause 1000/animate Aguar false true 100 20 20 21 21 22 22 23 23/pause 2000/speak Aguar \"{{i18n:event-75160064.06}}\"/stopAnimation Aguar 16/pause 500/playSound wand/glow 0 0 255 true/pause 1000/screenFlash .8/emote farmer 16/pause 1000/screenFlash .8/pause 1000/screenFlash .8/changeToTemporaryMap Custom_Ridgeside_AguarCaveTemporary false/stopGlowing/emote farmer 16/pause 500/faceDirection Aguar 2/speak Aguar \"{{i18n:event-75160064.07}}\"/move farmer 0 -6 3/faceDirection Aguar 0/move farmer -1 0 3/showFrame farmer 58/pause 500/playSound hoeHit/pause 1000/playSound seeds/pause 1000/move farmer 1 0 3/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.08}}\"/faceDirection farmer 2/move Aguar -1 0 0/move Aguar 0 -3 0/speak Aguar \"{{i18n:event-75160064.09}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.10}}\"/emote farmer 16/pause 500/speak Aguar \"{{i18n:event-75160064.11}}\"/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.12}}\"/message \"{{i18n:event-75160064.13}}\"/emote farmer 20/pause 500/move Aguar 0 5 1 true/move farmer 0 4 1 true/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160064.14}}\"/pause 1000/end dialogue Aguar \"{{i18n:event-75160064.15}}\"",
+			"75160064/f Aguar 2000/t 600 1000/e 75160063/w sunny/c 1": "WizardSong/64 15/farmer 64 16 2 Aguar 64 18 0/skippable/pause 1000/speak Aguar \"{{i18n:event-75160064.01}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.02}}\"/globalFade/viewport -1000 -1000/changeToTemporaryMap Custom_Ridgeside_AguarCave false/warp farmer 9 26/warp Aguar 10 24 0/pause 1000/faceDirection farmer 0/faceDirection Aguar 0/playMusic Cavern/fade/viewport 9 20/pause 1000/speak Aguar \"{{i18n:event-75160064.03}}\"/faceDirection Aguar 2/emote farmer 8/pause 500/speak Aguar \"{{i18n:event-75160064.04}}\"/emote farmer 56/pause 500/faceDirection Aguar 0/speak Aguar \"{{i18n:event-75160064.05}}\"/pause 1000/animate Aguar false true 100 20 20 21 21 22 22 23 23/pause 2000/speak Aguar \"{{i18n:event-75160064.06}}\"/stopAnimation Aguar 16/pause 500/playSound wand/glow 0 0 255 true/pause 1000/screenFlash .8/emote farmer 16/pause 1000/screenFlash .8/pause 1000/screenFlash .8/changeToTemporaryMap Custom_Ridgeside_AguarCaveTemporary false/stopGlowing/emote farmer 16/pause 500/faceDirection Aguar 2/speak Aguar \"{{i18n:event-75160064.07}}\"/faceDirection Aguar 0/emote Aguar 40/pause 1000/faceDirection Aguar 2/pause 300/speak Aguar \"{{i18n:event-75160064.08}}\"/speak Aguar \"$q 751600640 null#{{i18n:event-75160064.AguarQuestion}}#$r 751600641 0 _1#{{i18n:event-75160064.09}}#$r 751600642 0 aguar2_2#{{i18n:event-75160064.10}}\"/fork 751600642 AguarFruit/move farmer 0 -6 3/faceDirection Aguar 0/move farmer -1 0 3/showFrame farmer 58/pause 500/playSound hoeHit/pause 1000/playSound seeds/pause 1000/move farmer 1 0 3/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.AguarFork1}}\"/faceDirection farmer 2/move Aguar -1 0 0/move Aguar 0 -3 0/speak Aguar \"{{i18n:event-75160064.12}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.13}}\"/emote farmer 16/pause 500/speak Aguar \"{{i18n:event-75160064.14}}\"/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.15}}\"/message \"{{i18n:event-75160064.16}}\"/emote farmer 20/pause 500/move Aguar 0 5 1 true/move farmer 0 4 1 true/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160064.17}}\"/pause 1000/end dialogue Aguar \"{{i18n:event-75160064.18}}\"",
 
 		//Alissa sends letter to farmer (Alissa 6 hearts part 1)
 			"75160117/e 75160115/f Alissa 1500/x AlissaLetter": "null",
@@ -992,8 +992,6 @@
 		"When": {"HasFlag": "RSV.AnvToday", "Query: '{{SpouseGender}}' = 'undefined'": true}
 	},
 
-	//NONE i18n
-
 	//Naomi events
 
 		//Introduction @ BusStop
@@ -1154,7 +1152,7 @@
 
 	},
 
-	//Greenhouse2 Events
+	//Phantom Greenhouse Events
 	{
 		"Action": "EditData",
 		"Target": "Data/Events/Custom_Ridgeside_RSVGreenhouse2",
@@ -1171,9 +1169,9 @@
 
 	},
 
-	//--------------------- <3
-	//14 Heart Events <3
-	//--------------------- <3
+	//---------------------
+	//Fourteen Heart Events
+	//---------------------
 
 	{
 		"Action": "EditData",
@@ -1221,6 +1219,16 @@
 		}
 	},
 
+	{
+		"LogName": "Temp Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Temp",
+		"Entries": {
+		//Aguar and farmer fix cave (Aguar 8 hearts fork)
+			"AguarFruit": "move farmer 0 -6 3/faceDirection Aguar 0/move farmer -1 0 3/showFrame farmer 58/pause 500/playSound hoeHit/pause 1000/playSound seeds/pause 1000/move farmer 1 0 3/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.AguarFork2}}\"/faceDirection farmer 2/move Aguar -1 0 0/move Aguar 0 -3 0/speak Aguar \"{{i18n:event-75160064.12}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.13}}\"/emote farmer 16/pause 500/speak Aguar \"{{i18n:event-75160064.14}}\"/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.15}}\"/message \"{{i18n:event-75160064.16}}\"/emote farmer 20/pause 500/move Aguar 0 5 1 true/move farmer 0 4 1 true/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160064.17}}\"/pause 1000/end dialogue Aguar \"{{i18n:event-75160064.18}}\"",
+		}
+	},
+
 	//2.0 NPC Events
 	{
 		"Action": "EditData",
@@ -1248,5 +1256,6 @@
 			"": ""
 		}
 	}*/
+
 ]
 }
