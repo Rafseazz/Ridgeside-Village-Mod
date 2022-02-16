@@ -207,78 +207,7 @@ namespace RidgesideVillage
         {
             if ((Game1.player.mailReceived.Contains("RSV.TakenLoan")) & (Game1.player.IsMainPlayer))
             {
-                Log.Trace($"MaiveLoan - begin interest calculations");
-                int[] shippingCategoryTotals = new int[5];
-                ICollection<Item> ShippingBin = (ICollection<Item>)Game1.getFarm().getShippingBin(Game1.player);
-                Log.Trace($"MaiveLoan - Got shipping bin");
-                foreach (Item item in ShippingBin)
-                {
-                    Log.Trace($"MaiveLoan - {item.Name} in shipping bin");
-                    StardewValley.Object obj = (StardewValley.Object)(object)((item is StardewValley.Object) ? item : null);
-                    if (obj != null)
-                    {
-                        int shippingCategory = GetShippingCategory(obj);
-                        int sellPrice = obj.sellToStorePrice(-1L) * ((Item)obj).Stack;
-                        shippingCategoryTotals[shippingCategory] += sellPrice;
-                        Log.Trace($"MaiveLoan - {obj.Name} full price: {sellPrice}");
-                    }
-                }
-                for (int i = 0; i < shippingCategoryTotals.Length; i++)
-                {
-                    int amount = shippingCategoryTotals[i] * 5 / 100;
-                    Log.Trace($"MaiveLoan - deducting {amount} G");
-                    if (amount > 0)
-                    {
-                        Game1.player.Money -= amount;
-                        Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("RSV.LoanInterest")));
-                        Log.Trace($"MaiveLoan - player money is {Game1.player.Money}");
-                    }
-                }
-            }
-        }
-
-        public static int GetShippingCategory(StardewValley.Object obj)
-        {
-            return GetShippingCategory(((Item)obj).ParentSheetIndex, ((Item)obj).Category);
-        }
-
-        public static int GetShippingCategory(int objectID, int objectCategory)
-        {
-            switch (objectID)
-            {
-                case 296:
-                case 396:
-                case 402:
-                case 406:
-                case 410:
-                case 414:
-                case 418:
-                    return 1;
-                default:
-                    switch (objectCategory)
-                    {
-                        case -20:
-                        case -4:
-                            return 2;
-                        case -15:
-                        case -12:
-                        case -2:
-                            return 3;
-                        case -80:
-                        case -79:
-                        case -75:
-                        case -26:
-                        case -14:
-                        case -6:
-                        case -5:
-                            return 0;
-                        case -81:
-                        case -27:
-                        case -23:
-                            return 1;
-                        default:
-                            return 4;
-                    }
+                Loan.ApplyInterest();
             }
         }
 
