@@ -78,33 +78,38 @@ namespace RidgesideVillage
         {
             Log.Trace($"MaiveLoan - begin interest calculations");
             int[] shippingCategoryTotals = new int[5];
-            ICollection<Item> ShippingBin = Game1.getFarm().getShippingBin(Game1.player);
+            var ShippingBin = Game1.getFarm().getShippingBin(Game1.player);
             Log.Trace($"MaiveLoan - Got shipping bin");
             foreach (Item item in ShippingBin)
             {
                 Log.Trace($"MaiveLoan - {item.Name} in shipping bin");
-                StardewValley.Object obj = (StardewValley.Object)(object)((item is StardewValley.Object) ? item : null);
-                if (obj != null)
+                if (item is StardewValley.Object obj)
                 {
+                    Log.Trace($"MaiveLoan - {obj.Name} is SDVObject");
                     int shippingCategory = GetShippingCategory(obj);
                     int sellPrice = obj.sellToStorePrice(-1L) * ((Item)obj).Stack;
                     shippingCategoryTotals[shippingCategory] += sellPrice;
                     Log.Trace($"MaiveLoan - {obj.Name} full price: {sellPrice}");
                 }
             }
+            int totalDeducted = 0;
             for (int i = 0; i < shippingCategoryTotals.Length; i++)
             {
-                int amount = shippingCategoryTotals[i] * 5 / 100;
-                Log.Trace($"MaiveLoan - deducting {amount} G");
+                int amount = shippingCategoryTotals[i] * 10 / 100;
+                Log.Trace($"MaiveLoan - deducting {amount} G for this category");
                 if (amount > 0)
                 {
                     Game1.player.Money -= amount;
-                    Log.Trace($"MaiveLoan - player money is {Game1.player.Money}");
-                    Game1.drawObjectDialogue(Helper.Translation.Get("RSV.LoanInterest"));
-                    Game1.globalFadeToClear();
+                    totalDeducted += amount;
                 }
             }
-            
+            if (totalDeducted > 0)
+            {
+                Game1.drawObjectDialogue(Helper.Translation.Get("RSV.LoanInterest"));
+                Game1.globalFadeToClear();
+            }
+            Log.Trace($"MaiveLoan - deducted {totalDeducted} G in total");
+            Log.Trace($"MaiveLoan - player money is {Game1.player.Money}");
         }
 
         public static int GetShippingCategory(StardewValley.Object obj)
