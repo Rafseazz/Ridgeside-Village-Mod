@@ -22,6 +22,7 @@ namespace RidgesideVillage
         const string BIRTHDAYBOOKED = "RSV.BirthdayBooked.";
         const string ANNIVERSARYBOOKEDFLAG = "RSV.ReservedAnv";
         const string ANNIVERSARYTODAY = "RSV.AnvToday";
+        const string REWARDLETTER = "RichardSOLetter";
 
         const int ROOMPRICE = 500;
         const int WEDDINGPRICE = 2000;
@@ -190,7 +191,11 @@ namespace RidgesideVillage
         }
         private static void HandleHotelCounterMenu(string tileActionString = "")
         {
-            if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            if (Game1.player.mailReceived.Contains(REWARDLETTER))
+            {
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("HotelCounter.Booking.Free")));
+            }
+            else if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
             {
                 var responses = new List<Response>
                     {
