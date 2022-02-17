@@ -15,9 +15,11 @@ namespace RidgesideVillage
 {
     internal static class Loan
     {
+        public static int deducted = 0;
         static IModHelper Helper;
         static IMonitor Monitor;
-        const string STARTEDLOAN = "RSV.TakenLoan";
+        const string QUESTMAIL = "RSV.MaiveHelped";
+        const string LOANMAIL = "RSV.TakenLoan";
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -27,13 +29,13 @@ namespace RidgesideVillage
 
         private static void RSVMaiveLoan(string tileActionString, Vector2 position)
         {
-            if (!Game1.player.IsMainPlayer)
+            if (!Game1.player.IsMainPlayer & Game1.player.mailReceived.Contains(QUESTMAIL))
             {
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("RSV.MaiveError"), HUDMessage.error_type));
             }
             else
             {
-                if (!Game1.player.mailReceived.Contains(STARTEDLOAN))
+                if (!Game1.player.mailReceived.Contains(LOANMAIL) & Game1.player.mailReceived.Contains(QUESTMAIL))
                 {
                         var responses = new List<Response>
                     {
@@ -45,14 +47,14 @@ namespace RidgesideVillage
                         delegate
                         {
                             Game1.player.Money += 500000;
-                            Game1.player.mailReceived.Add(STARTEDLOAN);
+                            Game1.player.mailReceived.Add(LOANMAIL);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("RSV.LoanBegun"));
                         },
                         delegate{}
                     };
                         Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("RSV.BeginLoan"), responses, responseActions);
                 }
-                else if (Game1.player.mailReceived.Contains(STARTEDLOAN))
+                else if (Game1.player.mailReceived.Contains(LOANMAIL))
                 {
                     var responses = new List<Response>
                     {
@@ -64,7 +66,7 @@ namespace RidgesideVillage
                         delegate
                         {
                             Game1.player.Money -= 500000;
-                            Game1.player.mailReceived.Remove(STARTEDLOAN);
+                            Game1.player.mailReceived.Remove(LOANMAIL);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("RSV.LoanPaid"));
                         },
                         delegate{}
@@ -105,11 +107,10 @@ namespace RidgesideVillage
             }
             if (totalDeducted > 0)
             {
-                Game1.drawObjectDialogue(Helper.Translation.Get("RSV.LoanInterest"));
-                Game1.globalFadeToClear();
+                Log.Trace($"MaiveLoan - deducted {totalDeducted} G in total");
+                Log.Trace($"MaiveLoan - player money is {Game1.player.Money}");
             }
-            Log.Trace($"MaiveLoan - deducted {totalDeducted} G in total");
-            Log.Trace($"MaiveLoan - player money is {Game1.player.Money}");
+            deducted = totalDeducted;
         }
 
         public static int GetShippingCategory(StardewValley.Object obj)
@@ -155,6 +156,12 @@ namespace RidgesideVillage
                             return 4;
                     }
             }
+        }
+
+        public static void SendReminder()
+        {
+            string content = Helper.Translation.Get("RSV.LoanInterest") + deducted.ToString() + " G";
+            Game1.chatBox.addInfoMessage(content);
         }
 
 

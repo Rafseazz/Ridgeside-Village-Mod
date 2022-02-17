@@ -69,6 +69,11 @@ namespace RidgesideVillage
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             forgetRepeatableEvents();
+
+            if ((Game1.player.mailReceived.Contains("RSV.TakenLoan")) & (Game1.player.IsMainPlayer))
+            {
+                Loan.SendReminder();
+            }
         }
 
         private void forgetRepeatableEvents()

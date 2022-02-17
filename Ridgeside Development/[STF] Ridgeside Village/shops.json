@@ -672,6 +672,38 @@
 				],
 			"Stock": 1,
 		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Springtime Primetime",
+				],
+			"Stock": 1,
+			"When": [ "!z spring/n PikaSpring" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Summer Mountain Blessing",
+				],
+			"Stock": 1,
+			"When": [ "!z summer/n PikaSummer" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Autumnal Serenity",
+				],
+			"Stock": 1,
+			"When": [ "!z fall/n PikaFall" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Winter Night Feast",
+				],
+			"Stock": 1,
+			"When": [ "!z winter/n PikaWinter" ]
+		},
 	],
 	},
 	//------------
@@ -738,6 +770,38 @@
 				"Snow Bowl Surprise",
 				"Zesty Tuna",
 				],
+		},
+    {
+			"ItemType": "Object",
+      "IsRecipe": true,
+			"ItemNames": [
+				"Springtime Primetime",
+				],
+			"When": [ "!z spring/n PikaSpring" ]
+		},
+    {
+			"ItemType": "Object",
+      "IsRecipe": true,
+			"ItemNames": [
+				"Summer Mountain Blessing",
+				],
+			"When": [ "!z summer/n PikaSummer" ]
+		},
+    {
+			"ItemType": "Object",
+      "IsRecipe": true,
+			"ItemNames": [
+				"Autumnal Serenity",
+				],
+			"When": [ "!z fall/n PikaFall" ]
+		},
+    {
+			"ItemType": "Object",
+      "IsRecipe": true,
+			"ItemNames": [
+				"Winter Night Feast",
+				],
+			"When": [ "!z winter/n PikaWinter" ]
 		},
 	],
 	},
