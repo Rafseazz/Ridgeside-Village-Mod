@@ -18,24 +18,28 @@ namespace RidgesideVillage
         public static int deducted = 0;
         static IModHelper Helper;
         static IMonitor Monitor;
-        const string QUESTMAIL = "RSV.MaiveHelped";
+        const string REWARDLETTER = "MaiveSOLetter";
         const string LOANMAIL = "RSV.TakenLoan";
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
+
+            Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            Helper.Events.GameLoop.DayEnding += OnDayEnding;
+
             TileActionHandler.RegisterTileAction("RSVMaiveLoan", RSVMaiveLoan);
         }
 
         private static void RSVMaiveLoan(string tileActionString, Vector2 position)
         {
-            if (!Game1.player.IsMainPlayer & Game1.player.mailReceived.Contains(QUESTMAIL))
+            if (!Game1.player.IsMainPlayer && Game1.player.mailReceived.Contains(REWARDLETTER))
             {
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("RSV.MaiveError"), HUDMessage.error_type));
             }
             else
             {
-                if (!Game1.player.mailReceived.Contains(LOANMAIL) & Game1.player.mailReceived.Contains(QUESTMAIL))
+                if (!Game1.player.mailReceived.Contains(LOANMAIL) && Game1.player.mailReceived.Contains(REWARDLETTER))
                 {
                         var responses = new List<Response>
                     {
@@ -162,6 +166,22 @@ namespace RidgesideVillage
         {
             string content = Helper.Translation.Get("RSV.LoanInterest") + deducted.ToString() + " G";
             Game1.chatBox.addInfoMessage(content);
+        }
+
+        private static void OnDayEnding(object sender, DayEndingEventArgs e)
+        {
+            if ((Game1.player.mailReceived.Contains(LOANMAIL)) & (Game1.player.IsMainPlayer))
+            {
+                ApplyInterest();
+            }
+        }
+        private static void OnDayStarted(object sender, DayStartedEventArgs e)
+        {
+
+            if ((Game1.player.mailReceived.Contains(LOANMAIL)) & (Game1.player.IsMainPlayer))
+            {
+                SendReminder();
+            }
         }
 
 
