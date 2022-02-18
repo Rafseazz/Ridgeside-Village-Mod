@@ -1241,6 +1241,15 @@
 
 	{
 		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_3Bros2ndFloor",
+		"Entries": {
+			//Kiarra can't choose a design (Kiarra 2 hearts)
+			"75160213/f Kiarra 500": "jaunty/18 5/farmer 11 6 1 Kiarra 18 6 1/skippable/advancedMove Kiarra false -2 0 3 0 -3 0 3 0/emote Kiarra 40/move farmer 3 0 1/emote farmer 8/pause 2000/emote Kiarra 8/faceDirection Kiarra 3/emote Kiarra 16/speed Kiarra 4/advancedMove Kiarra false -3 0/speak Kiarra \"@!$h\"/emote farmer 8/speak Kiarra \"Awesome timing! I need a second opinion!#$b#I've been thinking about a nice wallpaper design a client asked me to do.#$b#They just told me to 'surprise' them.#$b#Like yo, I'm not really fond of that!$s#$b#What if I gave them the bad kind of surprise? You know?$u#$b#It's kinda crazy.#$b#But, yeah! That's the gist of it.\"/emote farmer 28/speak Kiarra \"I actually have three ideas in mind.#$b#Come with me! Take a look at my laptop.\"/speed Kiarra 2/advancedMove Kiarra false 4 0 0 -1 1 0 -1 0/move farmer 5 0 0/emote Kiarra 32/speak Kiarra \"Alright!#$b#So what do you think?\"/globalFade/viewport -1000 -1000/changeLocation Custom_Ridgeside_KiarraPick/warp farmer -100 -100/warp Kiarra -100 -100/fade/viewport 7 6/pause 3000/speak Kiarra \"So here are my drafts!$h#$b#The first one is called 'Ember of Resolutions'.#$b#The second one is 'The Mythical Flower'.#$b#And the last one is called 'Ridgeside Gathering'.#$b#As you might've guessed, two of these designs were inspired from two of the village's festivals.#$b#While one is inspired from a local legend about a magical flower.#$b#So which one do you like best?\"/message \"You take another look at the designs.\"/pause 3000/speak Kiarra \"$q 7516213 null \"#Which do you like best?#$r 75162131 0 kiarra2_choice1#Ember of Resolutions.#$r 75162132 0 kiarra2_choice2#The Mythical Flower.#$r 75162133 0 kiarra2_choice3#Ridgeside Gathering.\"/globalFade/viewport -1000 -1000/changeLocation Custom_Ridgeside_3Bros2ndFloor/warp farmer 19 6/warp Kiarra 20 5/fade/viewport 18 5/pause 1000/faceDirection Kiarra 2/emote Kiarra 56 true/pause 800/emote farmer 32/speak Kiarra \"Grazie! Thank you, @!$h#$b#I was leaning towards that too.\"/emote farmer 56/faceDirection Kiarra 3/speak Kiarra \"Well then, I'll finalize this design in while.#$b#You can stay and marvel at my talents, @!$h\"/emote farmer 28/emote Kiarra 56/pause 800/end",
+		}
+	},
+
+	{
+		"Action": "EditData",
 		"Target": "Data/Events/Custom_Ridgeside_PurpleMansion",
 		"Entries": {
 			//Ariah studying (Ariah 2 hearts)
