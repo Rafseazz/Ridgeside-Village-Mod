@@ -14,6 +14,8 @@ namespace RidgesideVillage
 
         public static IQuestFrameworkApi QF;
 
+        public static IWearMoreRingsApi MR;
+
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
@@ -28,6 +30,12 @@ namespace RidgesideVillage
 
             QF = Helper.ModRegistry.GetApi<IQuestFrameworkApi>("purrplingcat.QuestFramework");
             if (QF == null)
+            {
+                Log.Warn("Quest Framework API not found. This could lead to issues.");
+            }
+
+            MR = Helper.ModRegistry.GetApi<IWearMoreRingsApi>("bcmpinc.WearMoreRings");
+            if (MR == null)
             {
                 Log.Warn("Quest Framework API not found. This could lead to issues.");
             }
