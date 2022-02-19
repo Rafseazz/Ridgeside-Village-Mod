@@ -42,7 +42,6 @@ namespace RidgesideVillage
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
-            helper.Events.GameLoop.DayEnding += OnDayEnding;
 
 
             Minecarts.Initialize(this);
@@ -69,11 +68,6 @@ namespace RidgesideVillage
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             forgetRepeatableEvents();
-
-            if ((Game1.player.mailReceived.Contains("RSV.TakenLoan")) & (Game1.player.IsMainPlayer))
-            {
-                Loan.SendReminder();
-            }
         }
 
         private void forgetRepeatableEvents()
@@ -206,13 +200,6 @@ namespace RidgesideVillage
                         }
                     }
                 }
-            }
-        }
-        private static void OnDayEnding(object sender, DayEndingEventArgs e)
-        {
-            if ((Game1.player.mailReceived.Contains("RSV.TakenLoan")) & (Game1.player.IsMainPlayer))
-            {
-                Loan.ApplyInterest();
             }
         }
 
