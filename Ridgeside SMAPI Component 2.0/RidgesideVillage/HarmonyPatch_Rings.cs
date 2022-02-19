@@ -31,7 +31,7 @@ namespace RidgesideVillage
             Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_Rings)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), nameof(NPC.withinPlayerThreshold), new Type[] { typeof(int) }),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_Rings), nameof(WithinPlayerThreshold_Prefix))
+                prefix: new HarmonyMethod(typeof(HarmonyPatch_Rings), nameof(NPC_WithinPlayerThreshold_Prefix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(Ghost), nameof(Ghost.behaviorAtGameTick)),
@@ -43,7 +43,7 @@ namespace RidgesideVillage
             );
         }
 
-        private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
+        private static void NPC_WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
         {
             if ((__instance is Monster) && HasRingEquipped(StealthRing))
             {

@@ -57,6 +57,8 @@ namespace RidgesideVillage
 
             Loan.Initialize(this);
 
+            //SummitHouse.Initialize(this);
+
             PaulaClinic.Initialize(this);
             Offering.OfferingTileAction.Initialize(this);
             //not done (yet?)
