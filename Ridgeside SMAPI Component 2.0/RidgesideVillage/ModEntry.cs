@@ -59,6 +59,8 @@ namespace RidgesideVillage
 
             //SummitHouse.Initialize(this);
 
+            WarpTotem.Initialize(this);
+
             PaulaClinic.Initialize(this);
             Offering.OfferingTileAction.Initialize(this);
             //not done (yet?)
