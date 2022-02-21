@@ -15,6 +15,8 @@ using System.Reflection;
 
 namespace RidgesideVillage
 {
+    //This Patch is heavily inspired by spacechase0's More Rings code, which can be found here:
+    //https://github.com/spacechase0/StardewValleyMods/tree/develop/MoreRings
 
     internal static class HarmonyPatch_Rings
     {

@@ -16,6 +16,8 @@ using xTile.Tiles;
 
 namespace RidgesideVillage
 {
+    //This section is heavily inspired by blueberry's Community Kitchen code, which can be found here:
+    //https://github.com/b-b-blueberry/CustomCommunityCentre/blob/master/CommunityKitchen/Core/Kitchen.cs
     internal static class SummitHouse
     {
 

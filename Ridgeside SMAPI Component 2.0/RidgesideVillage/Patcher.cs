@@ -37,6 +37,8 @@ namespace RidgesideVillage
             HarmonyPatch_Animations.ApplyPatch(harmony, Helper);
             HarmonyPatch_SecretSantaGift.ApplyPatch(harmony, Helper);
             HarmonyPatch_Rings.ApplyPatch(harmony, Helper);
+            HarmonyPatch_Dateables.ApplyPatch(harmony, Helper);
+
         }
     }        
 }

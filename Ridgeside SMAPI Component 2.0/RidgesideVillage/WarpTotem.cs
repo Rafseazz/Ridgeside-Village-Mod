@@ -13,6 +13,9 @@ using StardewModdingAPI.Utilities;
 
 namespace RidgesideVillage
 {
+    //This section is heavily inspired by tlitookilakin's Warp Network code, which can be found here:
+    //https://github.com/tlitookilakin/WarpNetwork/tree/master/WarpNetwork
+
     internal static class WarpTotem
     {
         static readonly string Destination = "Custom_Ridgeside_Ridge";
