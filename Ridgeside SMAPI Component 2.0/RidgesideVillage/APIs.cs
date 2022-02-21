@@ -37,7 +37,7 @@ namespace RidgesideVillage
             MR = Helper.ModRegistry.GetApi<IWearMoreRingsApi>("bcmpinc.WearMoreRings");
             if (MR == null)
             {
-                Log.Warn("Quest Framework API not found. This could lead to issues.");
+                Log.Trace("Wear More Rings API not found. Using base game ring slots only.");
             }
         }
     }
