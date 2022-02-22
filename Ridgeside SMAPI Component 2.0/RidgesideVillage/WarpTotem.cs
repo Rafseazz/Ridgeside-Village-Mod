@@ -27,7 +27,7 @@ namespace RidgesideVillage
         static IModHelper Helper;
         static IMonitor Monitor;
         private static IJsonAssetsApi JsonAssets => ExternalAPIs.JA;
-        public static int Totem_id => JsonAssets.GetObjectId("Warp Totem: Ridgeside");
+        public static int Totem = -1; 
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -38,9 +38,13 @@ namespace RidgesideVillage
 
         private static void OnButtonPressed(object sender, EventArgs e)
         {
+            if (Totem == -1)
+            {
+                Totem = JsonAssets.GetObjectId("Warp Totem: Ridgeside");
+            }
             try
             {
-                if (Game1.player.CurrentItem?.ParentSheetIndex == Totem_id)
+                if (Game1.player.CurrentItem?.ParentSheetIndex == Totem)
                 {
                     DoTotemWarpEffects(Game1.player, (f) => DirectWarp());
                 }
@@ -103,7 +107,7 @@ namespace RidgesideVillage
             Multiplayer mp = ModEntry.Helper.Reflection.GetField<Multiplayer>(typeof(Game1), "multiplayer").GetValue();
             // --
             mp.broadcastSprites(who.currentLocation,
-            new TemporaryAnimatedSprite(Totem_id, 9999f, 1, 999, who.Position + new Vector2(0.0f, -96f), false, false, false, 0.0f)
+            new TemporaryAnimatedSprite(Totem, 9999f, 1, 999, who.Position + new Vector2(0.0f, -96f), false, false, false, 0.0f)
             {
                 motion = new Vector2(0.0f, -1f),
                 scaleChange = 0.01f,
@@ -116,7 +120,7 @@ namespace RidgesideVillage
                 xPeriodicRange = 4f,
                 layerDepth = 1f
             },
-            new TemporaryAnimatedSprite(Totem_id, 9999f, 1, 999, who.Position + new Vector2(-64f, -96f), false, false, false, 0.0f)
+            new TemporaryAnimatedSprite(Totem, 9999f, 1, 999, who.Position + new Vector2(-64f, -96f), false, false, false, 0.0f)
             {
                 motion = new Vector2(0.0f, -0.5f),
                 scaleChange = 0.005f,
@@ -131,7 +135,7 @@ namespace RidgesideVillage
                 xPeriodicRange = 4f,
                 layerDepth = 0.9999f
             },
-            new TemporaryAnimatedSprite(Totem_id, 9999f, 1, 999, who.Position + new Vector2(64f, -96f), false, false, false, 0.0f)
+            new TemporaryAnimatedSprite(Totem, 9999f, 1, 999, who.Position + new Vector2(64f, -96f), false, false, false, 0.0f)
             {
                 motion = new Vector2(0.0f, -0.5f),
                 scaleChange = 0.005f,

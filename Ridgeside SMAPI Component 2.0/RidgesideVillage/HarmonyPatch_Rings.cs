@@ -15,8 +15,6 @@ using System.Reflection;
 
 namespace RidgesideVillage
 {
-    //This Patch is heavily inspired by spacechase0's More Rings code, which can be found here:
-    //https://github.com/spacechase0/StardewValleyMods/tree/develop/MoreRings
 
     internal static class HarmonyPatch_Rings
     {
@@ -24,7 +22,7 @@ namespace RidgesideVillage
         private static IJsonAssetsApi JsonAssets => ExternalAPIs.JA;
         private static IWearMoreRingsApi WearMoreRings => ExternalAPIs.MR;
 
-        public static int StealthRing => JsonAssets.GetObjectId("Stealth Ring");
+        public static int StealthRing = -1;
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -33,7 +31,7 @@ namespace RidgesideVillage
             Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_Rings)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), nameof(NPC.withinPlayerThreshold), new Type[] { typeof(int) }),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_Rings), nameof(NPC_WithinPlayerThreshold_Prefix))
+                prefix: new HarmonyMethod(typeof(HarmonyPatch_Rings), nameof(WithinPlayerThreshold_Prefix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(Ghost), nameof(Ghost.behaviorAtGameTick)),
@@ -45,8 +43,17 @@ namespace RidgesideVillage
             );
         }
 
-        private static void NPC_WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
+        private static int GetRingId()
         {
+            return JsonAssets.GetObjectId("Glove of the Assassin");
+        }
+
+        private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
+        {
+            if (StealthRing == -1)
+            {
+                StealthRing = GetRingId();
+            }
             if ((__instance is Monster) && HasRingEquipped(StealthRing))
             {
                 threshold = Math.Max(threshold / 2, 2);
@@ -54,6 +61,10 @@ namespace RidgesideVillage
         }
         private static bool Ghost_Prefix(Ghost __instance)
         {
+            if (StealthRing == -1)
+            {
+                StealthRing = GetRingId();
+            }
             if (HasRingEquipped(StealthRing) &&
                 ((__instance.Position.X - Game1.viewport.X > Game1.viewport.Width) ||
                 (__instance.Position.Y - Game1.viewport.Y > Game1.viewport.Height)))
