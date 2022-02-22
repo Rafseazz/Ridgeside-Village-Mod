@@ -13,6 +13,7 @@ using Microsoft.Xna.Framework;
 using StardewValley.Menus;
 using StardewModdingAPI.Utilities;
 using xTile.Tiles;
+using Netcode;
 
 namespace RidgesideVillage
 {
@@ -25,8 +26,8 @@ namespace RidgesideVillage
         static IMonitor Monitor;
         static Vector2 fridge_pos = new(19, 4);
 
-        // Got an NRE at this line
-        static Chest fridge = new(playerChest: true, tileLocation: fridge_pos, parentSheetIndex: 216);
+        [XmlElement("fridge")]
+        static readonly NetRef<Chest> fridge = new NetRef<Chest>(new Chest(playerChest: true));
 
         internal static void Initialize(IMod ModInstance)
         {
@@ -36,18 +37,20 @@ namespace RidgesideVillage
 
             TileActionHandler.RegisterTileAction("RSVKitchen", HandleKitchen);
             TileActionHandler.RegisterTileAction("RSVFridge", HandleFridge);
+
+            Helper.Events.GameLoop.SaveLoaded += SetUpKitchen;
         }
 
         public static void HandleKitchen(string tileActionString, Vector2 tile_pos)
         {
             // Try opening a cooking menu
             // Minifridges are ignored as they are only usable with Esca's Modding Plugins
-            if (fridge != null && fridge.mutex.IsLocked())
+            if (fridge.Value != null && fridge.Value.mutex.IsLocked())
             {
                 Game1.showRedMessage(Game1.content.LoadString("Strings\\UI:Kitchen_InUse"));
                 return;
             }
-            fridge?.mutex.RequestLock(
+            fridge?.Value.mutex.RequestLock(
                 acquired: delegate
                 {
                     // Fridge door visuals
@@ -72,7 +75,7 @@ namespace RidgesideVillage
                     {
                         exitFunction = delegate
                         {
-                            fridge.mutex.ReleaseLock();
+                            fridge.Value.mutex.ReleaseLock();
                         }
                     };
                     Game1.activeClickableMenu = menu;
@@ -87,7 +90,15 @@ namespace RidgesideVillage
         {
             if (position == fridge_pos)
             {
-                fridge.mutex.ReleaseLock();
+                fridge.Value.mutex.ReleaseLock();
+            }
+        }
+
+        private static void SetUpKitchen(object sender, SaveLoadedEventArgs e)
+        {
+            if (fridge.Value == null)
+            {
+                fridge.Value = new Chest(playerChest: true);
             }
         }
 
