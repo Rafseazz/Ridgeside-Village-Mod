@@ -49,7 +49,7 @@
 
 		"AutoWeddingReception": {
 			"AllowValues": "true, false",
-			"Default": "true",
+			"Default": "false",
 			"Description": "Whether Naomi automatically takes you to the reception after your wedding, or if you must go there yourself. Recommended setting 'false' for custom farm users."
 		},
 
@@ -420,6 +420,10 @@
 				"FromMapFile": "Assets/Maps/EventMaps/PrincessVilleDate.tmx",
 				"MigrateLegacyNames": [ "PrincessVilleDate" ]
 			},
+			{
+				"Name": "Custom_Ridgeside_RSVWestCliff",
+				"FromMapFile": "Assets/Maps/EventMaps/RSVWestCliff.tmx",
+			},
 			/*********
 			** Public Greenhouses
 			*********/
@@ -459,6 +463,10 @@
 			{
 				"Name": "Custom_Ridgeside_LogCabinEventHall_Birthday",
 				"FromMapFile": "Assets/Maps/EventMaps/LogCabinEventHall_Birthday.tmx",
+			},
+			{
+				"Name": "Custom_Ridgeside_LogCabinEventHall_NightParty",
+				"FromMapFile": "Assets/Maps/EventMaps/LogCabinEventHall_NightParty.tmx",
 			},
 		/*********
 		** FestivalMaps
