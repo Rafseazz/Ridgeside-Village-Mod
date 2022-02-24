@@ -22,12 +22,12 @@ namespace RidgesideVillage
         static readonly int Dest_X = 18;
         static readonly int Dest_Y = 10;
 
+        public static int Totem = -1;
         static Color color = Color.Orange;
 
         static IModHelper Helper;
         static IMonitor Monitor;
-        private static IJsonAssetsApi JsonAssets => ExternalAPIs.JA;
-        public static int Totem = -1; 
+
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -40,7 +40,7 @@ namespace RidgesideVillage
         {
             if (Totem == -1)
             {
-                Totem = JsonAssets.GetObjectId("Warp Totem: Ridgeside");
+                Totem = ExternalAPIs.JA.GetObjectId("Warp Totem: Ridgeside");
             }
             try
             {

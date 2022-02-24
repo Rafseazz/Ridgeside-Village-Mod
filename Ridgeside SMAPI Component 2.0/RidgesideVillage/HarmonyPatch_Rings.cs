@@ -19,8 +19,6 @@ namespace RidgesideVillage
     internal static class HarmonyPatch_Rings
     {
         private static IModHelper Helper { get; set; }
-        private static IJsonAssetsApi JsonAssets => ExternalAPIs.JA;
-        private static IWearMoreRingsApi WearMoreRings => ExternalAPIs.MR;
 
         public static int StealthRing = -1;
 
@@ -45,7 +43,7 @@ namespace RidgesideVillage
 
         private static int GetRingId()
         {
-            return JsonAssets.GetObjectId("Glove of the Assassin");
+            return ExternalAPIs.JA.GetObjectId("Glove of the Assassin");
         }
 
         private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
@@ -87,7 +85,7 @@ namespace RidgesideVillage
             }
             if (Game1.player.rightRing.Value?.GetEffectsOfRingMultiplier(id) is int count2 && count2 > 0) { return true; }
 
-            if (WearMoreRings?.CountEquippedRings(Game1.player, id) is int count3 && count3 > 0) { return true; }
+            if (ExternalAPIs.MR?.CountEquippedRings(Game1.player, id) is int count3 && count3 > 0) { return true; }
             return false;
         }
 
