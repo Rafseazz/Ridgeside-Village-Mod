@@ -70,5 +70,23 @@
 		} 
 	},
 
+	//Temporary visit to Verde schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Jio",
+		"Entries": {
+			"marriage_Mon": "0 Custom_Ridgeside_RSVHiddenWarp2 1 1 2/2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+			"marriage_Tue": "GOTO marriage_Mon",
+			"marriage_Wed": "GOTO marriage_Mon",
+			"marriage_Thu": "GOTO marriage_Mon",
+			"marriage_Fri": "GOTO marriage_Mon",
+			"marriage_Sat": "GOTO marriage_Mon",
+			"marriage_Sun": "GOTO marriage_Mon",
+		},
+		"When": {
+			"HasSeenEvent": 75160241, "HasSeenEvent |contains=75160242": false,
+		} 
+	}	
+
 ]
 }
