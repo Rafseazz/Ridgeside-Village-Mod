@@ -890,11 +890,11 @@
                 "Name": "Greeting",
                 "Values": [
                   {
-                    "RequiredTags": "!LolaSOLetter",
+                    "RequiredTags": "!RSV.LolaHelped",
                     "Value": "[RSV.SpecialOrder.LolaRings_Greeting0]"
                   },
                   {
-                    "RequiredTags": "LolaSOLetter",
+                    "RequiredTags": "RSV.LolaHelped",
                     "Value": "[RSV.SpecialOrder.LolaRings_Greeting1]"
                   }
                 ]
@@ -1127,7 +1127,7 @@
                {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "EzekielSOLetter",
+                     "MailReceived": "RSV.EzekielHelped",
                      "NoLetter": "false",
                   }
                },
@@ -1253,11 +1253,11 @@
                 "Name": "Greeting",
                 "Values": [
                   {
-                    "RequiredTags": "!OlgaSOLetter",
+                    "RequiredTags": "!RSV.OlgaHelped",
                     "Value": "[RSV.SpecialOrder.MorningDrinks_Greeting0]"
                   },
                   {
-                    "RequiredTags": "OlgaSOLetter",
+                    "RequiredTags": "RSV.OlgaHelped",
                     "Value": "[RSV.SpecialOrder.MorningDrinks_Greeting1]"
                   }
                 ]
@@ -1297,7 +1297,7 @@
                {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "OlgaSOLetter",
+                     "MailReceived": "RSV.OlgaHelped",
                      "NoLetter": "false",
                   }
                },
