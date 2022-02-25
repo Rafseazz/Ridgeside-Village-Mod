@@ -87,7 +87,8 @@ namespace RidgesideVillage
 
         private static void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            ExternalAPIs.SC.RegisterCustomProperty(typeof(FarmerTeam), "hasRiveraSecret", typeof(NetBool), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.get_hasRiveraSecret)), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.set_hasRiveraSecret)));
+            ISpaceCoreApi SC = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+            SC.RegisterCustomProperty(typeof(FarmerTeam), "hasRiveraSecret", typeof(NetBool), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.get_hasRiveraSecret)), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.set_hasRiveraSecret)));
         }
 
         private static void AddWalletItems(object sender, EventArgs e)
@@ -111,13 +112,12 @@ namespace RidgesideVillage
         private static void GetItemCommand(string cmd, string[] args)
         {
             Game1.player.team.get_hasRiveraSecret().Value = true;
+            Log.Trace($"{Game1.player.Name} has received the Rivera Family Secret.");
         }
         
         public static void set_hasRiveraSecret(this FarmerTeam farmer, NetBool newVal)
         {
-            // We don't actually want a setter for this one, since it should be readonly
-            // Net types are weird
-            // Or do we? Serialization
+            farmer.get_hasRiveraSecret().Value = newVal.Value;
         }
 
         public static NetBool get_hasRiveraSecret(this FarmerTeam farmer)
