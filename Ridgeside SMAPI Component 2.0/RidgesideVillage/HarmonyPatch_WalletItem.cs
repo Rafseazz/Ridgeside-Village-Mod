@@ -87,8 +87,7 @@ namespace RidgesideVillage
 
         private static void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            ISpaceCoreApi SC = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
-            SC.RegisterCustomProperty(typeof(FarmerTeam), "hasRiveraSecret", typeof(NetBool), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.get_hasRiveraSecret)), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.set_hasRiveraSecret)));
+            ExternalAPIs.SC.RegisterCustomProperty(typeof(FarmerTeam), "hasRiveraSecret", typeof(NetBool), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.get_hasRiveraSecret)), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.set_hasRiveraSecret)));
         }
 
         private static void AddWalletItems(object sender, EventArgs e)

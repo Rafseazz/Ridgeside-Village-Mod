@@ -34,14 +34,15 @@ namespace RidgesideVillage
 
             ConfigMenu = new ConfigMenu(this);
             CustomCPTokens = new CustomCPTokens(this);
-            Patcher = new Patcher(this);
 
-            Patcher.PerformPatching();
-
-            HotelMenu.Initialize(this);
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
+
+            Patcher = new Patcher(this);
+            Patcher.PerformPatching();
+
+            HotelMenu.Initialize(this);
 
 
             Minecarts.Initialize(this);
