@@ -105,48 +105,227 @@
 			*********/
 			{
 				"Action": "EditData",
-				"Target": "Data/CustomNPCExclusions",
-				"Entries": 
-				{
-	
-					"Ian": "ItemDelivery Socialize",
-					"Jeric": "ItemDelivery Socialize",
-					"Kenneth": "ItemDelivery Socialize",
-					"Philip": "ItemDelivery Socialize",
-					"Shiro": "ItemDelivery Socialize",
-					"Alissa": "ItemDelivery Socialize",
-					"Corine": "ItemDelivery Socialize",
-					"Flor": "ItemDelivery Socialize",
-					"Maddie": "ItemDelivery Socialize",
-					"Ysabelle": "ItemDelivery Socialize",
-					"Aguar": "ItemDelivery Socialize",
-					"Bert": "ItemDelivery Socialize",
-					"Ezekiel": "ItemDelivery Socialize",
-					"Freddie": "ItemDelivery Socialize",
-					"Keahi": "ItemDelivery Socialize",
-					"Lenny": "ItemDelivery Socialize",
-					"Lola": "ItemDelivery Socialize",
-					"Olga": "ItemDelivery Socialize",
-					"Pika": "ItemDelivery Socialize",
-					"Richard": "ItemDelivery Socialize",
-					"Trinnie": "ItemDelivery Socialize",
-					"Yuuma": "ItemDelivery Socialize",
-					"Anton": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Ariah": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Blair": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Carmen": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Faye": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Irene": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Kiarra": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Lorenzo": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Louie": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Maive": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Paula": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Sean": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Shanice": "ItemDelivery Socialize MovieInvite IslandEvent",
-					"Sonny": "ItemDelivery Socialize MovieInvite IslandEvent",
-				},
-					"When": { "EasyIntroduction": true },
+				"Target": "Data/CustomNPCExclusions",			
+				"TextOperations": 
+				[	
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ian"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Jeric"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Kenneth"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Philip"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Shiro"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Alissa"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Corine"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Flor"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Maddie"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ysabelle"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Aguar"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Bert"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ezekiel"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Freddie"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Keahi"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Lenny"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Lola"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Olga"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Pika"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Richard"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Trinnie"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Yuuma"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Anton"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ariah"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Blair"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Carmen"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Faye"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Irene"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Kiarra"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Lorenzo"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Louie"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Maive"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Paula"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Sean"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Shanice"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Sonny"],
+						"Value": "Socialize",
+						"Delimiter": " "
+					},
+				],
+				"When": { "EasyIntroduction": true },
 			},
 	]
 }
