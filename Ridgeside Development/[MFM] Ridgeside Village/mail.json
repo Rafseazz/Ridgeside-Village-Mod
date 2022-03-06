@@ -225,6 +225,8 @@
     ]
   },
 
+  //---Special Order reward letters---//
+
   // Lola letter with ring reward
   {
     "Id": "LolaSOLetter",
@@ -233,10 +235,42 @@
     "MailReceived": ["RSV.LolaHelped"],
     "Attachments": [
       {
-        "Type": "Ring",
-        "Name": "Stealth Ring",
+        "Type": "Object",
+        "Name": "Glove of the Assassin",
       },
     ],
+  },
+
+  // Ezekiel letter with boots reward
+  {
+    "Id": "EzekielSOLetter",
+    "Text": "EzekielSOLetter.text",
+    "Repeatable": false,
+    "MailReceived": ["RSV.EzekielHelped"],
+    "Attachments": [
+      {
+        "Type": "Boots",
+        "Name": "FRA Combat Boots",
+      },
+    ],
+  },
+
+  // Olga letter with matcha latte recipe
+  {
+    "Id": "OlgaSOLetter",
+    "Text": "OlgaSOLetter.text",
+    "Repeatable": false,
+    "MailReceived": ["RSV.OlgaHelped"],
+    "Recipe": "Matcha Latte",
+  },
+
+  // Aguar letter with warp totem crafting recipe
+  {
+    "Id": "AguarSOLetter",
+    "Text": "AguarSOLetter.text",
+    "Repeatable": false,
+    "MailReceived": ["RSV.AguarHelped"],
+    "Recipe": "Warp Totem: Ridgeside",
   },
 
 ]

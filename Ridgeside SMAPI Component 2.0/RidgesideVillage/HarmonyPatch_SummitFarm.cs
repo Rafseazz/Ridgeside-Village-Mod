@@ -27,6 +27,10 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlantTreesHere)),
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_SummitFarm), nameof(GameLocation_CanPlanTreesHere_Postfix))
             );
+            harmony.Patch(
+                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.spawnWeedsAndStones)),
+                prefix: new HarmonyMethod(typeof(HarmonyPatch_SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
+            );
         }
 
         private static void GameLocation_CanPlanTreesHere_Postfix(ref GameLocation __instance, int sapling_index, int tile_x, int tile_y, ref bool __result)
@@ -45,6 +49,26 @@ namespace RidgesideVillage
 
                 Log.Error($"Harmony patch \"{nameof(GameLocation_CanPlanTreesHere_Postfix)}\" has encountered an error. \n{e.ToString()}");
                 return;
+            }
+        }
+
+        private static bool GameLocation_SpawnWeedsAndStones_Prefix(ref GameLocation __instance)
+        {
+            try
+            {
+                    //set result to true
+                    //set result to true
+                if (__instance != null && __instance.Name.Equals("Custom_Ridgeside_SummitFarm") && Game1.getFarm().isBuildingConstructed("Gold Clock"))
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+
+                Log.Error($"Harmony patch \"{nameof(GameLocation_SpawnWeedsAndStones_Prefix)}\" has encountered an error. \n{e.ToString()}");
+                return true;
             }
         }
     }

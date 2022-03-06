@@ -161,7 +161,16 @@ namespace RidgesideVillage
             {
                 delegate
                 {
-                    Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Aniv.Airyn"));
+                    string translation;
+                    if (Helper.ModRegistry.IsLoaded("ZoeDoll.NPCLeilani"))
+                    {
+                        translation = Helper.Translation.Get("Aniv.Airyn-Leilani");
+                    }
+                    else
+                    {
+                        translation = Helper.Translation.Get("Aniv.Airyn");
+                    }
+                    Game1.activeClickableMenu = new LetterViewerMenu(translation);
                 },
                 delegate
                 {

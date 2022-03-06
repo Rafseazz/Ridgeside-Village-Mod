@@ -19,10 +19,8 @@ namespace RidgesideVillage
     internal static class HarmonyPatch_Rings
     {
         private static IModHelper Helper { get; set; }
-        private static IJsonAssetsApi JsonAssets => ExternalAPIs.JA;
-        private static IWearMoreRingsApi WearMoreRings => ExternalAPIs.MR;
 
-        public static int StealthRing => JsonAssets.GetObjectId("Stealth Ring");
+        public static int StealthRing = -1;
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -43,8 +41,17 @@ namespace RidgesideVillage
             );
         }
 
+        private static int GetRingId()
+        {
+            return ExternalAPIs.JA.GetObjectId("Glove of the Assassin");
+        }
+
         private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
         {
+            if (StealthRing == -1)
+            {
+                StealthRing = GetRingId();
+            }
             if ((__instance is Monster) && HasRingEquipped(StealthRing))
             {
                 threshold = Math.Max(threshold / 2, 2);
@@ -52,6 +59,10 @@ namespace RidgesideVillage
         }
         private static bool Ghost_Prefix(Ghost __instance)
         {
+            if (StealthRing == -1)
+            {
+                StealthRing = GetRingId();
+            }
             if (HasRingEquipped(StealthRing) &&
                 ((__instance.Position.X - Game1.viewport.X > Game1.viewport.Width) ||
                 (__instance.Position.Y - Game1.viewport.Y > Game1.viewport.Height)))
@@ -74,7 +85,7 @@ namespace RidgesideVillage
             }
             if (Game1.player.rightRing.Value?.GetEffectsOfRingMultiplier(id) is int count2 && count2 > 0) { return true; }
 
-            if (WearMoreRings?.CountEquippedRings(Game1.player, id) is int count3 && count3 > 0) { return true; }
+            if (ExternalAPIs.MR?.CountEquippedRings(Game1.player, id) is int count3 && count3 > 0) { return true; }
             return false;
         }
 
