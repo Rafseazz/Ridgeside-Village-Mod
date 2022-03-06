@@ -18,8 +18,7 @@ namespace RidgesideVillage
     //https://github.com/spacechase0/StardewValleyMods/tree/develop/MoonMisadventures
     internal static class HarmonyPatch_WalletItem
     {
-        // Remember to change to actual event ID!!!
-        const int UNLOCKEVENT = 9999;
+        const int UNLOCKEVENT = 75160380;
 
         private static IModHelper Helper { get; set; }
         public static Texture2D image;
@@ -31,17 +30,27 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Helper.ConsoleCommands.Add("RSV_rivera_secret", "Gives you the Rivera Family Secret item.", GetItemCommand);
+            Helper.ConsoleCommands.Add("RSV_rivera_secret", "Gives you the Rivera Family Secret item until you exit the save.", GetItemCommand);
             image = Helper.Content.Load<Texture2D>("assets/RiveraSecret.png");
 
             Helper.Events.GameLoop.GameLaunched += OnGameLaunched;
+            Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             SpaceEvents.AddWalletItems += AddWalletItems;
             SpaceEvents.OnEventFinished += OnEventFinished;
+            try
+            {
+                harmony.Patch(
+                               original: AccessTools.Method(typeof(StardewValley.Object), "getPriceAfterMultipliers"),
+                               postfix: new HarmonyMethod(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.Object_getPriceAfterMultipliers_Postfix))
+                               );
+            }
+            catch (Exception e)
+            {
 
-            harmony.Patch(
-               original: AccessTools.Method(typeof(StardewValley.Object), "getPriceAfterMultipliers"),
-               postfix: new HarmonyMethod(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.Object_getPriceAfterMultipliers_Postfix))
-               );
+                Log.Error($"Harmony patch \"{nameof(HarmonyPatch_WalletItem)}\" has encountered an error. \n{e.ToString()}");
+                return;
+            }
+
         }
 
         public static void Object_getPriceAfterMultipliers_Postfix(StardewValley.Object __instance, float startPrice, ref float __result, long specificPlayerID = -1L)
@@ -90,6 +99,14 @@ namespace RidgesideVillage
             ExternalAPIs.SC.RegisterCustomProperty(typeof(FarmerTeam), "hasRiveraSecret", typeof(NetBool), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.get_hasRiveraSecret)), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.set_hasRiveraSecret)));
         }
 
+        private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
+        {
+            if (Game1.player.eventsSeen.Contains(UNLOCKEVENT))
+            {
+                Game1.player.team.get_hasRiveraSecret().Value = true;
+            }
+        }
+
         private static void AddWalletItems(object sender, EventArgs e)
         {
             var page = sender as NewSkillsPage;
@@ -111,7 +128,7 @@ namespace RidgesideVillage
         private static void GetItemCommand(string cmd, string[] args)
         {
             Game1.player.team.get_hasRiveraSecret().Value = true;
-            Log.Trace($"{Game1.player.Name} has received the Rivera Family Secret.");
+            Log.Trace($"{Game1.player.Name} has temporarily received the Rivera Family Secret.");
         }
         
         public static void set_hasRiveraSecret(this FarmerTeam farmer, NetBool newVal)
