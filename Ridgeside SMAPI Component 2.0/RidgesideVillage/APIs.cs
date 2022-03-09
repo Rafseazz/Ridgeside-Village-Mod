@@ -16,6 +16,8 @@ namespace RidgesideVillage
 
         public static IWearMoreRingsApi MR;
 
+        public static ISpaceCoreApi SC;
+
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
@@ -38,6 +40,12 @@ namespace RidgesideVillage
             if (MR == null)
             {
                 Log.Trace("Wear More Rings API not found. Using base game ring slots only.");
+            }
+
+            SC = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
+            if (SC == null)
+            {
+                Log.Warn("SpaceCore API not found. This could lead to issues.");
             }
         }
     }
