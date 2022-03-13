@@ -541,5 +541,27 @@
    			]
 		},
 
+		{
+   			"Action": "EditMap",
+   			"Target": "Maps/Custom_Ridgeside_RidgePond",
+			"AddWarps": [
+				"18 1 Custom_Ridgeside_RidgeFalls 21 58",
+				"19 1 Custom_Ridgeside_RidgeFalls 21 58",
+   			],
+   			"When": { "HasFlag": "RSV.LinkedFishesDone" },
+			"Update": "OnLocationChange"
+		},
+
+		{
+   			"Action": "EditMap",
+   			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
+			"AddWarps": [
+				"21 59 Custom_Ridgeside_RidgePond 18 3",
+				"22 59 Custom_Ridgeside_RidgePond 18 3",
+   			],
+   			"When": { "HasFlag": "RSV.LinkedFishesDone" },
+			"Update": "OnLocationChange"
+		},
+
 ]
 }

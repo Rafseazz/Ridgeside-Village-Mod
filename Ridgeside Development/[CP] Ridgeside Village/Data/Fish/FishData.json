@@ -92,6 +92,7 @@
 			"Custom_Ridgeside_RidgeForest": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
 			"Custom_Ridgeside_Ridge": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
 			"Custom_Ridgeside_RidgeFalls": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
+			"Custom_Ridgeside_RidgePond": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
 
 			//Outdoors with no bodies of water
 			"Custom_Ridgeside_RSVTheHike": "-1/-1/-1/-1/-1/-1/-1/-1/382 .06 581 .1 378 .1 102 .15 390 .25 330 1",
@@ -278,6 +279,38 @@
 				"Operation": "Prepend",
 				"Target": ["Fields", "Custom_Ridgeside_RidgeFalls", 7],
 				"Value": "{{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}}",
+				"Delimiter": " "
+			},
+
+		//-----------------
+		//Special Pond
+		//-----------------
+			//RidgePond (ALL RSV Fish spawn no matter what the season excluding Legendary)
+			{
+				"Operation": "Prepend",
+				"Target": ["Fields", "Custom_Ridgeside_RidgePond", 4],
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}}",
+				"Delimiter": " "
+			},
+
+			{
+				"Operation": "Prepend",
+				"Target": ["Fields", "Custom_Ridgeside_RidgePond", 5],
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}}",
+				"Delimiter": " "
+			},
+
+			{
+				"Operation": "Prepend",
+				"Target": ["Fields", "Custom_Ridgeside_RidgePond", 6],
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}}",
+				"Delimiter": " "
+			},
+
+			{
+				"Operation": "Prepend",
+				"Target": ["Fields", "Custom_Ridgeside_RidgePond", 7],
+				"Value": "{{spacechase0.JsonAssets/ObjectId:Bladetail Sturgeon}} -1 {{spacechase0.JsonAssets/ObjectId:Caped Tree Frog}} -1 {{spacechase0.JsonAssets/ObjectId:Cardia Septal Jellyfish}} -1 {{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}} -1 {{spacechase0.JsonAssets/ObjectId:Fairytale Lionfish}} -1 {{spacechase0.JsonAssets/ObjectId:Fixer Eel}} -1 {{spacechase0.JsonAssets/ObjectId:Golden Rose Fin}} -1 {{spacechase0.JsonAssets/ObjectId:Harvester Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Lullaby Carp}} -1 {{spacechase0.JsonAssets/ObjectId:Pebble Back Crab}} -1 {{spacechase0.JsonAssets/ObjectId:Ridgeside Bass}} -1 {{spacechase0.JsonAssets/ObjectId:Cutthroat Trout}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Redbelly Dace}} -1 {{spacechase0.JsonAssets/ObjectId:Mountain Whitefish}} -1 {{spacechase0.JsonAssets/ObjectId:Ridge Bluegill}} -1 {{spacechase0.JsonAssets/ObjectId:Skulpin Fish}}",
 				"Delimiter": " "
 			},
 		]
