@@ -2156,11 +2156,11 @@
                 "Name": "Greeting",
                 "Values": [
                   {
-                    "RequiredTags": "!RSV.MythFlowerDone",
+                    "RequiredTags": "!MythFlowerLetter",
                     "Value": "[RSV.SpecialOrder.MythFlower_Greeting0]"
                   },
                   {
-                    "RequiredTags": "RSV.MythFlowerDone",
+                    "RequiredTags": "MythFlowerLetter",
                     "Value": "[RSV.SpecialOrder.MythFlower_Greeting1]"
                   }
                 ]
@@ -2188,7 +2188,7 @@
                {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.MythFlowerDone",
+                     "MailReceived": "MythFlowerLetter",
                      "NoLetter": "true",
                   }
                },

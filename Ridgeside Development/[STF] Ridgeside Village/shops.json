@@ -1610,15 +1610,23 @@
 		},
 		{
 			"ItemType": "Clothing",
-			"ItemNames": [ "Occult Dusk Top", ],
+			"ItemNames": [
+        "Occult Dusk Top",
+        "Occult Leather Jacket",
+      ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 		},
-		{
-			"ItemType": "Clothing",
-			"ItemNames": [ "Occult Leather Jacket", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 50,
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Belinda's Ring",
+        "Raeriyala's Ring"
+				],
+      "Stock": 1,
+      "StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 250,
+      "When": [ "n MythFlowerLetter" ],
 		},
 	],
 	},

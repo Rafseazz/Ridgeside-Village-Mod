@@ -605,6 +605,9 @@
 
 		//Daia arrives (After unlocking ridge forest)
 			"75160254/e 75160187": "spirits_eve/8 7/farmer 8 12 0 Jio 7 7 1 Daia 8 7 3/skippable/pause 500/emote Daia 56/speak Jio \"{{i18n:event-75160254.01}}\"/pause 500/speak Daia \"{{i18n:event-75160254.02}}\"/move farmer 0 -2 0/emote farmer 8/faceDirection Daia 2/faceDirection Jio 2/emote Daia 8/speak Jio \"{{i18n:event-75160254.03}}\"/speak Daia \"{{i18n:event-75160254.04}}\"/pause 100/showFrame Daia 19/playSound shadowpeep/pause 500/warp Daia 9 10/playSound shadowpeep/pause 500/showFrame Daia 18/pause 300/showFrame Daia 21/emote farmer 12/speak Daia \"{{i18n:event-75160254.05}}\"/faceDirection farmer 1/emote farmer 28/speak Jio \"{{i18n:event-75160254.06}}\"/emote Daia 32/showFrame Daia 27/pause 800/speak Daia \"{{i18n:event-75160254.07}}\"/faceDirection Daia 3/pause 500/speak Daia \"{{i18n:event-75160254.08}}\"/speak Jio \"{{i18n:event-75160254.09}}\"/faceDirection farmer 0/emote farmer 32/speak Jio \"{{i18n:event-75160254.10}}\"/jump Daia/speak Daia \"{{i18n:event-75160254.11}}\"/speak Jio \"{{i18n:event-75160254.12}}\"/speak Daia \"{{i18n:event-75160254.13}}\"/faceDirection farmer 1/faceDirection Daia 3/emote farmer 32/speak Daia \"{{i18n:event-75160254.14}}\"/speak Jio \"{{i18n:event-75160254.15}}\"/speak Daia \"{{i18n:event-75160254.16}}\"/emote farmer 8/speak Daia \"{{i18n:event-75160254.17}}\"/pause 800/faceDirection Daia 0/speak Daia \"{{i18n:event-75160254.18}}\"/faceDirection farmer 0/pause 800/speak Daia \"{{i18n:event-75160254.19}}\"/faceDirection Daia 3/faceDirection farmer 1/pause 500/speak Daia \"{{i18n:event-75160254.20}}\"/emote farmer 28/pause 1000/globalFade/viewport -1000 -1000/pause 500/playSound reward/message \"{{i18n:event-75160254.21}}\"/end",
+
+		//Belinda shows rings to farmer (after Mythical Flower quest done)
+		"75160382/n MythFlowerLetter": "null",
 		},
 	},
 
@@ -707,6 +710,9 @@
 
 		//Daia sends a letter (Daia 10 heart part 1)
 			"75160206/e 75160205/f Daia 2500/x DaiaDate": "null",
+
+		//Belinda sends letter after Linked Fishes quest done
+			"75160381/n RSV.LinkedFishesDone/x LinkedFishesLetter": "null",
 		},
 	},
 
@@ -1108,6 +1114,9 @@
 
 			//Cleanse part 2
 			"75160264/H/e 75160263": "junimoStarSong/-1000 -1000/farmer -100 -100 2/broadcastEvent/changeLocation Custom_Ridgeside_RSVSpiritRealm/fade/viewport 50 81/viewport move 0 -1 5000/pause 5000/globalFade/viewport 15 44/viewport move 1 1 5000/pause 5000/globalFade/viewport 48 20/pause 3000/playSound healSound/playSound wand/glow 255 255 255/pause 1000/playSound healSound/playSound wand/glow 255 255 255/pause 1000/playSound healSound/playSound wand/glow 255 255 255/addTemporaryActor RSVSpirit1 16 32 43 23 2 true/addTemporaryActor RSVSpirit2 16 32 46 20 2 true/addTemporaryActor RSVSpirit3 16 32 47 18 2 true/addTemporaryActor RSVSpirit4 16 32 53 22 2 true/emote RSVSpirit1 20 true/emote RSVSpirit3 56/emote RSVSpirit2 32 true/emote RSVSpirit4 56/message \"{{i18n:event-75160264.01}}\"/pause 3000/glow 255 255 255 true/pause 3000/globalFade/end warpOut",
+
+			//Belinda shows Ridge Pond to farmer (after Linked Fishes quest done)
+			"75160383/n LinkedFishesLetter": "null",
 
 		}
 	},
