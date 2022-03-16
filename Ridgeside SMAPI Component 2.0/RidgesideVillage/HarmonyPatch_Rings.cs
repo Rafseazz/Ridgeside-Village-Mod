@@ -20,7 +20,12 @@ namespace RidgesideVillage
     {
         private static IModHelper Helper { get; set; }
 
-        public static int StealthRing = -1;
+        public static string STEALTHRING = "Glove of the Assassin";
+        public static int StealthRingId = -1;
+        public static string RAERING = "Raeriyala's Ring";
+        public static int RaeRingId = -1;
+        public static string BELRING = "Belinda's Ring";
+        public static int BelRingId = -1;
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -41,29 +46,29 @@ namespace RidgesideVillage
             );
         }
 
-        private static int GetRingId()
+        private static int GetRingId(string obj)
         {
-            return ExternalAPIs.JA.GetObjectId("Glove of the Assassin");
+            return ExternalAPIs.JA.GetObjectId(obj);
         }
 
         private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
         {
-            if (StealthRing == -1)
+            if (StealthRingId == -1)
             {
-                StealthRing = GetRingId();
+                StealthRingId = GetRingId(STEALTHRING);
             }
-            if ((__instance is Monster) && HasRingEquipped(StealthRing))
+            if ((__instance is Monster) && HasRingEquipped(StealthRingId))
             {
                 threshold = Math.Max(threshold / 2, 2);
             }
         }
         private static bool Ghost_Prefix(Ghost __instance)
         {
-            if (StealthRing == -1)
+            if (StealthRingId == -1)
             {
-                StealthRing = GetRingId();
+                StealthRingId = GetRingId(STEALTHRING);
             }
-            if (HasRingEquipped(StealthRing) &&
+            if (HasRingEquipped(StealthRingId) &&
                 ((__instance.Position.X - Game1.viewport.X > Game1.viewport.Width) ||
                 (__instance.Position.Y - Game1.viewport.Y > Game1.viewport.Height)))
             {

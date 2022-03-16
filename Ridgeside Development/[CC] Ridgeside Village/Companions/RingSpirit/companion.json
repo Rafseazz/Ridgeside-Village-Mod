@@ -1,22 +1,17 @@
 {
-  "Name": "RelicSpirit",
+  "Name": "RingSpirit",
   "Type": "Flying",
+  "TileSheetPath": "Characters\\RSVSpirits\\RingSpirit",
   "FrameSizeWidth": 16,
   "FrameSizeHeight": 32,
   "TravelSpeed": 1,
-  "InspectionDialogue": "relicspirit.inspection.dialogue",
-  "Portrait": {
-  "PortraitDisplayName": "???",
-  "FrameSizeWidth": 64,
-  "FrameSizeHeight": 64,
-  "FrameIndex": 0,
-  },
 
-  "IdleBehavior": "Wander",
-  "MaxIdleDistance": 800,
+  "IdleBehavior": "Hover",
+  "IdleArguments": [ -1 ],
   "MaxDistanceBeforeTeleport": -1,
+  "MaxIdleDistance": 2,
 
-  "EnableBreathing": true,
+  "EnableBreathing": false,
   "EnableFarmerCollision": false,
   "EnableShadow": true,
   "Shadow": {
@@ -25,12 +20,6 @@
     "Scale": 1,
     "Alpha": 255
   },
-
-  "DirectionChangeChanceWhileMoving": 0.003,
-  "DirectionChangeChanceWhileIdle": 0.05,
-  "ChanceForHalting": 0.1,
-  "MinHaltTime": 10000,
-  "MaxHaltTime": 20000,
 
   "DownAnimation": {
     "StartingFrame": 0,
@@ -50,7 +39,7 @@
     "Duration": 500,
 
     "IdleAnimation": {
-      "StartingFrame": 0,
+      "StartingFrame": 4,
       "NumberOfFrames": 4,
       "Duration": 800
     }
@@ -62,7 +51,7 @@
     "Duration": 500,
 
     "IdleAnimation": {
-      "StartingFrame": 0,
+      "StartingFrame": 8,
       "NumberOfFrames": 4,
       "Duration": 800
     }
@@ -74,7 +63,7 @@
     "Duration": 500,
 
     "IdleAnimation": {
-      "StartingFrame": 0,
+      "StartingFrame": 12,
       "NumberOfFrames": 4,
       "Duration": 800
     }

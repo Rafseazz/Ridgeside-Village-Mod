@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="6">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="10">
  <properties>
   <property name="AmbientLight" value="250 140 160"/>
  </properties>
@@ -268,6 +268,26 @@
   <object id="5" name="TileData" x="48" y="48" width="16" height="16">
    <properties>
     <property name="Action" value="Warp 3 5 Custom_Ridgeside_RSVCableCar"/>
+   </properties>
+  </object>
+  <object id="6" name="TileData" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.sewers&quot;"/>
+   </properties>
+  </object>
+  <object id="7" name="TileData" x="48" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.sewers&quot;"/>
+   </properties>
+  </object>
+  <object id="9" name="TileData" x="48" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.sewers&quot;"/>
+   </properties>
+  </object>
+  <object id="8" name="TileData" x="64" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.sewers&quot;"/>
    </properties>
   </object>
  </objectgroup>
