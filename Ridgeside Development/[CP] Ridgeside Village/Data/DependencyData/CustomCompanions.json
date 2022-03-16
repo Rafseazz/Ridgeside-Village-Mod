@@ -602,13 +602,13 @@
       "LogName": "RSV Ring Spirit Sprite Load",
       "Action": "Load",
       "Target": "Characters/RSVSpirits/RingSpirit",
-      "FromFile": "Assets/LooseSprites/Spirit{{Random:1, 2, 3, 4}}.png"
+      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4}}.png"
    },
    {
       "LogName": "RSV Ring Spirit Sprite Replace",
       "Action": "EditImage",
       "Target": "Characters/RSVSpirits/RingSpirit",
-      "FromFile": "Assets/LooseSprites/Spirit{{Random:1, 2, 3, 4 |key={{LocationName}} }}.png",
+      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4 |key={{LocationName}} }}.png",
       "Update": "OnLocationChange"
    },
 ]

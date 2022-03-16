@@ -786,7 +786,8 @@
 		"FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 7 },
 		"ToArea": { "X": 18, "Y": 54, "Width": 9, "Height": 7 },
 		"PatchMode": "Replace",
-		"When": { "HasFlag": "RSV.LinkedFishesDone" }
+		"When": { "HasFlag": "LinkedFishesLetter" },
+		"Update": "OnLocationChange"
 	},
 
 
