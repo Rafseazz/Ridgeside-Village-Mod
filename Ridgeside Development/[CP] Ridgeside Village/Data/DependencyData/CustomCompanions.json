@@ -498,8 +498,8 @@
                }
             },
          ],
-      "When": { 
-         "Day": "3, 6, 9, 12, 15, 18, 21, 24, 27" 
+      "When": {
+         "Day": "3, 6, 9, 12, 15, 18, 21, 24, 27"
       },
       "Update": "OnDayStart"
    },
@@ -597,6 +597,19 @@
          }
       ],
       "When": { "RandomNumber": "{{Range: 9,10}}" }
+   },
+	 {
+      "LogName": "RSV Ring Spirit Sprite Load",
+      "Action": "Load",
+      "Target": "Characters/RSVSpirits/RingSpirit",
+      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4}}.png"
+   },
+   {
+      "LogName": "RSV Ring Spirit Sprite Replace",
+      "Action": "EditImage",
+      "Target": "Characters/RSVSpirits/RingSpirit",
+      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4 |key={{LocationName}} }}.png",
+      "Update": "OnLocationChange"
    },
 ]
 }

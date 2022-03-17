@@ -6,11 +6,11 @@
 		*********/
 			/*********
 			** Full Festivals
-			*********/		
+			*********/
 			{
 				"Action": "EditData",
-				"Target": "Data/CustomNPCExclusions",			
-				"TextOperations": 
+				"Target": "Data/CustomNPCExclusions",
+				"TextOperations":
 				[
 					{
 						"Operation": "Append",
@@ -105,9 +105,9 @@
 			*********/
 			{
 				"Action": "EditData",
-				"Target": "Data/CustomNPCExclusions",			
-				"TextOperations": 
-				[	
+				"Target": "Data/CustomNPCExclusions",
+				"TextOperations":
+				[
 					{
 						"Operation": "Append",
 						"Target": ["Entries", "Ian"],
@@ -326,6 +326,29 @@
 					},
 				],
 				"When": { "EasyIntroduction": true },
+			},
+
+			{
+				"Action": "EditData",
+				"Target": "Data/CustomNPCExclusions",
+				"Entries": {
+					"Kiwi": null
+					},
+				"When": {
+					"HasSeenEvent": 75160188
+				}
+			},
+
+			{
+				"Action": "EditData",
+				"Target": "Data/CustomNPCExclusions",
+				"Entries": {
+					"Jio": null,
+					"Daia": null
+         },
+				"When": {
+					"HasSeenEvent": 75160264
+				}
 			},
 	]
 }

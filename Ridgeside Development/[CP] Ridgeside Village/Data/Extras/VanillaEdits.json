@@ -1,48 +1,61 @@
-/*{
+{
     "Changes":
     [
-    /*********
-    ** VanillaEdits
-    *********/	
-        /*********
-        ** Characters
-        *********/     
-            /*********
-            ** Schedules
-            *********/
-                /*********
-                ** Emily
-                *********/        
-                /*{ 
-                    "LogName": "Emily visits Faye's shop and gets knitting advice from Lola - Schedule Changes", 
-                    "Action": "EditData",
-                    "Target": "Characters/Schedules/Emily",
-                    "Entries":
-                    {
-                        "5": "700 Custom_Ridgeside_FayeHouse 10 15 \"Strings\\Schedules\\Emily:RSV.EnableVanillaEdits.Emily.FayeVisit\"/2330 HaleyHouse 21 4 3 emily_sleep",
-                    },
-                        "When": { "EnableVanillaEdits": true },
-                },
-    
-        /*********
-        ** Strings
-        *********/     
-            /*********
-            ** Schedules
-            *********/
-                /*********
-                ** Emily
-                *********/        
-/*                {
-                    "LogName": "Emily visits Faye's shop and gets knitting advice from Lola - Schedule Dialogue", 
-                    "Action": "EditData",
-                    "Target": "Strings/Schedules/Emily",
-                    "Entries": 
-                    {
-                        "RSV.EnableVanillaEdits.Emily.FayeVisit": "Hiya @! I'm just visiting Faye. I heard she sells sweaters made from reclaimed wool!",   
-                        "RSV.EnableVanillaEdits.Emily.LolaVisit": "Hiya @! I'm just visiting Lola, she's teaching me ancient knitting techniques.",
-                    },
-                        "When": { "EnableVanillaEdits": true },
-                }
+      {
+        "LogName": "Player wakes up in Ridge Falls instead of Harvey's when dying in Spirit Realm - Event Change",
+        "Action": "EditData",
+        "Target": "Data/Events/Hospital",
+        "When": { "LocationName": "Custom_Ridgeside_RSVSpiritRealm" },
+        "Update": "OnLocationChange",
+        "Entries": {
+          "PlayerKilled": "none/-100 -100/farmer 39 21 2 Raeriyala 39 17 2/changeLocation Custom_Ridgeside_RidgeFalls/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.SpiritRealm.1}}\"/pause 1000/message \"{{i18n:PlayerKilled.SpiritRealm.2}}\"/playMusic woodsTheme/fade/viewport 39 19/pause 1000/showFrame 0/pause 200/emote Raeriyala 16/pause 300/faceDirection farmer 0/speak Raeriyala \"{{i18n:PlayerKilled.SpiritRealm.3}}\"/pause 1000/emote farmer 28/minedeath/end position 39 21"
+        },
+      },
+
+      {
+        "LogName": "Player goes to Paula's Clinic instead of Harvey's when dying in Ridge Forest - Event Change",
+        "Action": "EditData",
+        "Target": "Data/Events/Hospital",
+        "When": { "LocationName": "Custom_Ridgeside_RidgeForest" },
+        "Update": "OnLocationChange",
+        "Entries": {
+          "PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...{0}?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
+        },
+      },
+      {
+        "LogName": "Player goes to Paula's Clinic instead of Harvey's when dying in Ridge Forest - String Change",
+        "Action": "EditData",
+    		"Target": "strings/StringsFromCSFiles",
+        "When": { "LocationName": "Custom_Ridgeside_PaulaClinic" },
+        "Update": "OnLocationChange",
+    		"Entries": {
+    			"Event.cs.1068": "{{i18n:RSV.Event.cs.1068}}",
+          "Event.cs.1070": "{{i18n:RSV.Event.cs.1070}}",
+        }
+      },
+
+      /*
+      {
+          "LogName": "Emily visits Faye's shop and gets knitting advice from Lola - Schedule Changes",
+          "Action": "EditData",
+          "Target": "Characters/Schedules/Emily",
+          "Entries":
+          {
+              "5": "700 Custom_Ridgeside_FayeHouse 10 15 \"Strings\\Schedules\\Emily:RSV.EnableVanillaEdits.Emily.FayeVisit\"/2330 HaleyHouse 21 4 3 emily_sleep",
+          },
+              "When": { "EnableVanillaEdits": true },
+      },
+      {
+          "LogName": "Emily visits Faye's shop and gets knitting advice from Lola - Schedule Dialogue",
+          "Action": "EditData",
+          "Target": "Strings/Schedules/Emily",
+          "Entries":
+          {
+              "RSV.EnableVanillaEdits.Emily.FayeVisit": "Hiya @! I'm just visiting Faye. I heard she sells sweaters made from reclaimed wool!",
+              "RSV.EnableVanillaEdits.Emily.LolaVisit": "Hiya @! I'm just visiting Lola, she's teaching me ancient knitting techniques.",
+          },
+          "When": { "EnableVanillaEdits": true },
+      }
+      */
     ]
 }

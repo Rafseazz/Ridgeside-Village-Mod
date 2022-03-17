@@ -3180,6 +3180,8 @@ I've put random lines of appreciation to my team everywhere here. If you're a tr
 "MapString.rsv.abandonedhouse4": "Different colorful drawings!",
 "MapString.rsv.abandonedhouse5": "Boxes of fruit and food.",
 
+"MapString.rsv.sewers": "Congratulations, you've found the sewers! These boulders are blocking it off as it is unimplemented future content, but you're welcome to use a mod such as Noclip to take a sneak peek.",
+
 //MovieData
 
 //Aguar
@@ -12571,8 +12573,8 @@ I've put random lines of appreciation to my team everywhere here. If you're a tr
 "RSV.SpecialOrder.SlayViperial_Objective1_Text": "Slay 50 Pepper Rexes or Viperials",
 
 "RSV.SpecialOrder.LinkedFishes_Name": "The Linked Fishes",
-"RSV.SpecialOrder.MythFlower_Greeting0": "I request your aid in capturing 9 elusive species of fish that are mysteriously linked to 9 specific local villagers so that I may study them.",
-"RSV.SpecialOrder.MythFlower_Greeting1": "please help me replenish the supply of my mystical fish pond.",
+"RSV.SpecialOrder.LinkedFishes_Greeting0": "I request your aid in capturing 9 elusive species of fish that are mysteriously linked to 9 specific local villagers so that I may study them.",
+"RSV.SpecialOrder.LinkedFishes_Greeting1": "please help me replenish the supply of my mystical fish pond.",
 "RSV.SpecialOrder.LinkedFishes_Text": "Followers who specialize in the art of fishing, {Greeting}",
 "RSV.SpecialOrder.LinkedFishes_Objective1_Text": "Donate a Bladetail Sturgeon",
 "RSV.SpecialOrder.LinkedFishes_Objective2_Text": "Donate a Caped Tree Frog",
@@ -12583,6 +12585,7 @@ I've put random lines of appreciation to my team everywhere here. If you're a tr
 "RSV.SpecialOrder.LinkedFishes_Objective7_Text": "Donate a Golden Rose Fin",
 "RSV.SpecialOrder.LinkedFishes_Objective8_Text": "Donate a Harvester Trout",
 "RSV.SpecialOrder.LinkedFishes_Objective9_Text": "Donate a Lullaby Carp",
+"Mail.LinkedFishesLetter": "^^Thanks to your fishing efforts, my research has finally reached a conclusion. Come to Ridge Falls to behold the fruits of my labor.",
 
 "RSV.SpecialOrder.MythFlower_Name": "The Mythical Flower!",
 "RSV.SpecialOrder.MythFlower_Greeting0": "This elusive and mythical flower must exist somewhere.",
@@ -12590,6 +12593,7 @@ I've put random lines of appreciation to my team everywhere here. If you're a tr
 "RSV.SpecialOrder.MythFlower_Text": "{Greeting} I'll bestow a handsome prize to any follower who can bring me this flower. Literature about its myth is stored in one of the base's bookshelves. Use it.",
 "RSV.SpecialOrder.MythFlower_Objective1_Text": "Deliver a Foxbloom to Belinda in the Spirit Realm",
 "RSV.SpecialOrder.MythFlower_BelText": "Splendid work, dear farmer.#$b#Now, shoo!$a#$b#And don't tell my beloved it was you who found this, okay?$h",
+"Mail.MythFlowerLetter": "^^Excellent job on the flower, farmer. Come to the base so I may present you with a reward for your hard work.",
 
 "Mail.DaiaDate": "Hey baby,^^Come to the Ridge Forest after midnight.^^XOXO Daia.",
 
@@ -12871,14 +12875,26 @@ I've put random lines of appreciation to my team everywhere here. If you're a tr
 	"RSV.SpecialOrder.SpiritRealmFlames_Text": "Gabriella has the Spirit Realm under her evil influence. Extinguish the flames that connect her to this realm to cleanse it!",
 	"RSV.SpecialOrder.SpiritRealmFlames_Objective1_Text" : "Extinguish the Corrupted Flames",
 
-//Special Dialogue - Kiarra
-"Kiarra.Dialogue.breakUp": "Yeah well... I guess it just wasn't to be, huh?$s",
-"Kiarra.Dialogue.danceRejection": "Oh! Sorry, @. I don't really like dancing.",
-"Kiarra.Dialogue.divorced": "I can't believe you still have the guts to show your face to me.$a",
+  //Special Dialogue - Kiarra
+  "Kiarra.Dialogue.breakUp": "Yeah well... I guess it just wasn't to be, huh?$s",
+  "Kiarra.Dialogue.danceRejection": "Oh! Sorry, @. I don't really like dancing.",
+  "Kiarra.Dialogue.divorced": "I can't believe you still have the guts to show your face to me.$a",
 
-//Special Dialogue - Sean
-"Sean.Dialogue.breakUp": "I think I need some time alone.$s",
-"Sean.Dialogue.danceRejection": "I'd have to pass, @. I'm not in the mood for dancing.",
-"Sean.Dialogue.divorced": "Heh, what do you want? Hurt me more? Leave me alone, please.$s",
+  //Special Dialogue - Sean
+  "Sean.Dialogue.breakUp": "I think I need some time alone.$s",
+  "Sean.Dialogue.danceRejection": "I'd have to pass, @. I'm not in the mood for dancing.",
+  "Sean.Dialogue.divorced": "Heh, what do you want? Hurt me more? Leave me alone, please.$s",
+
+  //PlayerKilled event edits
+  "PlayerKilled.SpiritRealm.1": "...Farmer?",
+  "PlayerKilled.SpiritRealm.2": "Hello? Can you hear me, oh, farmer?",
+  "PlayerKilled.SpiritRealm.3": "Oh, farmer, you're alive! Thank goodness!$1#$b#I did my best to heal you, but please go get some rest, okay?#$b#When I found you unconscious at the site of the portal, I thought you'd befallen the same fate as your grandmother...$s#$b#I'm just glad you're okay, dear farmer.",
+  "PlayerKilled.RidgeForest.1": "Easy, now... take it slow.",
+  "PlayerKilled.RidgeForest.2": "Someone brought you in here unconscious and battered... I had to perform an emergency surgery on you!#$b#Be a little more careful next time, okay?$s",
+
+  //CS String replacements for PlayerKilled events
+  //Note: The spaces after the period are necessary for languages like English where you need spaces between sentences.
+  "RSV.Event.cs.1068": "Paula charged me {0}g for the hospital visit. ",
+  "RSV.Event.cs.1070": "I have no money, but Paula was obligated to save my life free of charge. ",
 
 }
