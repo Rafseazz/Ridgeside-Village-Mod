@@ -36,7 +36,11 @@ namespace RidgesideVillage
 
         }
 
-        private static void OnButtonPressed(object sender, EventArgs e)
+        private static void OnButtonPressed(object sender, ButtonPressedEventArgs e)
+        {
+            if (!Context.IsWorldReady)
+                return;
+            if (e.Button == SButton.MouseRight)
         {
             if (Totem == -1)
             {
@@ -52,6 +56,7 @@ namespace RidgesideVillage
             catch (Exception ex)
             {
                 Log.Debug($"Could not find warp totem ID. Error: {ex}");
+                }
             }
         }
 
