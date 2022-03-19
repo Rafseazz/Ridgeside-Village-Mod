@@ -328,7 +328,27 @@
                         //Event dialogue Sean 4 hearts
                         "sean4_1": "You chose to go with Sean.",
                         "sean4_2": "You chose to let Sean go by himself.",
+                      }
+                    },
+
+        {
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Irene",
+                "Entries": {
+                        //Irene 6 hearts
+                        "irene6_choice1": "Oh, wow! I really appreciate it!$h",
+                        "irene6_choice2": "Ha ha! Very funny!$a%fork"
                 }
+        },
+
+        {
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Lorenzo",
+                "Entries": {
+                        //Lorenzo 4 hearts
+                        "lorenzo4_choice1": "What?!$u",
+                        "lorenzo4_choice2": "Hey, wait a minute!$a"
+            }
         },
 
 
