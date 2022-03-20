@@ -108,9 +108,21 @@
 	"Resort": "{{i18n:Flor.Dialogue.Resort}}",
 
 //ArchaeologyHouse
-	"ArchaeologyHouse": "{{i18n:Flor.ArchaeologyHouse}}",
+	"ArchaeologyHouse": "{{i18n:Flor.ArchaeologyHouse.{{Random: 1, 2, 3, 4}}}}",
 
 		},
+	},
+
+//East Scarp installed
+	{
+	   "Action": "EditData",
+	   "Target": "Characters/Dialogue/Flor",
+	   "Entries": {
+		"ArchaeologyHouse": "{{i18n:Flor.ArchaeologyHouse.{{Random: 1, 2, 3, 4ES}}}}",
+			},
+		"When": {
+			"HasMod |contains=Lemurkat.JacobEloise.CP": true
+		}
 	},
 
 
