@@ -239,8 +239,7 @@
 	/*********
 	** Flor
 	*********/				
-			"flor.read": "{{i18n:Animations.Flor.Read}}", 
-//			Oh... As I do recall, Piaget's theory in cognitive learning focused on assimilation and accomodation of information...#$b#But his study was not in a controlled environment though...#$b#He used his children as subjects... So would this be inaccurate?.. Hmmmm..$6",
+			"flor.read": "{{i18n:Flor.ArchaeologyHouse.{{Random: 1, 2, 3, 4}}}}", 
 
 	/*********
 	** Philip
@@ -257,7 +256,19 @@
 			"maive.call": "{{i18n:Animations.maive.call}}"
 			
 		}
-	},	
+	},
+
+	{
+		"LogName": "Animation Strings Flor East Scarp installed",
+		"Action": "EditData",
+		"Target": "Strings/animationDescriptions",
+		"Entries": {			
+			"flor.read": "{{i18n:Flor.ArchaeologyHouse.{{Random: 1, 2, 3, 4ES}}}}", 
+		},
+		"When": {
+			"HasMod |contains=Lemurkat.JacobEloise.CP": true
+		}
+	},
 
 	
 ]
