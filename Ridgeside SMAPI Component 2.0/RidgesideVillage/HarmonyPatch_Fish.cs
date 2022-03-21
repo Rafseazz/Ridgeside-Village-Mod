@@ -53,7 +53,7 @@ namespace RidgesideVillage
                     // Custom locations are added to the game without their prefixes
                     case "Custom_Ridgeside_RidgesideVillage":
                         int fishID = GetFishID("Sockeye Salmon");
-                        if (who.FishingLevel >= MIN_FISHING && !who.fishCaught.ContainsKey(fishID) && new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y)
+                        if (who.FishingLevel >= MIN_FISHING && !CheckCaughtBefore(who, fishID) && new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y)
                             && Game1.currentSeason.Equals("fall") && Game1.IsRainingHere(Game1.currentLocation))
                         {
                             replaceByFishID = fishID;
@@ -61,7 +61,7 @@ namespace RidgesideVillage
                         break;
                     case "Custom_Ridgeside_RidgeFalls":
                         fishID = GetFishID("Waterfall Snakehead");
-                        if (who.FishingLevel >= MIN_FISHING && !who.fishCaught.ContainsKey(fishID) && new Rectangle(53, 11, 4, 4).Contains((int)bobberTile.X, (int)bobberTile.Y)
+                        if (who.FishingLevel >= MIN_FISHING && !CheckCaughtBefore(who, fishID) && new Rectangle(53, 11, 4, 4).Contains((int)bobberTile.X, (int)bobberTile.Y)
                             && (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer")) && Game1.timeOfDay >= 2000)
                         {
                             replaceByFishID = fishID;
@@ -69,7 +69,7 @@ namespace RidgesideVillage
                         break;
                     case "Custom_Ridgeside_RidgeForest":
                         fishID = GetFishID("Deep Ridge Angler");
-                        if (who.FishingLevel >= MIN_FISHING && !who.fishCaught.ContainsKey(fishID) && new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y)
+                        if (who.FishingLevel >= MIN_FISHING && !CheckCaughtBefore(who, fishID) && new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y)
                             && (Game1.currentSeason.Equals("winter") && Game1.timeOfDay >= 1200))
                         {
                             replaceByFishID = fishID;
@@ -90,6 +90,19 @@ namespace RidgesideVillage
             {
                 Log.Error($"Failed in {nameof(GetFish_Postfix)}:\n{ex}");
             }
+        }
+
+        private static bool CheckCaughtBefore(Farmer who, int fishID)
+        {
+            if (Helper.ModRegistry.IsLoaded("DaLion.ImmersiveProfessions") && who.professions.Contains(100 + Farmer.angler))
+            {
+                return false;
+            }
+            if (who.fishCaught.ContainsKey(fishID))
+            {
+                return true;
+            }
+            return false;
         }
 
         private static int GetFishID(string name)
