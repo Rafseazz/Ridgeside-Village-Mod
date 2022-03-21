@@ -38,6 +38,7 @@ namespace RidgesideVillage
             HarmonyPatch_Rings.ApplyPatch(harmony, Helper);
             HarmonyPatch_Dateables.ApplyPatch(harmony, Helper);
             HarmonyPatch_WalletItem.ApplyPatch(harmony, Helper);
+            HarmonyPatch_SODialogue.ApplyPatch(harmony, Helper);
 
         }
     }        

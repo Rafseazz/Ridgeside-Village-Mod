@@ -608,7 +608,7 @@
       "LogName": "RSV Ring Spirit Sprite Replace",
       "Action": "EditImage",
       "Target": "Characters/RSVSpirits/RingSpirit",
-      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4 |key={{LocationName}} }}.png",
+      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4 |key={{Time}} }}.png",
       "Update": "OnLocationChange"
    },
 ]
