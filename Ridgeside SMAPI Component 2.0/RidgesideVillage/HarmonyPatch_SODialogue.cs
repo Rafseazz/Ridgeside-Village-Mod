@@ -36,7 +36,7 @@ namespace RidgesideVillage
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_postfix)));
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.OnFail)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(HarmonyPatch_SODialogue.SpecialOrder_OnFail_postfix)));
+                prefix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(HarmonyPatch_SODialogue.SpecialOrder_OnFail_prefix)));
         }
         private static void SpecialOrdersBoard_ReceiveLeftClick_prefix(ref bool __state)
         {
@@ -78,25 +78,31 @@ namespace RidgesideVillage
             }
         }
 
-        private static void SpecialOrder_OnFail_postfix(ref SpecialOrder __instance)
+        // Don't put the delivered items in the lost and found
+        private static bool SpecialOrder_OnFail_prefix(ref SpecialOrder __instance)
         {
             try
             {
-                // Check that this is Pika's Delivery Quest
                 if (__instance.questKey.Value != PIKAQUEST)
                 {
-                    return;
+                    return true;
                 }
-                
-                if (Game1.player.activeDialogueEvents.ContainsKey(PIKATOPIC))
+                foreach (OrderObjective objective in __instance.objectives)
                 {
-                    Game1.player.activeDialogueEvents.Remove(PIKATOPIC);
+                    objective.OnFail();
                 }
+                if (Game1.IsMasterGame)
+                {
+                    __instance.HostHandleQuestEnd();
+                }
+                __instance.questState.Value = SpecialOrder.QuestState.Failed;
+                return false;
             }
             catch (Exception ex)
             {
-                Log.Error($"RSV: Error removing CT from failed special order:\n\n{ex}");
+                Log.Error($"RSV: Error prefixing SpecialOrder.OnFail:\n\n{ex}");
             }
+            return true;
 
         }
 
