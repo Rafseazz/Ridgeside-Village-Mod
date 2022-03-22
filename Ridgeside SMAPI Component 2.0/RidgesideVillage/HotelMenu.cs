@@ -125,7 +125,7 @@ namespace RidgesideVillage
             }
 
             //Adds ANNIVERSARYTODAY flag if it's the next day after booking
-            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
+            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG) && !Game1.player.mailReceived.Contains(ANNIVERSARYTODAY))
             {
                 Game1.player.mailReceived.Add(ANNIVERSARYTODAY);
             }
