@@ -30,9 +30,7 @@ namespace RidgesideVillage
 
             harmony.Patch(
                 original: AccessTools.Method(QFSpecialBoardClass, "receiveLeftClick"),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_prefix)));
-            harmony.Patch(
-                original: AccessTools.Method(QFSpecialBoardClass, "receiveLeftClick"),
+                prefix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_prefix)),
                 postfix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_postfix)));
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.OnFail)),
