@@ -213,6 +213,16 @@
 		"When": { "HasFlag": "RSV.FixedMinecart" },
 		"Update": "OnLocationChange"
 	},
+	//Safety net to remove boxes for offline players @ multiplayer during Yuuma cutscene for minecart quest
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"FromFile": "Assets/Maps/EventMaps/RSVOpenPlot.tmx",
+		"ToArea": { "X": 68, "Y": 18, "Width": 3, "Height": 2 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag": "RSV.FixedMinecart" },
+		"Update": "OnLocationChange"
+	},
 
 //Event changes
 	//Aguar Events
