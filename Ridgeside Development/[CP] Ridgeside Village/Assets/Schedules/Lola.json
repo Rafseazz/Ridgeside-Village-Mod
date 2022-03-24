@@ -31,5 +31,30 @@
 		}  
 	},
 
+	//New plaza schedule tweaks
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Lola",
+		"Entries": {
+
+			"spring": "800 Custom_Ridgeside_RidgesideVillage 10 61 1/1200 Custom_Ridgeside_RidgesideVillage 30 65 2/1600 Custom_Ridgeside_RidgesideVillage 109 46 2/1900 Custom_Ridgeside_FreddieHouse 15 11 3/2200 Custom_Ridgeside_FreddieHouse 5 5 0 lola_sleep",
+			"fall": "800 Custom_Ridgeside_RidgesideVillage 10 61 1/1200 Custom_Ridgeside_RidgesideVillage 13 70 2/1600 Custom_Ridgeside_RidgesideVillage 109 46 2/1900 Custom_Ridgeside_FreddieHouse 15 11 3/2200 Custom_Ridgeside_FreddieHouse 5 5 0 lola_sleep",
+					},
+		"When": { "HasFlag": "RSV.LennyHelped" },
+	},
+
+	//Greenhouse schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Lola",
+		"Entries": {
+			"Thu": "800 Custom_Ridgeside_RSVGreenhouse1 22 15 3/1400 Custom_Ridgeside_RidgesideVillage 109 46 2/1900 Custom_Ridgeside_FreddieHouse 15 11 3/2200 Custom_Ridgeside_FreddieHouse 5 5 0 lola_sleep",
+					},
+		"When": {
+			"HasFlag: hostPlayer |contains=GH1letter": true,
+			"HasFlag": "RSV.LennyHelped"
+		}  
+	},
+
 ]
 }
