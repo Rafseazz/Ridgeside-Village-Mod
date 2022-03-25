@@ -12,7 +12,7 @@ using StardewModdingAPI.Utilities;
 namespace RidgesideVillage
 {
     //Corrects the location name in the "X has begun in Y" message
-    internal static class HarmonyPatch_Animations
+    internal static class Animations
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -21,14 +21,14 @@ namespace RidgesideVillage
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
-            Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_Animations)}\".");
+            Log.Trace($"Applying Harmony Patch \"{nameof(Animations)}\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), "startRouteBehavior"),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_Animations), nameof(startRouteBehavior_Postifx))
+                postfix: new HarmonyMethod(typeof(Animations), nameof(startRouteBehavior_Postifx))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), "finishRouteBehavior"),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_Animations), nameof(finishRouteBehavior_Prefix))
+                prefix: new HarmonyMethod(typeof(Animations), nameof(finishRouteBehavior_Prefix))
             );
         }
 

@@ -16,7 +16,7 @@ namespace RidgesideVillage
 {
     //This section is heavily inspired by spacechase0's Moon Misadventures code, which can be found here:
     //https://github.com/spacechase0/StardewValleyMods/tree/develop/MoonMisadventures
-    internal static class HarmonyPatch_WalletItem
+    internal static class WalletItem
     {
         const int UNLOCKEVENT = 75160380;
 
@@ -40,14 +40,13 @@ namespace RidgesideVillage
             try
             {
                 harmony.Patch(
-                               original: AccessTools.Method(typeof(StardewValley.Object), "getPriceAfterMultipliers"),
-                               postfix: new HarmonyMethod(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.Object_getPriceAfterMultipliers_Postfix))
-                               );
+                    original: AccessTools.Method(typeof(StardewValley.Object), "getPriceAfterMultipliers"),
+                    postfix: new HarmonyMethod(typeof(WalletItem), nameof(WalletItem.Object_getPriceAfterMultipliers_Postfix))
+                    );
             }
             catch (Exception e)
             {
-
-                Log.Error($"Harmony patch \"{nameof(HarmonyPatch_WalletItem)}\" has encountered an error. \n{e.ToString()}");
+                Log.Error($"Harmony patch \"{nameof(WalletItem)}\" has encountered an error. \n{e.ToString()}");
                 return;
             }
 
@@ -96,7 +95,7 @@ namespace RidgesideVillage
 
         private static void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            ExternalAPIs.SC.RegisterCustomProperty(typeof(FarmerTeam), "hasRiveraSecret", typeof(NetBool), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.get_hasRiveraSecret)), AccessTools.Method(typeof(HarmonyPatch_WalletItem), nameof(HarmonyPatch_WalletItem.set_hasRiveraSecret)));
+            ExternalAPIs.SC.RegisterCustomProperty(typeof(FarmerTeam), "hasRiveraSecret", typeof(NetBool), AccessTools.Method(typeof(WalletItem), nameof(WalletItem.get_hasRiveraSecret)), AccessTools.Method(typeof(WalletItem), nameof(WalletItem.set_hasRiveraSecret)));
         }
 
         private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)

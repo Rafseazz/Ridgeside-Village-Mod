@@ -39,13 +39,17 @@ namespace RidgesideVillage
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
 
+            BgUtils.Initialize(this);
+
+            TortsBackground.Initialize(this);
+
             Patcher = new Patcher(this);
             Patcher.PerformPatching();
 
             HotelMenu.Initialize(this);
 
-
             Minecarts.Initialize(this);
+
             SpiritRealm.Initialize(this);
 
             SpecialOrders.Initialize(this);
@@ -123,8 +127,6 @@ namespace RidgesideVillage
             RSVWorldMap.Setup(Helper);
             ExternalAPIs.Initialize(Helper);
 
-
-
             Config = Helper.ReadConfig<ModConfig>();
 
             if (!Helper.ModRegistry.IsLoaded("spacechase0.JsonAssets"))
@@ -138,6 +140,7 @@ namespace RidgesideVillage
 
             Helper.ConsoleCommands.Add("RSV_reset_pedestals", "", this.ResetPedestals);
             Helper.ConsoleCommands.Add("RSV_open_portal", "", this.OpenPortal);
+            // RSV_rivera_secret in Patches/WalletItem
 
             // Generic Mod Config Menu setup
             //ConfigMenu.RegisterMenu();

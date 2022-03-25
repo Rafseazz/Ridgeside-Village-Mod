@@ -15,21 +15,21 @@ namespace RidgesideVillage
 {
     //Handles the treasures for the spirit realm.
     //Mostly hardcoded for performance
-    internal static class HarmonyPatch_SummitFarm
+    internal static class SummitFarm
     {
         private static IModHelper Helper { get; set; }
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
-            Log.Trace($"Applying Harmony Patch from \"{nameof(HarmonyPatch_SummitFarm)}\".");
+            Log.Trace($"Applying Harmony Patch from \"{nameof(SummitFarm)}\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlantTreesHere)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_SummitFarm), nameof(GameLocation_CanPlanTreesHere_Postfix))
+                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_CanPlanTreesHere_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.spawnWeedsAndStones)),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
+                prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
             );
         }
 
