@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="22" height="22" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="2412">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="22" height="22" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="2418">
  <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths.png" width="64" height="144"/>
   <tile id="0">
@@ -3134,7 +3134,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="7" name="Buildings" visible="0">
+ <objectgroup id="7" name="Buildings">
   <object id="2009" name="TileData" x="176" y="32" width="16" height="16">
    <properties>
     <property name="Action" value="LockedDoorWarp 14 12 Custom_Ridgeside_LennyHouse 800 2000"/>
@@ -3143,11 +3143,6 @@
   <object id="2017" name="TileData" x="208" y="48" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.3&quot;"/>
-   </properties>
-  </object>
-  <object id="2022" name="TileData" x="144" y="128" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
    </properties>
   </object>
   <object id="2023" name="TileData" x="144" y="112" width="16" height="16">
@@ -3160,47 +3155,12 @@
     <property name="Action" value="Message &quot;rsv.40&quot;"/>
    </properties>
   </object>
-  <object id="2028" name="TileData" x="208" y="128" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2032" name="TileData" x="112" y="192" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2033" name="TileData" x="240" y="192" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2035" name="TileData" x="80" y="224" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2036" name="TileData" x="272" y="224" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
   <object id="2178" name="TileData" x="144" y="96" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.40&quot;"/>
    </properties>
   </object>
   <object id="2179" name="TileData" x="144" y="80" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2180" name="TileData" x="208" y="144" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2181" name="TileData" x="144" y="144" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.40&quot;"/>
    </properties>
@@ -3220,47 +3180,27 @@
     <property name="Action" value="Message &quot;rsv.40&quot;"/>
    </properties>
   </object>
-  <object id="2191" name="TileData" x="80" y="240" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2192" name="TileData" x="80" y="208" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2193" name="TileData" x="96" y="192" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2194" name="TileData" x="128" y="192" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2195" name="TileData" x="224" y="192" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2196" name="TileData" x="256" y="192" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2197" name="TileData" x="272" y="208" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.40&quot;"/>
-   </properties>
-  </object>
-  <object id="2198" name="TileData" x="272" y="240" width="16" height="16">
+  <object id="2195" name="TileData" x="256" y="256" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.40&quot;"/>
    </properties>
   </object>
   <object id="2326" name="TileData" x="224" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.40&quot;"/>
+   </properties>
+  </object>
+  <object id="2414" name="TileData" x="272" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.40&quot;"/>
+   </properties>
+  </object>
+  <object id="2415" name="TileData" x="96" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;rsv.40&quot;"/>
+   </properties>
+  </object>
+  <object id="2416" name="TileData" x="80" y="256" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.40&quot;"/>
    </properties>
