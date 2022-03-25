@@ -13,5 +13,15 @@
 					},
 	},
 
+	//New plaza schedule tweaks
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Maive",
+		"Entries": {
+			"Sat": "800 Custom_Ridgeside_PurpleMansion 53 8 3 maive_read/1100 Custom_Ridgeside_PurpleMansion2ndFloor 29 5 square_2_1_0/1400 Custom_Ridgeside_RidgesideVillage 113 50 2/1800 Custom_Ridgeside_PurpleMansion 53 8 3 maive_read/2300 Custom_Ridgeside_PurpleMansion2ndFloor 24 5 2 maive_sleep",
+					},
+		"When": { "HasFlag": "RSV.LennyHelped" },
+	},
+
 ]
 }

@@ -27,5 +27,15 @@
 		}  
 	},
 
+	//New plaza schedule tweaks
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Sonny",
+		"Entries": {
+			"Sat": "610 Custom_Ridgeside_PurpleMansion 53 5 2/1100 Custom_Ridgeside_PurpleMansion 53 23 square_2_1_0/1400 Custom_Ridgeside_RidgesideVillage 112 50 2/1800 Custom_Ridgeside_PurpleMansion 53 5 2/2100 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
+					},
+		"When": { "HasFlag": "RSV.LennyHelped" },
+	},
+
 ]
 }
