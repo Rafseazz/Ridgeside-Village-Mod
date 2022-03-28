@@ -12,7 +12,7 @@ using StardewModdingAPI.Events;
 namespace RidgesideVillage
 {
     //Corrects the location name in the "X has begun in Y" message
-    internal static class HarmonyPatch_Obelisk
+    internal static class Obelisk
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -35,7 +35,7 @@ namespace RidgesideVillage
             Log.Trace($"Applying Harmony Patch \"{nameof(obeliskWarpForReal_Prefix)}\" prefixing SDV method \"obeliskWarpForReal_Prefix\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Building), "obeliskWarpForReal"),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_Obelisk), nameof(obeliskWarpForReal_Prefix))
+                prefix: new HarmonyMethod(typeof(Obelisk), nameof(obeliskWarpForReal_Prefix))
             );
         }
 
@@ -61,17 +61,17 @@ namespace RidgesideVillage
         }
         private static void OnSaved(object sender, SavedEventArgs e)
         {
-            HarmonyPatch_Obelisk.RestoreObelisks();
+            Obelisk.RestoreObelisks();
         }
 
         private static void OnSaving(object sender, SavingEventArgs e)
         {
-            HarmonyPatch_Obelisk.SanitizeObelisks();
+            Obelisk.SanitizeObelisks();
         }
 
         private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
         {
-            HarmonyPatch_Obelisk.RestoreObelisks();
+            Obelisk.RestoreObelisks();
         }
 
         //add the obelisk to the wizardMenu

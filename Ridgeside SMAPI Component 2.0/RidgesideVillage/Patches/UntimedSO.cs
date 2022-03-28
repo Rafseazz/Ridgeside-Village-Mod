@@ -14,7 +14,7 @@ using StardewModdingAPI.Utilities;
 
 namespace RidgesideVillage
 {
-    internal static class HarmonyPatch_UntimedSO
+    internal static class UntimedSO
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -32,17 +32,17 @@ namespace RidgesideVillage
             Helper = helper;
 
             Helper.Events.GameLoop.DayEnding += OnDayEnd;
-            Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_UntimedSO)}\" prefixing SDV method.");
+            Log.Trace($"Applying Harmony Patch \"{nameof(UntimedSO)}\" prefixing SDV method.");
             
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.IsTimedQuest)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_IsTimed_postifx))
+                postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrders_IsTimed_postifx))
             );
 
             //only method called once on quest end. Is called for *all* players, not just host.
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.HostHandleQuestEnd)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrders_HostHandleQuestEnd_postfix))
+                postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrders_HostHandleQuestEnd_postfix))
             );
 
             //causes issues on MAC apparently??
@@ -50,14 +50,14 @@ namespace RidgesideVillage
             {
                  harmony.Patch(
                     original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
-                    postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
+                    postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
                 );
                 try
                 {
                     Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
                     harmony.Patch(
                         original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
-                        postfix: new HarmonyMethod(typeof(HarmonyPatch_UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
+                        postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
                     );
                 }
                 catch
@@ -100,7 +100,7 @@ namespace RidgesideVillage
                     int index = NPCNames.FindIndex(name => name.Equals(requester_name, StringComparison.OrdinalIgnoreCase));
                     if (index != -1)
                     {
-                        __result = new KeyValuePair<Texture2D, Rectangle>(HarmonyPatch_UntimedSO.RSVemojis, new Rectangle(index % 14 * 9, index / 14 * 9, 9, 9));
+                        __result = new KeyValuePair<Texture2D, Rectangle>(UntimedSO.RSVemojis, new Rectangle(index % 14 * 9, index / 14 * 9, 9, 9));
                         return;
                     }
                 }

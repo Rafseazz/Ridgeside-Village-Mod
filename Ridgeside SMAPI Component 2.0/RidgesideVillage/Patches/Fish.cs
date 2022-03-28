@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework;
 namespace RidgesideVillage
 {
     //Corrects the location name in the "X has begun in Y" message
-    internal static class HarmonyPatch_Fish
+    internal static class Fish
     {
         private static IModHelper Helper { get; set; }
 
@@ -31,7 +31,7 @@ namespace RidgesideVillage
 
             harmony.Patch(
                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
-               postfix: new HarmonyMethod(typeof(HarmonyPatch_Fish), nameof(HarmonyPatch_Fish.GetFish_Postfix))
+               postfix: new HarmonyMethod(typeof(Fish), nameof(Fish.GetFish_Postfix))
                );
         }
 

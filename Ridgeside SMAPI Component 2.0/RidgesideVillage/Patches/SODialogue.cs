@@ -15,7 +15,7 @@ using StardewModdingAPI.Utilities;
 namespace RidgesideVillage
 {
 
-    internal static class HarmonyPatch_SODialogue
+    internal static class SODialogue
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -30,11 +30,11 @@ namespace RidgesideVillage
 
             harmony.Patch(
                 original: AccessTools.Method(QFSpecialBoardClass, "receiveLeftClick"),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_prefix)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_postfix)));
+                prefix: new HarmonyMethod(typeof(SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_prefix)),
+                postfix: new HarmonyMethod(typeof(SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_postfix)));
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.OnFail)),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_SODialogue), nameof(HarmonyPatch_SODialogue.SpecialOrder_OnFail_prefix)));
+                prefix: new HarmonyMethod(typeof(SODialogue), nameof(SODialogue.SpecialOrder_OnFail_prefix)));
         }
         private static void SpecialOrdersBoard_ReceiveLeftClick_prefix(ref bool __state)
         {

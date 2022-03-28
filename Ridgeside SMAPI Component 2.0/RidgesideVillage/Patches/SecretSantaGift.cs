@@ -12,7 +12,7 @@ using StardewModdingAPI.Utilities;
 namespace RidgesideVillage
 {
 
-    internal static class HarmonyPatch_SecretSantaGift
+    internal static class SecretSantaGift
     {
         private static IModHelper Helper { get; set; }
         private static readonly string AssetPath = PathUtilities.NormalizeAssetName("RSV/RSVSecretSantaGifts");
@@ -20,13 +20,13 @@ namespace RidgesideVillage
 
         public static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
-            HarmonyPatch_SecretSantaGift.Helper = helper;
+            SecretSantaGift.Helper = helper;
 
-            Helper.ConsoleCommands.Add("RSVGiftTest", "", HarmonyPatch_SecretSantaGift.GiveGift);
-            Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_SecretSantaGift)}.");
+            Helper.ConsoleCommands.Add("RSVGiftTest", "", SecretSantaGift.GiveGift);
+            Log.Trace($"Applying Harmony Patch \"{nameof(SecretSantaGift)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.getGiftFromNPC)),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_SecretSantaGift), nameof(Utility_getGiftFromNPC_Prefix))
+                prefix: new HarmonyMethod(typeof(SecretSantaGift), nameof(Utility_getGiftFromNPC_Prefix))
             );
 
         }

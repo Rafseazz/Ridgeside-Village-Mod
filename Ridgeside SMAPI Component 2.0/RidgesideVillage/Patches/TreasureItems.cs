@@ -15,7 +15,7 @@ namespace RidgesideVillage
 {
     //Handles the treasures for the spirit realm.
     //Mostly hardcoded for performance
-    internal static class HarmonyPatch_TreasureItems
+    internal static class TreasureItems
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -47,30 +47,30 @@ namespace RidgesideVillage
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.ReturnedToTitle += OnReturnToTitle;
 
-            Log.Trace($"Applying Harmony Patch from \"{nameof(HarmonyPatch_TreasureItems)}\".");
+            Log.Trace($"Applying Harmony Patch from \"{nameof(TreasureItems)}\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Axe), nameof(Axe.DoFunction)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_TreasureItems), nameof(Axe_DoFunction_Postfix))
+                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(Axe_DoFunction_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(Hoe), nameof(Hoe.DoFunction)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_TreasureItems), nameof(Hoe_DoFunction_Postfix))
+                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(Hoe_DoFunction_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(WateringCan), nameof(WateringCan.DoFunction)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_TreasureItems), nameof(WateringCan_DoFunction_Postfix))
+                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(WateringCan_DoFunction_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(FishingRod), nameof(FishingRod.DoFunction)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_TreasureItems), nameof(FishingRod_DoFunction_Postfix))
+                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(FishingRod_DoFunction_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(FishingRod), nameof(FishingRod.pullFishFromWater)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_TreasureItems), nameof(FishingRod_PullFishFromWater_PostFix))
+                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(FishingRod_PullFishFromWater_PostFix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_TreasureItems), nameof(GameLocation_GetFish_Postifx))
+                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(GameLocation_GetFish_Postifx))
             );
 
         }
@@ -87,7 +87,7 @@ namespace RidgesideVillage
             //reset flags every season
             if(Game1.dayOfMonth == 1)
             {
-                foreach (var field in typeof(HarmonyPatch_TreasureItems).GetFields(BindingFlags.Static | BindingFlags.NonPublic))
+                foreach (var field in typeof(TreasureItems).GetFields(BindingFlags.Static | BindingFlags.NonPublic))
                 {
                     if (field.Name.Contains("FLAG"))
                     {

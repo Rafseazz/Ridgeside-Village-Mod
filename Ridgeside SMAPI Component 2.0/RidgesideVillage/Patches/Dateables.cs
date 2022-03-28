@@ -16,7 +16,7 @@ using System.Reflection;
 namespace RidgesideVillage
 {
 
-    internal static class HarmonyPatch_Dateables
+    internal static class Dateables
     {
         private static IModHelper Helper { get; set; }
 
@@ -24,10 +24,10 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_Dateables)}.");
+            Log.Trace($"Applying Harmony Patch \"{nameof(Dateables)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), "engagementResponse"),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_Dateables), nameof(NPC_engagementResponse_Prefix))
+                prefix: new HarmonyMethod(typeof(Dateables), nameof(NPC_engagementResponse_Prefix))
             );
         }
         private static bool NPC_engagementResponse_Prefix(NPC __instance)

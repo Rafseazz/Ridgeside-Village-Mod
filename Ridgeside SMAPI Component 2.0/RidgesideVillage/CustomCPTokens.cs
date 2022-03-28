@@ -27,10 +27,8 @@ namespace RidgesideVillage
             var cp = Helper.ModRegistry.GetApi<IContentPatcherApi>("Pathoschild.ContentPatcher");
             if (cp is null) {
                 Log.Alert("Content Patcher is not installed- RSV requires CP to run. Please install CP and restart your game.");
-                return;
-                }
-
-            cp.RegisterToken(this.ModManifest, "PastoralMapStyle", () => new string[] { Config.pastoralMapStyle ?? "Default" });
+                return;   
+            }
 
             cp.RegisterToken(this.ModManifest, "EnableRidgesideMusic", () => new string[] { Config.enableRidgesideMusic.ToString() });
 

@@ -15,7 +15,7 @@ namespace RidgesideVillage
     //https://github.com/FlashShifter/StardewValleyExpanded/blob/master/Code/CustomWeddingGuests.cs
     //Patch is only applied if SVE is not loaded.
 
-    internal static class HarmonyPatch_WeddingGuests
+    internal static class WeddingGuests
     {
         private static IModHelper Helper { get; set; }
 
@@ -29,10 +29,10 @@ namespace RidgesideVillage
                 //SVE is loaded, nothing to do
                 return;
             }
-            Log.Trace($"Applying Harmony Patch \"{nameof(HarmonyPatch_WeddingGuests)}.");
+            Log.Trace($"Applying Harmony Patch \"{nameof(WeddingGuests)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.getCelebrationPositionsForDatables), new Type[]{ typeof(List<string>) }),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_WeddingGuests), nameof(getCelebrationPositionsForDatables_Postfix))
+                postfix: new HarmonyMethod(typeof(WeddingGuests), nameof(getCelebrationPositionsForDatables_Postfix))
             );
         }
 

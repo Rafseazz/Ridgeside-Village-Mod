@@ -16,7 +16,7 @@ namespace RidgesideVillage
 {
     //Corrects the location name in the "X has begun in Y" message
     //Obsolet in SDV 1.5.5, will be removed
-    internal static class HarmonyPatch_EventDetection
+    internal static class EventDetection
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -33,19 +33,19 @@ namespace RidgesideVillage
             Log.Trace($"Applying Harmony Patch \"{nameof(GameMenu_ChangeTab_PostFix)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameMenu), nameof(GameMenu.changeTab)),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(GameMenu_ChangeTab_PostFix))
+                prefix: new HarmonyMethod(typeof(EventDetection), nameof(GameMenu_ChangeTab_PostFix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(MapPage), nameof(MapPage.draw), new Type[]{ typeof(SpriteBatch)}),
-                postfix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_draw_Postfix))
+                postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_draw_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(MapPage), nameof(MapPage.receiveLeftClick)),
-                prefix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_receiveLeftClick_Prefix))
+                prefix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_receiveLeftClick_Prefix))
             );            
             harmony.Patch(
               original: AccessTools.Constructor(typeof(MapPage), new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) }),
-              postfix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_Constructor_Postfix))
+              postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_Constructor_Postfix))
             );
             if (Helper.ModRegistry.IsLoaded("Bouhm.NPCMapLocations"))
             {
@@ -54,7 +54,7 @@ namespace RidgesideVillage
                     Type ModMapPageClass = Type.GetType("NPCMapLocations.Framework.Menus.ModMapPage, NPCMapLocations");
                     harmony.Patch(
                         original: AccessTools.Method(ModMapPageClass, "draw", new Type[] { typeof(SpriteBatch) }),
-                        postfix: new HarmonyMethod(typeof(HarmonyPatch_EventDetection), nameof(MapPage_draw_Postfix))
+                        postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_draw_Postfix))
                     );
                 }
                 catch (Exception e)
@@ -123,7 +123,7 @@ namespace RidgesideVillage
 
         internal static void MapPage_draw_Postfix(ref MapPage __instance, SpriteBatch b) {
             Game1.drawDialogueBox(ButtonArea.X - 92 + 60, ButtonArea.Y - 16 - 80, 250 - 42, 232, false, true);
-            b.Draw(RSVIcon, new Vector2(HarmonyPatch_EventDetection.ButtonArea.X, HarmonyPatch_EventDetection.ButtonArea.Y), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.1f);
+            b.Draw(RSVIcon, new Vector2(EventDetection.ButtonArea.X, EventDetection.ButtonArea.Y), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.1f);
             Point mouseCoords = Game1.getMousePosition(true);
             if (ButtonArea.Contains(mouseCoords.X, mouseCoords.Y))
             {
