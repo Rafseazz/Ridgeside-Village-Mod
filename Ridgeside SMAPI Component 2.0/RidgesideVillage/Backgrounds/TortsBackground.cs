@@ -16,13 +16,27 @@ namespace RidgesideVillage
         static IModHelper Helper;
         static IMonitor Monitor;
 
+        private static float counter;
         private Vector2 offset = Vector2.Zero;
         private Rectangle starTexRect = new Rectangle(0, 1453, 639, 195);
+        private readonly Color[] fromColors = new[]
+                {
+                    new Color( 190, 150, 255 ),
+                    new Color( 250, 255, 170 ),
+                    new Color( 255, 255, 255 )
+                };
+        private readonly Color[] toColors = new[]
+                {
+                    new Color( 255, 255, 255 ),
+                    new Color( 255, 255, 255 ),
+                    new Color( 150, 150, 255 )
+                };
 
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
+            counter = 0;
 
             Helper.Events.Display.RenderingWorld += OnRenderingWorld;
             Helper.Events.Display.RenderedWorld += OnRenderedWorld;
@@ -42,12 +56,14 @@ namespace RidgesideVillage
                 Rectangle display = new Rectangle(0, 0, Game1.viewport.Width, Game1.viewport.Height);
                 b.Draw(Game1.staminaRect, display, Game1.staminaRect.Bounds, this.c, 0f, Vector2.Zero, SpriteEffects.None, 0f);
 
+                /*
                 Color[] tints = new[]
                 {
                     new Color( 255, 255, 255 ),
-                    new Color( 170, 255, 170 ),
+                    new Color( 250, 255, 170 ),
                     new Color( 150, 150, 255 )
                 };
+                */
                 Vector2[] posMods = new[]
                 {
                     new Vector2( 0, 0 ),
@@ -71,11 +87,14 @@ namespace RidgesideVillage
                             float rx = sx + ix * starTexRect.Width * Game1.pixelZoom;
                             float ry = sy + iy * starTexRect.Height * Game1.pixelZoom;
 
-                            b.Draw(Game1.mouseCursors, new Vector2(rx, ry), starTexRect, tints[i], 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 0.001f * i);
+                            float Gametime = Game1.currentGameTime.TotalGameTime.Milliseconds;
+                            Color lerpedColor = Color.Lerp(fromColors[i], toColors[i], MathF.Abs(MathF.Sin(Gametime / 999 * MathF.PI)));
+                            b.Draw(Game1.mouseCursors, new Vector2(rx, ry), starTexRect, lerpedColor, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 0.001f * i);
                         }
                     }
                 }
 
+                counter += 1;
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, depthStencilState: BgUtils.StencilDarken);
             }

@@ -43,6 +43,10 @@ namespace RidgesideVillage
 
             TortsBackground.Initialize(this);
 
+            BloomProjectile.Initialize(this);
+            MistProjectile.Initialize(this);
+            Mistblade.Initialize(this);
+
             Patcher = new Patcher(this);
             Patcher.PerformPatching();
 
@@ -68,6 +72,7 @@ namespace RidgesideVillage
 
             PaulaClinic.Initialize(this);
             Offering.OfferingTileAction.Initialize(this);
+
             //not done (yet?)
             //new CliffBackground();
 
