@@ -14,13 +14,15 @@
 			"rain": "610 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/1000 Custom_Ridgeside_LogCabinHotelLobby 10 8 0/1400 Custom_Ridgeside_LogCabinHotelLobby 20 14 2/1800 Custom_Ridgeside_EzekielHouse 31 5 0 corine_sleep",
 			"Fri": "610 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/800 Custom_Ridgeside_3Bros 10 13 0/1100 Saloon 16 18 2 square_2_1_2/2300 Custom_Ridgeside_EzekielHouse 31 5 0 corine_sleep",
 			"Sun": "610 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/900 Custom_Ridgeside_RidgesideVillage 99 38 2/1600 Custom_Ridgeside_RidgesideVillage 117 41 2/1800 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/2300 Custom_Ridgeside_EzekielHouse 31 5 0 corine_sleep",
+			"fall_5": "610 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/a1200 Custom_Ridgeside_PaulaClinic 14 6 1/1330 Custom_Ridgeside_Ridge 18 5 3/1530 Custom_Ridgeside_LogCabinHotelLobby 10 8 0/1800 Custom_Ridgeside_EzekielHouse 31 5 0 corine_sleep",
 			"winter_17": "610 Custom_Ridgeside_EzekielHouse 16 5 0 square_3_1_0/700 SeedShop 13 25 1/1300 Beach 13 29 1/2600 Custom_Ridgeside_EzekielHouse 31 5 0 corine_sleep",
-			
+
 			//Marriage Schedule
 			"marriage_Mon": "900 Custom_Ridgeside_RidgesideVillage 99 38 2/1800 BusStop -1 23 3",
 			"marriage_Wed": "900 Custom_Ridgeside_RidgesideVillage 99 38 2/1800 BusStop -1 23 3",
 			"marriage_Thu": "610 Custom_Ridgeside_Ridge 96 32 2 corine_train/1200 Custom_Ridgeside_Ridge 96 32 2 corine_meditate/1500 Custom_Ridgeside_Ridge 95 34 1 corine_slash/1900 Custom_Ridgeside_EzekielHouse 24 5 0/2200 Custom_Ridgeside_Ridge 76 38 2",
 			"marriage_Fri": "800 SeedShop 13 25 1/1300 Saloon 16 18 2 square_2_1_2/2000 BusStop -1 23 3",
+			"marriage_fall_5": "a1200 Custom_Ridgeside_PaulaClinic 14 6 1/1330 Custom_Ridgeside_Ridge 18 5 3/1530 BusStop -1 23 3",
 			"marriage_winter_17": "800 SeedShop 13 25 1/1500 Beach 13 29 1/2200 BusStop -1 23 3",
 
 					},
@@ -35,7 +37,7 @@
 					},
 		"When": {
 			"HasFlag: hostPlayer |contains=GH1letter": true,
-		}  
+		}
 	},
 
 ]

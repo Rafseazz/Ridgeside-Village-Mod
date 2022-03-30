@@ -10,6 +10,10 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewModdingAPI;
 
+//This patch is based off of spacechase0's Background patch, which can be found here:
+//https://github.com/spacechase0/StardewValleyMods/blob/develop/MoonMisadventures/Patches/Background.cs
+//Thank you space for permission!
+
 namespace RidgesideVillage
 {
     internal static class Backgrounds
@@ -17,7 +21,6 @@ namespace RidgesideVillage
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
-        private static AlphaTestEffect ate;
         const string TORTSREALM = "Custom_Ridgeside_TortsRealm";
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
@@ -36,7 +39,23 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.cleanupBeforePlayerExit)),
                 postfix: new HarmonyMethod(typeof(Backgrounds), nameof(GameLocation_cleanUpBeforePlayerExit_postfix))
             );
+            /*
+            harmony.Patch(
+                original: AccessTools.Method(typeof(Background), nameof(Background.update)),
+                postfix: new HarmonyMethod(typeof(Backgrounds), nameof(Background_update_postfix))
+            );
+            */
         }
+
+        /*
+        public static void Background_update_postfix(Background __instance, xTile.Dimensions.Rectangle viewport)
+        {
+            if (__instance is TortsBackground bg)
+            {
+                bg.Update(viewport);
+            }
+        }
+        */
 
         public static void Background_draw_postfix(Background __instance, SpriteBatch b)
         {

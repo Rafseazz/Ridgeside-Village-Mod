@@ -111,12 +111,6 @@ namespace RidgesideVillage
                 }
             }
         }
-
-        public static float PingPong(float t, float length)
-        {
-            float f = t % (length * 2);
-            return f > length ? 2 * length - f : f;
-        }
     }
     
 

@@ -216,7 +216,11 @@ namespace RidgesideVillage
                         delegate
                         {
                             Game1.player.Money -= ROOMPRICE;
-                            Game1.player.mailReceived.Add(ROOMBOOKEDFLAG);
+                            // All players can go bc fuck multiplayer
+                            foreach(Farmer player in Game1.getAllFarmers())
+                            {
+                                player.mailReceived.Add(ROOMBOOKEDFLAG);
+                            }
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AfterBooking"));
                         },
                         delegate { }
