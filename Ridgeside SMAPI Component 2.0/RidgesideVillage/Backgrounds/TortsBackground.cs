@@ -9,6 +9,10 @@ using StardewValley;
 using StardewModdingAPI.Events;
 using StardewModdingAPI;
 
+//This Background is based off of spacechase0's SpaceBackground, which can be found here:
+//https://github.com/spacechase0/StardewValleyMods/blob/develop/MoonMisadventures/Game/SpaceBackground.cs
+//Thank you space for permission!
+
 namespace RidgesideVillage
 {
     public class TortsBackground : Background
@@ -18,6 +22,21 @@ namespace RidgesideVillage
 
         private Vector2 offset = Vector2.Zero;
         private Rectangle starTexRect = new Rectangle(0, 1453, 639, 195);
+        //private TemporaryAnimatedSprite torts;
+        private Texture2D torts;
+        private static Vector2 torts_position;
+        private readonly Color[] fromColors = new[]
+                {
+                    new Color( 190, 150, 255 ),
+                    new Color( 250, 255, 170 ),
+                    new Color( 150, 150, 255 )
+                };
+        private readonly Color[] toColors = new[]
+                {
+                    new Color( 255, 255, 255 ),
+                    new Color( 255, 255, 255 ),
+                    new Color( 255, 255, 255 )
+                };
 
         internal static void Initialize(IMod ModInstance)
         {
@@ -30,10 +49,32 @@ namespace RidgesideVillage
 
         public TortsBackground()
         : base(new Color(0, 0, 12), false)
-        {}
+        {
+            Log.Debug($"RSV: Creating Torts bg");
+            torts = Helper.Content.Load<Texture2D>("assets/Torts.png");
+            torts_position = Game1.GlobalToLocal(Game1.viewport, new Vector2(10f, 4.5f) * Game1.tileSize);
+            /*
+            torts = new TemporaryAnimatedSprite(Helper.Content.GetActualAssetKey("assets/Torts.png"), new Rectangle(0, 0, 144, 112), new Vector2(11f, 5f) * Game1.tileSize, false, 0, Color.White)
+            {
+                scale = Game1.pixelZoom,
+                animationLength = 16 * 16,
+                interval = 250,
+                totalNumberOfLoops = 99999,
+            };
+            */
+        }
+
+        /*
+        public void Update(xTile.Dimensions.Rectangle viewport)
+        {
+            torts.update(Game1.currentGameTime);
+            Log.Debug($"RSV: Updated");
+        }
+        */
 
         public void Draw(SpriteBatch b)
         {
+            Log.Debug($"RSV: doing draw");
             try
             {
                 Game1.spriteBatch.End();
@@ -42,12 +83,6 @@ namespace RidgesideVillage
                 Rectangle display = new Rectangle(0, 0, Game1.viewport.Width, Game1.viewport.Height);
                 b.Draw(Game1.staminaRect, display, Game1.staminaRect.Bounds, this.c, 0f, Vector2.Zero, SpriteEffects.None, 0f);
 
-                Color[] tints = new[]
-                {
-                    new Color( 255, 255, 255 ),
-                    new Color( 170, 255, 170 ),
-                    new Color( 150, 150, 255 )
-                };
                 Vector2[] posMods = new[]
                 {
                     new Vector2( 0, 0 ),
@@ -59,6 +94,7 @@ namespace RidgesideVillage
 
                 float incrx = Game1.viewport.Width / starTexRect.Width;
                 float incry = Game1.viewport.Height / starTexRect.Height;
+                float Gametime;
 
                 for (int i = 0; i < 3; ++i)
                 {
@@ -71,10 +107,21 @@ namespace RidgesideVillage
                             float rx = sx + ix * starTexRect.Width * Game1.pixelZoom;
                             float ry = sy + iy * starTexRect.Height * Game1.pixelZoom;
 
-                            b.Draw(Game1.mouseCursors, new Vector2(rx, ry), starTexRect, tints[i], 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 0.001f * i);
+                            Gametime = (float)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
+                            Color lerpedColor = Color.Lerp(fromColors[i], toColors[i], MathF.Abs(MathF.Sin(Gametime / 2000 * MathF.PI)));
+                            b.Draw(Game1.mouseCursors, new Vector2(rx, ry), starTexRect, lerpedColor, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 0.001f * i);
                         }
                     }
                 }
+
+                /*
+                torts.Position = new Vector2(Game1.viewport.Width / 2 - torts.Texture.Width / 16, 100);
+                torts.interval = 200;
+                torts.draw(b, localPosition: true);
+                */
+                float multiplier = 1.1111f;
+                Gametime = (float)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
+                b.Draw(torts, Game1.GlobalToLocal(Game1.viewport, UpdateTortsPosition(Gametime)), new Rectangle(0, 0, 144, 112), Color.White, 0, Vector2.Zero, Game1.pixelZoom*multiplier, SpriteEffects.None, 1);
 
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, depthStencilState: BgUtils.StencilDarken);
@@ -85,6 +132,7 @@ namespace RidgesideVillage
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             }
+            Log.Debug($"RSV: did draw");
         }
 
         private static void OnRenderingWorld(object sender, RenderingWorldEventArgs e)
@@ -107,6 +155,13 @@ namespace RidgesideVillage
         private static void OnRenderedWorld(object sender, RenderedWorldEventArgs e)
         {
             BgUtils.DefaultStencilOverride = null;
+        }
+
+        private static Vector2 UpdateTortsPosition(float Gametime)
+        {
+            float verticalMovement = MathF.Sin(Gametime / 2500 * MathF.PI)/5;
+            float horizontalMovement = MathF.Cos(Gametime / 3000 * MathF.PI)/4;
+            return torts_position += new Vector2(horizontalMovement, verticalMovement);
         }
 
     }

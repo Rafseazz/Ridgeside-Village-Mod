@@ -8,6 +8,10 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewModdingAPI;
 
+//This Background is based off of spacechase0's utils for Moon Misadventures, which can be found here:
+//https://github.com/spacechase0/StardewValleyMods/blob/develop/MoonMisadventures/Mod.cs#L47
+//Thank you space for permission!
+
 namespace RidgesideVillage
 {
     internal static class BgUtils
