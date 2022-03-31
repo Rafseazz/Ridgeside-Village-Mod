@@ -157,10 +157,13 @@ namespace RidgesideVillage
 
         private static Vector2 UpdateTortsPosition(float Gametime)
         {
-            float verticalMovement = MathF.Sin(Gametime / 2500 * MathF.PI)/5;
-            float horizontalMovement = MathF.Cos(Gametime / 3000 * MathF.PI)/4;
-            return torts_position += new Vector2(horizontalMovement, verticalMovement);
+            if (Game1.shouldTimePass())
+            {
+                float verticalMovement = MathF.Sin(Gametime / 2500 * MathF.PI) / 5;
+                float horizontalMovement = MathF.Cos(Gametime / 3000 * MathF.PI) / 4;
+                return torts_position += new Vector2(horizontalMovement, verticalMovement);
+            }
+            return torts_position;
         }
-
     }
 }

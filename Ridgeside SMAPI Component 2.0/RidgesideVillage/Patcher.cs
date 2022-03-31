@@ -41,6 +41,7 @@ namespace RidgesideVillage
             SODialogue.ApplyPatch(harmony, Helper);
             Backgrounds.ApplyPatch(harmony, Helper);
             Projectiles.ApplyPatch(harmony, Helper);
+            TortsGifts.ApplyPatch(harmony, Helper);
 
         }
     }        
