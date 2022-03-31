@@ -64,13 +64,12 @@ namespace RidgesideVillage
             */
         }
 
-        /*
         public void Update(xTile.Dimensions.Rectangle viewport)
         {
-            torts.update(Game1.currentGameTime);
-            Log.Debug($"RSV: Updated");
+            float Gametime = (float)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
+            UpdateTortsPosition(Gametime);
+            // For TAS: torts.update(Game1.currentGameTime);
         }
-        */
 
         public void Draw(SpriteBatch b)
         {
@@ -118,9 +117,9 @@ namespace RidgesideVillage
                 torts.interval = 200;
                 torts.draw(b, localPosition: true);
                 */
+
                 float multiplier = 1.1111f;
-                Gametime = (float)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
-                b.Draw(torts, Game1.GlobalToLocal(Game1.viewport, UpdateTortsPosition(Gametime)), new Rectangle(0, 0, 144, 112), Color.White, 0, Vector2.Zero, Game1.pixelZoom*multiplier, SpriteEffects.None, 1);
+                b.Draw(torts, Game1.GlobalToLocal(Game1.viewport, torts_position), new Rectangle(0, 0, 144, 112), Color.White, 0, Vector2.Zero, Game1.pixelZoom*multiplier, SpriteEffects.None, 1);
 
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, depthStencilState: BgUtils.StencilDarken);
@@ -155,15 +154,11 @@ namespace RidgesideVillage
             BgUtils.DefaultStencilOverride = null;
         }
 
-        private static Vector2 UpdateTortsPosition(float Gametime)
+        private static void UpdateTortsPosition(float Gametime)
         {
-            if (Game1.shouldTimePass())
-            {
-                float verticalMovement = MathF.Sin(Gametime / 2500 * MathF.PI) / 5;
-                float horizontalMovement = MathF.Cos(Gametime / 3000 * MathF.PI) / 4;
-                return torts_position += new Vector2(horizontalMovement, verticalMovement);
-            }
-            return torts_position;
+            float verticalMovement = MathF.Sin(Gametime / 2500 * MathF.PI) / 5;
+            float horizontalMovement = MathF.Cos(Gametime / 3000 * MathF.PI) / 4;
+            torts_position += new Vector2(horizontalMovement, verticalMovement);
         }
     }
 }

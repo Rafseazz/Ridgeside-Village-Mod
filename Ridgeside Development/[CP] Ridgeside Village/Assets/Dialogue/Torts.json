@@ -1,11 +1,20 @@
 {
 "Changes": [
 	{
-
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
    "Entries": {
-		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:normal.{{Random:{{Range:1,9}}}}}}"
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.normal{{Random:{{Range:1,10}}}}}}"
+		},
+	},
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Torts",
+	 "When": {
+		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
+	 },
+   "Entries": {
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.{{season}}{{Random:{{Range:1,10}}}}}}"
 		},
 	},
 ]

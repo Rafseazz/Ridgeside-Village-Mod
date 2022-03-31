@@ -42,51 +42,65 @@ namespace RidgesideVillage
             if (giftee.Name != "Torts")
                 return;
 
+            Farmer gifter = Game1.player;
             StardewValley.Object gift = e.Gift;
 
             if (gift.Name == MISTBLOOM)
             {
-                e.Cancel = true;
                 Game1.weatherForTomorrow = Game1.weather_rain;
             }
             else if (gift.Name == FOXTAIL)
             {
-                e.Cancel = true;
-                IReflectedField<float> dailyLuck = Helper.Reflection.GetField<float>(Game1.player, "DailyLuck");
-                dailyLuck.SetValue(dailyLuck.GetValue() + 0.1f);
+                gifter.team.sharedDailyLuck.Value = 0.12;
             }
             else if (gift.Name == LOVERPIE)
             {
-                e.Cancel = true;
-                Game1.player.mailReceived.Add(LOVERFLAG);
+                gifter.mailReceived.Add(LOVERFLAG);
             }
+            else
+                return;
+
+            e.Cancel = true;
+            gifter.reduceActiveItemByOne();
+            gifter.currentLocation.localSound("give_gift");
+            gifter.friendshipData["Torts"].GiftsToday++;
+            gifter.friendshipData["Torts"].GiftsThisWeek++;
+            gifter.friendshipData["Torts"].LastGiftDate = new WorldDate(Game1.Date);
+            giftee.CurrentDialogue.Clear();
+            giftee.CurrentDialogue.Push(new Dialogue("...", giftee));
+            Game1.drawDialogue(giftee);
         }
 
         public static class BirthEventPatch
         {
             public static float ReplaceBirthChance(float chance)
             {
-                if (Game1.player.mailReceived.Contains(LOVERFLAG))
-                    chance = 0.66f;
+                try
+                {
+                    if (Game1.player.mailReceived.Contains(LOVERFLAG))
+                    {
+                        Log.Trace($"RSV: Setting birth event chance to 2/3");
+                        chance = 0.66f;
+                    }
+                }
+                catch{}
                 return chance;
             }
 
             public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> insns, ILGenerator ilgen)
             {
-                //Log.Debug($"RSV: Hopefully transpiling...");
                 List<CodeInstruction> ret = new();
 
                 foreach (var insn in insns)
                 {
-                    if (insn.opcode == OpCodes.Ldc_R8 && (insn.operand?.Equals(0.05) == true))
+                    if (insn.opcode == OpCodes.Ldc_R4 && (insn.operand?.Equals(0.05) == true))
                     {
-                        ret.Add(new CodeInstruction(OpCodes.Ldc_R8, typeof(BirthEventPatch).GetMethod("ReplaceBirthChance")));
+                        ret.Add(new CodeInstruction(OpCodes.Call, typeof(BirthEventPatch).GetMethod("ReplaceBirthChance")));
                     }
                     else
                     {
                         ret.Add(insn);
                     }
-                    //Log.Debug($"RSV: {ret.Last()}");
                 }
                 return ret;
             }
