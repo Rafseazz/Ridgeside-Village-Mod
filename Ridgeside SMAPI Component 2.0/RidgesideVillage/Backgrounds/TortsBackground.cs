@@ -50,9 +50,9 @@ namespace RidgesideVillage
         public TortsBackground()
         : base(new Color(0, 0, 12), false)
         {
-            Log.Debug($"RSV: Creating Torts bg");
+            Log.Trace($"RSV: Creating Torts bg");
             torts = Helper.Content.Load<Texture2D>("assets/Torts.png");
-            torts_position = Game1.GlobalToLocal(Game1.viewport, new Vector2(10f, 4.5f) * Game1.tileSize);
+            torts_position = Game1.GlobalToLocal(Game1.viewport, new Vector2(10f, 6f) * Game1.tileSize);
             /*
             torts = new TemporaryAnimatedSprite(Helper.Content.GetActualAssetKey("assets/Torts.png"), new Rectangle(0, 0, 144, 112), new Vector2(11f, 5f) * Game1.tileSize, false, 0, Color.White)
             {
@@ -74,7 +74,6 @@ namespace RidgesideVillage
 
         public void Draw(SpriteBatch b)
         {
-            Log.Debug($"RSV: doing draw");
             try
             {
                 Game1.spriteBatch.End();
@@ -132,7 +131,6 @@ namespace RidgesideVillage
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             }
-            Log.Debug($"RSV: did draw");
         }
 
         private static void OnRenderingWorld(object sender, RenderingWorldEventArgs e)
