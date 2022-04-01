@@ -39,15 +39,12 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.cleanupBeforePlayerExit)),
                 postfix: new HarmonyMethod(typeof(Backgrounds), nameof(GameLocation_cleanUpBeforePlayerExit_postfix))
             );
-            /*
             harmony.Patch(
                 original: AccessTools.Method(typeof(Background), nameof(Background.update)),
                 postfix: new HarmonyMethod(typeof(Backgrounds), nameof(Background_update_postfix))
             );
-            */
         }
 
-        /*
         public static void Background_update_postfix(Background __instance, xTile.Dimensions.Rectangle viewport)
         {
             if (__instance is TortsBackground bg)
@@ -55,7 +52,6 @@ namespace RidgesideVillage
                 bg.Update(viewport);
             }
         }
-        */
 
         public static void Background_draw_postfix(Background __instance, SpriteBatch b)
         {
