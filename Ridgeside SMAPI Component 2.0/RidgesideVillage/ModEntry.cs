@@ -26,9 +26,8 @@ namespace RidgesideVillage
             ModMonitor = Monitor;
             Helper = helper;
 
-            if (!Helper.ModRegistry.IsLoaded("Rafseazz.RSVCP"))
+            if (!new InstallationChecker().checkInstallation(helper))
             {
-                Log.Error("Ridgeside Village appears to be installed incorrectly. Delete it and reinstall it please. If you need help, visit our Discord server!");
                 return;
             }
 
