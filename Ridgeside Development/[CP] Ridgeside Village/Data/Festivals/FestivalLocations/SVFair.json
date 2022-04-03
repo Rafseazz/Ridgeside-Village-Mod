@@ -70,6 +70,22 @@
         ]
     },
 
+    //Torts
+    {
+      "LogName": "Torts SDV Fair Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 37 84 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 	
 ]
 }

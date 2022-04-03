@@ -429,6 +429,50 @@
         }
     },
 
+    //Torts
+    {
+      "LogName": "Torts SDV Fair Location - SVE",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": { "HasMod": "FlashShifter.StardewValleyExpandedCP" },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 37 77 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    {
+      "LogName": "Torts Spirit's Eve Location - SVE var 1",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": { "HasMod": "FlashShifter.StardewValleyExpandedCP", "IsOddYear": true },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 24 74 1",
+          "Delimiter": "/"
+        },
+      ]
+    },
+    {
+      "LogName": "Torts Spirit's Eve Location - SVE var 2",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": { "HasMod": "FlashShifter.StardewValleyExpandedCP", "IsOddYear": false },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 73 36 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 
 
 ]

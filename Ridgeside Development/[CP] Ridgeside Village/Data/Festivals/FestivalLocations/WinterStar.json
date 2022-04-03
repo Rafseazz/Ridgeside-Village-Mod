@@ -68,6 +68,21 @@
             },
         ]
     },
+
+    //Torts
+    {
+      "LogName": "Torts Winter Star Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 40 61 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
     
 ]
 }

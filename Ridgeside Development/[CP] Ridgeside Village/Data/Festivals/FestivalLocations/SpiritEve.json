@@ -72,6 +72,22 @@
         ]
     },
 
+    //Torts
+    {
+      "LogName": "Torts Spirit's Eve Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 27 52 3",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 	
 ]
 }

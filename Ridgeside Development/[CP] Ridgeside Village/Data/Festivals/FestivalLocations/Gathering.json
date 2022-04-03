@@ -74,6 +74,27 @@
         ]
     },
 
+    //Torts
+    {
+      "LogName": "Torts RSV Gathering Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall20",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 115 44 3",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Torts 65 40 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 
 
 

@@ -72,6 +72,27 @@
             },
         ]
     },
+
+    //Torts
+    {
+      "LogName": "Torts Ember of Resolutions Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 41 33 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Torts 48 51 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
 	
 ]
 }

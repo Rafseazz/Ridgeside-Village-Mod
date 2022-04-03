@@ -69,5 +69,25 @@
         ]
     },
 	
+    //Torts
+    {
+      "LogName": "Torts Midnight Jellies Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 67 25 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Torts 67 25 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
 ]
 }

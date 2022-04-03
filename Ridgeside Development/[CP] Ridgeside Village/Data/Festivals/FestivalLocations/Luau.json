@@ -131,7 +131,28 @@
              "Value": "/animate Keahi false true 236 16 17 18 17/animate Trinnie false true 236 20 21 22 21/animate Olga false true 300 24 25/animate Bert false true 300 24 25/animate Lola false true 800 16 17/animate Freddie false true 800 16 17",
           },
         ]
-    }
+    },
+
+    //Torts
+    {
+      "LogName": "Torts Luau Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 20 21 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Torts 22 21 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
 	
 ]
 }
