@@ -120,6 +120,17 @@
 		},
 		"When": { "Relationship:Daia": "Engaged" },
 	},
+	{	
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Kiarra}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Kiarra}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Kiarra}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Kiarra}}",
+		},
+		"When": { "Relationship:Kiarra": "Engaged" },
+	},
 	
 //--------------------
 // Special Dialogue   
@@ -128,7 +139,7 @@
 {
 	"LogName": "Special Dialogue",
 	"Action": "EditData",
-	"Target": "Characters/Dialogue/Alissa, Characters/Dialogue/Corine, Characters/Dialogue/Flor, Characters/Dialogue/Ian, Characters/Dialogue/Jeric, Characters/Dialogue/Kenneth, Characters/Dialogue/Maddie, Characters/Dialogue/Philip, Characters/Dialogue/Shiro, Characters/Dialogue/Ysabelle, Characters/Dialogue/Jio, Characters/Dialogue/Daia",
+	"Target": "Characters/Dialogue/Alissa, Characters/Dialogue/Corine, Characters/Dialogue/Flor, Characters/Dialogue/Ian, Characters/Dialogue/Jeric, Characters/Dialogue/Kenneth, Characters/Dialogue/Maddie, Characters/Dialogue/Philip, Characters/Dialogue/Shiro, Characters/Dialogue/Ysabelle, Characters/Dialogue/Jio, Characters/Dialogue/Daia, Characters/Dialogue/Kiarra, Characters/Dialogue/Sean",
 	"Entries": {
 		"give_flowersA": "{{i18n: Romance.give.flowersA.{{TargetWithoutPath}} }}",
 		"give_flowersB": "{{i18n: Romance.give.flowersB.{{TargetWithoutPath}} }}",
@@ -145,14 +156,14 @@
 {
 	"LogName": "Load Empty Ridgeside MarriageDialogue File",
 	"Action": "Load",
-	"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle, Characters/Dialogue/MarriageDialogueJio, Characters/Dialogue/MarriageDialogueDaia",
+	"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle, Characters/Dialogue/MarriageDialogueJio, Characters/Dialogue/MarriageDialogueDaia, Characters/Dialogue/MarriageDialogueKiarra, Characters/Dialogue/MarriageDialogueSean",
 	"FromFile": "Data/LoadData/EmptyJson.json"
 },
 
 {
 	"LogName": "Include Ridgeside MarriageDialogue Files",
 	"Action": "Include",
-	"FromFile": "Assets/MarriageDialogue/MarriageDialogueAlissa.json, Assets/MarriageDialogue/MarriageDialogueCorine.json, Assets/MarriageDialogue/MarriageDialogueFlor.json, Assets/MarriageDialogue/MarriageDialogueIan.json, Assets/MarriageDialogue/MarriageDialogueJeric.json, Assets/MarriageDialogue/MarriageDialogueKenneth.json, Assets/MarriageDialogue/MarriageDialogueMaddie.json, Assets/MarriageDialogue/MarriageDialoguePhilip.json, Assets/MarriageDialogue/MarriageDialogueShiro.json, Assets/MarriageDialogue/MarriageDialogueYsabelle.json, Assets/MarriageDialogue/MarriageDialogueJio.json, Assets/MarriageDialogue/MarriageDialogueDaia.json",
+	"FromFile": "Assets/MarriageDialogue/MarriageDialogueAlissa.json, Assets/MarriageDialogue/MarriageDialogueCorine.json, Assets/MarriageDialogue/MarriageDialogueFlor.json, Assets/MarriageDialogue/MarriageDialogueIan.json, Assets/MarriageDialogue/MarriageDialogueJeric.json, Assets/MarriageDialogue/MarriageDialogueKenneth.json, Assets/MarriageDialogue/MarriageDialogueMaddie.json, Assets/MarriageDialogue/MarriageDialoguePhilip.json, Assets/MarriageDialogue/MarriageDialogueShiro.json, Assets/MarriageDialogue/MarriageDialogueYsabelle.json, Assets/MarriageDialogue/MarriageDialogueJio.json, Assets/MarriageDialogue/MarriageDialogueDaia.json, Assets/MarriageDialogue/MarriageDialogueKiarra.json, Assets/MarriageDialogue/MarriageDialogueSean.json",
 },  
 
 
@@ -173,6 +184,8 @@
 		"MovieInvite_Spouse_Ysabelle": "{{i18n:Romance.MovieInvite.Spouse.Ysabelle}}",
 		"MovieInvite_Spouse_Daia": "{{i18n:Romance.MovieInvite.Spouse.Daia}}",
 		"MovieInvite_Spouse_Jio": "{{i18n:Romance.MovieInvite.Spouse.Jio}}",
+		"MovieInvite_Spouse_Kiarra": "{{i18n:Romance.MovieInvite.Spouse.Kiarra}}",
+		"MovieInvite_Spouse_Sean": "{{i18n:Romance.MovieInvite.Spouse.Sean}}",
 	}, 
 },
 
