@@ -95,7 +95,7 @@ namespace RidgesideVillage
                 int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
                 if (randomseed is not null)
                 {   //Seed the random with a seed that only changes every 28 days
-                    Random random = new Random((int)Game1.uniqueIDForThisGame + (randomseed.Value / 28));
+                    Random random = new Random((int)Game1.uniqueIDForThisGame + ((randomseed.Value - 1) / 28));
                     return new[] { (random.Next(1, 5) * 7).ToString() };
                 }
                 return null; //return null for an unready token.
