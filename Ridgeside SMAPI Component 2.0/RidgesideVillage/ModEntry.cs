@@ -147,7 +147,7 @@ namespace RidgesideVillage
             // RSV_rivera_secret in Patches/WalletItem
 
             // Generic Mod Config Menu setup
-            //ConfigMenu.RegisterMenu();
+            ConfigMenu.RegisterMenu();
         }
 
         private void OpenPortal(string arg1, string[] arg2)
