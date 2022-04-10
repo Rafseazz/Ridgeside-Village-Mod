@@ -394,8 +394,8 @@
          "Target": "Characters/Dialogue/Trinnie",
          "Entries": {
            // Torts two heart event
-           "torts2_1": "Yay! Let's go!$1",
-           "torts2_2": "Okay, see ya!",
+           "torts2_1": "Thank you so much, mister!$1^Thank you so much, miss!$1",
+           "torts2_2": "Oh, okay... Well, bye then!",
           },
         },
         {
@@ -413,6 +413,25 @@
            // Torts four heart event
            "torts4_1": "...",
            "torts4_2": "...",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Torts",
+         "Entries": {
+           // Torts six heart event
+           "torts6_1": "%Torts doesn't respond, because he is a tortoise, and thus incapable of higher-level language.",
+           "torts6_2": "...",
+           "torts6_3": "...",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Lenny",
+         "Entries": {
+           // Torts seven heart event
+           "torts7_1": "Great! Come on over.$1",
+           "torts7_2": "Oh, alright! Well, catch you next time, then!",
           },
       	},
 
