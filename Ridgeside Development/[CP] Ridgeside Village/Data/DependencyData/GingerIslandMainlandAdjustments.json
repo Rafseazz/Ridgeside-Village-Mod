@@ -66,6 +66,8 @@
 		{
 			"Action": "EditData",
 	    "Target": "Characters/Dialogue/Pika",
+			"Update": "OnLocationChange",
+			"When": { "Query: '{{atravita.GingerIslandMainlandAdjustments/Bartender}}' = 'Pika'": true },
 	    "Entries": {
 				"Resort_Bartend": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Bartend}}",
 				"Resort_Entering_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Entering_FunDads}}",
@@ -144,7 +146,6 @@
 	    "Entries": {
 				"Resort_Entering_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Entering_FunDads}}",
 				"Resort_Leaving_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Leaving_FunDads}}",
-				"Resort_Bar_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Bar_FunDads}}",
 				"Resort_Chair_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Chair_FunDads}}",
 				"Resort_Shore_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Shore_FunDads}}",
 				"Resort_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_FunDads}}",
@@ -155,6 +156,15 @@
 				"Resort_Volcano_Pranksters": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Volcano_Pranksters}}",
 				"Resort_Tent_Pranksters": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Tent_Pranksters}}",
 				"Resort_Pranksters": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Pranksters}}",
+			}
+		},
+		{
+			"Action": "EditData",
+	    "Target": "Characters/Dialogue/Keahi",
+			"Update": "OnLocationChange",
+			"When": { "Query: '{{atravita.GingerIslandMainlandAdjustments/Bartender}}' = 'Pika'": true },
+	    "Entries": {
+				"Resort_Bar_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Bar_FunDads}}",
 			}
 		},
 		{
