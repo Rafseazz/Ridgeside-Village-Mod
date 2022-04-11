@@ -40,7 +40,7 @@
 			//Legame Residence or 3Bros
 			"Lorenzo": "adult/polite/neutral/positive/male/non-datable/null/Town/fall 1/{{i18n:NPC_Data.Lorenzo}}/Custom_Ridgeside_3Bros2ndFloor 6 5/{{i18n:Name.Lorenzo}}",
 			"Anton": "adult/polite/neutral/neutral/male/non-datable/null/Town/spring 9/{{i18n:NPC_Data.Anton}}/Custom_Ridgeside_3Bros2ndFloor 18 12/{{i18n:Name.Anton}}",
-			"Kiarra": "teen/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
+			"Kiarra": "teen/polite/outgoing/negative/female/datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
 			"Shanice": "adult/polite/neutral/neutral/female/non-datable/null/Town/winter 26/{{i18n:NPC_Data.Shanice}}/Custom_Ridgeside_3Bros2ndFloor 5 5/{{i18n:Name.Shanice}}",
 
 			//Blooming Hill Farm
@@ -114,9 +114,9 @@
 		"LogName": "Kiarra Disposition Change",
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
-		"When": { "HasDialogueAnswer": 751603261 },
+		"When": { "HasDialogueAnswer": 751603262 },
 		"Entries": {
-			"Kiarra": "teen/polite/outgoing/negative/female/datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
+			"Kiarra": "teen/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
 		}
 	},
 
