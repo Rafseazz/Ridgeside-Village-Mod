@@ -137,6 +137,20 @@
           "Delimiter": " "
         }
       ]
+    },
+
+    // Rings hated (so that they don't show up in Lookup Anything)
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Universal_Hate"],
+          "Value": "{{spacechase0.JsonAssets/ObjectId:Glove of the Assassin}} {{spacechase0.JsonAssets/ObjectId:The Beautiful Serpent's Ring}} {{spacechase0.JsonAssets/ObjectId:The Fairy Doe Fox's Ring}} {{spacechase0.JsonAssets/ObjectId:The Ring of the Ridge Deities}}",
+          "Delimiter": " "
+        }
+      ]
     }
   ]
 }

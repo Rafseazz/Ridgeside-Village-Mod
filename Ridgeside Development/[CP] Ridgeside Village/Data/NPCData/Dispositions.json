@@ -90,7 +90,7 @@
 			"Belinda": "adult/neutral/outgoing/positive/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp2 6 6/{{i18n:Name.Belinda}}",
 			"Raeriyala": "adult/polite/outgoing/positive/female/non-datable/null/Other/null/{{i18n:NPC_Data.Raeriyala}}/Custom_Ridgeside_RSVHiddenWarp2 9 8/{{i18n:Name.Raeriyala}}",
 
-			//Lost Princess Story Arch
+			//Lost Princess Story Arc
 			"Undreya": "child/neutral/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVAbandonedHouse 5 5/{{i18n:Name.Undreya}}",
 			"Sari": "adult/polite/outgoing/positive/female/non-datable/null/Other/null/{{i18n:NPC_Data.Sari}}/Custom_Ridgeside_RSVHiddenWarp2 5 7/{{i18n:Name.Sari}}",
 			"Pipo": "child/polite/outgoing/positive/male/non-datable/null/Other/null/{{i18n:NPC_Data.Pipo}}/Custom_Ridgeside_RSVHiddenWarp2 6 7/{{i18n:Name.Pipo}}",
@@ -106,8 +106,18 @@
 			"RelicSpirit": "child/polite/neutral/neutral/male/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/???",
 
 			//Torts
-			"Torts": "child/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Ridgeside_RidgesideVillage 57 53/{{i18n:Name.Torts}}"
+			"Torts": "child/neutral/neutral/neutral/male/non-datable/null/Other/spring 1//Custom_Ridgeside_RidgesideVillage 57 53/{{i18n:Name.Torts}}"
 		},
+	},
+
+	{
+		"LogName": "Kiarra Disposition Change",
+		"Action": "EditData",
+		"Target": "Data/NPCDispositions",
+		"When": { "HasDialogueAnswer": 751603262 },
+		"Entries": {
+			"Kiarra": "teen/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
+		}
 	},
 
 
