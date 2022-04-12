@@ -50,6 +50,11 @@ namespace RidgesideVillage
                 Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3981", giftee.displayName)));
                 return;
             }
+            if (gifter.friendshipData["Torts"].GiftsThisWeek == 2)
+            {
+                Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3987", giftee.displayName, 2)));
+                return;
+            }
 
             StardewValley.Object gift = e.Gift;
             switch (gift.Name)
