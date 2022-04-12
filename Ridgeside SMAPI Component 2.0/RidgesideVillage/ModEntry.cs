@@ -70,6 +70,7 @@ namespace RidgesideVillage
             WarpTotem.Initialize(this);
 
             PaulaClinic.Initialize(this);
+
             Offering.OfferingTileAction.Initialize(this);
 
             //not done (yet?)
@@ -147,7 +148,7 @@ namespace RidgesideVillage
             // RSV_rivera_secret in Patches/WalletItem
 
             // Generic Mod Config Menu setup
-            //ConfigMenu.RegisterMenu();
+            ConfigMenu.RegisterMenu();
         }
 
         private void OpenPortal(string arg1, string[] arg2)

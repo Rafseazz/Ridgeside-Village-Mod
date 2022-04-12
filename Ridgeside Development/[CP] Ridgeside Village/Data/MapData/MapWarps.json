@@ -563,5 +563,30 @@
 				"Update": "OnLocationChange"
 		},
 
+		{
+ 			"Action": "EditMap",
+ 			"Target": "Maps/Custom_Ridgeside_TortsRealm",
+			"AddWarps": [
+				"12 39 Custom_Ridgeside_RidgesideVillage 57 53",
+				"13 39 Custom_Ridgeside_RidgesideVillage 57 53",
+				"14 39 Custom_Ridgeside_RidgesideVillage 57 53",
+				"15 39 Custom_Ridgeside_RidgesideVillage 57 53",
+				"16 39 Custom_Ridgeside_RidgesideVillage 57 53",
+   			]
+		},
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"AddWarps": [
+				"57 53 Custom_Ridgeside_TortsRealm 14 38"
+			],
+			"When": {
+				"HasSeenEvent": 75160286,
+				"Day": "1, 28"
+			},
+			"Update": "OnLocationChange"
+		},
+
 ]
 }

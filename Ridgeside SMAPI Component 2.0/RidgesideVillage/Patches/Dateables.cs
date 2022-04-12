@@ -40,6 +40,13 @@ namespace RidgesideVillage
                 Game1.drawDialogue(__instance);
                 return false;
             }
+            else if ((__instance.Name == "Kiarra") && who.eventsSeen.Contains(502261))
+            {
+                __instance.CurrentDialogue.Clear();
+                __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Kiarra.RejectProposal"), __instance));
+                Game1.drawDialogue(__instance);
+                return false;
+            }
             return true;
         }
 

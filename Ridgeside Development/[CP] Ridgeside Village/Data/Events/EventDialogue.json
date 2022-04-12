@@ -256,9 +256,11 @@
                         "kiarra2_choice2": "This does bring off a magical vibe!#$b#I wonder if the legends are true.",
                         "kiarra2_choice3": "It does look fun, doesn't it?$h#$b#Like the time when Lenny started a food fight during the gathering!$h",
                         //Kiarra 4 hearts
-                        "kiarra4_choice1": "Right!? I picked-up most of these inside the Cable Car!$a",
-                        "kiarra4_choice2": "Haha! You feel me, huh?$h#$b#I like your attitude, @.$h",
-                        "kiarra4_choice3": "Disgusting, right!?$a#$b#Oh wait... Do you mean my bag?$u#$b#But still! My point stands!$a",
+                        "kiarra4_choice1": "Totally. Ugh, I just hope they leave us alone soon...$s",
+                        "kiarra4_choice2": "I know money's important and all, @, but don't forget about the long-term picture. Cheap seeds won't be worth much if they can't even grow.$a",
+                        "kiarra4_choice3": "Right!? I picked-up most of these inside the Cable Car!$a",
+                        "kiarra4_choice4": "Haha! You feel me, huh?$h#$b#I like your attitude, @.$h",
+                        "kiarra4_choice5": "Disgusting, right!?$a#$b#Oh wait... Do you mean my bag?$u#$b#But still! My point stands!$a",
                         //Kiarra 8 hearts
                         "kiarra8_choice1": "I knew I could count on you!$h",
                         "kiarra8_choice2": "Oh, uh... Yeah, it's fine. I understand.$s%fork"
@@ -375,7 +377,7 @@
                         //Shancie 4 hearts
                         "shanice4_choice1": "Oh really? We might look into selling more sprinklers soon then!$h",
                         "shanice4_choice2": "I wonder what can help with that! Maybe more small explosives?$s",
-                        "shanice4_choice3": "Is that so. We'll look more into the fertilizer prices then. No promises though!$h",
+                        "shanice4_choice3": "Is that so? We'll look more into the fertilizer prices, then. But no promises!$h",
                 }
         },
 
@@ -394,8 +396,8 @@
          "Target": "Characters/Dialogue/Trinnie",
          "Entries": {
            // Torts two heart event
-           "torts2_1": "Yay! Let's go!$1",
-           "torts2_2": "Okay, see ya!",
+           "torts2_1": "Thank you so much, mister!$1^Thank you so much, miss!$1",
+           "torts2_2": "Oh, okay... Well, bye then!",
           },
         },
         {
@@ -404,6 +406,54 @@
          "Entries": {
            // Torts two heart event
            "torts2_3": "Alright, I'll go whip it up!",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Torts",
+         "Entries": {
+           // Torts four heart event
+           "torts4_1": "...",
+           "torts4_2": "...",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Torts",
+         "Entries": {
+           // Torts six heart event
+           "torts6_1": "%Torts doesn't respond, because he is a tortoise, and thus incapable of higher-level language.",
+           "torts6_2": "...",
+           "torts6_3": "...",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Lenny",
+         "Entries": {
+           // Torts seven heart event
+           "torts7_1": "Great! Come on over.$1",
+           "torts7_2": "Oh, alright! Well, catch you next time, then!",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Torts",
+         "Entries": {
+           // Torts eight heart event
+           "torts8_1": "...",
+           "torts8_2": "...",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Jio",
+         "Entries": {
+           // Torts eight heart event
+           "torts8_3": "...",
+           "torts8_4": "...",
+           "torts8_5": "...",
+           "torts8_6": "...What? Well, as you wish.",
           },
       	},
 
