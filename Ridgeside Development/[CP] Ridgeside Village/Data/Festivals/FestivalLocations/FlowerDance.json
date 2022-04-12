@@ -5,12 +5,12 @@
    "Action": "EditData",
    "Target": "Data/Festivals/spring24",
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 44 41 down/Alissa 27 20 right/Bert 30 22 down/Corine 37 25 right/Ezekiel 31 28 down/Flor 34 30 left/Freddie 36 28 down/Ian 31 33 down/Jeric 38 23 down/Jio 27 32 left/Keahi 31 24 left/Kenneth 41 20 down/Kiwi 27 33 left/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 up/Olga 29 20 left/Philip 42 21 left/Pika 33 28 down/Richard 36 21 down/Shiro 34 26 left/Trinnie 29 24 right/Ysabelle 39 25 left/Yuuma 33 25 down",
+         "Value": "Aguar 44 41 down/Alissa 27 20 right/Bert 30 22 down/Corine 37 25 right/Ezekiel 31 28 down/Flor 34 30 left/Freddie 36 28 down/Ian 31 33 down/Jeric 38 23 down/Keahi 31 24 left/Kenneth 41 20 down/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 up/Olga 29 20 left/Philip 42 21 left/Pika 33 28 down/Richard 36 21 down/Shiro 34 26 left/Trinnie 29 24 right/Ysabelle 39 25 left/Yuuma 33 25 down",
          "Delimiter": "/"
 		},
 
@@ -18,11 +18,11 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 44 41 left/Alissa 27 20 left/Bert 30 22 left/Corine 37 25 left/Ezekiel 31 28 left/Flor 34 30 left/Freddie 36 28 left/Ian 31 33 left/Jeric 38 23 left/Jio 27 32 left/Keahi 31 24 left/Kenneth 41 20 left/Kiwi 27 33 left/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 left/Olga 29 20 left/Philip 42 21 left/Pika 33 28 left/Richard 36 21 left/Shiro 34 26 left/Trinnie 29 24 left/Ysabelle 39 25 left/Yuuma 33 25 left",
+         "Value": "Aguar 44 41 left/Alissa 27 20 left/Bert 30 22 left/Corine 37 25 left/Ezekiel 31 28 left/Flor 34 30 left/Freddie 36 28 left/Ian 31 33 left/Jeric 38 23 left/Keahi 31 24 left/Kenneth 41 20 left/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 left/Olga 29 20 left/Philip 42 21 left/Pika 33 28 left/Richard 36 21 left/Shiro 34 26 left/Trinnie 29 24 left/Ysabelle 39 25 left/Yuuma 33 25 left",
          "Delimiter": "/"
 		},
 
-	]	
+	]
 	},
 
     //2.0 Pips spots! THE TRUE RSV EXPERIENCE! (Enabled by default since RSV has own spot)
@@ -95,6 +95,31 @@
         ]
     },
 
+		{
+        //Jio and Kiwi
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "When": {
+            "HasSeenEvent|contains=75160377, 75160187": true,
+						"HasSeenEvent|contains=75160188": true,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 27 32 left/Kiwi 27 33 left",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Jio 27 32 left/Kiwi 27 33 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
     {
         //Daia Arrives
         "Action": "EditData",
@@ -152,6 +177,6 @@
         },
       ]
     },
-	
+
 ]
 }

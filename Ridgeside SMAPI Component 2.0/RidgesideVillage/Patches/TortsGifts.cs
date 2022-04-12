@@ -26,7 +26,6 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Helper.Events.GameLoop.DayStarted += OnDayStarted;
             SpaceEvents.BeforeGiftGiven += BeforeGiftGiven;
 
             harmony.Patch(
@@ -37,16 +36,6 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickFarmEvent)),
                 postfix: new HarmonyMethod(typeof(TortsGifts), nameof(PickFarmEvent_Postfix))
             );
-        }
-
-        private static void OnDayStarted(object sender, DayStartedEventArgs e)
-        {
-            if (Game1.player.mailReceived.Contains(LOVERFLAG))
-                Game1.player.RemoveMail(LOVERFLAG);
-            else if (Game1.player.mailReceived.Contains(FAIRYFLAG))
-                Game1.player.RemoveMail(FAIRYFLAG);
-            else if (Game1.player.mailReceived.Contains(METEORFLAG))
-                Game1.player.RemoveMail(METEORFLAG);
         }
 
         private static void BeforeGiftGiven(object sender, EventArgsBeforeReceiveObject e)
@@ -104,11 +93,13 @@ namespace RidgesideVillage
             {
                 Log.Trace("RSV: Setting fairy event chance to 25%");
                 __result = new FairyEvent();
+                Game1.player.RemoveMail(FAIRYFLAG);
             }
             else if (Game1.player.mailReceived.Contains(METEORFLAG) && random.NextDouble() < 0.10)
             {
                 Log.Trace("RSV: Setting meteor event chance to 10%");
                 __result = new SoundInTheNightEvent(1);
+                Game1.player.RemoveMail(METEORFLAG);
             }
         }
 
@@ -122,6 +113,7 @@ namespace RidgesideVillage
                     {
                         Log.Trace("RSV: Setting birth event chance to 50%");
                         chance = 0.5f;
+                        Game1.player.RemoveMail(LOVERFLAG);
                     }
                 }
                 catch{}

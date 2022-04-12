@@ -6,18 +6,18 @@
    "Target": "Data/Festivals/fall16",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 50 58 left/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 21 35 down/Ian 17 73 down/Jeric 51 79 left/Jio 68 88 down/Keahi 34 77 left/Kenneth 24 57 right/Kiwi 69 88 down/Lenny 27 53 down/Lola 22 35 down/Maddie 27 38 up/Olga 27 61 right/Philip 24 65 up/Pika 32 34 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 25 71 left",
+         "Value": "Aguar 50 58 left/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 21 35 down/Ian 17 73 down/Jeric 51 79 left/Keahi 34 77 left/Kenneth 24 57 right/Lenny 27 53 down/Lola 22 35 down/Maddie 27 38 up/Olga 27 61 right/Philip 24 65 up/Pika 32 34 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 25 71 left",
          "Delimiter": "/"
 		},
 
-	]	
+	]
 	},
-	
+
 	//2.0 Pips spots! THE TRUE RSV EXPERIENCE!
     {
         //The squad
@@ -70,6 +70,24 @@
         ]
     },
 
+		{
+        //Jio and Kiwi
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall16",
+        "When": {
+            "HasSeenEvent|contains=75160377, 75160187": true,
+						"HasSeenEvent|contains=75160188": true,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 91 19 down/Kiwi 69 88 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
     //Torts
     {
       "LogName": "Torts SDV Fair Location",
@@ -86,6 +104,6 @@
       ]
     },
 
-	
+
 ]
 }
