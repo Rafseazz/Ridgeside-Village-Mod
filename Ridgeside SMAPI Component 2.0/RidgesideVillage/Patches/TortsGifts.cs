@@ -45,8 +45,13 @@ namespace RidgesideVillage
                 return;
 
             Farmer gifter = Game1.player;
-            StardewValley.Object gift = e.Gift;
+            if (gifter.friendshipData["Torts"].GiftsToday == 1)
+            {
+                Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3981", giftee.displayName)));
+                return;
+            }
 
+            StardewValley.Object gift = e.Gift;
             switch (gift.Name)
             {
                 case MISTBLOOM:
