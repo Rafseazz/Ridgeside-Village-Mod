@@ -52,7 +52,7 @@ namespace RidgesideVillage
         {
             Log.Trace($"RSV: Creating Torts bg");
             torts = Helper.Content.Load<Texture2D>("assets/Torts.png");
-            torts_position = Game1.GlobalToLocal(Game1.viewport, new Vector2(10f, 6f) * Game1.tileSize);
+            torts_position = new Vector2(10f, 6f) * Game1.tileSize;
             /*
             torts = new TemporaryAnimatedSprite(Helper.Content.GetActualAssetKey("assets/Torts.png"), new Rectangle(0, 0, 144, 112), new Vector2(11f, 5f) * Game1.tileSize, false, 0, Color.White)
             {
@@ -120,7 +120,6 @@ namespace RidgesideVillage
 
                 float multiplier = 1.1111f;
                 b.Draw(torts, Game1.GlobalToLocal(Game1.viewport, torts_position), new Rectangle(0, 0, 144, 112), Color.White, 0, Vector2.Zero, Game1.pixelZoom*multiplier, SpriteEffects.None, 1);
-                Log.Debug($"Torts position: {torts_position.X}, {torts_position.Y}");
 
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, depthStencilState: BgUtils.StencilDarken);
@@ -157,8 +156,8 @@ namespace RidgesideVillage
 
         private static void UpdateTortsPosition(float Gametime)
         {
-            float verticalMovement = MathF.Sin(Gametime / 2500 * MathF.PI) / 5;
             float horizontalMovement = MathF.Cos(Gametime / 3000 * MathF.PI) / 4;
+            float verticalMovement = MathF.Sin(Gametime / 2500 * MathF.PI) / 5;
             torts_position += new Vector2(horizontalMovement, verticalMovement);
         }
     }
