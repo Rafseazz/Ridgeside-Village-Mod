@@ -41,5 +41,16 @@
 		}
 	},
 
+	//Library schedule
+	{
+		"LogName": "Ian Schedule Change",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Ian",
+		"Entries": {
+			"Fri": "800 Custom_Ridgeside_LogCabinHotelLobby 2 15 2/1200 ArchaeologyHouse 17 14 2/1800 Custom_Ridgeside_RidgesideVillage 64 49 2/2200 Custom_Ridgeside_IanHouse 10 5 0 ian_sleep",
+		},
+		"When": { "HasSeenEvent: hostPlayer": 75160149, },
+	},
+
 ]
 }
