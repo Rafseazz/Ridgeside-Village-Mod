@@ -120,6 +120,7 @@ namespace RidgesideVillage
 
                 float multiplier = 1.1111f;
                 b.Draw(torts, Game1.GlobalToLocal(Game1.viewport, torts_position), new Rectangle(0, 0, 144, 112), Color.White, 0, Vector2.Zero, Game1.pixelZoom*multiplier, SpriteEffects.None, 1);
+                Log.Debug($"Torts position: {torts_position.X}, {torts_position.Y}");
 
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, depthStencilState: BgUtils.StencilDarken);
