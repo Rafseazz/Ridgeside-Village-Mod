@@ -70,6 +70,7 @@ namespace RidgesideVillage
             WarpTotem.Initialize(this);
 
             PaulaClinic.Initialize(this);
+
             Offering.OfferingTileAction.Initialize(this);
 
             //not done (yet?)
