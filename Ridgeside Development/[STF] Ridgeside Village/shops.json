@@ -1774,9 +1774,9 @@
 	"PortraitPath": "assets/KimpoiShop.png",
 	"Quote": "Seeds from our travels. Come take your pick.",
 	"ShopPrice": -1,
-	"DefaultSellPriceMultiplier": 0.5,
+	"DefaultSellPriceMultiplier": 2.5,
 	"PriceMultiplierWhen": {
-		"0.3": ["f Kimpoi 2000"]
+		"1.25": ["f Kimpoi 2000"]
 		},
 	"When": ["NPCAt Kimpoi 10 5"],
 	"ClosedMessage": "Sorry, we're closed!",
@@ -1966,44 +1966,96 @@
 			"ItemNames":[
 				"Basic Fertilizer",
 			],
-			"StockPrice": 100,
+			"StockPrice": 80,
+      "When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Basic Fertilizer",
+			],
+			"StockPrice": 60,
+      "When": [ "f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames":[
 				"Basic Retaining Soil",
 			],
-			"StockPrice": 100,
+			"StockPrice": 80,
+      "When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Basic Retaining Soil",
+			],
+			"StockPrice": 60,
+      "When": [ "f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Quality Retaining Soil",
+			],
+			"StockPrice": 160,
+      "When": [ "!f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames":[
 				"Quality Retaining Soil",
 			],
-			"StockPrice": 150,
+			"StockPrice": 120,
+      "When": [ "f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames":[
 				"Speed-Gro",
 			],
-			"StockPrice": 100,
+			"StockPrice": 80,
+      "When": [ "!f Lorenzo 2000" ]
 		},
-		{
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Speed-Gro",
+			],
+			"StockPrice": 60,
+      "When": [ "f Lorenzo 2000" ]
+		},
+    {
 			"ItemType": "Object",
 			"ItemNames":[
 				"Deluxe Speed-Gro",
 			],
-			"StockPrice": 150,
+			"StockPrice": 160,
+      "When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Deluxe Speed-Gro",
+			],
+			"StockPrice": 120,
+      "When": [ "f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames": [
 				"Quality Fertilizer"
 			],
-			"StockPrice": 150,
-			//"Stock": 6,
-			"When": [ "y 2" ]
+			"StockPrice": 80,
+			"When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Quality Fertilizer"
+			],
+			"StockPrice": 60,
+			"When": [ "f Lorenzo 2000" ]
 		}
 	],
 	},

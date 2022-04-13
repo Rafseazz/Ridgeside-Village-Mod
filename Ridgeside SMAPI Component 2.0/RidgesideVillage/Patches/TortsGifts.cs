@@ -26,7 +26,6 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Helper.Events.GameLoop.DayStarted += OnDayStarted;
             SpaceEvents.BeforeGiftGiven += BeforeGiftGiven;
 
             harmony.Patch(
@@ -39,16 +38,6 @@ namespace RidgesideVillage
             );
         }
 
-        private static void OnDayStarted(object sender, DayStartedEventArgs e)
-        {
-            if (Game1.player.mailReceived.Contains(LOVERFLAG))
-                Game1.player.RemoveMail(LOVERFLAG);
-            else if (Game1.player.mailReceived.Contains(FAIRYFLAG))
-                Game1.player.RemoveMail(FAIRYFLAG);
-            else if (Game1.player.mailReceived.Contains(METEORFLAG))
-                Game1.player.RemoveMail(METEORFLAG);
-        }
-
         private static void BeforeGiftGiven(object sender, EventArgsBeforeReceiveObject e)
         {
             NPC giftee = e.Npc;
@@ -56,8 +45,18 @@ namespace RidgesideVillage
                 return;
 
             Farmer gifter = Game1.player;
-            StardewValley.Object gift = e.Gift;
+            if (gifter.friendshipData["Torts"].GiftsToday == 1)
+            {
+                Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3981", giftee.displayName)));
+                return;
+            }
+            if (gifter.friendshipData["Torts"].GiftsThisWeek == 2)
+            {
+                Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3987", giftee.displayName, 2)));
+                return;
+            }
 
+            StardewValley.Object gift = e.Gift;
             switch (gift.Name)
             {
                 case MISTBLOOM:
@@ -104,11 +103,13 @@ namespace RidgesideVillage
             {
                 Log.Trace("RSV: Setting fairy event chance to 25%");
                 __result = new FairyEvent();
+                Game1.player.RemoveMail(FAIRYFLAG);
             }
             else if (Game1.player.mailReceived.Contains(METEORFLAG) && random.NextDouble() < 0.10)
             {
                 Log.Trace("RSV: Setting meteor event chance to 10%");
                 __result = new SoundInTheNightEvent(1);
+                Game1.player.RemoveMail(METEORFLAG);
             }
         }
 
@@ -122,6 +123,7 @@ namespace RidgesideVillage
                     {
                         Log.Trace("RSV: Setting birth event chance to 50%");
                         chance = 0.5f;
+                        Game1.player.RemoveMail(LOVERFLAG);
                     }
                 }
                 catch{}
