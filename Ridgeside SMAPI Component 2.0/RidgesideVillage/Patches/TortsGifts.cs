@@ -13,6 +13,8 @@ namespace RidgesideVillage
     internal static class TortsGifts
     {
         static IModHelper Helper;
+        const string TORTSREALM = "Custom_Ridgeside_TortsRealm";
+
         const string MISTBLOOM = "Mountain Mistbloom";
         const string FOXTAIL = "Old Lucky Foxtail Charm";
         const string LOVERPIE = "Strawberry Lover Pie";
@@ -43,16 +45,23 @@ namespace RidgesideVillage
             NPC giftee = e.Npc;
             if (giftee.Name != "Torts")
                 return;
-
+            if (Game1.currentLocation.Name == TORTSREALM)
+            {
+                Game1.drawObjectDialogue(Helper.Translation.Get("Torts.RealmGift"));
+                e.Cancel = true;
+                return;
+            }
             Farmer gifter = Game1.player;
             if (gifter.friendshipData["Torts"].GiftsToday == 1)
             {
                 Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3981", giftee.displayName)));
+                e.Cancel = true;
                 return;
             }
             if (gifter.friendshipData["Torts"].GiftsThisWeek == 2)
             {
                 Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3987", giftee.displayName, 2)));
+                e.Cancel = true;
                 return;
             }
 
