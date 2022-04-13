@@ -4,7 +4,8 @@
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
    "Entries": {
-		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.normal{{Random:{{Range:1,10}}}}}}"
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.normal{{Random:{{Range:1,10}}}}}}",
+		 "Custom_Ridgeside_TortsRealm": "{{i18n:Torts.Dialogue.realm{{Random:{{Range:1,10}}}}}}"
 		},
 	},
 	{
@@ -15,6 +16,39 @@
 	 },
    "Entries": {
 		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.{{season}}{{Random:{{Range:1,10}}}}}}"
+		},
+	},
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Torts",
+	 "When": {
+		 "HasSeenEvent|contains=75160286": false,
+		 "Query: {{Random: {{Range:1,10}} }} <= 5": true,
+	 },
+   "Entries": {
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.pre-twist{{Random:{{Range:1,5}}}}}}"
+		},
+	},
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Torts",
+	 "When": {
+		 "HasFlag|contains=RSV.TortsRevealed": true,
+		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
+	 },
+   "Entries": {
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.post-twist{{Random:{{Range:1,8}}}}}}"
+		},
+	},
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Torts",
+	 "When": {
+		 "HasSeenEvent|contains=75160286": true,
+		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
+	 },
+   "Entries": {
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.friend{{Random:{{Range:1,5}}}}}}"
 		},
 	},
 ]

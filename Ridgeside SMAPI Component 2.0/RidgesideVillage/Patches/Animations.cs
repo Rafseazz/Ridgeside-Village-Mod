@@ -8,7 +8,8 @@ using HarmonyLib;
 using StardewValley;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI.Utilities;
-
+using StardewModdingAPI.Events;
+    
 namespace RidgesideVillage
 {
     //Corrects the location name in the "X has begun in Y" message
@@ -16,6 +17,7 @@ namespace RidgesideVillage
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
+        private static string[] npcs = { "Torts", "Carmen", "Blair", "Kenneth" };
 
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
@@ -24,12 +26,54 @@ namespace RidgesideVillage
             Log.Trace($"Applying Harmony Patch \"{nameof(Animations)}\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), "startRouteBehavior"),
-                postfix: new HarmonyMethod(typeof(Animations), nameof(startRouteBehavior_Postifx))
+                postfix: new HarmonyMethod(typeof(Animations), nameof(startRouteBehavior_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), "finishRouteBehavior"),
                 prefix: new HarmonyMethod(typeof(Animations), nameof(finishRouteBehavior_Prefix))
             );
+            Helper.Events.GameLoop.DayEnding += DayEnd;
+        }
+
+        internal static void startRouteBehavior_Postfix(ref NPC __instance, string behaviorName)
+        {
+            try
+            {
+                if (behaviorName.Length > 0 && behaviorName[0] == '"')
+                {
+                    return;
+                }
+                switch (behaviorName)
+                {
+                    case "torts_invisible":
+                        __instance.extendSourceRect(48, -16);
+                        __instance.Sprite.SpriteWidth = 64;
+                        __instance.Sprite.SpriteHeight = 16;
+                        __instance.Sprite.ignoreSourceRectUpdates = false;
+                        __instance.Sprite.currentFrame = 0;
+                        break;
+                    case "carmen_fish":
+                    case "blair_fish":
+                    case "kenneth_fixfront":
+                    case "kenneth_fixright":
+                    case "kenneth_fixback":
+                    case "kenneth_fixleft":
+                        __instance.extendSourceRect(0, 32);
+                        __instance.Sprite.tempSpriteHeight = 64;
+                        __instance.drawOffset.Value = new Vector2(0f, 96f);
+                        __instance.Sprite.ignoreSourceRectUpdates = false;
+                        if (Utility.isOnScreen(Utility.Vector2ToPoint(__instance.Position), 64, __instance.currentLocation))
+                        {
+                            __instance.currentLocation.playSoundAt("slosh", __instance.getTileLocation());
+                        }
+                        break;
+                }
+
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Harmony patch \"{nameof(startRouteBehavior_Postfix)}\" has encountered an error. \n{e.ToString()}");
+            }
         }
 
         private static bool finishRouteBehavior_Prefix(ref NPC __instance, string behaviorName)
@@ -42,6 +86,7 @@ namespace RidgesideVillage
                 }
                 switch (behaviorName)
                 {
+                    case "torts_invisible":
                     case "carmen_fish":
                     case "blair_fish":
                     case "kenneth_fixfront":
@@ -67,38 +112,27 @@ namespace RidgesideVillage
 
         }
 
-        internal static void startRouteBehavior_Postifx(ref NPC __instance, string behaviorName)
-        {
+        private static void DayEnd(object sender, DayEndingEventArgs args)
+        {// reset sprites in case user ended day while animations were in progress
             try
             {
-                if (behaviorName.Length > 0 && behaviorName[0] == '"')
+                foreach(string name in npcs)
                 {
-                    return;
+                    NPC npc = Game1.getCharacterFromName(name);
+                    npc.Sprite.SpriteHeight = 32;
+                    npc.Sprite.SpriteWidth = 16;
+                    npc.Sprite.ignoreSourceRectUpdates = false;
+                    npc.Sprite.UpdateSourceRect();
+                    npc.drawOffset.Value = Vector2.Zero;
+                    npc.IsInvisible = false;
                 }
-                switch (behaviorName)
-                {
-                    case "carmen_fish":
-                    case "blair_fish":
-                    case "kenneth_fixfront":
-                    case "kenneth_fixright":
-                    case "kenneth_fixback":
-                    case "kenneth_fixleft":
-                        __instance.extendSourceRect(0, 32);
-                        __instance.Sprite.tempSpriteHeight = 64;
-                        __instance.drawOffset.Value = new Vector2(0f, 96f);
-                        __instance.Sprite.ignoreSourceRectUpdates = false;
-                        if (Utility.isOnScreen(Utility.Vector2ToPoint(__instance.Position), 64, __instance.currentLocation))
-                        {
-                            __instance.currentLocation.playSoundAt("slosh", __instance.getTileLocation());
-                        }
-                        break;
-                }
-                
             }
-            catch (Exception e)
+            catch (Exception ex1)
             {
-                Log.Error($"Harmony patch \"{nameof(startRouteBehavior_Postifx)}\" has encountered an error. \n{e.ToString()}");
+                Monitor.Log($"Failed in RSV Aniamtions Day End reset:\n{ex1}", LogLevel.Error);
             }
+
+
         }
 
     }

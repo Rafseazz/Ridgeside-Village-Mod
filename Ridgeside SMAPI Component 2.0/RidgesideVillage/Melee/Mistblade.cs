@@ -60,17 +60,17 @@ namespace RidgesideVillage
             Vector2 velocity1 = TranslateVector(new Vector2(0, 10), user.FacingDirection);
             Vector2 startPos1 = TranslateVector(new Vector2(0, 96), user.FacingDirection);
             //int damage1 = myRand.Next(5, 15);
-            Game1.currentLocation.projectiles.Add(new BloomProjectile(0, bounces, rotation, velocity1.X, velocity1.Y, user.Position + new Vector2(0, -64) + startPos1, user.currentLocation, user));
+            Game1.currentLocation.projectiles.Add(new BloomProjectile(-1, bounces, rotation, velocity1.X, velocity1.Y, user.Position + new Vector2(0, -64) + startPos1, user.currentLocation, user));
 
             Vector2 velocity2 = TranslateVector(new Vector2(-10 * MathF.Sin(angle), 10 * MathF.Cos(angle)), user.FacingDirection);
             Vector2 startPos2 = TranslateVector(new Vector2(-72 * MathF.Sin(angle), 72 * MathF.Cos(angle)), user.FacingDirection);
             //int damage2 = myRand.Next(5, 15);
-            Game1.currentLocation.projectiles.Add(new BloomProjectile(0, bounces, rotation, velocity2.X, velocity2.Y, user.Position + new Vector2(0, -64) + startPos2, user.currentLocation, user));
+            Game1.currentLocation.projectiles.Add(new BloomProjectile(-1, bounces, rotation, velocity2.X, velocity2.Y, user.Position + new Vector2(0, -64) + startPos2, user.currentLocation, user));
 
             Vector2 velocity3 = TranslateVector(new Vector2(10 * MathF.Sin(angle), 10 * MathF.Cos(angle)), user.FacingDirection);
             Vector2 startPos3 = TranslateVector(new Vector2(72 * MathF.Sin(angle), 72 * MathF.Cos(angle)), user.FacingDirection);
             //int damage3 = myRand.Next(5, 15);
-            Game1.currentLocation.projectiles.Add(new BloomProjectile(0, bounces, rotation, velocity3.X, velocity3.Y, user.Position + new Vector2(0, -64) + startPos3, user.currentLocation, user));
+            Game1.currentLocation.projectiles.Add(new BloomProjectile(-1, bounces, rotation, velocity3.X, velocity3.Y, user.Position + new Vector2(0, -64) + startPos3, user.currentLocation, user));
         }
 
         public static Vector2 TranslateVector(Vector2 vector, int facingDirection)

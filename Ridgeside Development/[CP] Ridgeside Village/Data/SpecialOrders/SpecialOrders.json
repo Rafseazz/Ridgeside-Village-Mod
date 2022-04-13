@@ -724,16 +724,10 @@
             ],
             "Rewards": [
                {
-                  "Type": "Money",
-                  "Data": {
-                     "Amount": "3000"
-                  }
-               },
-               {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.PikaHelped",
-                     "NoLetter": "true",
+                     "MailReceived": "PikaSOLetter.temp",
+                     "NoLetter": "false",
                   }
                },
             ]
@@ -1076,8 +1070,8 @@
              {
                 "Type": "Mail",
                 "Data": {
-                   "MailReceived": "RSV.BlairHelped",
-                   "NoLetter": "true",
+                   "MailReceived": "BlairSOletter.temp",
+                   "NoLetter": "false",
                 }
              },
            ]
@@ -1195,6 +1189,7 @@
             ]
          },
 
+         /* Disabled till I can get TargetName to work
          //Lorenzo and Shanice
          "RSV.SpecialOrder.ShaniceGift": {
             "Name": "[RSV.SpecialOrder.ShaniceGift_Name]",
@@ -1221,20 +1216,15 @@
             ],
             "Rewards": [
                {
-                  "Type": "Money",
-                  "Data": {
-                     "Amount": "5000"
-                  }
-               },
-               {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.LorenzoHelped",
-                     "NoLetter": "true",
+                     "MailReceived": "LorenzoSOLetter.temp",
+                     "NoLetter": "false",
                   }
                },
             ]
          },
+         */
 
          //Olga Tea and Coffee
          "RSV.SpecialOrder.MorningDrinks": {
@@ -1570,16 +1560,10 @@
             ],
             "Rewards": [
                {
-                  "Type": "Money",
-                  "Data": {
-                     "Amount": "10000"
-                  }
-               },
-               {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.MaddieHelped",
-                     "NoLetter": "true",
+                     "MailReceived": "MaddieSOLetter.temp",
+                     "NoLetter": "false",
                   }
                },
             ]

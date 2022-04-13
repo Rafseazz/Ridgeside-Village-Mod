@@ -16,6 +16,9 @@
 			"winter_15": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Beach 44 24 2/2600 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 	
 					},
+		"When": {
+			"HasFlag |contains=RSV.CompleteDaiaQuest": false,
+		}  
 	},
 
 	//Temp
@@ -52,7 +55,8 @@
 	
 					},
 		"When": {
-			"HasSeenEvent": 75160255,
+			"HasFlag |contains=RSV.CompleteDaiaQuest": true,
+			"HasSeenEvent |contains=75160255": true,
 		}  
 	},
 
