@@ -33,7 +33,18 @@
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
 	 "When": {
-		 "HasFlag|contains=RSV.TortsRevealed": true,
+		 "HasSeenEvent|contains=75160286": true,
+		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
+	 },
+   "Entries": {
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.friend{{Random:{{Range:1,5}}}}}}"
+		},
+	},
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Torts",
+	 "When": {
+		 "HasSeenEvent|contains=75160287": true,
 		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
 	 },
    "Entries": {
@@ -43,12 +54,33 @@
 	{
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
+   "Entries": {
+		 "NPC.cs.4274": "{{i18n:Torts.birthday.love}}",
+	   "NPC.cs.4275": "{{i18n:Torts.birthday.love}}",
+	   "NPC.cs.4276": "{{i18n:Torts.birthday.love}}",
+	   "NPC.cs.4277": "{{i18n:Torts.birthday.love}}",
+	   "NPC.cs.4278": "{{i18n:Torts.birthday.hate}}",
+	   "NPC.cs.4279": "{{i18n:Torts.birthday.neutral}}",
+	   "NPC.cs.4280": "{{i18n:Torts.birthday.neutral}}",
+	   "NPC.cs.4281": "{{i18n:Torts.birthday.neutral}}",
+		},
+	},
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Torts",
 	 "When": {
-		 "HasSeenEvent|contains=75160286": true,
-		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
+		 "HasSeenEvent|contains=75160287": true,
+		 "Day": "1, 28"
 	 },
    "Entries": {
-		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.friend{{Random:{{Range:1,5}}}}}}"
+		 "NPC.cs.4274": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4275": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4276": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4277": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4278": "{{i18n:Torts.birthday.hate.realm}}",
+	   "NPC.cs.4279": "{{i18n:Torts.birthday.neutral.realm}}",
+	   "NPC.cs.4280": "{{i18n:Torts.birthday.neutral.realm}}",
+	   "NPC.cs.4281": "{{i18n:Torts.birthday.neutral.realm}}",
 		},
 	},
 ]

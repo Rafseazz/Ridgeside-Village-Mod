@@ -11,6 +11,7 @@ using StardewValley.Menus;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI.Utilities;
+using SpaceCore.Events;
 
 namespace RidgesideVillage
 {
@@ -18,6 +19,16 @@ namespace RidgesideVillage
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
+
+        const int MEETBELINDA = 75160255;
+        const int PREUNSEAL = 75160257;
+        const int BLISSVISIT = 75160258;
+        const int RAEUNSEAL = 75160259;
+        const int OPENPORTAL = 75160256;
+        const int BLISSGH1 = 75160266;
+        const int SPIRITGH1 = 75160267;
+        const int BLISSGH2 = 75160268;
+        const int SPIRITGH2 = 75160269;
 
         private readonly static List<string> NPCNames = new List<string> { 
             "Acorn", "Aguar", "Alissa", "Anton", "Ariah", "Belinda", "Bert", "Blair", "Bliss", "Bryle", "Carmen",
@@ -32,11 +43,12 @@ namespace RidgesideVillage
             Helper = helper;
 
             Helper.Events.GameLoop.DayEnding += OnDayEnd;
+            SpaceEvents.OnEventFinished += OnEventFinished;
             Log.Trace($"Applying Harmony Patch \"{nameof(UntimedSO)}\" prefixing SDV method.");
             
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.IsTimedQuest)),
-                postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrders_IsTimed_postifx))
+                postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrders_IsTimed_postfix))
             );
 
             //only method called once on quest end. Is called for *all* players, not just host.
@@ -50,14 +62,14 @@ namespace RidgesideVillage
             {
                  harmony.Patch(
                     original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
-                    postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
+                    postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postfix))
                 );
                 try
                 {
                     Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
                     harmony.Patch(
                         original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
-                        postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postifx))
+                        postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postfix))
                     );
                 }
                 catch
@@ -73,7 +85,7 @@ namespace RidgesideVillage
            
         }
 
-        private static void SpecialOrders_IsTimed_postifx(ref SpecialOrder __instance, ref bool __result)
+        private static void SpecialOrders_IsTimed_postfix(ref SpecialOrder __instance, ref bool __result)
         {
             if (__instance.questKey.Value.StartsWith("RSV.UntimedSpecialOrder"))
             {
@@ -81,7 +93,7 @@ namespace RidgesideVillage
             }
         }
 
-        private static void SpecialOrdersBoard_GetPortrait_postifx(SpecialOrdersBoard __instance, string requester_name, ref KeyValuePair<Texture2D, Rectangle>?  __result)
+        private static void SpecialOrdersBoard_GetPortrait_postfix(SpecialOrdersBoard __instance, string requester_name, ref KeyValuePair<Texture2D, Rectangle>?  __result)
         {
             try
             {
@@ -147,6 +159,68 @@ namespace RidgesideVillage
                 {
                     o.dueDate.Value = Game1.Date.TotalDays + 100;
                 }
+            }
+        }
+
+        static void OnEventFinished(object sender, EventArgs e)
+        {
+            switch (Game1.CurrentEvent.id)
+            {
+                case MEETBELINDA:
+                    try { Game1.player.removeQuest(ExternalAPIs.QF.ResolveQuestId("preparations_complete@Rafseazz.RSVQF")); } // Added in line 137
+                    catch { } // Might also have been completed upon reading ninja note 
+                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("follow_ninja_note@Rafseazz.RSVQF")); } // Added in QF hooks currently
+                    catch { }
+                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF")); }
+                    catch { }
+                    break;
+
+                case PREUNSEAL:
+                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF")); }
+                    catch { }
+                    // Crystal quests are then added
+                    break;
+
+                case BLISSVISIT:
+                    // Comes after crystal quests are complete
+                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF")); }
+                    catch { }
+                    break;
+
+                case RAEUNSEAL:
+                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF")); }
+                    catch { }
+                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF")); }
+                    catch { }
+                    break;
+
+                case OPENPORTAL:
+                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF")); }
+                    catch { }
+                    // No try catch bc I want to see the error if this fails
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder("RSV.UntimedSpecialOrder.SpiritRealmFlames", null));
+                    break;
+
+                case BLISSGH1:
+                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF")); }
+                    catch { }
+                    break;
+
+                case SPIRITGH1:
+                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF")); }
+                    catch { }
+                    break;
+
+                case BLISSGH2:
+                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF")); }
+                    catch { }
+                    break;
+
+                case SPIRITGH2:
+                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF")); }
+                    catch { }
+                    // Greenhouse quest then added
+                    break;
             }
         }
 

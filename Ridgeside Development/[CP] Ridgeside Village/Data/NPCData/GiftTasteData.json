@@ -130,5 +130,18 @@
 		},
 	},
 
+	{
+		"LogName": "Gift tastes - Torts Realm version",
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"When": {
+			"HasSeenEvent": 75160287,
+			"Day": "1, 28",
+		},
+		"Entries": {
+			"Torts": "{{i18n:Gift.Love.Torts.realm}}/107 910 454/{{i18n:Gift.Like.Torts.realm}}/218 203 {{spacechase0.JsonAssets/ObjectId:Pale Candelabrum}} {{spacechase0.JsonAssets/ObjectId:Village Hero Sculpture}} {{spacechase0.JsonAssets/ObjectId:Everfrost Stone}} {{spacechase0.JsonAssets/ObjectId:Ancient Music Box}}/{{i18n:Gift.Dislike.Torts.realm}}/-2 -4 -5 -6 -7 -12 -17 -23 -26 -74 -75 -79 -80 -81 72 194 216 262 279 304 395 440 444 459 613 634 635 636 637 638 724 797 815 873/{{i18n:Gift.Hate.Torts.realm}}/-15 -26 -27 446/{{i18n:Gift.Neutral.Torts.realm}}/199 219 236 456/ ",
+		},
+	},
+
 ]
 }

@@ -583,7 +583,7 @@
 				"57 52 Custom_Ridgeside_TortsRealm 14 38"
 			],
 			"When": {
-				"HasFlag": "RSV.TortsRevealed",
+				"HasSeenEvent |contains=75160287": true,
 				"Day": "1, 28"
 			},
 			"Update": "OnLocationChange"
