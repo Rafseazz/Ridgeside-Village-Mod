@@ -44,11 +44,11 @@
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
 	 "When": {
-		 "Hearts:Torts": 10,
+		 "HasSeenEvent|contains=75160286": true,
 		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
 	 },
    "Entries": {
-		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.friend{{Random:Range:1,5}}}}"
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.friend{{Random:{{Range:1,5}}}}}}"
 		},
 	},
 ]
