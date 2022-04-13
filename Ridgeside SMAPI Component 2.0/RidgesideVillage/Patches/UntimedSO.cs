@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using StardewValley;
 using StardewValley.Menus;
+using StardewValley.Quests;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI.Utilities;
@@ -164,63 +165,87 @@ namespace RidgesideVillage
 
         static void OnEventFinished(object sender, EventArgs e)
         {
+            if (!Game1.player.IsMainPlayer)
+                return;
+
             switch (Game1.CurrentEvent.id)
             {
                 case MEETBELINDA:
-                    try { Game1.player.removeQuest(ExternalAPIs.QF.ResolveQuestId("preparations_complete@Rafseazz.RSVQF")); } // Added in line 137
-                    catch { } // Might also have been completed upon reading ninja note 
-                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("follow_ninja_note@Rafseazz.RSVQF")); } // Added in QF hooks currently
-                    catch { }
-                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryRemoveQuest(ExternalAPIs.QF.ResolveQuestId("preparations_complete@Rafseazz.RSVQF")); // Added in line 137, might also have been completed upon reading ninja note 
+                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("follow_ninja_note@Rafseazz.RSVQF")); // Added in QF hooks currently
+                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF"));
                     break;
 
                 case PREUNSEAL:
-                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF"));
                     // Crystal quests are then added
                     break;
 
                 case BLISSVISIT:
                     // Comes after crystal quests are complete
-                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF"));
                     break;
 
                 case RAEUNSEAL:
-                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF")); }
-                    catch { }
-                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF"));
+                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF"));
                     break;
 
                 case OPENPORTAL:
-                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF")); }
-                    catch { }
-                    // No try catch bc I want to see the error if this fails
-                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder("RSV.UntimedSpecialOrder.SpiritRealmFlames", null));
+                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF"));
+                    if (Game1.player.IsMainPlayer)
+                        Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder("RSV.UntimedSpecialOrder.SpiritRealmFlames", null));
                     break;
 
                 case BLISSGH1:
-                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF"));
                     break;
 
                 case SPIRITGH1:
-                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF"));
                     break;
 
                 case BLISSGH2:
-                    try { Game1.player.addQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF"));
                     break;
 
                 case SPIRITGH2:
-                    try { Game1.player.completeQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF")); }
-                    catch { }
+                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF"));
                     // Greenhouse quest then added
                     break;
+            }
+        }
+
+        static void TryAddQuest(int id)
+        {
+            foreach(Farmer farmer in Game1.getAllFarmers())
+            {
+                farmer.addQuest(id);
+            }
+        }
+
+        static void TryRemoveQuest(int id)
+        {
+            if (!Game1.player.hasQuest(id))
+                return;
+
+            foreach (Farmer farmer in Game1.getAllFarmers())
+            {
+                if (farmer.hasQuest(id))
+                    farmer.removeQuest(id);
+            }
+
+        }
+
+        static void TryCompleteQuest(int id)
+        {
+            if (!Game1.player.hasQuest(id))
+                return;
+
+            foreach (Farmer farmer in Game1.getAllFarmers())
+            {
+                if (farmer.hasQuest(id))
+                    farmer.completeQuest(id);
             }
         }
 
