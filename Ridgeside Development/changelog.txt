@@ -1,16 +1,67 @@
 RSV 2.1
 ------------------------------------------------------
-Map tile fixes on the terrain above the hotel
-Fixed some bugs in Alissa's concert sprite
-Added Wedding and Kissing Sprites for Kiarra and Sean
-Fixed bug where Spirit Realm Quests will appear in the Pelican Town board
-Added Pika's island bar shop if Ginger Island Mainland Adjustments Mod is installed
+
+Graphics:
+Updated SO emojis to match new sprites
+Gave custom textures for the Purple Mansion's indoor pool to prevent texture bug caused by some mods that edit the bathhouse tilesheet
+Reworked Undreya's Portrait
+Updated the sprites of RSV flower forageables (By Taiyo)
+
+General Changes:
 Tweaked Aguar's 8 heart event to include choices for the cave (Requires a new save, won't break existing saves)
+Pika now supplies you with the items during Pika's Special Delivery Special Order
+Some RSV NPCs no longer visit Pierre's Store and visits Heaps instead when they do their groceries.
+Maddie doesn't visit Pierre's Store anymore (Schedule bugs)
+Shiro now visits Paula instead of Harvey every Sunday when still living in Ridgeside.
+Readjusted Heaps and Sapling shop prices
+Changed small goat milk to large in kedi delight
+Remade all the concession tastes. Now has specific loved and hate snacks. (Thanks Orthorn!)
+Changed AutoWeddingReception to be defaulted to false
+Player death in the Ridge Forest will now result to the player ending up at the Ridgeside Clinic instead at the Pelican Town Hospital (Thanks to moetrash and wamc!)
+Player death in the Spirit Realm will now result to the player ending up at the RidgeFalls instead at the Pelican Town Hospital (Thanks to moetrash and wamc!)
+Changed Zayne's visit requirements, now requiring to see Maive's 4 heart event rather than playing 20 in-game days
+Changed Bryle's visit requirements, now requiring to see his introduction event in year 2 rather than playing 20 in-game days
+Changed Bryle visit chance from 20% to 30%
+Made hotel bookings apply to all farmers to avoid multiplayer bugs
+All RSV Villagers will now visit Paula's clinic for yearly check-ups
+Moved a table by one tile at Pika's and adjusted schedules and events accordingly
+Shiro will now always reject a marriage proposal during Year 1
+Anton and Kiarra can now man the counter in place of Paula at the Ridgeside Clinic
+Jio and Kiwi now only appear at festivals after meeting both of them
+
+Combat Tweaks:
+Increased Maximum Simultaneous monster spawns of Ridge Forest by 4
+Increased EXP given by Wraiths to 12
+Increased EXP given by Beasts to 15, 20, and 26
+Increased EXP given by Viperials to 34
+
+Bug Fixes:
 A bunch more dialogue fixes (By Kedi and skellady!)
+Fixed some map tile bugs on terrain above the hotel
+Fixed some bugs in Alissa's concert sprite
+Fixed bug where Spirit Realm questline would progress before finishing all Crystal Quests
+Fixed a bunch of map tile bugs
+Fixed a bug where you can clip out the map in the Ridge Falls
+Fixed the error with the new bus stop map where you can go out of bounds off the road
+Fixed crash when playing Alissa's 8 heart event with East Scarp installed
+Fixed a bug where Jio, Daia, and Kiwi couldn't be invited to the movies
+Fixed a bug with the anniversary event happening more than once
+Fixed a multiplayer bug where sometimes the boxes in front of the minecarts aren't removed
+Hopefully fixed Helen spawning on top of the bookshelf at the ninja house
+Fixed some dialogue errors in spouse summit events (Thanks Amaranthcyan!)
+Fixed bug where Kek's style shortcake would only accept regular egg in recipe
+Fixed bug where Pika's festival shop wasn't open at Ridgeside Gathering
+Fixed an error message about Daia and Jio's schedule after completing The Preparations quest
+
+New Content:
+Added Kiarra to the list of romanceable NPCs
+Added Sean to the list of romanceable NPCs
+Added marriage dialogue for Sean and Kiarra
+Added Wedding and Kissing Sprites for Kiarra and Sean
+Added Pika's island bar shop if Ginger Island Mainland Adjustments Mod is installed
 Added friendship events for Ariah, Anton, Blair, Carmen, Faye, Irene, Kiarra, Lorenzo, Kimpoi, Maive, Malaya, Naomi, Paula, Sean, Shanice, Sonny, and Louie
 Added new Blair sprites for her 2 heart event
 Added new donation boxes in various maps
-Pika now supplies you with the items during Pika's Special Delivery Special Order
 Added a bunch of new special orders (By moetrash)
 Added Lola's New Accessories Special Order with special new accessory reward
 Added Carmen's Empty Pots Special Order with new wallet item reward
@@ -26,70 +77,34 @@ Added Free Hotel room reward for Richard's Hotel Power Backup Special Order
 Added a new special weapon reward for Belinda's Mountain Duty Special Order
 Added a new secret area reward for Belinda's The Linked Fishes Special Order
 Added a special new item reward for Belinda's The Mythical Flower Special Order
-Fixed bug where Spirit Realm questline would progress before finishing all Crystal Quests
-Fixed a bunch of map tile bugs
-Fixed a bug where you can clip out the map in the Ridge Falls
 Added 4 new dishes
 Added birthdays for most of the 2.0 NPCs
 Added non-dating 8 heart dialogues for Alissa, Corine, Flor, Ian, Jeric, Kenneth, Maddie, Philip, and Ysabelle
 Added dating 8 heart dialogues for Kiarra and Sean
-Increased Maximum Simultaneous monster spawns of Ridge Forest by 4
 Added a condition for Lola's 4 heart event where you can't see it if you've seen her 8 heart event
-Some RSV NPCs no longer visit Pierre's Store and visits Heaps instead when they do their groceries.
-Maddie doesn't visit Pierre's Store anymore (Schedule bugs)
-Shiro now visits Paula instead of Harvey every Sunday when still living in Ridgeside.
-Readjusted Heaps and Sapling shop prices
-Increased EXP given by Wraiths to 12
-Increased EXP given by Beasts to 15, 20, and 26
-Increased EXP given by Viperials to 34
 Added 3 new shirts
-Updated SO emojis to match new sprites
 Added four new rings
-Changed small goat milk to large in kedi delight
-Fixed the error with the new bus stop map where you can go out of bounds off the road
-Gave custom textures for the Purple Mansion's indoor pool to prevent texture bug caused by some mods that edit the bathhouse tilesheet
 Added unpacked boxes in Paula's room to match her 2 heart event
 Added 14 heart event for Daia and Jio
 Added a new music track by Rafseazz
 Added a number of new custom tiles
 Added new portrait and sprite variant for Daia
-Changed AutoWeddingReception to be defaulted to false
 Added PoleAtBackwoods config option
-Updated the sprites of RSV flower forageables (By Taiyo)
-Reworked Undreya's Portrait
-Fixed crash when playing Alissa's 8 heart event with East Scarp installed
-Remade all the concession tastes. Now has specific loved and hate snacks. (Thanks Orthorn!)
 Added Movie and Concession tastes to the new 2.0 NPCs
-Fixed a bug where Jio, Daia, and Kiwi couldn't be invited to the movies
 Added mapstrings for WIP content for clarity
-Player death in the Ridge Forest will now result to the player ending up at the Ridgeside Clinic instead at the Pelican Town Hospital (Thanks to moetrash and wamc!)
-Player death in the Spirit Realm will now result to the player ending up at the RidgeFalls instead at the Pelican Town Hospital (Thanks to moetrash and wamc!)
 Added Ridgeside Warp Totem
-Changed Zayne's visit requirements, now requiring to see Maive's 4 heart event rather than playing 20 in-game days
-Changed Bryle's visit requirements, now requiring to see his introduction event in year 2 rather than playing 20 in-game days
-Changed Bryle visit chance from 20% to 30%
 Added randomizing dialogue for Flor when she's reading
 Added compatibility with Walk of Life so that RSV legendary fish can be recaught if the player has WoL and has the Angler profession
 Added a working calendar to Lenny's office
-Fixed a bug with the anniversary event happening more than once
-Fixed a multiplayer bug where sometimes the boxes in front of the minecarts aren't removed
-Hopefully fixed Helen spawning on top of the bookshelf at the ninja house
-Fixed some dialogue errors in spouse summit events
 Added spouse summit events for Jio, Daia, Kiarra, and Sean
 Added new mechanic of 10% chance of a randomized valuable item sold cheaply appearing in Heaps
-Fixed bug where Kek's style shortcake would only accept regular egg in recipe
-Made hotel bookings apply to all farmers to avoid multiplayer bugs
 Added new randomizing dialogue for marriage NPCs, alternating 5 lines for  spouseroom, patio, funleave, and funreturn dialogue keys each
-All RSV Villagers will now visit Paula's clinic for yearly check-ups
 Added new dialogue when visiting Paula's clinic
-Anton and Kiarra can now man the counter in place of Paula at the Ridgeside Clinic
 Added new sprites for some villagers
 Added Ginger Island Mainland Adjustments compatibility with over 100 lines of dialogue
-Moved a table by one tile at Pika's and adjusted schedules and events accordingly
-Shiro will now always reject a marriage proposal during Year 1
 Added new items to Cult Shop
 Added new secret notes
-Jio and Kiwi now only appear at festivals after meeting both of them
-Fixed bug where Pika's festival shop wasn't open at Ridgeside Gathering
-Fixed an error message about Daia and Jio's schedule after completing The Preparations quest
+Added thousands of new lines in the i18n. (I'm so sorry, Translatorts T-T)
+
+Special:
 Torts is now a friendable NPC. A VERY unique NPC. ;)
