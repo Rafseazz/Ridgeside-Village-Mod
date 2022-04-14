@@ -303,7 +303,7 @@
          "PatchMode": "Replace",
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
-			"HasSeenEvent": 75160264,
+			"HasSeenEvent: hostPlayer": 75160263,
 		}
       	},
       	{
@@ -550,7 +550,7 @@
 		"Target": "Maps/zrsvspiritrealm",
 		"FromFile": "Assets/Maps/TileSheets/{{TargetWithoutPath}}_corrupt.png",
 		"When": {
-			"HasSeenEvent |contains=75160263": false,
+			"HasSeenEvent: hostPlayer |contains=75160263": false,
 			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
 		},
 		"Update": "OnLocationChange"
@@ -572,7 +572,7 @@
 				"Height": 144
 			},
 		"When": {
-			"HasSeenEvent |contains=75160263": false,
+			"HasSeenEvent: hostPlayer |contains=75160263": false,
 			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
 		},
 		"Update": "OnLocationChange"
@@ -585,7 +585,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 5, "Y": 67, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -595,7 +595,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 15, "Y": 23, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -605,7 +605,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 48, "Y": 19, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -615,7 +615,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 96, "Y": 23, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -625,7 +625,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 94, "Y": 65, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -637,7 +637,7 @@
 		"FromFile": "Assets/Maps/DynamicMaps/RSVSummitEntrance.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 3 },
 		"ToArea": { "X": 95, "Y": 4, "Width": 6, "Height": 3 },
-		"When": { "HasSeenEvent |contains=75160263": true },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": true },
 		"PatchMode": "Replace",
 		"Update": "OnLocationChange"
 	},
@@ -655,7 +655,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
     {
@@ -670,7 +670,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
     {
@@ -685,7 +685,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
     {
@@ -700,7 +700,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
 
