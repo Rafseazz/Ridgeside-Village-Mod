@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
 using StardewValley;
+using StardewValley.Menus;
+using StardewValley.Tools;
 using Microsoft.Xna.Framework;
 
 namespace RidgesideVillage
@@ -15,8 +17,6 @@ namespace RidgesideVillage
     internal static class Fish
     {
         private static IModHelper Helper { get; set; }
-
-
 
         const int CURIOSITY_LURE = 856;
         const double BASE_CATCH_CHANCE = 0.3;
@@ -30,9 +30,46 @@ namespace RidgesideVillage
             Helper = helper;
 
             harmony.Patch(
+              original: AccessTools.Method(typeof(FishingRod), nameof(FishingRod.isFishBossFish)),
+              postfix: new HarmonyMethod(typeof(Fish), nameof(Fish.IsFishBossFish_Postfix))
+              );
+            harmony.Patch(
+              original: AccessTools.Method(typeof(FishingRod), nameof(FishingRod.DoFunction)),
+              prefix: new HarmonyMethod(typeof(Fish), nameof(Fish.DoFunction_Prefix))
+              );
+            harmony.Patch(
                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
                postfix: new HarmonyMethod(typeof(Fish), nameof(Fish.GetFish_Postfix))
                );
+        }
+
+        public static void IsFishBossFish_Postfix(ref bool __result, int index)
+        {
+            if (__result)
+                return;
+            if (index == GetFishID("Sockeye Salmon"))
+                __result = true;
+            else if (index == GetFishID("Waterfall Snakehead"))
+                __result = true;
+            else if (index == GetFishID("Deep Ridge Angler"))
+                __result = true;
+        }
+
+        public static bool DoFunction_Prefix(FishingRod __instance, GameLocation location, int x, int y, Farmer who)
+        {
+            if ((location.Name == "Custom_Ridgeside_RidgePond") && Game1.player.team.SpecialOrderActive("RSV.UntimedSpecialOrder.LinkedFishes"))
+            {
+                int tileX = (int)(__instance.bobber.X / 64f);
+                int tileY = (int)(__instance.bobber.Y / 64f);
+                if (location.isTileFishable(tileX, tileY))
+                {
+                    Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("RidgePond.NoFishing"));
+                    who.UsingTool = false;
+                    who.canMove = true;
+                    return false;
+                }
+            }
+            return true;
         }
 
         public static void GetFish_Postfix(GameLocation __instance, float millisecondsAfterNibble, int bait, int waterDepth, Farmer who, double baitPotency, Vector2 bobberTile, string locationName, ref StardewValley.Object __result)
