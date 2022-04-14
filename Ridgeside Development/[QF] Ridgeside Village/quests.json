@@ -550,16 +550,6 @@
           },
           "Action": "Complete"
       },
-      // Or complete if player went straight to meeting Belinda
-      {
-         "When": "Tile",
-         "Has": {
-           "Location": "Custom_Ridgeside_Ridge",
-           "Area": "0 0 7040 3200",
-           "EventSeen": 75160255
-         },
-         "Action": "Complete"
-     },
      ]
    },
    // Reminder to follow up on note
@@ -569,20 +559,7 @@
       "Title": "%i18n:follow_ninja_note.title",
       "Description": "%i18n:follow_ninja_note.description",
       "Objective": "%i18n:follow_ninja_note.objective",
-      "NextQuests": [ "rae_pre_unseal" ],
       "Cancelable": true,
-      "Hooks": [
-        {
-          // Completed when Belinda met
-           "When": "Tile",
-           "Has": {
-             "Location": "Custom_Ridgeside_Ridge",
-             "Area": "0 0 7040 3200",
-             "EventSeen": 75160255
-           },
-           "Action": "Complete"
-       },
-      ]
     },
     // Added after meeting Belinda
     {
@@ -592,18 +569,6 @@
        "Description": "%i18n:rae_pre_unseal.description",
        "Objective": "%i18n:rae_pre_unseal.objective",
        "Cancelable": true,
-       "Hooks": [
-         {
-           // Completed when crystal quests received
-            "When": "Tile",
-            "Has": {
-              "Location": "Custom_Ridgeside_RidgeForest",
-              "Area": "0 0 10880 9600",
-              "EventSeen": 75160257
-            },
-            "Action": "Complete"
-        },
-      ]
     },
     // Reminder of what Bliss says
     {
@@ -612,32 +577,7 @@
        "Title": "%i18n:rae_unseal.title",
        "Description": "%i18n:rae_unseal.description",
        "Objective": "%i18n:rae_unseal.objective",
-       "NextQuests": [ "open_spirit_portal" ],
        "Cancelable": true,
-       "Hooks": [
-         {
-           // Added when Bliss comes to farm
-            "When": "Tile",
-            "Has": {
-              "Location": "Farm",
-              "Area": "0 0 99999 99999",
-              "EventSeen": 75160258,
-              "QuestNeverAccepted": "yes",
-              "QuestNeverCompleted": "yes"
-            },
-            "Action": "Accept"
-        },
-        {
-          // Completed when Rae unseal event seen
-           "When": "Tile",
-           "Has": {
-             "Location": "Custom_Ridgeside_Ridge",
-             "Area": "0 0 7040 3200",
-             "EventSeen": 75160259
-           },
-           "Action": "Complete"
-       },
-     ]
     },
     // Added after unsealing Rae
     {
@@ -647,18 +587,6 @@
        "Description": "%i18n:open_spirit_portal.description",
        "Objective": "%i18n:open_spirit_portal.objective",
        "Cancelable": true,
-       "Hooks": [
-         {
-           // Completed when spirit portal opened
-            "When": "Tile",
-            "Has": {
-              "Location": "Custom_Ridgeside_RidgeFalls",
-              "Area": "0 0 5120 3904",
-              "EventSeen": 75160256
-            },
-            "Action": "Complete"
-        },
-       ]
      },
 
      // Reminder for first Phantom Greenhouse event
@@ -669,29 +597,6 @@
         "Description": "%i18n:phantom_greenhouse_1.description",
         "Objective": "%i18n:phantom_greenhouse_1.objective",
         "Cancelable": true,
-        "Hooks": [
-          {
-            // Accepted after first Bliss event
-             "When": "Tile",
-             "Has": {
-               "Location": "Custom_Ridgeside_RSVTheHike",
-               "Area": "0 0 5120 5440",
-               "EventSeen": 75160266,
-               "QuestNeverAccepted": "yes"
-             },
-             "Action": "Accept"
-         },
-          {
-            // Completed upon next day
-             "When": "Tile",
-             "Has": {
-               "Location": "FarmHouse",
-               "Area": "0 0 2560 2240",
-               "EventSeen": 75160267
-             },
-             "Action": "Complete"
-         },
-        ]
       },
       // Reminder for second Phantom Greenhouse event
       {
@@ -701,29 +606,6 @@
          "Description": "%i18n:phantom_greenhouse_2.description",
          "Objective": "%i18n:phantom_greenhouse_2.objective",
          "Cancelable": true,
-         "Hooks": [
-           {
-             // Accepted after second Bliss event
-              "When": "Tile",
-              "Has": {
-                "Location": "Custom_Ridgeside_RSVTheHike",
-                "Area": "0 0 5120 5440",
-                "EventSeen": 75160268,
-                "QuestNeverAccepted": "yes"
-              },
-              "Action": "Accept"
-          },
-           {
-             // Completed after A Second Chance event
-              "When": "Tile",
-              "Has": {
-                "Location": "Custom_Ridgeside_RSVGreenhouse2",
-                "Area": "0 0 1280 1536",
-                "EventSeen": 75160269
-              },
-              "Action": "Complete"
-          },
-         ]
        },
 
   ],

@@ -45,12 +45,7 @@ namespace RidgesideVillage
             NPC giftee = e.Npc;
             if (giftee.Name != "Torts")
                 return;
-            if (Game1.currentLocation.Name == TORTSREALM)
-            {
-                Game1.drawObjectDialogue(Helper.Translation.Get("Torts.RealmGift"));
-                e.Cancel = true;
-                return;
-            }
+
             Farmer gifter = Game1.player;
             if (gifter.friendshipData["Torts"].GiftsToday == 1)
             {
