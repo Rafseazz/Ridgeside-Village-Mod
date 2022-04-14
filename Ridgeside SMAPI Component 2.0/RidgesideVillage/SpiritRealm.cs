@@ -425,6 +425,7 @@ namespace RidgesideVillage
             Game1.player.temporaryInvincibilityTimer = 0;
             Game1.displayFarmer = true;
         }
+
     }
 }
 
