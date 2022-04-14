@@ -37,7 +37,6 @@ namespace RidgesideVillage
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
-            helper.Events.GameLoop.DayEnding += OnDayEnded;
 
             BgUtils.Initialize(this);
 
@@ -83,23 +82,6 @@ namespace RidgesideVillage
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             forgetRepeatableEvents();
-        }
-
-        private void OnDayEnded(object sender, DayEndingEventArgs e)
-        {
-
-            if (Game1.player.hasItemInInventoryNamed("Old Lucky Foxtail Charm"))
-            {
-                Log.Debug("Player has foxtail");
-                var location = Game1.getLocationFromName("FarmHouse");
-                var events = location.GetLocationEvents();
-
-                string eventString = events["grandmaMessage"];
-                Log.Debug($"Event contents: {eventString}");
-
-                UtilFunctions.StartEvent(new Event(eventString), "FarmHouse", -1000, -1000);
-                Log.Debug("Starting event");
-            }
         }
 
         private void forgetRepeatableEvents()
