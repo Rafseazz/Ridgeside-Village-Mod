@@ -37,10 +37,13 @@
         "UniqueID": "Cherry.ShopTileFramework",
         "MinimumVersion": "1.0.1"
     },
-    {
-      "UniqueID": "Rafseazz.RSVJA",
-      "IsRequired": true
-    }
+
+    "Dependencies": [
+      {
+        "UniqueID": "Rafseazz.RSVJA",
+ 		    "IsRequired": true
+      }
+    ],
 
     /*********
     ** Minimum Version for SMAPI
