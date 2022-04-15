@@ -37,7 +37,7 @@ namespace RidgesideVillage
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
-
+            
             BgUtils.Initialize(this);
 
             TortsBackground.Initialize(this);
@@ -72,6 +72,8 @@ namespace RidgesideVillage
             PaulaClinic.Initialize(this);
 
             Offering.OfferingTileAction.Initialize(this);
+
+            NightlyEvent.Initialize(this);
 
             //not done (yet?)
             //new CliffBackground();
