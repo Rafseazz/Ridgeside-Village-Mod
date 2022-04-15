@@ -52,6 +52,16 @@ namespace RidgesideVillage
                         __instance.Sprite.ignoreSourceRectUpdates = false;
                         __instance.Sprite.currentFrame = 0;
                         break;
+                    case "blair_fish_left":
+                        __instance.extendSourceRect(16, 0);
+                        __instance.Sprite.SpriteWidth = 32;
+                        __instance.Sprite.ignoreSourceRectUpdates = false;
+                        __instance.Sprite.currentFrame = 16;
+                        if (Utility.isOnScreen(Utility.Vector2ToPoint(__instance.Position), 64, __instance.currentLocation))
+                        {
+                            __instance.currentLocation.playSoundAt("slosh", __instance.getTileLocation());
+                        }
+                        break;
                     case "carmen_fish":
                     case "blair_fish":
                     case "kenneth_fixfront":
