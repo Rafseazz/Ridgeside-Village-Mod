@@ -27,7 +27,7 @@ namespace RidgesideVillage
 
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.DayEnding += OnDayEnding;
-            SpaceEvents.TouchActionActivated += OnTileAction;
+            //SpaceEvents.TouchActionActivated += OnTileAction;
 
             TileActionHandler.RegisterTileAction("RSVMaiveLoan", RSVMaiveLoan);
         }
@@ -83,21 +83,21 @@ namespace RidgesideVillage
                             Game1.player.Money += 100000;
                             Game1.player.modData["RSV.loan"] = "100000";
                             Game1.player.mailReceived.Add(LOANMAIL);
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun"));
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun").ToString().Replace("{amount}","100000"));
                         },
                         delegate
                         {
                             Game1.player.Money += 500000;
                             Game1.player.modData["RSV.loan"] = "500000";
                             Game1.player.mailReceived.Add(LOANMAIL);
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun"));
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun").ToString().Replace("{amount}", "500000"));
                         },
                         delegate
                         {
                             Game1.player.Money += 1000000;
                             Game1.player.modData["RSV.loan"] = "1000000";
                             Game1.player.mailReceived.Add(LOANMAIL);
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun"));
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun").ToString().Replace("{amount}", "1000000"));
                         },
                         delegate{}
                     };
@@ -116,7 +116,7 @@ namespace RidgesideVillage
                     {
                         delegate
                         {
-                            Game1.activeClickableMenu = new NumberSelectionMenu("Loan.PayMenu", PayOffAmount, 1, 0, Int32.Parse(Game1.player.modData["RSV.loan"]), Int32.Parse(Game1.player.modData["RSV.loan"]));
+                            Game1.activeClickableMenu = new NumberSelectionMenu(Helper.Translation.Get("Loan.PayMenu"), PayOffAmount, -1, 0, Int32.Parse(Game1.player.modData["RSV.loan"]), Int32.Parse(Game1.player.modData["RSV.loan"]));
                         },
                         delegate{}
                     };
@@ -131,9 +131,9 @@ namespace RidgesideVillage
 
         public static void PayOffAmount(int number, int price, Farmer who)
         {
-            Game1.player.Money -= price;
+            Game1.player.Money -= number;
             int balance = Int32.Parse(Game1.player.modData["RSV.loan"]);
-            balance -= price;
+            balance -= number;
             if (balance == 0)
             {
                 Game1.player.mailReceived.Remove(LOANMAIL);
@@ -141,7 +141,7 @@ namespace RidgesideVillage
             }
             else
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.PartlyPaid").ToString().Replace("{amount}", price.ToString()) + Game1.player.modData["RSV.loan"] + "$");
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.PartlyPaid").ToString().Replace("{amount}", number.ToString()) + balance + "$");
             }
             Game1.player.modData["RSV.loan"] = balance.ToString();
         }
