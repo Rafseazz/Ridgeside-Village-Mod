@@ -52,7 +52,7 @@ namespace RidgesideVillage
                         __instance.Sprite.ignoreSourceRectUpdates = false;
                         __instance.Sprite.currentFrame = 0;
                         break;
-                    case "blair_fish_left":
+                    case "blair_side_fish":
                         __instance.extendSourceRect(16, 0);
                         __instance.Sprite.SpriteWidth = 32;
                         __instance.Sprite.ignoreSourceRectUpdates = false;
@@ -97,8 +97,9 @@ namespace RidgesideVillage
                 switch (behaviorName)
                 {
                     case "torts_invisible":
-                    case "carmen_fish":
+                    case "blair_side_fish":
                     case "blair_fish":
+                    case "carmen_fish":
                     case "kenneth_fixfront":
                     case "kenneth_fixright":
                     case "kenneth_fixback":
