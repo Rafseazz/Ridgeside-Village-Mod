@@ -27,10 +27,8 @@ namespace RidgesideVillage
             var cp = Helper.ModRegistry.GetApi<IContentPatcherApi>("Pathoschild.ContentPatcher");
             if (cp is null) {
                 Log.Alert("Content Patcher is not installed- RSV requires CP to run. Please install CP and restart your game.");
-                return;
-                }
-
-            cp.RegisterToken(this.ModManifest, "PastoralMapStyle", () => new string[] { Config.pastoralMapStyle ?? "Default" });
+                return;   
+            }
 
             cp.RegisterToken(this.ModManifest, "EnableRidgesideMusic", () => new string[] { Config.enableRidgesideMusic.ToString() });
 
@@ -97,7 +95,7 @@ namespace RidgesideVillage
                 int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
                 if (randomseed is not null)
                 {   //Seed the random with a seed that only changes every 28 days
-                    Random random = new Random((int)Game1.uniqueIDForThisGame + (randomseed.Value / 28));
+                    Random random = new Random((int)Game1.uniqueIDForThisGame + ((randomseed.Value - 1) / 28));
                     return new[] { (random.Next(1, 5) * 7).ToString() };
                 }
                 return null; //return null for an unready token.

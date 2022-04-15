@@ -7,12 +7,12 @@
    "Target": "Data/Festivals/spring13",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 38 84 up/Alissa 29 54 left/Bert 27 53 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Jio 52 59 left/Keahi 12 59 left/Kenneth 20 74 right/Kiwi 51 62 down/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 53 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 10 59 right/Ysabelle 32 79 right/Yuuma 20 79 up",
+         "Value": "Aguar 38 84 up/Alissa 29 54 left/Bert 27 53 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Keahi 12 59 left/Kenneth 20 74 right/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 53 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 10 59 right/Ysabelle 32 79 right/Yuuma 20 79 up",
          "Delimiter": "/"
 		},
 
@@ -20,11 +20,11 @@
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 38 84 up/Alissa 29 55 down/Bert 27 54 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Jio 52 59 left/Keahi 12 59 right/Kenneth 20 74 right/Kiwi 51 62 down/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 54 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 12 60 right/Ysabelle 32 79 down/Yuuma 20 79 up",
+         "Value": "Aguar 38 84 up/Alissa 29 55 down/Bert 27 54 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Keahi 12 59 right/Kenneth 20 74 right/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 54 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 12 60 right/Ysabelle 32 79 down/Yuuma 20 79 up",
          "Delimiter": "/"
 		},
 
-	]	
+	]
 	},
 
 
@@ -107,6 +107,31 @@
         ]
     },
 
+		{
+        //Jio and Kiwi
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "HasSeenEvent|contains=75160377, 75160187": true,
+						"HasSeenEvent|contains=75160188": true,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 52 59 left/Kiwi 51 62 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Jio 52 59 left/Kiwi 51 62 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
     {
         //Daia Arrives
         "Action": "EditData",
@@ -157,7 +182,28 @@
              "Value": "/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Ian false true 500 17 18 19 18",
           },
         ]
-    }
-	
+    },
+
+    //Torts
+    {
+      "LogName": "Torts Egg Fest Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 20 78 3",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Torts 21 79 3",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

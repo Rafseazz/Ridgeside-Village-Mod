@@ -84,7 +84,7 @@
 		// Vanilla
 		{
 			"Name": "PossibleCableCarNPCs",
-			"Value": "{{PossibleCableCarNPCs}}, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kenneth, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy",
+			"Value": "{{PossibleCableCarNPCs}}, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kent, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy",
 			"When": {
 				"EnableOtherNPCsInCableCar": true
 			}
@@ -201,7 +201,7 @@
 		},
 		{
 			"Name": "RSVGATHERDANCE",
-			"Value": "/animate Alissa false true 400 19 19 19 27 27 19/animate Abigail false true 118 49 34 35 48/animate Sam false true 236 20 21/animate Sebastian false true 118 42 43 52 53/",
+			"Value": "/animate Alissa false true 400 18 18 18 26 26 19/animate Abigail false true 118 49 34 35 48/animate Sam false true 236 20 21/animate Sebastian false true 118 42 43 52 53/",
 			"When": {
 				"HasSeenEvent: |contains=75160120": true
 			}
@@ -350,6 +350,263 @@
 			"Name": "RandomGuestNumber10",
 			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
 		},
+
+		//Ridgeside Extra Music Tokens
+		//AlissaTheme
+		{
+			"Name": "AlissaMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "AlissaMusic",
+			"Value": "AlissaTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//CorineTheme
+		{
+			"Name": "CorineMusic",
+			"Value": "50s",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "CorineMusic",
+			"Value": "CorineTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//DaiaTheme
+		{
+			"Name": "DaiaMusic",
+			"Value": "desolate",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "DaiaMusic",
+			"Value": "DaiaTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//FlorTheme
+		{
+			"Name": "FlorMusic",
+			"Value": "50s",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "FlorMusic",
+			"Value": "FlorTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//IanTheme
+		{
+			"Name": "IanMusic",
+			"Value": "50s",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "IanMusic",
+			"Value": "IanTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//JericTheme
+		{
+			"Name": "JericMusic",
+			"Value": "50s",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "JericMusic",
+			"Value": "JericTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//JioTheme
+		{
+			"Name": "JioMusic",
+			"Value": "desolate",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "JioMusic",
+			"Value": "JioTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//KennethTheme
+		{
+			"Name": "KennethMusic",
+			"Value": "desolate",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "KennethMusic",
+			"Value": "KennethTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//KiarraTheme
+		{
+			"Name": "KiarraMusic",
+			"Value": "50s",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "KiarraMusic",
+			"Value": "KiarraTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//MaddieTheme
+		{
+			"Name": "MaddieMusic",
+			"Value": "desolate",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "MaddieMusic",
+			"Value": "MaddieTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//PhilipTheme
+		{
+			"Name": "PhilipMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "PhilipMusic",
+			"Value": "PhilipTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//SeanTheme
+		{
+			"Name": "SeanMusic",
+			"Value": "50s",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "SeanMusic",
+			"Value": "SeanTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//ShiroTheme
+		{
+			"Name": "ShiroMusic",
+			"Value": "desolate",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "ShiroMusic",
+			"Value": "ShiroTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//YsabelleTheme
+		{
+			"Name": "YsabelleMusic",
+			"Value": "desolate",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "YsabelleMusic",
+			"Value": "YsabelleTheme",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//FallInRidgeside
+		{
+			"Name": "FallRidgesideMusic",
+			"Value": "fall1",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "FallRidgesideMusic",
+			"Value": "FallInRidgeside",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//WinterMountain
+		{
+			"Name": "WinterRidgesideMusic",
+			"Value": "winter1",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "WinterRidgesideMusic",
+			"Value": "WinterMountain",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
 	],
 
 	/*********
@@ -376,6 +633,10 @@
 			{
 				"Name": "Custom_Ridgeside_Ridge_KennethDate_OFF",
 				"FromMapFile": "Assets/Maps/EventMaps/Ridge_KennethDate_OFF.tmx",
+			},
+			{
+				"Name": "Custom_Ridgeside_RSVEvacuationCenter",
+				"FromMapFile": "Assets/Maps/EventMaps/RSVEvacuationCenter.tmx",
 			},
 			{
 				"Name": "Custom_Ridgeside_Ridge_KennethDate_ON",
@@ -409,6 +670,13 @@
 				"Name": "Custom_Ridgeside_LolaShed",
 				"FromMapFile": "Assets/Maps/EventMaps/LolaShed.tmx",
 				"MigrateLegacyNames": [ "LolaShed" ]
+			},
+			/*********
+			** Torts
+			*********/
+			{
+				"Name": "Custom_Ridgeside_TortsRealm",
+				"FromMapFile": "Assets/Maps/EventMaps/TortsRealm.tmx",
 			},
 			/*********
 			** Undreya
@@ -746,16 +1014,6 @@
 		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/CustomCompanionsTourists.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
 	},
 
-	//Include GIMA Data
-	/*
-		Optional stuff for Pika's island shop when he visits.
-	*/
-	{
-		"Action": "Include",
-		"FromFile": "Data/DependencyData/GingerIslandMainlandAdjustments.json",
-		"When": { "HasMod |contains=atravita.GingerIslandMainlandAdjustments": true }
-	},
-
 	//Include Event Data
 	/*
 		Loads event fork dialogies, blank files, special characters, and event scripts for versions up to 1.2.8.
@@ -793,7 +1051,7 @@
 	{
 		"LogName": "Include Dynamic Changes",
 		"Action": "Include",
-		"FromFile": "Data/DynamicChanges/AntiSocialChanges.json, Data/DynamicChanges/DialogueChanges.json, Data/DynamicChanges/ExclusionChanges.json, Data/DynamicChanges/MapChanges.json, Data/DynamicChanges/MusicChanges.json, Data/DynamicChanges/PortraitChanges.json, Data/DynamicChanges/ScheduleChanges.json, Data/DynamicChanges/SpriteChanges.json"
+		"FromFile": "Data/DynamicChanges/AntiSocialChanges.json, Data/DynamicChanges/ExclusionChanges.json, Data/DynamicChanges/MapChanges.json, Data/DynamicChanges/MusicChanges.json, Data/DynamicChanges/PortraitChanges.json, Data/DynamicChanges/SpriteChanges.json"
 	},
 
 	//Include Intermod Compatibility Files
@@ -818,12 +1076,12 @@
 
 	//Includes NPC Data
 	/*
-		Includes all data that concerns the NPCs, that includes: Animations, Conversation Topics, Dialogue, Dispositions, GiftTastes, Mail, Movie Data, Portraits, Romance, Schedules, and Sprites
+		Includes all data that concerns the NPCs, that includes: Animations, Conversation Topics, Dialogue, Dispositions, GiftTastes, Mail, Movie Data, Portraits, Romance, Schedules, Schedule Strings, and Sprites
 	*/
 	{
 		"LogName": "Include all the NPCData",
    		"Action": "Include",
-   		"FromFile": "Data/NPCData/Animations.json, Data/NPCData/ConversationTopics.json, Data/NPCData/Dialogue.json, Data/NPCData/Dispositions.json, Data/NPCData/GiftTasteData.json, Data/NPCData/Mail.json, Data/NPCData/MovieData.json, Data/NPCData/Portraits.json, Data/NPCData/Romance.json, Data/NPCData/Schedules.json, Data/NPCData/Sprites.json",
+   		"FromFile": "Data/NPCData/Animations.json, Data/NPCData/ConversationTopics.json, Data/NPCData/Dialogue.json, Data/NPCData/Dispositions.json, Data/NPCData/GiftTasteData.json, Data/NPCData/Mail.json, Data/NPCData/MovieData.json, Data/NPCData/Portraits.json, Data/NPCData/Romance.json, Data/NPCData/Schedules.json, Data/NPCData/Sprites.json, Data/NPCData/ScheduleStrings.json",
   	},
 
 	//Includes Extras

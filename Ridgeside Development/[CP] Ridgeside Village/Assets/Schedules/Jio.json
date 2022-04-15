@@ -16,6 +16,9 @@
 			"winter_15": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Beach 44 24 2/2600 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 	
 					},
+		"When": {
+			"HasFlag |contains=RSV.CompleteDaiaQuest": false,
+		}  
 	},
 
 	//Temp
@@ -52,7 +55,8 @@
 	
 					},
 		"When": {
-			"HasSeenEvent": 75160255,
+			"HasFlag |contains=RSV.CompleteDaiaQuest": true,
+			"HasSeenEvent |contains=75160255": true,
 		}  
 	},
 
@@ -66,7 +70,7 @@
 			"marriage_Fri": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1400 Custom_Ridgeside_Ridge 34 16 2/2200 BusStop -1 23 3",
 					},
 		"When": {
-			"HasSeenEvent": 75160265,
+			"HasSeenEvent: hostPlayer": 75160263,
 		} 
 	},
 

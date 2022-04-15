@@ -417,6 +417,7 @@ namespace RidgesideVillage
             Game1.player.temporaryInvincibilityTimer = 0;
             Game1.displayFarmer = true;
         }
+
         static void WarpFarmerOnSameMap(int X, int Y)
         {
             Game1.player.position.Value = new Vector2(X, Y) * 64f - new Vector2(0f, Game1.player.Sprite.getHeight() - 48);
@@ -424,6 +425,7 @@ namespace RidgesideVillage
             Game1.player.temporaryInvincibilityTimer = 0;
             Game1.displayFarmer = true;
         }
+
     }
 }
 

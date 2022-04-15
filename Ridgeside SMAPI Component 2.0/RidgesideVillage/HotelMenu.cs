@@ -125,7 +125,7 @@ namespace RidgesideVillage
             }
 
             //Adds ANNIVERSARYTODAY flag if it's the next day after booking
-            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
+            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG) && !Game1.player.mailReceived.Contains(ANNIVERSARYTODAY))
             {
                 Game1.player.mailReceived.Add(ANNIVERSARYTODAY);
             }
@@ -216,7 +216,11 @@ namespace RidgesideVillage
                         delegate
                         {
                             Game1.player.Money -= ROOMPRICE;
-                            Game1.player.mailReceived.Add(ROOMBOOKEDFLAG);
+                            // All players can go bc fuck multiplayer
+                            foreach(Farmer player in Game1.getAllFarmers())
+                            {
+                                player.mailReceived.Add(ROOMBOOKEDFLAG);
+                            }
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AfterBooking"));
                         },
                         delegate { }

@@ -1,5 +1,5 @@
 {
-    
+
 "Changes": [
 
 	{
@@ -7,24 +7,24 @@
    "Target": "Data/Festivals/winter8",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down/Jio 91 19 down/Kiwi 90 19 down",
+         "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down",
          "Delimiter": "/"
 		},
-	
+
    //MainEevent
 		{
          "Operation": "Append",
          "Target": ["Entries", "Main-Event_additionalCharacters"],
-         "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down/Jio 91 19 down/Kiwi 90 19 down",
+         "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down",
          "Delimiter": "/"
 		},
 
-	]	
+	]
 	},
 
     //2.0 Pips spots! THE TRUE RSV EXPERIENCE!
@@ -99,6 +99,32 @@
     },
 
     {
+        //Jio and Kiwi
+				"LogName": "Jio and Kiwi at Ice Festival",
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": {
+            "HasSeenEvent|contains=75160377, 75160187": true,
+						"HasSeenEvent|contains=75160188": true,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 91 19 down/Kiwi 90 19 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Jio 91 19 down/Kiwi 90 19 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
         //RSV Animations
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
@@ -112,7 +138,28 @@
              "Value": "/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Blair false true 130 24 24 24 24 24 24 24 25 25 25/animate Aguar false true 500 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 18 19 19 19 19 19 19 19 18",
           },
         ]
-    }
-	
+    },
+
+    //Torts
+    {
+      "LogName": "Torts Ice Festival Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 77 41 1",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Main-Event_additionalCharacters"],
+          "Value": "Torts 74 41 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

@@ -1,8 +1,8 @@
 {
 "Changes": [
-	
+
 //-------------------------
-// D I S P O S I T I O N S 
+// D I S P O S I T I O N S
 //-------------------------
 
 	{
@@ -19,7 +19,7 @@
 
 			//Odd Jobs
 			"Ian": "teen/polite/shy/positive/male/datable/null/Town/fall 14//Custom_Ridgeside_IanHouse 10 5/{{i18n:Name.Ian}}",
-			"Sean": "teen/polite/outgoing/positive/male/non-datable/null/Town/spring 22/{{i18n:NPC_Data.Sean}}/Custom_Ridgeside_IanHouse 13 5/{{i18n:Name.Sean}}",
+			"Sean": "teen/polite/outgoing/positive/male/datable/null/Town/spring 22/{{i18n:NPC_Data.Sean}}/Custom_Ridgeside_IanHouse 13 5/{{i18n:Name.Sean}}",
 
 			//Electrician
 			"Kenneth": "teen/neutral/neutral/neutral/male/datable/null/Town/summer 18//Custom_Ridgeside_KennethHouse 16 5/{{i18n:Name.Kenneth}}",
@@ -40,7 +40,7 @@
 			//Legame Residence or 3Bros
 			"Lorenzo": "adult/polite/neutral/positive/male/non-datable/null/Town/fall 1/{{i18n:NPC_Data.Lorenzo}}/Custom_Ridgeside_3Bros2ndFloor 6 5/{{i18n:Name.Lorenzo}}",
 			"Anton": "adult/polite/neutral/neutral/male/non-datable/null/Town/spring 9/{{i18n:NPC_Data.Anton}}/Custom_Ridgeside_3Bros2ndFloor 18 12/{{i18n:Name.Anton}}",
-			"Kiarra": "teen/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
+			"Kiarra": "teen/polite/outgoing/negative/female/datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
 			"Shanice": "adult/polite/neutral/neutral/female/non-datable/null/Town/winter 26/{{i18n:NPC_Data.Shanice}}/Custom_Ridgeside_3Bros2ndFloor 5 5/{{i18n:Name.Shanice}}",
 
 			//Blooming Hill Farm
@@ -90,7 +90,7 @@
 			"Belinda": "adult/neutral/outgoing/positive/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp2 6 6/{{i18n:Name.Belinda}}",
 			"Raeriyala": "adult/polite/outgoing/positive/female/non-datable/null/Other/null/{{i18n:NPC_Data.Raeriyala}}/Custom_Ridgeside_RSVHiddenWarp2 9 8/{{i18n:Name.Raeriyala}}",
 
-			//Lost Princess Story Arch
+			//Lost Princess Story Arc
 			"Undreya": "child/neutral/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVAbandonedHouse 5 5/{{i18n:Name.Undreya}}",
 			"Sari": "adult/polite/outgoing/positive/female/non-datable/null/Other/null/{{i18n:NPC_Data.Sari}}/Custom_Ridgeside_RSVHiddenWarp2 5 7/{{i18n:Name.Sari}}",
 			"Pipo": "child/polite/outgoing/positive/male/non-datable/null/Other/null/{{i18n:NPC_Data.Pipo}}/Custom_Ridgeside_RSVHiddenWarp2 6 7/{{i18n:Name.Pipo}}",
@@ -104,7 +104,20 @@
 			"Kiwi": "child/rude/outgoing/negative/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 1/{{i18n:Name.Kiwi}}",
 			"TreehouseGirl": "child/polite/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/???",
 			"RelicSpirit": "child/polite/neutral/neutral/male/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/???",
+
+			//Torts
+			"Torts": "child/neutral/neutral/neutral/male/non-datable/null/Other/spring 1//Custom_Ridgeside_RidgesideVillage 57 53/{{i18n:Name.Torts}}"
 		},
+	},
+
+	{
+		"LogName": "Kiarra Disposition Change",
+		"Action": "EditData",
+		"Target": "Data/NPCDispositions",
+		"When": { "HasDialogueAnswer": 751603262 },
+		"Entries": {
+			"Kiarra": "teen/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
+		}
 	},
 
 

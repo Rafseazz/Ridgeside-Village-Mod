@@ -224,59 +224,68 @@
         {
                 "Action": "EditData",
                 "Target": "Characters/Dialogue/Ariah",
-                "Entries": {   
-                        //Ariah 2 hearts                    
-                        "ariah2_choice1": "*sigh*$s",
-                        "ariah2_choice2": "*sigh* I wish...$s",
-                        "ariah2_choice3": "Huh? Rude! Hmph!$a", 
-                        "ariah4_choice1": "*Sniff* What are you looking at?$6#$b#Leave me alone!$6",
-                        "ariah4_choice2": "*Sniff* What are you looking at?$6",
-                        "ariah4_choice3": "*Sniff* Huh?$6#$b#*Giggles*$7#$b#You're a bizarre grown-up...$7",
-                        "ariah4_choice4": "*Sniff* Huh?$6#$b#*Giggles* Really?$7#$b#Not when you do it in a middle of a debate match it's not, though.$7",
-                        "ariah4_choice5": "*Sniff* Huh?$6#$b#Such shallow words...$7"                   
+                "Entries": {
+                        //Ariah 2 hearts
+                        "ariah2_choice1": "{{i18n:event-75160305.ariah2_choice1}}",
+                        "ariah2_choice2": "{{i18n:event-75160305.ariah2_choice2}}",
+                        "ariah2_choice3": "{{i18n:event-75160305.ariah2_choice3}}",
+                        "ariah4_choice1": "{{i18n:event-75160306.ariah4_choice1}}",
+                        "ariah4_choice2": "{{i18n:event-75160306.ariah4_choice2}}",
+                        "ariah4_choice3": "{{i18n:event-75160306.ariah4_choice3}}",
+                        "ariah4_choice4": "{{i18n:event-75160306.ariah4_choice4}}",
+                        "ariah4_choice5": "{{i18n:event-75160306.ariah4_choice5}}"
                 }
         },
 
         {
                 "Action": "EditData",
                 "Target": "Characters/Dialogue/Faye",
-                "Entries": {   
-                        //Faye 2 hearts                    
-                        "faye2_yes": "Huh? You'll buy food for me?$u",
-                        "faye2_no": "*sigh*$s%fork",            
+                "Entries": {
+                        //Faye 2 hearts
+                        "faye2_yes": "{{i18n:event-75160317.faye2_yes}}",
+                        "faye2_no": "{{i18n:event-75160317.faye2_no}}",
                 }
         },
 
         {
                 "Action": "EditData",
                 "Target": "Characters/Dialogue/Kiarra",
-                "Entries": {   
-                        //Kiarra 2 hearts                    
-                        "kiarra2_choice1": "Ooh! This one does look homey.#$b#Like the feeling we get during the end-of-the-year festival!$h",
-                        "kiarra2_choice2": "This does bring off a magical vibe!#$b#I wonder if the legends are true.",
-                        "kiarra2_choice3": "It does look fun, doesn't it?$h#$b#Like the time when Lenny started a food fight during the gathering!$h",
+                "Entries": {
+                        //Kiarra 2 hearts
+                        "kiarra2_choice1": "{{i18n:kiarra2_choice1}}",
+                        "kiarra2_choice2": "{{i18n:kiarra2_choice2}}",
+                        "kiarra2_choice3": "{{i18n:kiarra2_choice3}}",
+                        //Kiarra 4 hearts
+                        "kiarra4_choice1": "{{i18n:kiarra4_choice1}}",
+                        "kiarra4_choice2": "{{i18n:kiarra4_choice2}}",
+                        "kiarra4_choice3": "{{i18n:kiarra4_choice3}}",
+                        "kiarra4_choice4": "{{i18n:kiarra4_choice4}}",
+                        "kiarra4_choice5": "{{i18n:kiarra4_choice5}}",
+                        //Kiarra 8 hearts
+                        "kiarra8_choice1": "{{i18n:kiarra8_choice1}}",
+                        "kiarra8_choice2": "{{i18n:kiarra8_choice2}}"
                 }
         },
 
         {
                 "Action": "EditData",
                 "Target": "Characters/Dialogue/Kimpoi",
-                "Entries": {   
+                "Entries": {
                         //Kimpoi 2 hearts
-                        "kimpoi2_choice1": "Huh? I really am!$h#$b#I guess this is some kind of practice.",
-                        "kimpoi2_choice2": "Yep, I guess so.#$b#Well we're kind of talking now, so it's a start.$h",
-                        "kimpoi2_choice3": "That's quite rude.$a%fork",
+                        "kimpoi2_choice1": "{{i18n:kimpoi2_choice1}}",
+                        "kimpoi2_choice2": "{{i18n:kimpoi2_choice2}}",
+                        "kimpoi2_choice3": "{{i18n:kimpoi2_choice3}}",
                 }
         },
 
         {
                 "Action": "EditData",
                 "Target": "Characters/Dialogue/Malaya",
-                "Entries": {   
+                "Entries": {
                         //Malaya 2 hearts
-                        "malaya2_choice1": "You think so?#$b#Thank you for cheering me up.$h",
-                        "malaya2_choice2": "It's... complicated...#$b#I don't think you need to know.$s",
-                        "malaya2_choice3": "How dare you!$a%fork",
+                        "malaya2_choice1": "{{i18n:malaya2_choice1}}",
+                        "malaya2_choice2": "{{i18n:malaya2_choice1}}",
+                        "malaya2_choice3": "{{i18n:malaya2_choice1}}",
                 }
         },
 
@@ -285,8 +294,8 @@
                 "Target": "Characters/Dialogue/Sonny",
                 "Entries": {
                         //Sonny 2 hearts
-                        "sonny2_choice1": "Lovely! I'd expect nothing less from someone who nurtures the earth, flora, and fauna.$h",
-                        "sonny2_choice2": "Fret not! I'll be glad to tell you all I know about the Mountain Spirit.$h#$b#Let's chat for a while."
+                        "sonny2_choice1": "{{i18n:sonny2_choice1}}",
+                        "sonny2_choice2": "{{i18n:sonny2_choice2}}"
                 }
         },
 
@@ -295,8 +304,8 @@
                 "Target": "Characters/Dialogue/Louie",
                 "Entries": {
                         //Louie 2 hearts
-                        "louie2_choice1": "Splendid!$h",
-                        "louie2_choice2": "Huh? You're missing out.%fork"
+                        "louie2_choice1": "{{i18n:louie2_choice1}}",
+                        "louie2_choice2": "{{i18n:louie2_choice2}}"
                 }
         },
 
@@ -305,8 +314,8 @@
                 "Target": "Characters/Dialogue/Anton",
                 "Entries": {
                         //Anton 4 hearts
-                        "anton4_choice1": "*Yawn* Sleepy time.$h%fork",
-                        "anton4_choice2": "The Madame huh...$s"
+                        "anton4_choice1": "{{i18n:anton4_choice1}}",
+                        "anton4_choice2": "{{i18n:anton4_choice2}}"
                 }
         },
 
@@ -315,10 +324,32 @@
                 "Target": "Characters/Dialogue/Blair",
                 "Entries": {
                         //Blair 4 hearts
-                        "blair4_choice1": "Hmph...$s",
-                        "blair4_choice2": "Hmm? Talk about it?#$b#Nah! There's nothing to talk about!$h",
-                        "blair4_choice3": "Hmm? What do you mean?#$b#Nah, nevermind.$h"
+                        "blair4_choice1": "{{i18n:blair4_choice1}}",
+                        "blair4_choice2": "{{i18n:blair4_choice2}}",
+                        "blair4_choice3": "{{i18n:blair4_choice3}}"
                 }
+        },
+
+        {
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Sean",
+                "Entries": {
+                        //Event dialogue Sean 4 hearts
+                        "sean4_1": "{{i18n:sean4_1}}",
+                        "sean4_2": "{{i18n:sean4_2}}",
+                        //Sean 6 hearts
+                        "sean6_1": "{{i18n:sean6_1}}",
+                        "sean6_2": "{{i18n:sean6_2}}",
+                        "sean6_3": "{{i18n:sean6_3}}",
+                        "sean6_4": "{{i18n:sean6_4}}",
+                        //Sean 8 hearts
+                        "sean8_1": "{{i18n:sean8_1}}",
+                        "sean8_2": "{{i18n:sean8_2}}",
+                        "sean8_3": "{{i18n:sean8_3}}",
+                        "sean8_4": "{{i18n:sean8_4}}",
+                        "sean8_5": "{{i18n:sean8_5}}",
+                        "sean8_6": "{{i18n:sean8_6}}",
+                      }
         },
 
         {
@@ -326,8 +357,8 @@
                 "Target": "Characters/Dialogue/Irene",
                 "Entries": {
                         //Irene 6 hearts
-                        "irene6_choice1": "Oh, wow! I really appreciate it!$h",
-                        "irene6_choice2": "Ha ha! Very funny!$a%fork"
+                        "irene6_choice1": "{{i18n:irene6_choice1}}",
+                        "irene6_choice2": "{{i18n:irene6_choice2}}"
                 }
         },
 
@@ -336,10 +367,97 @@
                 "Target": "Characters/Dialogue/Lorenzo",
                 "Entries": {
                         //Lorenzo 4 hearts
-                        "lorenzo4_choice1": "What?!$u",
-                        "lorenzo4_choice2": "Hey, wait a minute!$a"
+                        "lorenzo4_choice1": "{{i18n:lorenzo4_choice1}}",
+                        "lorenzo4_choice2": "{{i18n:lorenzo4_choice2}}"
+            }
+        },
+
+        {
+                "Action": "EditData",
+                "Target": "Characters/Dialogue/Shanice",
+                "Entries": {
+                        //Shancie 4 hearts
+                        "shanice4_choice1": "{{i18n:shanice4_choice1}}",
+                        "shanice4_choice2": "{{i18n:shanice4_choice2}}",
+                        "shanice4_choice3": "{{i18n:shanice4_choice3}}",
                 }
         },
+
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Shiro",
+         "Entries": {
+           // Torts zero heart event
+           "torts0_1": "{{i18n:event-75160280.05}}",
+           "torts0_2": "{{i18n:event-75160280.18}}",
+          },
+      	},
+
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Trinnie",
+         "Entries": {
+           // Torts two heart event
+           "torts2_1": "{{i18n:torts2_1}}",
+           "torts2_2": "{{i18n:torts2_2}}",
+          },
+        },
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Pika",
+         "Entries": {
+           // Torts two heart event
+           "torts2_3": "{{i18n:torts2_3}}",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Torts",
+         "Entries": {
+           // Torts four heart event
+           "torts4_1": "{{i18n:torts4_1}}",
+           "torts4_2": "{{i18n:torts4_2}}",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Torts",
+         "Entries": {
+           // Torts six heart event
+           "torts6_1": "{{i18n:torts6_1}}",
+           "torts6_2": "{{i18n:torts6_2}}",
+           "torts6_3": "{{i18n:torts6_3}}",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Lenny",
+         "Entries": {
+           // Torts seven heart event
+           "torts7_1": "{{i18n:torts7_1}}",
+           "torts7_2": "{{i18n:torts7_2}}",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Torts",
+         "Entries": {
+           // Torts eight heart event
+           "torts8_1": "{{i18n:torts8_1}}",
+           "torts8_2": "{{i18n:torts8_2}}",
+          },
+      	},
+        {
+         "Action": "EditData",
+         "Target": "Characters/Dialogue/Jio",
+         "Entries": {
+           // Torts eight heart event
+           "torts8_3": "{{i18n:torts8_3}}",
+           "torts8_4": "{{i18n:torts8_4}}",
+           "torts8_5": "{{i18n:torts8_5}}",
+           "torts8_6": "{{i18n:torts8_6}}",
+          },
+      	},
 
 
 

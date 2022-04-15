@@ -49,19 +49,6 @@
 		"Update": "OnLocationChange"
 	},
 
-//Lamp posts
-	/*{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
-		"MapProperties": {
-			"Outdoors": "T",
-			"Light": "51 42 4 80 100 4 124 49 4 101 6 4 126 22 4 46 27 4 58 25 4 74 25 4 111 26 4 118 26 4 143 26 4 107 41 4 121 41 4 95 47 4 135 49 4 8 61 4 37 56 4 72 57 4 95 57 4 112 53 4 116 53 4 64 70 4 93 75 4 112 64 4 126 74 4 133 74 4 126 83 4 133 83 4 81 85 4 87 85 4 87 110 4 62 41 4 86 39 4 62 44 4 65 50 4 69 50 4 89 46 4 89 49 4 101 50 4 70 14 4 17 80 4 110 83 4 66 35 4 68 35 4 70 35 4 72 35 4 74 35 4 76 35 4 78 35 4 80 35 4 82 35 4 90 36 4 02 36 4 94 36 4 96 36 4 98 36 4 100 36 4",
-			"NightTiles": "AlwaysFront 51 42 908 AlwaysFront 80 100 908 AlwaysFront 124 49 908 AlwaysFront 101 6 908 AlwaysFront 126 22 908 AlwaysFront 46 27 908 AlwaysFront 58 25 908 AlwaysFront 74 25 908 AlwaysFront 111 26 908 AlwaysFront 118 26 908 AlwaysFront 143 26 908 AlwaysFront 107 41 908 AlwaysFront 121 41 908 AlwaysFront 95 47 908 AlwaysFront 135 49 908 AlwaysFront 8 61 908 AlwaysFront 37 56 908 AlwaysFront 72 57 908 AlwaysFront 95 57 908 AlwaysFront 112 53 908 AlwaysFront 116 53 908 AlwaysFront 64 70 908 AlwaysFront 93 75 908 AlwaysFront 112 64 908 AlwaysFront 126 74 908 AlwaysFront 133 74 908 AlwaysFront 126 83 908 AlwaysFront 133 83 908 AlwaysFront 81 85 908 AlwaysFront 87 85 908 AlwaysFront 87 110 908 AlwaysFront 70 14 507 AlwaysFront 17 80 507 AlwaysFront 110 83 507"
-		},
-		"When": { "Time": "{{Range: 1900, 2600}}" },
-		"Update": "OnLocationChange, OnTimeChange"
-	},*/
-
 //Hike House Peek (11PM-11:30PM Thursday)
 	{
 		"Action": "EditMap",
@@ -213,6 +200,16 @@
 		"When": { "HasFlag": "RSV.FixedMinecart" },
 		"Update": "OnLocationChange"
 	},
+	//Safety net to remove boxes for offline players @ multiplayer during Yuuma cutscene for minecart quest
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"FromFile": "Assets/Maps/EventMaps/RSVOpenPlot.tmx",
+		"ToArea": { "X": 68, "Y": 18, "Width": 3, "Height": 2 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag": "RSV.FixedMinecart" },
+		"Update": "OnLocationChange"
+	},
 
 //Event changes
 	//Aguar Events
@@ -306,7 +303,7 @@
          "PatchMode": "Replace",
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
-			"HasSeenEvent": 75160264,
+			"HasSeenEvent: hostPlayer": 75160263,
 		}
       	},
       	{
@@ -553,7 +550,7 @@
 		"Target": "Maps/zrsvspiritrealm",
 		"FromFile": "Assets/Maps/TileSheets/{{TargetWithoutPath}}_corrupt.png",
 		"When": {
-			"HasSeenEvent |contains=75160263": false,
+			"HasSeenEvent: hostPlayer |contains=75160263": false,
 			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
 		},
 		"Update": "OnLocationChange"
@@ -575,7 +572,7 @@
 				"Height": 144
 			},
 		"When": {
-			"HasSeenEvent |contains=75160263": false,
+			"HasSeenEvent: hostPlayer |contains=75160263": false,
 			"LocationName": "Custom_Ridgeside_RSVSpiritRealm"
 		},
 		"Update": "OnLocationChange"
@@ -588,7 +585,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 5, "Y": 67, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -598,7 +595,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 15, "Y": 23, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -608,7 +605,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 48, "Y": 19, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -618,7 +615,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 96, "Y": 23, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -628,7 +625,7 @@
 		"FromFile": "Assets/Maps/QuestMaps/RSVCorruptedFire.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 2 },
 		"ToArea": { "X": 94, "Y": 65, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent |contains=75160263": false },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": false },
 		"PatchMode": "Overlay",
 		"Update": "OnLocationChange"
 	},
@@ -640,7 +637,7 @@
 		"FromFile": "Assets/Maps/DynamicMaps/RSVSummitEntrance.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 6, "Height": 3 },
 		"ToArea": { "X": 95, "Y": 4, "Width": 6, "Height": 3 },
-		"When": { "HasSeenEvent |contains=75160263": true },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160263": true },
 		"PatchMode": "Replace",
 		"Update": "OnLocationChange"
 	},
@@ -658,7 +655,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
     {
@@ -673,7 +670,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
     {
@@ -688,7 +685,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
     {
@@ -703,7 +700,7 @@
                }
             }
 		],
-		"When": { "HasSeenEvent": 75160265 },
+		"When": { "HasSeenEvent: hostPlayer": 75160263 },
 		"Update": "OnLocationChange"
     },
 
@@ -788,6 +785,28 @@
 		"PatchMode": "Replace",
 		"When": { "HasFlag": "LinkedFishesLetter" },
 		"Update": "OnLocationChange"
+	},
+
+//New Village Plaza
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVBetterSquare.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 22, "Height": 22 },
+		"ToArea": { "X": 103, "Y": 35, "Width": 22, "Height": 22 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag": "RSV.LennyHelped" },
+	},
+//Lamp posts post new plaza
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"MapProperties": {
+			"Outdoors": "T",
+			"Light": "51 42 4 80 100 4 101 6 4 126 22 4 46 27 4 58 25 4 74 25 4 111 26 4 118 26 4 143 26 4 107 39 4 121 39 4 95 47 4 135 49 4 8 61 4 37 56 4 72 57 4 95 57 4 112 53 4 116 53 4 64 70 4 93 75 4 112 64 4 126 74 4 133 74 4 126 83 4 133 83 4 81 85 4 87 85 4 87 110 4 62 41 4 86 39 4 62 44 4 65 50 4 69 50 4 89 46 4 89 49 4 101 50 4 70 14 4 17 80 4 110 83 4 66 35 4 68 35 4 70 35 4 72 35 4 74 35 4 76 35 4 78 35 4 80 35 4 82 35 4 90 36 4 02 36 4 94 36 4 96 36 4 98 36 4 100 36 4",
+			"NightTiles": "AlwaysFront 51 42 908 AlwaysFront 80 100 908 AlwaysFront 101 6 908 AlwaysFront 126 22 908 AlwaysFront 46 27 908 AlwaysFront 58 25 908 AlwaysFront 74 25 908 AlwaysFront 111 26 908 AlwaysFront 118 26 908 AlwaysFront 143 26 908 AlwaysFront 107 39 908 AlwaysFront 121 39 908 AlwaysFront 95 47 908 AlwaysFront 135 49 908 AlwaysFront 8 61 908 AlwaysFront 37 56 908 AlwaysFront 72 57 908 AlwaysFront 95 57 908 AlwaysFront 112 53 908 AlwaysFront 116 53 908 AlwaysFront 64 70 908 AlwaysFront 93 75 908 AlwaysFront 112 64 908 AlwaysFront 126 74 908 AlwaysFront 133 74 908 AlwaysFront 126 83 908 AlwaysFront 133 83 908 AlwaysFront 81 85 908 AlwaysFront 87 85 908 AlwaysFront 87 110 908 AlwaysFront 70 14 507 AlwaysFront 17 80 507 AlwaysFront 110 83 507"
+		},
+		"When": { "HasFlag": "RSV.LennyHelped" },
 	},
 
 

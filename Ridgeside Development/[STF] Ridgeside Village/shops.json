@@ -143,7 +143,7 @@
 			"ItemNames": [
 				"Buckwheat Seeds",
 				"Muskmelon Seeds",
-				"Suger Beet Seeds",
+				"Sugar Beet Seeds",
 				"Sweet Canary Melon Seeds",
 				],
 			"Stock": 6,
@@ -492,7 +492,7 @@
 			"ItemType": "Object",
 			"ItemNames": [
 				"Benne Sesame Seeds",
-				"BLue Corn Seeds",
+				"Blue Corn Seeds",
 				"Cardamom Seeds",
 				"Chayote Seeds",
 				"Cowpeas Seeds",
@@ -1620,13 +1620,29 @@
     {
 			"ItemType": "Object",
 			"ItemNames": [
-				"Belinda's Ring",
-        "Raeriyala's Ring"
+				"Warp Totem: Ridgeside"
+				],
+      "StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 30
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"The Beautiful Serpent's Ring",
+        "The Fairy Doe Fox's Ring"
 				],
       "Stock": 1,
       "StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 250,
       "When": [ "n MythFlowerLetter" ],
+		},
+    {
+			"ItemType": "Weapon",
+			"ItemNames": [ "Mountain Mistblade" ],
+      "Stock": 1,
+      "StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 500,
+      "When": [ "n SlayViperialLetter/w rainy" ],
 		},
 	],
 	},
@@ -1758,9 +1774,9 @@
 	"PortraitPath": "assets/KimpoiShop.png",
 	"Quote": "Seeds from our travels. Come take your pick.",
 	"ShopPrice": -1,
-	"DefaultSellPriceMultiplier": 0.5,
+	"DefaultSellPriceMultiplier": 2.5,
 	"PriceMultiplierWhen": {
-		"0.3": ["f Kimpoi 2000"]
+		"1.25": ["f Kimpoi 2000"]
 		},
 	"When": ["NPCAt Kimpoi 10 5"],
 	"ClosedMessage": "Sorry, we're closed!",
@@ -1901,6 +1917,41 @@
 	"ItemStocks": [
 		{
 			"ItemType": "Object",
+			"ItemNames": [
+				"Rare Seed",
+				"Dinosaur Egg",
+				"Energy Tonic",
+				"Muscle Remedy",
+				"Iridium Bar",
+				"Truffle",
+				"Glow Ring",
+				"Warrior Ring",
+				"Sprinkler",
+				"Sprinkler",
+				"Sprinkler",
+				"Sprinkler",
+				"Sprinkler",
+				"Sprinkler",
+				"Sprinkler",
+				"Quality Sprinkler",
+				"Pomegranate Sapling",
+				"Orange Sapling",
+				"Cherry Bomb",
+				"Cherry Bomb",
+				"Cherry Bomb",
+				"Cherry Bomb",
+				"Cherry Bomb",
+				"Cherry Bomb",
+				"Cherry Bomb",
+				"Cherry Sapling"
+			],
+			"MaxNumItemsSoldInItemStock": 1,
+			"Stock": 1,
+			"StockPrice": 500,
+			"When": [ "r .1" ]
+		},
+		{
+			"ItemType": "Object",
 			"ItemNames":[
 				"Grass Starter",
 				"Sugar",
@@ -1915,44 +1966,96 @@
 			"ItemNames":[
 				"Basic Fertilizer",
 			],
-			"StockPrice": 100,
+			"StockPrice": 80,
+      "When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Basic Fertilizer",
+			],
+			"StockPrice": 60,
+      "When": [ "f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames":[
 				"Basic Retaining Soil",
 			],
-			"StockPrice": 100,
+			"StockPrice": 80,
+      "When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Basic Retaining Soil",
+			],
+			"StockPrice": 60,
+      "When": [ "f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Quality Retaining Soil",
+			],
+			"StockPrice": 160,
+      "When": [ "!f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames":[
 				"Quality Retaining Soil",
 			],
-			"StockPrice": 150,
+			"StockPrice": 120,
+      "When": [ "f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames":[
 				"Speed-Gro",
 			],
-			"StockPrice": 100,
+			"StockPrice": 80,
+      "When": [ "!f Lorenzo 2000" ]
 		},
-		{
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Speed-Gro",
+			],
+			"StockPrice": 60,
+      "When": [ "f Lorenzo 2000" ]
+		},
+    {
 			"ItemType": "Object",
 			"ItemNames":[
 				"Deluxe Speed-Gro",
 			],
-			"StockPrice": 150,
+			"StockPrice": 160,
+      "When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames":[
+				"Deluxe Speed-Gro",
+			],
+			"StockPrice": 120,
+      "When": [ "f Lorenzo 2000" ]
 		},
 		{
 			"ItemType": "Object",
 			"ItemNames": [
 				"Quality Fertilizer"
 			],
-			"StockPrice": 150,
-			//"Stock": 6,
-			"When": [ "y 2" ]
+			"StockPrice": 80,
+			"When": [ "!f Lorenzo 2000" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Quality Fertilizer"
+			],
+			"StockPrice": 60,
+			"When": [ "f Lorenzo 2000" ]
 		}
 	],
 	},
@@ -2018,70 +2121,6 @@
 			"StockPrice": 5000,
 			"Stock": 1,
       "When": [ "n RSV.FayePastel" ]
-		},
-	],
-	},
-
-  //------------
-	//PikaIslandShop
-	//------------
-	{
-	"ShopName": "RSVPikaIslandShop",
-	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7 ],
-	"PortraitPath": "assets/PikaShop.png",
-	"Quote": "Aloha! How about a nice drink to cool off?",
-	"ShopPrice": -1,
-	"MaxNumItemsSoldInStore": 6,
-	"DefaultSellPriceMultiplier": 0.7,
-	"When": ["NPCAt Pika 14 21"],
-	"LocalizedQuote": {
-    	//remove the "//" from your language
-        //"es": "PLACEHOLDER",
-        //"ko": "PLACEHOLDER",
-        //"de": "PLACEHOLDER",
-        //"fr": "PLACEHOLDER",
-        //"hu": "PLACEHOLDER",
-        //"it": "PLACEHOLDER",
-        //"ja": "PLACEHOLDER",
-        //"pt": "PLACEHOLDER",
-        //"ru": "PLACEHOLDER",
-        //"tr": "PLACEHOLDER",
-        //"zh": "PLACEHOLDER",
-    	},
-	"LocalizedClosedMessage": {
-    	//remove the "//" from your language
-        //"es": "PLACEHOLDER",
-        //"ko": "PLACEHOLDER",
-        //"de": "PLACEHOLDER",
-        //"fr": "PLACEHOLDER",
-        //"hu": "PLACEHOLDER",
-        //"it": "PLACEHOLDER",
-        //"ja": "PLACEHOLDER",
-        //"pt": "PLACEHOLDER",
-        //"ru": "PLACEHOLDER",
-        //"tr": "PLACEHOLDER",
-        //"zh": "PLACEHOLDER",
-    	},
-	"ItemStocks": [
-		//Food
-		{
-			"ItemType": "Object",
-			"ItemNames": [
-				"Ridgeside Shaketini",
-				"Autumn Dew Drop Juice",
-				"Cherry Berry Shakey",
-				"Snowball Slurpee",
-        "Summit Iced Tea",
-        "Apricot Juice",
-        "Clementine Juice",
-        "Wild Apple Juice",
-				"Highland Ice Cream",
-				"Snow Bowl Surprise",
-        "Holiday Ice",
-        "Tropic Mango Cake"
-				],
-			"Stock": 1,
 		},
 	],
 	},

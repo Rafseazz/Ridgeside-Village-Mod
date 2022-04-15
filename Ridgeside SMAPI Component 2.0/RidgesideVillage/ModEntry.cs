@@ -26,9 +26,8 @@ namespace RidgesideVillage
             ModMonitor = Monitor;
             Helper = helper;
 
-            if (!Helper.ModRegistry.IsLoaded("Rafseazz.RSVCP"))
+            if (!new InstallationChecker().checkInstallation(helper))
             {
-                Log.Error("Ridgeside Village appears to be installed incorrectly. Delete it and reinstall it please. If you need help, visit our Discord server!");
                 return;
             }
 
@@ -38,14 +37,22 @@ namespace RidgesideVillage
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
+            
+            BgUtils.Initialize(this);
+
+            TortsBackground.Initialize(this);
+
+            BloomProjectile.Initialize(this);
+            MistProjectile.Initialize(this);
+            Mistblade.Initialize(this);
 
             Patcher = new Patcher(this);
             Patcher.PerformPatching();
 
             HotelMenu.Initialize(this);
 
-
             Minecarts.Initialize(this);
+
             SpiritRealm.Initialize(this);
 
             SpecialOrders.Initialize(this);
@@ -63,7 +70,11 @@ namespace RidgesideVillage
             WarpTotem.Initialize(this);
 
             PaulaClinic.Initialize(this);
+
             Offering.OfferingTileAction.Initialize(this);
+
+            NightlyEvent.Initialize(this);
+
             //not done (yet?)
             //new CliffBackground();
 
@@ -123,8 +134,6 @@ namespace RidgesideVillage
             RSVWorldMap.Setup(Helper);
             ExternalAPIs.Initialize(Helper);
 
-
-
             Config = Helper.ReadConfig<ModConfig>();
 
             if (!Helper.ModRegistry.IsLoaded("spacechase0.JsonAssets"))
@@ -138,9 +147,10 @@ namespace RidgesideVillage
 
             Helper.ConsoleCommands.Add("RSV_reset_pedestals", "", this.ResetPedestals);
             Helper.ConsoleCommands.Add("RSV_open_portal", "", this.OpenPortal);
+            // RSV_rivera_secret in Patches/WalletItem
 
             // Generic Mod Config Menu setup
-            //ConfigMenu.RegisterMenu();
+            ConfigMenu.RegisterMenu();
         }
 
         private void OpenPortal(string arg1, string[] arg2)

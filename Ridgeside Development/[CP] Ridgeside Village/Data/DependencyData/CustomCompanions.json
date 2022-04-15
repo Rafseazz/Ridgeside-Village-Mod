@@ -125,13 +125,6 @@
                   "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.WanderingChicken"
                }
             },
-            {
-               "Position": { "X": 57, "Y": 53 },
-               "Layer": "Back",
-               "SetProperties": {
-                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.Torts"
-               }
-            },
          ],
 		"When": {
 			"Weather": "Sun, Wind",
@@ -343,16 +336,6 @@
       "Update": "OnLocationChange, OnTimeChange"
    },
 
-   {
-      "LogName": "Torts random dialogue",
-      "Action": "EditData",
-      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Torts}}",
-      "Entries": {
-         "Companion": {
-            "InspectionDialogue": "{{i18n:Torts.{{Season}}{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}}}"
-         }
-      }
-   },
    {
       "LogName": "Howdy random dialogue",
       "Action": "EditData",
@@ -604,12 +587,14 @@
       "Target": "Characters/RSVSpirits/RingSpirit",
       "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4}}.png"
    },
+	 /* Disabled since it's not working anyway
    {
       "LogName": "RSV Ring Spirit Sprite Replace",
       "Action": "EditImage",
       "Target": "Characters/RSVSpirits/RingSpirit",
-      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4 |key={{LocationName}} }}.png",
-      "Update": "OnLocationChange"
+      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4 |key={{Time}} }}.png",
+      "Update": "OnTimeChange"
    },
+	 */
 ]
 }
