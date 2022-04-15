@@ -1,4 +1,5 @@
 {
+	"Format": "1.25.0",
 	"Changes": [
 		{
 				"LogName": "Pika Bartends",
@@ -67,7 +68,7 @@
 			"Action": "EditData",
 	    "Target": "Characters/Dialogue/Pika",
 			"Update": "OnLocationChange",
-			"When": { "Query: '{{atravita.GingerIslandMainlandAdjustments/Bartender}}' = 'Pika'": true },
+			//"When": { "Query: '{{atravita.GingerIslandMainlandAdjustments/Bartender}}' = 'Pika'": true },
 	    "Entries": {
 				"Resort_Bartend": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Bartend}}",
 				"Resort_Entering_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Entering_FunDads}}",
@@ -162,7 +163,7 @@
 			"Action": "EditData",
 	    "Target": "Characters/Dialogue/Keahi",
 			"Update": "OnLocationChange",
-			"When": { "Query: '{{atravita.GingerIslandMainlandAdjustments/Bartender}}' = 'Pika'": true },
+			//"When": { "Query: '{{atravita.GingerIslandMainlandAdjustments/Bartender}}' = 'Pika'": true },
 	    "Entries": {
 				"Resort_Bar_FunDads": "{{i18n:{{TargetWithoutPath}}.Dialogue.Resort_Bar_FunDads}}",
 			}
