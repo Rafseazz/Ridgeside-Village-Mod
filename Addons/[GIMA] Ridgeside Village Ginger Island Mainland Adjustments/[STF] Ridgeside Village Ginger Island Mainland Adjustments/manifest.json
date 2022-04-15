@@ -1,0 +1,49 @@
+﻿{
+    /*********
+    ** Mod Name
+    *********/
+    "Name": "Ridgeside Village Ginger Island Mainland Adjustments - Shop Tile Framework",
+
+    /*********
+    ** Mod Author
+    *********/
+    "Author": "Rafseazz",
+
+    /*********
+    ** Current Version
+    *********/
+    "Version": "2.1.0",
+
+    /*********
+    ** Content Pack Description
+    *********/
+    "Description": "Adds shops to Ridgeside Village Ginger Island Mainland Adjustments.",
+
+    /*********
+    ** Unique Manifest ID for Content Pack
+    *********/
+    "UniqueID": "Rafseazz.RSVGIMAExtra.STF",
+
+    /*********
+    ** Update Keys (Currently only on Nexus)
+    *********/
+    "UpdateKeys": [ "Nexus:-1" ],
+
+    /*********
+    ** Framework Manifest ID
+    *********/
+    "ContentPackFor":
+    {
+        "UniqueID": "Cherry.ShopTileFramework",
+        "MinimumVersion": "1.0.1"
+    },
+    {
+      "UniqueID": "Rafseazz.RSVJA",
+      "IsRequired": true
+    }
+
+    /*********
+    ** Minimum Version for SMAPI
+    *********/
+    "MinimumApiVersion": "2.0",
+}

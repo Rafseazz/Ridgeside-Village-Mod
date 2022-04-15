@@ -1014,16 +1014,6 @@
 		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/CustomCompanionsTourists.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
 	},
 
-	//Include GIMA Data
-	/*
-		Optional stuff for Pika's island shop when he visits.
-	*/
-	{
-		"Action": "Include",
-		"FromFile": "Data/DependencyData/GingerIslandMainlandAdjustments.json",
-		"When": { "HasMod |contains=atravita.GingerIslandMainlandAdjustments": true }
-	},
-
 	//Include Event Data
 	/*
 		Loads event fork dialogies, blank files, special characters, and event scripts for versions up to 1.2.8.
