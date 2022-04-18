@@ -77,8 +77,9 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasSeenEvent|contains=75160377, 75160187": true,
-						"HasSeenEvent|contains=75160188": true,
+					"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+          "HasSeenEvent|contains=75160377, 75160187": true,
+					"HasSeenEvent|contains=75160188": true,
         },
         "TextOperations": [
             {
