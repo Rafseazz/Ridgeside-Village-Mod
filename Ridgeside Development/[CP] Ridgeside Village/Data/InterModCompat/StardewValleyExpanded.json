@@ -5,7 +5,7 @@
 
 	/*********
 	** Stardew Valley Expanded
-	*********/	
+	*********/
 	//Kenneth SVE Schedule Change
 	{
 		"LogName": "Kenneth SVE Schedule",
@@ -26,8 +26,8 @@
 		"LogName": "Flor SVE sched",
 		"Action": "EditData",
 		"Target": "Characters/schedules/Flor",
-		"Entries": { 
-			"Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 90 100 1 flor_read2/1600 Custom_Ridgeside_LogCabinHotel2ndFloor 2 9 1/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 3 5 0 flor_sleep", 
+		"Entries": {
+			"Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 90 100 1 flor_read2/1600 Custom_Ridgeside_LogCabinHotel2ndFloor 2 9 1/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 3 5 0 flor_sleep",
 			"marriage_Tue": "610 Town 103 90 2/1100 ArchaeologyHouse 12 10 2 flor_read/1400 Town 90 100 1 flor_read2/1800 BusStop -1 23 3",
 			},
 		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
@@ -145,7 +145,7 @@
 			"Lenny": "32 69 0"
 		},
 		"When": { "Relationship:Shiro": "Engaged" },
-	},	
+	},
 
 //SVE Versions of Festivals
 
@@ -168,24 +168,24 @@
    "Target": "Data/Festivals/summer11",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent: |contains=6665292": false, "RSVNPCSAttendFestivals": true},
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 down/Kiwi 37 33 down/Lenny 34 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Keahi 13 8 down/Kenneth 22 6 down/Lenny 34 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
-	
+
    //MainEevent
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 right/Kiwi 37 33 down/Lenny 32 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Keahi 13 8 down/Kenneth 22 6 right/Lenny 32 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 35 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 
-	]	
+	]
 	},
 
 	{
@@ -193,24 +193,50 @@
    "Target": "Data/Festivals/summer11",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "HasSeenEvent: |contains=6665292": true, "RSVNPCSAttendFestivals": true},
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 down/Kiwi 37 33 down/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 25 18 right/Keahi 13 8 down/Kenneth 22 6 down/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
-	
+
    //MainEevent
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Jio 38 33 down/Keahi 13 8 down/Kenneth 22 6 right/Kiwi 37 33 down/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
+         "Value": "Aguar 10 37 left/Alissa 25 13 left/Bert 23 9 right/Corine 18 17 right/Ezekiel 52 18 left/Flor 30 18 right/Freddie 19 12 right/Ian 35 36 down/Jeric 26 19 up/Keahi 13 8 down/Kenneth 22 6 right/Lenny 30 4 down/Lola 20 12 left/Maddie 32 19 up/Olga 24 9 left/Philip 14 16 down/Pika 53 19 left/Richard 29 4 down/Shiro 11 20 left/Trinnie 13 10 up/Ysabelle 19 16 down/Yuuma 11 21 left",
          "Delimiter": "/"
 		},
 
-	]	
+	]
+	},
+
+	{
+			//Jio and Kiwi
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"When": {
+				"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+				"HasSeenEvent|contains=75160377, 75160187": true,
+				"HasSeenEvent|contains=75160188": true,
+			},
+			"TextOperations": [
+					{
+							"Operation": "Append",
+							"Target": ["Entries", "Set-Up_additionalCharacters"],
+							"Value": "Jio 38 33 down/Kiwi 37 33 down",
+							"Delimiter": "/"
+					},
+
+					{
+							"Operation": "Append",
+							"Target": ["Entries", "MainEvent_additionalCharacters"],
+							"Value": "Jio 38 33 down/Kiwi 37 33 down",
+							"Delimiter": "/"
+					},
+			]
 	},
 
 	//Ice Festival
@@ -219,25 +245,52 @@
    "Target": "Data/Festivals/winter8",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true},
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 93 36 down/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 53 51 down/Jio 36 5 down/Keahi 91 33 up/Kenneth 78 44 left/Kiwi 37 5 down/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 78 23 down/Pika 63 53 up/Richard 61 53 right/Shiro 90 26 down/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 88 26 down",
+         "Value": "Aguar 93 36 down/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 53 51 down/Keahi 91 33 up/Kenneth 78 44 left/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 78 23 down/Pika 63 53 up/Richard 61 53 right/Shiro 90 26 down/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 88 26 down",
          "Delimiter": "/"
 		},
-	
+
    //MainEevent
 		{
          "Operation": "Append",
          "Target": ["Entries", "Main-Event_additionalCharacters"],
-         "Value": "Aguar 93 36 down/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 31 left/Jeric 53 51 down/Jio 36 5 down/Keahi 91 33 up/Kenneth 78 44 left/Kiwi 37 5 down/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 78 23 down/Pika 63 53 up/Richard 61 53 right/Shiro 90 26 down/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 88 26 down",
+         "Value": "Aguar 93 36 down/Alissa 53 53 up/Bert 63 26 left/Corine 62 21 right/Ezekiel 65 22 left/Flor 58 35 right/Freddie 80 33 left/Ian 83 31 left/Jeric 53 51 down/Keahi 91 33 up/Kenneth 78 44 left/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 left/Olga 61 26 right/Philip 78 23 down/Pika 63 53 up/Richard 61 53 right/Shiro 90 26 down/Trinnie 89 34 left/Ysabelle 63 20 down/Yuuma 88 26 down",
          "Delimiter": "/"
 		},
 
-	]	
-	},	
+	]
+	},
+
+	{
+			//Jio and Kiwi
+			"LogName": "Jio and Kiwi at Ice Festival",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"When": {
+				"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+				"HasSeenEvent|contains=75160377, 75160187": true,
+				"HasSeenEvent|contains=75160188": true,
+			},
+			"TextOperations": [
+					{
+							"Operation": "Append",
+							"Target": ["Entries", "Set-Up_additionalCharacters"],
+							"Value": "Jio 36 5 down/Kiwi 37 5 down",
+							"Delimiter": "/"
+					},
+
+					{
+							"Operation": "Append",
+							"Target": ["Entries", "MainEvent_additionalCharacters"],
+							"Value": "Jio 36 5 down/Kiwi 37 5 down",
+							"Delimiter": "/"
+					},
+			]
+	},
 
 	//Spirit's Eve
 
@@ -256,7 +309,7 @@
    	"Delimiter": "/"
    },
 
-	]	
+	]
 	},
 
 {
@@ -274,7 +327,7 @@
    	"Delimiter": "/"
    },
 
-]	
+]
 },
 
 
@@ -289,10 +342,29 @@
    			{
    				"Operation": "Append",
    				"Target": ["Entries", "Set-Up_additionalCharacters"],
-   				"Value": "Aguar 45 63 up/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 20 27 down/Ian 54 75 down/Jeric 11 62 right/Jio 37 10 down/Keahi 36 78 up/Kenneth 22 49 up/Kiwi 38 10 down/Lenny 27 53 down/Lola 21 27 down/Maddie 24 29 up/Olga 27 60 right/Philip 24 65 up/Pika 25 23 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 34 77 right",
+   				"Value": "Aguar 45 63 up/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 20 27 down/Ian 54 75 down/Jeric 11 62 right/Keahi 36 78 up/Kenneth 22 49 up/Lenny 27 53 down/Lola 21 27 down/Maddie 24 29 up/Olga 27 60 right/Philip 24 65 up/Pika 25 23 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 34 77 right",
    				"Delimiter": "/"
    			},
-		]	
+		]
+	},
+
+	{
+			//Jio and Kiwi
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"When": {
+					"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true },
+					"HasSeenEvent|contains=75160377, 75160187": true,
+					"HasSeenEvent|contains=75160188": true,
+			},
+			"TextOperations": [
+					{
+							"Operation": "Append",
+							"Target": ["Entries", "Set-Up_additionalCharacters"],
+							"Value": "Jio 37 10 down/Kiwi 38 10 down",
+							"Delimiter": "/"
+					},
+			]
 	},
 
 //Egg Festival
@@ -319,7 +391,7 @@
    	"Delimiter": "/"
    },
 
-]	
+]
 },
 
 //Gathering Dialogue
@@ -365,7 +437,7 @@
    	"Delimiter": "/"
    },
 
-]	
+]
 },
 
 //Ember of Resolutions Dialogue
@@ -387,7 +459,7 @@
 		"Susan": "{{i18n:InterModDialogue.EmberNightDialogue.Susan}}",
 		"Gunther": "{{i18n:InterModDialogue.EmberNightDialogue.Gunther}}",
 	},
-},		
+},
 
 //Ember of Resolutions Locations
 {
@@ -411,7 +483,7 @@
    	"Delimiter": "/"
    },
 
-]	
+]
 },
 
 	{
