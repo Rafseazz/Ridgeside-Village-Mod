@@ -1959,6 +1959,89 @@
             ]
          },
 
+         //Pika Exotic Ingredients Old version (to prevent bugs)
+         "RSV.SpecialOrder.ExoticIngredients": {
+            "Name": "[RSV.SpecialOrder.ExoticIngredients_Name]",
+            "Requester": "Pika",
+            "Duration": "Month",
+            "Repeatable": "true",
+            "RequiredTags": "",
+            "OrderType": "QF:RSVNonexistent",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.ExoticIngredients_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": [
+              {
+                "Name": "Greeting",
+                "Values": [
+                  {
+                    "RequiredTags": "!RSVNonexistent",
+                    "Value": "[RSV.SpecialOrder.ExoticIngredients_Greeting0]"
+                  },
+                  {
+                    "RequiredTags": "RSVNonexistent",
+                    "Value": "[RSV.SpecialOrder.ExoticIngredients_Greeting1]"
+                  }
+                ]
+              }
+            ],
+            "Objectives": [
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective1_Text-spring]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_crimson_spiked_clam"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective2_Text-spring]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_cherry_pluot"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective4_Text-fall]",
+                  "RequiredCount": "20",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_lava_lily"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.ExoticIngredients_Objective3_Text-summer]",
+                  "RequiredCount": "10",
+                  "Data": {
+                     "DropBox": "RSVPikaHouse",
+                     "DropBoxGameLocation": "Custom_Ridgeside_PikaHouse",
+                     "DropBoxIndicatorLocation": "8.5 8.4",
+                     "AcceptedContextTags": "item_tropi_ugli_fruit"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Money",
+                  "Data": {
+                     "Amount": "12000"
+                  }
+               },
+            ]
+         },
+
 
 //--------------------------------------------------
 //Belinda's Special Orders
@@ -2165,6 +2248,130 @@
                   "Data": {
                      "MailReceived": "LinkedFishesLetter",
                      "NoLetter": "false",
+                  }
+               },
+            ]
+         },
+
+         //Old Linked Fishes quest (to prevent bugs)
+         "RSV.SpecialOrder.LinkedFishes": {
+            "Name": "[RSV.SpecialOrder.LinkedFishes_Name]",
+            "Requester": "Belinda",
+            "Duration": "Month",
+            "Repeatable": "true",
+            "RequiredTags": "",
+            "OrderType": "QF:RSVNonexistent",
+            "SpecialRule": "",
+            "Text": "[RSV.SpecialOrder.LinkedFishes_Text]",
+            "ItemToRemoveOnEnd": null,
+            "MailToRemoveOnEnd": null,
+            "RandomizedElements": null,
+            "Objectives": [
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective1_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_bladetail_sturgeon"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective2_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_caped_tree_frog"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective3_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_cardia_septal_jellyfish"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective4_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_crimson_spiked_clam"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective5_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_fairytale_lionfish"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective6_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_fixer_eel"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective7_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_golden_rose_fin"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective8_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_harvester_trout"
+                  }
+               },
+               {
+                  "Type": "Donate",
+                  "Text": "[RSV.SpecialOrder.LinkedFishes_Objective9_Text]",
+                  "RequiredCount": "1",
+                  "Data": {
+                     "DropBox": "RSVNinja",
+                     "DropBoxGameLocation": "Custom_Ridgeside_RSVNinjaHouse",
+                     "DropBoxIndicatorLocation": "13.5 4.4",
+                     "AcceptedContextTags": "item_lullaby_carp"
+                  }
+               },
+            ],
+            "Rewards": [
+               {
+                  "Type": "Money",
+                  "Data": {
+                     "Amount": "69000"
                   }
                },
             ]

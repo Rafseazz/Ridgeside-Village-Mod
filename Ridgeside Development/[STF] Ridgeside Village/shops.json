@@ -1009,13 +1009,6 @@
 		},
 		{
 			"ItemType": "Weapon",
-			"ItemNames": [ "Free Lance", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 100,
-			"When": [ "f Kiarra 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
 			"ItemNames": [ "Cutlasset", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 100,
@@ -1034,13 +1027,6 @@
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 100,
 			"When": [ "f Paula 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
-			"ItemNames": [ "Bronze Lance", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 100,
-			"When": [ "f Sean 2500" ],
 		},
 		{
 			"ItemType": "Weapon",
@@ -1086,70 +1072,84 @@
 
 	"ItemStocks": [
 		//Weapons
-		{
+		{ //Ysabelle
 			"ItemType": "Weapon",
 			"ItemNames": [ "Battle Dancer's Fan", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160145" ],
 		},
-		{
+		{ //Kenneth
 			"ItemType": "Weapon",
 			"ItemNames": [ "Battery-Powered Battle Hammer", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160161" ],
 		},
-		{
+    { //Sean
+			"ItemType": "Weapon",
+			"ItemNames": [ "Bronze Lance", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 50,
+			"When": [ "e 75160368" ],
+		},
+    { //Kiarra
+			"ItemType": "Weapon",
+			"ItemNames": [ "Free Lance", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 50,
+			"When": [ "e 75160365" ],
+		},
+		{ //Maddie
 			"ItemType": "Weapon",
 			"ItemNames": [ "Heartbreaker", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160139" ],
 		},
-		{
+		{ //Corine
 			"ItemType": "Weapon",
 			"ItemNames": [ "Icreon", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160127" ],
 		},
-		{
+		{ //Ian
 			"ItemType": "Weapon",
 			"ItemNames": [ "Laborforce", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160150" ],
 		},
-		{
+		{ //Flor
 			"ItemType": "Weapon",
 			"ItemNames": [ "Observer's Hatchet", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160133" ],
 		},
-		{
+		{ //Philip
 			"ItemType": "Weapon",
 			"ItemNames": [ "Sword of Idols", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160167" ],
 		},
-		{
+		{ //Jeric
 			"ItemType": "Weapon",
 			"ItemNames": [ "The Lucky Penny", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160155" ],
 		},
-		{
+		{ //Alissa
 			"ItemType": "Weapon",
 			"ItemNames": [ "The Singing Dagger", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160121" ],
 		},
-		{
+		{ //Shiro
 			"ItemType": "Weapon",
 			"ItemNames": [ "The Unbroken", ],
 			"StockItemCurrency": "Spiritual Essence",
@@ -1185,26 +1185,26 @@
 
 	"ItemStocks": [
 		//Weapons
-		{
+		{ //Kiwi
 			"ItemType": "Weapon",
 			"ItemNames": [ "Cute but Deadly Knife", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160180/f Kiwi 2500" ],
 		},
-		{
+		{ //Jio
 			"ItemType": "Weapon",
 			"ItemNames": [ "Occult Blade", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
-			"When": [ "e 75160081/f Jio 2500" ],
+			"When": [ "e 75160200/f Jio 2500" ],
 		},
-		{
+		{ //Daia
 			"ItemType": "Weapon",
 			"ItemNames": [ "Dusked Kunai", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
-			"When": [ "e 75160205/f Daia 2500" ],
+			"When": [ "e 75160208" ],
 		},
 		{
 			"ItemType": "Weapon",
@@ -1239,7 +1239,8 @@
 			"ItemNames": [ "Old Lucky Foxtail Charm", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 1,
-			"When": [ "e 75160333" ],
+      "Stock": 1,
+			"When": [ "e 75160333" ], //Lorenzo 1 heart event
 		},
 	],
 	},
