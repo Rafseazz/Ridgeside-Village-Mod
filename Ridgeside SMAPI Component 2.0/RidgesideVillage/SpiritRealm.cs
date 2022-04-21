@@ -21,7 +21,6 @@ namespace RidgesideVillage
         static Texture2D FogTexture;
         static Vector2 FogPosition;
 
-        const int HasUnsealedRae = 75160259;
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -29,15 +28,8 @@ namespace RidgesideVillage
             FogTexture = Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath("assets/SpiritRealmFog.png"));
 
             TileActionHandler.RegisterTileAction("RSVWarp", RSVWarp);
-            TileActionHandler.RegisterTileAction("RSVOpenDaiaBook", RSVOpenDaiaBook);
             TileActionHandler.RegisterTileAction("RSVCorruptedFire", CleanseCorruptedFire);
-            TileActionHandler.RegisterTileAction("MyLetter", MyLetter);
             Helper.Events.Player.Warped += OnWarped;
-        }
-
-        private static void MyLetter(string tileActionString, Vector2 position)
-        {
-            Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("RSV.MyLetter"));
         }
 
         private static void CleanseCorruptedFire(string arg1, Vector2 arg2)
@@ -159,151 +151,6 @@ namespace RidgesideVillage
                     Log.Error("Event not found");
                 }
                
-            }
-        }
-
-        private static void RSVOpenDaiaBook(string tileActionString, Vector2 position)
-        {
-            Game1.playSound("shadowpeep");
-            OpenBook();
-        }
-
-        private static void OpenBook()
-        {
-            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
-            if (!Game1.player.eventsSeen.Contains(HasUnsealedRae))
-            {
-                var responses = new List<Response>
-                {
-                    new Response("page1", Helper.Translation.Get("Daia.Page1")),
-                    new Response("page2", Helper.Translation.Get("Daia.Page2")),
-                    new Response("page3", Helper.Translation.Get("Daia.Page3")),
-                    new Response("page4", Helper.Translation.Get("Daia.Page4")),
-                    new Response("cancel", Helper.Translation.Get("Daia.BookClose")),
-                };
-                var responseActions = new List<Action>
-                {
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint1"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint2"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint3"));
-                    },
-                    delegate
-                    {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4\" 4f", Vector2.Zero);
-                    },
-                    delegate{}
-                };
-
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Daia.BookPages"), responses, responseActions);
-            }
-            else if (Game1.player.eventsSeen.Contains(HasUnsealedRae) && !Game1.player.eventsSeen.Contains(75160265))
-            {
-                var responses = new List<Response>
-                {
-                    new Response("page1", Helper.Translation.Get("Daia.Page1")),
-                    new Response("page2", Helper.Translation.Get("Daia.Page2")),
-                    new Response("page3", Helper.Translation.Get("Daia.Page3")),
-                    new Response("page4", Helper.Translation.Get("Daia.Page4")),
-                    new Response("page5", Helper.Translation.Get("Daia.Page5")),
-                    new Response("page6", Helper.Translation.Get("Daia.Page6")),
-                    new Response("page7", Helper.Translation.Get("Daia.Page7")),
-                    new Response("cancel", Helper.Translation.Get("Daia.BookClose")),
-                };
-                var responseActions = new List<Action>
-                {
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint1"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint2"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint3"));
-                    },
-                    delegate
-                    {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4\" 4f", Vector2.Zero);
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint4"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint5"));
-                    },
-                    delegate
-                    {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage7\" 4f", Vector2.Zero);
-                    },
-                    delegate{}
-                };
-
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Daia.BookPages"), responses, responseActions);
-            }
-            else if (Game1.player.eventsSeen.Contains(75160265))
-            {
-                var responses = new List<Response>
-                {
-                    new Response("page1", Helper.Translation.Get("Daia.Page1")),
-                    new Response("page2", Helper.Translation.Get("Daia.Page2")),
-                    new Response("page3", Helper.Translation.Get("Daia.Page3")),
-                    new Response("page4", Helper.Translation.Get("Daia.Page4")),
-                    new Response("page5", Helper.Translation.Get("Daia.Page5")),
-                    new Response("page6", Helper.Translation.Get("Daia.Page6")),
-                    new Response("page7", Helper.Translation.Get("Daia.Page7")),
-                    new Response("page8", Helper.Translation.Get("Daia.LegendFishes")),
-                    new Response("cancel", Helper.Translation.Get("Daia.BookClose")),
-                };
-                var responseActions = new List<Action>
-                {
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint1"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint2"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint3"));
-                    },
-                    delegate
-                    {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4\" 4f", Vector2.Zero);
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint4"));
-                    },
-                    delegate
-                    {
-                        Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Daia.RelicHint5"));
-                    },
-                    delegate
-                    {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage7\" 4f", Vector2.Zero);
-                    },
-                    delegate
-                    {
-                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage8\" 4f", Vector2.Zero);
-                    },
-                    delegate{}
-                };
-
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Daia.BookPages"), responses, responseActions);
             }
         }
 

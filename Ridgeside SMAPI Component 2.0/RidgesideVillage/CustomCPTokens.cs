@@ -12,6 +12,7 @@ namespace RidgesideVillage
         {
         private readonly IModHelper Helper;
         private readonly IManifest ModManifest;
+        public static int FoxbloomDay;
 
         private ModConfig Config {
             get => ModEntry.Config;
@@ -96,7 +97,8 @@ namespace RidgesideVillage
                 if (randomseed is not null)
                 {   //Seed the random with a seed that only changes every 28 days
                     Random random = new Random((int)Game1.uniqueIDForThisGame + ((randomseed.Value - 1) / 28));
-                    return new[] { (random.Next(1, 5) * 7).ToString() };
+                    FoxbloomDay = random.Next(1, 5) * 7;
+                    return new[] { FoxbloomDay.ToString() };
                 }
                 return null; //return null for an unready token.
             });

@@ -75,6 +75,8 @@ namespace RidgesideVillage
 
             NightlyEvent.Initialize(this);
 
+            NinjaBooks.Initialize(this);
+
             //not done (yet?)
             //new CliffBackground();
 
