@@ -19,7 +19,7 @@ namespace RidgesideVillage
         static IModHelper Helper;
         static IMonitor Monitor;
 
-        static bool firstOpen = false;
+        static bool firstShown = false;
         static bool secondOpen = false;
 
         const int HasUnsealedRae = 75160259;
@@ -32,8 +32,7 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("RSVOpenDaiaBook", RSVOpenDaiaBook);
             TileActionHandler.RegisterTileAction("MyLetter", MyLetter);
             TileActionHandler.RegisterTileAction("RSVFoxbloomHint", GetFoxbloomHint);
-            //Helper.Events.Display.MenuChanged += SecondToThirdLetter;
-            //Helper.Events.Display.MenuChanged += OnMenuChanged;
+            Helper.Events.Display.MenuChanged += OnMenuChanged;
         }
 
         private static void OnMenuChanged(object sender, MenuChangedEventArgs e)
@@ -53,15 +52,36 @@ namespace RidgesideVillage
             if ((pos.Y != 5) && !((pos.X == 1) || (pos.X == 2)))
                 return;
 
-            if (firstOpen)
+            if (firstShown)
             {
-                Log.Debug($"Initial dialogue box.");
-                LetterViewerMenu letter = new(Helper.Translation.Get("FoxbloomHint.Text"));
-                letter.whichBG = 1;
-                Game1.activeClickableMenu = letter;
-                firstOpen = false;
+                ShowFoxbloomLetter();
             }
             //LetterViewerMenu third_letter = new($"Solve for x:^^   x /= {CustomCPTokens.FoxbloomDay}");
+        }
+
+        private static void ShowFoxbloomLetter()
+        {
+            var responses = new List<Response>
+                {
+                    new Response("page1", "Page 1"),
+                    new Response("page2", "Page 2"),
+                    new Response("cancel", "Close book"),
+                };
+            var responseActions = new List<Action>
+                {
+                    delegate
+                    {
+                        LetterViewerMenu letter = new(Helper.Translation.Get("FoxbloomHint.Text"));
+                        letter.whichBG = 1;
+                        Game1.activeClickableMenu = letter;
+                    },
+                    delegate
+                    {
+                        ImageMenu.Open("ShowImage \"LooseSprites/RSVDaiaPage4\" 4f", Vector2.Zero);
+                    },
+                    delegate{}
+                };
+            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Daia.BookPages"), responses, responseActions);
         }
 
         private static void GetFoxbloomHint(string tileActionString, Vector2 position)
@@ -71,8 +91,16 @@ namespace RidgesideVillage
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("FoxbloomHint.Uncleansed"));
                 return;
             }
-            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("FoxbloomHint.Cleansed"));
-            Game1.activeClickableMenu.exitFunction = OnFirstExit;
+            if (!firstShown)
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("FoxbloomHint.Cleansed"));
+                firstShown = true;
+            }
+            else
+            {
+                ShowFoxbloomLetter();
+            }
+            //Game1.activeClickableMenu.exitFunction = OnFirstExit;
         }
 
         private static void OnFirstExit()
