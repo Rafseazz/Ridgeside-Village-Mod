@@ -12,21 +12,21 @@
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
 	 "When": {
-		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
+		 "HasSeenEvent|contains=75160283": false,
+		 "Query: {{Random: {{Range:1,10}} }} <= 5": true,
 	 },
    "Entries": {
-		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.{{season}}{{Random:{{Range:1,10}}}}}}"
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.pre-twist{{Random:{{Range:1,5}}}}}}"
 		},
 	},
 	{
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
 	 "When": {
-		 "HasSeenEvent|contains=75160286": false,
-		 "Query: {{Random: {{Range:1,10}} }} <= 5": true,
+		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
 	 },
    "Entries": {
-		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.pre-twist{{Random:{{Range:1,5}}}}}}"
+		 "Custom_Ridgeside_RidgesideVillage": "{{i18n:Torts.Dialogue.{{season}}{{Random:{{Range:1,10}}}}}}"
 		},
 	},
 	{
