@@ -27,6 +27,8 @@ namespace RidgesideVillage
         //count consecutive 10min intervals where player was close to statue
         private static int FoxStatueCounter;
 
+        const int UNSEALEVENT = 75160259;
+
         //mailflags
         const string FLAGMOOSE = "RSV.MooseStatue";
         const string FLAGFOXMASK = "RSV.FoxMask";
@@ -37,6 +39,7 @@ namespace RidgesideVillage
         const string FLAGCANDELABRUM = "RSV.Candelabrum";
         const string FLAGCOMB = "RSV.ElvenComb";
         const string FLAGOPAL = "RSV.OpalHalo";
+
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -100,7 +103,10 @@ namespace RidgesideVillage
         //setup tracker for fox statue if needed
         private static void OnWarped(object sender, WarpedEventArgs e)
         {
-            if(!OnFoxStatueMap && e.NewLocation.Name.Equals("Custom_Ridgeside_Ridge") && !Game1.player.mailReceived.Contains(FLAGFOXMASK)){
+            if (!Game1.player.eventsSeen.Contains(UNSEALEVENT))
+                return;
+
+            if (!OnFoxStatueMap && e.NewLocation.Name.Equals("Custom_Ridgeside_Ridge") && !Game1.player.mailReceived.Contains(FLAGFOXMASK)){
                 FoxStatueCounter = 0;
                 Helper.Events.GameLoop.TimeChanged += OnTimeChanged;
                 OnFoxStatueMap = true;
@@ -116,6 +122,9 @@ namespace RidgesideVillage
         //track player position for fox statue
         private static void OnTimeChanged(object sender, TimeChangedEventArgs e)
         {
+            if (!Game1.player.eventsSeen.Contains(UNSEALEVENT))
+                return;
+
             int distance = Math.Abs(Game1.player.getTileX() - 18) + Math.Abs(Game1.player.getTileY() - 10);
             if(distance < 3)
             {
@@ -143,6 +152,9 @@ namespace RidgesideVillage
 
         private static void GameLocation_GetFish_Postifx(GameLocation __instance, float millisecondsAfterNibble, int bait, int waterDepth, Farmer who, double baitPotency, Vector2 bobberTile, string locationName, ref StardewValley.Object __result)
         {
+            if (!Game1.player.eventsSeen.Contains(UNSEALEVENT))
+                return;
+
             if ((int)bobberTile.X == 60 && (int)bobberTile.Y == 55 && Game1.currentLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage") && !Game1.player.mailReceived.Contains(FLAGSAPPHIRE))
             {
                 __result = new StardewValley.Object(CachedSapphireID, 1);
@@ -151,6 +163,9 @@ namespace RidgesideVillage
 
         internal static void Axe_DoFunction_Postfix(ref Axe __instance, int x, int y, int power, Farmer who)
         {
+            if (!Game1.player.eventsSeen.Contains(UNSEALEVENT))
+                return;
+
             try
             {
                 int tileX = x / 64;
@@ -174,6 +189,9 @@ namespace RidgesideVillage
 
         internal static void Hoe_DoFunction_Postfix(ref Hoe __instance, int x, int y, int power, Farmer who)
         {
+            if (!Game1.player.eventsSeen.Contains(UNSEALEVENT))
+                return;
+
             try
             {
                 int tileX = x / 64;
@@ -203,6 +221,9 @@ namespace RidgesideVillage
 
         internal static void WateringCan_DoFunction_Postfix(ref WateringCan __instance, int x, int y, int power, Farmer who)
         {
+            if (!Game1.player.eventsSeen.Contains(UNSEALEVENT))
+                return;
+
             try
             {
                 int tileX = x / 64;
@@ -222,6 +243,9 @@ namespace RidgesideVillage
         //change result to sapphire if appropriate
         internal static void FishingRod_DoFunction_Postfix(ref WateringCan __instance, int x, int y, int power, Farmer who)
         {
+            if (!Game1.player.eventsSeen.Contains(UNSEALEVENT))
+                return;
+
             try
             {
                 if(who.UniqueMultiplayerID != Game1.player.UniqueMultiplayerID)
