@@ -63,7 +63,30 @@ namespace RidgesideVillage
 
         private static void OnSecondExit()
         {
-            LetterViewerMenu letter2 = new($"Solve for x:^^   x = {CustomCPTokens.FoxbloomDay}");
+            int year = Game1.year;
+            string difficulty = "easy";
+            switch(year)
+            {
+                case > 3:
+                    Random random = new();
+                    if (random.NextDouble() < 0.67)
+                        difficulty = "hard";
+                    else
+                        difficulty = "medium";
+                    break;
+                case 3:
+                    difficulty = "hard";
+                    break;
+                case 2:
+                    difficulty = "medium";
+                    break;
+                case 1:
+                    difficulty = "easy";
+                    break;
+            }
+
+            //LetterViewerMenu letter2 = new(Helper.Translation.Get($"FoxbloomHint.{difficulty}.{CustomCPTokens.FoxbloomDay}"));
+            LetterViewerMenu letter2 = new(Helper.Translation.Get($"FoxbloomHint.easy.14"));
             letter2.whichBG = 1;
             Game1.activeClickableMenu = letter2;
         }

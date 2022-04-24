@@ -468,36 +468,6 @@
       "Update": "OnDayStart"
    },
 
-   /*{ //Disabled CC Relic Spirit because of an unknown bug that's inconsistent and hard to reproduce.
-      "LogName": "Lover's Sorrow Relic Spirit Spawn",
-      "Action": "EditMap",
-      "Target": "Maps/Custom_Ridgeside_RidgeForest",
-      "MapTiles": [
-            {
-               "Position": { "X": 77, "Y": 70 },
-               "Layer": "Back",
-               "SetProperties": {
-                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.RelicSpirit"
-               }
-            },
-         ],
-      "When": {
-         "Day": "3, 6, 9, 12, 15, 18, 21, 24, 27"
-      },
-      "Update": "OnDayStart"
-   },
-   {
-      "LogName": "Lover's Sorrow Relic Spirit Dialogue",
-      "Action": "EditData",
-      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.RelicSpirit}}",
-      "Entries": {
-         "Companion": {
-            "InspectionDialogue": "{{i18n:RelicSpiritTalk}}[{{spacechase0.JsonAssets/ObjectId:Lover's Sorrow}}]"
-         }
-      },
-      "Update": "OnLocationChange, OnTimeChange, OnDayStart",
-   },*/
-
    //Howdy follow Kenneth
    {
       "Action": "EditData",
@@ -581,20 +551,238 @@
       ],
       "When": { "RandomNumber": "{{Range: 9,10}}" }
    },
+
+	 // Foxbloom foxes
 	 {
-      "LogName": "RSV Ring Spirit Sprite Load",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgeForest",
+      "MapTiles": [
+         {
+            "Position": { "X": 35, "Y": 98 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.SpiritFox"
+            }
+         },
+				 {
+            "Position": { "X": 86, "Y": 127 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.SpiritFox"
+            }
+         },
+				 {
+            "Position": { "X": 143, "Y": 97 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.SpiritFox"
+            }
+         },
+				 {
+            "Position": { "X": 110, "Y": 57 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.SpiritFox"
+            }
+         },
+				 {
+            "Position": { "X": 16, "Y": 74 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.SpiritFox"
+            }
+         },
+				 {
+            "Position": { "X": 57, "Y": 8 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.SpiritFox"
+            }
+         },
+				 {
+            "Position": { "X": 120, "Y": 43 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.SpiritFox"
+            }
+         },
+      ],
+			"When": {
+				//"HasItem": "Relic Fox Mask",
+				"Weather": "Sun, Wind",
+				"DayOfWeek": "Sunday",
+				"Day |contains={{Rafseazz.RidgesideVillage/FoxbloomDay}}": true
+			},
+   },
+
+	 // Mistbloom foxes
+	 {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgeForest",
+      "MapTiles": [
+         {
+            "Position": { "X": 35, "Y": 98 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.MistFox"
+            }
+         },
+				 {
+            "Position": { "X": 86, "Y": 127 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.MistFox"
+            }
+         },
+				 {
+            "Position": { "X": 143, "Y": 97 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.MistFox"
+            }
+         },
+				 {
+            "Position": { "X": 110, "Y": 57 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.MistFox"
+            }
+         },
+				 {
+            "Position": { "X": 16, "Y": 74 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.MistFox"
+            }
+         },
+				 {
+            "Position": { "X": 57, "Y": 8 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.MistFox"
+            }
+         },
+				 {
+            "Position": { "X": 120, "Y": 43 },
+            "Layer": "Back",
+            "SetProperties": {
+               "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.MistFox"
+            }
+         },
+      ],
+			"When": {
+				"Weather": "Rain, Storm",
+			},
+   },
+
+	 // Ring spirit stuff
+	 	// Load
+		{
+       "Action": "Load",
+       "Target": "Characters/RSVSpirits/RingSpirit0",
+       "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4}}.png"
+    },
+	 {
       "Action": "Load",
-      "Target": "Characters/RSVSpirits/RingSpirit",
-      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4}}.png"
+      "Target": "Characters/RSVSpirits/RingSpirit1",
+      "FromFile": "Assets/EventFiles/RSVSpirit1.png"
    },
-	 /* Disabled since it's not working anyway
+	 {
+      "Action": "Load",
+      "Target": "Characters/RSVSpirits/RingSpirit2",
+      "FromFile": "Assets/EventFiles/RSVSpirit2.png"
+   },
+	 {
+      "Action": "Load",
+      "Target": "Characters/RSVSpirits/RingSpirit3",
+      "FromFile": "Assets/EventFiles/RSVSpirit3.png"
+   },
+	 {
+      "Action": "Load",
+      "Target": "Characters/RSVSpirits/RingSpirit4",
+      "FromFile": "Assets/EventFiles/RSVSpirit4.png"
+   },
+	 	// Replace (have to repost whole file which kind of sucks but oh well)
    {
-      "LogName": "RSV Ring Spirit Sprite Replace",
-      "Action": "EditImage",
-      "Target": "Characters/RSVSpirits/RingSpirit",
-      "FromFile": "Assets/EventFiles/RSVSpirit{{Random:1, 2, 3, 4 |key={{Time}} }}.png",
-      "Update": "OnTimeChange"
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.RingSpirit}}",
+			//"TargetField": [ "Companion" ],
+			"Update": "OnLocationChange",
+			"Entries":
+			{
+				"Companion":
+				{
+				  "Name": "RingSpirit",
+				  "Type": "Flying",
+				  "TileSheetPath": "Characters\\RSVSpirits\\RingSpirit{{Random:1, 2, 3, 4 |key={{LocationName}} }}",
+				  "FrameSizeWidth": 16,
+				  "FrameSizeHeight": 32,
+				  "TravelSpeed": 1,
+
+				  "IdleBehavior": "Hover",
+				  "IdleArguments": [ -1 ],
+				  "MaxDistanceBeforeTeleport": -1,
+				  "MaxIdleDistance": 2,
+
+				  "EnableBreathing": false,
+				  "EnableFarmerCollision": false,
+				  "EnableShadow": true,
+				  "Shadow": {
+				    "OffsetX": 0,
+				    "OffsetY": 8,
+				    "Scale": 1,
+				    "Alpha": 255
+				  },
+
+				  "DownAnimation": {
+				    "StartingFrame": 0,
+				    "NumberOfFrames": 4,
+				    "Duration": 500,
+
+				    "IdleAnimation": {
+				      "StartingFrame": 0,
+				      "NumberOfFrames": 4,
+				      "Duration": 800
+				    }
+				  },
+
+				  "RightAnimation": {
+				    "StartingFrame": 12,
+				    "NumberOfFrames": 4,
+				    "Duration": 500,
+
+				    "IdleAnimation": {
+				      "StartingFrame": 12,
+				      "NumberOfFrames": 4,
+				      "Duration": 800
+				    }
+				  },
+
+				  "UpAnimation": {
+				    "StartingFrame": 8,
+				    "NumberOfFrames": 4,
+				    "Duration": 500,
+
+				    "IdleAnimation": {
+				      "StartingFrame": 8,
+				      "NumberOfFrames": 4,
+				      "Duration": 800
+				    }
+				  },
+
+				  "LeftAnimation": {
+				    "StartingFrame": 4,
+				    "NumberOfFrames": 4,
+				    "Duration": 500,
+
+				    "IdleAnimation": {
+				      "StartingFrame": 4,
+				      "NumberOfFrames": 4,
+				      "Duration": 800
+				    }
+				  },
+				}
+			},
    },
-	 */
 ]
 }
