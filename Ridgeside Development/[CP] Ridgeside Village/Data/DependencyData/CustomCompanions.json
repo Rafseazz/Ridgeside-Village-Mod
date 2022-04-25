@@ -549,8 +549,62 @@
             }
          }
       ],
-      "When": { "RandomNumber": "{{Range: 9,10}}" }
+      "When": { "RandomNumber": "9, 10" }
    },
+
+ // KIWI COMPANION ON FARM
+    {
+       "LogName": "Farm Kiwi Map Spawn (Jio Spouse)",
+       "Action": "EditMap",
+       "Target": "Maps/Farm",
+       "MapTiles": [
+          {
+             "Position": { "X": 72, "Y": 15 },
+             "Layer": "Back",
+             "SetProperties": {
+                "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.FarmKiwi",
+             }
+          }
+       ],
+       "When":
+			 {
+				 "Query: '{{RandomNumber}}' >= 5 OR '{{DayOfWeek}}' = 'Saturday'": true,
+				 "Relationship:Jio": "Married",
+ 		  	 "Hearts:Kiwi": "4,5,6,7,8,9,10",
+ 		     "Weather |contains= sun, wind": true,
+			 }
+    },
+    {
+       "LogName": "Farm Kiwi Map Spawn (Daia Spouse or Kiwi Friendship)",
+       "Action": "EditMap",
+       "Target": "Maps/Farm",
+       "MapTiles": [
+          {
+             "Position": { "X": 72, "Y": 15 },
+             "Layer": "Back",
+             "SetProperties": {
+                "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.FarmKiwi",
+             }
+          }
+       ],
+       "When":
+			 {
+				 "RandomNumber": "{{Range: 1,3}}",
+				 "Relationship:Jio |contains= Married": false,
+				 "Query: ('{{Relationship:Daia}}' = 'Married' AND '{{Hearts:Kiwi}}' >= 6) OR '{{Hearts:Kiwi}}' >= 9": true,
+ 		     "Weather |contains= sun, wind": true,
+			 }
+    },
+    {
+       "LogName": "Farm Kiwi Random Dialogue",
+       "Action": "EditData",
+       "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.FarmKiwi}}",
+       "Entries": {
+          "Companion": {
+             "InspectionDialogue": "{{i18n:FarmKiwi.{{Random: {{Range: 1,10}} }} }}",
+          }
+       }
+    },
 
 	 // Foxbloom foxes
 	 {
