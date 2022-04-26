@@ -56,39 +56,33 @@ namespace RidgesideVillage
         private static void OnFirstExit()
         {
             LetterViewerMenu letter = new(Helper.Translation.Get("FoxbloomHint.Text"));
-            letter.whichBG = 1;
             Game1.activeClickableMenu = letter;
             Game1.activeClickableMenu.exitFunction = OnSecondExit;
         }
 
         private static void OnSecondExit()
         {
+            //Quest available starting Year 2
             int year = Game1.year;
             string difficulty = "easy";
             switch(year)
             {
-                case > 3:
+                case > 4:
                     Random random = new();
                     if (random.NextDouble() < 0.67)
                         difficulty = "hard";
                     else
                         difficulty = "medium";
                     break;
-                case 3:
+                case 4:
                     difficulty = "hard";
                     break;
-                case 2:
+                case 3:
                     difficulty = "medium";
                     break;
-                case 1:
-                    difficulty = "easy";
-                    break;
             }
-
-            //LetterViewerMenu letter2 = new(Helper.Translation.Get($"FoxbloomHint.{difficulty}.{CustomCPTokens.FoxbloomDay}"));
-            LetterViewerMenu letter2 = new(Helper.Translation.Get($"FoxbloomHint.easy.14"));
-            letter2.whichBG = 1;
-            Game1.activeClickableMenu = letter2;
+            LetterViewerMenu letter = new(Helper.Translation.Get($"FoxbloomHint.{difficulty}.{CustomCPTokens.FoxbloomDay}"));
+            Game1.activeClickableMenu = letter;
         }
 
         private static void MyLetter(string tileActionString, Vector2 position)

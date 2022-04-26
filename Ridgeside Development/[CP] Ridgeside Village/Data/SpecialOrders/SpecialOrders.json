@@ -19,6 +19,12 @@
       "Target": "LooseSprites/RSVDaiaPage4, LooseSprites/RSVDaiaPage7, LooseSprites/RSVDaiaPage8, LooseSprites/RSVTownSO",
       "FromFile": "Assets/{{Target}}.png"
    },
+   //Foxbloom Hint letter backgrounds
+   {
+      "Action": "Load",
+      "Target": "LooseSprites/FoxbloomHints.easy",
+      "FromFile": "Assets/{{Target}}.png"
+   },
 
    //Fix Minecart Special Order
    {
@@ -2383,7 +2389,7 @@
             "Requester": "Belinda",
             "Duration": "Month",
             "Repeatable": "true",
-            "RequiredTags": "",
+            "RequiredTags": "event_63", //ie must be year 2 or later
             "OrderType": "QF:RSVNinjaSO",
             "SpecialRule": "",
             "Text": "[RSV.SpecialOrder.MythFlower_Text]",
