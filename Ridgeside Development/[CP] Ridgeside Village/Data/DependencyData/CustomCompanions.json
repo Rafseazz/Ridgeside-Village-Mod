@@ -610,6 +610,7 @@
 	 {
       "Action": "EditMap",
       "Target": "Maps/Custom_Ridgeside_RidgeForest",
+			"Update": "OnLocationChange",
       "MapTiles": [
          {
             "Position": { "X": 35, "Y": 98 },
@@ -662,10 +663,7 @@
          },
       ],
 			"When": {
-				//"HasItem": "Relic Fox Mask",
-				"Weather": "Sun, Wind",
-				"DayOfWeek": "Sunday",
-				"Day |contains={{Rafseazz.RidgesideVillage/FoxbloomDay}}": true
+				"Query: '{{Rafseazz.RidgesideVillage/FoxbloomSpawned}}' = 'true'": true
 			},
    },
 

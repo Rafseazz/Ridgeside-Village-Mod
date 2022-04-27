@@ -77,6 +77,8 @@ namespace RidgesideVillage
 
             NinjaBooks.Initialize(this);
 
+            Foxbloom.Initialize(this);
+
             //not done (yet?)
             //new CliffBackground();
 

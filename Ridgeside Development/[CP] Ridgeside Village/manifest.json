@@ -47,72 +47,72 @@
 	*********/
 	"Dependencies":
 	[
-        /*********
-        ** Ridgeside Components
-        *********/
-            /*********
-            ** Custom Companions
-            *********/
-            {
-                "UniqueID": "Rafseazz.RSVCC",
-                "IsRequired": true,
-            },
+		/*********
+		** Ridgeside Components
+		*********/
+			/*********
+			** Custom Companions
+			*********/
+        {
+          "UniqueID": "Rafseazz.RSVCC",
+          "IsRequired": true,
+        },
 
-            /*********
-            ** Custom Music
-            *********/
-            {
-                "UniqueID": "Rafseazz.RSVSAAT",
-                "IsRequired": true,
-            },
+      /*********
+      ** Farm Type Manager
+      *********/
+        {
+          "UniqueID": "Rafseazz.RSVFTM",
+          "IsRequired": true,
+        },
 
-            /*********
-            ** Farm Type Manager
-            *********/
-            {
-                "UniqueID": "Rafseazz.RSVFTM",
-                "IsRequired": true,
-            },
+      /*********
+      ** JSON Assets
+      *********/
+        {
+          "UniqueID": "Rafseazz.RSVJA",
+          "IsRequired": true,
+        },
 
-            /*********
-            ** JSON Assets
-            *********/
-            {
-                "UniqueID": "Rafseazz.RSVJA",
-                "IsRequired": true,
-            },
+      /*********
+      ** Mail Framework Mod
+      *********/
+        {
+          "UniqueID": "Rafseazz.RSVMFM",
+          "IsRequired": true,
+        },
 
-            /*********
-            ** Mail Framework Mod
-            *********/
-            {
-                "UniqueID": "Rafseazz.RSVMFM",
-                "IsRequired": true,
-            },
+      /*********
+      ** Quest Framework
+      *********/
+        {
+          "UniqueID": "Rafseazz.RSVQF",
+          "IsRequired": true,
+        },
 
-            /*********
-            ** Quest Framework
-            *********/
-            {
-                "UniqueID": "Rafseazz.RSVQF",
-                "IsRequired": true,
-            },
-
-            /*********
-            ** Shop Tile Framework
-            *********/
-            {
-                "UniqueID": "Rafseazz.RSVSTF",
-                "IsRequired": true,
-            },
+      /*********
+      ** Shop Tile Framework
+      *********/
+        {
+          "UniqueID": "Rafseazz.RSVSTF",
+          "IsRequired": true,
+        },
 
 			/*********
 			** SMAPI Component
 			*********/
 	  		{
-				"UniqueID": "Rafseazz.RidgesideVillage",
-				"IsRequired": true,
+					"UniqueID": "Rafseazz.RidgesideVillage",
+					"IsRequired": true,
 	  		},
+
+			/*********
+			** Stardew Audio API and Toolkit
+			*********/
+				{
+					"UniqueID": "Rafseazz.RSVSAAT",
+					"IsRequired": true,
+				},
 
 		/*********
 		** Required Mods
@@ -121,25 +121,17 @@
 			** Anti Social NPCs
 			*********/
 	  		{
-				"UniqueID": "SuperAardvark.AntiSocial",
-				"IsRequired": true,
+					"UniqueID": "SuperAardvark.AntiSocial",
+					"IsRequired": true,
 	  		},
 
 			/*********
 			** Custom Companions (CC)
 			*********/
 	  		{
-      		 	"UniqueID": "PeacefulEnd.CustomCompanions",
-      		 	"IsRequired": true,
-      		},
-
-			/*********
-			** Custom Music (CM)
-			*********/
-	  		{
-      		 	"UniqueID": "ZeroMeters.SAAT.Mod",
-      		 	"IsRequired": true,
-	  		},
+      		"UniqueID": "PeacefulEnd.CustomCompanions",
+      		"IsRequired": true,
+      	},
 
 			/*********
 			** Custom NPC Exclusions
@@ -147,79 +139,79 @@
 			{
 				"UniqueID": "Esca.CustomNPCExclusions",
 				"IsRequired": true,
-	  		},
+	  	},
 
 			/*********
 			** Custom NPC Fixes
 			*********/
 	  		{
-				"UniqueID": "spacechase0.CustomNPCFixes",
-				"IsRequired": true,
+					"UniqueID": "spacechase0.CustomNPCFixes",
+					"IsRequired": true,
 	  		},
 
 			/*********
 			** Expanded Preconditions Utility
 			*********/
 	  		{
-				"UniqueID": "Cherry.ExpandedPreconditionsUtility",
-				"IsRequired": true,
-	  		},
-
-			/*********
-			** Farm Type Manager (FTM)
-			*********/
-	  		{
-				"UniqueID": "Esca.FarmTypeManager",
-				"IsRequired": true,
-	  		},
-
-			/*********
-			** JSON Assets (JA)
-			*********/
-	  		{
-      		 	"UniqueID": "spacechase0.JsonAssets",
-      		 	"IsRequired": true,
-	  		},
-
-			/*********
-			** Mail Framework Mod (MFM)
-			*********/
-	  		{
-      		 	"UniqueID": "DIGUS.MailFrameworkMod",
-      		 	"IsRequired": true,
-	  		},
-
-			/*********
-			** Quest Framework (QF)
-			*********/
-	  		{
-      		 	"UniqueID": "PurrplingCat.QuestFramework",
-      		 	"IsRequired": true,
-	  		},
-
-			/*********
-			** TMX Loader (TMXL)
-			*********/
-	  		{
-      		 	"UniqueID": "Platonymous.TMXLoader",
-      		 	"IsRequired": false,
+					"UniqueID": "Cherry.ExpandedPreconditionsUtility",
+					"IsRequired": true,
 	  		},
 
 			/*********
 			** ExtraMapLayers
 			*********/
 	  		{
-      		 	"UniqueID": "aedenthorn.ExtraMapLayers",
-      		 	"IsRequired": true,
+      		"UniqueID": "aedenthorn.ExtraMapLayers",
+      		"IsRequired": true,
+	  		},
+
+			/*********
+			** Farm Type Manager (FTM)
+			*********/
+	  		{
+					"UniqueID": "Esca.FarmTypeManager",
+					"IsRequired": true,
+	  		},
+
+			/*********
+			** JSON Assets (JA)
+			*********/
+	  		{
+      		 "UniqueID": "spacechase0.JsonAssets",
+      		 "IsRequired": true,
+	  		},
+
+			/*********
+			** Mail Framework Mod (MFM)
+			*********/
+	  		{
+					"UniqueID": "DIGUS.MailFrameworkMod",
+      		"IsRequired": true,
+	  		},
+
+			/*********
+			** Quest Framework (QF)
+			*********/
+	  		{
+      		"UniqueID": "PurrplingCat.QuestFramework",
+      		"IsRequired": true,
 	  		},
 
 			/*********
 			** SpaceCore
 			*********/
 	  		{
-      		 	"UniqueID": "spacechase0.SpaceCore",
-      		 	"IsRequired": true,
-				"MinimumVersion": "1.8.0"
+					"UniqueID": "spacechase0.SpaceCore",
+      		"IsRequired": true,
+					"MinimumVersion": "1.8.0"
+	  		},
+
+			/*********
+			** Stardew Audio API and Toolkit (SAAT)
+			*********/
+	  		{
+      		"UniqueID": "ZeroMeters.SAAT.Mod",
+      		"IsRequired": true,
 	  		},
 
 		/*********
@@ -229,41 +221,9 @@
 			** Custom Gift Dialogue
 			*********/
 	  		{
-      		 	"UniqueID": "PurrplingCat.CustomGiftDialogue",
-      		 	"IsRequired": false,
+					"UniqueID": "PurrplingCat.CustomGiftDialogue",
+      		"IsRequired": false,
 	  		},
-
-			/*********
-			** More New Fish
-			*********/
-	  		{
-				"UniqueID": "MoreFish",
-				"IsRequired": false,
-	  		},
-
-			/*********
-			** Stardew Valley Expanded
-			*********/
-	  		{
-				"UniqueID": "FlashShifter.StardewValleyExpandedCP",
-				"IsRequired": false,
-	  		},
-
-			/*********
-			** SVE - Immersive Farm Remastered 2
-			*********/
-	  		{
-				"UniqueID": "flashshifter.immersivefarm2remastered",
-				"IsRequired": false,
-	  		},
-
-			/*********
-			** SVE - Grandpa's Farm
-			*********/
-      		{
-      		 	"UniqueID": "flashshifter.GrandpasFarm",
-      		 	"IsRequired": false,
-      		},
 
 			/*********
 			** East Scarp
@@ -274,6 +234,23 @@
       		},
 
 			/*********
+			** Event Limiter
+			*********/
+					{
+						"UniqueID": "TheMightyAmondee.EventLimiter",
+						"IsRequired": false,
+						"MinimumVersion": "1.2.0"
+					},
+
+			/*********
+			** Juliet and Jessie
+			*********/
+      		{
+						"UniqueID": "LemurKat.JulietHouse.NPC",
+						"IsRequired": false,
+	  			},
+
+			/*********
 			** Karmylla's Immersive Maps
 			*********/
       		{
@@ -282,12 +259,44 @@
       		},
 
 			/*********
+			** More New Fish
+			*********/
+				{
+					"UniqueID": "MoreFish",
+					"IsRequired": false,
+				},
+
+			/*********
 			** NPC Map Locations
 			*********/
       		{
       		 	"UniqueID": "Bouhm.NPCMapLocations",
       		 	"IsRequired": false,
       		},
+
+			/*********
+			** Stardew Valley Expanded
+			*********/
+				{
+					"UniqueID": "FlashShifter.StardewValleyExpandedCP",
+					"IsRequired": false,
+				},
+
+			/*********
+			** SVE - Immersive Farm Remastered
+			*********/
+				{
+					"UniqueID": "flashshifter.immersivefarm2remastered",
+					"IsRequired": false,
+				},
+
+			/*********
+			** SVE - Grandpa's Farm
+			*********/
+					{
+						"UniqueID": "flashshifter.GrandpasFarm",
+						"IsRequired": false,
+					},
 
 			/*********
 			** Town School
@@ -317,16 +326,9 @@
 			** Warp Network
 			*********/
       		{
-				"UniqueID": "tlitookilakin.warpnetwork",
-				"IsRequired": false,
-	  		},
+						"UniqueID": "tlitookilakin.warpnetwork",
+						"IsRequired": false,
+	  			},
 
-			/*********
-			** Juliet and Jessie
-			*********/
-      		{
-				"UniqueID": "LemurKat.JulietHouse.NPC",
-				"IsRequired": false,
-	  		},
    ]
 }

@@ -87,7 +87,6 @@ namespace RidgesideVillage
                 int replaceByFishID = -1;
                 switch (nameToUse)
                 {
-                    // Custom locations are added to the game without their prefixes
                     case "Custom_Ridgeside_RidgesideVillage":
                         int fishID = GetFishID("Sockeye Salmon");
                         if (who.FishingLevel >= MIN_FISHING && !CheckCaughtBefore(who, fishID) && new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y)
@@ -110,6 +109,17 @@ namespace RidgesideVillage
                             && (Game1.currentSeason.Equals("winter") && Game1.timeOfDay >= 1200))
                         {
                             replaceByFishID = fishID;
+                        }
+                        break;
+                    case "Custom_Ridgeside_RidgePond":
+                        var linked_fish = new List<string> { "Bladetail Sturgeon", "Caped Tree Frog", "Cardia Septal Jellyfish", "Crimson Spiked Clam",
+                            "Fairytale Lionfish", "Fixer Eel", "Golden Rose Fin", "Harvester Trout", "Lullaby Carp", "Pebble Back Crab" };
+                        Random random = new();
+                        replaceByFishID = GetFishID(linked_fish.ElementAt(random.Next(0, 11)));
+                        if (replaceByFishID != -1)
+                        {
+                            __result = new StardewValley.Object(replaceByFishID, 1);
+                            return;
                         }
                         break;
                     default:

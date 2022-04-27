@@ -102,6 +102,76 @@ namespace RidgesideVillage
                 }
                 return null; //return null for an unready token.
             });
+
+            cp.RegisterToken(this.ModManifest, "FoxbloomSpawned", new FoxbloomSpawned());
+        }
+
+        internal class FoxbloomSpawned
+        {
+            /*********
+        ** Fields
+        *********/
+            /// <summary>Whether or not the Foxbloom has been spawned.</summary>
+            static public string spawned = "false";
+
+
+            /*********
+            ** Public methods
+            *********/
+            /****
+            ** Metadata
+            ****/
+            /// <summary>Get whether the token allows input arguments (e.g. an NPC name for a relationship token).</summary>
+            public bool AllowsInput()
+            {
+                return false;
+            }
+
+            /// <summary>Whether the token may return multiple values for the given input.</summary>
+            /// <param name="input">The input arguments, if applicable.</param>
+            public bool CanHaveMultipleValues(string input = null)
+            {
+                return false;
+            }
+
+            /****
+            ** State
+            ****/
+            /// <summary>Update the values when the context changes.</summary>
+            /// <returns>Returns whether the value changed, which may trigger patch updates.</returns>
+            public bool UpdateContext()
+            {
+                // Not Foxbloom day
+                if (Game1.dayOfMonth != FoxbloomDay)
+                    return false;
+
+                // If Foxbloom already spawned today
+                if (spawned == "true")
+                    return false;
+
+                if (Game1.getLocationFromName("Custom_Ridgeside_RidgeForest").modData["RSV_foxbloomSpawned"] == "true")
+                {
+                    // Foxbloom has spawned! Need to update
+                    spawned = "true";
+                    return true;
+                }
+
+                // Foxbloom has not spawned yet today
+                return false;
+            }
+
+            /// <summary>Get whether the token is available for use.</summary>
+            public bool IsReady()
+            {
+                return Context.IsWorldReady;
+            }
+
+            /// <summary>Get the current values.</summary>
+            /// <param name="input">The input arguments, if applicable.</param>
+            public IEnumerable<string> GetValues(string input)
+            {
+                return new[] { spawned };
+            }
         }
     }
 }

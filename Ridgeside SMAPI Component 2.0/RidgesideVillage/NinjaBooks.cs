@@ -65,13 +65,15 @@ namespace RidgesideVillage
             //Quest available starting Year 2
             int year = Game1.year;
             string difficulty = "easy";
+            /*
             switch(year)
             {
                 case > 4:
                     Random random = new();
-                    if (random.NextDouble() < 0.67)
+                    double chance = random.NextDouble();
+                    if (chance < 0.67)
                         difficulty = "hard";
-                    else
+                    else if (chance < 0.95)
                         difficulty = "medium";
                     break;
                 case 4:
@@ -81,6 +83,7 @@ namespace RidgesideVillage
                     difficulty = "medium";
                     break;
             }
+            */
             LetterViewerMenu letter = new(Helper.Translation.Get($"FoxbloomHint.{difficulty}.{CustomCPTokens.FoxbloomDay}"));
             Game1.activeClickableMenu = letter;
         }

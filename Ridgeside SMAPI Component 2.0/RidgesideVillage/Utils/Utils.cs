@@ -1,4 +1,5 @@
 ﻿using StardewValley;
+using StardewValley.Locations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace RidgesideVillage
         internal static void Info(string msg) => ModEntry.ModMonitor.Log(msg, StardewModdingAPI.LogLevel.Info);
         internal static void Debug(string msg) => ModEntry.ModMonitor.Log(msg, StardewModdingAPI.LogLevel.Debug);
         internal static void Trace(string msg) => ModEntry.ModMonitor.Log(msg, StardewModdingAPI.LogLevel.Trace);
+        internal static void Verbose(string msg) => ModEntry.ModMonitor.VerboseLog(msg);
 
     }
 
@@ -111,7 +113,45 @@ namespace RidgesideVillage
                 }
             }
         }
-    }
-    
+
+        /// <summary>Generates a object from an index and places it on the specified map and tile.</summary>
+        /// <param name="index">The parent sheet index (a.k.a. object ID) of the object type to spawn.</param>
+        /// <param name="location">The GameLocation where the forage should be spawned.</param>
+        /// <param name="tile">The x/y coordinates of the tile where the forage should be spawned.</param>
+        /// <param name="destroyOvernight">Whether the object should be destroyed overnight.</param>
+        public static bool SpawnForage(int index, GameLocation location, Vector2 tile, bool destroyOvernight)
+        {
+            StardewValley.Object forageObj;
+            forageObj = new StardewValley.Object(tile, index, null, false, true, false, true); //generate the object (use the constructor that allows pickup)
+            if (destroyOvernight)
+                forageObj.destroyOvernight = true;
+
+            Log.Verbose($"Spawning forage object for RSV. Type: {forageObj.DisplayName}. Location: {tile.X}, {tile.Y} ({location.Name}).");
+            return location.dropObject(forageObj, tile * 64f, Game1.viewport, true, null); //attempt to place the object and return success/failure
+        }
+
+        public static int GetWeather(GameLocation location)
+        {
+            // special case: day events override weather in the valley
+            if (!(location is IslandLocation))
+            {
+                if (Utility.isFestivalDay(Game1.dayOfMonth, Game1.currentSeason) || (SaveGame.loaded?.weddingToday ?? Game1.weddingToday))
+                    return Game1.weather_sunny;
+            }
+
+            // get from weather data
+            LocationWeather model = Game1.netWorldState.Value.GetWeatherForLocation(location.GetLocationContext());
+            if (model != null)
+            {
+                if (model.isSnowing.Value)
+                    return Game1.weather_snow;
+                if (model.isRaining.Value)
+                    return model.isLightning.Value ? Game1.weather_lightning : Game1.weather_rain;
+                if (model.isDebrisWeather.Value)
+                    return Game1.weather_debris;
+            }
+            return Game1.weather_sunny;
+        }
+    }  
 
 }

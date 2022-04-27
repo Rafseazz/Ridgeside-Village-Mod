@@ -172,27 +172,54 @@
 
 //4 sale signs in Heaps
 //18 falls in Ridge forest
-//15 bridges in Ridge forest
+//15 bridges in Ridge forest (3 vert, 12 horiz)
 //15 falls in Ridge Falls
 //5 buildings with multiple floors
-//5 single-occupant homes
+//6 villagers who live alone
 //8 picnic tables at Pika's
-//14 tree varieties in orchard
 //5 windmills
-	"FoxbloomHint.medium.7": "Solve for x...^^",
-	"FoxbloomHint.medium.14": "",
-	"FoxbloomHint.medium.21": "",
-	"FoxbloomHint.medium.28": "",
+//8 parents with children in village (50/50 gender ratio)
+//12 guest rooms in hotel
+//16 steps in lobby stairs
+//7 plastic chairs in village
+//6 scarecrows in village (1 rare)
+//9 total levels in Ridge Forest
+//9 islands in Spirit Realm
+
+	"FoxbloomHint.medium.7": "      Islands in the Spirit Realm^      ^Trees in the Mystic Falls of Love     ^Waterfalls in the Mystic Falls of Love [letterbg LooseSprites/FoxbloomHints.medium 0]",
+	"FoxbloomHint.medium.14": "     Villagers who live in a house by themselves^      Parents with children living in the village [letterbg LooseSprites/FoxbloomHints.medium 1]",
+	"FoxbloomHint.medium.21": "     Plants in Maddie's house^      Seats in the Ridgeside Clinic building^^^^^^^^(Note: \"Seats\" as in places you can sit.) [letterbg LooseSprites/FoxbloomHints.medium 1]",
+	"FoxbloomHint.medium.28": "     Stone bridges in the village^     Windmills in the village^     Multi-floored buildings in the village [letterbg LooseSprites/FoxbloomHints.medium 2]",
+
+//14 tree varieties in orchard
+//4 types, 12 trees bear fruit in spring (36 fruit)
+//5 types, 16 trees bear fruit in summer (48 fruit)
+//5 types, 22 trees bear fruit in fall (66 fruit)
+//50 fruit per day on average
+
+//8 signs in total in Heaps
+//4 white signs
+//4 blue signs
+//5 SALE signs
+//3 white SALE signs, 2 blue
+//2 HEAPS signs, both blue
+//1 7.50 sign, white
+
+//18 falls in Ridge forest
+//15 bridges in Ridge forest (3 vert, 12 horiz)
+//9 distinct levels (7 walkable)
+//7 crystals
+//3 gravestones
 
 //14 is median summer birth date
 //16 is fall
 //3 female villagers with winter birthdays
 //2 Wed birthdays, 3 Mon
 //10 with a birthday in the first week of the month (6 odd, 4 even)
-	//Villager birthdays
-	"FoxbloomHint.hard.7": "",
-	"FoxbloomHint.hard.14": "",
-	"FoxbloomHint.hard.21": "",
-	"FoxbloomHint.hard.28": "",
+
+	"FoxbloomHint.hard.7": "Difference between the total number of fruit Alicia's orchard bears each day in the fall versus on average (excluding winter) divided by the difference between the average and in the summer",
+	"FoxbloomHint.hard.14": "Total number of signs in the Heaps Convenience Store building minus the difference between the number of white and blue SALE signs multipled by the total number of HEAPS signs",
+	"FoxbloomHint.hard.21": "Total number of falls in Ridge forest times the total number of horizontal bridges divided by the total number of distinct levels minus the number of vertical bridges",
+	"FoxbloomHint.hard.28": "Median fall birthdate divided by two times the number of female villagers with winter birthdays plus the number of villagers with an even birthday in the first week of the month",
 
 }
