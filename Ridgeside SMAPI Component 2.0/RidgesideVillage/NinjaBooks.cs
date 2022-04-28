@@ -65,16 +65,19 @@ namespace RidgesideVillage
             //Quest available starting Year 2
             int year = Game1.year;
             string difficulty = "easy";
-            /*
             switch(year)
             {
                 case > 4:
-                    Random random = new();
-                    double chance = random.NextDouble();
-                    if (chance < 0.67)
-                        difficulty = "hard";
-                    else if (chance < 0.95)
-                        difficulty = "medium";
+                    int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                    if (randomseed is not null)
+                    {   //Seed the random with a seed that changes every 28 days (like Foxbloom)
+                        Random random = new Random((int)Game1.uniqueIDForThisGame + ((randomseed.Value - 1) / 28));
+                        double chance = random.NextDouble();
+                        if (chance < 0.67)
+                            difficulty = "hard";
+                        else if (chance < 0.90)
+                            difficulty = "medium";
+                    }
                     break;
                 case 4:
                     difficulty = "hard";
@@ -83,7 +86,6 @@ namespace RidgesideVillage
                     difficulty = "medium";
                     break;
             }
-            */
             LetterViewerMenu letter = new(Helper.Translation.Get($"FoxbloomHint.{difficulty}.{CustomCPTokens.FoxbloomDay}"));
             Game1.activeClickableMenu = letter;
         }
