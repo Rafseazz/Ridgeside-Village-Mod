@@ -25,11 +25,7 @@ namespace RidgesideVillage
             }
 
         public void RegisterTokens() {
-            var cp = Helper.ModRegistry.GetApi<IContentPatcherApi>("Pathoschild.ContentPatcher");
-            if (cp is null) {
-                Log.Alert("Content Patcher is not installed- RSV requires CP to run. Please install CP and restart your game.");
-                return;   
-            }
+            var cp = ExternalAPIs.CP;
 
             cp.RegisterToken(this.ModManifest, "EnableRidgesideMusic", () => new string[] { Config.enableRidgesideMusic.ToString() });
 
@@ -111,8 +107,8 @@ namespace RidgesideVillage
             /*********
         ** Fields
         *********/
-            /// <summary>Whether or not the Foxbloom has been spawned.</summary>
-            static public string spawned = "false";
+            /// <summary>Whether or not the Foxbloom has spawned today.</summary>
+            static public bool spawned_today = false;
 
 
             /*********
@@ -141,37 +137,43 @@ namespace RidgesideVillage
             /// <returns>Returns whether the value changed, which may trigger patch updates.</returns>
             public bool UpdateContext()
             {
-                // Not Foxbloom day
-                if (Game1.dayOfMonth != FoxbloomDay)
+                GameLocation here = Game1.currentLocation;
+                if (here == null)
                     return false;
-
-                // If Foxbloom already spawned today
-                if (spawned == "true")
+                if (!FoxbloomCanSpawn(here, spawned_today))
                     return false;
-
-                if (Game1.getLocationFromName("Custom_Ridgeside_RidgeForest").modData["RSV_foxbloomSpawned"] == "true")
-                {
-                    // Foxbloom has spawned! Need to update
-                    spawned = "true";
-                    return true;
-                }
-
-                // Foxbloom has not spawned yet today
-                return false;
+                Log.Debug("RSV: Foxbloom spawned - Updating context for CP token");
+                spawned_today = true;
+                return true;
             }
 
             /// <summary>Get whether the token is available for use.</summary>
             public bool IsReady()
             {
-                return Context.IsWorldReady;
+                if (Game1.currentLocation == null)
+                    return false;
+                return true;
             }
 
             /// <summary>Get the current values.</summary>
             /// <param name="input">The input arguments, if applicable.</param>
             public IEnumerable<string> GetValues(string input)
             {
-                return new[] { spawned };
+                return new[] { spawned_today.ToString() };
             }
+
         }
+
+        public static bool FoxbloomCanSpawn(GameLocation here, bool spawned_today)
+        {
+            if (here.Name != "Custom_Ridgeside_RidgeForest" || spawned_today)
+                return false;
+            if (Game1.dayOfMonth != FoxbloomDay || UtilFunctions.GetWeather(here) != Game1.weather_sunny)
+                return false;
+            if (!Game1.player.hasItemInInventoryNamed("Relic Fox Mask"))
+                return false;
+            return true;
+        }
+
     }
 }

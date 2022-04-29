@@ -10,15 +10,15 @@ using StardewModdingAPI.Events;
 using Microsoft.Xna.Framework;
 using StardewValley.Menus;
 using StardewModdingAPI.Utilities;
+using SpaceCore.Events;
 
 namespace RidgesideVillage
 {
     internal static class Foxbloom
     {
-        const string FOXBLOOM = "Foxbloom";
-        const string FOXMASK = "Relic Fox Mask";
-        static List<Vector2> spawn_spots = new();
+        static List<Vector2> spawn_spots;
         static bool spawned_today = false;
+        static bool cc_reloaded = false;
 
         static IModHelper Helper;
         static IMonitor Monitor;
@@ -28,12 +28,12 @@ namespace RidgesideVillage
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
 
-            var list = new List<Vector2> { new Vector2(84, 126), new Vector2(37, 96), new Vector2(18, 76),
+            spawn_spots = new List<Vector2> { new Vector2(84, 126), new Vector2(37, 96), new Vector2(18, 76),
                 new Vector2(146, 99), new Vector2(108, 58), new Vector2(118, 44), new Vector2(58, 11) };
-            spawn_spots = list;
 
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.Player.Warped += OnWarped;
+            Helper.Events.Player.Warped += OnWarped2;
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
@@ -43,21 +43,16 @@ namespace RidgesideVillage
 
         private static void OnWarped(object sender, WarpedEventArgs e)
         {
-            if ((e.NewLocation.Name != "Custom_Ridgeside_RidgeForest") || spawned_today)
-                return;
-            if ((Game1.dayOfMonth != CustomCPTokens.FoxbloomDay) || (UtilFunctions.GetWeather(e.NewLocation) != Game1.weather_sunny))
-                return;
-            if (!Game1.player.hasItemInInventoryNamed(FOXMASK))
-                return;
-            if (e.NewLocation.modData["RSV_foxbloomSpawned"] == "true")
+            if ((!CustomCPTokens.FoxbloomCanSpawn(e.NewLocation, spawned_today)) || e.NewLocation.modData["RSV_foxbloomSpawned"] == "true")
                 return;
 
             Random random = new();
             Vector2 spawn_spot = spawn_spots.ElementAt(random.Next(0, 7));
-            int FOXBLOOMID = ExternalAPIs.JA.GetObjectId(FOXBLOOM);
+            int FOXBLOOMID = ExternalAPIs.JA.GetObjectId("Foxbloom");
             try
             {
                 UtilFunctions.SpawnForage(FOXBLOOMID, e.NewLocation, spawn_spot, true);
+                Log.Debug("RSV: Foxbloom spawned as forage.");
                 spawned_today = true;
                 e.NewLocation.modData["RSV_foxbloomSpawned"] = "true";
             }
@@ -67,6 +62,24 @@ namespace RidgesideVillage
             }
         }
 
+        [EventPriority(EventPriority.Low)]
+        private static void OnWarped2(object sender, WarpedEventArgs e)
+        {
+            if (e.NewLocation.Name != "Custom_Ridgeside_RidgeForest")
+                return;
+
+            string foxbloomSpawned = e.NewLocation.modData["RSV_foxbloomSpawned"];
+            if ((foxbloomSpawned == "false") || cc_reloaded)
+                return;
+            if ((foxbloomSpawned == "true") && !cc_reloaded)
+            {
+                Log.Info("RSV: Reloading CCs.");
+                ExternalAPIs.CC.ReloadContentPack("Rafseazz.RSVCC");
+                cc_reloaded = true;
+                return;
+            }
+        }
+        
     }
 
   

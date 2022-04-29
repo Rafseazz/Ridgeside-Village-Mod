@@ -1394,10 +1394,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "q 751600642/r 0.75"
-          ],
+          "CPConditions": {
+            "HasDialogueAnswer: anyPlayer|contains=751600642": true,
+            "Query: {{Random: {{Range:1,10}} }} <= 8": true,
+          },
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 14
@@ -1496,10 +1497,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "q 751600641/r 0.75"
-          ],
+          "CPConditions": {
+            "HasDialogueAnswer: anyPlayer|contains=751600641": true,
+            "Query: {{Random: {{Range:1,10}} }} <= 8": true,
+          },
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 14
