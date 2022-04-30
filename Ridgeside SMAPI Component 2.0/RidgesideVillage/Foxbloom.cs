@@ -33,7 +33,7 @@ namespace RidgesideVillage
 
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.Player.Warped += OnWarped;
-            Helper.Events.Player.Warped += OnWarped2;
+            //Helper.Events.Player.Warped += OnWarped2;
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
@@ -62,6 +62,7 @@ namespace RidgesideVillage
             }
         }
 
+        /*
         [EventPriority(EventPriority.Low)]
         private static void OnWarped2(object sender, WarpedEventArgs e)
         {
@@ -79,6 +80,7 @@ namespace RidgesideVillage
                 return;
             }
         }
+        */
         
     }
 

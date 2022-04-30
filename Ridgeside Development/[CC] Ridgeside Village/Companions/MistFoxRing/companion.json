@@ -5,7 +5,7 @@
   "TravelSpeed": 2, // Speed at which the companion follows the player
   "SpawnDirection": 2, // Optional parameter, determines which direction the companion will face when spawned (0 for up, 1 for right, 2 for down, 3 for right) | Default 2
   "SpawnOffsetX": 0, // X offset (from player) of where to spawn | Note: Negative values will spawn to left of player, positive will spawn to right of player
-  "SpawnOffsetY": 64, // Y offset (from player) of where to spawn | Note: Negative values will spawn above player head, positive will spawn below player head
+  "SpawnOffsetY": -64, // Y offset (from player) of where to spawn | Note: Negative values will spawn above player head, positive will spawn below player head
   "MaxHaltTime": 2000,
   "MaxIdleDistance": 2, // Optional parameter, determines how far away a companion can be from a player / spawn point before idle behavior stops | NOTE: -1 will make it always idle if player isn't moving
   "MaxDistanceBeforeTeleport": -1, // Optional parameter, determines how far away a companion can be from a player / spawn point before teleporting back | NOTE: -1 will make it never teleport if it gets too far
