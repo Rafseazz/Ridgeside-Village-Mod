@@ -553,6 +553,7 @@
    },
 
  // KIWI COMPANION ON FARM
+ 		/*
     {
        "LogName": "Farm Kiwi Map Spawn (Jio Spouse)",
        "Action": "EditMap",
@@ -589,6 +590,7 @@
        ],
        "When":
 			 {
+				 "HasSeenEvent": 75160265,
 				 "RandomNumber": "{{Range: 1,3}}",
 				 "Relationship:Jio |contains= Married": false,
 				 "Query: ('{{Relationship:Daia}}' = 'Married' AND '{{Hearts:Kiwi}}' >= 6) OR '{{Hearts:Kiwi}}' >= 9": true,
@@ -635,6 +637,7 @@
           }
        }
     },
+		*/
 
 	 // Foxbloom foxes
 	 {
