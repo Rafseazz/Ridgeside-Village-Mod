@@ -100,7 +100,7 @@ namespace RidgesideVillage
             {
                 if (RSVemojis == null)
                 {
-                    RSVemojis = Helper.Content.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis"), ContentSource.GameContent);
+                    RSVemojis = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis"));
                     if(RSVemojis== null)
                     {
                         Log.Error($"Loading error: Couldn't load {PathUtilities.NormalizeAssetName("LooseSprites\\RSVemojis")}");
