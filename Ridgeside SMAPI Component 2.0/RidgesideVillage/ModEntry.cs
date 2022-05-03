@@ -93,7 +93,7 @@ namespace RidgesideVillage
         private void forgetRepeatableEvents()
         {
             string path = PathUtilities.NormalizePath("assets/RepeatableEvents.json");
-            var data = Helper.ModContent.Load<Dictionary<string, List<int>>>(path);
+            var data = Helper.Content.Load<Dictionary<string, List<int>>>(path);
             if(data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
             {
                 foreach(var entry in repeatableEvents)

@@ -25,7 +25,7 @@ namespace RidgesideVillage
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
-            FogTexture = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/SpiritRealmFog.png"));
+            FogTexture = Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath("assets/SpiritRealmFog.png"));
 
             TileActionHandler.RegisterTileAction("RSVWarp", RSVWarp);
             TileActionHandler.RegisterTileAction("RSVCorruptedFire", CleanseCorruptedFire);

@@ -32,8 +32,8 @@ namespace RidgesideVillage
         internal CliffBackground() {
             Helper.Events.Player.Warped += OnWarped;
 
-            texture = Helper.ModContent.Load<Texture2D>("assets\\mountains.png");
-            skyTexture = Helper.ModContent.Load<Texture2D>("assets\\sky.png");
+            texture = Helper.Content.Load<Texture2D>("assets\\mountains.png");
+            skyTexture = Helper.Content.Load<Texture2D>("assets\\sky.png");
             textureCenter = new Point(texture.Width / 2, texture.Height / 2);
 
         }

@@ -47,7 +47,7 @@ namespace RidgesideVillage
             {
                 return;
             }
-            if ((e.Button != SButton.MouseRight) || (MeleeWeapon.defenseCooldown > 0))
+            if ((!e.Button.IsActionButton()) || (MeleeWeapon.defenseCooldown > 0))
             {
                 return;
             }

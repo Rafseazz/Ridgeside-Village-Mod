@@ -30,7 +30,7 @@ namespace RidgesideVillage
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
-            sprite = Helper.ModContent.Load<Texture2D>("assets/Poof.png");
+            sprite = Helper.Content.Load<Texture2D>("assets/Poof.png");
         }
         public MistProjectile()
         { }

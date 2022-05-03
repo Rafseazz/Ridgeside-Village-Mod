@@ -51,7 +51,7 @@ namespace RidgesideVillage
         : base(new Color(0, 0, 12), false)
         {
             Log.Trace($"RSV: Creating Torts bg");
-            torts = Helper.ModContent.Load<Texture2D>("assets/Torts.png");
+            torts = Helper.Content.Load<Texture2D>("assets/Torts.png");
             torts_position = new Vector2(10f, 6f) * Game1.tileSize;
             /*
             torts = new TemporaryAnimatedSprite(Helper.Content.GetActualAssetKey("assets/Torts.png"), new Rectangle(0, 0, 144, 112), new Vector2(11f, 5f) * Game1.tileSize, false, 0, Color.White)

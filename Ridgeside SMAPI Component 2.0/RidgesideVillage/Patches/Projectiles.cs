@@ -30,7 +30,7 @@ namespace RidgesideVillage
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
-            sprite = Helper.ModContent.Load<Texture2D>("assets/Poof.png");
+            sprite = Helper.Content.Load<Texture2D>("assets/Poof.png");
 
             harmony.Patch(
                 original: AccessTools.Method(typeof(DinoMonster), nameof(DinoMonster.behaviorAtGameTick)),

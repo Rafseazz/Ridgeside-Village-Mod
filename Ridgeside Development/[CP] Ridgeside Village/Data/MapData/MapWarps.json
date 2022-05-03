@@ -544,7 +544,9 @@
 		{
    			"Action": "EditMap",
    			"Target": "Maps/Custom_Ridgeside_RidgePond",
-			"AddWarps": [
+				// Game gets made if I try to make the value null, soooo
+				"MapProperties": { "NPCWarp": "-100 -100 Town 14 54" },
+				"AddWarps": [
 				"18 1 Custom_Ridgeside_RidgeFalls 21 58",
 				"19 1 Custom_Ridgeside_RidgeFalls 21 58",
    			],
@@ -555,10 +557,19 @@
 		{
    			"Action": "EditMap",
    			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
-			"AddWarps": [
-				"21 59 Custom_Ridgeside_RidgePond 18 3",
-				"22 59 Custom_Ridgeside_RidgePond 19 3",
-   			],
+				"MapProperties": { "NPCWarp": "-100 -100 Town 14 54" },
+				"AddWarps": [
+					"21 59 Custom_Ridgeside_RidgePond 18 3",
+					"22 59 Custom_Ridgeside_RidgePond 19 3",
+	   			],
+   			"When": { "HasFlag": "LinkedFishesLetter" },
+				"Update": "OnLocationChange"
+		},
+
+		{
+   			"Action": "EditMap",
+   			"Target": "Maps/Custom_Ridgeside_Ridge",
+				"MapProperties": { "NPCWarp": "-100 -100 Town 14 54" },
    			"When": { "HasFlag": "LinkedFishesLetter" },
 				"Update": "OnLocationChange"
 		},

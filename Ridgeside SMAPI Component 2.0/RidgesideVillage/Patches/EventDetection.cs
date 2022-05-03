@@ -82,7 +82,7 @@ namespace RidgesideVillage
 
         private static void MapPage_Constructor_Postfix(MapPage __instance)
         {
-            RSVIcon = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites/RSVIcon"));
+            RSVIcon = Helper.Content.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites/RSVIcon"), ContentSource.GameContent);
             __instance.points.Add(RSVButton);
             ClickableComponent DesertArea = __instance.points.Where(x => x.myID == 1001).ElementAtOrDefault(0);
             if(DesertArea != null)

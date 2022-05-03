@@ -54,7 +54,7 @@ namespace RidgesideVillage
         {
             if (gameMenu is GameMenu menu)
             {
-                Texture2D image = Helper.GameContent.Load<Texture2D>(MapPath);
+                Texture2D image = Helper.Content.Load<Texture2D>(MapPath, ContentSource.GameContent);
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width), (int)(image.Height));
 
                 var mapMenu = new RSVWorldMap((int)topLeft.X, (int)topLeft.Y, image);
