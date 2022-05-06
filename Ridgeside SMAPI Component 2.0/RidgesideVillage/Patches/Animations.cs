@@ -12,7 +12,6 @@ using StardewModdingAPI.Events;
     
 namespace RidgesideVillage
 {
-    //Corrects the location name in the "X has begun in Y" message
     internal static class Animations
     {
         private static IMonitor Monitor { get; set; }

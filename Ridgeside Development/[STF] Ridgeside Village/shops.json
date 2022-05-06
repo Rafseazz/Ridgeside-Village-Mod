@@ -330,37 +330,6 @@
 			"Stock": 6,
 			"When": [ "!z winter/y 2" ]
 		},
-		//Grapes of Ferngill - All year
-		{
-			"ItemType": "Object",
-			"ItemNames": [
-				"Dried Crackle Berry Grapes",
-				"Crackle Berry Grape Sparkling Wine",
-				"Crackle Berry Grape Vinegar",
-				"Crackle Berry Grape Wine",
-				],
-			"Stock": 6,
-		},
-		//Grapes of Ferngill - Summer
-		{
-			"ItemType": "Object",
-			"ItemNames": [
-				"Crackle Berry Grape Grappa",
-				],
-			"Stock": 6,
-			"When": [ "!z summer" ]
-		},
-		//Grapes of Ferngill - Winter
-		{
-			"ItemType": "Object",
-			"ItemNames": [
-				"Crackle Berry Grape",
-				"Crackle Berry Grape Fortified Wine",
-				"Crackle Berry Grape Sweet Wine",
-				],
-			"Stock": 6,
-			"When": [ "!z winter" ]
-		},
 		//PPJA More Trees - Spring Y1
 		{
 			"ItemType": "Object",
@@ -1813,11 +1782,6 @@
 	"ItemStocks": [
 		{
 			"ItemType": "Object",
-			"ItemNames": [ "Tree Fertilizer", ],
-			"StockPrice": 150,
-		},
-		{
-			"ItemType": "Object",
 			"ItemNames": [
 				"Cherry Pluot Sapling",
 				"Highland Jostaberry Sapling",
@@ -1828,6 +1792,12 @@
 				],
 		},
 		//Year Two
+    {
+			"ItemType": "Object",
+			"ItemNames": [ "Tree Fertilizer", ],
+			"StockPrice": 150,
+      "When": [ "y 2" ]
+		},
 		{
 			"ItemType": "Object",
 			"ItemNames": [
@@ -2057,7 +2027,66 @@
 			],
 			"StockPrice": 60,
 			"When": [ "f Lorenzo 2000" ]
-		}
+		},
+    //Grapes of Ferngill - Year-round
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Deep Envy Grape Wine",
+				"Gallant Grove Grape Wine",
+				"Golden Aura Grape Wine",
+				"Passion Rouge Grape Wine",
+				"Sunset Blush Grape Wine",
+				"Rosy Riot Grape Wine",
+				],
+			"Stock": 3,
+			"MaxNumItemsSoldInItemStock": 2
+		},
+    //Grapes of Ferngill - Summer
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Deep Envy Sparkling Wine",
+				"Gallant Grove Sparkling Wine",
+				"Golden Aura Sparkling Wine",
+				"Passion Rouge Sparkling Wine",
+				"Sunset Blush Sparkling Wine",
+				"Rosy Riot Sparkling Wine",
+				],
+			"Stock": 3,
+			"MaxNumItemsSoldInItemStock": 2,
+			"When": [ "!z summer" ],
+		},
+    //Grapes of Ferngill - Fall
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Deep Envy Fortified Wine",
+				"Gallant Grove Fortified Wine",
+				"Golden Aura Fortified Wine",
+				"Passion Rouge Fortified Wine",
+				"Sunset Blush Fortified Wine",
+				"Rosy Riot Fortified Wine",
+				],
+			"Stock": 3,
+			"MaxNumItemsSoldInItemStock": 2,
+			"When": [ "!z fall" ],
+		},
+    //Grapes of Ferngill - Winter
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Deep Envy Sweet Wine",
+				"Gallant Grove Sweet Wine",
+				"Golden Aura Sweet Wine",
+				"Passion Rouge Sweet Wine",
+				"Sunset Blush Sweet Wine",
+				"Rosy Riot Sweet Wine",
+				],
+			"Stock": 3,
+			"MaxNumItemsSoldInItemStock": 2,
+			"When": [ "!z winter" ],
+		},
 	],
 	},
 

@@ -12,7 +12,7 @@
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
 	 "When": {
-		 "HasSeenEvent|contains=75160283": false,
+		 "Hearts:Torts": "{{Range:1,5}}"
 		 "Query: {{Random: {{Range:1,10}} }} <= 5": true,
 	 },
    "Entries": {
@@ -33,7 +33,7 @@
    "Action": "EditData",
    "Target": "Characters/Dialogue/Torts",
 	 "When": {
-		 "HasSeenEvent|contains=75160286": true,
+		 "Hearts:Torts": "{{Range:6,10}}",
 		 "Query: {{Random: {{Range:1,10}} }} <= 5": true
 	 },
    "Entries": {
