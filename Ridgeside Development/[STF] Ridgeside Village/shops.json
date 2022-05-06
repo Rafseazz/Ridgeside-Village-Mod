@@ -852,27 +852,6 @@
 		//Weapons
 		{
 			"ItemType": "Weapon",
-			"ItemNames": [ "Bubble Club", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 50,
-			"When": [ "e 75160064/f Aguar 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
-			"ItemNames": [ "Bladebane", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 50,
-			"When": [ "e 75160077/f Freddie 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
-			"ItemNames": [ "Daggerkin", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 50,
-			"When": [ "e 75160093/f Lola 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
 			"ItemNames": [ "Father's Sorrow", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
@@ -904,7 +883,10 @@
 			"ItemNames": [ "The Green Gambler", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
-			"When": [ "f Bert 2500" ],
+			"When": [
+        "e 75160068/f Bert 2500",
+        "e 75160069/f Bert 2500"
+      ],
 		},
 		{
 			"ItemType": "Weapon",
@@ -990,6 +972,20 @@
 			"StockCurrencyStack": 100,
 			"When": [ "f Louie 2500" ],
 		},
+    {
+			"ItemType": "Weapon",
+			"ItemNames": [ "Safeguard's Edge", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 100,
+			"When": [ "f Naomi 2500" ],
+		},
+		{
+			"ItemType": "Weapon",
+			"ItemNames": [ "The Madame", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 100,
+			"When": [ "f Maive 2500" ],
+		},
 		{
 			"ItemType": "Weapon",
 			"ItemNames": [ "Military Saber", ],
@@ -1041,19 +1037,19 @@
 
 	"ItemStocks": [
 		//Weapons
+    { //Kenneth
+			"ItemType": "Weapon",
+			"ItemNames": [ "Battery-Powered Battle Hammer", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 50,
+			"When": [ "e 75160161" ],
+		},
 		{ //Ysabelle
 			"ItemType": "Weapon",
 			"ItemNames": [ "Battle Dancer's Fan", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160145" ],
-		},
-		{ //Kenneth
-			"ItemType": "Weapon",
-			"ItemNames": [ "Battery-Powered Battle Hammer", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 50,
-			"When": [ "e 75160161" ],
 		},
     { //Sean
 			"ItemType": "Weapon",
@@ -1154,26 +1150,40 @@
 
 	"ItemStocks": [
 		//Weapons
-		{ //Kiwi
+		{
 			"ItemType": "Weapon",
 			"ItemNames": [ "Cute but Deadly Knife", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160180/f Kiwi 2500" ],
 		},
-		{ //Jio
+    {
 			"ItemType": "Weapon",
-			"ItemNames": [ "Occult Blade", ],
+			"ItemNames": [ "Bubble Club", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
-			"When": [ "e 75160200/f Jio 2500" ],
+			"When": [ "e 75160064/f Aguar 2500" ],
 		},
-		{ //Daia
+		{
+			"ItemType": "Weapon",
+			"ItemNames": [ "Bladebane", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 50,
+			"When": [ "e 75160077/f Freddie 2500" ],
+		},
+		{
+			"ItemType": "Weapon",
+			"ItemNames": [ "Daggerkin", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 50,
+			"When": [ "e 75160093/f Lola 2500" ],
+		},
+		{
 			"ItemType": "Weapon",
 			"ItemNames": [ "Dusked Kunai", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
-			"When": [ "e 75160208" ],
+			"When": [ "e 75160208/f Daia 2500" ],
 		},
 		{
 			"ItemType": "Weapon",
@@ -1182,26 +1192,19 @@
 			"StockCurrencyStack": 100,
 			"When": [ "f Kimpoi 2500" ],
 		},
+    {
+			"ItemType": "Weapon",
+			"ItemNames": [ "Occult Blade", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 50,
+			"When": [ "e 75160200/f Jio 2500" ],
+		},
 		{
 			"ItemType": "Weapon",
 			"ItemNames": [ "Tide Bringer", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 100,
 			"When": [ "f Malaya 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
-			"ItemNames": [ "Safeguard's Edge", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 100,
-			"When": [ "f Naomi 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
-			"ItemNames": [ "The Madame", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 100,
-			"When": [ "f Maive 2500" ],
 		},
 		{
 			"ItemType": "Object",
