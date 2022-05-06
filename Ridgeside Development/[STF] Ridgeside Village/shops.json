@@ -569,7 +569,7 @@
 	{
 	"ShopName": "RSVPikaShop",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7 ],
+	"CategoriesToSellHere": [ -81,-75,-4,-5,-6,-7,-79,-26,-27 ],
 	"PortraitPath": "assets/PikaShop.png",
 	"Quote": "Welcome to Pika's!",
 	"ClosedMessage": "Sorry, we're closed!",
@@ -681,7 +681,6 @@
 	{
 	"ShopName": "RSVPikaRecipes",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7 ],
 	"PortraitPath": "assets/PikaShop.png",
 	"Quote": "Welcome to Pika's!",
 	"ClosedMessage": "Sorry, we're closed!",
@@ -781,7 +780,7 @@
 	{
 	"ShopName": "RSVLolaShop",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7,-98 ],
+	"CategoriesToSellHere": [ -28,-97,-98 ],
 	"PortraitPath": "assets/LolaShop.png",
 	"Quote": "Weapons available today.",
 	"MaxNumItemsSoldInStore": 2,
@@ -830,7 +829,6 @@
 	{
 	"ShopName": "RSVMysticFalls1",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -98 ],
 	"Quote": "Mystic Falls of Companions: 'Those who bond with their neighbors and share their joy and sorrow are blessed by Yoba.'",
 	"LocalizedQuote": {
     	//remove the "//" from your language
@@ -1017,7 +1015,6 @@
 	{
 	"ShopName": "RSVMysticFalls2",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -98 ],
 	"Quote": "Mystic Falls of Love: 'Being able to capture the heart of someone is both a blessing and a curse. But in the presence of these waterfalls, love prefers to be a blessing.'",
 	"LocalizedQuote": {
     	//remove the "//" from your language
@@ -1130,7 +1127,6 @@
 	{
 	"ShopName": "RSVMysticFalls3",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -98, -95 ],
 	"Quote": "Mystic Falls of Sacrifice: 'Among the heaviest of burdens are those carried by those who fight for the greater good.'",
 	"LocalizedQuote": {
     	//remove the "//" from your language
@@ -1223,7 +1219,6 @@
 	{
 	"ShopName": "RSVFestPika",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7 ],
 	"Quote": "Welcome to Gus and Pika's!",
 	"LocalizedQuote": {
     	//remove the "//" from your language
@@ -1296,7 +1291,6 @@
 	{
 	"ShopName": "RSVFestGirls",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7 ],
 	"Quote": "Girls rule!!",
 	"LocalizedQuote": {
     	//remove the "//" from your language
@@ -1429,7 +1423,6 @@
 	{
 	"ShopName": "RSVFestBoys",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7 ],
 	"Quote": "Boys rule!!",
 	"LocalizedQuote": {
     	//remove the "//" from your language
@@ -1556,7 +1549,7 @@
 	{
 	"ShopName": "RSVJioShop",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -98, -95 ],
+	"CategoriesToSellHere": [ -28,-95,-96,-97,-98 ],
 	"Quote": "What do you desire?",
 	"LocalizedQuote": {
     	//remove the "//" from your language
@@ -1626,7 +1619,7 @@
 	{
 	"ShopName": "RSVMalayaShop",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -7 ],
+	"CategoriesToSellHere": [ -5,-6,-79 ],
 	"PortraitPath": "assets/MalayaShop.png",
 	"Quote": "Welcome! What would you like, dear?",
 	"ClosedMessage": "Sorry, we're closed!",
@@ -1819,37 +1812,34 @@
 	"ShopName": "RSVHeapsStore",
 	"StoreCurrency": "Money",
 	"CategoriesToSellHere": [
-		-2,
+    -81,
+    -75,
 		-4,
 		-5,
 		-6,
 		-7,
-		-8,
-		-9,
-		-12,
-		-14,
-		-15,
-		-16,
-		-17,
-		-18,
-		-19,
-		-20,
-		-21,
-		-22,
-		-23,
-		-24,
-		-25,
-		-26,
-		-27,
-		-28,
-		-74,
-		-75,
-		-79,
-		-80,
-		-81,
-		-95,
-		-96,
-		-98
+    -8,
+    -9,
+    -79,
+    -74,
+    -80,
+    -16,
+    -17, //sellAtPierres
+    -18, //sellAtPierresAndMarnies
+    -19,
+    -21,
+    -22,
+    -23, //sellAtFishShop
+    -24,
+    -25,
+    -26,
+    -27,
+    -29,
+    -94,
+    -95,
+    -96,
+    -99,
+    -100,
 	],
 	"PortraitPath": "assets/HeapsShop.png",
 	"Quote": "Welcome! You can sell almost anything here too!",
@@ -2099,7 +2089,7 @@
 	{
 	"ShopName": "RSVFayeShop",
 	"StoreCurrency": "Money",
-	"CategoriesToSellHere": [ -98, -95 ],
+	"CategoriesToSellHere": [ -94,-95,-96,-97,-100 ],
 	"Quote": "Place your order! Designs change everyday!",
 	"MaxNumItemsSoldInStore": 2,
 	"LocalizedQuote": {
