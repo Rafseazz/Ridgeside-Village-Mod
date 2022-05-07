@@ -18,7 +18,6 @@ namespace RidgesideVillage
     {
         static List<Vector2> spawn_spots;
         static bool spawned_today = false;
-        static bool cc_reloaded = false;
 
         static IModHelper Helper;
         static IMonitor Monitor;
@@ -44,15 +43,18 @@ namespace RidgesideVillage
         private static void OnWarped(object sender, WarpedEventArgs e)
         {
             if ((!CustomCPTokens.FoxbloomCanSpawn(e.NewLocation, spawned_today)) || e.NewLocation.modData["RSV_foxbloomSpawned"] == "true")
+            {
+                Log.Trace("RSV: Not spawning Foxbloom.");
                 return;
+            }
 
             Random random = new();
             Vector2 spawn_spot = spawn_spots.ElementAt(random.Next(0, 7));
-            int FOXBLOOMID = ExternalAPIs.JA.GetObjectId("Foxbloom");
             try
             {
+                int FOXBLOOMID = ExternalAPIs.JA.GetObjectId("Foxbloom");
                 UtilFunctions.SpawnForage(FOXBLOOMID, e.NewLocation, spawn_spot, true);
-                Log.Debug("RSV: Foxbloom spawned as forage.");
+                Log.Trace("RSV: Foxbloom spawned as forage.");
                 spawned_today = true;
                 e.NewLocation.modData["RSV_foxbloomSpawned"] = "true";
             }
@@ -61,26 +63,6 @@ namespace RidgesideVillage
                 Log.Error($"RSV: Error spawning Foxbloom at {spawn_spot.X}, {spawn_spot.Y}\n{ex}");
             }
         }
-
-        /*
-        [EventPriority(EventPriority.Low)]
-        private static void OnWarped2(object sender, WarpedEventArgs e)
-        {
-            if (e.NewLocation.Name != "Custom_Ridgeside_RidgeForest")
-                return;
-
-            string foxbloomSpawned = e.NewLocation.modData["RSV_foxbloomSpawned"];
-            if ((foxbloomSpawned == "false") || cc_reloaded)
-                return;
-            if ((foxbloomSpawned == "true") && !cc_reloaded)
-            {
-                Log.Info("RSV: Reloading CCs.");
-                ExternalAPIs.CC.ReloadContentPack("Rafseazz.RSVCC");
-                cc_reloaded = true;
-                return;
-            }
-        }
-        */
         
     }
 

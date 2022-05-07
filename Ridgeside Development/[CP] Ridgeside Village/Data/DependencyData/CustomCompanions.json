@@ -264,7 +264,7 @@
             },
          ],
 		"When": {
-			"Weather: |contains=Sun,Wind": false,
+			"Weather|contains=Sun,Wind": false,
 			},
 		"Update": "OnDayStart"
 	},
@@ -553,14 +553,13 @@
    },
 
  // KIWI COMPANION ON FARM
- 		/*
     {
        "LogName": "Farm Kiwi Map Spawn (Jio Spouse)",
        "Action": "EditMap",
-       "Target": "Maps/Farm",
+       "Target": "Maps/Farm, Maps/Farm_Island, Maps/Farm_FourCorners, Maps/Farm_Foraging, Maps/Farm_Mining, Maps/Farm_Fishing, Maps/Farm_Combat",
        "MapTiles": [
           {
-             "Position": { "X": 72, "Y": 15 },
+             "Position": { "X": 72, "Y": 16 },
              "Layer": "Back",
              "SetProperties": {
                 "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.FarmKiwi",
@@ -569,19 +568,19 @@
        ],
        "When":
 			 {
-				 "Query: '{{RandomNumber}}' >= 5 OR '{{DayOfWeek}}' = 'Saturday'": true,
+				 "Query: '{{RandomNumber}}' >= 6 OR '{{DayOfWeek}}' = 'Saturday'": true,
 				 "Relationship:Jio": "Married",
- 		  	 "Hearts:Kiwi": "{{Range: 4,10}}",
+ 		  	 "Hearts:Kiwi": "{{Range: 6,10}}",
  		     "Weather |contains= sun, wind": true,
 			 }
     },
     {
        "LogName": "Farm Kiwi Map Spawn (Daia Spouse or Kiwi Friendship)",
        "Action": "EditMap",
-       "Target": "Maps/Farm",
+       "Target": "Maps/Farm, Maps/Farm_Island, Maps/Farm_FourCorners, Maps/Farm_Foraging, Maps/Farm_Mining, Maps/Farm_Fishing, Maps/Farm_Combat",
        "MapTiles": [
           {
-             "Position": { "X": 72, "Y": 15 },
+             "Position": { "X": 72, "Y": 16 },
              "Layer": "Back",
              "SetProperties": {
                 "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.FarmKiwi",
@@ -593,7 +592,7 @@
 				 "HasSeenEvent": 75160265,
 				 "RandomNumber": "{{Range: 1,3}}",
 				 "Relationship:Jio |contains= Married": false,
-				 "Query: ('{{Relationship:Daia}}' = 'Married' AND '{{Hearts:Kiwi}}' >= 6) OR '{{Hearts:Kiwi}}' >= 9": true,
+				 "Query: ('{{Relationship:Daia}}' = 'Married' AND '{{Hearts:Kiwi}}' >= 8) OR '{{Hearts:Kiwi}}' = 10": true,
  		     "Weather |contains= sun, wind": true,
 			 }
     },
@@ -637,7 +636,6 @@
           }
        }
     },
-		*/
 
 	 // Foxbloom foxes
 	 {
@@ -842,6 +840,7 @@
       ],
 			"When": {
 				"Weather": "Rain, Storm",
+				"HasSeenEvent": 75160254,
 			},
    },
 

@@ -19,6 +19,7 @@ namespace RidgesideVillage
         private static IModHelper Helper { get; set; }
 
         const int CURIOSITY_LURE = 856;
+        const int MAGIC_BAIT = 908;
         const double BASE_CATCH_CHANCE = 0.3;
         const double CATCH_CHANCE_WITH_CURIOLURE = 0.75;  // Curiosity Lure increases chance by 7%
         const int MIN_FISHING = 7;
@@ -76,7 +77,7 @@ namespace RidgesideVillage
         {
             try
             {
-                string nameToUse = locationName ?? __instance.Name;
+                string here = locationName ?? __instance.Name;
 
                 double catchChance =
                     (who.CurrentTool is StardewValley.Tools.FishingRod rod && rod.getBobberAttachmentIndex() == CURIOSITY_LURE)
@@ -85,48 +86,28 @@ namespace RidgesideVillage
                     ;
 
                 int replaceByFishID = -1;
-                switch (nameToUse)
+                bool shouldReplace = false;
+                switch (here)
                 {
-                    case "Custom_Ridgeside_RidgesideVillage":
-                        int fishID = GetFishID("Sockeye Salmon");
-                        if (who.FishingLevel >= MIN_FISHING && !CheckCaughtBefore(who, fishID) && new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y)
-                            && Game1.currentSeason.Equals("fall") && Game1.IsRainingHere(Game1.currentLocation))
-                        {
-                            replaceByFishID = fishID;
-                        }
-                        break;
-                    case "Custom_Ridgeside_RidgeFalls":
-                        fishID = GetFishID("Waterfall Snakehead");
-                        if (who.FishingLevel >= MIN_FISHING && !CheckCaughtBefore(who, fishID) && new Rectangle(53, 11, 4, 4).Contains((int)bobberTile.X, (int)bobberTile.Y)
-                            && (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer")) && Game1.timeOfDay >= 2000)
-                        {
-                            replaceByFishID = fishID;
-                        }
-                        break;
-                    case "Custom_Ridgeside_RidgeForest":
-                        fishID = GetFishID("Deep Ridge Angler");
-                        if (who.FishingLevel >= MIN_FISHING && !CheckCaughtBefore(who, fishID) && new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y)
-                            && (Game1.currentSeason.Equals("winter") && Game1.timeOfDay >= 1200))
-                        {
-                            replaceByFishID = fishID;
-                        }
-                        break;
+                    //Linked Fish
                     case "Custom_Ridgeside_RidgePond":
                         var linked_fish = new List<string> { "Bladetail Sturgeon", "Caped Tree Frog", "Cardia Septal Jellyfish", "Crimson Spiked Clam",
                             "Fairytale Lionfish", "Fixer Eel", "Golden Rose Fin", "Harvester Trout", "Lullaby Carp", "Pebble Back Crab" };
                         Random random = new();
-                        replaceByFishID = GetFishID(linked_fish.ElementAt(random.Next(0, 11)));
-                        if (replaceByFishID != -1)
-                        {
-                            __result = new StardewValley.Object(replaceByFishID, 1);
-                            return;
-                        }
+                        replaceByFishID = GetFishID(linked_fish.ElementAt(random.Next(0, 10)));
+                        shouldReplace = true;
+                        break;
+                    //Legendaries
+                    case "Custom_Ridgeside_RidgesideVillage":
+                    case "Custom_Ridgeside_RidgeFalls":
+                    case "Custom_Ridgeside_RidgeForest":
+                        replaceByFishID = TryGetLegendary(who, here, bobberTile);
+                        shouldReplace = Game1.random.NextDouble() <= catchChance;
                         break;
                     default:
                         return;
                 }
-
-                if(replaceByFishID != -1 && Game1.random.NextDouble() <= catchChance)
+                if (shouldReplace && replaceByFishID != -1)
                 {
                     __result = new StardewValley.Object(replaceByFishID, 1);
                     return;
@@ -137,6 +118,43 @@ namespace RidgesideVillage
             {
                 Log.Error($"Failed in {nameof(GetFish_Postfix)}:\n{ex}");
             }
+        }
+
+        private static int TryGetLegendary(Farmer who, string location, Vector2 bobberTile)
+        {
+            if (who.FishingLevel < MIN_FISHING)
+                    return -1;
+
+            int fishID = -1;
+            bool is_bait_magic = (who.CurrentTool is FishingRod rod && rod.getBaitAttachmentIndex() == MAGIC_BAIT);
+            switch (location)
+            {
+                case "Custom_Ridgeside_RidgesideVillage":
+                    int legendary = GetFishID("Sockeye Salmon");
+                    if (new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
+                    {
+                        if (is_bait_magic || (Game1.currentSeason.Equals("fall") && Game1.IsRainingHere(Game1.currentLocation)))
+                            fishID = legendary;
+                    }
+                    break;
+                case "Custom_Ridgeside_RidgeFalls":
+                    legendary = GetFishID("Waterfall Snakehead");
+                    if (new Rectangle(53, 11, 4, 4).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
+                    {
+                        if (is_bait_magic || ((Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer")) && Game1.timeOfDay >= 2000))
+                            fishID = legendary;
+                    }
+                    break;
+                case "Custom_Ridgeside_RidgeForest":
+                    legendary = GetFishID("Deep Ridge Angler");
+                    if (new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
+                    {
+                        if (is_bait_magic || (Game1.currentSeason.Equals("winter") && Game1.timeOfDay >= 1200))
+                            fishID = legendary;
+                    }
+                    break;
+            }
+            return fishID;
         }
 
         private static bool CheckCaughtBefore(Farmer who, int fishID)

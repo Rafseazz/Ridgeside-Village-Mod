@@ -12,7 +12,6 @@ using StardewModdingAPI.Events;
     
 namespace RidgesideVillage
 {
-    //Corrects the location name in the "X has begun in Y" message
     internal static class Animations
     {
         private static IMonitor Monitor { get; set; }
@@ -82,7 +81,7 @@ namespace RidgesideVillage
             }
             catch (Exception e)
             {
-                Log.Error($"Harmony patch \"{nameof(startRouteBehavior_Postfix)}\" has encountered an error. \n{e.ToString()}");
+                Log.Error($"Harmony patch \"{nameof(startRouteBehavior_Postfix)}\" has encountered an error. \n{e}");
             }
         }
 
@@ -117,7 +116,7 @@ namespace RidgesideVillage
             }
             catch (Exception e)
             {
-                Log.Error($"Harmony patch \"{nameof(finishRouteBehavior_Prefix)}\" has encountered an error. \n{e.ToString()}");
+                Log.Error($"Harmony patch \"{nameof(finishRouteBehavior_Prefix)}\" has encountered an error. \n{e}");
                 return true;
             }
 
@@ -138,9 +137,9 @@ namespace RidgesideVillage
                     npc.IsInvisible = false;
                 }
             }
-            catch (Exception ex1)
+            catch (Exception e)
             {
-                Monitor.Log($"Failed in RSV Aniamtions Day End reset:\n{ex1}", LogLevel.Error);
+                Log.Error($"Failed in RSV Animations Day End reset:\n{e}");
             }
 
 

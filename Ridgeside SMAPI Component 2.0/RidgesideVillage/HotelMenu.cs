@@ -381,7 +381,7 @@ namespace RidgesideVillage
 
             foreach (NPC k in Utility.getAllCharacters())
             {
-                Log.Debug($"checking {k?.Name}, {k?.Birthday_Season}");
+                //Log.Debug($"checking {k?.Name}, {k?.Birthday_Season}");
                 if (k.isVillager() && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && (Game1.player.friendshipData.ContainsKey(k.Name)))
                 {
 

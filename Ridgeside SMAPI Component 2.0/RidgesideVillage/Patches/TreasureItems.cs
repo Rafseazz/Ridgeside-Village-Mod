@@ -9,6 +9,7 @@ using StardewValley;
 using StardewValley.Tools;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI.Events;
+using StardewModdingAPI.Utilities;
 using System.Reflection;
 
 namespace RidgesideVillage
@@ -25,7 +26,7 @@ namespace RidgesideVillage
         //activate tracker for fox statue
         private static bool OnFoxStatueMap;
         //count consecutive 10min intervals where player was close to statue
-        private static int FoxStatueCounter;
+        private readonly static PerScreen<int> FoxStatueCounter = new PerScreen<int>();
 
         const int UNSEALEVENT = 75160259;
 
@@ -80,7 +81,7 @@ namespace RidgesideVillage
 
         private static void OnReturnToTitle(object sender, ReturnedToTitleEventArgs e)
         {
-            FoxStatueCounter = 0;
+            FoxStatueCounter.Value = 0;
             OnFoxStatueMap = false;
             Helper.Events.GameLoop.TimeChanged -= OnTimeChanged;
         }
@@ -107,13 +108,13 @@ namespace RidgesideVillage
                 return;
 
             if (!OnFoxStatueMap && e.NewLocation.Name.Equals("Custom_Ridgeside_Ridge") && !Game1.player.mailReceived.Contains(FLAGFOXMASK)){
-                FoxStatueCounter = 0;
+                FoxStatueCounter.Value = 0;
                 Helper.Events.GameLoop.TimeChanged += OnTimeChanged;
                 OnFoxStatueMap = true;
             }
             else if(OnFoxStatueMap && e.OldLocation.Name.Equals("Custom_Ridgeside_Ridge") && !e.NewLocation.Name.Equals("Custom_Ridgeside_Ridge")){
 
-                FoxStatueCounter = 0;
+                FoxStatueCounter.Value = 0;
                 Helper.Events.GameLoop.TimeChanged -= OnTimeChanged;
                 OnFoxStatueMap = false;
             }
@@ -128,18 +129,18 @@ namespace RidgesideVillage
             int distance = Math.Abs(Game1.player.getTileX() - 18) + Math.Abs(Game1.player.getTileY() - 10);
             if(distance < 3)
             {
-                FoxStatueCounter += 1;
+                FoxStatueCounter.Value += 1;
             }
             else
             {
-                FoxStatueCounter = 0;
+                FoxStatueCounter.Value = 0;
             }
 
-            if(FoxStatueCounter >= 12)
+            if(FoxStatueCounter.Value >= 12)
             {
                 SpawnJAItemAsDebris("Relic Fox Mask", 18, 10, Game1.getLocationFromName("Custom_Ridgeside_Ridge"));
                 Game1.player.mailReceived.Add(FLAGFOXMASK);
-                FoxStatueCounter = 0;
+                FoxStatueCounter.Value = 0;
                 Helper.Events.GameLoop.TimeChanged -= OnTimeChanged;
                 OnFoxStatueMap = false;
             }
