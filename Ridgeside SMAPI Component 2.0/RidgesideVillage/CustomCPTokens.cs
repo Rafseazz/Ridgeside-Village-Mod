@@ -167,11 +167,21 @@ namespace RidgesideVillage
         public static bool FoxbloomCanSpawn(GameLocation here, bool spawned_today)
         {
             if (here.Name != "Custom_Ridgeside_RidgeForest" || spawned_today)
+            {
+                Log.Trace("RSV: Not Ridge Forest OR Foxbloom already spawned today.");
                 return false;
-            if (Game1.dayOfMonth != FoxbloomDay || UtilFunctions.GetWeather(here) != Game1.weather_sunny)
+            }
+            if (Game1.dayOfMonth != FoxbloomDay || UtilFunctions.GetWeather(here) % 2 != 0)
+            {
+                Log.Trace("RSV: Not Foxbloom Day OR weather not clear.");
                 return false;
+            }
             if (!Game1.player.hasItemInInventoryNamed("Relic Fox Mask"))
+            {
+                Log.Trace("RSV: Player does not have Relic Fox Mask in inventory.");
                 return false;
+            }
+            Log.Trace("RSV: Foxbloom can spawn!");
             return true;
         }
 

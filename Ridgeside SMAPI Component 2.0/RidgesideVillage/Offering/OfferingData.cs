@@ -71,7 +71,12 @@ namespace RidgesideVillage.Offering
                 }
                 if (pair.Value is HoeDirt dirt && dirt.crop != null && !dirt.crop.fullyGrown.Value)
                 {
-                    dirt.crop.growCompletely();
+                    Crop crop = dirt.crop;
+                    crop.growCompletely();
+
+                    if (crop.forageCrop.Value)
+                        crop.newDay(0, dirt.fertilizer.Value, (int)dirt.currentTileLocation.X, (int)dirt.currentTileLocation.Y, Game1.getFarm());
+                        
                     n++;
                 }
             }
