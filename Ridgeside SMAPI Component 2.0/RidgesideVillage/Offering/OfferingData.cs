@@ -72,10 +72,25 @@ namespace RidgesideVillage.Offering
                 if (pair.Value is HoeDirt dirt && dirt.crop != null && !dirt.crop.fullyGrown.Value)
                 {
                     Crop crop = dirt.crop;
-                    crop.growCompletely();
 
-                    if (crop.forageCrop.Value)
-                        crop.newDay(0, dirt.fertilizer.Value, (int)dirt.currentTileLocation.X, (int)dirt.currentTileLocation.Y, Game1.getFarm());
+                    if (crop.isWildSeedCrop())
+                    {
+                        int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
+                        Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                        {
+                            IsSpawnedObject = true,
+                            CanBeGrabbed = true
+                        });
+                        Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                        crop = null;
+                        dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+                    }
+                    else
+                    {
+                        crop.growCompletely();
+                        Log.Verbose($"RSV: Regular crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                    }
+                        
                         
                     n++;
                 }

@@ -5,6 +5,7 @@
   "MonsterSpawnEnabled": true,
   "Forage_Spawn_Settings": {
     "Areas": [
+      // The Hike - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -73,6 +74,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridgeside Village - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -165,6 +168,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // The Ridge - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -236,6 +241,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Falls - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -298,6 +305,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - RSV + vanilla forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -554,6 +563,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Treasure items
       {
         "SpringItemIndex": [
           74,
@@ -803,6 +814,8 @@
         },
         "DaysUntilSpawnsExpire": 7
       },
+
+      // Ridge Forest - Mountain Mistbloom
       {
         "SpringItemIndex": [
           "Mountain Mistbloom"
@@ -816,7 +829,7 @@
         "WinterItemIndex": [
           "Mountain Mistbloom"
         ],
-        "UniqueAreaID": "RSV Mistbloom",
+        "UniqueAreaID": "RSV Ridge Forest Mistbloom",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 7,
         "MaximumSpawnsPerDay": 15,
@@ -1027,13 +1040,113 @@
           ],
           "WeatherTomorrow": [],
           "CPConditions": {},
-          "EPUPreconditions": [
-            "e 75160254"
-          ],
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      //Ridge Falls - Mountain Mistbloom
+      {
+        "SpringItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "SummerItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "FallItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "WinterItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "UniqueAreaID": "RSV Ridge Falls Mistbloom",
+        "MapName": "Custom_Ridgeside_RidgeFalls",
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 7,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": "shadowpeep"
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
+      // Summit Farm - Mountain Mistbloom
+      {
+        "SpringItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "SummerItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "FallItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "WinterItemIndex": [
+          "Mountain Mistbloom"
+        ],
+        "UniqueAreaID": "RSV Summit Farm Mistbloom",
+        "MapName": "Custom_Ridgeside_SummitFarm",
+        "MinimumSpawnsPerDay": 3,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": "shadowpeep"
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [
+            "Rain",
+            "Storm"
+          ],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
+      // Ridge Forest - Yellow Wood Sculpture
       {
         "SpringItemIndex": [
           "Yellow Wood Sculpture"
@@ -1083,6 +1196,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Silver Fish Bones
       {
         "SpringItemIndex": [
           "Silver Fish Bones"
@@ -1142,6 +1257,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Inked Fossil
       {
         "SpringItemIndex": [
           "Inked Fossil"
@@ -1201,6 +1318,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Nighblack Diamond
       {
         "SpringItemIndex": [
           "Nightblack Diamond"
@@ -1251,6 +1370,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Shell Bracelet
       {
         "SpringItemIndex": [
           "Shell Bracelet"
@@ -1300,6 +1421,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Aguar's cave - Fruit version
       {
         "SpringItemIndex": [
           "Cherry Pluot",
@@ -1401,6 +1524,8 @@
         },
         "DaysUntilSpawnsExpire": 14
       },
+
+      // Aguar's cave - Flower version
       {
         "SpringItemIndex": [
           "Foxbloom",
@@ -1527,6 +1652,7 @@
   },
   "Large_Object_Spawn_Settings": {
     "Areas": [
+      // Ridge - Log blocking Ridge Forest
       {
         "ObjectTypes": [
           "Log"
@@ -1566,6 +1692,7 @@
         },
         "DaysUntilSpawnsExpire": 0
       },
+      // Summit Farm - initial large debris
       {
         "ObjectTypes": [
           "Log",
@@ -1611,6 +1738,7 @@
   },
   "Ore_Spawn_Settings": {
     "Areas": [
+      // Ridge Forest - Mining areas
       {
         "MiningLevelRequired": null,
         "StartingSpawnChance": null,
@@ -1726,6 +1854,8 @@
   },
   "Monster_Spawn_Settings": {
     "Areas": [
+
+      // Ridge Forest - Ghosts
       {
         "MonsterTypes": [
           {
@@ -1774,6 +1904,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Corrupted Spirits
       {
         "MonsterTypes": [
           {
@@ -1826,6 +1958,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Wraiths
       {
         "MonsterTypes": [
           {
@@ -1879,6 +2013,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Viperials
       {
         "MonsterTypes": [
           {
@@ -2115,7 +2251,9 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
-      // Extra Viperals after Combat Level Seven
+
+
+      // Ridge Forest - Extra Viperials
       {
         "MonsterTypes": [
           {
@@ -2354,6 +2492,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Ridge Forest - Serpentine Beasts
       {
         "MonsterTypes": [
           {
@@ -2620,6 +2760,8 @@
         },
         "DaysUntilSpawnsExpire": null
       },
+
+      // Ridge Forest - Wildneress Golems
       {
         "MonsterTypes": [
           {
@@ -2855,6 +2997,8 @@
         },
         "DaysUntilSpawnsExpire": null
       },
+
+      // Spirit Realm - Corrupted Spirits
       {
         "MonsterTypes": [
           {
@@ -2907,6 +3051,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Spirit Realm - Wraiths
       {
         "MonsterTypes": [
           {
@@ -2960,6 +3106,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Spirit Realm - Viperials
       {
         "MonsterTypes": [
           {
@@ -3017,6 +3165,8 @@
         },
         "DaysUntilSpawnsExpire": 1
       },
+
+      // Spirit Realm - Serpentine Beasts
       {
         "MonsterTypes": [
           {

@@ -544,8 +544,6 @@
 		{
    			"Action": "EditMap",
    			"Target": "Maps/Custom_Ridgeside_RidgePond",
-				// Game gets made if I try to make the value null, soooo
-				"MapProperties": { "NPCWarp": "-100 -100 Town 14 54" },
 				"AddWarps": [
 				"18 1 Custom_Ridgeside_RidgeFalls 21 58",
 				"19 1 Custom_Ridgeside_RidgeFalls 21 58",
@@ -557,7 +555,6 @@
 		{
    			"Action": "EditMap",
    			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
-				"MapProperties": { "NPCWarp": "-100 -100 Town 14 54" },
 				"AddWarps": [
 					"21 59 Custom_Ridgeside_RidgePond 18 3",
 					"22 59 Custom_Ridgeside_RidgePond 19 3",
@@ -566,13 +563,37 @@
 				"Update": "OnLocationChange"
 		},
 
+		/*
+		// For Rowan's NPC Piper
+		{
+   			"Action": "EditMap",
+   			"Target": "Maps/Custom_Ridgeside_RidgePond",
+				"MapProperties": { "NPCWarp": "18 1 Custom_Ridgeside_RidgeFalls 21 58" },
+				"AddWarps": [
+				"18 1 Custom_Ridgeside_RidgeFalls 21 58",
+				"19 1 Custom_Ridgeside_RidgeFalls 21 58",
+   			],
+   			"When": { "HasFlag |contains=LinkedFishesLetter": false }
+		},
+
+		{
+   			"Action": "EditMap",
+   			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
+				"MapProperties": { "NPCWarp": "21 59 Custom_Ridgeside_RidgePond 18 3 80 32 Custom_Ridgeside_Ridge 1 22" },
+				"AddWarps": [
+					"21 59 Custom_Ridgeside_RidgePond 18 3",
+					"22 59 Custom_Ridgeside_RidgePond 19 3",
+	   			],
+   			"When": { "HasFlag |contains=LinkedFishesLetter": false },
+		},
+
 		{
    			"Action": "EditMap",
    			"Target": "Maps/Custom_Ridgeside_Ridge",
-				"MapProperties": { "NPCWarp": "-100 -100 Town 14 54" },
-   			"When": { "HasFlag": "LinkedFishesLetter" },
-				"Update": "OnLocationChange"
+				"MapProperties": { "NPCWarp": "-1 19 Custom_Ridgeside_RidgeFalls 78 33" },
+   			"When": { "HasFlag |contains=LinkedFishesLetter": false }
 		},
+		*/
 
 		{
  			"Action": "EditMap",
