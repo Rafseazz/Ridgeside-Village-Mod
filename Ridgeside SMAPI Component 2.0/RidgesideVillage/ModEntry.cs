@@ -65,7 +65,7 @@ namespace RidgesideVillage
 
             Loan.Initialize(this);
 
-            //SummitHouse.Initialize(this);
+            SummitHouse.Initialize(this);
 
             WarpTotem.Initialize(this);
 

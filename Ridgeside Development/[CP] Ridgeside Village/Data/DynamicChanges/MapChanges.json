@@ -827,6 +827,36 @@
 		"When": { "HasFlag: hostPlayer": "RSV.LennyHelped" },
 	},
 
+//Summit farm upgrade (TODO)
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"MapTiles": [
+			{
+				"Position": { "X": 23, "Y": 46 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "Message \"rsv.summitmail\""
+				}
+			}
+		],
+		"When": { "HasFlag: hostPlayer |contains=RSV.SummitFarmRedone": false }
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"MapTiles": [
+			{
+				"Position": { "X": 23, "Y": 46 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "Mailbox"
+				}
+			}
+		],
+		"When": { "HasFlag: hostPlayer": "RSV.SummitFarmRedone" },
+		"Update": "OnLocationChange"
+	},
 
 
 ]

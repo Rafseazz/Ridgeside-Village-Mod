@@ -32,7 +32,6 @@ namespace RidgesideVillage
 
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.Player.Warped += OnWarped;
-            //Helper.Events.Player.Warped += OnWarped2;
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)

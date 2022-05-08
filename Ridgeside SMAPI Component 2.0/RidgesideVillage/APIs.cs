@@ -9,8 +9,6 @@ namespace RidgesideVillage
 {
     internal class ExternalAPIs
     {
-
-        public static ICustomCompanionsApi CC;
         public static IContentPatcherApi CP;
         public static IJsonAssetsApi JA;
         public static IWearMoreRingsApi MR;
@@ -23,12 +21,6 @@ namespace RidgesideVillage
         internal static void Initialize(IModHelper helper)
         {
             Helper = helper;
-
-            CC = Helper.ModRegistry.GetApi<ICustomCompanionsApi>("PeacefulEnd.CustomCompanions");
-            if (CC == null)
-            {
-                Log.Warn("Custom Companions API not found. This could lead to issues.");
-            }
 
             CP = Helper.ModRegistry.GetApi<IContentPatcherApi>("Pathoschild.ContentPatcher");
             if (CP is null)
