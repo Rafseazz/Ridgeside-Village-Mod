@@ -111,7 +111,6 @@
 
 	"CompleteCrystalsNotif": "The mountains seem to speak...#'Thank you, farmer... I'll take it from here...'#'Come back by tomorrow, and we'll finally meet...'#'Take care, my friend's grandchild...'",
 
-	"RSV.SummitKitchen": "The kitchen's in pretty good shape, but the pipes are totally busted. Makes sense...",
 	"RSV.MyLetter": "To whoever is reading this,^It has been so long since we were sealed away from the rest of the world. It was a bright sunny day, when suddenly a fog of purple mist was approaching the farm until nature moved on here own encase us in high walls of soil, plants, and trees. Whenever we tried to take down the wall, it would grow back stronger. One may think that my wife and I would hold a grudge against the higher power that trapped us. But no, we didn't mind.^There must be a reason why nature trapped us, and we like to think that we were saved from that ominous mist. And for that, we thank Yoba for giving us the oppurtunity to live out the rest of our lives in peace.^It has been years and we are happy. One day, this land that was once full of crops my wife and I cherished like children, will all be gone.^And when that day comes, I know my wife and I would have already went back to Yoba's arms and the walls might have come down.^^To whoever's reading this, this land is yours to take.^All I ask is you give it love as we did before.^May Yoba bless you.^^- R",
 
 	"RSV.UndreyaError": "Only the host can access this!",
@@ -151,16 +150,21 @@
 	"Shiro.RejectProposal": "Oh... I'm sorry, @. You know I love you so much, and I want this as much as you do, but I'd be a bad older brother if I said yes.$s#$b#With both our parents away, Yuuma has no one else to look after him...$s#$b#And with everything I've put him through these past few years, it would be selfish of me to move him away from the last bit of his old life he has left.$s#$b#I'm sorry, but I hope you understand.$s",
 	"Kiarra.RejectProposal": "I'm sorry, @, but I know what you did to help Joja build that warehouse, and I just don't think our values align.$a",
 
-	"Torts.RealmGift": "%Thank you, @, but I have no need for physical belongings in this realm.",
-
 	"installation.incorrect": "Ridgeside Village appears to be installed incorrectly.",
-	"missing.mods": "You seem to be missing the following required mods for Ridgeside Village:",
-	"mod.missing": "{{modName}} by {{author}}  {{link}}",
+	"missing.mods": "Did not detect mod(s) required for Ridgeside Village...",
+	"missing.mods.cont": "Please download, or make sure you have installed the following correctly:",
+	"outdated.mods": "Detected versions of mod(s) outdated for use in Ridgeside Village...",
+	"outdated.mods.cont": "Please update the following before playing:",
+	"orphaned.mods": "The following required mod(s) could not be found. They're either not",
+	"orphaned.mods.cont": "installed, or they're missing dependencies of their own. Please check below:",
+	"mod.info": "{{modName}} by {{author}} -",
+	"mod.parents": "Relevant requirement: {{parents}}",
+	"smapi.outdated": "SMAPI is out of date! Please update this ASAP!!!",
+	"ridgeside.CP.missing": "\n\n\nThere seems to be an issue with your Ridgeside Village installation.\nPlease visit https://smapi.io/log and follow the instructions on that site to upload your log.\nScroll to the top of the page and read the red text to identify the errors.\n\n\n",
 	"help.message" : "If you need help, visit our Discord server! https://discord.gg/wkrUNkQ4xQ",
-	"ridgeside.CP.missing": "There seems to be an issue with your Ridgeside Village installation.\nPlease visit https://smapi.io/log and follow the instructions on that site to upload your log.\nRead the red text to identify the errors.",
 
 	"RidgePond.NoFishing": "The pond's population is awfully low... Belinda would get mad at me if I fished from here.",
-	"GrandmaMessage.1": "My dear grandchild...#I'm glad that you've finally come...#I'm sure your grandfather is too...#Live well, my dear...",
+	"GrandmaMessage.1": "My dear grandchild...#I'm glad that you've finally come...#I'm sure your grandfather is, too...#Live well, my dear...",
 
 	"FoxbloomHint.Uncleansed": "The books are all written in different languages...",
 	"FoxbloomHint.Cleansed": "The books are all written in different languages... But one piques your interest. The handwriting appears to be Belinda's.",
@@ -178,7 +182,7 @@
 	"FoxbloomHint.medium.28": "Location: Ridgeside Village^    Windmills^    Multi-floor buildings^    Stone bridges [letterbg LooseSprites/FoxbloomHints.medium 3]",
 
 	"FoxbloomHint.hard.7": "Location: Nightingale Orchard^    Total fruit on trees each day in spring^    Total fruit on trees each day in summer^    Yearly average of total fruit on trees each day (excluding winter) [letterbg LooseSprites/FoxbloomHints.hard 0]",
-	"FoxbloomHint.hard.14": "Location: Heaps Convenience Store building^    Total signs (all)^    Total \"HEAPS\" signs^    Total white \"SALE\" signs^    Total blue \"SALE\" signs [letterbg LooseSprites/FoxbloomHints.hard 1]",
+	"FoxbloomHint.hard.14": "Location: Heaps Convenience Store interior^    Total signs (all)^    Total \"HEAPS\" signs^    Total white \"SALE\" signs^    Total blue \"SALE\" signs [letterbg LooseSprites/FoxbloomHints.hard 1]",
 	"FoxbloomHint.hard.21": "Location: Ridge Forest^    Total number of waterfalls^    Total horizontal bridges^    Total distinct cliff levels*^    Total vertical bridges^^^^^^*(Note: Including non-accessible levels.) [letterbg LooseSprites/FoxbloomHints.hard 2]",
 	"FoxbloomHint.hard.28": "Among Ridgeside villagers only:^    Most common Tuesday birthday^    Total female villagers born in winter^    Number of villagers with an even birthday during the first week of the month [letterbg LooseSprites/FoxbloomHints.hard 3]",
 

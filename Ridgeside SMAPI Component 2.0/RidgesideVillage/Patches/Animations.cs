@@ -139,7 +139,7 @@ namespace RidgesideVillage
             }
             catch (Exception e)
             {
-                Log.Error($"Failed in RSV Animations Day End reset:\n{e}");
+                Log.Warn($"Failed in RSV Animations Day End reset:\n{e}");
             }
 
 
