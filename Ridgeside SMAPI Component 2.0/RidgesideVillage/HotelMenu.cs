@@ -68,6 +68,7 @@ namespace RidgesideVillage
             if (Game1.player.eventsSeen.Contains(75160245))
             {
                 Game1.player.eventsSeen.Remove(75160245);
+                Game1.player.eventsSeen.Remove(751602450);
                 Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
             }
 
@@ -87,8 +88,11 @@ namespace RidgesideVillage
             }
 
             //If it's after wedding day and the player didn't attend their booked Wedding Reception
-            if (!Game1.player.eventsSeen.Contains(75160245) && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isMarried())
+            if (!(Game1.player.eventsSeen.Contains(75160245) || Game1.player.eventsSeen.Contains(751602450))
+                && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isMarried())
             {
+                Game1.player.eventsSeen.Remove(75160245);
+                Game1.player.eventsSeen.Remove(751602450);
                 Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
             }
 
@@ -120,8 +124,9 @@ namespace RidgesideVillage
             //Removes anvtoday flag after next day
             if (Game1.player.mailReceived.Contains(ANNIVERSARYTODAY) && Game1.player.eventsSeen.Contains(75160248))
             {
-                Game1.player.mailReceived.Remove(ANNIVERSARYTODAY);
                 Game1.player.eventsSeen.Remove(75160248);
+                Game1.player.eventsSeen.Remove(751602480);
+                Game1.player.mailReceived.Remove(ANNIVERSARYTODAY);
             }
 
             //Adds ANNIVERSARYTODAY flag if it's the next day after booking

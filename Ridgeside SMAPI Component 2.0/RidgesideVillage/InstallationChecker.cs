@@ -44,13 +44,12 @@ namespace RidgesideVillage
             Log.Trace($"Number of dependencies to check: {dependencies.Values.Count}");
             foreach (var dependency in dependencies.Values)
             {
+                Log.Trace($"InstallationChecker checking {dependency.name}...");
                 if (dependency.name == "SMAPI")
                 {
                     Log.Trace($"SMAPI is out of date: {Constants.ApiVersion.IsOlderThan(dependency.minVersion)}");
                     if (Constants.ApiVersion.IsOlderThan(dependency.minVersion))
-                    {
                         outdated_dependencies.Add(dependency);
-                    }
                 }
                 else if (dependency.required && !helper.ModRegistry.IsLoaded(dependency.uniqueID))
                 {
@@ -61,17 +60,18 @@ namespace RidgesideVillage
                         missing_parents.Add(dependency);
                     else // has parent dependencies but they're loaded
                         missing_dependencies.Add(dependency);
+                    
                 }
                 else
                 {
                     if (dependency.minVersion == null)
                         continue;
                     var mod = helper.ModRegistry.Get(dependency.uniqueID);
+                    if (mod == null)
+                        continue;
                     Log.Trace($"{dependency.name}: Local version ({mod.Manifest.Version.ToString()}) is older than required version ({dependency.minVersion}): {mod.Manifest.Version.IsOlderThan(dependency.minVersion)}");
                     if (mod.Manifest.Version.IsOlderThan(dependency.minVersion))
-                    {
                         outdated_dependencies.Add(dependency);
-                    }
                 }
                 Log.Trace($"{dependency.name} is loaded and up to date.");
             }
@@ -116,6 +116,20 @@ namespace RidgesideVillage
             Log.Error("");
             Log.Error(helper.Translation.Get("installation.incorrect"));
 
+            if (missing_parents.Any())
+            {
+                Log.Error("");
+                Log.Error(THINLINE);
+                Log.Error("");
+                Log.Error(helper.Translation.Get("orphaned.mods"));
+                Log.Error(helper.Translation.Get("orphaned.mods.cont"));
+                Log.Error("");
+                foreach (var dependency in missing_parents)
+                {
+                    Log.Error(BULLET + helper.Translation.Get("mod.info", new { modName = dependency.name, author = dependency.author }));
+                    Log.Error(INDENT + helper.Translation.Get("mod.parents", new { parents = dependency.parents }));
+                }
+            }
             if (missing_dependencies.Any())
             {
                 Log.Error("");
@@ -145,20 +159,6 @@ namespace RidgesideVillage
                     else
                         Log.Error(BULLET + helper.Translation.Get("mod.info", new { modName = dependency.name, author = dependency.author}));
                     Log.Error(INDENT + dependency.url);
-                }
-            }
-            if (missing_parents.Any())
-            {
-                Log.Error("");
-                Log.Error(THINLINE);
-                Log.Error("");
-                Log.Error(helper.Translation.Get("orphaned.mods"));
-                Log.Error(helper.Translation.Get("orphaned.mods.cont"));
-                Log.Error("");
-                foreach (var dependency in missing_parents)
-                {
-                    Log.Error(BULLET + helper.Translation.Get("mod.info", new { modName = dependency.name, author = dependency.author }));
-                    Log.Error(INDENT + helper.Translation.Get("mod.parents", new { parents = dependency.parents }));
                 }
             }
             if (!isInstalledCorrectly)
