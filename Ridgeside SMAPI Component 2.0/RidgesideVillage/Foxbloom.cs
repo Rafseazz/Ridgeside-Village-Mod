@@ -43,7 +43,7 @@ namespace RidgesideVillage
         {
             if ((!CustomCPTokens.FoxbloomCanSpawn(e.NewLocation, spawned_today)) || e.NewLocation.modData["RSV_foxbloomSpawned"] == "true")
             {
-                Log.Trace("RSV: Not spawning Foxbloom.");
+                //Log.Trace("RSV: Not spawning Foxbloom.");
                 return;
             }
 

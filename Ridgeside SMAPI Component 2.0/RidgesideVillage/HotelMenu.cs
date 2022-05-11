@@ -146,6 +146,7 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu = new DialogueBox(alertText);
                 }
             }
+
         }
 
         private static void HandleRatesMenu(string tileActionString = "")

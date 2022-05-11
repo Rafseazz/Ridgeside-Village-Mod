@@ -58,6 +58,7 @@
 		"ToArea": { "X": 57, "Y": 41, "Width": 2, "Height": 2 },
 		"PatchMode": "ReplaceByLayer",
 		"When": {
+			"Weather": "Sun, Wind",
 			"Time": "{{Range: 2300, 2550}}",
 			"HasSeenEvent: hostPlayer |contains=75160182": false,
 			// Host player has not yet met Undreya but has seen Pipo and Acorn's event
@@ -79,6 +80,7 @@
 			}
 		],
 		"When": {
+			"Weather": "Sun, Wind",
 			"Time": "{{Range: 2300, 2550}}",
 			"HasSeenEvent: hostPlayer |contains=75160181": false,
 			//"HasSeenEvent: hostPlayer |contains=75160384": true
@@ -98,6 +100,7 @@
 		],
 		"When": {
 			"Time": "{{Range: 2300, 2550}}",
+			"Weather": "Sun, Wind",
 			"HasSeenEvent: hostPlayer |contains=75160181": true,
 			//"HasSeenEvent: hostPlayer |contains=75160384": true
 		},

@@ -35,6 +35,6 @@ namespace RidgesideVillage
             Gmcm.RegisterLabel(ModManifest, "Mod Audio Configuration", "Choose how the mod's audio works");
             Gmcm.RegisterSimpleOption(ModManifest, "Enable Ridgeside Village Music", "Enables music for Ridgeside Village", () => Config.enableRidgesideMusic, (bool val) => Config.enableRidgesideMusic = val);
 
-            }
+        }
         }
     }
