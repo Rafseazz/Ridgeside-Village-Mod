@@ -127,7 +127,7 @@ namespace RidgesideVillage
             Point mouseCoords = Game1.getMousePosition(true);
             if (ButtonArea.Contains(mouseCoords.X, mouseCoords.Y))
             {
-                IClickableMenu.drawHoverText(b, "RSV", Game1.smallFont);
+                IClickableMenu.drawHoverText(b, Helper.Translation.Get("RSV.MapIconName"), Game1.smallFont);
             }
             __instance.drawMouse(b);
         }
