@@ -1,0 +1,847 @@
+{
+	"weapons": 
+	[
+		//Ark Blade (Shield 360 then throw 2 daggers)
+		{
+			"id": "Ark Blade",
+			"cooldown": 3000,
+			"frames":
+			[
+				{
+					"frameTicks": 10,
+					"action": 2,
+					"relativeFacingDirection": 0,
+				},
+				{
+					"frameTicks": 10,
+					"action": 2,
+					"relativeFacingDirection": 1,
+				},
+				{
+					"frameTicks": 10,
+					"action": 2,
+					"relativeFacingDirection": 2,
+				},
+				{
+					"frameTicks": 10,
+					"action": 2,
+					"relativeFacingDirection": 3,
+				},
+				{
+					"frameTicks": 8,
+					"action": 1,
+					"relativeFacingDirection": 0,
+					"sound": "throw",
+					"projectiles":
+					[
+						{
+							"damage": 20,
+							"parentSheetIndex": 5,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -1,
+							"yVelocity": 10,
+							"startingPositionX": 0,
+							"startingPositionY": 120,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 20,
+							"parentSheetIndex": 5,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 1,
+							"yVelocity": 10,
+							"startingPositionX": 0,
+							"startingPositionY": 120,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+					]
+				},
+			]
+		},
+
+		//Battery-Powered Battle Hammer (Charge then smash 2x and dash)
+		{
+			"id": "Battery-Powered Battle Hammer",
+			"cooldown": 5000,
+			"frames":
+			[
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"sound": "toolCharge"
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"sound": "toolCharge"
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"sound": "toolCharge"
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"trajectoryX": 0,
+					"trajectoryY": 20
+				},
+				{
+					"frameTicks": 20,
+					"action": 2,
+					"trajectoryX": 0,
+					"trajectoryY": 40
+				},
+			]
+		},
+
+		//Battle Dancer's Fan: Pirouette (360 slash)
+		{
+			"id": "Battle Dancer's Fan",
+			"cooldown": 500,
+			"frames":
+			[
+				{
+					"frameTicks": 8,
+					"action": 1,
+					"relativeFacingDirection": 0,
+					"sound": "shwip",
+				},
+				{
+					"frameTicks": 8,
+					"action": 1,
+					"relativeFacingDirection": 1,
+					"sound": "shwip"
+				},
+				{
+					"frameTicks": 8,
+					"action": 1,
+					"relativeFacingDirection": 2,
+					"sound": "shwip"
+				},
+				{
+					"frameTicks": 8,
+					"action": 1,
+					"relativeFacingDirection": 3,
+					"sound": "shwip"
+				},
+				{
+					"frameTicks": 8,
+					"action": 1,
+					"relativeFacingDirection": 0,
+					"sound": "shwip"
+				},
+			]
+		},
+
+		//Bladebane: 360 then smash
+		{
+			"id": "Bladebane",
+			"cooldown": 6000,
+			"frames":
+			[
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 0,
+					"trajectoryX": 10,
+					"trajectoryY": 10
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 1,
+					"trajectoryX": 10,
+					"trajectoryY": 10
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 2,
+					"trajectoryX": 10,
+					"trajectoryY": 10
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 3,
+					"trajectoryX": 10,
+					"trajectoryY": 10
+				},
+				{
+					"frameTicks": 20,
+					"action": 2,
+					"relativeFacingDirection": 0,
+					"trajectoryX": 0,
+					"trajectoryY": 20
+				},
+			]
+		},
+
+		//Bronze Lance: 4 Dashes forward
+		{
+			"id": "Bronze Lance",
+			"cooldown": 3000,
+			"frames":
+			[
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"trajectoryY": 20
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"trajectoryY": 20
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"trajectoryY": 20
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"trajectoryY": 20
+				},
+			]
+		},
+
+		//Bubble Club: smash and spawn bubbles
+		{
+			"id": "Bubble Club",
+			"cooldown": 4000,
+			"frames":
+			[
+				{
+					"frameTicks": 40,
+					"action": 2,
+					"sound": "wand",
+					"projectiles":
+					[
+						{
+							"damage": 5,
+							"parentSheetIndex": 6,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -2,
+							"yVelocity": 5,
+							"startingPositionX": 0,
+							"startingPositionY": 100,
+							"collisionSound": "",
+							"firingSound": "bubbles",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 5,
+							"parentSheetIndex": 6,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -1,
+							"yVelocity": 5,
+							"startingPositionX": 0,
+							"startingPositionY": 110,
+							"collisionSound": "",
+							"firingSound": "bubbles",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 5,
+							"parentSheetIndex": 6,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 0,
+							"yVelocity": 5,
+							"startingPositionX": 0,
+							"startingPositionY": 120,
+							"collisionSound": "",
+							"firingSound": "bubbles",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 5,
+							"parentSheetIndex": 6,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 1,
+							"yVelocity": 5,
+							"startingPositionX": 0,
+							"startingPositionY": 110,
+							"collisionSound": "",
+							"firingSound": "bubbles",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 5,
+							"parentSheetIndex": 6,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 2,
+							"yVelocity": 5,
+							"startingPositionX": 0,
+							"startingPositionY": 100,
+							"collisionSound": "",
+							"firingSound": "bubbles",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+					]
+				},
+			]
+		},
+
+		//Cute but Deadly Knife: Multi stab x3
+		{
+			"id": "Cute but Deadly Knife",
+			"cooldown": 1000,
+			"frames":
+			[
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": 20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": -20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": -20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": 20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": 20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": -20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": -20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": 20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": 20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": -20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": -20
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"trajectoryX": 20
+				},
+			]
+		},
+
+		//Cutlasset: tripple front slash and 3x more loots
+		{
+			"id": "Cutlasset",
+			"cooldown": 3000,
+			"frames":
+			[
+				{
+					"frameTicks": 8,
+					"action": 1,
+				},
+				{
+					"frameTicks": 8,
+					"action": 1,
+				},
+				{
+					"frameTicks": 20,
+					"action": 1,
+				},
+			],
+			"enchantments":
+			[
+				{
+					"name": "Triple Loot",
+					"type": "loot",
+					"parameters":
+					{
+						"trigger": "slay",
+						"chance": 30,
+						"extraDropChecks": 2,
+						"sound": "give_gift"
+					}
+				}
+			]
+		},
+
+		//Dagger Lily: Fires crystal shards
+		{
+			"id": "Dagger Lily",
+			"cooldown": 3000,
+			"frames":
+			[
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"projectiles":
+					[
+						{
+							"damage": 30,
+							"parentSheetIndex": 67,
+							"bouncesTillDestruct": 0,
+							"tailLength": 2,
+							"rotationVelocity": 1,
+							"xVelocity": 0,
+							"yVelocity": 20,
+							"startingPositionX": 0,
+							"startingPositionY": 90,
+							"collisionSound": "breakingGlass",
+							"firingSound": "breakingGlass",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				}
+			]
+		}
+
+
+
+
+/*
+		{
+			"id":"4",
+			"cooldown":"1000",
+			"frames": 
+			[
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 0,
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 1,
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 2,
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 3,
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 0,
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 1,
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 2,
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"relativeFacingDirection": 3,
+				},
+				{
+					"frameTicks": 1,
+					"action": 0,
+					"relativeFacingDirection": 0,
+				},
+			]
+		},
+		{
+			"id":"9",
+			"cooldown":"1000",
+			"frames": 
+			[
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 0,
+					"sound": "furnace",
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 0,
+							"yVelocity": 10,
+							"startingPositionX": 0,
+							"startingPositionY": 96,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 5,
+					"action": 0,
+					"relativeFacingDirection": 0,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -7,
+							"yVelocity": 7,
+							"startingPositionX": -72,
+							"startingPositionY": 72,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 1,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 0,
+							"yVelocity": 10,
+							"startingPositionX": 0,
+							"startingPositionY": 96,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 5,
+					"action": 0,
+					"relativeFacingDirection": 1,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -7,
+							"yVelocity": 7,
+							"startingPositionX": -72,
+							"startingPositionY": 72,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 2,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 0,
+							"yVelocity": 10,
+							"startingPositionX": 0,
+							"startingPositionY": 96,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 5,
+					"action": 0,
+					"relativeFacingDirection": 2,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -7,
+							"yVelocity": 7,
+							"startingPositionX": -72,
+							"startingPositionY": 72,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 5,
+					"action": 1,
+					"relativeFacingDirection": 3,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 0,
+							"yVelocity": 10,
+							"startingPositionX": 0,
+							"startingPositionY": 96,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 5,
+					"action": 0,
+					"relativeFacingDirection": 3,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 10,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -7,
+							"yVelocity": 7,
+							"startingPositionX": -72,
+							"startingPositionY": 72,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+				{
+					"frameTicks": 1,
+					"action": 0,
+					"relativeFacingDirection": 0,
+				},
+			]
+		},
+		{
+			"id":"22",
+			"cooldown":"500",
+			"frames": 
+			[
+				{
+					"frameTicks": 1,
+					"action": 1,
+					"relativeFacingDirection": 0,
+					"sound": "batFlap",
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"relativeFacingDirection": 0,
+					"trajectoryX": 0,
+					"trajectoryY": 20,
+				},
+			]
+		},
+		{
+			"id":"29",
+			"cooldown":"1500",
+			"frames": 
+			[
+				{
+					"frameTicks": 20,
+					"action": 2,
+					"relativeFacingDirection": 0,
+					"sound": "thunder",
+				},
+				{
+					"frameTicks": 1,
+					"action": 0,
+					"relativeFacingDirection": 0,
+					"projectiles":
+					[
+						{
+							"damage": 100,
+							"parentSheetIndex": 0,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 0,
+							"yVelocity": 10,
+							"startingPositionX": 0,
+							"startingPositionY": 128,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": true,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 100,
+							"parentSheetIndex": 0,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 10,
+							"yVelocity": 0,
+							"startingPositionX": 0,
+							"startingPositionY": 128,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": true,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 100,
+							"parentSheetIndex": 0,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -10,
+							"yVelocity": 0,
+							"startingPositionX": 0,
+							"startingPositionY": 128,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": true,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 100,
+							"parentSheetIndex": 0,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": -7,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 128,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": true,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+						{
+							"damage": 100,
+							"parentSheetIndex": 0,
+							"bouncesTillDestruct": 0,
+							"tailLength": 1,
+							"rotationVelocity": 1,
+							"xVelocity": 7,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 128,
+							"collisionSound": "",
+							"firingSound": "",
+							"explode": true,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": false,
+						},
+
+					]
+				},
+			]
+		},*/
+	]
+}
