@@ -45,7 +45,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "{{Random: cm:FallInRidgeside, fall1, fall2, fall3}}"
+				"Music": "{{Random: {{FallRidgesideMusic}}, fall1, fall2, fall3}}"
 				},
 			"When": {
 				"Weather": "Sun",
@@ -60,7 +60,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "{{Random: winter1, winter2, winter3, cm:WinterMountain}}"
+				"Music": "{{Random: winter1, winter2, winter3, {{WinterRidgesideMusic}}}}"
 				},
 			"When": {
 				"Weather": "Sun",
@@ -106,7 +106,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"MapProperties": {
-				"Music": "cm:AweAmbience"
+				"Music": "AweAmbience"
 				},
 			"When": {
 				"Time": "{{Range: 1900, 2400}}",
@@ -157,7 +157,7 @@
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_AguarCave, Maps/Custom_Ridgeside_AguarCaveTemporary",
 			"MapProperties": {
-				"Music": "cm:CaveDrip"
+				"Music": "CaveDrip"
 				},
 			"When": {
 				"EnableRidgesideMusic": true

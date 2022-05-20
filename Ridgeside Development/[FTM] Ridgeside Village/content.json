@@ -5,10 +5,7 @@
   "MonsterSpawnEnabled": true,
   "Forage_Spawn_Settings": {
     "Areas": [
-
-//===============================================================
-//Start Hike Forage Data
-//===============================================================
+      // The Hike - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -51,9 +48,9 @@
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
         "ExcludeCoordinates": [
-          "0, 37; 79, 39",
-          "0, 0; 42, 13",
-          "43, 0; 79, 16"
+          "0,37/79,39",
+          "0,0/42,13",
+          "43,0/79,16"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -71,18 +68,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Hike Forage Data
-//===============================================================
 
-//===============================================================
-//Start Ridgeside Village Forage Data
-//===============================================================
+      // Ridgeside Village - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -119,39 +112,39 @@
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
         "ExcludeCoordinates": [
-          "0,127;103,129",
-          "0,0;2,129",
-          "0,0; 8, 22",
-          "9, 0; 30, 17",
-          "31, 0; 47, 14",
-          "48,0; 59, 18",
-          "60, 0;72, 15",
-          "73, 0; 86, 7",
-          "107,0; 139, 15",
-          "140, 0; 149, 20",
-          "138, 31; 149, 51",
-          "143, 55;149, 68",
-          "146, 81; 149, 93",
-          "145, 94; 149, 105",
-          "104, 128; 130, 129",
-          "3, 21; 9,41",
-          "10, 38; 25,45",
-          "18, 46; 25, 50",
-          "45, 28; 125, 50",
-          "65, 51; 144, 65",
-          "81, 79; 114, 89",
-          "129, 78; 143, 87",
-          "107, 62; 128, 78",
-          "79, 6; 97, 28",
-          "109, 23; 124, 29",
-          "125, 24; 149, 25",
-          "30, 88; 35, 93",
-          "126, 39; 137, 51",
-          "95, 0; 101, 24",
-          "101, 27; 103, 27",
-          "88, 107; 104, 113",
-          "96,114; 112, 119",
-          "102, 120; 127, 127"
+          "0,127/103,129",
+          "0,0/2,129",
+          "0,0/8,22",
+          "9,0/30,17",
+          "31,0/47,14",
+          "48,0/59,18",
+          "60,0/72,15",
+          "73,0/86,7",
+          "107,0/139,15",
+          "140,0/149,20",
+          "138,31/149,51",
+          "143,55/149,68",
+          "146,81/149,93",
+          "145,94/149,105",
+          "104,128/130,129",
+          "3,21/9,41",
+          "10,38/25,45",
+          "18,46/25,50",
+          "45,28/125,50",
+          "65,51/144,65",
+          "81,79/114,89",
+          "129,78/143,87",
+          "107,62/128,78",
+          "79,6/97,28",
+          "109,23/124,29",
+          "125,24/149,25",
+          "30,88/35,93",
+          "126,39/137,51",
+          "95,0/101,24",
+          "101,27/103,27",
+          "88,107/104,113",
+          "96,114/112,119",
+          "102,120/127,127"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -169,18 +162,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Ridgeside Village Forage Data
-//===============================================================
 
-//===============================================================
-//Start Ridge Forage Data
-//===============================================================
+      // The Ridge - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -223,12 +212,12 @@
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
         "ExcludeCoordinates": [
-          "0, 0; 30, 7",
-          "0,0; 25, 13",
-          "34,0; 79, 20",
-          "66, 21; 79, 25",
-          "43, 38; 78, 39",
-          "14, 37; 37,39"
+          "0, 0/30, 7",
+          "0,0/25, 13",
+          "34,0/79, 20",
+          "66, 21/79, 25",
+          "43, 38/78, 39",
+          "14, 37/37,39"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -246,44 +235,40 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Ridge Forage Data
-//===============================================================
 
-//===============================================================
-//Start Ridge Falls Forage Data
-//===============================================================
+      // Ridge Falls - RSV Forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
           "Mountain Arugula",
           "Ridge Azorean Flower",
-          "Ridgeside Monkshood",
+          "Ridgeside Monkshood"
         ],
         "SummerItemIndex": [
           "Mountain Chico",
           "Ridge Wild Apple",
           "Forest Amancay",
           "Mountain Hokkaido",
-          "Violet Devil's Claw",
+          "Violet Devil's Claw"
         ],
         "FallItemIndex": [
           "Autumn Drop Berry",
           "Highland Chard",
           "Lava Lily",
           "Summit Snowbell",
-          "Highland Butterwort",
+          "Highland Butterwort"
         ],
         "WinterItemIndex": [
           "Frost Clump Berry",
           "Ridgeside Clementine",
           "Aurorean Iris",
-          "Sierra Wintergreen",
+          "Sierra Wintergreen"
         ],
         "UniqueAreaID": "RSV RidgeFalls Forage",
         "MapName": "Custom_Ridgeside_RidgeFalls",
@@ -295,8 +280,8 @@
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
         "ExcludeCoordinates": [
-          "11, 40; 19, 48",
-          "33, 20; 44, 36"
+          "11, 40/19, 48",
+          "33, 20/44, 36"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -314,84 +299,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Ridge Falls Forage Data
-//===============================================================
 
-//===============================================================
-//Start Foxbloom
-//===============================================================
-      {
-        "SpringItemIndex": [
-          "Foxbloom"
-        ],
-        "SummerItemIndex": [
-          "Foxbloom"
-        ],
-        "FallItemIndex": [
-          "Foxbloom"
-        ],
-        "WinterItemIndex": [
-          "Foxbloom"
-        ],
-        "UniqueAreaID": "RSV Foxbloom RidgeForest",
-        "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 1,
-        "MaximumSpawnsPerDay": 1,
-        "IncludeTerrainTypes": [
-          "Grass"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [
-          "54, 22",
-          "153, 21",
-          "32, 79",
-          "158, 60",
-          "33, 110",
-          "61, 95",
-          "162, 123",
-        ],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "High",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 600,
-          "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": null,
-          "OnlySpawnIfAPlayerIsPresent": false,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [
-            "1", "28"
-          ],
-          "WeatherYesterday": [],
-          "WeatherToday": [
-            "Sun"
-          ],
-          "WeatherTomorrow": [],
-          "EPUPreconditions": [
-            "HasItem Relic Fox Mask" 
-          ],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-//===============================================================
-//End Foxbloom
-//===============================================================
-
-//===============================================================
-//Start Ridge Forest Forage Data
-//===============================================================
-//Ridge Forest Forage  
+      // Ridge Forest - RSV + vanilla forage
       {
         "SpringItemIndex": [
           "Ridge Cherry",
@@ -437,7 +352,195 @@
         ],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99",
+          "84,126/84,126",
+          "37,96/37,96",
+          "18,76/18,76",
+          "146,99/146,99",
+          "108,58/108,58",
+          "118,44/118,44",
+          "58,11/58,11"
+        ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
           "StartTime": 600,
@@ -454,13 +557,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-//Ridge Forest Treasures
+      // Ridge Forest - Treasure items
       {
         "SpringItemIndex": [
           74,
@@ -499,7 +603,195 @@
         ],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99",
+          "84,126/84,126",
+          "37,96/37,96",
+          "18,76/18,76",
+          "146,99/146,99",
+          "108,58/108,58",
+          "118,44/118,44",
+          "58,11/58,11"
+        ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
           "StartTime": 600,
@@ -516,13 +808,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 7
       },
 
-      //Ridge Forest - Mistbloom Spawn
+      // Ridge Forest - Mountain Mistbloom
       {
         "SpringItemIndex": [
           "Mountain Mistbloom"
@@ -536,16 +829,197 @@
         "WinterItemIndex": [
           "Mountain Mistbloom"
         ],
-        "UniqueAreaID": "RSV Mistbloom",
+        "UniqueAreaID": "RSV Ridge Forest Mistbloom",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 5,
-        "MaximumSpawnsPerDay": 10,
+        "MinimumSpawnsPerDay": 7,
+        "MaximumSpawnsPerDay": 15,
         "IncludeTerrainTypes": [
           "Grass"
         ],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99"
+        ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
           "StartTime": 600,
@@ -560,15 +1034,19 @@
           "Seasons": [],
           "Days": [],
           "WeatherYesterday": [],
-          "WeatherToday": ["Rain", "Storm"],
+          "WeatherToday": [
+            "Rain",
+            "Storm"
+          ],
           "WeatherTomorrow": [],
-          "EPUPreconditions": ["e 75160254"],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-//Yellow Wood Sculpture
+      // Ridge Forest - Yellow Wood Sculpture
       {
         "SpringItemIndex": [
           "Yellow Wood Sculpture"
@@ -607,16 +1085,19 @@
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [
-            "Rain", "Storm", "Snow"
+            "Rain",
+            "Storm",
+            "Snow"
           ],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-//Silver Fish Bones
+      // Ridge Forest - Silver Fish Bones
       {
         "SpringItemIndex": [
           "Silver Fish Bones"
@@ -670,13 +1151,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-//Inked Fossil
+      // Ridge Forest - Inked Fossil
       {
         "SpringItemIndex": [
           "Inked Fossil"
@@ -730,13 +1212,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-//Nightblack Diamond
+      // Ridge Forest - Nighblack Diamond
       {
         "SpringItemIndex": [
           "Nightblack Diamond"
@@ -781,13 +1264,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-//Shell Bracelet
+      // Ridge Forest - Shell Bracelet
       {
         "SpringItemIndex": [
           "Shell Bracelet"
@@ -808,7 +1292,7 @@
         "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [
-          "42,12/42,12",
+          "42,12/42,12"
         ],
         "ExcludeCoordinates": [],
         "StrictTileChecking": "None",
@@ -826,18 +1310,223 @@
           "Days": [],
           "WeatherYesterday": [],
           "WeatherToday": [
-            "Rain", "Storm", "Snow"
+            "Rain",
+            "Storm",
+            "Snow"
           ],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
-//===============================================================
-//End Ridge Forest Forage Data
-//===============================================================
 
+      // Aguar's cave - Fruit version
+      {
+        "SpringItemIndex": [
+          "Cherry Pluot",
+          "Mountain Plumcot",
+          "Desert Tangelo",
+          "Paradise Rangpur",
+          "Tropi Ugli Fruit",
+          "Ember Blood Lime",
+          "Highland Jostaberry",
+          "Northern Limequat",
+          "Ridge Cherry",
+          "Mountain Chico",
+          "Ridge Wild Apple",
+          "Autumn Drop Berry",
+          "Frost Clump Berry",
+          "Ridgeside Clementine"
+        ],
+        "SummerItemIndex": [
+          "Cherry Pluot",
+          "Mountain Plumcot",
+          "Desert Tangelo",
+          "Paradise Rangpur",
+          "Tropi Ugli Fruit",
+          "Ember Blood Lime",
+          "Highland Jostaberry",
+          "Northern Limequat",
+          "Ridge Cherry",
+          "Mountain Chico",
+          "Ridge Wild Apple",
+          "Autumn Drop Berry",
+          "Frost Clump Berry",
+          "Ridgeside Clementine"
+        ],
+        "FallItemIndex": [
+          "Cherry Pluot",
+          "Mountain Plumcot",
+          "Desert Tangelo",
+          "Paradise Rangpur",
+          "Tropi Ugli Fruit",
+          "Ember Blood Lime",
+          "Highland Jostaberry",
+          "Northern Limequat",
+          "Ridge Cherry",
+          "Mountain Chico",
+          "Ridge Wild Apple",
+          "Autumn Drop Berry",
+          "Frost Clump Berry",
+          "Ridgeside Clementine"
+        ],
+        "WinterItemIndex": [
+          "Cherry Pluot",
+          "Mountain Plumcot",
+          "Desert Tangelo",
+          "Paradise Rangpur",
+          "Tropi Ugli Fruit",
+          "Ember Blood Lime",
+          "Highland Jostaberry",
+          "Northern Limequat",
+          "Ridge Cherry",
+          "Mountain Chico",
+          "Ridge Wild Apple",
+          "Autumn Drop Berry",
+          "Frost Clump Berry",
+          "Ridgeside Clementine"
+        ],
+        "UniqueAreaID": "Aguar Fruit Cave",
+        "MapName": "Custom_Ridgeside_AguarCave",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "3,6/7,10",
+          "12,6/16,10",
+          "3,16/7,20",
+          "12,16/16,20"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [
+            "q 751600642/r 0.75"
+          ],
+        },
+        "DaysUntilSpawnsExpire": 14
+      },
+
+      // Aguar's cave - Flower version
+      {
+        "SpringItemIndex": [
+          "Foxbloom",
+          "Mountain Mistbloom",
+          "Ridge Azorean Flower",
+          "Ridgeside Monkshood",
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
+          "Aurorean Iris",
+          "Sierra Wintergreen",
+          "Mountain Arugula",
+          "Highland Chard"
+        ],
+        "SummerItemIndex": [
+          "Foxbloom",
+          "Mountain Mistbloom",
+          "Ridge Azorean Flower",
+          "Ridgeside Monkshood",
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
+          "Aurorean Iris",
+          "Sierra Wintergreen",
+          "Mountain Arugula",
+          "Highland Chard"
+        ],
+        "FallItemIndex": [
+          "Foxbloom",
+          "Mountain Mistbloom",
+          "Ridge Azorean Flower",
+          "Ridgeside Monkshood",
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
+          "Aurorean Iris",
+          "Sierra Wintergreen",
+          "Mountain Arugula",
+          "Highland Chard"
+        ],
+        "WinterItemIndex": [
+          "Foxbloom",
+          "Mountain Mistbloom",
+          "Ridge Azorean Flower",
+          "Ridgeside Monkshood",
+          "Forest Amancay",
+          "Mountain Hokkaido",
+          "Violet Devil's Claw",
+          "Lava Lily",
+          "Summit Snowbell",
+          "Highland Butterwort",
+          "Aurorean Iris",
+          "Sierra Wintergreen",
+          "Mountain Arugula",
+          "Highland Chard"
+        ],
+        "UniqueAreaID": "Aguar Flower Cave",
+        "MapName": "Custom_Ridgeside_AguarCave",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "3,6/7,10",
+          "12,6/16,10",
+          "3,16/7,20",
+          "12,16/16,20"
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [
+            "q 751600641/r 0.75"
+          ],
+        },
+        "DaysUntilSpawnsExpire": 14
+      }
     ],
     "PercentExtraSpawnsPerForagingLevel": 0,
     "SpringItemIndex": [
@@ -863,8 +1552,7 @@
   },
   "Large_Object_Spawn_Settings": {
     "Areas": [
-
-      //Spawn log to block ridgeforest
+      // Ridge - Log blocking Ridge Forest
       {
         "ObjectTypes": [
           "Log"
@@ -898,18 +1586,21 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 0
       },
-
-      //Spawn large objects on SummitFarm
+      // Summit Farm - initial large debris
       {
         "ObjectTypes": [
-          "Log", "Boulder"
+          "Log",
+          "Boulder"
         ],
         "FindExistingObjectLocations": false,
+        "PercentExtraSpawnsPerSkillLevel": 0,
+        "RelatedSkill": "Foraging",
         "UniqueAreaID": "Summit Farm large objects",
         "MapName": "Custom_Ridgeside_SummitFarm",
         "MinimumSpawnsPerDay": 0,
@@ -936,7 +1627,9 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 0
       }
@@ -945,6 +1638,7 @@
   },
   "Ore_Spawn_Settings": {
     "Areas": [
+      // Ridge Forest - Mining areas
       {
         "MiningLevelRequired": null,
         "StartingSpawnChance": null,
@@ -991,11 +1685,12 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
-      },
+      }
     ],
     "PercentExtraSpawnsPerMiningLevel": 0,
     "MiningLevelRequired": {
@@ -1060,11 +1755,7 @@
   "Monster_Spawn_Settings": {
     "Areas": [
 
-//=====================================
-//Ridge Forest Monsters
-//=====================================
-  
-  //Ghost
+      // Ridge Forest - Ghosts
       {
         "MonsterTypes": [
           {
@@ -1077,7 +1768,7 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Ghost",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1092,9 +1783,9 @@
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
+          "EndTime": 2550,
           "MinimumTimeBetweenSpawns": 20,
-          "MaximumSimultaneousSpawns": 2,
+          "MaximumSimultaneousSpawns": 6,
           "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
@@ -1105,15 +1796,16 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
-            "!HasItem Pale Candelabrum" 
+            "!HasItem Pale Candelabrum"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-  //Corrupted Spirit
+      // Ridge Forest - Corrupted Spirits
       {
         "MonsterTypes": [
           {
@@ -1130,7 +1822,7 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1147,7 +1839,7 @@
           "StartTime": 600,
           "EndTime": 2300,
           "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 2,
+          "MaximumSimultaneousSpawns": 6,
           "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
@@ -1158,15 +1850,16 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
-            "!HasItem Pale Candelabrum" 
+            "!HasItem Pale Candelabrum"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-  //Wraith
+      // Ridge Forest - Wraiths
       {
         "MonsterTypes": [
           {
@@ -1179,11 +1872,12 @@
               "DodgeChance": 30,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVWraith",
+              "EXP": 12,
               "Loot": [
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Wraith",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1198,9 +1892,9 @@
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
+          "EndTime": 2550,
           "MinimumTimeBetweenSpawns": 20,
-          "MaximumSimultaneousSpawns": 2,
+          "MaximumSimultaneousSpawns": 6,
           "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
@@ -1211,16 +1905,16 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
-            "!HasItem Everfrost Stone" 
+            "!HasItem Everfrost Stone"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-  //Viperial
-   //Golden Skull Coral and Entombed Ring
+      // Ridge Forest - Viperials
       {
         "MonsterTypes": [
           {
@@ -1233,13 +1927,14 @@
               "DodgeChance": 0,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVViperial",
+              "EXP": 34,
               "Loot": [
                 "Spiritual Essence",
                 "Golden Skull Coral",
                 "Entombed Ring"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Viperial",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1250,12 +1945,432 @@
         ],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99"
+        ],
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
+          "EndTime": 2550,
           "MinimumTimeBetweenSpawns": 50,
+          "MaximumSimultaneousSpawns": 5,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [
+            "!HasItem Ancient Music Box"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+
+
+      // Ridge Forest - Extra Viperials
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "pepper rex",
+            "Settings": {
+              "SpawnWeight": 4,
+              "HP": 3000,
+              "Damage": 30,
+              "SeesPlayersAtSpawn": false,
+              "DodgeChance": 0,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVViperial",
+              "EXP": 34,
+              "Loot": [
+                "Spiritual Essence",
+                "Golden Skull Coral",
+                "Entombed Ring"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "RSV RidgeForest Extra Viperials",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 10,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99"
+        ],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 2200,
+          "EndTime": 2530,
+          "MinimumTimeBetweenSpawns": 20,
           "MaximumSimultaneousSpawns": 1,
           "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
@@ -1267,15 +2382,18 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {
+            "SkillLevel:Combat": "8, 9, 10"
+          },
           "EPUPreconditions": [
-            "!HasItem Ancient Music Box" 
+            "!HasItem Ancient Music Box"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
       },
 
-  //Serpentine Beasts
+      // Ridge Forest - Serpentine Beasts
       {
         "MonsterTypes": [
           {
@@ -1288,6 +2406,7 @@
               "DodgeChance": 10,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVBeast1",
+              "EXP": 15,
               "Loot": [
                 "Spiritual Essence"
               ]
@@ -1303,6 +2422,7 @@
               "DodgeChance": 10,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVBeast2",
+              "EXP": 20,
               "Loot": [
                 "Spiritual Essence"
               ]
@@ -1318,11 +2438,12 @@
               "DodgeChance": 10,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVBeast3",
+              "EXP": 26,
               "Loot": [
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest Beasts",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -1333,13 +2454,194 @@
         ],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99"
+        ],
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
+          "EndTime": 2550,
           "MinimumTimeBetweenSpawns": 20,
-          "MaximumSimultaneousSpawns": 2,
+          "MaximumSimultaneousSpawns": 6,
           "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
@@ -1350,15 +2652,16 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
-            "!HasItem Village Hero Sculpture" 
+            "!HasItem Village Hero Sculpture"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
       },
 
-  //Wild Monsters
+      // Ridge Forest - Wildneress Golems
       {
         "MonsterTypes": [
           {
@@ -1390,13 +2693,194 @@
         ],
         "ExcludeTerrainTypes": [],
         "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99"
+        ],
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
+          "EndTime": 2550,
           "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 5,
+          "MaximumSimultaneousSpawns": 9,
           "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
@@ -1407,23 +2891,20 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
       },
 
-//=====================================
-//Spirit Realm Monsters - Corrupted
-//=====================================
-  
-  //Corrupted Spirit
+      // Spirit Realm - Corrupted Spirits
       {
         "MonsterTypes": [
           {
             "MonsterName": "ghost",
             "Settings": {
-              "SpawnWeight": 4,
+              "SpawnWeight": 3,
               "HP": 100,
               "Damage": 30,
               "SeesPlayersAtSpawn": false,
@@ -1434,12 +2915,12 @@
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 50,
-        "MaximumSpawnsPerDay": 50,
+        "MinimumSpawnsPerDay": 15,
+        "MaximumSpawnsPerDay": 20,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1449,10 +2930,10 @@
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 10,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 40,
           "MaximumSimultaneousSpawns": 2,
-          "OnlySpawnIfAPlayerIsPresent": false,
+          "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
         "ExtraConditions": {
@@ -1462,6 +2943,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
             "k 75160263"
           ],
@@ -1470,7 +2952,7 @@
         "DaysUntilSpawnsExpire": 1
       },
 
-  //Wraith
+      // Spirit Realm - Wraiths
       {
         "MonsterTypes": [
           {
@@ -1483,16 +2965,17 @@
               "DodgeChance": 30,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVWraith",
+              "EXP": 12,
               "Loot": [
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Wraith",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 30,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 15,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1502,10 +2985,10 @@
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 20,
-          "MaximumSimultaneousSpawns": 2,
-          "OnlySpawnIfAPlayerIsPresent": false,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 70,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": true,
           "SpawnSound": ""
         },
         "ExtraConditions": {
@@ -1515,6 +2998,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
             "k 75160263"
           ],
@@ -1523,41 +3007,46 @@
         "DaysUntilSpawnsExpire": 1
       },
 
-  //Viperial
+      // Spirit Realm - Viperials
       {
         "MonsterTypes": [
           {
             "MonsterName": "pepper rex",
             "Settings": {
-              "SpawnWeight": 1,
+              "SpawnWeight": 2,
               "HP": 2000,
               "Damage": 20,
               "SeesPlayersAtSpawn": false,
               "DodgeChance": 0,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVViperial",
+              "EXP": 34,
               "Loot": [
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Viperial",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 3,
-        "MaximumSpawnsPerDay": 8,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [],
         "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
+        "IncludeCoordinates": [
+          "94,64/94,64",
+          "97,21/97,21",
+          "42,12/42,12",
+          "7,21/7,21",
+          "3,68/3,68"
+        ],
         "ExcludeCoordinates": [],
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
-          "MinimumTimeBetweenSpawns": 30,
-          "MaximumSimultaneousSpawns": 1,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },
@@ -1568,6 +3057,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
             "k 75160263"
           ],
@@ -1576,19 +3066,20 @@
         "DaysUntilSpawnsExpire": 1
       },
 
-  //Beasts
+      // Spirit Realm - Serpentine Beasts
       {
         "MonsterTypes": [
           {
             "MonsterName": "shadow brute",
             "Settings": {
-              "SpawnWeight": 2,
+              "SpawnWeight": 4,
               "HP": 400,
               "Damage": 15,
               "SeesPlayersAtSpawn": false,
               "DodgeChance": 10,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVBeast1",
+              "EXP": 15,
               "Loot": [
                 "Spiritual Essence"
               ]
@@ -1604,6 +3095,7 @@
               "DodgeChance": 10,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVBeast2",
+              "EXP": 20,
               "Loot": [
                 "Spiritual Essence"
               ]
@@ -1619,16 +3111,17 @@
               "DodgeChance": 10,
               "RelatedSkill": "Combat",
               "Sprite": "Characters/Monsters/RSVBeast3",
+              "EXP": 26,
               "Loot": [
                 "Spiritual Essence"
               ]
             }
-          },
+          }
         ],
         "UniqueAreaID": "RSV SpiritRealm Beasts",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
-        "MinimumSpawnsPerDay": 50,
-        "MaximumSpawnsPerDay": 50,
+        "MinimumSpawnsPerDay": 30,
+        "MaximumSpawnsPerDay": 40,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -1638,9 +3131,9 @@
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
           "StartTime": 600,
-          "EndTime": 2300,
+          "EndTime": 600,
           "MinimumTimeBetweenSpawns": 10,
-          "MaximumSimultaneousSpawns": 2,
+          "MaximumSimultaneousSpawns": null,
           "OnlySpawnIfAPlayerIsPresent": false,
           "SpawnSound": ""
         },
@@ -1651,14 +3144,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "CPConditions": {},
           "EPUPreconditions": [
             "k 75160263"
           ],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
-      },
-      
+      }
     ],
     "CustomTileIndex": []
   },

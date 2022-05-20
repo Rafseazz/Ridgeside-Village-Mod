@@ -71,9 +71,9 @@
 
 			"Paula": "{{i18n:Gift.Love.Paula}}/{{spacechase0.JsonAssets/ObjectId:Crunchy Bagel}} {{spacechase0.JsonAssets/ObjectId:Arugula Roll}} {{spacechase0.JsonAssets/ObjectId:Ridgeside Shaketini}}/{{i18n:Gift.Like.Paula}}/{{spacechase0.JsonAssets/ObjectId:Fluffy Apple Crumble}} {{spacechase0.JsonAssets/ObjectId:Pillowsoft Cheezy Sandwich}} {{spacechase0.JsonAssets/ObjectId:Snow Bowl Surprise}} 250/{{i18n:Gift.Dislike.Paula}}/306 260 605 906/{{i18n:Gift.Hate.Paula}}/729 921 247 445/{{i18n:Gift.Neutral.Paula}}/-4/ ",
 
-			"Carmen": "{{i18n:Gift.Love.Carmen}}/-4 {{spacechase0.JsonAssets/ObjectId:Snowball Slurpee}} {{spacechase0.JsonAssets/ObjectId:Wild Apple Juice}} {{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}}/{{i18n:Gift.Like.Carmen}}/{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Highland Ice Cream}} {{spacechase0.JsonAssets/ObjectId:Snow Bowl Surprise}} 222/{{i18n:Gift.Dislike.Carmen}}/607/{{i18n:Gift.Hate.Carmen}}/905/{{i18n:Gift.Neutral.Carmen}}// ",
+			"Carmen": "{{i18n:Gift.Love.Carmen}}/-4 142 {{spacechase0.JsonAssets/ObjectId:Snowball Slurpee}} {{spacechase0.JsonAssets/ObjectId:Wild Apple Juice}} {{spacechase0.JsonAssets/ObjectId:Crimson Spiked Clam}}/{{i18n:Gift.Like.Carmen}}/{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Highland Ice Cream}} {{spacechase0.JsonAssets/ObjectId:Snow Bowl Surprise}} 222/{{i18n:Gift.Dislike.Carmen}}/607/{{i18n:Gift.Hate.Carmen}}/905/{{i18n:Gift.Neutral.Carmen}}// ",
 
-			"Blair": "{{i18n:Gift.Love.Blair}}/-4 459 {{spacechase0.JsonAssets/ObjectId:Kek's Small Dream}} {{spacechase0.JsonAssets/ObjectId:Pillowsoft Cheezy Sandwich}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}}/{{i18n:Gift.Like.Blair}}/{{spacechase0.JsonAssets/ObjectId:Highland Blueberry Pie}} {{spacechase0.JsonAssets/ObjectId:Highland Ice Cream}} {{spacechase0.JsonAssets/ObjectId:Wild Apple Juice}} {{spacechase0.JsonAssets/ObjectId:Honey Glazed Salad}}/{{i18n:Gift.Dislike.Blair}}/614/{{i18n:Gift.Hate.Blair}}//{{i18n:Gift.Neutral.Blair}}// ",
+			"Blair": "{{i18n:Gift.Love.Blair}}/-4 142 459 {{spacechase0.JsonAssets/ObjectId:Kek's Small Dream}} {{spacechase0.JsonAssets/ObjectId:Pillowsoft Cheezy Sandwich}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}}/{{i18n:Gift.Like.Blair}}/{{spacechase0.JsonAssets/ObjectId:Highland Blueberry Pie}} {{spacechase0.JsonAssets/ObjectId:Highland Ice Cream}} {{spacechase0.JsonAssets/ObjectId:Wild Apple Juice}} {{spacechase0.JsonAssets/ObjectId:Honey Glazed Salad}}/{{i18n:Gift.Dislike.Blair}}/614/{{i18n:Gift.Hate.Blair}}//{{i18n:Gift.Neutral.Blair}}// ",
 
 			"Lorenzo": "{{i18n:Gift.Love.Lorenzo}}/{{spacechase0.JsonAssets/ObjectId:Forage Souffle}} {{spacechase0.JsonAssets/ObjectId:Sweet Cranberry Cheesecake}} {{spacechase0.JsonAssets/ObjectId:Arugula Roll}} 224/{{i18n:Gift.Like.Lorenzo}}/{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}}/{{i18n:Gift.Dislike.Lorenzo}}/342/{{i18n:Gift.Hate.Lorenzo}}//{{i18n:Gift.Neutral.Lorenzo}}/-4/ ",
 
@@ -95,6 +95,8 @@
 
 			//"Bliss": "{{i18n:Gift.Love.Bliss}}/{{spacechase0.JsonAssets/ObjectId:Wild Apple Juice}}/{{i18n:Gift.Like.Bliss}}/400/{{i18n:Gift.Dislike.Bliss}}/304/{{i18n:Gift.Hate.Bliss}}/-80/{{i18n:Gift.Neutral.Bliss}}/-4/ ",
 
+			"Torts": "{{i18n:Gift.Love.Torts}}/107 910 454/{{i18n:Gift.Like.Torts}}/218 203 {{spacechase0.JsonAssets/ObjectId:Pale Candelabrum}} {{spacechase0.JsonAssets/ObjectId:Village Hero Sculpture}} {{spacechase0.JsonAssets/ObjectId:Everfrost Stone}} {{spacechase0.JsonAssets/ObjectId:Ancient Music Box}}/{{i18n:Gift.Dislike.Torts}}/-2 -4 -5 -6 -7 -12 -17 -23 -26 -74 -75 -79 -80 -81 72 194 216 262 279 304 395 440 444 459 613 634 635 636 637 638 724 797 815 873/{{i18n:Gift.Hate.Torts}}/-15 -26 -27 446/{{i18n:Gift.Neutral.Torts}}/199 219 236 456/ ",
+
 
 		},
 	},
@@ -104,7 +106,7 @@
 		"Action": "EditData",
 		"Target": "Data/NPCGiftTastes",
 		"When": {
-			"HasSeenEvent": 75160265,
+			"HasSeenEvent: hostPlayer": 75160263,
 		},
 		"Entries": {
 
@@ -125,6 +127,19 @@
 		"Entries": {
 
 			"Undreya": "{{i18n:Gift.Love.Undreya}}/73 124 125 336 384 928/{{i18n:Gift.Like.Undreya}}/-2/{{i18n:Gift.Dislike.Undreya}}/-4/{{i18n:Gift.Hate.Undreya}}/227/{{i18n:Gift.Neutral.Undreya}}/-20/ ",
+		},
+	},
+
+	{
+		"LogName": "Gift tastes - Torts Realm version",
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"When": {
+			"HasSeenEvent": 75160287,
+			"Day": "1, 28",
+		},
+		"Entries": {
+			"Torts": "{{i18n:Gift.Love.Torts.realm}}/107 910 454/{{i18n:Gift.Like.Torts.realm}}/218 203 {{spacechase0.JsonAssets/ObjectId:Pale Candelabrum}} {{spacechase0.JsonAssets/ObjectId:Village Hero Sculpture}} {{spacechase0.JsonAssets/ObjectId:Everfrost Stone}} {{spacechase0.JsonAssets/ObjectId:Ancient Music Box}}/{{i18n:Gift.Dislike.Torts.realm}}/-2 -4 -5 -6 -7 -12 -17 -23 -26 -74 -75 -79 -80 -81 72 194 216 262 279 304 395 440 444 459 613 634 635 636 637 638 724 797 815 873/{{i18n:Gift.Hate.Torts.realm}}/-15 -26 -27 446/{{i18n:Gift.Neutral.Torts.realm}}/199 219 236 456/ ",
 		},
 	},
 

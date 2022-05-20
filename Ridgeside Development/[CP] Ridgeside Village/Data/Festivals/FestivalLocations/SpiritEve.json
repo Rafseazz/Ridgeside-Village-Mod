@@ -7,16 +7,16 @@
    "Target": "Data/Festivals/fall27",
    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
    "TextOperations": [
-   
+
    //SetUp
 		{
          "Operation": "Append",
          "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 22 100 down/Alissa 15 25 left/Bert 23 64 down/Corine 37 69 left/Ezekiel 37 70 left/Flor 34 36 up/Freddie 25 58 right/Ian 27 53 down/Jeric 31 64 right/Jio 34 4 down/Keahi 24 73 up/Kenneth 36 74 right/Kiwi 33 4 down/Lenny 27 69 down/Lola 25 57 right/Maddie 20 47 up/Olga 22 64 right/Philip 27 50 left/Pika 31 72 right/Richard 28 72 left/Shiro 23 50 down/Trinnie 23 72 right/Ysabelle 28 64 left/Yuuma 23 74 left",
+         "Value": "Aguar 22 100 down/Alissa 15 25 left/Bert 23 64 down/Corine 37 69 left/Ezekiel 37 70 left/Flor 34 36 up/Freddie 25 58 right/Ian 27 53 down/Jeric 31 64 right/Keahi 24 73 up/Kenneth 36 74 right/Lenny 27 69 down/Lola 25 57 right/Maddie 20 47 up/Olga 22 64 right/Philip 27 50 left/Pika 31 72 right/Richard 28 72 left/Shiro 23 50 down/Trinnie 23 72 right/Ysabelle 28 64 left/Yuuma 23 74 left",
          "Delimiter": "/"
 		},
 
-	]	
+	]
 	},
 
 	//2.0 Pips spots! THE TRUE RSV EXPERIENCE!
@@ -26,7 +26,7 @@
         "Target": "Data/Festivals/fall27",
         "When": {
             "FullFestivals": true,
-            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false            
+            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
         },
         "TextOperations": [
             {
@@ -72,6 +72,41 @@
         ]
     },
 
-	
+		{
+        //Jio and Kiwi
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+					"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
+          "HasSeenEvent|contains=75160377, 75160187": true,
+					"HasSeenEvent|contains=75160188": true,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 34 4 down/Kiwi 33 4 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    //Torts
+    {
+      "LogName": "Torts Spirit's Eve Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 27 52 3",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
+
 ]
 }

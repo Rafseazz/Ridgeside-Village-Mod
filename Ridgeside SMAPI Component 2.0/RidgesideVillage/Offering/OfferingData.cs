@@ -69,9 +69,29 @@ namespace RidgesideVillage.Offering
                 {
                     break;
                 }
-                if (pair.Value is HoeDirt dirt && dirt.crop != null && !dirt.crop.fullyGrown.Value && Game1.random.NextDouble() < 0.1)
+                if (pair.Value is HoeDirt dirt && dirt.crop != null && !dirt.crop.fullyGrown.Value)
                 {
-                    dirt.crop.growCompletely();
+                    Crop crop = dirt.crop;
+
+                    if (crop.isWildSeedCrop())
+                    {
+                        int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
+                        Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                        {
+                            IsSpawnedObject = true,
+                            CanBeGrabbed = true
+                        });
+                        Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                        crop = null;
+                        dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+                    }
+                    else
+                    {
+                        crop.growCompletely();
+                        Log.Verbose($"RSV: Regular crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                    }
+                        
+                        
                     n++;
                 }
             }

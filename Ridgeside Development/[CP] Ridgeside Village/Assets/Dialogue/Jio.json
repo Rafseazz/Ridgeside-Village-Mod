@@ -23,7 +23,7 @@
    
    "Action": "EditData",
    "Target": "Characters/Dialogue/Jio",
-   "When": { "HasSeenEvent": "75160264" },
+   "When": { "HasSeenEvent: hostPlayer": "75160263" },
    "Entries": {
    	"Introduction": "{{i18n:{{TargetWithoutPath}}.Dialogue.Introduction}}",
 
@@ -108,7 +108,6 @@
 	"Sat10": "{{i18n:Jio.Dialogue.Sat10}}",
 	"Sun10": "{{i18n:Jio.Dialogue.Sun10}}",
 
-/* Disabled because it doesn't fit well with their character
 //Special Dialogue
 	"MovieInvitation": "{{i18n:Jio.Dialogue.MovieInvitation}}",
 	
@@ -119,7 +118,7 @@
 	"Resort_Chair": "{{i18n:Jio.Dialogue.Resort_Chair}}",
 	"Resort_Bar": "{{i18n:Jio.Dialogue.Resort_Bar}}",
 	"Resort": "{{i18n:Jio.Dialogue.Resort}}",
-*/
+
 
 		},
 	},

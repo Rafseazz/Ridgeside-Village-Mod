@@ -22,6 +22,7 @@ namespace RidgesideVillage
         const string BIRTHDAYBOOKED = "RSV.BirthdayBooked.";
         const string ANNIVERSARYBOOKEDFLAG = "RSV.ReservedAnv";
         const string ANNIVERSARYTODAY = "RSV.AnvToday";
+        const string REWARDLETTER = "RichardSOLetter";
 
         const int ROOMPRICE = 500;
         const int WEDDINGPRICE = 2000;
@@ -41,6 +42,7 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("HotelCounter", HandleHotelCounterMenu);
             TileActionHandler.RegisterTileAction("EventHallCounter", HandleEventHallMenu);
             TileActionHandler.RegisterTileAction("RatesCounter", HandleRatesMenu);
+            TileActionHandler.RegisterTileAction("BlissBook", HandleBlissBook);
         }
 
         //Informs player where there room is upon entering the 2nd floor
@@ -66,6 +68,7 @@ namespace RidgesideVillage
             if (Game1.player.eventsSeen.Contains(75160245))
             {
                 Game1.player.eventsSeen.Remove(75160245);
+                Game1.player.eventsSeen.Remove(751602450);
                 Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
             }
 
@@ -85,8 +88,11 @@ namespace RidgesideVillage
             }
 
             //If it's after wedding day and the player didn't attend their booked Wedding Reception
-            if (!Game1.player.eventsSeen.Contains(75160245) && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isMarried())
+            if (!(Game1.player.eventsSeen.Contains(75160245) || Game1.player.eventsSeen.Contains(751602450))
+                && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isMarried())
             {
+                Game1.player.eventsSeen.Remove(75160245);
+                Game1.player.eventsSeen.Remove(751602450);
                 Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
             }
 
@@ -118,12 +124,13 @@ namespace RidgesideVillage
             //Removes anvtoday flag after next day
             if (Game1.player.mailReceived.Contains(ANNIVERSARYTODAY) && Game1.player.eventsSeen.Contains(75160248))
             {
-                Game1.player.mailReceived.Remove(ANNIVERSARYTODAY);
                 Game1.player.eventsSeen.Remove(75160248);
+                Game1.player.eventsSeen.Remove(751602480);
+                Game1.player.mailReceived.Remove(ANNIVERSARYTODAY);
             }
 
             //Adds ANNIVERSARYTODAY flag if it's the next day after booking
-            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
+            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG) && !Game1.player.mailReceived.Contains(ANNIVERSARYTODAY))
             {
                 Game1.player.mailReceived.Add(ANNIVERSARYTODAY);
             }
@@ -139,11 +146,49 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu = new DialogueBox(alertText);
                 }
             }
+
         }
 
         private static void HandleRatesMenu(string tileActionString = "")
         {
             Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("LogCabinHotel.Rates.Expanded"));
+        }
+
+        private static void HandleBlissBook(string tileActionString, Vector2 position)
+        {
+            var responses = new List<Response>
+            {
+                new Response("Aniv1st", Helper.Translation.Get("Aniv.1st")),
+                new Response("Aniv2nd", Helper.Translation.Get("Aniv.2nd")),
+                new Response("Aniv3rd", Helper.Translation.Get("Aniv.3rd")),
+                new Response("cancel", Helper.Translation.Get("Exit.Text"))
+            };
+            var responseActions = new List<Action>
+            {
+                delegate
+                {
+                    string translation;
+                    if (Helper.ModRegistry.IsLoaded("ZoeDoll.NPCLeilani"))
+                    {
+                        translation = Helper.Translation.Get("Aniv.Airyn-Leilani");
+                    }
+                    else
+                    {
+                        translation = Helper.Translation.Get("Aniv.Airyn");
+                    }
+                    Game1.activeClickableMenu = new LetterViewerMenu(translation);
+                },
+                delegate
+                {
+                    Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Aniv.ChickenNuggets"));
+                },
+                delegate
+                {
+                    Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("Aniv.Yri"));
+                },
+                delegate{}
+            };
+            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("BlissBook.Title"), responses, responseActions);
         }
 
         private static void HandleEventHallMenu(string tileActionString, Vector2 position)
@@ -161,7 +206,11 @@ namespace RidgesideVillage
         }
         private static void HandleHotelCounterMenu(string tileActionString = "")
         {
-            if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            if (Game1.player.mailReceived.Contains(REWARDLETTER))
+            {
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("HotelCounter.Booking.Free")));
+            }
+            else if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
             {
                 var responses = new List<Response>
                     {
@@ -173,7 +222,11 @@ namespace RidgesideVillage
                         delegate
                         {
                             Game1.player.Money -= ROOMPRICE;
-                            Game1.player.mailReceived.Add(ROOMBOOKEDFLAG);
+                            // All players can go bc fuck multiplayer
+                            foreach(Farmer player in Game1.getAllFarmers())
+                            {
+                                player.mailReceived.Add(ROOMBOOKEDFLAG);
+                            }
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AfterBooking"));
                         },
                         delegate { }
@@ -334,11 +387,11 @@ namespace RidgesideVillage
 
             foreach (NPC k in Utility.getAllCharacters())
             {
-                Log.Debug($"checking {k?.Name}, {k?.Birthday_Season}");
+                //Log.Debug($"checking {k?.Name}, {k?.Birthday_Season}");
                 if (k.isVillager() && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && (Game1.player.friendshipData.ContainsKey(k.Name)))
                 {
 
-                    SDate birthday = new SDate(k.Birthday_Day, k.Birthday_Season);
+                    SDate birthday = new SDate(k.Birthday_Day, k.Birthday_Season.ToLower());
                     if(birthday < todaysDate)
                     {
                         //if birthday in the past, add a year

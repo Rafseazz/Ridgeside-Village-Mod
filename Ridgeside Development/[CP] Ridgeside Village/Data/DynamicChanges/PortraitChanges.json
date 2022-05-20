@@ -3,8 +3,8 @@
 
 	/*********
 	** Portrait Changes
-	*********/	
-	
+	*********/
+
 	{
 		"LogName": "Corine Ninja Outfit Portrait",
 		"Action": "EditImage",
@@ -34,7 +34,22 @@
 		"Action": "EditImage",
 		"Target": "Portraits/Jio",
 		"FromFile": "Assets/Portraits/Jio_Unmask.png",
-		"When": { "RandomNumber": "{{Range: 4,6}}" }
+		"When": {
+			"Hearts:Jio": "{{Range: 8,10}}",
+			"RandomNumber": "{{Range: 4,6}}",
+		}
+	},
+
+	{
+		"LogName": "Jio unmasked at home when married",
+		"Action": "EditImage",
+		"Target": "Portraits/Jio",
+		"FromFile": "Assets/Portraits/Jio_Unmask.png",
+		"Update": "OnLocationChange",
+		"When": {
+			"Relationship:Jio": "Married",
+			"LocationName": "FarmHouse"
+		}
 	},
 
 ]

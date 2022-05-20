@@ -113,5 +113,27 @@
 
 		},
 	},
+
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Corine",
+   "When": {  	
+   	"Relationship:Corine": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Corine.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Corine.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Corine.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Corine.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Corine.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Corine.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Corine.Dialogue.Sun8.dating}}",
+		},
+	},
 ]
 }

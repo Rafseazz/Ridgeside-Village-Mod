@@ -30,6 +30,8 @@ namespace RidgesideVillage
                 //actually dropbox, not a warp
                 return;
             }
+            if (Helper.ModRegistry.IsLoaded("jibb.minecarts"))
+                return;
             var choices = new List<Response>();
             var selectionActions = new List<Action>();
             if (!tileActionString.Contains("1"))

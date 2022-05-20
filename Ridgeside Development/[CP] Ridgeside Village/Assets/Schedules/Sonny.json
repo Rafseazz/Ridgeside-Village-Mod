@@ -9,10 +9,13 @@
 
 			"Sat": "610 Custom_Ridgeside_PurpleMansion 53 5 2/1100 Custom_Ridgeside_PurpleMansion 53 23 square_2_1_0/1400 Custom_Ridgeside_RidgesideVillage 113 47 2/1800 Custom_Ridgeside_PurpleMansion 53 5 2/2100 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
 
-			"Sun": "610 Custom_Ridgeside_Ridge 18 12 0/900 SeedShop 38 20 0/1800 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
+			"Sun": "610 Custom_Ridgeside_Ridge 18 12 0/900 SeedShop 38 22 0/1800 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
 
-			"rain": "610 Custom_Ridgeside_PurpleMansion 53 5 2/1000 Custom_Ridgeside_PurpleMansion 53 23 square_2_1_0/1200 Custom_Ridgeside_PurpleMansion 16 34 square_12_3_0/1430 Custom_Ridgeside_PurpleMansion 53 5 2/1730 Custom_Ridgeside_PurpleMansion 26 33 0/2200 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep"
-					},
+			"rain": "610 Custom_Ridgeside_PurpleMansion 53 5 2/1000 Custom_Ridgeside_PurpleMansion 53 23 square_2_1_0/1200 Custom_Ridgeside_PurpleMansion 16 34 square_12_3_0/1430 Custom_Ridgeside_PurpleMansion 53 5 2/1730 Custom_Ridgeside_PurpleMansion 26 33 0/2200 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
+
+			"spring_5": "610 Custom_Ridgeside_PurpleMansion 53 5 2/900 Custom_Ridgeside_PaulaClinic 20 14 3 \"Strings\\schedules\\Sonny:checkup_waiting\"/1600 Custom_Ridgeside_PurpleMansion 53 5 2/2000 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
+			"spring_26": "610 Custom_Ridgeside_PurpleMansion 53 5 2/a1200 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Sonny:checkup\"/1330 Custom_Ridgeside_PurpleMansion 53 5 2/2000 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
+		},
 	},
 
 	//Greenhouse schedule
@@ -24,7 +27,17 @@
 					},
 		"When": {
 			"HasFlag: hostPlayer |contains=GH1letter": true,
-		}  
+		}
+	},
+
+	//New plaza schedule tweaks
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Sonny",
+		"Entries": {
+			"Sat": "610 Custom_Ridgeside_PurpleMansion 53 5 2/1100 Custom_Ridgeside_PurpleMansion 53 23 square_2_1_0/1400 Custom_Ridgeside_RidgesideVillage 112 50 2/1800 Custom_Ridgeside_PurpleMansion 53 5 2/2100 Custom_Ridgeside_PurpleMansion 55 44 2 sonny_sleep",
+					},
+		"When": { "HasFlag": "RSV.LennyHelped" },
 	},
 
 ]

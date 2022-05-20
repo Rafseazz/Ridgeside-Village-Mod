@@ -1,0 +1,49 @@
+﻿{
+    /*********
+    ** Mod Name
+    *********/
+    "Name": "Ridgeside Village - Ginger Island Mainland Adjustments",
+
+    /*********
+    ** Mod Author
+    *********/
+    "Author": "Rafseazz",
+
+    /*********
+    ** Current Version
+    *********/
+    "Version": "2.1.0",
+
+    /*********
+    ** Content Pack Description
+    *********/
+    "Description": "Extends RSV NPCs' Ginger Island behavior using GIMA by atravita.",
+
+    /*********
+    ** Unique Manifest ID for Content Pack
+    *********/
+    "UniqueID": "Rafseazz.RSVGIMAExtra.CP",
+
+    /*********
+    ** Update Keys (Currently only on Nexus)
+    *********/
+    "UpdateKeys": [ "Nexus:-1" ],
+
+    /*********
+    ** Framework Manifest ID
+    *********/
+    "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+    },
+
+    "Dependencies": [
+      {
+        "UniqueID": "atravita.GingerIslandMainlandAdjustments",
+ 		    "IsRequired": true
+      },
+      {
+        "UniqueID": "Rafseazz.RSVCP",
+ 		    "IsRequired": true
+      }
+    ]
+}

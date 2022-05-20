@@ -26,18 +26,33 @@ namespace RidgesideVillage
             ModMonitor = Monitor;
             Helper = helper;
 
+            if (!new InstallationChecker().checkInstallation(helper))
+            {
+                return;
+            }
+
             ConfigMenu = new ConfigMenu(this);
             CustomCPTokens = new CustomCPTokens(this);
-            Patcher = new Patcher(this);
 
-            Patcher.PerformPatching();
-
-            HotelMenu.Initialize(this);
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
+            
+            BgUtils.Initialize(this);
+
+            TortsBackground.Initialize(this);
+
+            BloomProjectile.Initialize(this);
+            MistProjectile.Initialize(this);
+            Mistblade.Initialize(this);
+
+            Patcher = new Patcher(this);
+            Patcher.PerformPatching();
+
+            HotelMenu.Initialize(this);
 
             Minecarts.Initialize(this);
+
             SpiritRealm.Initialize(this);
 
             SpecialOrders.Initialize(this);
@@ -48,8 +63,22 @@ namespace RidgesideVillage
 
             Greenhouses.Initialize(this);
 
+            Loan.Initialize(this);
+
+            //SummitHouse.Initialize(this);
+
+            WarpTotem.Initialize(this);
+
             PaulaClinic.Initialize(this);
+
             Offering.OfferingTileAction.Initialize(this);
+
+            NightlyEvent.Initialize(this);
+
+            NinjaBooks.Initialize(this);
+
+            Foxbloom.Initialize(this);
+
             //not done (yet?)
             //new CliffBackground();
 
@@ -109,8 +138,6 @@ namespace RidgesideVillage
             RSVWorldMap.Setup(Helper);
             ExternalAPIs.Initialize(Helper);
 
-
-
             Config = Helper.ReadConfig<ModConfig>();
 
             if (!Helper.ModRegistry.IsLoaded("spacechase0.JsonAssets"))
@@ -124,9 +151,10 @@ namespace RidgesideVillage
 
             Helper.ConsoleCommands.Add("RSV_reset_pedestals", "", this.ResetPedestals);
             Helper.ConsoleCommands.Add("RSV_open_portal", "", this.OpenPortal);
+            // RSV_rivera_secret in Patches/WalletItem
 
             // Generic Mod Config Menu setup
-            //ConfigMenu.RegisterMenu();
+            ConfigMenu.RegisterMenu();
         }
 
         private void OpenPortal(string arg1, string[] arg2)
@@ -173,6 +201,24 @@ namespace RidgesideVillage
                 }
                 location.isGreenhouse.Value = true;
                 Log.Trace($"{name} set to greenhouse");
+            }
+
+            //remove corrupted Fire SO if the player shouldnt have it
+            var team = Game1.player.team;
+            if (Game1.player.IsMainPlayer && team.SpecialOrderActive(("RSV.UntimedSpecialOrder.SpiritRealmFlames")))
+            {
+                //if player has NOT seen portal opening or HAS seen the cleansing event remove the fire quest
+                if (!Game1.player.eventsSeen.Contains(75160256) || Game1.player.eventsSeen.Contains(75160263))
+                {
+                    for (int i = 0; i<team.specialOrders.Count; i++)
+                    {
+                        if (team.specialOrders[i].questKey.Equals("RSV.UntimedSpecialOrder.SpiritRealmFlames"))
+                        {
+                            team.specialOrders.RemoveAt(i);
+                            break;
+                        }
+                    }
+                }
             }
         }
 

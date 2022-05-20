@@ -14,7 +14,6 @@ namespace RidgesideVillage
     {
         static IModHelper Helper;
         static IManifest Manifest;
-        static IJsonAssetsApi JsonAssetsAPI;
 
         public Patcher(IMod mod)
         {
@@ -26,16 +25,25 @@ namespace RidgesideVillage
         {
             var harmony = new Harmony(Manifest.UniqueID);
 
-            HarmonyPatch_EventMessage.ApplyPatch(harmony, Helper);
-            HarmonyPatch_Obelisk.ApplyPatch(harmony, Helper);
-            HarmonyPatch_UntimedSO.ApplyPatch(harmony, Helper);
-            HarmonyPatch_EventDetection.ApplyPatch(harmony, Helper);
-            HarmonyPatch_Fish.ApplyPatch(harmony, Helper);
-            HarmonyPatch_TreasureItems.ApplyPatch(harmony, Helper);
-            HarmonyPatch_SummitFarm.ApplyPatch(harmony, Helper);
-            HarmonyPatch_WeddingGuests.ApplyPatch(harmony, Helper);
-            HarmonyPatch_Animations.ApplyPatch(harmony, Helper);
-            HarmonyPatch_SecretSantaGift.ApplyPatch(harmony, Helper);
+            EventMessage.ApplyPatch(harmony, Helper);
+            Obelisk.ApplyPatch(harmony, Helper);
+            UntimedSO.ApplyPatch(harmony, Helper);
+            EventDetection.ApplyPatch(harmony, Helper);
+            Fish.ApplyPatch(harmony, Helper);
+            TreasureItems.ApplyPatch(harmony, Helper);
+            SummitFarm.ApplyPatch(harmony, Helper);
+            WeddingGuests.ApplyPatch(harmony, Helper);
+            Animations.ApplyPatch(harmony, Helper);
+            SecretSantaGift.ApplyPatch(harmony, Helper);
+            Rings.ApplyPatch(harmony, Helper);
+            Dateables.ApplyPatch(harmony, Helper);
+            WalletItem.ApplyPatch(harmony, Helper);
+            SODialogue.ApplyPatch(harmony, Helper);
+            Backgrounds.ApplyPatch(harmony, Helper);
+            Projectiles.ApplyPatch(harmony, Helper);
+            TortsGifts.ApplyPatch(harmony, Helper);
+            ClothingDonation.ApplyPatch(harmony, Helper);
+
         }
     }        
 }

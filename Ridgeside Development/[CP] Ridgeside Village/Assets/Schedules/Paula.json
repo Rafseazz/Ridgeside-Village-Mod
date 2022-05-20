@@ -5,12 +5,32 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Paula",
 		"Entries": {
-			"spring": "800 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+			"spring": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+			"Wed": "700 Custom_Ridgeside_Ridge 9 27 2/a1000 Custom_Ridgeside_PaulaClinic 16 13 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+			"rain": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_LogCabinHotelLobby 18 15 0/2100 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
 
-			"Wed": "700 Custom_Ridgeside_Ridge 9 27 2/1000 Custom_Ridgeside_PaulaClinic 16 13 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+			// Fri - Three appts (10:30-12:00, 12:30-2:00, 2:30-4:00)
+			"spring_5": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1030 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1200 Custom_Ridgeside_PaulaClinic 15 5 0/1230 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1400 Custom_Ridgeside_PaulaClinic 15 5 0/1430 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1610 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+			// Fri - Two appts (12:00-1:30, 2:00-3:30)
+			"spring_12": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1030 Custom_Ridgeside_PaulaClinic 15 5 0/a1200 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1330 Custom_Ridgeside_PaulaClinic 15 5 0/1400 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1530 Custom_Ridgeside_PaulaClinic 15 5 0/1610 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
 
-			"rain": "800 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_LogCabinHotelLobby 18 15 0/2100 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep"
-					},
+			// spring_5 - Amethynes
+			// spring_12 - Aguar, Jeric
+			"spring_19": "GOTO spring_12", // Ian, Lenny
+			"spring_26": "GOTO spring_12", // Sonny, Maddie
+			"summer_5": "GOTO spring_12", // Flor, Sean
+			"summer_12": "GOTO spring_12", // Yuuma, Naomi
+			"summer_19": "GOTO spring_12", // Keahi, Pika
+			"summer_26": "GOTO spring_5", // Trinnie, Bert, Olga
+			"fall_5": "GOTO spring_12", // Ezekiel, Corine
+			"fall_12": "GOTO spring_12", // Faye, Irene
+			"fall_19": "GOTO spring_5", // Kenneth, Bladebanes
+			"fall_26": "GOTO spring_12", // Ysabelle, Richard
+			"winter_5": "GOTO spring_12", // Shanice, Lorenzo
+			"winter_12": "GOTO spring_5", // Carmen, Blair, Philip
+			"winter_19": "GOTO spring_5", // Malaya, Alissa, Kimpoi
+			"winter_26": "GOTO spring_12", // Anton, Kiarra
+		},
 	},
 
 	//Greenhouse schedule
@@ -18,11 +38,11 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Paula",
 		"Entries": {
-			"Fri": "800 Custom_Ridgeside_PaulaClinic 16 13 2/1400 Custom_Ridgeside_RSVGreenhouse1 35 25 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+			"Sun": "800 Custom_Ridgeside_PaulaClinic 16 13 2/1400 Custom_Ridgeside_RSVGreenhouse1 35 25 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
 					},
 		"When": {
 			"HasFlag: hostPlayer |contains=GH1letter": true,
-		}  
+		}
 	},
 
 ]

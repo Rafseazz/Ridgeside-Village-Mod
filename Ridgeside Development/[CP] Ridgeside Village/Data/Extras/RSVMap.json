@@ -16,7 +16,15 @@
       "LogName": "Load RSV World Map",
       "Action": "Load",
       "Target": "LooseSprites/RSVWorldMap",
-      "FromFile": "Assets/LooseSprites/RSVWorldMap.png"
+      "FromFile": "Assets/LooseSprites/RSVWorldMap.png",
+      "When": { "SeasonalRSVMap": "false" }
+    },
+    {
+      "LogName": "Load RSV World Map",
+      "Action": "Load",
+      "Target": "LooseSprites/RSVWorldMap",
+      "FromFile": "Assets/LooseSprites/RSVWorldMap_{{season}}.png",
+      "When": { "SeasonalRSVMap": "true" }
     },
     {
       "LogName": "Load RSV Map Data",

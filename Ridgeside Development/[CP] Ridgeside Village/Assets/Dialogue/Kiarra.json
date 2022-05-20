@@ -99,6 +99,43 @@
 	"Fri10": "{{i18n:Kiarra.Dialogue.Fri10}}",
 	"Sat10": "{{i18n:Kiarra.Dialogue.Sat10}}",
 	"Sun10": "{{i18n:Kiarra.Dialogue.Sun10}}",
+
+	//Resort
+	"Resort_Entering": "{{i18n:Kiarra.Dialogue.Resort_Entering}}",
+	"Resort_Leaving": "{{i18n:Kiarra.Dialogue.Resort_Leaving}}",
+	"Resort_Shore": "{{i18n:Kiarra.Dialogue.Resort_Shore}}",
+	"Resort_Bar": "{{i18n:Kiarra.Dialogue.Resort_Bar}}",
+	"Resort": "{{i18n:Kiarra.Dialogue.Resort}}",
+
+	 //Special Dialogue
+	"breakUp": "{{i18n:Kiarra.Dialogue.breakUp}}",
+	"danceRejection": "{{i18n:Kiarra.Dialogue.danceRejection}}",
+	"divorced": "{{i18n:Kiarra.Dialogue.divorced}}",
+	"MovieInvitation": "{{i18n:Kiarra.Dialogue.MovieInvitation}}",
+		},
+	},
+
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Kiarra",
+   "When": {  	
+   	"Relationship:Kiarra": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Kiarra.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Kiarra.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Kiarra.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Kiarra.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Kiarra.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Kiarra.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Kiarra.Dialogue.Sun8.dating}}",
+	"Custom_Ridgeside_PaulaClinic8": "{{i18n:Kiarra.Dialogue.Custom_Ridgeside_PaulaClinic8.dating}}",
+	"Custom_Ridgeside_LennyHouse8": "{{i18n:Kiarra.Dialogue.Custom_Ridgeside_LennyHouse8.dating}}",
 		},
 	},
 ]
