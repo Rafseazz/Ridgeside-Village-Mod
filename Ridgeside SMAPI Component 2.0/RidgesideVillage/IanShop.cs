@@ -84,7 +84,7 @@ namespace RidgesideVillage
             var FarmAnimals = Game1.getFarm().getAllFarmAnimals();
             foreach(var farmAnimal in FarmAnimals)
             {
-                farmAnimal.pet(Game1.player, is_auto_pet: true);
+                farmAnimal.pet(Game1.player, is_auto_pet: false);
             }
         }
 
