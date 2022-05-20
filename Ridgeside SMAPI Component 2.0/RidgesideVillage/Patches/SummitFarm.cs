@@ -14,8 +14,7 @@ using System.Reflection;
 
 namespace RidgesideVillage
 {
-    //Handles the treasures for the spirit realm.
-    //Mostly hardcoded for performance
+    //Harmony patches for the Summit Farm to make it behave like the player's farm
     internal static class SummitFarm
     {
         private static IModHelper Helper { get; set; }
