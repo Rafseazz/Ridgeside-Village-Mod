@@ -846,8 +846,9 @@
 				}
 			}
 		],
-		"When": { "HasFlag: hostPlayer |contains=RSV.SummitFarmRedone": false }
+		//"When": { "HasFlag: hostPlayer |contains=RSV.SummitFarmRedone": false }
 	},
+	/*
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_SummitFarm",
@@ -863,6 +864,7 @@
 		"When": { "HasFlag: hostPlayer": "RSV.SummitFarmRedone" },
 		"Update": "OnLocationChange"
 	},
+	*/
 
 
 ]
