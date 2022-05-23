@@ -1,4 +1,5 @@
 ﻿using StardewModdingAPI;
+using StardewModdingAPI.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace RidgesideVillage
     {
     class CustomCPTokens
         {
-        private readonly IModHelper Helper;
+        internal static IModHelper Helper;
         private readonly IManifest ModManifest;
         public static int FoxbloomDay;
 
@@ -99,7 +100,81 @@ namespace RidgesideVillage
                 return null; //return null for an unready token.
             });
 
+            cp.RegisterToken(this.ModManifest, "ShirtNameFromId", new ShirtName());
+
             cp.RegisterToken(this.ModManifest, "FoxbloomSpawned", new FoxbloomSpawned());
+        }
+
+        internal class ShirtName
+        {
+            /*********
+            ** Fields
+            *********/
+            /// <summary>The name of the shirt at the given ID as of the last context update.</summary>
+            private IDictionary<int, string> clothes;
+
+            /*********
+            ** Public methods
+            *********/
+            /****
+            ** Metadata
+            ****/
+            /// <summary>Get whether the token allows input arguments.</summary>
+            public bool AllowsInput()
+            {
+                return true;
+            }
+
+            /// <summary>Whether the token may return multiple values for the given input.</summary>
+            /// <param name="input">The input arguments, if applicable.</param>
+            public bool CanHaveMultipleValues(string input = null)
+            {
+                return false;
+            }
+
+            /****
+            ** State
+            ****/
+            /// <summary>Update the values when the context changes.</summary>
+            /// <returns>Returns whether the value changed, which may trigger patch updates.</returns>
+            public bool UpdateContext()
+            {
+                var old_clothes = clothes;
+                clothes = Helper.GameContent.Load<IDictionary<int, string>>(PathUtilities.NormalizePath("Data/ClothingInformation"));
+                /*
+                if (clothes.Equals(old_clothes))
+                    Log.Debug("RSV: not updating context for ShirtName");
+                else
+                    Log.Debug("RSV: time for context update for ShirtName!");
+                */
+                return !clothes.Equals(old_clothes);
+            }
+
+            /// <summary>Get whether the token is available for use.</summary>
+            public bool IsReady()
+            {
+                return (SaveGame.loaded?.player != null || Context.IsWorldReady);
+            }
+
+            /// <summary>Get the current values.</summary>
+            /// <param name="input">The input arguments, if applicable.</param>
+            public IEnumerable<string> GetValues(string input)
+            {
+                if (string.IsNullOrWhiteSpace(input))
+                    yield break;
+
+                string names = "";
+                foreach(string data in clothes.Values)
+                {
+                    names += data.Split('/')[1] + " ";
+                }
+                //Log.Debug($"RSV: {names}");
+                int id = int.Parse(input);
+                string name = clothes.FirstOrDefault(x => x.Key == id).Value.Split('/')[1];
+                //Log.Debug($"RSV: key for {input} = {name}");
+
+                yield return name;
+            }
         }
 
         internal class FoxbloomSpawned

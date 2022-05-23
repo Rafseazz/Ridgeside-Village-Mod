@@ -32,12 +32,12 @@ namespace RidgesideVillage
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
-            Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             Helper.Events.Input.ButtonPressed += OnButtonPressed;
 
         }
 
-        private static void OnDayStarted(object sender, DayStartedEventArgs e)
+        private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
         {
             Totem = ExternalAPIs.JA.GetObjectId("Warp Totem: Ridgeside");
         }
@@ -57,7 +57,6 @@ namespace RidgesideVillage
                         Log.Debug($"RSV: using warp totem");
                         Game1.player.reduceActiveItemByOne();
                         DoTotemWarpEffects(Game1.player, (f) => DirectWarp());
-                        //Game1.player.canReleaseTool = true;
                     }
                 }
                 catch (Exception ex)
