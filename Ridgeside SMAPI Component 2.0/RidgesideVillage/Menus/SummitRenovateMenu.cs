@@ -683,7 +683,8 @@ namespace RidgesideVillage
 		{
 			exitThisMenu();
 			Game1.player.forceCanMove();
-			TODO string dialoguePath = "Data\\ExtraDialogue:Robin_" + (upgrading ? "Upgrade" : "New") + "Construction";
+			string dialoguePath = "Data\\ExtraDialogue:Robin_NewConstruction";
+			//string dialoguePath = "Data\\ExtraDialogue:Robin_" + (upgrading ? "Upgrade" : "New") + "Construction";
 			if (Utility.isFestivalDay(Game1.dayOfMonth + 1, Game1.currentSeason))
 			{
 				dialoguePath += "_Festival";
@@ -776,7 +777,7 @@ namespace RidgesideVillage
 			{
 				base.draw(b);
 				drawTextureBox(b, xPositionOnScreen - 96, yPositionOnScreen - 16, maxWidthOfBuildingViewer + 64, maxHeightOfBuildingViewer + 64, Color.White);
-				TODO //currentBuilding.drawInMenu(b, xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWide.Value * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.getSourceRectForMenu().Height * 4 / 2);
+				//TODO currentBuilding.drawInMenu(b, xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWide.Value * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.getSourceRectForMenu().Height * 4 / 2);
 				/*if (this.CurrentBlueprint.isUpgrade())
 				{
 					this.upgradeIcon.draw(b);
