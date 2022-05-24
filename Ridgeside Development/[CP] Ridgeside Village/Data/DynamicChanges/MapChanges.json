@@ -51,6 +51,7 @@
 
 //Hike House Peek (after Eleven PM at night)
 	{
+		"LogName": "RSV: Undreya stargazing",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/CliffHousePeek.tmx",
@@ -68,6 +69,7 @@
 	},
 
 	{
+		"LogName": "RSV: Undreya initial message",
     "Action": "EditMap",
     "Target": "Maps/Custom_Ridgeside_RSVTheHike",
     "MapTiles": [
@@ -89,6 +91,7 @@
 	},
 
 	{
+		"LogName": "RSV: Undreya second message",
 		"Action": "EditMap",
     "Target": "Maps/Custom_Ridgeside_RSVTheHike",
     "MapTiles": [
@@ -108,6 +111,7 @@
     },
     //Undreya's house unlock nextday
 	{
+		"LogName": "RSV: Undreya temp house unlock",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
@@ -122,6 +126,7 @@
 	},
 	//Undreya house unlock permanently
 	{
+		"LogName": "RSV: Undreya permanent house unlock",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
@@ -132,6 +137,7 @@
 	},
 	//Undreya calendar
 	{
+		"LogName": "RSV: Undreya schedule unlock",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVAbandonedHouse",
 		"FromFile": "Assets/Maps/EventMaps/RSVAbandonedHouse_Sched.tmx",
@@ -144,6 +150,7 @@
 
 //Unlock Minecarts
 	{
+				"LogName": "RSV: Full minecart usage in village",
         "Action": "EditMap",
         "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
         "MapTiles": [
@@ -173,6 +180,7 @@
 		"Update": "OnLocationChange"
     },
 	{
+				"LogName": "RSV: Full minecart usage at cable car",
         "Action": "EditMap",
         "Target": "Maps/Custom_Ridgeside_RSVCableCar",
         "MapTiles": [
@@ -188,6 +196,7 @@
 		"Update": "OnLocationChange"
 	},
 	{
+				"LogName": "RSV: Full minecart usage at summit farm",
         "Action": "EditMap",
         "Target": "Maps/Custom_Ridgeside_SummitFarm",
         "MapTiles": [
@@ -204,6 +213,7 @@
 	},
 	//Open Entrance
 	{
+		"LogName": "RSV: Open entrance to minecarts",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 		"FromFile": "Assets/Maps/EventMaps/RSVOpenPlot.tmx",
@@ -214,6 +224,7 @@
 	},
 	//Remove minecart donation box when done
 	{
+		"LogName": "RSV: Remove minecart donation box",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 		"FromFile": "Assets/Maps/EventMaps/RSVFixedMinecart.tmx",
@@ -225,18 +236,20 @@
 	},
 	//Safety net to remove boxes for offline players @ multiplayer during Yuuma cutscene for minecart quest
 	{
+		"LogName": "RSV: Open entrance to minecarts back-up",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 		"FromFile": "Assets/Maps/EventMaps/RSVOpenPlot.tmx",
 		"ToArea": { "X": 68, "Y": 18, "Width": 3, "Height": 2 },
 		"PatchMode": "Replace",
-		"When": { "HasFlag": "RSV.FixedMinecart" },
+		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
 		"Update": "OnLocationChange"
 	},
 
 //Event changes
 	//Aguar Events
      	{
+				"LogName": "RSV: Add entrance to Aguar cave",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
          "FromFile": "Assets/Maps/EventMaps/AguarWaterfalls.tmx",
@@ -247,6 +260,7 @@
          "Update": "OnLocationChange, OnTimeChange"
       	},
      	{
+				"LogName": "RSV: Fix up Aguar cave (old version)",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_AguarCave",
          "FromFile": "Assets/Maps/EventMaps/AguarCaveFixed.tmx",
@@ -257,29 +271,21 @@
          "Update": "OnLocationChange, OnTimeChange"
       	},
 			{
+				"LogName": "RSV: Fix up Aguar cave (new version)",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_AguarCave",
          "FromFile": "Assets/Maps/EventMaps/AguarCaveFixed_alt.tmx",
          "FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
          "ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
          "PatchMode": "Replace",
-         "When": { "HasDialogueAnswer: anyPlayer|contains=751600641": true,	},
-         "Update": "OnLocationChange, OnTimeChange"
-      	},
-			{
-         "Action": "EditMap",
-         "Target": "Maps/Custom_Ridgeside_AguarCave",
-         "FromFile": "Assets/Maps/EventMaps/AguarCaveFixed_alt.tmx",
-         "FromArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
-         "ToArea": { "X": 0, "Y": 0, "Width": 20, "Height": 25 },
-         "PatchMode": "Replace",
-         "When": { "HasDialogueAnswer: anyPlayer|contains=751600642": true,	},
+         "When": { "HasDialogueAnswer: hostPlayer|contains=751600641, 751600642": true,	},
          "Update": "OnLocationChange, OnTimeChange"
       	},
 
 
     //Richard vase
      	{
+				"LogName": "RSV: Richard's vase after 8 heart event",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_LogCabinHotel3rdFloor",
          "FromFile": "Assets/Maps/EventMaps/Richard8HeartsEffect.tmx",
@@ -294,6 +300,7 @@
 
     //Jio shop
      	{
+				"LogName": "RSV: Unlock Jio shop",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
          "FromFile": "Assets/Maps/QuestMaps/RSVJioShop.tmx",
@@ -302,10 +309,11 @@
          "PatchMode": "Replace",
          "Update": "OnLocationChange, OnTimeChange",
          "When": {
-			"HasSeenEvent: hostPlayer": 75160187,
+			"HasSeenEvent": 75160187,
 		}
       	},
       	{
+				"LogName": "RSV: Add Daia's book",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
          "FromFile": "Assets/Maps/QuestMaps/RSVDaiaBook.tmx",
@@ -318,6 +326,7 @@
 		}
       	},
       	{
+					"LogName": "RSV: Add Ninja SO Board",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
          "FromFile": "Assets/Maps/EventMaps/RSVNinjaHouse_SOBoard.tmx",
@@ -330,6 +339,7 @@
 		}
       	},
       	{
+					"LogName": "RSV: Lock Ninja House after Preparations",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_Ridge",
          "FromFile": "Assets/Maps/DynamicMaps/LockedNinjaHouse.tmx",
@@ -344,6 +354,7 @@
 
     //Sewer Open
     	{
+				"LogName": "RSV: Open RSV sewer",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVCableCar",
          "FromFile": "Assets/Maps/DynamicMaps/RSVCableCar_SewerEntrance.tmx",
@@ -359,6 +370,7 @@
 
     //Community Greenhouse unlock
      	 {
+				 "LogName": "RSV: Unlock community greenhouse",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
          "FromFile": "Assets/Maps/EventMaps/UnlockGH1.tmx",
@@ -372,6 +384,7 @@
 
     //Hike Greenhouse unlock
      	 {
+				 "LogName": "RSV: Open phantom greenhouse at night",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVTheHike",
          "FromFile": "Assets/Maps/EventMaps/UnlockGH2.tmx",
@@ -387,6 +400,7 @@
       	},
       	//Permanent unlock (after finishing quest)
       	{
+					"LogName": "RSV: Unlock phantom greenhouse permanently",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVTheHike",
          "FromFile": "Assets/Maps/EventMaps/UnlockGH2.tmx",
@@ -401,6 +415,7 @@
 
 //Hotel Room
 	{
+		"LogName": "RSV: Hotel room booked",
         "Action": "EditMap",
         "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
         "FromFile": "Assets/Maps/DynamicMaps/RSVBedTile.tmx",
@@ -412,6 +427,7 @@
 
 //Hotel Expansion after Naomi's introduction
 	{
+		"LogName": "RSV: Hotel expansion",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
 		"FromFile": "Assets/Maps/EventMaps/LogCabinHotelLobbyExpanded.tmx",
@@ -422,6 +438,7 @@
 	},
 //Pastry Shop Randomize display
 	{
+		"LogName": "RSV: Pastry shop display",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
 		"FromFile": "Assets/Maps/DynamicMaps/PastryRandom{{Random:1,2,3}}.tmx",
@@ -433,6 +450,7 @@
 	},
 //Spouse Picture during wedding reception
 	{
+		"LogName": "RSV: Spouse wedding reception portrait",
 		"Action": "EditImage",
 		"Target": "Maps/z_RSVspousePic",
 		"FromFile": "{{FirstValidFile: Assets/WeddingReception/NPCs/{{spouse}}.png, Assets/WeddingReception/z_RSVspousePic.png }}",
@@ -546,6 +564,7 @@
 
 //Nightingale Orchard Expansion after Kimpoi's introduction
 	{
+		"LogName": "RSV: Sapling Shop open",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_AlissaShed",
 		"FromFile": "Assets/Maps/EventMaps/AlissaShedOpen.tmx",
@@ -557,6 +576,7 @@
 
 //Open bridge to Ridgefalls
 	{
+		"LogName": "RSV: Ridge Falls unlocked",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_Ridge",
 		"FromFile": "Assets/Maps/EventMaps/RidgeOpenBridge.tmx",
@@ -569,6 +589,7 @@
 
 //Corrupt Spirit Realm
 	{
+		"LogName": "RSV: Spirit Realm uncleansed",
 		"Action": "EditImage",
 		"Target": "Maps/zrsvspiritrealm",
 		"FromFile": "Assets/Maps/TileSheets/{{TargetWithoutPath}}_corrupt.png",
@@ -655,6 +676,7 @@
 
 //Open summit farm
 	{
+		"LogName": "RSV: Summit Farm unlocked",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RidgeForest",
 		"FromFile": "Assets/Maps/DynamicMaps/RSVSummitEntrance.tmx",
@@ -789,6 +811,7 @@
 
 //Greenhouse 2 Corrupted
 	{
+		"LogName": "RSV: Phantom greenhouse corrupt",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVGreenhouse2",
 		"FromFile": "Assets/Maps/EventMaps/RSVGreenhouse2_Corrupt.tmx",
@@ -801,6 +824,7 @@
 
 //Open Ridge Pond
 	{
+		"LogName": "RSV: Ridge Pond unlocked",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RidgeFalls",
 		"FromFile": "Assets/Maps/DynamicMaps/RSVPondEntrance.tmx",
@@ -813,6 +837,7 @@
 
 //New Village Plaza
 	{
+		"LogName": "RSV: Village Plaza redone",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 		"FromFile": "Assets/Maps/DynamicMaps/RSVBetterSquare.tmx",
