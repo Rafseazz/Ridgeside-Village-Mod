@@ -186,13 +186,13 @@ namespace RidgesideVillage
             Game1.player.pantsItem.Value = null;
             Game1.player.UpdateClothing();
 
-            try { Game1.player.boots.Value.onUnequip(); } catch {}
+            try { Game1.player.boots?.Value.onUnequip(); } catch {}
             Game1.player.boots.Value = null;
             Game1.player.changeShoeColor(12);
 
-            try { Game1.player.leftRing.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
             Game1.player.leftRing.Value = null;
-            try { Game1.player.rightRing.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
             Game1.player.rightRing.Value = null;
 
             /*
