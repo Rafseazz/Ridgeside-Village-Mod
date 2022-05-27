@@ -100,8 +100,8 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring24",
         "When": {
-            "HasSeenEvent|contains=75160377, 75160187": true,
-						"HasSeenEvent|contains=75160188": true,
+            "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
+						"HasSeenEvent: anyPlayer|contains=75160188": true,
         },
         "TextOperations": [
             {

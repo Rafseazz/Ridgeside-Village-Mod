@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewValley;
+using StardewValley.Objects;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 
@@ -65,7 +66,7 @@ namespace RidgesideVillage
 
             Loan.Initialize(this);
 
-            SummitHouse.Initialize(this);
+            //SummitHouse.Initialize(this);
 
             WarpTotem.Initialize(this);
 
@@ -83,6 +84,7 @@ namespace RidgesideVillage
             //new CliffBackground();
 
             Helper.ConsoleCommands.Add("LocationModData", "show ModData of given location", printLocationModData);
+            Helper.ConsoleCommands.Add("remove_equipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
@@ -149,8 +151,8 @@ namespace RidgesideVillage
             // Custom CP Token Set-up
             CustomCPTokens.RegisterTokens();
 
-            Helper.ConsoleCommands.Add("RSV_reset_pedestals", "", this.ResetPedestals);
-            Helper.ConsoleCommands.Add("RSV_open_portal", "", this.OpenPortal);
+            Helper.ConsoleCommands.Add("RSV_reset_pedestals", "", ResetPedestals);
+            Helper.ConsoleCommands.Add("RSV_open_portal", "", OpenPortal);
             // RSV_rivera_secret in Patches/WalletItem
 
             // Generic Mod Config Menu setup
@@ -171,6 +173,42 @@ namespace RidgesideVillage
             {
                 this.SpiritShrine.ResetPedestals(arg1, arg2);
             }
+        }
+
+        private void RemoveEquipment(string arg1, string[] arg2)
+        {
+            Game1.player.hat.Value = null;
+            Game1.player.shirt.Value = -1;
+            Game1.player.changeShirt(-1);
+            Game1.player.shirtItem.Value = null;
+            Game1.player.pants.Value = -1;
+            Game1.player.changePants(Color.White);
+            Game1.player.pantsItem.Value = null;
+            Game1.player.UpdateClothing();
+
+            try { Game1.player.boots?.Value.onUnequip(); } catch {}
+            Game1.player.boots.Value = null;
+            Game1.player.changeShoeColor(12);
+
+            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            Game1.player.leftRing.Value = null;
+            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            Game1.player.rightRing.Value = null;
+
+            /*
+            if (!Helper.ModRegistry.IsLoaded("bcmpinc.WearMoreRings"))
+                return;
+
+            int chest_id = int.Parse(Game1.player.modData["bcmpinc.WearMoreRings/chest-id"]);
+            Chest chest = (Chest)Game1.getFarm().objects[new Vector2(chest_id, -50)];
+            foreach(var item in chest.items)
+            {
+                Ring ring = (Ring)item;
+                try { ring.onUnequip(Game1.player, Game1.currentLocation); } catch {};
+            }
+            Chest new_chest = new(true);
+            Game1.getFarm().objects[new Vector2(chest_id, -50)] = new_chest;
+            */
         }
 
         private void OnSaveLoaded(object sender, EventArgs ex)

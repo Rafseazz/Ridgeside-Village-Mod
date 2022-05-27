@@ -30,6 +30,11 @@ namespace RidgesideVillage
         const int perFencePrice = 6;
         const int perAnimalPrice = 60;
 
+        const int UNLOCKEVENT = 75160387;
+        public const string FARMUPGRADED = "RSV.SummitFarmRedone";
+        const string MINECARTSFIXED = "RSV.FixedMinecart";
+        private static bool canRenovate = false;
+
         static IModHelper Helper;
         static IMonitor Monitor;
         internal static void Initialize(IMod ModInstance)
@@ -37,46 +42,45 @@ namespace RidgesideVillage
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
 
-            TileActionHandler.RegisterTileAction("IanCounter", OpenIanMenu);
-
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            TileActionHandler.RegisterTileAction("IanCounter", OpenIanMenu);
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            if (!Game1.player.IsMainPlayer)
-            {
-                return;
-            }
+            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT) && !Game1.MasterPlayer.mailReceived.Contains(FARMUPGRADED);
 
-            var FarmModData = Game1.getFarm().modData;            
-            
-            if (FarmModData.ContainsKey(willFixFences))
+            if (Game1.IsMasterGame)
             {
-                FixTheFences();
-                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasFixedFences"), HUDMessage.newQuest_type));
-                FarmModData.Remove(willFixFences);
-            }
+                var FarmModData = Game1.getFarm().modData;
 
-            if (FarmModData.ContainsKey(willPetAnimals))
-            {
-                if(!FarmModData.TryGetValue(willPetAnimals, out string value) || !int.TryParse(value, out int daysLeft) || daysLeft <= 0)
+                if (FarmModData.ContainsKey(willFixFences))
                 {
-                    FarmModData.Remove(willPetAnimals);
-                    return;
-                }else if(daysLeft == 1)
-                {
-                    FarmModData.Remove(willPetAnimals);
+                    FixTheFences();
+                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasFixedFences"), HUDMessage.newQuest_type));
+                    FarmModData.Remove(willFixFences);
                 }
-                else
-                {
-                    FarmModData[willPetAnimals] = (daysLeft - 1).ToString();
-                }
-                petAnimals();
-                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasPetAnimals"), HUDMessage.newQuest_type));
-            }
 
-            IanShop.Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
+                if (FarmModData.ContainsKey(willPetAnimals))
+                {
+                    if (!FarmModData.TryGetValue(willPetAnimals, out string value) || !int.TryParse(value, out int daysLeft) || daysLeft <= 0)
+                    {
+                        FarmModData.Remove(willPetAnimals);
+                        return;
+                    }
+                    else if (daysLeft == 1)
+                    {
+                        FarmModData.Remove(willPetAnimals);
+                    }
+                    else
+                    {
+                        FarmModData[willPetAnimals] = (daysLeft - 1).ToString();
+                    }
+                    petAnimals();
+                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasPetAnimals"), HUDMessage.newQuest_type));
+                }
+                Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
+            }
         }
 
         private static void petAnimals()
@@ -93,7 +97,7 @@ namespace RidgesideVillage
         private static void waterPlantsIfNeeded(object sender, OneSecondUpdateTickedEventArgs e)
         {
 
-            IanShop.Helper.Events.GameLoop.OneSecondUpdateTicked -= waterPlantsIfNeeded;
+            Helper.Events.GameLoop.OneSecondUpdateTicked -= waterPlantsIfNeeded;
             var farmModData = Game1.getFarm().modData;
             if (Game1.IsRainingHere(Game1.getFarm()))
             {
@@ -177,11 +181,16 @@ namespace RidgesideVillage
                 },
                 delegate
                 {
-                    Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShopBye"));
+                    Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Bye"));
                 }
             };
 
-            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("OpenIanShop"), responses, responseActions);
+            if (canRenovate)
+            {
+                responses.Insert(3, new Response("renovate", Helper.Translation.Get("IanShop.SummitFarm")));
+                responseActions.Insert(3, delegate { RenovateOptions(); });
+            }
+            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.Open"), responses, responseActions);
         }
 
         private static void PetAnimalsMenu()
@@ -285,11 +294,11 @@ namespace RidgesideVillage
                     }
                 };
 
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanWaterPlantsMenu"), responses, responseActions);
+                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.WaterPlantsMenu"), responses, responseActions);
             }
             else
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanIsAlreadyWatering"));
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.AlreadyWatering"));
             }
         }
 
@@ -331,7 +340,7 @@ namespace RidgesideVillage
                         {
                             Game1.player.Money -= (n * perFencePrice);
                             Game1.getFarm().modData.Add(willFixFences, "");
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.FenceThanks"));
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.FenceThanks"));
                         }
                         else
                         {
@@ -347,16 +356,16 @@ namespace RidgesideVillage
             }
             else if (n <= 0)
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.YouHaveNoFences"));
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.YouHaveNoFences"));
             }
             else
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.AlreadyWillFix"));
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.AlreadyWillFix"));
             }
         }
 
         private static void FixTheFences()
-        {;
+        {
             foreach (Fence fence in Game1.getFarm().Objects.Values.OfType<Fence>())
             {
                 fence.repair();
@@ -366,6 +375,22 @@ namespace RidgesideVillage
                     fence.health.Value *= 2f;
             }
         }
+
+        private static void RenovateOptions()
+        {
+            if(!Game1.MasterPlayer.mailReceived.Contains(MINECARTSFIXED))
+            {
+                NPC sean = Game1.getCharacterFromName("Sean");
+                sean.CurrentDialogue.Clear();
+                sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), sean));
+                Game1.drawDialogue(sean);
+            }
+            else
+            {
+                Game1.activeClickableMenu = new SummitRenovateMenu();
+            }
+        }
+
     }
   
 }
