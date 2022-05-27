@@ -15,7 +15,7 @@ namespace RidgesideVillage
 {
     internal static class IanShop
     {
-        const string willWaterPlants = "RSV.WillWaterPlants";
+        const string willWaterPlants = "IanShop.WaterPlants";
         const int waterPlantsPriceSmall = 1000;
         const int waterPlantsPriceMedium = 2500;
         const int waterPlantsPriceLarge = 5000;
@@ -25,8 +25,8 @@ namespace RidgesideVillage
         const int daysWillWater = 3;
         const int daysWillPet = 7;
 
-        const string willFixFences = "RSV.WillFixFences";
-        const string willPetAnimals = "RSV.PetAnimals";
+        const string willFixFences = "IanShop.fixFences";
+        const string willPetAnimals = "IanShop.PetAnimals";
         const int perFencePrice = 6;
         const int perAnimalPrice = 60;
 
@@ -57,7 +57,7 @@ namespace RidgesideVillage
                 if (FarmModData.ContainsKey(willFixFences))
                 {
                     FixTheFences();
-                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasFixedFences"), HUDMessage.newQuest_type));
+                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasFixedFences"), HUDMessage.newQuest_type));
                     FarmModData.Remove(willFixFences);
                 }
 
@@ -77,7 +77,7 @@ namespace RidgesideVillage
                         FarmModData[willPetAnimals] = (daysLeft - 1).ToString();
                     }
                     petAnimals();
-                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("Ian.HasPetAnimals"), HUDMessage.newQuest_type));
+                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasPetAnimals"), HUDMessage.newQuest_type));
                 }
                 Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
             }
@@ -212,7 +212,7 @@ namespace RidgesideVillage
                         {
                             Game1.player.Money -= (n * perAnimalPrice);
                             Game1.getFarm().modData.Add(willPetAnimals, daysWillPet.ToString());
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.PetThanks"));
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.PetThanks"));
                         }
                         else
                         {
@@ -228,11 +228,11 @@ namespace RidgesideVillage
             }
             else if (n <= 0)
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.YouHaveNoAnimals"));
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.YouHaveNoAnimals"));
             }
             else
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Ian.AlreadyWillPet"));
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.AlreadyWillPet"));
             }
         }
 
