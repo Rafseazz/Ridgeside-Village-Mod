@@ -13,16 +13,20 @@ using StardewValley.Buildings;
 using StardewValley.Locations;
 using StardewValley.Objects;
 using xTile.Dimensions;
+using StardewModdingAPI;
 
 
 namespace RidgesideVillage
 {
     internal class SummitRenovateMenu : IClickableMenu
     {
+		static IModHelper Helper;
+		static IMonitor Monitor;
+
 		public const string FARMUPGRADE = "Summit House Upgrade";
-
 		public const string CLIMATECONTROL = "Climate Control";
-
+		public const string HOUSETOPIC = "RSV.HouseCT";
+		public const string CLIMATETOPIC = "RSV.ClimateCT";
 		public const string FARMUPGRADED = "RSV.SummitFarmRedone";
 
 		public const int region_backButton = 101;
@@ -113,6 +117,12 @@ namespace RidgesideVillage
 					this.cancelButton.leftNeighborID = 102;
 				}
 			}
+		}
+
+		internal static void Initialize(IMod ModInstance)
+		{
+			Helper = ModInstance.Helper;
+			Monitor = ModInstance.Monitor;
 		}
 
 		public BluePrint CurrentBlueprint => blueprints[currentBlueprintIndex];
@@ -591,11 +601,11 @@ namespace RidgesideVillage
 				Game1.playSound("smallSelect");
 				Game1.player.team.buildLock.RequestLock(delegate
 				{
-					if (this.tryToBuild())
+					if (tryToBuild())
 					{
-						this.CurrentBlueprint.consumeResources();
+						CurrentBlueprint.consumeResources();
 						//DelayedAction.functionAfterDelay(returnToCarpentryMenuAfterSuccessfulBuild, 2000);
-						this.freeze = true;
+						freeze = true;
 					}
 					else
 					{
@@ -619,8 +629,10 @@ namespace RidgesideVillage
 				switch (currentBuilding.name)
 				{
 					case FARMUPGRADE:
+						Game1.MasterPlayer.activeDialogueEvents.Add(HOUSETOPIC, 3);
 						break;
 					case CLIMATECONTROL:
+						Game1.MasterPlayer.activeDialogueEvents.Add(CLIMATETOPIC, 3);
 						break;
 				}
 				return true;
@@ -683,12 +695,7 @@ namespace RidgesideVillage
 		{
 			exitThisMenu();
 			Game1.player.forceCanMove();
-			string dialoguePath = "Data\\ExtraDialogue:Robin_NewConstruction";
-			//string dialoguePath = "Data\\ExtraDialogue:Robin_" + (upgrading ? "Upgrade" : "New") + "Construction";
-			if (Utility.isFestivalDay(Game1.dayOfMonth + 1, Game1.currentSeason))
-			{
-				dialoguePath += "_Festival";
-			}
+			string dialoguePath = Helper.Translation.Get("IanShop.Construction");
 			if (CurrentBlueprint.daysToConstruct <= 0)
 			{
 				Game1.drawDialogue(Game1.getCharacterFromName("Sean"), Game1.content.LoadString("Data\\ExtraDialogue:Robin_Instant", (LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.de) ? CurrentBlueprint.displayName : CurrentBlueprint.displayName.ToLower()));
@@ -777,7 +784,9 @@ namespace RidgesideVillage
 			{
 				base.draw(b);
 				drawTextureBox(b, xPositionOnScreen - 96, yPositionOnScreen - 16, maxWidthOfBuildingViewer + 64, maxHeightOfBuildingViewer + 64, Color.White);
-				//TODO currentBuilding.drawInMenu(b, xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWide.Value * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.getSourceRectForMenu().Height * 4 / 2);
+				Texture2D currentImage = Helper.ModContent.Load<Texture2D>($"assets/{CurrentBlueprint.name}.png");
+				b.Draw(currentImage, new Vector2(xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWidth * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.sourceRectForMenuView.Height * 4 / 2), currentBuilding.sourceRectForMenuView, Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
+				//currentBuilding.drawInMenu(b, xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWide.Value * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.getSourceRectForMenu().Height * 4 / 2);
 				/*if (this.CurrentBlueprint.isUpgrade())
 				{
 					this.upgradeIcon.draw(b);

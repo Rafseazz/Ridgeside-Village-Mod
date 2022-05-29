@@ -42,6 +42,7 @@ namespace RidgesideVillage
             BgUtils.Initialize(this);
 
             TortsBackground.Initialize(this);
+            SummitRenovateMenu.Initialize(this);
 
             BloomProjectile.Initialize(this);
             MistProjectile.Initialize(this);
@@ -66,7 +67,7 @@ namespace RidgesideVillage
 
             Loan.Initialize(this);
 
-            //SummitHouse.Initialize(this);
+            SummitHouse.Initialize(this);
 
             WarpTotem.Initialize(this);
 

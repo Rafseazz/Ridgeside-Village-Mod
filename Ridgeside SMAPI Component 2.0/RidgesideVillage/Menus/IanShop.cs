@@ -385,6 +385,14 @@ namespace RidgesideVillage
                 sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), sean));
                 Game1.drawDialogue(sean);
             }
+            else if ((Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int value) && value > 0) ||
+                (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int value2) && value2 > 0))
+            {
+                NPC sean = Game1.getCharacterFromName("Sean");
+                sean.CurrentDialogue.Clear();
+                sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AlreadyBuilding"), sean));
+                Game1.drawDialogue(sean);
+            }
             else
             {
                 Game1.activeClickableMenu = new SummitRenovateMenu();

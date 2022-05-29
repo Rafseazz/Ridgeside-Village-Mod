@@ -32,7 +32,6 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.spawnWeedsAndStones)),
                 prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
             );
-            /*
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), "resetSharedState"),
                 postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SummitHouse_Postfix))
@@ -45,7 +44,6 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.draw)),
                 postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_draw_Postfix))
             );
-            */
         }
 
         private static void GameLocation_CanPlanTreesHere_Postfix(ref GameLocation __instance, int sapling_index, int tile_x, int tile_y, ref bool __result)
