@@ -33,16 +33,24 @@ namespace RidgesideVillage
                 prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
             );
             harmony.Patch(
+               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.loadLights)),
+               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
+           );
+            harmony.Patch(
+               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.setUpLocationSpecificFlair)),
+               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
+           );
+            harmony.Patch(
                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlaceThisFurnitureHere)),
                prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_CanPlaceThisFurnitureHere_Prefix))
            );
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), "resetSharedState"),
-                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SummitHouse_Postfix))
+                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_SetUpKitchen_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.loadMap)),
-                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SummitHouse_Postfix))
+                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_SetUpKitchen_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.draw)),
@@ -86,6 +94,19 @@ namespace RidgesideVillage
             }
         }
 
+        private static bool SummitHouse_NoAmbientLight_Prefix(ref GameLocation __instance)
+        {
+            if (__instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE.Split("New")[0]) // Old Summit House
+            {
+                if (Game1.isDarkOut())
+                {
+                    Game1.ambientLight = new Color(180, 180, 0, 255);
+                }
+                return false;
+            }
+            return true;
+        }
+
         private static bool GameLocation_CanPlaceThisFurnitureHere_Prefix(ref GameLocation __instance, StardewValley.Objects.Furniture furniture, ref bool __result)
         {
             if (furniture.furniture_type.Value == 15 && __instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
@@ -96,7 +117,7 @@ namespace RidgesideVillage
             return true;    
         }
 
-        private static void GameLocation_SummitHouse_Postfix(ref GameLocation __instance)
+        private static void SummitHouse_SetUpKitchen_Postfix(ref GameLocation __instance)
         {
             if (__instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
                 SummitHouse.SetUpKitchen(__instance);
