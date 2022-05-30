@@ -220,7 +220,7 @@ namespace RidgesideVillage
             }
             catch (Exception e)
             {
-                Log.Debug($"Failed to load config settings. Will use default settings instead. Error: {e}");
+                Log.Debug($"RSV: Failed to load config settings. Will use default settings instead. Error details:\n{e}");
                 Config = new ModConfig();
             }
 
@@ -228,18 +228,22 @@ namespace RidgesideVillage
             SpiritShrine = new SpiritShrine(this);
 
 
-            //mark greenhouses as greenhouses, so trees can be planted
+            //mark greenhouses as greenhouses
             List<string> locationsNames = new List<string>() { "Custom_Ridgeside_AguarCaveTemporary", "Custom_Ridgeside_RSVGreenhouse1", "Custom_Ridgeside_RSVGreenhouse2" };
+            if (Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
+            {
+                locationsNames.Add("Custom_Ridgeside_SummitFarm");
+            }
             foreach (var name in locationsNames)
             {
                 GameLocation location = Game1.getLocationFromName(name);
                 if (location == null)
                 {
-                    Log.Trace($"{name} is null");
+                    Log.Trace($"RSV: Greenhouse {name} could not be found");
                     continue;
                 }
                 location.isGreenhouse.Value = true;
-                Log.Trace($"{name} set to greenhouse");
+                Log.Trace($"RSV: {name} set to greenhouse");
             }
 
             //remove corrupted Fire SO if the player shouldnt have it

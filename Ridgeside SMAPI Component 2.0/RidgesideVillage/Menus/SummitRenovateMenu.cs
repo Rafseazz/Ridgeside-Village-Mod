@@ -27,7 +27,8 @@ namespace RidgesideVillage
 		public const string CLIMATECONTROL = "Climate Control";
 		public const string HOUSETOPIC = "RSV.HouseCT";
 		public const string CLIMATETOPIC = "RSV.ClimateCT";
-		public const string FARMUPGRADED = "RSV.SummitFarmRedone";
+		public const string ACTIVECONSTRUCTION = "RSV.ActiveConstruction";
+		public const string HOUSEUPGRADED = "RSV.SummitHouseRedone";
 
 		public const int region_backButton = 101;
 
@@ -133,7 +134,7 @@ namespace RidgesideVillage
 			resetBounds();
 			blueprints = new List<BluePrint>();
 
-			if (!Game1.MasterPlayer.mailReceived.Contains(FARMUPGRADED))
+			if (!Game1.MasterPlayer.mailReceived.Contains(HOUSEUPGRADED))
 				blueprints.Add(new BluePrint(FARMUPGRADE));
             blueprints.Add(new BluePrint(CLIMATECONTROL));
 			setNewActiveBlueprint();
@@ -635,6 +636,7 @@ namespace RidgesideVillage
 						Game1.MasterPlayer.activeDialogueEvents.Add(CLIMATETOPIC, 3);
 						break;
 				}
+				Game1.MasterPlayer.activeDialogueEvents.Add(ACTIVECONSTRUCTION, 3);
 				return true;
 			}
 			catch (Exception e)

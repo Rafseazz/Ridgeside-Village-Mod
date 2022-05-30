@@ -31,7 +31,8 @@ namespace RidgesideVillage
         const int perAnimalPrice = 60;
 
         const int UNLOCKEVENT = 75160387;
-        public const string FARMUPGRADED = "RSV.SummitFarmRedone";
+        public const string HOUSEUPGRADED = "RSV.SummitHouseRedone";
+        public const string CLIMATECONTROLLED = "RSV.ClimateControlled";
         const string MINECARTSFIXED = "RSV.FixedMinecart";
         private static bool canRenovate = false;
 
@@ -48,10 +49,11 @@ namespace RidgesideVillage
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT) && !Game1.MasterPlayer.mailReceived.Contains(FARMUPGRADED);
+            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT) && !Game1.MasterPlayer.mailReceived.Contains(HOUSEUPGRADED);
 
             if (Game1.IsMasterGame)
             {
+                // Farming services
                 var FarmModData = Game1.getFarm().modData;
 
                 if (FarmModData.ContainsKey(willFixFences))
@@ -80,6 +82,16 @@ namespace RidgesideVillage
                     Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasPetAnimals"), HUDMessage.newQuest_type));
                 }
                 Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
+
+                // Construction services
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int housect) && housect == 1)
+                {
+                    Game1.player.mailForTomorrow.Add(HOUSEUPGRADED);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int climatect) && climatect == 1)
+                {
+                    Game1.player.mailForTomorrow.Add(CLIMATECONTROLLED);
+                }
             }
         }
 
@@ -385,8 +397,7 @@ namespace RidgesideVillage
                 sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), sean));
                 Game1.drawDialogue(sean);
             }
-            else if ((Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int value) && value > 0) ||
-                (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int value2) && value2 > 0))
+            else if (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.ACTIVECONSTRUCTION, out int value) && value > 0)
             {
                 NPC sean = Game1.getCharacterFromName("Sean");
                 sean.CurrentDialogue.Clear();

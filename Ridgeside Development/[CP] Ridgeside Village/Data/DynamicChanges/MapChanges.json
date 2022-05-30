@@ -880,7 +880,7 @@
 				}
 			}
 		],
-		"When": { "HasFlag: hostPlayer |contains=RSV.SummitFarmRedone": false }
+		"When": { "HasFlag: hostPlayer |contains=RSV.SummitHouseRedone": false }
 	},
 	{
 		"Action": "EditMap",
@@ -892,9 +892,16 @@
 				"SetProperties": {
 					"Action": "Mailbox"
 				}
+			},
+			{
+				"Position": { "X": 18, "Y": 46 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "Warp 16 11 Custom_Ridgeside_RSVSummitHouseNew"
+				}
 			}
 		],
-		"When": { "HasFlag: hostPlayer": "RSV.SummitFarmRedone" },
+		"When": { "HasFlag: hostPlayer": "RSV.SummitHouseRedone" },
 		"Update": "OnLocationChange"
 	},
 

@@ -33,6 +33,10 @@ namespace RidgesideVillage
                 prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
             );
             harmony.Patch(
+               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlaceThisFurnitureHere)),
+               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_CanPlaceThisFurnitureHere_Prefix))
+           );
+            harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), "resetSharedState"),
                 postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SummitHouse_Postfix))
             );
@@ -82,6 +86,16 @@ namespace RidgesideVillage
             }
         }
 
+        private static bool GameLocation_CanPlaceThisFurnitureHere_Prefix(ref GameLocation __instance, StardewValley.Objects.Furniture furniture, ref bool __result)
+        {
+            if (furniture.furniture_type.Value == 15 && __instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
+            {
+                __result = true;
+                return false;
+            }
+            return true;    
+        }
+
         private static void GameLocation_SummitHouse_Postfix(ref GameLocation __instance)
         {
             if (__instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
@@ -93,7 +107,7 @@ namespace RidgesideVillage
             if (__instance.NameOrUniqueName != SUMMITFARM)
                 return;
 
-            if (!Game1.MasterPlayer.mailReceived.Contains(SummitHouse.KITCHENFLAG))
+            if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.HOUSEUPGRADED))
                 return;
 
             if (Game1.mailbox.Count > 0)
