@@ -32,6 +32,7 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.spawnWeedsAndStones)),
                 prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
             );
+            /*
             harmony.Patch(
                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.loadLights)),
                prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
@@ -40,6 +41,7 @@ namespace RidgesideVillage
                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.setUpLocationSpecificFlair)),
                prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
            );
+            */
             harmony.Patch(
                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlaceThisFurnitureHere)),
                prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_CanPlaceThisFurnitureHere_Prefix))
