@@ -893,16 +893,17 @@
 					"Action": "Mailbox"
 				}
 			},
-			{
-				"Position": { "X": 18, "Y": 46 },
-				"Layer": "Buildings",
-				"SetProperties": {
-					"Action": "Warp 16 11 Custom_Ridgeside_RSVSummitHouseNew"
-				}
-			}
 		],
-		"When": { "HasFlag: hostPlayer": "RSV.SummitHouseRedone" },
-		"Update": "OnLocationChange"
+		"When": { "HasFlag: hostPlayer": "RSV.SummitHouseRedone" }
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_HouseRedone.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 10, "Height": 8 },
+		"ToArea": { "X": 11, "Y": 40, "Width": 10, "Height": 8 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag: hostPlayer": "RSV.SummitHouseRedone" }
 	},
 
 
