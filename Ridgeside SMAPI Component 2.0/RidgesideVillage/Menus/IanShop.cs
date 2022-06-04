@@ -84,11 +84,11 @@ namespace RidgesideVillage
                 Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
 
                 // Construction services
-                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int housect) && housect == 1)
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int housect) && housect == 0)
                 {
                     Game1.player.mailForTomorrow.Add(HOUSEUPGRADED);
                 }
-                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int climatect) && climatect == 1)
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int climatect) && climatect == 0)
                 {
                     Game1.player.mailForTomorrow.Add(CLIMATECONTROLLED);
                 }

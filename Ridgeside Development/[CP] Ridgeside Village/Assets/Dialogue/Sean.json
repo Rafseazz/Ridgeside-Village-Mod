@@ -154,5 +154,17 @@
           "HasMod |contains= Rubecula.ParrotParents": false,
       },
   },
+
+	//Summit House upgrade dialogue
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Sean",
+   "When": {
+   	"HasConversationTopic: hostPlayer": "RSV.HouseCT",
+   },
+   "Entries": {
+		 "Custom_Ridgeside_SummitFarm": "{{i18n:Sean.house_upgrade}}",
+		},
+	},
 ]
 }

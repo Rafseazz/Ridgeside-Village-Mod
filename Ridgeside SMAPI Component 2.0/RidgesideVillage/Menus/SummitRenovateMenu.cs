@@ -135,7 +135,9 @@ namespace RidgesideVillage
 			blueprints = new List<BluePrint>();
 
 			if (!Game1.MasterPlayer.mailReceived.Contains(HOUSEUPGRADED))
+            {
 				blueprints.Add(new BluePrint(FARMUPGRADE));
+			}
             blueprints.Add(new BluePrint(CLIMATECONTROL));
 			setNewActiveBlueprint();
 			if (Game1.options.SnappyMenus)
@@ -606,7 +608,8 @@ namespace RidgesideVillage
 					{
 						CurrentBlueprint.consumeResources();
 						//DelayedAction.functionAfterDelay(returnToCarpentryMenuAfterSuccessfulBuild, 2000);
-						freeze = true;
+						//freeze = true;
+						seanConstructionMessage();
 					}
 					else
 					{
@@ -616,11 +619,8 @@ namespace RidgesideVillage
 				});
 				//this.onFarm = true;
 			}
-			if (!onFarm || freeze || Game1.IsFading())
-			{
-				return;
-			}
-			
+				
+
 		}
 
 		public bool tryToBuild()
