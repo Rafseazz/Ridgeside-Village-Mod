@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="46" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="165">
+<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="46" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="166">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
  </properties>
@@ -48,8 +48,8 @@
  <tileset firstgid="7117" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior" width="512" height="1088"/>
  </tileset>
- <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="665" columns="19">
-  <image source="z_rsvinterior.png" width="304" height="560"/>
+ <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="950" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="800"/>
  </tileset>
  <layer id="1" name="Back" width="46" height="18">
   <data encoding="csv">
@@ -180,11 +180,6 @@
     <property name="Action" value="Message &quot;rsv.hotel12&quot;"/>
    </properties>
   </object>
-  <object id="137" name="TileData" x="64" y="192" width="16" height="16">
-   <properties>
-    <property name="Action" value="Message &quot;rsv.hotel1&quot;"/>
-   </properties>
-  </object>
   <object id="138" name="TileData" x="208" y="224" width="16" height="16">
    <properties>
     <property name="Action" value="Message &quot;rsv.hotel10&quot;"/>
@@ -300,6 +295,11 @@
   <object id="164" name="TileData" x="400" y="240" width="16" height="16">
    <properties>
     <property name="Action" value="BlissBook"/>
+   </properties>
+  </object>
+  <object id="165" name="TileData" x="64" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="RSVHistoryScroll"/>
    </properties>
   </object>
  </objectgroup>
