@@ -33,6 +33,8 @@ namespace RidgesideVillage
         const int UNLOCKEVENT = 75160387;
         public const string HOUSEUPGRADED = "RSV.SummitHouseRedone";
         public const string CLIMATECONTROLLED = "RSV.ClimateControlled";
+        public const string GOTSPRINKLERS = "RSV.SummitSprinklers";
+        public const string OREAREAOPENED = "RSV.SummitOreArea";
         const string MINECARTSFIXED = "RSV.FixedMinecart";
         private static bool canRenovate = false;
 
@@ -47,6 +49,7 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("IanCounter", OpenIanMenu);
         }
 
+        [EventPriority(EventPriority.High)]
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT) && !Game1.MasterPlayer.mailReceived.Contains(HOUSEUPGRADED);
@@ -86,11 +89,33 @@ namespace RidgesideVillage
                 // Construction services
                 if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int housect) && housect == 0)
                 {
-                    Game1.player.mailForTomorrow.Add(HOUSEUPGRADED);
+                    Game1.player.mailReceived.Add(HOUSEUPGRADED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.HOUSETOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
                 }
                 if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int climatect) && climatect == 0)
                 {
-                    Game1.player.mailForTomorrow.Add(CLIMATECONTROLLED);
+                    Game1.getLocationFromName(SummitFarm.SUMMITFARM).isGreenhouse.Value = true;
+                    Game1.player.mailReceived.Add(CLIMATECONTROLLED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.CLIMATETOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.SPRINKLERTOPIC, out int sprinklerct) && sprinklerct == 0)
+                {
+                    Game1.player.mailReceived.Add(GOTSPRINKLERS);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.SPRINKLERTOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.ORETOPIC, out int orect) && orect == 0)
+                {
+                    Game1.player.mailReceived.Add(OREAREAOPENED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ORETOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+
+                if (Game1.player.mailReceived.Contains(GOTSPRINKLERS))
+                {
+                    WaterThePlants(Game1.getLocationFromName(SummitFarm.SUMMITFARM), 9999);
                 }
             }
         }
@@ -144,7 +169,7 @@ namespace RidgesideVillage
                     farmModData[willWaterPlants] = $"{wateringDaysLeft}/{numberOfTiles}";
 
                 }
-                WaterThePlants(numberOfTiles);
+                WaterThePlants(Game1.getFarm(), numberOfTiles);
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
             }
         }
@@ -314,10 +339,10 @@ namespace RidgesideVillage
             }
         }
 
-        internal static void WaterThePlants(int maxNumberToWater)
+        internal static void WaterThePlants(GameLocation location, int maxNumberToWater)
         {
             int n = 0;
-            foreach (var pair in Game1.getFarm().terrainFeatures.Pairs)
+            foreach (var pair in location.terrainFeatures.Pairs)
             {
                 if(n >= maxNumberToWater)
                 {

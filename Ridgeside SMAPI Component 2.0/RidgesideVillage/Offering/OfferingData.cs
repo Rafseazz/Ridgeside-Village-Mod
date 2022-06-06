@@ -48,7 +48,7 @@ namespace RidgesideVillage.Offering
             switch (this.Effect)
             {
                 case OfferingType.WaterPlants:
-                    IanShop.WaterThePlants(this.Value);
+                    IanShop.WaterThePlants(Game1.getFarm(), this.Value);
                     break;
                 case OfferingType.Buff:
                     this.ApplyBuff();

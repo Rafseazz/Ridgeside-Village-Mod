@@ -227,25 +227,6 @@ namespace RidgesideVillage
 
             SpiritShrine = new SpiritShrine(this);
 
-
-            //mark greenhouses as greenhouses
-            List<string> locationsNames = new List<string>() { "Custom_Ridgeside_AguarCaveTemporary", "Custom_Ridgeside_RSVGreenhouse1", "Custom_Ridgeside_RSVGreenhouse2" };
-            if (Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
-            {
-                locationsNames.Add("Custom_Ridgeside_SummitFarm");
-            }
-            foreach (var name in locationsNames)
-            {
-                GameLocation location = Game1.getLocationFromName(name);
-                if (location == null)
-                {
-                    Log.Trace($"RSV: Greenhouse {name} could not be found");
-                    continue;
-                }
-                location.isGreenhouse.Value = true;
-                Log.Trace($"RSV: {name} set to greenhouse");
-            }
-
             //remove corrupted Fire SO if the player shouldnt have it
             var team = Game1.player.team;
             if (Game1.player.IsMainPlayer && team.SpecialOrderActive(("RSV.UntimedSpecialOrder.SpiritRealmFlames")))

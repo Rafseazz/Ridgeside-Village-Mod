@@ -25,10 +25,13 @@ namespace RidgesideVillage
 
 		public const string FARMUPGRADE = "Summit House Upgrade";
 		public const string CLIMATECONTROL = "Climate Control";
+		public const string SPRINKLERS = "Sprinkler System";
+		public const string OREAREA = "Ore Area";
 		public const string HOUSETOPIC = "RSV.HouseCT";
 		public const string CLIMATETOPIC = "RSV.ClimateCT";
+		public const string SPRINKLERTOPIC = "RSV.SprinklerCT";
+		public const string ORETOPIC = "RSV.OreCT";
 		public const string ACTIVECONSTRUCTION = "RSV.ActiveConstruction";
-		public const string HOUSEUPGRADED = "RSV.SummitHouseRedone";
 
 		public const int region_backButton = 101;
 
@@ -134,11 +137,22 @@ namespace RidgesideVillage
 			resetBounds();
 			blueprints = new List<BluePrint>();
 
-			if (!Game1.MasterPlayer.mailReceived.Contains(HOUSEUPGRADED))
+			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.HOUSEUPGRADED))
             {
 				blueprints.Add(new BluePrint(FARMUPGRADE));
 			}
-            blueprints.Add(new BluePrint(CLIMATECONTROL));
+			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
+			{
+				blueprints.Add(new BluePrint(CLIMATECONTROL));
+			}
+			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.GOTSPRINKLERS))
+			{
+				blueprints.Add(new BluePrint(SPRINKLERS));
+			}
+			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.OREAREAOPENED))
+			{
+				blueprints.Add(new BluePrint(OREAREA));
+			}
 			setNewActiveBlueprint();
 			if (Game1.options.SnappyMenus)
 			{
@@ -634,6 +648,12 @@ namespace RidgesideVillage
 						break;
 					case CLIMATECONTROL:
 						Game1.MasterPlayer.activeDialogueEvents.Add(CLIMATETOPIC, 3);
+						break;
+					case SPRINKLERS:
+						Game1.MasterPlayer.activeDialogueEvents.Add(SPRINKLERTOPIC, 3);
+						break;
+					case OREAREA:
+						Game1.MasterPlayer.activeDialogueEvents.Add(ORETOPIC, 3);
 						break;
 				}
 				Game1.MasterPlayer.activeDialogueEvents.Add(ACTIVECONSTRUCTION, 3);

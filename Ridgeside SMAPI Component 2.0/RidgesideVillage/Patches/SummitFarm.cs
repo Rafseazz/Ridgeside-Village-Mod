@@ -18,7 +18,7 @@ namespace RidgesideVillage
     internal static class SummitFarm
     {
         private static IModHelper Helper { get; set; }
-        const string SUMMITFARM = "Custom_Ridgeside_SummitFarm";
+        public const string SUMMITFARM = "Custom_Ridgeside_SummitFarm";
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {

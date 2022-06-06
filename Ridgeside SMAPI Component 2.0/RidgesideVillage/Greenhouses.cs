@@ -19,8 +19,28 @@ namespace RidgesideVillage
             Monitor = ModInstance.Monitor;
 
             TileActionHandler.RegisterTileAction("ShipmentRSV", ShipmentBin);
+            Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+        }
 
-            //Helper.Events.Input.ButtonPressed += OnButtonPressed;
+        private static void OnSaveLoaded(object sender, EventArgs ex)
+        {
+            //mark greenhouses as greenhouses
+            List<string> locations = new List<string>() { "Custom_Ridgeside_AguarCaveTemporary", "Custom_Ridgeside_RSVGreenhouse1", "Custom_Ridgeside_RSVGreenhouse2" };
+            if (Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
+            {
+                locations.Add("Custom_Ridgeside_SummitFarm");
+            }
+            foreach (var name in locations)
+            {
+                GameLocation location = Game1.getLocationFromName(name);
+                if (location == null)
+                {
+                    Log.Trace($"RSV: Greenhouse {name} could not be found");
+                    continue;
+                }
+                location.isGreenhouse.Value = true;
+                Log.Trace($"RSV: {name} set to greenhouse");
+            }
         }
 
         private static void ShipmentBin(string tileActionString, Vector2 position)

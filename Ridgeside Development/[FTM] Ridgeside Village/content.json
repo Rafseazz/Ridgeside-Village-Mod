@@ -1662,6 +1662,105 @@
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
+      },
+      // Summit Farm Ore Area
+      {
+        "MiningLevelRequired": {
+          "Stone": 0,
+          "Geode": 0,
+          "FrozenGeode": 0,
+          "MagmaGeode": 0,
+          "Gem": 0,
+          "Copper": 0,
+          "Iron": 0,
+          "Gold": 0,
+          "Iridium": 0,
+          "Mystic": 0,
+          "Diamond": 0,
+          "Ruby": 0,
+          "Jade": 0,
+          "Amethyst": 0,
+          "Topaz": 0,
+          "Emerald": 0,
+          "Aquamarine": 0
+        },
+        "StartingSpawnChance": {
+          "Stone": 0,
+          "Geode": 0,
+          "FrozenGeode": 10,
+          "MagmaGeode": 10,
+          "Gem": 10,
+          "Copper": 10,
+          "Iron": 10,
+          "Gold": 10,
+          "Iridium": 10,
+          "Mystic": 10,
+          "Diamond": 10,
+          "Ruby": 10,
+          "Jade": 10,
+          "Amethyst": 10,
+          "Topaz": 10,
+          "Emerald": 10,
+          "Aquamarine": 10
+        },
+        "LevelTenSpawnChance": {
+          "Stone": 0,
+          "Geode": 0,
+          "FrozenGeode": 10,
+          "MagmaGeode": 10,
+          "Gem": 10,
+          "Copper": 10,
+          "Iron": 10,
+          "Gold": 10,
+          "Iridium": 10,
+          "Mystic": 10,
+          "Diamond": 10,
+          "Ruby": 10,
+          "Jade": 10,
+          "Amethyst": 10,
+          "Topaz": 10,
+          "Emerald": 10,
+          "Aquamarine": 10
+        },
+        "UniqueAreaID": "RSV SummitFarm Ore Area",
+        "MapName": "Custom_Ridgeside_SummitFarm",
+        "MinimumSpawnsPerDay": 0,
+        "MaximumSpawnsPerDay": 3,
+        "IncludeTerrainTypes": [
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [
+          "87,30/90,30",
+          "83,31/90,31",
+          "82,32/90,32",
+          "82,33/90,33",
+          "82,34/90,34",
+          "85,35/90,35",
+        ],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [
+            "Hn RSV.SummitOreArea/r 0.67"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 14
       }
     ],
     "PercentExtraSpawnsPerMiningLevel": 0,
