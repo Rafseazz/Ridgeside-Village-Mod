@@ -61,7 +61,7 @@
 
 			//Rivera Residence or Fishing House
 			"Carmen": "adult/neutral/outgoing/positive/female/non-datable/null/Town/fall 21/{{i18n:NPC_Data.Carmen}}/Custom_Ridgeside_BlairHouse 16 5/{{i18n:Name.Carmen}}",
-			"Blair": "teen/polite/outgoing/positive/female/non-datable/null/Town/winter 5/{{i18n:NPC_Data.Blair}}/Custom_Ridgeside_BlairHouse 5 5/{{i18n:Name.Blair}}",
+			"Blair": "teen/polite/outgoing/positive/female/datable/null/Town/winter 5/{{i18n:NPC_Data.Blair}}/Custom_Ridgeside_BlairHouse 5 5/{{i18n:Name.Blair}}",
 
 			//Bladebane Residence
 			"Freddie": "adult/polite/outgoing/positive/male/non-datable/null/Town/winter 18/{{i18n:NPC_Data.Freddie}}/Custom_Ridgeside_FreddieHouse 3 5/{{i18n:Name.Freddie}}",
@@ -117,6 +117,16 @@
 		"When": { "HasDialogueAnswer": 751603262 },
 		"Entries": {
 			"Kiarra": "teen/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
+		}
+	},
+
+	{
+		"LogName": "Anton Disposition Change",
+		"Action": "EditData",
+		"Target": "Data/NPCDispositions",
+		"When": { "HasDialogueAnswer": 75163041 },
+		"Entries": {
+			"Anton": "adult/polite/neutral/neutral/male/datable/null/Town/spring 9/{{i18n:NPC_Data.Anton}}/Custom_Ridgeside_3Bros2ndFloor 18 12/{{i18n:Name.Anton}}",
 		}
 	},
 
