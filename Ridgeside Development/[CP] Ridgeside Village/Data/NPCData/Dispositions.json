@@ -130,6 +130,16 @@
 		}
 	},
 
+	{
+		"LogName": "Paula Disposition Change",
+		"Action": "EditData",
+		"Target": "Data/NPCDispositions",
+		"When": { "HasDialogueAnswer": 75163521 },
+		"Entries": {
+			"Paula": "adult/polite/neutral/negative/female/datable/null/Town/fall 27/{{i18n:NPC_Data.Paula}}/Custom_Ridgeside_PaulaClinic 2 7/{{i18n:Name.Paula}}",
+		}
+	},
+
 
 ]
 }
