@@ -27,5 +27,19 @@
 		}
 	},
 
+	//after 8 heart schedule
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Anton",
+		"Entries": {
+			"Mon": "900 Custom_Ridgeside_IanHouse 12 13 1/1430 Custom_Ridgeside_PaulaClinic 3 12 1/1730 Custom_Ridgeside_RidgesideVillage 89 48 2/2200 Custom_Ridgeside_3Bros2ndFloor 18 12 0 anton_sleep",
+			"Tue": "GOTO Mon",
+			"Thu": "GOTO Mon",
+					},
+		"When": {
+			"HasSeenEvent": 75160304,
+		}
+	},
+
 ]
 }

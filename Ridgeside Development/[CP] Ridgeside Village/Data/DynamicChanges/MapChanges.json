@@ -891,6 +891,17 @@
 	},
 	*/
 
+//Paula Clean Room
+	{
+		"LogName": "RSV: Clean Paula Room after 4 heart event",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_PaulaClinic",
+		"FromFile": "Assets/Maps/EventMaps/RSVCleanPaulaRoom.tmx",
+		"ToArea": { "X": 0, "Y": 3, "Width": 13, "Height": 11 },
+		"When": { "HasSeenEvent": 75160349 },
+		"Update": "OnLocationChange"
+	},
+
 
 ]
 }
