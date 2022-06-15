@@ -38,6 +38,8 @@ namespace RidgesideVillage
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
+
+            helper.Events.Content.AssetRequested += OnAssetRequested;
             
             BgUtils.Initialize(this);
 
@@ -85,6 +87,11 @@ namespace RidgesideVillage
 
             Helper.ConsoleCommands.Add("LocationModData", "show ModData of given location", printLocationModData);
             Helper.ConsoleCommands.Add("remove_equipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
+        }
+
+        private void OnAssetRequested(object sender, AssetRequestedEventArgs e)
+        {
+            AssetManager.LoadEmptyJsons(e);
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
