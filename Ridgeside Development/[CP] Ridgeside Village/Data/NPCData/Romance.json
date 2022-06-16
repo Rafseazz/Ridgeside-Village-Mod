@@ -50,6 +50,21 @@
 		"Daia0": "{{i18n:Romance.Engagement.Daia0}}",
 		"Daia1": "{{i18n:Romance.Engagement.Daia1}}",
 
+		"Kiarra0": "{{i18n:Romance.Engagement.Kiarra0}}",
+		"Kiarra1": "{{i18n:Romance.Engagement.Kiarra1}}",
+
+		"Sean0": "{{i18n:Romance.Engagement.Sean0}}",
+		"Sean1": "{{i18n:Romance.Engagement.Sean1}}",
+
+		"Blair0": "{{i18n:Romance.Engagement.Blair0}}",
+		"Blair1": "{{i18n:Romance.Engagement.Blair1}}",
+
+		"Paula0": "{{i18n:Romance.Engagement.Paula0}}",
+		"Paula1": "{{i18n:Romance.Engagement.Paula1}}",
+
+		"Anton0": "{{i18n:Romance.Engagement.Anton0}}",
+		"Anton1": "{{i18n:Romance.Engagement.Anton1}}",
+
 	},
 },
 
@@ -131,6 +146,28 @@
 		},
 		"When": { "Relationship:Kiarra": "Engaged" },
 	},
+	{	
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Blair}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Blair}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Blair}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Blair}}",
+		},
+		"When": { "Relationship:Blair": "Engaged" },
+	},
+	{	
+		"Action": "EditData",
+		"Target": "strings/StringsFromCSFiles",
+		"Entries": {
+			"Utility.cs.5367": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer1.Paula}}",
+			"Utility.cs.5369": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer1.Paula}}",
+			"Utility.cs.5371": "{{i18n:Romance.FemaleWeddingFix.MaleFarmer2.Paula}}",
+			"Utility.cs.5377": "{{i18n:Romance.FemaleWeddingFix.FemaleFarmer2.Paula}}",
+		},
+		"When": { "Relationship:Paula": "Engaged" },
+	},
 	
 //--------------------
 // Special Dialogue   
@@ -139,7 +176,7 @@
 {
 	"LogName": "Special Dialogue",
 	"Action": "EditData",
-	"Target": "Characters/Dialogue/Alissa, Characters/Dialogue/Corine, Characters/Dialogue/Flor, Characters/Dialogue/Ian, Characters/Dialogue/Jeric, Characters/Dialogue/Kenneth, Characters/Dialogue/Maddie, Characters/Dialogue/Philip, Characters/Dialogue/Shiro, Characters/Dialogue/Ysabelle, Characters/Dialogue/Jio, Characters/Dialogue/Daia, Characters/Dialogue/Kiarra, Characters/Dialogue/Sean",
+	"Target": "Characters/Dialogue/Alissa, Characters/Dialogue/Corine, Characters/Dialogue/Flor, Characters/Dialogue/Ian, Characters/Dialogue/Jeric, Characters/Dialogue/Kenneth, Characters/Dialogue/Maddie, Characters/Dialogue/Philip, Characters/Dialogue/Shiro, Characters/Dialogue/Ysabelle, Characters/Dialogue/Jio, Characters/Dialogue/Daia, Characters/Dialogue/Kiarra, Characters/Dialogue/Sean, Characters/Dialogue/Blair, Characters/Dialogue/Paula, Characters/Dialogue/Anton",
 	"Entries": {
 		"give_flowersA": "{{i18n: Romance.give.flowersA.{{TargetWithoutPath}} }}",
 		"give_flowersB": "{{i18n: Romance.give.flowersB.{{TargetWithoutPath}} }}",
@@ -156,14 +193,14 @@
 {
 	"LogName": "Load Empty Ridgeside MarriageDialogue File",
 	"Action": "Load",
-	"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle, Characters/Dialogue/MarriageDialogueJio, Characters/Dialogue/MarriageDialogueDaia, Characters/Dialogue/MarriageDialogueKiarra, Characters/Dialogue/MarriageDialogueSean",
+	"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle, Characters/Dialogue/MarriageDialogueJio, Characters/Dialogue/MarriageDialogueDaia, Characters/Dialogue/MarriageDialogueKiarra, Characters/Dialogue/MarriageDialogueSean, Characters/Dialogue/MarriageDialogueBlair, Characters/Dialogue/MarriageDialoguePaula, Characters/Dialogue/MarriageDialogueAnton",
 	"FromFile": "Data/LoadData/EmptyJson.json"
 },
 
 {
 	"LogName": "Include Ridgeside MarriageDialogue Files",
 	"Action": "Include",
-	"FromFile": "Assets/MarriageDialogue/MarriageDialogueAlissa.json, Assets/MarriageDialogue/MarriageDialogueCorine.json, Assets/MarriageDialogue/MarriageDialogueFlor.json, Assets/MarriageDialogue/MarriageDialogueIan.json, Assets/MarriageDialogue/MarriageDialogueJeric.json, Assets/MarriageDialogue/MarriageDialogueKenneth.json, Assets/MarriageDialogue/MarriageDialogueMaddie.json, Assets/MarriageDialogue/MarriageDialoguePhilip.json, Assets/MarriageDialogue/MarriageDialogueShiro.json, Assets/MarriageDialogue/MarriageDialogueYsabelle.json, Assets/MarriageDialogue/MarriageDialogueJio.json, Assets/MarriageDialogue/MarriageDialogueDaia.json, Assets/MarriageDialogue/MarriageDialogueKiarra.json, Assets/MarriageDialogue/MarriageDialogueSean.json",
+	"FromFile": "Assets/MarriageDialogue/MarriageDialogueAlissa.json, Assets/MarriageDialogue/MarriageDialogueCorine.json, Assets/MarriageDialogue/MarriageDialogueFlor.json, Assets/MarriageDialogue/MarriageDialogueIan.json, Assets/MarriageDialogue/MarriageDialogueJeric.json, Assets/MarriageDialogue/MarriageDialogueKenneth.json, Assets/MarriageDialogue/MarriageDialogueMaddie.json, Assets/MarriageDialogue/MarriageDialoguePhilip.json, Assets/MarriageDialogue/MarriageDialogueShiro.json, Assets/MarriageDialogue/MarriageDialogueYsabelle.json, Assets/MarriageDialogue/MarriageDialogueJio.json, Assets/MarriageDialogue/MarriageDialogueDaia.json, Assets/MarriageDialogue/MarriageDialogueKiarra.json, Assets/MarriageDialogue/MarriageDialogueSean.json, Assets/MarriageDialogue/MarriageDialogueBlair.json, Assets/MarriageDialogue/MarriageDialoguePaula.json, Assets/MarriageDialogue/MarriageDialogueAnton.json",
 },  
 
 
@@ -186,6 +223,9 @@
 		"MovieInvite_Spouse_Jio": "{{i18n:Romance.MovieInvite.Spouse.Jio}}",
 		"MovieInvite_Spouse_Kiarra": "{{i18n:Romance.MovieInvite.Spouse.Kiarra}}",
 		"MovieInvite_Spouse_Sean": "{{i18n:Romance.MovieInvite.Spouse.Sean}}",
+		"MovieInvite_Spouse_Blair": "{{i18n:Romance.MovieInvite.Spouse.Blair}}",
+		"MovieInvite_Spouse_Paula": "{{i18n:Romance.MovieInvite.Spouse.Paula}}",
+		"MovieInvite_Spouse_Anton": "{{i18n:Romance.MovieInvite.Spouse.Anton}}",
 	}, 
 },
 
@@ -255,6 +295,9 @@
             "Ysabelle": "RidgesideSpouseRooms/11",
             "Kiarra": "RidgesideSpouseRooms/12",
             "Sean": "RidgesideSpouseRooms/13",
+            "Blair": "RidgesideSpouseRooms/14",
+            "Paula": "RidgesideSpouseRooms/15",
+            "Anton": "RidgesideSpouseRooms/16",
         }
     },
 
@@ -291,6 +334,9 @@
     		"Ysabelle": "RSVSpousePatios/11/29 30 31 25 29 30 31 25 29 30 31 8 8 34 34 34 35 34 34 34 35 34 34 34 35 34 34 34 35 34 31 25 29 0 0 0 0 0 0 0 0 0 29/0 0",
     		"Kiarra": "RSVSpousePatios/12/4 4 4/0 0",
     		"Sean": "RSVSpousePatios/13/0 0 0/0 0",
+    		"Blair": "RSVSpousePatios/14/24 24 24 24 24 24 24 25 25 25/0 0",
+    		"Paula": "RSVSpousePatios/15/0 0 0/0 0",
+    		"Anton": "RSVSpousePatios/16/0 0 0/0 0",
     	}
     }
 
