@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
 using StardewValley;
+using Microsoft.Xna.Framework;
 
 namespace RidgesideVillage
 {
@@ -15,7 +16,7 @@ namespace RidgesideVillage
     //https://github.com/FlashShifter/StardewValleyExpanded/blob/master/Code/CustomWeddingGuests.cs
     //Patch is only applied if SVE is not loaded.
 
-    internal static class WeddingGuests
+    internal static class WeddingPatches
     {
         private static IModHelper Helper { get; set; }
 
@@ -24,18 +25,32 @@ namespace RidgesideVillage
         public static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
-            if (Helper.ModRegistry.IsLoaded("FlashShifter.SVECode"))
+            if (!Helper.ModRegistry.IsLoaded("FlashShifter.SVECode"))
             {
-                //SVE is loaded, nothing to do
-                return;
+                Log.Trace($"Applying Harmony Patch \"{nameof(WeddingPatches)}.");
+                harmony.Patch(
+                    original: AccessTools.Method(typeof(Utility), nameof(Utility.getCelebrationPositionsForDatables), new Type[] { typeof(List<string>) }),
+                    postfix: new HarmonyMethod(typeof(WeddingPatches), nameof(getCelebrationPositionsForDatables_Postfix))
+                );
             }
-            Log.Trace($"Applying Harmony Patch \"{nameof(WeddingGuests)}.");
+
             harmony.Patch(
-                original: AccessTools.Method(typeof(Utility), nameof(Utility.getCelebrationPositionsForDatables), new Type[]{ typeof(List<string>) }),
-                postfix: new HarmonyMethod(typeof(WeddingGuests), nameof(getCelebrationPositionsForDatables_Postfix))
+                original: AccessTools.Method(typeof(Farm), nameof(Farm.startEvent)),
+                postfix: new HarmonyMethod(typeof(WeddingPatches), nameof(WeddingPatches.Farm_StartEvent_Postfix))
             );
+
         }
 
+        //fixes the weddinreception offset issue on custom farms
+        private static void Farm_StartEvent_Postfix(Event evt)
+        {
+            if(evt.id == 75160245)
+            {
+                evt.eventPositionTileOffset = new Vector2(0, 0);
+            }
+        }
+
+        //Adds Weddingguests (if SVE isnt installed, otherwise SVE does)
         public static void getCelebrationPositionsForDatables_Postfix(ref string __result, List<string> people_to_exclude)
         {
             try
