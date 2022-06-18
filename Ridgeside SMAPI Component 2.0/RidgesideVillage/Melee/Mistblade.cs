@@ -36,14 +36,7 @@ namespace RidgesideVillage
                 return;
 
             Farmer user = Game1.player;
-            try
-            {
-                if (user.CurrentTool.Name != MISTBLADENAME)
-                {
-                    return;
-                }
-            }
-            catch
+            if (user.CurrentTool?.Name is not MISTBLADENAME)
             {
                 return;
             }
