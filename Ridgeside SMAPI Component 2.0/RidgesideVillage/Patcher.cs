@@ -32,7 +32,7 @@ namespace RidgesideVillage
             Fish.ApplyPatch(harmony, Helper);
             TreasureItems.ApplyPatch(harmony, Helper);
             SummitFarm.ApplyPatch(harmony, Helper);
-            WeddingGuests.ApplyPatch(harmony, Helper);
+            WeddingPatches.ApplyPatch(harmony, Helper);
             Animations.ApplyPatch(harmony, Helper);
             SecretSantaGift.ApplyPatch(harmony, Helper);
             Rings.ApplyPatch(harmony, Helper);
