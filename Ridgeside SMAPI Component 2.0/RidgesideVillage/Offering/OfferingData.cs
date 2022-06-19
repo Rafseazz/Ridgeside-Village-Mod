@@ -69,7 +69,7 @@ namespace RidgesideVillage.Offering
                 {
                     break;
                 }
-                if (pair.Value is HoeDirt dirt && dirt.crop != null && !dirt.crop.fullyGrown.Value)
+                if (pair.Value is HoeDirt dirt && dirt.crop != null)
                 {
                     Crop crop = dirt.crop;
 
