@@ -72,8 +72,13 @@ namespace RidgesideVillage.Offering
                 if (pair.Value is HoeDirt dirt && dirt.crop != null)
                 {
                     Crop crop = dirt.crop;
+                    bool harvestable = crop.currentPhase.Value >= crop.phaseDays.Count - 1 && (!crop.fullyGrown.Value || crop.dayOfCurrentPhase.Value <= 0);
 
-                    if (crop.isWildSeedCrop())
+                    if (harvestable)
+                    {
+                        continue;
+                    }
+                    else if (crop.isWildSeedCrop())
                     {
                         int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
                         Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
@@ -89,8 +94,7 @@ namespace RidgesideVillage.Offering
                     {
                         crop.growCompletely();
                         Log.Verbose($"RSV: Regular crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
-                    }
-                        
+                    } 
                         
                     n++;
                 }
