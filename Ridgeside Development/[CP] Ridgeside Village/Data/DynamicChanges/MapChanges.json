@@ -749,6 +749,26 @@
 		"Update": "OnLocationChange"
     },
 
+	{
+			"LogName": "Torts Realm Warp",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+      "MapTiles": [
+			{
+				"Position": { "X": 57, "Y": 52 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_TortsRealm 14 38"
+               }
+            }
+		],
+	"Update": "OnLocationChange",
+	"When": {
+			"HasSeenEvent |contains=75160287": true,
+			"Day": "1, 28"
+		},
+  },
+
 //Prevent spawn in Foxbloom spots on non-Foxbloom Day
 	{
         "Action": "EditMap",

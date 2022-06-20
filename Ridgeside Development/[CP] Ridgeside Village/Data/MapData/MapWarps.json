@@ -545,22 +545,18 @@
    			"Action": "EditMap",
    			"Target": "Maps/Custom_Ridgeside_RidgePond",
 				"AddWarps": [
-				"18 1 Custom_Ridgeside_RidgeFalls 21 58",
-				"19 1 Custom_Ridgeside_RidgeFalls 21 58",
+				"18 0 Custom_Ridgeside_RidgeFalls 21 60",
+				"19 0 Custom_Ridgeside_RidgeFalls 21 60",
    			],
-   			"When": { "HasFlag": "LinkedFishesLetter" },
-				"Update": "OnLocationChange"
 		},
 
 		{
    			"Action": "EditMap",
    			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
 				"AddWarps": [
-					"21 59 Custom_Ridgeside_RidgePond 18 3",
-					"22 59 Custom_Ridgeside_RidgePond 19 3",
+					"21 61 Custom_Ridgeside_RidgePond 18 3",
+					"22 61 Custom_Ridgeside_RidgePond 19 3",
 	   			],
-   			"When": { "HasFlag": "LinkedFishesLetter" },
-				"Update": "OnLocationChange"
 		},
 
 		/*
@@ -605,20 +601,6 @@
 				"15 39 Custom_Ridgeside_RidgesideVillage 57 53",
 				"16 39 Custom_Ridgeside_RidgesideVillage 57 53",
    			]
-		},
-
-		{
-			"LogName": "Torts Realm Warp",
-			"Action": "EditMap",
-			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
-			"AddWarps": [
-				"57 52 Custom_Ridgeside_TortsRealm 14 38"
-			],
-			"When": {
-				"HasSeenEvent |contains=75160287": true,
-				"Day": "1, 28"
-			},
-			"Update": "OnLocationChange"
 		},
 
 ]

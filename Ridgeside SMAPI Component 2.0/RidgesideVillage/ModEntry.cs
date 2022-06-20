@@ -273,7 +273,11 @@ namespace RidgesideVillage
         private void OnEventFinished(object sender, EventArgs e)
         {
             Event current = Game1.CurrentEvent;
-            if (current.FestivalName == "winter28")
+#nullable enable
+            string? name = current.FestivalName;
+#nullable disable
+            //Log.Trace($"RSV: Current event festivalName is {name}");
+            if (name == "Ember of Resolutions")
             {
                 try
                 {
