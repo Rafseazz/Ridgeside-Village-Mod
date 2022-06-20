@@ -52,5 +52,16 @@
 		}
 	},
 
+	{
+		"LogName": "Irene Chef Outfit Portrait",
+		"Action": "EditImage",
+		"Target": "Portraits/Irene",
+		"FromFile": "Assets/Portraits/Irene_Chef.png",
+		"Update": "OnLocationChange",
+		"When": {
+			"LocationName": "Custom_Ridgeside_PurpleMansion"
+		},
+	},
+
 ]
 }
