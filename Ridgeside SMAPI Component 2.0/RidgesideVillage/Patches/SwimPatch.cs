@@ -17,7 +17,7 @@ namespace RidgesideVillage.Patches
                 postfix: new HarmonyMethod(typeof(SwimPatch), nameof(PostfixChangeInto)));
             harmony.Patch(
                 original: AccessTools.DeclaredMethod(typeof(Farmer), nameof(Farmer.changeOutOfSwimSuit)) ?? throw new InvalidOperationException("Farmer.changeOutOfSwimsuit not found"),
-                postfix: new HarmonyMethod(typeof(Farmer), nameof(PostfixChangeOut)));
+                postfix: new HarmonyMethod(typeof(SwimPatch), nameof(PostfixChangeOut)));
         }
 
         private static void PostfixChangeInto()
