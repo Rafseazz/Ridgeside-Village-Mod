@@ -6,6 +6,7 @@ using StardewValley;
 using StardewValley.Objects;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
+using SpaceCore.Events;
 
 namespace RidgesideVillage
 {
@@ -38,6 +39,9 @@ namespace RidgesideVillage
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
+            SpaceEvents.OnEventFinished += OnEventFinished;
+
+            helper.Events.Content.AssetRequested += OnAssetRequested;
             
             BgUtils.Initialize(this);
 
@@ -87,6 +91,11 @@ namespace RidgesideVillage
             Helper.ConsoleCommands.Add("remove_equipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
         }
 
+        private void OnAssetRequested(object sender, AssetRequestedEventArgs e)
+        {
+            AssetManager.LoadEmptyJsons(e);
+        }
+
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             forgetRepeatableEvents();
@@ -95,7 +104,7 @@ namespace RidgesideVillage
         private void forgetRepeatableEvents()
         {
             string path = PathUtilities.NormalizePath("assets/RepeatableEvents.json");
-            var data = Helper.Content.Load<Dictionary<string, List<int>>>(path);
+            var data = Helper.ModContent.Load<Dictionary<string, List<int>>>(path);
             if(data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
             {
                 foreach(var entry in repeatableEvents)
@@ -258,6 +267,50 @@ namespace RidgesideVillage
                     }
                 }
             }
+        }
+
+        // Make it 12:30 AM after Ember of Resolutions event
+        private void OnEventFinished(object sender, EventArgs e)
+        {
+            Event current = Game1.CurrentEvent;
+#nullable enable
+            string? name = current.FestivalName;
+#nullable disable
+            //Log.Trace($"RSV: Current event festivalName is {name}");
+            if (name == "Ember of Resolutions")
+            {
+                try
+                {
+                    var festival = Helper.Reflection.GetField<Dictionary<string, string>>(current, "festivalData").GetValue()["file"];
+                    if (festival != null && festival.Equals("winter28"))
+                    {
+                        Game1.timeOfDayAfterFade = 2430;
+                        if (Game1.IsMasterGame)
+                        {
+                            foreach (GameLocation i in Game1.locations)
+                            {
+                                foreach (Vector2 position in new List<Vector2>(i.objects.Keys))
+                                {
+                                    // Since it's already set to 10 PM
+                                    if (i.objects[position].minutesElapsed(150, i))
+                                    {
+                                        i.objects.Remove(position);
+                                    }
+                                }
+                                if (i is Farm)
+                                {
+                                    (i as Farm).timeUpdate(150);
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"RSV: Error at end of EoR festival:\n{ex}");
+                }
+            }
+            //Log.Trace("RSV: Done with OnEventFinished");
         }
 
     }

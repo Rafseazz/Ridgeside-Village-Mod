@@ -33,13 +33,7 @@
 		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, },
 	},
 
-	//Custom Wedding Patches (Not sure if this actually works)
-	{
-		"Action": "Load",
-		"Target": "Data/CustomWeddingGuestPositions",
-		"FromFile": "Data/LoadData/EmptyJson.json",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, },
-	},
+	//Custom Wedding Patches (Not sure if this actually works). Blank json load moved to code component so smapi conflict resolution can be used.
 	{
 		"Action": "EditData",
 		"Target": "Data/CustomWeddingGuestPositions",

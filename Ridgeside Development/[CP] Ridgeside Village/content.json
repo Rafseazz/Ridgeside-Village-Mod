@@ -63,12 +63,6 @@
 			"Description": "Uses Ridgeside Village's official patch for the Bus Stop by TheLimeyDragon and Rafseazz. Might be incompatible with other mods."
 		},
 
-		"AutoWeddingReception": {
-			"AllowValues": "true, false",
-			"Default": "false",
-			"Description": "Whether Naomi automatically takes you to the reception after your wedding, or if you must go there yourself. Recommended setting 'false' for custom farm users."
-		},
-
 		"PoleAtBackwoods": {
 			"AllowValues": "true, false",
 			"Default": "true",
@@ -694,6 +688,22 @@
 				"HasMod |contains=Rafseazz.RSVSAATExtra": true
 			}
 		},
+
+		//EoRMusic
+		{
+			"Name": "EoRMusic",
+			"Value": "Cloth",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "EoRMusic",
+			"Value": "WinterMountain",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
 	],
 
 	/*********
@@ -1148,7 +1158,7 @@
 	{
 		"LogName": "Include all InterModCompat files",
 		"Action": "Include",
-		"FromFile": "Data/InterModCompat/CustomGiftDialogue.json, Data/InterModCompat/EastScarpe.json, Data/InterModCompat/KarmyllasImmersiveMaps.json, Data/InterModCompat/StardewValleyExpanded.json, Data/InterModCompat/TownSchool.json, Data/InterModCompat/WarpNetwork.json",
+		"FromFile": "Data/InterModCompat/CustomGiftDialogue.json, Data/InterModCompat/EastScarpe.json, Data/InterModCompat/KarmyllasImmersiveMaps.json, Data/InterModCompat/StardewValleyExpanded.json, Data/InterModCompat/TownSchool.json, Data/InterModCompat/WarpNetwork.json,  Data/InterModCompat/EventLookup.json",
 	},
 
 	//Includes Map Data

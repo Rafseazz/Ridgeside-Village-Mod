@@ -37,7 +37,7 @@ namespace RidgesideVillage
             TreasureItems.ApplyPatch(harmony, Helper);
             UntimedSO.ApplyPatch(harmony, Helper);
             WalletItem.ApplyPatch(harmony, Helper);
-            WeddingGuests.ApplyPatch(harmony, Helper);
+            WeddingPatches.ApplyPatch(harmony, Helper);
         }
     }        
 }
