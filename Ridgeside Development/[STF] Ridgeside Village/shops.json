@@ -1742,7 +1742,7 @@
 	"ShopPrice": -1,
 	"DefaultSellPriceMultiplier": 2.5,
 	"PriceMultiplierWhen": {
-		"1.25": ["f Kimpoi 2000"]
+		".5": ["f Kimpoi 2000"]
 		},
 	"When": ["NPCAt Kimpoi 10 5"],
 	"ClosedMessage": "Sorry, we're closed!",
@@ -1788,12 +1788,6 @@
 				],
 		},
 		//Year Two
-    {
-			"ItemType": "Object",
-			"ItemNames": [ "Tree Fertilizer", ],
-			"StockPrice": 150,
-      "When": [ "y 2" ]
-		},
 		{
 			"ItemType": "Object",
 			"ItemNames": [
@@ -1801,6 +1795,12 @@
 				"Ember Blood Lime Sapling",
 				],
 			"When": [ "y 2" ]
+		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [ "Tree Fertilizer", ],
+			"StockPrice": 150,
+      "When": [ "y 2" ]
 		},
 	],
 	},
@@ -2005,21 +2005,29 @@
 			"StockPrice": 120,
       "When": [ "f Lorenzo 2000" ]
 		},
+    {
+			"ItemType": "Object",
+			"ItemNames": [
+				"Quality Fertilizer"
+			],
+			"StockPrice": 250,
+			"When": [ "y 1" ]
+		},
 		{
 			"ItemType": "Object",
 			"ItemNames": [
 				"Quality Fertilizer"
 			],
-			"StockPrice": 80,
-			"When": [ "!f Lorenzo 2000" ]
+			"StockPrice": 100,
+			"When": [ "!f Lorenzo 2000/y 2" ]
 		},
     {
 			"ItemType": "Object",
 			"ItemNames": [
 				"Quality Fertilizer"
 			],
-			"StockPrice": 60,
-			"When": [ "f Lorenzo 2000" ]
+			"StockPrice": 80,
+			"When": [ "f Lorenzo 2000/y 2" ]
 		},
     //Grapes of Ferngill - Year-round
     {
