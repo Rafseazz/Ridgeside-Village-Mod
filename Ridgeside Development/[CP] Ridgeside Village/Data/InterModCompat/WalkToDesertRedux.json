@@ -1,0 +1,14 @@
+{
+	"Changes": [
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"FromFile": "Assets/Maps/MapPatches/RSVSouthPatchTemp.tmx",
+			"FromArea": { "X": 0, "Y": 0, "Width": 28, "Height": 30 },
+			"ToArea": { "X": 69, "Y": 120, "Width": 28, "Height": 30 },
+			"PatchMode": "Replace",
+			"When": { "HasMod: |contains=Tarniyar.CP.WalkToDesert": true, },
+		},
+	]
+}
