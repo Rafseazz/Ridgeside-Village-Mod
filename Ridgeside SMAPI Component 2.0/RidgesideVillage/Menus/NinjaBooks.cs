@@ -22,7 +22,7 @@ namespace RidgesideVillage
         static bool dialogueShown = false;
 
         const int HasUnsealedRae = 75160259;
-        const int RealmCleansed = 75160265;
+        const int RealmCleansed = 75160263;
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
