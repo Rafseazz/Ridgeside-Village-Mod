@@ -40,9 +40,10 @@ namespace RidgesideVillage
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
             SpaceEvents.OnEventFinished += OnEventFinished;
+            SpaceEvents.OnItemEaten += OnItemEaten;
 
             helper.Events.Content.AssetRequested += OnAssetRequested;
-            
+
             BgUtils.Initialize(this);
 
             TortsBackground.Initialize(this);
@@ -105,9 +106,9 @@ namespace RidgesideVillage
         {
             string path = PathUtilities.NormalizePath("assets/RepeatableEvents.json");
             var data = Helper.ModContent.Load<Dictionary<string, List<int>>>(path);
-            if(data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
+            if (data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
             {
-                foreach(var entry in repeatableEvents)
+                foreach (var entry in repeatableEvents)
                 {
                     Game1.player.eventsSeen.Remove(entry);
                 }
@@ -132,7 +133,7 @@ namespace RidgesideVillage
             GameLocation location = Game1.getLocationFromName(arg2[0]);
             if (location != null)
             {
-                foreach(var key in location.modData.Keys)
+                foreach (var key in location.modData.Keys)
                 {
                     Log.Info($"{key}: {location.modData[key]}");
                 }
@@ -195,13 +196,13 @@ namespace RidgesideVillage
             Game1.player.pantsItem.Value = null;
             Game1.player.UpdateClothing();
 
-            try { Game1.player.boots?.Value.onUnequip(); } catch {}
+            try { Game1.player.boots?.Value.onUnequip(); } catch { }
             Game1.player.boots.Value = null;
             Game1.player.changeShoeColor(12);
 
-            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
             Game1.player.leftRing.Value = null;
-            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
             Game1.player.rightRing.Value = null;
 
             /*
@@ -257,7 +258,7 @@ namespace RidgesideVillage
                 //if player has NOT seen portal opening or HAS seen the cleansing event remove the fire quest
                 if (!Game1.player.eventsSeen.Contains(75160256) || Game1.player.eventsSeen.Contains(75160263))
                 {
-                    for (int i = 0; i<team.specialOrders.Count; i++)
+                    for (int i = 0; i < team.specialOrders.Count; i++)
                     {
                         if (team.specialOrders[i].questKey.Equals("RSV.UntimedSpecialOrder.SpiritRealmFlames"))
                         {
@@ -312,6 +313,5 @@ namespace RidgesideVillage
             }
             //Log.Trace("RSV: Done with OnEventFinished");
         }
-
     }
 }

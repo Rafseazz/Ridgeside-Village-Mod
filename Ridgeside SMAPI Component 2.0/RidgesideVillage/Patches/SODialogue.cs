@@ -64,7 +64,10 @@ namespace RidgesideVillage
                 {
                     if ((specialOrder.questKey.Value == PIKAQUEST) && (!__state))
                     {
-                        Game1.player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
+                        foreach(Farmer player in Game1.getAllFarmers())
+                        {
+                            player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
+                        }
                         Log.Trace($"RSV: Added pika_pickup conversation topic.");
                         return;
                     }
