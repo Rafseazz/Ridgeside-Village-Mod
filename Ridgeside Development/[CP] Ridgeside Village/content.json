@@ -73,6 +73,12 @@
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "Enable/Disable the seasonal RSV world map."
+		},
+
+		"EnableTouristNPCs": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Enable/Disable the decoration tourist NPCs in the hotel."
 		}
 
 /*		"EnableVanillaEdits": {
@@ -1112,7 +1118,16 @@
 	*/
 	{
 		"Action": "Include",
-		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/CustomCompanionsTourists.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
+		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/AntiSocialNPCs.json, Data/DependencyData/CustomNPCExclusions.json",
+	},
+
+	{
+		"Action": "Include",
+		"FromFile": "Data/DependencyData/CustomCompanionsTourists.json",
+		"When": 
+		{
+			"EnableTouristNPCs": "true"
+		}
 	},
 
 	//Include Event Data
