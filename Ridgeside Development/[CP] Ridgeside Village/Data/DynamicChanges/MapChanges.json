@@ -922,6 +922,24 @@
 		"Update": "OnLocationChange"
 	},
 
+//Kimpoi open photo book
+	{
+	"LogName": "RSV: Open Old Photo Book after Kimpoi's 8 heart event",
+    "Action": "EditMap",
+    "Target": "Maps/Custom_Ridgeside_BertHouse",
+    "MapTiles": [
+			{
+				"Position": { "X": 9, "Y": 12 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "ShowImage \"LooseSprites/zRSVOldKids\" 3.5 ShowImage.zRSVOldKids"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160332 },
+		"Update": "OnLocationChange, OnTimeChange"
+	},
+
 
 ]
 }
