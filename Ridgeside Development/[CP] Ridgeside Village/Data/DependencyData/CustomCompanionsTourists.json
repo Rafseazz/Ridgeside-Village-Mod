@@ -435,6 +435,118 @@
       "Target": "Characters/RSVTourists/Guest5, Characters/RSVTourists/Guest10",
       "FromFile": "Assets/LooseSprites/Tourists/Body_{{Random: 5, 1, 2, 3, 4 |key=RSVTourist}}/Hair/Hair_{{Random: 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8}}/Colour_{{Random: 9, 10, 1, 2, 3, 4, 5, 6, 7, 8}}.png",
       "PatchMode": "Overlay",
-   },   
+   },
+
+   //Random Dialogue
+   {
+      "LogName": "Tourist random dialogue 1",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest1}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 2",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest2}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 3",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest3}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 4",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest4}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 5",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest5}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 6",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest6}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 7",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest7}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5, 6|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 8",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest8}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5, 6, 7|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 9",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest9}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5, 6, 7, 8|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
+   {
+      "LogName": "Tourist random dialogue 10",
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.Guest10}}",
+      "Entries": {
+         "Companion": {
+            "InspectionDialogue": "{{i18n:GuestDialogue.{{Random: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2, 3, 4, 5, 6, 7, 8, 9|key=RSVTouristDialogue}}}}"
+         }
+      }
+   },
+
 ]
 }
