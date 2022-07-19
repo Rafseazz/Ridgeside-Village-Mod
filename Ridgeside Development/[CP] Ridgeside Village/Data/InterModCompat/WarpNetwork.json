@@ -10,7 +10,8 @@
 					"x": 18,
 					"y": 10,
 					"enabled": true,
-					"label": "Ridge"
+					"label": "Ridge",
+					"icon": "RSVxWN"
 				}
 			},
 			"When":{
@@ -36,6 +37,11 @@
             "When":{
 				"HasMod":"tlitookilakin.warpnetwork"
 			}
+        },
+        {
+	        "Action":"Load",
+	        "Target":"Data/WarpNetwork/Icons/RSVxWN",
+	        "FromFile":"Assets/LooseSprites/RSVxWN.png"
         }
 	]
 }
