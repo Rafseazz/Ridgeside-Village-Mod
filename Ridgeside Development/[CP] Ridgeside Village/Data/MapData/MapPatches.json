@@ -1,13 +1,53 @@
 {
 	"Changes": [
-		
+
+	//Expanded festivals VANILLA
 	{
 		"Action": "Load",
 		"Target": "Maps/Forest-FlowerFestival",
 		"FromFile": "Assets/Maps/FestivalMaps/FlowerFestival-Patch.tmx",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false },
+		"When": { 
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"RSVNPCSAttendFestivals": true
+		},
 	},
-	
+	{
+		"Action": "Load",
+		"Target": "Maps/Town-EggFestival",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVEggFestival.tmx",
+		"When": { 
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"RSVNPCSAttendFestivals": true
+		},
+	},
+	{
+		"Action": "Load",
+		"Target": "Maps/Beach-Luau",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVLuau.tmx",
+		"When": { 
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"RSVNPCSAttendFestivals": true
+		},
+	},
+	{
+		"Action": "Load",
+		"Target": "Maps/Town-Halloween",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVHalloween.tmx",
+		"When": { 
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"RSVNPCSAttendFestivals": true
+		},
+	},
+	{
+		"Action": "Load",
+		"Target": "Maps/Town-Christmas",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVChristmas.tmx",
+		"When": { 
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"RSVNPCSAttendFestivals": true
+		},
+	},
+
 		/*********
 		** Add Map Merges
 		*********/
