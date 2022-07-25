@@ -6,7 +6,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "RSVNPCSAttendFestivals": true
+            "RSVNPCSAttendFestivals": true, "NoExpandedFestivalMaps": false
         },
         "TextOperations": [
             {
@@ -30,7 +30,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true, "NoExpandedFestivalMaps": false
         },
         "TextOperations": [
             {
@@ -49,6 +49,7 @@
         "When": {
             "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
 			"HasSeenEvent: anyPlayer|contains=75160188": true,
+            "NoExpandedFestivalMaps": false
         },
         "TextOperations": [
             {
@@ -65,7 +66,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true, "NoExpandedFestivalMaps": false
         },
         "TextOperations": [
             {
@@ -83,7 +84,7 @@
       "Action": "EditData",
       "Target": "Data/Festivals/winter25",
       "When": {
-            "RSVNPCSAttendFestivals": true
+            "RSVNPCSAttendFestivals": true, "NoExpandedFestivalMaps": false
         },
       "TextOperations": [
         {

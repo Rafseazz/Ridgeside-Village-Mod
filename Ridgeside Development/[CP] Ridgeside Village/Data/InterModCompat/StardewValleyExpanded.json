@@ -224,7 +224,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-EggFestival.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 52, "Height": 54 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 52, "Height": 54 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "NoExpandedFestivalMaps": false },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -266,7 +266,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Beach-Luau.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 48, "Height": 26 },
 		"ToArea": { "X": 56, "Y": 0, "Width": 48, "Height": 26 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "NoExpandedFestivalMaps": false },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -318,7 +318,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Halloween.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 25, "Height": 24 },
 		"ToArea": { "X": 0, "Y": 53, "Width": 25, "Height": 24 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "IsOddYear": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "IsOddYear": true, "NoExpandedFestivalMaps": false },
 		"PatchMode": "ReplaceByLayer",
 	},
 	{
@@ -327,7 +327,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Halloween2.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 25, "Height": 24 },
 		"ToArea": { "X": 0, "Y": 53, "Width": 25, "Height": 24 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "IsOddYear": false },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "IsOddYear": false, "NoExpandedFestivalMaps": false },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -395,7 +395,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Christmas.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": false },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": false, "NoExpandedFestivalMaps": false },
 		"PatchMode": "ReplaceByLayer",
 	},
 	
@@ -405,7 +405,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-JojaChristmas.tbin.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": true, "NoExpandedFestivalMaps": false },
 		"PatchMode": "ReplaceByLayer",
 	},
 
