@@ -24,19 +24,19 @@
 		"RepeatCableCarCutscene": {
 			"AllowValues": "true, false",
 			"Default": "true",
-			"Description": "Enable Cable Car Cutscene"
+			"Description": "Enable Cable Car Cutscene."
 		},
 
 		"EnableOtherNPCsInCableCar": {
 			"AllowValues": "true, false",
 			"Default": "true",
-			"Description": "Enable the chances of other NPCs to appear riding the Cable Car (Along with LASV, ES and SVE NPCs)"
+			"Description": "Enable the chances of other NPCs to appear riding the Cable Car (Along with LASV, ES and SVE NPCs)."
 		},
 
 		"EnableRidgesideMusic": {
 			"AllowValues": "true, false",
 			"Default": "true",
-			"Description": "Enables music for Ridgeside Village"
+			"Description": "Enables music for Ridgeside Village."
 		},
 
 		"RSVNPCSAttendFestivals": {
@@ -45,10 +45,10 @@
 			"Description": "Allows RSV NPCs to attend Pelican Town Festivals."
 		},
 
-		"NoExpandedFestivalMaps": {
+		"ExpandedFestivalMaps": {
 			"AllowValues": "true, false",
-			"Default": "false",
-			"Description": "Disables the expanded festival maps. Uses old festival placements for RSV NPCs."
+			"Default": "true",
+			"Description": "Enables the expanded festival maps."
 		},
 
 		"EasyIntroduction": {
@@ -1251,7 +1251,7 @@
   		"LogName": "Include Old Festival Placements",
   		"Action": "Include",
   		"FromFile": "Data/Festivals/FestivalLocations/OldLocations.json",
-  		"When": { "NoExpandedFestivalMaps": true }
+  		"When": { "ExpandedFestivalMaps": false }
   },
 
 
