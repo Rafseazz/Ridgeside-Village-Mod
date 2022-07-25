@@ -4,7 +4,7 @@
     //NO SVE
    "Action": "EditData",
    "Target": "Data/Festivals/spring13",
-   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "RSVNPCSAttendFestivals": true },
    "TextOperations": [
 
    //SetUp
@@ -33,7 +33,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "FullFestivals": true
+            "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -63,7 +63,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "HasSeenEvent": 75160249, "FullFestivals": true
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -87,7 +87,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "HasSeenEvent": 75160251, "FullFestivals": true
+            "HasSeenEvent": 75160251, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -137,7 +137,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "HasSeenEvent": 75160254, "FullFestivals": true
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -161,7 +161,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "FullFestivals": true,
+            "RSVNPCSAttendFestivals": true,
             "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
         },
         "Entries": {
@@ -207,7 +207,7 @@
     {
    "Action": "EditData",
    "Target": "Data/Festivals/summer11",
-   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "RSVNPCSAttendFestivals": true},
    "TextOperations": [
 
    //SetUp
@@ -235,7 +235,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/summer11",
         "When": {
-            "FullFestivals": true
+            "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -259,7 +259,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/summer11",
         "When": {
-            "HasSeenEvent": 75160249, "FullFestivals": true
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -283,7 +283,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/summer11",
         "When": {
-            "HasSeenEvent": 75160254, "FullFestivals": true
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -333,7 +333,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/summer11",
         "When": {
-            "FullFestivals": true
+            "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
           {
@@ -386,7 +386,7 @@
     //NO SVE
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "RSVNPCSAttendFestivals": true },
    "TextOperations": [
 
    //SetUp
@@ -406,7 +406,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "FullFestivals": true,
+            "RSVNPCSAttendFestivals": true,
             "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
         },
         "TextOperations": [
@@ -424,7 +424,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasSeenEvent": 75160249, "FullFestivals": true
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -441,7 +441,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasSeenEvent": 75160254, "FullFestivals": true
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -490,6 +490,7 @@
     {
    "Action": "EditData",
    "Target": "Data/Festivals/winter25",
+   "When": { "RSVNPCSAttendFestivals": true },
    "TextOperations": [
 
    //SetUp
@@ -509,7 +510,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "FullFestivals": true
+            "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -526,7 +527,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160249, "FullFestivals": true
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -561,7 +562,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160254, "FullFestivals": true
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -687,7 +688,7 @@
     //With SVE variant 2
     "Action": "EditData",
     "Target": "Data/Festivals/fall27",
-    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "IsOddYear": false },
+    "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "IsOddYear": false, "RSVNPCSAttendFestivals": true },
     "TextOperations": [
 
    //SetUp
