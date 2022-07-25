@@ -7,7 +7,6 @@
         "Target": "Data/Festivals/fall27",
         "When": {
             "RSVNPCSAttendFestivals": true,
-            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
         },
         "TextOperations": [
             {
@@ -31,7 +30,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -48,7 +47,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -65,7 +64,6 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
         "When": {
-            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
             "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
             "HasSeenEvent: anyPlayer|contains=75160188": true,
         },
@@ -84,7 +82,7 @@
       "LogName": "Torts Spirit's Eve Location",
       "Action": "EditData",
       "Target": "Data/Festivals/fall27",
-      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "RSVNPCSAttendFestivals": true },
+      "When": { "RSVNPCSAttendFestivals": true },
       "TextOperations": [
         {
           "Operation": "Append",
