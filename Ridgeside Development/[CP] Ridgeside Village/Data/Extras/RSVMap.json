@@ -10,7 +10,15 @@
       "LogName": "Load RSV Icon",
       "Action": "Load",
       "Target": "LooseSprites/RSVIcon",
-      "FromFile": "Assets/LooseSprites/RSVIcon_{{season}}.png"
+      "FromFile": "Assets/LooseSprites/RSVIcon.png",
+      "When": { "SeasonalRSVMap": "false" }
+    },
+    {
+      "LogName": "Load RSV Icon",
+      "Action": "Load",
+      "Target": "LooseSprites/RSVIcon",
+      "FromFile": "Assets/LooseSprites/RSVIcon_{{season}}.png",
+      "When": { "SeasonalRSVMap": "true" }
     },
     {
       "LogName": "Load RSV World Map",
@@ -264,9 +272,9 @@
 
         "RidgeForest": {
           "Area": {
-            "X": 286,
-            "Y": 0,
-            "Width": 179,
+            "X": 370,
+            "Y": 5,
+            "Width": 45,
             "Height": 65
           },
           "Text": "{{i18n:RSV.Map.Text.RidgeForest}}"
@@ -274,10 +282,10 @@
 
         "Ridge": {
           "Area": {
-            "X": 286,
-            "Y": 67,
-            "Width": 179,
-            "Height": 86
+            "X": 455,
+            "Y": 55,
+            "Width": 25,
+            "Height": 35
           },
           "Inhabitants": "Jio/Kiwi/Daia/Bliss",
           "Text": "{{i18n:RSV.Map.Text.Ridge}}"
@@ -285,20 +293,20 @@
 
         "RidgeFalls": {
           "Area": {
-            "X": 53,
+            "X": 75,
             "Y": 0,
-            "Width": 144,
-            "Height": 126
+            "Width": 120,
+            "Height": 115
           },
           "Text": "{{i18n:RSV.Map.Text.RidgeFalls}}"
         },
 
         "BloomingHill": {
           "Area": {
-            "X": 61,
-            "Y": 178,
-            "Width": 125,
-            "Height": 134
+            "X": 55,
+            "Y": 200,
+            "Width": 135,
+            "Height": 90
           },
           "Inhabitants": "Jeric",
           "Text": "{{i18n:RSV.Map.Text.BloomingHillFarm}}"
@@ -306,10 +314,10 @@
 
         "Heaps": {
           "Area": {
-            "X": 270,
-            "Y": 159,
-            "Width": 38,
-            "Height": 64
+            "X": 305,
+            "Y": 180,
+            "Width": 40,
+            "Height": 60
           },
           "Inhabitants": "Lorenzo/Shanice/Anton/Kiarra",
           "Text": "{{i18n:RSV.Map.Text.Heaps}}"
@@ -317,21 +325,21 @@
 
         "Daniels": {
           "Area": {
-            "X": 310,
-            "Y": 164,
-            "Width": 57,
-            "Height": 45
+            "X": 345,
+            "Y": 180,
+            "Width": 55,
+            "Height": 60
           },
-          "Inhabitants": "Ezekiel/Corine/Helen",
+          "Inhabitants": "Corine/Ezekiel/Helen",
           "Text": "{{i18n:RSV.Map.Text.Daniels}}"
         },
 
         "LogCabinHotel": {
           "Area": {
-            "X": 401,
-            "Y": 167,
-            "Width": 76,
-            "Height": 72
+            "X": 450,
+            "Y": 190,
+            "Width": 80,
+            "Height": 75
           },
           "Inhabitants": "Richard/Ysabelle/Flor/Philip",
           "Text": "{{i18n:RSV.Map.Text.LogCabinHotel.{{RSVWorldState}}}}"
@@ -339,10 +347,10 @@
 
         "OddJobs": {
           "Area": {
-            "X": 487,
-            "Y": 183,
-            "Width": 49,
-            "Height": 48
+            "X": 545,
+            "Y": 205,
+            "Width": 35,
+            "Height": 50
           },
           "Inhabitants": "Ian/Sean",
           "Text": "{{i18n:RSV.Map.Text.OddJobs}}"
@@ -350,10 +358,10 @@
 
         "Pickens": {
           "Area": {
-            "X": 333,
-            "Y": 211,
-            "Width": 41,
-            "Height": 37
+            "X": 370,
+            "Y": 240,
+            "Width": 45,
+            "Height": 35
           },
           "Inhabitants": "Maddie",
           "Text": "{{i18n:RSV.Map.Text.Pickens}}"
@@ -361,20 +369,20 @@
 
         "CableCar": {
           "Area": {
-            "X": 739,
-            "Y": 226,
-            "Width": 42,
-            "Height": 32
+            "X": 810,
+            "Y": 250,
+            "Width": 60,
+            "Height": 35
           },
           "Text": "{{i18n:RSV.Map.Text.CableCar}}"
         },
 
         "Electrician": {
           "Area": {
-            "X": 759,
-            "Y": 266,
-            "Width": 29,
-            "Height": 34
+            "X": 840,
+            "Y": 300,
+            "Width": 35,
+            "Height": 30
           },
           "Inhabitants": "Kenneth",
           "Text": "{{i18n:RSV.Map.Text.Electrician}}"
@@ -382,10 +390,10 @@
 
         "Hike": {
           "Area": {
-            "X": 665,
-            "Y": 323,
-            "Width": 122,
-            "Height": 237
+            "X": 760,
+            "Y": 345,
+            "Width": 115,
+            "Height": 245
           },
           "Inhabitants": "Undreya/Pipo/Sari/Acorn",
           "Text": "{{i18n:RSV.Map.Text.Hike}}"
@@ -393,30 +401,30 @@
 
         "Starbound": {
           "Area": {
-            "X": 242,
-            "Y": 242,
+            "X": 275,
+            "Y": 270,
             "Width": 75,
-            "Height": 64
+            "Height": 65
           },
           "Text": "{{i18n:RSV.Map.Text.Starbound}}"
         },
 
         "Pikas": {
           "Area": {
-            "X": 326,
-            "Y": 257,
-            "Width": 57,
-            "Height": 45
+            "X": 365,
+            "Y": 290,
+            "Width": 55,
+            "Height": 55
           },
           "Text": "{{i18n:RSV.Map.Text.Pikas}}"
         },
 
         "VillageOffice": {
           "Area": {
-            "X": 403,
-            "Y": 254,
+            "X": 450,
+            "Y": 285,
             "Width": 65,
-            "Height": 56
+            "Height": 55
           },
           "Inhabitants": "Lenny",
           "Text": "{{i18n:RSV.Map.Text.VillageOffice}}"
@@ -424,10 +432,10 @@
 
         "Clinic": {
           "Area": {
-            "X": 481,
-            "Y": 243,
-            "Width": 63,
-            "Height": 41
+            "X": 535,
+            "Y": 270,
+            "Width": 65,
+            "Height": 45
           },
           "Inhabitants": "Paula",
           "Text": "{{i18n:RSV.Map.Text.Clinic}}"
@@ -435,21 +443,21 @@
 
         "Kobayashi": {
           "Area": {
-            "X": 478,
-            "Y": 290,
-            "Width": 57,
-            "Height": 45
+            "X": 540,
+            "Y": 320,
+            "Width": 30,
+            "Height": 40
           },
           "Inhabitants": "Shiro/Yuuma/Naomi",
-          "Text": "{{i18n:RSV.Map.Text.Kobayashi}}"
+          "Text": " {{i18n:RSV.Map.Text.Kobayashi}}"
         },
 
         "Amethyne": {
           "Area": {
-            "X": 456,
-            "Y": 351,
-            "Width": 92,
-            "Height": 92
+            "X": 520,
+            "Y": 390,
+            "Width": 65,
+            "Height": 85
           },
           "Inhabitants": "Maive/Zayne/Ariah/Louie/Sonny/Irene",
           "Text": "{{i18n:RSV.Map.Text.Amethyne}}"
@@ -457,10 +465,10 @@
 
         "Yojeong": {
           "Area": {
-            "X": 375,
-            "Y": 336,
-            "Width": 42,
-            "Height": 42
+            "X": 420,
+            "Y": 375,
+            "Width": 35,
+            "Height": 45
           },
           "Inhabitants": "Faye",
           "Text": "{{i18n:RSV.Map.Text.Yojeong}}"
@@ -468,20 +476,20 @@
 
         "Community": {
           "Area": {
-            "X": 340,
-            "Y": 387,
-            "Width": 53,
-            "Height": 45
+            "X": 380,
+            "Y": 430,
+            "Width": 55,
+            "Height": 50
           },
           "Text": "{{i18n:RSV.Map.Text.CommunityGreenhouse}}"
         },
 
         "Akina": {
           "Area": {
-            "X": 270,
-            "Y": 339,
-            "Width": 38,
-            "Height": 39
+            "X": 300,
+            "Y": 385,
+            "Width": 40,
+            "Height": 35
           },
           "Inhabitants": "Pika/Keahi",
           "Text": "{{i18n:RSV.Map.Text.Akina}}"
@@ -489,9 +497,9 @@
 
         "Rivera": {
           "Area": {
-            "X": 258,
-            "Y": 386,
-            "Width": 57,
+            "X": 295,
+            "Y": 430,
+            "Width": 50,
             "Height": 45
           },
           "Inhabitants": "Carmen/Blair",
@@ -500,9 +508,9 @@
 
         "LolaShed": {
           "Area": {
-            "X": 11,
-            "Y": 290,
-            "Width": 42,
+            "X": 15,
+            "Y": 325,
+            "Width": 35,
             "Height": 40
           },
           "Text": "{{i18n:RSV.Map.Text.LolaShed}}"
@@ -510,10 +518,10 @@
 
         "Bladebane": {
           "Area": {
-            "X": 38,
-            "Y": 350,
-            "Width": 34,
-            "Height": 39
+            "X": 40,
+            "Y": 390,
+            "Width": 40,
+            "Height": 40
           },
           "Inhabitants": "Freddie/Lola",
           "Text": "{{i18n:RSV.Map.Text.Bladebane}}"
@@ -521,10 +529,10 @@
 
         "Nightingale": {
           "Area": {
-            "X": 19,
-            "Y": 456,
-            "Width": 175,
-            "Height": 166
+            "X": 55,
+            "Y": 520,
+            "Width": 75,
+            "Height": 65
           },
           "Inhabitants": "Kimpoi/Malaya/Alissa",
           "Text": "{{i18n:RSV.Map.Text.Nightingale}}"
@@ -532,10 +540,10 @@
 
         "Lidens": {
           "Area": {
-            "X": 251,
-            "Y": 534,
-            "Width": 67,
-            "Height": 68
+            "X": 285,
+            "Y": 610,
+            "Width": 60,
+            "Height": 45
           },
           "Inhabitants": "Bert/Olga/Trinnie",
           "Text": "{{i18n:RSV.Map.Text.Lidens}}"
@@ -543,10 +551,10 @@
 
         "WaterResearch": {
           "Area": {
-            "X": 355,
-            "Y": 509,
-            "Width": 190,
-            "Height": 89
+            "X": 405,
+            "Y": 575,
+            "Width": 65,
+            "Height": 65
           },
           "Inhabitants": "Aguar",
           "Text": "{{i18n:RSV.Map.Text.WaterResearch}}"
@@ -554,10 +562,10 @@
 
         "ExtraRSV": {
           "Area": {
-            "X": 813,
-            "Y": 616,
-            "Width": 5,
-            "Height": 5
+            "X": 960,
+            "Y": 635,
+            "Width": 10,
+            "Height": 10
           },
           "Text": "{{i18n:RSV.Map.Text.RafIsHungryAndSleepDeprived}}"
         },
