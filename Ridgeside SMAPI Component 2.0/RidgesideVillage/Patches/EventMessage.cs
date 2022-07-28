@@ -10,7 +10,7 @@ using StardewValley;
 namespace RidgesideVillage
 {
     //Corrects the location name in the "X has begun in Y" message
-    internal static class EventMessage
+    internal static class EventPatches
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -22,8 +22,12 @@ namespace RidgesideVillage
             Log.Trace($"Applying Harmony Patch \"{nameof(ShowGlobalMessage_Prefix)}.");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Game1), nameof(Game1.showGlobalMessage)),
-                prefix: new HarmonyMethod(typeof(EventMessage), nameof(ShowGlobalMessage_Prefix))
+                prefix: new HarmonyMethod(typeof(EventPatches), nameof(ShowGlobalMessage_Prefix))
             );
+
+            harmony.Patch(
+                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.checkEventPrecondition)),
+                prefix: new HarmonyMethod(typeof(EventPatches), nameof(EventPatches.checkEventPrecondition_Prefix)));
         }
 
         internal static void ShowGlobalMessage_Prefix(ref string message)
@@ -43,6 +47,24 @@ namespace RidgesideVillage
             catch (Exception e)
             {
                 Log.Error($"Harmony patch \"{nameof(ShowGlobalMessage_Prefix)}\" has encountered an error. \n{e.ToString()}");
+            }
+        }
+
+        internal static bool checkEventPrecondition_Prefix(ref string precondition, ref int __result)
+        {
+            if (precondition.Contains("/rsvRidingHorse", StringComparison.OrdinalIgnoreCase))
+            {
+                if(Game1.player.mount is null)
+                {
+                    __result = -1;
+                    return false;
+                }
+                precondition = precondition.Replace("/rsvRidingHorse", "", StringComparison.OrdinalIgnoreCase);
+                return true;
+            }
+            else
+            {
+                return true;
             }
         }
 
