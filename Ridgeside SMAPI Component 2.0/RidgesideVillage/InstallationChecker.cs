@@ -40,7 +40,11 @@ namespace RidgesideVillage
         {
             helper = Helper;
             var dependencies = helper.Data.ReadJsonFile<Dictionary<string, Dependency>>(PathUtilities.NormalizePath("assets/Dependencies.json"));
-
+            if (dependencies is null)
+            {
+                Log.Error("Couldn't find dependency file");
+                return false;
+            }
             Log.Trace($"Number of dependencies to check: {dependencies.Values.Count}");
             foreach (var dependency in dependencies.Values)
             {
