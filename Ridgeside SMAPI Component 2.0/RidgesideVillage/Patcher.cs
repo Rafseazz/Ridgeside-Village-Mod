@@ -39,5 +39,5 @@ namespace RidgesideVillage
             WalletItem.ApplyPatch(harmony, Helper);
             WeddingPatches.ApplyPatch(harmony, Helper);
         }
-    }        
+    }
 }

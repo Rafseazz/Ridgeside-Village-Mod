@@ -68,11 +68,15 @@ namespace RidgesideVillage
                 try
                 {
                     Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
-                    harmony.Patch(
-                        original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
-                        postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postfix))
-                    );
+                    if (QFSpecialBoardClass is not null)
+                    {
+                        harmony.Patch(
+                            original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
+                            postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postfix))
+                        );
+                    }
                 }
+                    
                 catch
                 {
                     Log.Info("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
