@@ -77,12 +77,16 @@ namespace RidgesideVillage.Questing
         {
             if (Game1.player.modData.TryGetValue("RSVDailiesDone", out string dailisDone))
 			{
-				FinishedQuests.Value = new HashSet<int>();
+
 				Log.Trace($"dailies Done: {dailisDone}");
-				foreach (string id in dailisDone.Split(","))
+				FinishedQuests.Value = new HashSet<int>();
+				if (!string.IsNullOrEmpty(dailisDone))
 				{
-					FinishedQuests.Value.Add(int.Parse(id));
-				}
+					foreach (string id in dailisDone.Split(","))
+					{
+						FinishedQuests.Value.Add(int.Parse(id));
+					}
+				}                
             }
         }
 
