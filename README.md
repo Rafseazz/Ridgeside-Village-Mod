@@ -13,11 +13,6 @@ Meet new interesting people with immersive backstories, engaging dialogue and ex
 ## Support me!
 [Ko-Fi](https://ko-fi.com/rafseazz)
 
-## Support Ridgeside Village Team!
-(They help me with the mod)
-
-[Ko-Fi](https://ko-fi.com/ridgesidevillage) - [Patreon](https://www.patreon.com/RidgesideVillage)
-
 ## Ridgeside Socials!
 [Facebook](https://www.facebook.com/RidgesideVillage) - [Instagram](https://www.instagram.com/ridgesidevillage/) - [Reddit](https://www.reddit.com/r/RidgesideVillage) - [Tumblr](https://ridgesidevillage.tumblr.com/) - [Twitter](https://twitter.com/RidgesideVilla) - [YouTube](https://www.youtube.com/channel/UCYECtl3Rhp5ZIt4LTam8BuA)
 
