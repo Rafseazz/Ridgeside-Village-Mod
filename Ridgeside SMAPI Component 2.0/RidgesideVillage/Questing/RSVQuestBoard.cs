@@ -9,6 +9,7 @@ using StardewValley;
 using StardewValley.Menus;
 using StardewValley.Quests;
 using StardewModdingAPI;
+using StardewValley.BellsAndWhistles;
 using StardewModdingAPI.Events;
 
 namespace RidgesideVillage.Questing
@@ -27,6 +28,8 @@ namespace RidgesideVillage.Questing
 		const string NINJAQUESTBOARD = "RSVNinjaBoard";
 		Texture2D billboardTexture;
 		Color fontColor = Game1.textColor;
+
+		string description;
 		
 
   
@@ -45,6 +48,11 @@ namespace RidgesideVillage.Questing
             {
 				this.dailyQuest = questData.dailyTownQuest;
 				this.acceptQuestButton.visible = !questData.acceptedDailyQuest;
+			}
+
+			if(this.dailyQuest is not null)
+            {
+				this.description = dailyQuest.questDescription.Replace("^", "\n");
 			}
 			//setting here and in parent. not sure if parent is needed
 			Texture2D billboardTexture;
@@ -95,7 +103,7 @@ namespace RidgesideVillage.Questing
 			else
 			{
 				SpriteFont font = ((LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.ko) ? Game1.smallFont : Game1.dialogueFont);
-				string description = Game1.parseText(this.dailyQuest.questDescription, font, 640);
+				string description = Game1.parseText(this.description, font, 640);
 				Utility.drawTextWithShadow(b, description, font, new Vector2(base.xPositionOnScreen + 320 + 32, base.yPositionOnScreen + 256), this.fontColor, 1f, -1f, -1, -1, 0.5f);
 				if (this.acceptQuestButton.visible)
 				{

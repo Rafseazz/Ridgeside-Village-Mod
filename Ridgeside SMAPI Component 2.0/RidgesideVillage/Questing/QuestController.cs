@@ -20,12 +20,16 @@ namespace RidgesideVillage.Questing
 		static IMonitor Monitor;
 		//static Lazy<Texture2D> questionMarkSprite = new Lazy<Texture2D>(() => Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath("assets/questMark.png"), ContentSource.ModFolder));
 
+		//store available quest data for each user
 		internal static readonly PerScreen<QuestData> dailyQuestData = new PerScreen<QuestData>();
-		private static LocationForMarkers CurrentLocationFormarkers = LocationForMarkers.Other;
+
+		private static readonly PerScreen<LocationForMarkers> CurrentLocationFormarkers = new(() => LocationForMarkers.Other);
 
 		//is board unlocked in the current map (if there is one)
 		private static readonly PerScreen<bool> SOBoardUnlocked = new();
 		private static readonly PerScreen<bool> QuestBoardUnlocked = new();
+
+		internal static readonly PerScreen<HashSet<int>> FinishedQuests = new(() => new());
 
 		private enum LocationForMarkers
         {
@@ -41,38 +45,77 @@ namespace RidgesideVillage.Questing
 			TileActionHandler.RegisterTileAction("RSVQuestBoard", OpenQuestBoard);
 			TileActionHandler.RegisterTileAction("RSVSpecialOrderBoard", OpenSOBoard);
 			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true));
-
+			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => QuestController.PrintQuestState());
 			Helper.Events.GameLoop.DayStarted += OnDayStarted;
 			Helper.Events.Player.Warped += OnWarped;
 			Helper.Events.Display.RenderedWorld += RenderQuestMarkersIfNeeded;
+			Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+			Helper.Events.GameLoop.DayEnding += OnDayEnding;
 		}
+
+		static void PrintQuestState()
+        {
+			foreach(var data in dailyQuestData.GetActiveValues())
+            {
+				var questData = data.Value;
+				Log.Debug($"TownQuest: {questData?.dailyTownQuest?.id}");
+				Log.Debug($"Townquest accepted: {questData.acceptedDailyQuest}");
+				Log.Debug($"NinjaQuest: {questData?.dailyNinjaHouseQuest?.id}");
+				Log.Debug($"NinjaQuest accepted: {questData.acceptedDailyNinjaHouseQuest}");
+
+			}
+        }
+
+		//save the players dailies
+		private static void OnDayEnding(object sender, DayEndingEventArgs e)
+        {
+            Game1.player.modData["RSVDailiesDone"] = string.Join(",", FinishedQuests.Value);
+        }
+
+        //load the player's finished quests
+        private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
+        {
+            if (Game1.player.modData.TryGetValue("RSVDailiesDone", out string dailisDone))
+			{
+				FinishedQuests.Value = new HashSet<int>();
+				Log.Trace($"dailies Done: {dailisDone}");
+				foreach (string id in dailisDone.Split(","))
+				{
+					FinishedQuests.Value.Add(int.Parse(id));
+				}
+            }
+        }
 
         private static void OnWarped(object sender, WarpedEventArgs e)
         {
-            if (e.NewLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage"))
+			if(e.Player == Game1.player)
             {
-				CurrentLocationFormarkers = LocationForMarkers.RSVVillage;
-				SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160207);
+				if (e.NewLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage"))
+				{
+					CurrentLocationFormarkers.Value = LocationForMarkers.RSVVillage;
+					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160207);
 
+				}
+				else if (e.NewLocation.Name.Equals("Custom_Ridgeside_RSVNinjaHouse"))
+				{
+					CurrentLocationFormarkers.Value = LocationForMarkers.NinjaHouse;
+					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160264);
+					QuestBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160187);
+				}
+				else
+				{
+					CurrentLocationFormarkers.Value = LocationForMarkers.Other;
+					SOBoardUnlocked.Value = false;
+					QuestBoardUnlocked.Value = false;
+				}
 			}
-			else if (e.NewLocation.Name.Equals("Custom_Ridgeside_RSVNinjaHouse"))
-			{
-				CurrentLocationFormarkers = LocationForMarkers.NinjaHouse;
-				SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160264);
-				QuestBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160187);
-			}
-            else
-			{
-				CurrentLocationFormarkers = LocationForMarkers.Other;
-				SOBoardUnlocked.Value = false;
-				QuestBoardUnlocked.Value = false;
-			}
+           
         }
 
         private static void RenderQuestMarkersIfNeeded(object sender, RenderedWorldEventArgs e)
         {
 			SpriteBatch sb = e.SpriteBatch;
-            switch (CurrentLocationFormarkers)
+            switch (CurrentLocationFormarkers.Value)
             {
 				case LocationForMarkers.RSVVillage:
 					float offset = 4f * (float)Math.Round(Math.Sin(Game1.currentGameTime.TotalGameTime.TotalMilliseconds / 250.0), 2);
@@ -123,11 +166,9 @@ namespace RidgesideVillage.Questing
 			Game1.activeClickableMenu = new RSVSpecialOrderBoard(type);
 		}
 
+		//choose daily quests and shuffle SO if its monday
 		private static void OnDayStarted(object sender, DayStartedEventArgs e)
 		{
-			Game1.addHUDMessage(new HUDMessage(SDate.Now().ToLocaleString(true)));
-			Log.Error(SDate.Now().ToLocaleString(true));
-			dailyQuestData.Value = new QuestData(QuestFactory.GetDailyQuest(), QuestFactory.GetDailyQuest());
 			//if monday, update special orders
 			if (Game1.dayOfMonth % 7 == 1 && Game1.player.IsMainPlayer)
 			{
@@ -135,9 +176,18 @@ namespace RidgesideVillage.Questing
 			}
 
 
-			Quest townQuest = QuestFactory.GetDailyQuest();
-			Quest ninjaQuest = QuestFactory.GetDailyNinjaQuest(); 
-			dailyQuestData.Value = new QuestData(townQuest, ninjaQuest);
+			try
+            {
+				Quest townQuest = QuestFactory.GetDailyQuest();
+				Quest ninjaQuest = QuestFactory.GetDailyNinjaQuest();
+				dailyQuestData.Value = new QuestData(townQuest, ninjaQuest);
+			}
+            catch
+            {
+				dailyQuestData.Value = new QuestData(null, null);
+				Log.Error("Failed parsing quest");
+			}
+			
 		}
 	}
 
@@ -152,9 +202,9 @@ namespace RidgesideVillage.Questing
 		internal QuestData(Quest dailyTownQuest, Quest dailyNinjaHouseQuest)
 		{
 			this.dailyTownQuest = dailyTownQuest;
-			this.acceptedDailyQuest = false;
+			this.acceptedDailyQuest = dailyTownQuest is null;
 			this.dailyNinjaHouseQuest = dailyNinjaHouseQuest;
-			this.acceptedDailyNinjaHouseQuest = false;
+			this.acceptedDailyNinjaHouseQuest = dailyNinjaHouseQuest is null;
 		}
 	}
 }

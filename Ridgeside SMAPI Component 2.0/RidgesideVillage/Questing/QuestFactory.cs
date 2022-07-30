@@ -16,12 +16,47 @@ namespace RidgesideVillage.Questing
 	{
 		static internal Quest GetDailyQuest()
 		{
-			return GetRandomHandCraftedQuest();
+			if (Game1.random.NextDouble() < 0.2)
+			{
+				return null;
+			}
+			if (Game1.random.NextDouble() > 0.2)
+			{
+				return GetRandomHandCraftedQuest();
+            }
+            else
+            {
+				return GetFishingQuest();
+            }
 		}
 
 		static internal Quest GetDailyNinjaQuest()
         {
-			return GetRandomHandCraftedQuest();
+			//80% chance for no ninja questquest
+			if(Game1.random.NextDouble() > 0.2)
+            {
+				return null;
+            }
+			var quests = ModEntry.Helper.GameContent.Load<Dictionary<int, string>>(StardewModdingAPI.Utilities.PathUtilities.NormalizeAssetName("data/quests"));
+			var candidates = new List<int>();
+			foreach (var key in quests.Keys)
+			{
+				// is ninjaquest and not completed yet
+				if (key >= 72860500 && key <= 72860999 && !QuestController.FinishedQuests.Value.Contains(key))
+				{
+					if (!Game1.player.hasQuest(key))
+					{
+						candidates.Add(key);
+					}
+				}
+			}
+			if(candidates.Count == 0)
+            {
+				return null;
+            }
+
+			int rand = Game1.random.Next(candidates.Count);
+			return Quest.getQuestFromId(candidates[rand]);
 		}
 
 		static internal Quest GetRandomHandCraftedQuest()
@@ -38,8 +73,10 @@ namespace RidgesideVillage.Questing
 					}
                 }
 			}
-
+			Log.Trace($"{candidates.Count} candidates for daily Quest");
 			int rand = Game1.random.Next(candidates.Count);
+
+			Log.Trace($"chose {candidates[rand]}");
 			return Quest.getQuestFromId(candidates[rand]);
         }
 
@@ -103,6 +140,7 @@ namespace RidgesideVillage.Questing
 			quest.parts.Add(new DescriptionElement("Strings\\StringsFromCSFiles:FishingQuest.cs.13274", quest.reward.Value)); // reward
 			quest.parts.Add("Strings\\StringsFromCSFiles:FishingQuest.cs.13275"); //keep fish note
 			quest.daysLeft.Value = 7;
+			quest.id.Value = 80000000;
 			return quest;
 
 		}
