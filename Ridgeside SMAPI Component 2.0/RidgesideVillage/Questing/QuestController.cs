@@ -152,7 +152,6 @@ namespace RidgesideVillage.Questing
 		}
         private static void OpenQuestBoard(string name, Vector2 position)
 		{
-			dailyQuestData.Value.dailyTownQuest =  QuestFactory.GetDailyQuest();
 			string type = name.Split()[^1];
 			Log.Trace($"Opening RSVQuestBoard {type}");
 			Game1.activeClickableMenu = new RSVQuestBoard(dailyQuestData.Value, type);
