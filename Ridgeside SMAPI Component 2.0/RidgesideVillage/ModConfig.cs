@@ -18,5 +18,7 @@ namespace RidgesideVillage
         //Audio
         public bool enableRidgesideMusic = true;
 
+        public bool ShowVillagersOnMap = true;
+
     }
 }

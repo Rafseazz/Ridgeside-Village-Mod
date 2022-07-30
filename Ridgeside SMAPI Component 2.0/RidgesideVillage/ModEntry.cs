@@ -40,7 +40,7 @@ namespace RidgesideVillage
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
             SpaceEvents.OnEventFinished += OnEventFinished;
-            SpaceEvents.OnItemEaten += OnItemEaten;
+            //SpaceEvents.OnItemEaten += OnItemEaten;
 
             helper.Events.Content.AssetRequested += OnAssetRequested;
 
@@ -63,6 +63,8 @@ namespace RidgesideVillage
 
             SpecialOrders.Initialize(this);
 
+            Questing.QuestController.Initialize(this);
+
             IanShop.Initialize(this);
 
             Elves.Initialize(this);
@@ -84,6 +86,7 @@ namespace RidgesideVillage
             NinjaBooks.Initialize(this);
 
             Foxbloom.Initialize(this);
+
 
             //not done (yet?)
             //new CliffBackground();

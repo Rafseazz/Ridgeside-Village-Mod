@@ -42,9 +42,16 @@ namespace RidgesideVillage
         }
 
         //fixes the weddinreception offset issue on custom farms
+        //temporary measure until SDV1.6 fixed it
+        static HashSet<int> IDsToFix = new() {
+            75160245, //wedding reception male
+            75160248, //wedding reception female
+            75160064, //aguar fixes cave
+
+        };
         private static void Farm_StartEvent_Postfix(Event evt)
         {
-            if(evt.id == 75160245)
+            if(IDsToFix.Contains(evt.id))
             {
                 evt.eventPositionTileOffset = new Vector2(0, 0);
             }

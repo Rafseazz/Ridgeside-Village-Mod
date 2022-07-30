@@ -940,6 +940,58 @@
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 
+//add quest boards
+	{
+		"LogName": "RSV:Add town Special Board",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"MapTiles": [
+			{
+				"Position": { "X": 119, "Y": 40 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "RSVSpecialOrderBoard RSVTownSO"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160207 },
+		"Update": "OnLocationChange"
+	},
+
+	{
+		"LogName": "RSV:Add Ninja Questboard",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
+		"MapTiles": [
+			{
+				"Position": { "X": 6, "Y": 6 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "RSVQuestBoard RSVNinjaBoard"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160187 },
+		"Update": "OnLocationChange"
+	},
+
+	{
+		"LogName": "RSV:Add Ninja Special Board",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
+		"MapTiles": [
+			{
+				"Position": { "X": 3, "Y": 4 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "RSVSpecialOrderBoard RSVNinjaSO"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160264 },
+		"Update": "OnLocationChange"
+	},
+
 
 ]
 }

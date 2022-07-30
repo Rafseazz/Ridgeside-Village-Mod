@@ -1132,7 +1132,7 @@
 	{
 		"Action": "Include",
 		"FromFile": "Data/DependencyData/CustomCompanionsTourists.json",
-		"When": 
+		"When":
 		{
 			"EnableTouristNPCs": "true"
 		}
@@ -1273,7 +1273,12 @@
   		"LogName": "Include Special Orders",
 		"Action": "Include",
 		"FromFile": "Data/SpecialOrders/SpecialOrders.json, Data/SpecialOrders/SOStrings.json",
-  	}
+  	},
+	{
+		"LogName": "Include Quest Files",
+		"Action":"Include",
+		"FromFile": "Data/Quests/Quests.json",
+	}
 
 ],
 
