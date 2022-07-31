@@ -124,7 +124,7 @@ namespace RidgesideVillage.Offering
                 case "crafting":
                     index = Buff.crafting;
                     break;
-                case "maxStamina":
+                case "maxstamina":
                     index = Buff.maxStamina;
                     break;
                 case "speed":
@@ -169,17 +169,32 @@ namespace RidgesideVillage.Offering
                 case "weakness":
                     index = Buff.weakness;
                     break;
-                case "squidInkRavioli":
+                case "squidinkravioli":
                     index = Buff.squidInkRavioli;
                     break;
             }
 
             if (index != -1)
             {
-                Buff buff = new Buff(index);
-                buff.buffAttributes[index] = Value;
-                buff.millisecondsDuration = buff.totalMillisecondsDuration = this.Duration * 1000;
-                Game1.buffsDisplay.addOtherBuff(buff);
+                Buff buff;
+                if (index == 7)
+                {
+                    //needs to be updated as drink buff as stamina as otherBuff is bugged
+                    //probably fixed in 1.6
+                    string sourceString = Game1.getCharacterFromName("Raeriyala").displayName;
+                    buff = new Buff(0, 0, 0, 0, 0, 0, 0, this.Value, 0, 0, 0, 0, this.Duration, sourceString, sourceString);
+                    Game1.buffsDisplay.tryToAddDrinkBuff(buff);
+                    Game1.player.Stamina = Game1.player.MaxStamina;
+                }
+                else
+                {
+                    buff = new Buff(index);
+                    buff.buffAttributes[index] = Value;
+                    buff.millisecondsDuration = buff.totalMillisecondsDuration = this.Duration * 1000;
+                    buff.displaySource = Game1.getCharacterFromName("Raeriyala").displayName;
+                    Game1.buffsDisplay.addOtherBuff(buff);
+
+                }
             }
         }
     }
