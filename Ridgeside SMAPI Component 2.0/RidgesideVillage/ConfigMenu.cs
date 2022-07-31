@@ -29,11 +29,7 @@ namespace RidgesideVillage
             Gmcm.RegisterModConfig(ModManifest, () => Config = new ModConfig(), () => Helper.WriteConfig(Config));
 
             //Misc Config Page
-            Gmcm.RegisterLabel(ModManifest, "Cable Car Configuration", "Choose how the cable car cutscenes work");
-            Gmcm.RegisterSimpleOption(ModManifest, "Enable Cable Car Cutscene", "Enable cable car cutscene", () => Config.repeatCableCarCutscene, (bool val) => Config.repeatCableCarCutscene = val);
-            Gmcm.RegisterSimpleOption(ModManifest, "Enable Other NPCs in Cable Car", "Enable the chances of other NPCs to appear riding the Cable Car (Along with LASV, ES and SVE NPCs)", () => Config.enableOtherNPCsInCableCar, (bool val) => Config.enableOtherNPCsInCableCar = val);
-            Gmcm.RegisterLabel(ModManifest, "Mod Audio Configuration", "Choose how the mod's audio works");
-            Gmcm.RegisterSimpleOption(ModManifest, "Enable Ridgeside Village Music", "Enables music for Ridgeside Village", () => Config.enableRidgesideMusic, (bool val) => Config.enableRidgesideMusic = val);
+            Gmcm.RegisterLabel(ModManifest, "Mod Configuration", "Ridgeside SMAPI Component");
             Gmcm.RegisterSimpleOption(ModManifest, "Show Villagers on the map", "Show Villagers on the map", () => Config.ShowVillagersOnMap, (bool val) => Config.ShowVillagersOnMap = val);
 
         }

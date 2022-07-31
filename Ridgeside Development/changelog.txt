@@ -22,6 +22,7 @@ Fixed Alissa's sprite bugging out if she sings in the RSV Gathering
 Fixed spouse patios replacing nearby tiles
 Fixed forage spawning in unreachable places
 Fixed a missing i18n entry for Tort's 2 heart event
+Fixed Jio and Kiwi not showing in festivals
 
 Additions:
 Added Blair as a new marriage candidate
@@ -63,6 +64,12 @@ Added ExpandedFestivalMaps config option
 Added seasonal variants for the RSV World Map Icon
 Added RSV World map indicator if NPC/Players are in the Hike Trail, Ridge Forest, Ridge Pond, Log Cabin Event Hall, Mystic Falls, Hike Greenhouse, and Abandoned Hike House
 Added over 1000+ new lines of text and dialogue in the i18n files (I'm sorry translators)
+Added config option to enable/disable NPC tracking heads in RSV's world map
+Added cable car cutscene variant when player is riding their horse
+Added Ginger Arugula Fried Rice food and recipe in Pika's Restaurant
+Added Honey Ginger Whitefish Rice food and recipe in Pika's Restaurant
+Added Ginger Rangpur Meringue food and recipe in Malaya's Pastry Shop
+Added a new weapon Ridgeback Hardshell
 
 Changes:
 Optimized files to improve game load on startup with RSV installed and make compatible with mods that add events to the Adventurers' Guild
@@ -102,3 +109,5 @@ Gave Anton legs for his beach sprites
 Removed:
 Removed Custom NPC Fixes as a required mod
 Removed "FullFestivals" config setting
+Removed Quest Framework as a dependency
+Removed redundant files
