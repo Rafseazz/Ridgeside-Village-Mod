@@ -13,7 +13,6 @@ namespace RidgesideVillage
         public static IJsonAssetsApi JA;
         public static IWearMoreRingsApi MR;
         public static ISpaceCoreApi SC;
-        public static IQuestFrameworkApi QF;
 
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -45,12 +44,6 @@ namespace RidgesideVillage
             if (SC == null)
             {
                 Log.Warn("SpaceCore API not found. This could lead to issues.");
-            }
-
-            QF = Helper.ModRegistry.GetApi<IQuestFrameworkApi>("purrplingcat.QuestFramework");
-            if (QF == null)
-            {
-                Log.Warn("Quest Framework API not found. This could lead to issues.");
             }
         }
     }

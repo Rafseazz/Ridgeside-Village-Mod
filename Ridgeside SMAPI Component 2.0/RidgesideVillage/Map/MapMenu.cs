@@ -33,7 +33,7 @@ namespace RidgesideVillage
 
         internal static void Open(string tileAction, Vector2 position)
         {
-            Texture2D image = Helper.Content.Load<Texture2D>(MapPath, ContentSource.GameContent);
+            Texture2D image = Helper.GameContent.Load<Texture2D>(MapPath);
             Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width), (int)(image.Height));
             Game1.activeClickableMenu = new MapMenu((int)topLeft.X, (int)topLeft.Y, image);
         }
