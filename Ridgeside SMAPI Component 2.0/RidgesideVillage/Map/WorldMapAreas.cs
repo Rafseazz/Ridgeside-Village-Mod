@@ -22,7 +22,7 @@ namespace RidgesideVillage
 
         public WorldMapAreas()
         {
-            RSVWorldMapAreasModel DataModel = ModEntry.Helper.GameContent.Load<RSVWorldMapAreasModel>(PathUtilities.NormalizePath(path));
+            RSVWorldMapAreasModel DataModel = ModEntry.Helper.ModContent.Load<RSVWorldMapAreasModel>(PathUtilities.NormalizePath(path));
             MapArea[] AreaList = DataModel.AreaList;
             Areas = new Dictionary<string, MapArea>();
             //initialize all areas
