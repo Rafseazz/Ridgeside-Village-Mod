@@ -35,6 +35,7 @@ namespace RidgesideVillage
         public const string CLIMATECONTROLLED = "RSV.ClimateControlled";
         public const string GOTSPRINKLERS = "RSV.SummitSprinklers";
         public const string OREAREAOPENED = "RSV.SummitOreArea";
+        public const string SHEDADDED = "RSV.ShedAdded";
         const string MINECARTSFIXED = "RSV.FixedMinecart";
         private static bool canRenovate = false;
 
@@ -110,6 +111,12 @@ namespace RidgesideVillage
                 {
                     Game1.player.mailReceived.Add(OREAREAOPENED);
                     Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ORETOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.SHEDTOPIC, out int shedct) && shedct == 0)
+                {
+                    Game1.player.mailReceived.Add(SHEDADDED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.SHEDTOPIC);
                     Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
                 }
 
@@ -342,9 +349,10 @@ namespace RidgesideVillage
         internal static void WaterThePlants(GameLocation location, int maxNumberToWater)
         {
             int n = 0;
+            int farm_size = location.terrainFeatures.Pairs.Count();
             foreach (var pair in location.terrainFeatures.Pairs)
             {
-                if(n >= maxNumberToWater)
+                if(n >= maxNumberToWater || n >= farm_size)
                 {
                     break;
                 }

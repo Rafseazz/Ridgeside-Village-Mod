@@ -27,6 +27,7 @@ namespace RidgesideVillage
 
 		// Kitchen definitions
 		public const string SUMMITHOUSE = "Custom_Ridgeside_RSVSummitHouseNew";
+		public const string SUMMITSHED = "Custom_Ridgeside_RSVSummitShed";
 
 		public static readonly Rectangle FridgeOpenedSpriteArea = new(32, 560, 16, 32);
 		public static readonly Vector2 FridgeChestPosition = new(6830);
@@ -53,31 +54,31 @@ namespace RidgesideVillage
 
 		private static void GameLoop_SaveLoaded(object sender, SaveLoadedEventArgs args)
         {
-			GameLocation location = Game1.getLocationFromName(SUMMITHOUSE);
+			GameLocation house = Game1.getLocationFromName(SUMMITHOUSE);
 			try
             {
-				if (location.modData["RSV.SummitHouseFurnished"] == "true")
+				if (house.modData["RSV.SummitHouseFurnished"] == "true")
 					return;
-            }
+			}
 			catch
 			{
-				location.modData["RSV.SummitHouseFurnished"] = "false";
+				house.modData["RSV.SummitHouseFurnished"] = "false";
 			}
 
-			location.furniture.Add(new Furniture(2742, new Vector2(1f, 5f))); // blossom rug
-			location.furniture.Add(new Furniture(1664, new Vector2(15f, 11f))); // mystic rug
-			location.furniture.Add(new Furniture(1614, new Vector2(2f, 1f))); // basic window
-			location.furniture.Add(new Furniture(1614, new Vector2(14f, 1f))); // basic window
-			location.furniture.Add(new Furniture(1614, new Vector2(17f, 1f))); // basic window
+			house.furniture.Add(new Furniture(2742, new Vector2(1f, 5f))); // blossom rug
+			house.furniture.Add(new Furniture(1664, new Vector2(15f, 11f))); // mystic rug
+			house.furniture.Add(new Furniture(1614, new Vector2(2f, 1f))); // basic window
+			house.furniture.Add(new Furniture(1614, new Vector2(14f, 1f))); // basic window
+			house.furniture.Add(new Furniture(1614, new Vector2(17f, 1f))); // basic window
 
-			location.furniture.Add(new BedFurniture(BedFurniture.DOUBLE_BED_INDEX, new Vector2(1f, 4f))); // double bed
-			location.furniture.Add(new Furniture(1395, new Vector2(4f, 4f))); // birch end table
-			location.furniture.Add(new Furniture(1285, new Vector2(5f, 4f))); // luxury bookcase
-			location.furniture.Add(new Furniture(1134, new Vector2(2f, 8f))); // pub table
-			location.furniture.Add(new Furniture(1120, new Vector2(15f, 6f))); // oak table
-			location.furniture.Add(new Furniture(1297, new Vector2(9f, 14f))); // topiary tree
-			location.furniture.Add(new Furniture(94, new Vector2(1f, 9f))); // green stool
-			location.furniture.Add(new Furniture(94, new Vector2(4f, 9f))); // green stool
+			house.furniture.Add(new BedFurniture(BedFurniture.DOUBLE_BED_INDEX, new Vector2(1f, 4f))); // double bed
+			house.furniture.Add(new Furniture(1395, new Vector2(4f, 4f))); // birch end table
+			house.furniture.Add(new Furniture(1285, new Vector2(5f, 4f))); // luxury bookcase
+			house.furniture.Add(new Furniture(1134, new Vector2(2f, 8f))); // pub table
+			house.furniture.Add(new Furniture(1120, new Vector2(15f, 6f))); // oak table
+			house.furniture.Add(new Furniture(1297, new Vector2(9f, 14f))); // topiary tree
+			house.furniture.Add(new Furniture(94, new Vector2(1f, 9f))); // green stool
+			house.furniture.Add(new Furniture(94, new Vector2(4f, 9f))); // green stool
 
 			var chair1 = new Furniture(18, new Vector2(14f, 7f));
 			chair1.currentRotation.Value = 1;
@@ -85,14 +86,14 @@ namespace RidgesideVillage
 			var chair2 = new Furniture(18, new Vector2(17f, 7f));
 			chair2.currentRotation.Value = 3;
 			chair2.updateRotation();
-			location.furniture.Add(chair1); // country chair
-			location.furniture.Add(chair2); // country chair
+			house.furniture.Add(chair1); // country chair
+			house.furniture.Add(chair2); // country chair
 
-			((DecoratableLocation)location).SetWallpaper("11", "Main");
+			((DecoratableLocation)house).SetWallpaper("11", "Main");
 
-			location.modData["RSV.SummitHouseFurnished"] = "true";
-			location.ignoreLights.Value = true;
-			Log.Trace($"RSV: Added {location.furniture.Count} pieces of furniture");
+			house.modData["RSV.SummitHouseFurnished"] = "true";
+			house.ignoreLights.Value = true;
+			Log.Trace($"RSV: Added {house.furniture.Count} pieces of furniture");
 		}
 
 		[EventPriority(EventPriority.Low)] // run after Content Patcher
@@ -103,12 +104,12 @@ namespace RidgesideVillage
 				for (int i = 0; i < Game1.locations.Count; i++)
 				{
 					GameLocation location = Game1.locations[i];
-					if (location.Name == SUMMITHOUSE && location is not DecoratableLocation)
+					if ((location.Name == SUMMITHOUSE || location.Name == SUMMITSHED) && location is not DecoratableLocation)
 					{
-						Log.Trace($"RSV: Found {SUMMITHOUSE}");
+						Log.Trace($"RSV: Found {location.Name}");
 						Game1.locations.RemoveAt(i);
 						Game1.locations.Insert(i, new DecoratableLocation(location.mapPath.Value, location.Name));
-						Log.Trace($"RSV: Made {SUMMITHOUSE} decoratable");
+						Log.Trace($"RSV: Made {location.Name} decoratable");
 						
 						break;
 					}

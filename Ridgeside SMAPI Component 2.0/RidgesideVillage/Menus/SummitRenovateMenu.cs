@@ -27,10 +27,12 @@ namespace RidgesideVillage
 		public const string CLIMATECONTROL = "Climate Control";
 		public const string SPRINKLERS = "Sprinkler System";
 		public const string OREAREA = "Ore Area";
+		public const string SHED = "Shed";
 		public const string HOUSETOPIC = "RSV.HouseCT";
 		public const string CLIMATETOPIC = "RSV.ClimateCT";
 		public const string SPRINKLERTOPIC = "RSV.SprinklerCT";
 		public const string ORETOPIC = "RSV.OreCT";
+		public const string SHEDTOPIC = "RSV.ShedCT";
 		public const string ACTIVECONSTRUCTION = "RSV.ActiveConstruction";
 
 		public const int region_backButton = 101;
@@ -138,21 +140,36 @@ namespace RidgesideVillage
 			blueprints = new List<BluePrint>();
 
 			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.HOUSEUPGRADED))
-            {
+			{
 				blueprints.Add(new BluePrint(FARMUPGRADE));
 			}
-			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
+			else
 			{
-				blueprints.Add(new BluePrint(CLIMATECONTROL));
+				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
+				{
+					blueprints.Add(new BluePrint(CLIMATECONTROL));
+				}
+				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.GOTSPRINKLERS))
+				{
+					blueprints.Add(new BluePrint(SPRINKLERS));
+				}
+				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.OREAREAOPENED))
+				{
+					blueprints.Add(new BluePrint(OREAREA));
+				}
+				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.SHEDADDED))
+				{
+					blueprints.Add(new BluePrint(SHED));
+				}
 			}
-			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.GOTSPRINKLERS))
-			{
-				blueprints.Add(new BluePrint(SPRINKLERS));
-			}
-			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.OREAREAOPENED))
-			{
-				blueprints.Add(new BluePrint(OREAREA));
-			}
+			if (blueprints.Count == 0)
+            {
+				NPC sean = Game1.getCharacterFromName("Sean");
+				sean.CurrentDialogue.Clear();
+				sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AllRenovated"), sean));
+				Game1.drawDialogue(sean);
+				return;
+            }
 			setNewActiveBlueprint();
 			if (Game1.options.SnappyMenus)
 			{
@@ -654,6 +671,9 @@ namespace RidgesideVillage
 						break;
 					case OREAREA:
 						Game1.MasterPlayer.activeDialogueEvents.Add(ORETOPIC, 3);
+						break;
+					case SHED:
+						Game1.MasterPlayer.activeDialogueEvents.Add(SHEDTOPIC, 3);
 						break;
 				}
 				Game1.MasterPlayer.activeDialogueEvents.Add(ACTIVECONSTRUCTION, 3);
