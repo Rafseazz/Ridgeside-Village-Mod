@@ -22,3 +22,10 @@ Mod authors can add their own NPC's wedding reception image with the simple CP p
     },
 	
 They can edit existing images as well using the same patch.
+
+New event precondition: rsvRidingHorse
+- Will trigger an event only if the player is riding their mount
+
+New event commands:
+RSVAddSO: Adds a special order ID
+RSVShowImage: Shows an image in the screen
