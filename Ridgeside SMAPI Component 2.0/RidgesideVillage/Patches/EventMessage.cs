@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using StardewValley;
 using StardewModdingAPI.Events;
-using StardewValley;
 using Microsoft.Xna.Framework;
 using System.Reflection;
 using Microsoft.Xna.Framework.Graphics;
