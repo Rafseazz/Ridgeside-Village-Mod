@@ -46,12 +46,6 @@ namespace RidgesideVillage
             {
                 Log.Warn("SpaceCore API not found. This could lead to issues.");
             }
-
-            QF = Helper.ModRegistry.GetApi<IQuestFrameworkApi>("purrplingcat.QuestFramework");
-            if (QF == null)
-            {
-                Log.Warn("Quest Framework API not found. This could lead to issues.");
-            }
         }
     }
 }
