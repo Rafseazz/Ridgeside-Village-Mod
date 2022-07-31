@@ -76,7 +76,7 @@ namespace RidgesideVillage
             }
             if (!showTextBefore)
             {
-                Texture2D image = ModEntry.Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizePath(path));
+                Texture2D image = ModEntry.Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName(path));
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * scale), (int)(image.Height * scale));
                 Game1.activeClickableMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image);
             }

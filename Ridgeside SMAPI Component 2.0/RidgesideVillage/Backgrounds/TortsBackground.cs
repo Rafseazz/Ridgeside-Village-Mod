@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewModdingAPI.Events;
 using StardewModdingAPI;
+using StardewModdingAPI.Utilities;
 
 //This Background is based off of spacechase0's SpaceBackground, which can be found here:
 //https://github.com/spacechase0/StardewValleyMods/blob/develop/MoonMisadventures/Game/SpaceBackground.cs
@@ -51,7 +52,7 @@ namespace RidgesideVillage
         : base(new Color(0, 0, 12), false)
         {
             Log.Trace($"RSV: Creating Torts bg");
-            torts = Helper.GameContent.Load<Texture2D>("assets/Torts.png");
+            torts = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/Torts.png"));
             torts_position = new Vector2(10f, 6f) * Game1.tileSize;
             /*
             torts = new TemporaryAnimatedSprite(Helper.Content.GetActualAssetKey("assets/Torts.png"), new Rectangle(0, 0, 144, 112), new Vector2(11f, 5f) * Game1.tileSize, false, 0, Color.White)
