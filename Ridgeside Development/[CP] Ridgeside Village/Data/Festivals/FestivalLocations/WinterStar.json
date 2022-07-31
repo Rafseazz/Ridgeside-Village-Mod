@@ -2,36 +2,26 @@
 "Changes": [
 
     {
-   "Action": "EditData",
-   "Target": "Data/Festivals/winter25",
-   "TextOperations": [
-
-   //SetUp
-        {
-         "Operation": "Append",
-         "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 8 64 right/Alissa 21 66 left/Bert 41 57 down/Corine 32 61 left/Ezekiel 31 60 down/Flor 32 56 down/Freddie 38 72 left/Ian 21 71 right/Jeric 30 61 right/Keahi 27 70 up/Kenneth 26 55 right/Lenny 26 61 down/Lola 38 73 left/Maddie 23 53 down/Olga 20 66 right/Philip 28 55 left/Pika 22 72 up/Richard 30 74 up/Shiro 41 59 left/Trinnie 42 57 down/Ysabelle 31 74 up/Yuuma 41 60 left",
-         "Delimiter": "/"
-        },
-
-    ]
-    },
-
-    //2.0 Pips spots! THE TRUE RSV EXPERIENCE!
-    {
         //The squad
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "FullFestivals": true
+            "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Kimpoi 20 64 right/Malaya 20 65 down/Sonny 28 60 down/Louie 28 61 down/Maive 27 61 down/Ariah 18 51 down/Lorenzo 17 62 up/Shanice 16 62 right/Anton 16 64 right/Kiarra 22 61 down/Paula 16 65 right/Carmen 38 57 left/Blair 14 52 right/Sean 16 52 left/Faye 22 53 down/Irene 24 74 up",
+                "Value": "Aguar 12 11 right/Alissa 32 20 right/Bert 27 16 right/Corine 33 28 right/Ezekiel 35 28 left/Flor 35 34 right/Freddie 21 26 right/Ian 42 27 right/Jeric 39 35 left/Keahi 41 14 left/Kenneth 27 33 left/Lenny 23 34 right/Lola 21 27 right/Maddie 39 34 left/Olga 29 16 left/Philip 33 34 left/Pika 40 14 right/Richard 42 22 up/Shiro 11 24 left/Trinnie 28 16 right/Ysabelle 41 21 right/Yuuma 9 24 right/Kimpoi 33 19 down/Malaya 34 20 left/Sonny 29 21 down/Louie 30 23 right/Maive 26 22 right/Ariah 28 22 left/Lorenzo 16 18 down/Shanice 17 18 down/Anton 14 19 right/Kiarra 18 19 left/Paula 15 20 up/Carmen 16 35 left/Blair 14 35 right/Sean 41 29 left/Faye 26 32 down/Irene 29 35 right",
                 "Delimiter": "/"
             },
+
+            //Animations
+            {
+                "Operation": "Append",
+                "Target": ["Fields", "set-up", 4],
+                "Value": "/advancedMove Corine true 0 1 -8 0 1 4100 0 0 4 14000 8 0 0 -1 1 12000/advancedMove Ezekiel true 0 1 -9 0 3 3100 0 0 4 14000 9 0 0 -1 3 12000/advancedMove Jeric true 0 0 4 2000 0 0 3 4100 0 0 4 2300 0 0 3 5200 0 1 3 3140 0 -1 3 8100/advancedMove Irene true 0 -2 1 6130 0 1 1 4600 0 1 1 6260/animate Pika true true 200 16 16 16 16 17 17 17 17 16 16 16 16 17 17 17 17 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 17 17 17 17/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/advancedMove Louie true 0 -1 1 5100 0 1 1 8200/animate Ian true 150 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27/advancedMove Sean true 0 0 1 2000 0 0 4 3100 0 0 1 1500 0 0 4 5600 -2 0 0 -4 4 8200 0 4 2 0 3 6100",
+            }
         ]
     },
 
@@ -40,13 +30,13 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160249, "FullFestivals": true
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Naomi 40 61 up",
+                "Value": "Naomi 10 23 down",
                 "Delimiter": "/"
             },
         ]
@@ -58,13 +48,14 @@
         "Target": "Data/Festivals/winter25",
         "When": {
             "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
-						"HasSeenEvent: anyPlayer|contains=75160188": true,
+			"HasSeenEvent: anyPlayer|contains=75160188": true,
+            "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Jio 74 74 right/Kiwi 74 75 right",
+                "Value": "Jio 18 8 down/Kiwi 19 8 down",
                 "Delimiter": "/"
             },
         ]
@@ -75,13 +66,13 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter25",
         "When": {
-            "HasSeenEvent": 75160254, "FullFestivals": true
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Daia 76 72 down",
+                "Value": "Daia 22 9 down",
                 "Delimiter": "/"
             },
         ]
@@ -92,11 +83,14 @@
       "LogName": "Torts Winter Star Location",
       "Action": "EditData",
       "Target": "Data/Festivals/winter25",
+      "When": {
+            "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
+        },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "Torts 40 61 0",
+          "Value": "Torts 9 25 right",
           "Delimiter": "/"
         },
       ]

@@ -1724,6 +1724,50 @@
       "Stock": 3,
       "When": [ "n OlgaSOLetter" ],
 		},
+	],
+	},
+
+	//------------
+	//MalayaRecipes
+	//------------
+	{
+	"ShopName": "RSVMalayaRecipes",
+	"StoreCurrency": "Money",
+	"CategoriesToSellHere": [ -5,-6,-79 ],
+	"Quote": "Malaya's Weekend Recipes!",
+	"ClosedMessage": "Recipes available during weekends!",
+	"ShopPrice": -1,
+	"DefaultSellPriceMultiplier": 0.7,
+	"When": ["d Mon Tue Wed Thu Fri"],
+	"LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+	"LocalizedClosedMessage": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+	"ItemStocks": [
 		//Pastry Recipes
 		{
 			"ItemType": "Object",
@@ -1740,7 +1784,6 @@
 				"Pillowsoft Cheezy Sandwich",
 				"Pink Frosted Sprinkled Doughnut",
 				],
-			"When": [ "y 2" ],
 		},
 	],
 	},
@@ -2167,6 +2210,48 @@
 			"StockPrice": 5000,
 			"Stock": 1,
       "When": [ "n RSV.FayePastel" ]
+		},
+	],
+	},
+
+	//------------
+	//EggFestKeahiTrinnie
+	//------------
+	{
+	"ShopName": "RSVEggFestKeahiTrinnie",
+	"StoreCurrency": "Money",
+	"Quote": "Keahi and Trinnie's Egg Kitchen!",
+	"LocalizedQuote": {
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    	},
+	"ShopPrice": -1,
+	"DefaultSellPriceMultiplier": 1.0,
+
+	"ItemStocks": [
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Egg",
+			],
+			"StockPrice": 35,
+		},
+		{
+			"ItemType": "Object",
+			"ItemNames": [
+				"Fried Egg",
+				"Omelet"
+			],
 		},
 	],
 	},

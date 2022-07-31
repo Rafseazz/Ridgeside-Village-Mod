@@ -65,18 +65,6 @@ namespace RidgesideVillage
                     original: AccessTools.Method(typeof(SpecialOrdersBoard), nameof(SpecialOrdersBoard.GetPortraitForRequester)),
                     postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postfix))
                 );
-                try
-                {
-                    Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
-                    harmony.Patch(
-                        original: AccessTools.Method(QFSpecialBoardClass, "GetPortraitForRequester"),
-                        postfix: new HarmonyMethod(typeof(UntimedSO), nameof(SpecialOrdersBoard_GetPortrait_postfix))
-                    );
-                }
-                catch
-                {
-                    Log.Info("Couldnt patch Quest Framework. Emojis in the SO board might not show up");
-                }
             }
             else
             {
@@ -135,8 +123,7 @@ namespace RidgesideVillage
             {
                 if (__instance.questKey.Value == "RSV.UntimedSpecialOrder.DaiaQuest")
                 {
-                    int questID = ExternalAPIs.QF.ResolveQuestId("preparations_complete@Rafseazz.RSVQF");
-                    Game1.player.addQuest((questID));
+                    Game1.player.addQuest(RSVConstants.PreparationsCompleteQuestID);
                 }
             }
             catch (Exception e)
@@ -171,46 +158,48 @@ namespace RidgesideVillage
             switch (Game1.CurrentEvent.id)
             {
                 case MEETBELINDA:
-                    TryRemoveQuest(ExternalAPIs.QF.ResolveQuestId("preparations_complete@Rafseazz.RSVQF")); // Added in line 137, might also have been completed upon reading ninja note 
-                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("follow_ninja_note@Rafseazz.RSVQF")); // Added in QF hooks currently
-                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF"));
+                    TryRemoveQuest(RSVConstants.PreparationsCompleteQuestID); // Added in line 137, might also have been completed upon reading ninja note 
+                    TryCompleteQuest(RSVConstants.NinjaNoteQuestID); // Added in QF hooks currently
+                    TryAddQuest(RSVConstants.RaeUnsealQuestID);
                     break;
 
                 case PREUNSEAL:
-                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("rae_pre_unseal@Rafseazz.RSVQF"));
+                    TryCompleteQuest(RSVConstants.RaeUnsealQuestID);
                     // Crystal quests are then added
                     break;
 
                 case BLISSVISIT:
                     // Comes after crystal quests are complete
-                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF"));
+                    TryAddQuest(RSVConstants.RaeUnsealQuestID);
                     break;
 
                 case RAEUNSEAL:
-                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("rae_unseal@Rafseazz.RSVQF"));
-                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF"));
+                    TryCompleteQuest(RSVConstants.RaeUnsealQuestID);
+                    TryAddQuest(RSVConstants.OpenSpiritPortalQuestID);
                     break;
 
                 case OPENPORTAL:
-                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("open_spirit_portal@Rafseazz.RSVQF"));
+                    TryCompleteQuest(RSVConstants.OpenSpiritPortalQuestID);
                     if (Game1.player.IsMainPlayer)
+                    {
                         Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder("RSV.UntimedSpecialOrder.SpiritRealmFlames", null));
+                    }
                     break;
 
                 case BLISSGH1:
-                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF"));
+                    TryAddQuest(RSVConstants.PhantomGreenHouse1QuestID);
                     break;
 
                 case SPIRITGH1:
-                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_1@Rafseazz.RSVQF"));
+                    TryCompleteQuest(RSVConstants.PhantomGreenHouse1QuestID);
                     break;
 
                 case BLISSGH2:
-                    TryAddQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF"));
+                    TryAddQuest(RSVConstants.PhantomGreenHouse2QuestID);
                     break;
 
                 case SPIRITGH2:
-                    TryCompleteQuest(ExternalAPIs.QF.ResolveQuestId("phantom_greenhouse_2@Rafseazz.RSVQF"));
+                    TryCompleteQuest(RSVConstants.PhantomGreenHouse2QuestID);
                     // Greenhouse quest then added
                     break;
             }
