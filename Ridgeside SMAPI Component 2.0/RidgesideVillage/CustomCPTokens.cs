@@ -28,13 +28,7 @@ namespace RidgesideVillage
         public void RegisterTokens() {
             var cp = ExternalAPIs.CP;
 
-            cp.RegisterToken(this.ModManifest, "EnableRidgesideMusic", () => new string[] { Config.enableRidgesideMusic.ToString() });
-
-            cp.RegisterToken(this.ModManifest, "RepeatCableCarCutscene", () => new string[] { Config.repeatCableCarCutscene.ToString() });
-
-            cp.RegisterToken(this.ModManifest, "EnableOtherNPCsInCableCar", () => new string[] { Config.enableOtherNPCsInCableCar.ToString() });
-
-            cp.RegisterToken(this.ModManifest, "SpouseGender", () =>
+          cp.RegisterToken(this.ModManifest, "SpouseGender", () =>
             {
                 // or save is currently loading
                 if (SaveGame.loaded?.player != null || Context.IsWorldReady)
