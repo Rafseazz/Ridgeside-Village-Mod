@@ -1,0 +1,80 @@
+{
+	"Name": "Honey Ginger Whitefish",
+	"Description": "Mountain whitefish marinated in a classic sweet-sharp sauce. It's surprisingly gentle on the stomach.",
+	"Category": "Cooking",
+	"Edibility": 50,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": {
+    "Farming": 0,
+    "Fishing": 2,
+    "Mining": 0,
+    "Luck": 0,
+	"Foraging": 0,
+	"MaxStamina": 0,
+    "MagnetRadius": 0,
+	"Speed": 0,
+	"Defense": 1,
+	"Attack": 0,
+    "Duration": 300,
+	},
+	"Price": 400,
+	"IsColored": false,
+	"GiftTastes":
+	{
+		"Love": ["Ezekiel", "Richard", "Jeric"],
+	},
+    "Recipe":
+    {
+        "ResultCount": 1,
+        "Ingredients": [
+        {
+            "Object": "Mountain Whitefish",
+            "Count": 1,
+        },
+        {
+            "Object": 340,
+            "Count": 1,
+        },
+        {
+            "Object": 829,
+            "Count": 1,
+        },
+        ],
+        "CanPurchase": false,
+    },
+    "ContextTags":
+    [
+    "ginger_item",
+    ],
+
+    "NameLocalization":
+    { 
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    },
+    "DescriptionLocalization":
+    {
+    	//remove the "//" from your language    	
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    }
+}
