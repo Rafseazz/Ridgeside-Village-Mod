@@ -1,0 +1,80 @@
+{
+	"Name": "Ginger Arugula Fried Rice",
+	"Description": "A steaming bowl of vegetable fried rice seasoned with ginger. Good for the stomach if you're feeling under the weather.",
+	"Category": "Cooking",
+	"Edibility": 50,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": {
+    "Farming": 0,
+    "Fishing": 0,
+    "Mining": 0,
+    "Luck": 0,
+	"Foraging": 2,
+	"MaxStamina": 0,
+    "MagnetRadius": 0,
+	"Speed": 0,
+	"Defense": 1,
+	"Attack": 0,
+    "Duration": 300,
+	},
+	"Price": 400,
+	"IsColored": false,
+	"GiftTastes":
+	{
+		"Love": ["Philip", "Ian", "Ysabelle"],
+	},
+    "Recipe":
+    {
+        "ResultCount": 1,
+        "Ingredients": [
+        {
+            "Object": "Mountain Arugula",
+            "Count": 1,
+        }, 
+        {
+            "Object": 423,
+            "Count": 1,
+        },
+        {
+            "Object": 829,
+            "Count": 1,
+        },
+        ],
+        "CanPurchase": false,
+    },
+    "ContextTags":
+    [
+    "ginger_item",
+    ],
+
+    "NameLocalization":
+    { 
+    	//remove the "//" from your language
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    },
+    "DescriptionLocalization":
+    {
+    	//remove the "//" from your language    	
+        //"es": "PLACEHOLDER",
+        //"ko": "PLACEHOLDER",
+        //"de": "PLACEHOLDER",
+        //"fr": "PLACEHOLDER",
+        //"hu": "PLACEHOLDER",
+        //"it": "PLACEHOLDER",
+        //"ja": "PLACEHOLDER",
+        //"pt": "PLACEHOLDER",
+        //"ru": "PLACEHOLDER",
+        //"tr": "PLACEHOLDER",
+        //"zh": "PLACEHOLDER",
+    }
+}
