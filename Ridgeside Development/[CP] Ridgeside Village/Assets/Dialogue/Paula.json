@@ -98,5 +98,35 @@
 	"MovieInvitation": "{{i18n:Paula.Dialogue.MovieInvitation}}",
 		},
 	},
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Paula",
+   "When": {  	
+   	"Relationship:Paula": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts
+	"Mon8": "{{i18n:Paula.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Paula.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Paula.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Paula.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Paula.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Paula.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Paula.Dialogue.Sun8.dating}}",
+
+	//10 Hearts
+	"Mon10": "{{i18n:Paula.Dialogue.Mon10.dating}}",
+	"Tue10": "{{i18n:Paula.Dialogue.Tue10.dating}}",
+	"Wed10": "{{i18n:Paula.Dialogue.Wed10.dating}}",
+	"Thu10": "{{i18n:Paula.Dialogue.Thu10.dating}}",
+	"Fri10": "{{i18n:Paula.Dialogue.Fri10.dating}}",
+	"Sat10": "{{i18n:Paula.Dialogue.Sat10.dating}}",
+	"Sun10": "{{i18n:Paula.Dialogue.Sun10.dating}}",
+		},
+	},
 ]
 }

@@ -1,61 +1,41 @@
 {
 "Changes": [
 
-	{
-	//NO SVE
-   "Action": "EditData",
-   "Target": "Data/Festivals/spring13",
-   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
-   "TextOperations": [
-
-   //SetUp
-		{
-         "Operation": "Append",
-         "Target": ["Entries", "Set-Up_additionalCharacters"],
-         "Value": "Aguar 38 84 up/Alissa 29 54 left/Bert 27 53 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Keahi 12 59 left/Kenneth 20 74 right/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 53 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 10 59 right/Ysabelle 32 79 right/Yuuma 20 79 up",
-         "Delimiter": "/"
-		},
-
-   //MainEevent
-		{
-         "Operation": "Append",
-         "Target": ["Entries", "MainEvent_additionalCharacters"],
-         "Value": "Aguar 38 84 up/Alissa 29 55 down/Bert 27 54 down/Corine 34 79 left/Ezekiel 36 71 left/Flor 26 57 down/Freddie 33 72 up/Ian 16 52 down/Jeric 32 76 down/Keahi 12 59 right/Kenneth 20 74 right/Lenny 24 69 right/Lola 32 72 up/Maddie 31 78 right/Olga 26 54 down/Philip 18 78 right/Pika 30 57 down/Richard 34 74 up/Shiro 19 79 up/Trinnie 12 60 right/Ysabelle 32 79 down/Yuuma 20 79 up",
-         "Delimiter": "/"
-		},
-
-	]
-	},
-
-
-    //2.0 Pips spots! THE TRUE RSV EXPERIENCE!
     {
         //The squad
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "FullFestivals": true
+            "RSVNPCSAttendFestivals": true,
+            "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Sonny 23 71 right/Louie 11 61 up/Maive 24 70 right/Ariah 42 78 down/Lorenzo 34 60 right/Shanice 37 60 left/Anton 9 66 up/Kiarra 9 61 right/Paula 8 65 right/Carmen 38 73 left/Blair 9 60 right/Sean 13 60 left/Faye 35 66 left/Irene 28 61 right",
+                "Value": "Aguar 21 27 right/Alissa 42 28 left/Bert 31 25 right/Corine 25 22 right/Ezekiel 33 36 up/Flor 33 24 down/Freddie 36 32 down/Ian 16 22 right/Jeric 14 24 down/Keahi 39 22 right/Kenneth 32 31 down/Lenny 37 25 up/Lola 37 32 left/Maddie 29 27 down/Olga 41 26 down/Philip 33 29 up/Pika 34 35 left/Richard 36 34 up/Shiro 35 28 right/Trinnie 38 23 down/Ysabelle 27 22 left/Yuuma 37 28 left/Sonny 24 33 down/Louie 25 35 down/Maive 23 34 down/Ariah 20 34 down/Lorenzo 42 32 left/Shanice 40 32 right/Anton 11 25 up/Kiarra 20 21 down/Paula 12 25 up/Carmen 31 33 right/Blair 41 36 left/Sean 39 36 right/Faye 13 27 down/Irene 29 29 up",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Sonny 45 78 left/Louie 24 71 right/Maive 43 78 left/Ariah 42 78 right/Lorenzo 34 60 down/Shanice 35 60 down/Anton 9 66 right/Kiarra 9 61 right/Paula 9 65 right/Carmen 38 72 left/Blair 9 60 right/Sean 9 62 right/Faye 35 66 left/Irene 35 67 left",
+                "Value": "Aguar 21 27 right/Alissa 42 28 left/Bert 31 25 right/Corine 25 22 right/Ezekiel 33 36 up/Flor 33 24 down/Freddie 36 32 down/Ian 16 22 right/Jeric 14 24 down/Keahi 39 22 right/Kenneth 32 31 down/Lenny 37 25 up/Lola 37 32 left/Maddie 29 27 down/Olga 41 26 down/Philip 33 29 up/Pika 34 35 left/Richard 36 34 up/Shiro 35 28 right/Trinnie 38 23 down/Ysabelle 27 22 left/Yuuma 37 28 left/Sonny 24 33 down/Louie 25 35 down/Maive 23 34 down/Ariah 20 34 down/Lorenzo 42 32 left/Shanice 40 32 right/Anton 11 25 up/Kiarra 20 21 down/Paula 12 25 up/Carmen 31 33 right/Blair 41 36 left/Sean 39 36 right/Faye 13 27 down/Irene 29 29 up",
                 "Delimiter": "/"
+            },
+
+            //Animations
+            {
+             "Operation": "Append",
+             "Target": ["Fields", "set-up", 5],
+             "Value": "/animate Ariah false true 200 17 17 17 17 17 17 17 17 17 17 17 18/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Ian false true 500 17 18 19 18/advancedMove Aguar true 2 0 1 5000 -2 0 1 14000/advancedMove Bert true 0 1 1 4500 0 1 1 6300 0 -2 1 5500/animate Pika false true 130 16 16 16 16 17 17 17 17 16 16 16 16 17 17 17 17 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 17 17 17 17/animate Maive false true 1000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20 21 20 21 20 21 20 21 0 0 0 19 0 19 0/advancedMove Carmen true 0 -1 1 6300 0 1 1 8000/animate Faye false true 150 16 17 18 17/advancedMove Irene true 2 0 0 -1 1 6700 0 1 -2 0 4 17000/advancedMove Blair true 6 0 0 -2 1 0 2 5000 -3 0 0 2 -1 0 3 4000 -5 0 0 -11 4 6700 0 0 1 5600 0 13 -23 0 0 -9 -2 0 3 7300 0 0 2 3000 2 0 0 9 25 0 0 -2 3 9100/advancedMove Sean true 6 0 0 -2 1 0 2 5000 -1 0 0 2 -2 0 1 4000 -4 0 0 -11 1 0 4 6700 0 0 3 5600 -1 0 0 13 -23 0 0 -8 -2 0 3 7300 0 0 4 3000 0 -1 2 0 0 9 23 0 0 -2 1 9100/advancedMove Lenny true 1 0 0 2 3 3500 1 0 1 5230 0 6 1 3400 -1 0 3 4300 0 4 -15 0 0 -1 4 5300 0 2 -6 0 0 -8 17 0 0 -5 3 0 4 5200/advancedMove Trinnie true 1 0 2 3000 -1 0 2 6000 1 0 2 1500 -1 0 2 3000/advancedMove Keahi true 0 1 1 4000 0 -1 1 10000/advancedMove Louie true 0 -3 1 5250 0 3 3 16000/addTemporaryActor White_Chicken 16 16 12 29 1 false Animal/addTemporaryActor Rabbit 16 16 9 29 2 false Animal/addTemporaryActor Rabbit 16 16 9 23 3 false Animal/addTemporaryActor Rabbit 16 16 8 26 1 false Animal/addTemporaryActor BabyRabbit 16 16 8 23 2 false Animal/addTemporaryActor Rabbit 16 16 11 23 1 false Animal/advancedMove White_Chicken true -1 0 2 3300 1 0 1 4500/advancedMove BabyRabbit true 0 2 0 -2 1 2600 0 1 1 0 0 3 1 3200 -1 0 0 1 2 2600 1 0 0 -4 -1 0 0 -1 1 5000",
             },
 
             {
              "Operation": "Append",
-             "Target": ["Fields", "set-up", 5],
-             "Value": "/animate Ariah false true 200 17 17 17 17 17 17 17 17 17 17 17 18",
-          },
+             "Target": ["Fields", "mainEvent", 5],
+             "Value": "/animate Ariah false true 200 17 17 17 17 17 17 17 17 17 17 17 18/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Ian false true 500 17 18 19 18/advancedMove Aguar true 2 0 1 5000 -2 0 1 14000/advancedMove Bert true 0 1 1 4500 0 1 1 6300 0 -2 1 5500/animate Pika false true 130 16 16 16 16 17 17 17 17 16 16 16 16 17 17 17 17 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 17 17 17 17/animate Maive false true 1000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20 21 20 21 20 21 20 21 0 0 0 19 0 19 0/advancedMove Carmen true 0 -1 1 6300 0 1 1 8000/animate Faye false true 150 16 17 18 17/advancedMove Irene true 2 0 0 -1 1 6700 0 1 -2 0 4 17000/addTemporaryActor White_Chicken 16 16 12 29 1 false Animal/addTemporaryActor Rabbit 16 16 9 29 2 false Animal/addTemporaryActor Rabbit 16 16 9 23 3 false Animal/addTemporaryActor Rabbit 16 16 8 26 1 false Animal/addTemporaryActor BabyRabbit 16 16 8 23 2 false Animal/addTemporaryActor Rabbit 16 16 11 23 1 false Animal/advancedMove White_Chicken true -1 0 2 3300 1 0 1 4500/advancedMove BabyRabbit true 0 2 0 -2 1 2600 0 1 1 0 0 3 1 3200 -1 0 0 1 2 2600 1 0 0 -4 -1 0 0 -1 1 5000",
+            },
         ]
     },
 
@@ -64,20 +44,20 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "HasSeenEvent": 75160249, "FullFestivals": true
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Naomi 26 69 left",
+                "Value": "Naomi 36 26 down",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Naomi 21 79 up",
+                "Value": "Naomi 36 26 down",
                 "Delimiter": "/"
             }
         ]
@@ -88,20 +68,20 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "HasSeenEvent": 75160251, "FullFestivals": true
+            "HasSeenEvent": 75160251, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Kimpoi 25 55 right/Malaya 25 54 right",
+                "Value": "Kimpoi 40 26 down/Malaya 40 28 right",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Kimpoi 24 55 down/Malaya 25 54 down",
+                "Value": "Kimpoi 40 26 down/Malaya 40 28 right",
                 "Delimiter": "/"
             }
         ]
@@ -112,22 +92,23 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-					"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
-          "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
-					"HasSeenEvent: anyPlayer|contains=75160188": true,
-        },
+                "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
+                "HasSeenEvent: anyPlayer|contains=75160188": true,
+                "RSVNPCSAttendFestivals": true,
+                "ExpandedFestivalMaps": true
+            },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Jio 52 59 left/Kiwi 51 62 down",
+                "Value": "Jio 11 32 right/Kiwi 11 33 left",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Jio 52 59 left/Kiwi 51 62 down",
+                "Value": "Jio 11 32 right/Kiwi 11 33 left",
                 "Delimiter": "/"
             },
         ]
@@ -138,50 +119,22 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "HasSeenEvent": 75160254, "FullFestivals": true
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Daia 52 61 left",
+                "Value": "Daia 12 31 up",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Daia 52 61 left",
+                "Value": "Daia 12 31 up",
                 "Delimiter": "/"
             },
-        ]
-    },
-
-    {
-        //RSV Kids play and animations for setup
-        "Action": "EditData",
-        "Target": "Data/Festivals/spring13",
-        "When": {
-            "FullFestivals": true,
-            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
-        },
-        "Entries": {
-             "mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 27 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:event-mainEvent.01}}\"/pause 100/jump Jas/jump Vincent/jump Keahi/jump Trinnie/pause 1000/speak Lewis \"{{i18n:event-mainEvent.02}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/faceDirection Blair 1 true/faceDirection Sean 2 true/faceDirection Keahi 3 true/faceDirection Trinnie 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 true/faceDirection Trinnie 0 true/faceDirection Keahi 0 true/faceDirection Blair 0 true/faceDirection Sean 3/pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lenny 3/emote Lewis 28 true/emote Lenny 56/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:event-mainEvent.03}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:event-mainEvent.04}}\"/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -7 3 0/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -15 -9 0 9 0 0 18/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -20 -6 0 0 3/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 19 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 21 9 0 0 4 -20 0 20 0 -20 0/advancedMove Leo false 0 -10 -1 0 0 -3 -6 0 0 -2 -3 0 0 -3 -1 0 0 20 -5 0 0 -10 -2 0/advancedMove Keahi false 0 18 3 0 0 -2 3 0 0 3 -11 0 0 8 3 0 0 -3 -9 0 0 -5 20 0/advancedMove Lenny false -1 0 0 -1 -2 0 0 2 1 0 0 9 -13 0 0 -4 -9 0 10 0 -10 0 10 0 -10 0/advancedMove Trinnie false 0 3 -3 0 0 6 7 0 0 12 9 0 -11 0 0 8 -6 0 0 -6 6 0 0 8 13 0 0 -6 0 7 0 -7 0 7/advancedMove Kiarra false 8 0 -3 0 0 4 7 0 0 5 11 0 0 -7 26 0 0 -4 2 0 0 -4 -1 0 0 -1 -10 0 0 -11 -18 0/advancedMove Blair false 0 -6 3 0 -9 0 7 0 0 -8 -15 0 0 3 -1 0 0 5 6 0 0 -2 3 0 0 17 3 0 0 21 11 0/advancedMove Sean false 3 0 0 1 0 -2 2 0 0 14 12 0 0 -1 -13 0 0 8 2 0 0 -1 -2 0 0 -6 -9 0 0 6 3 0 0 -11 1 0 -13 0 0 -3/playSound whistle/jump Keahi/jump Blair/playMusic tickTock/playerControl eggHunt",
-
-             "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:event-afterEggHunt.01}}\"/faceDirection Lenny 3/speak Lenny \"{{i18n:event-afterEggHunt.02}}\"/faceDirection Lewis 1/emote Lewis 12/speak Lewis \"{{i18n:event-afterEggHunt.03}}\"/emote Lenny 56 true/emote Lewis 28/faceDirection Lewis 2/pause 800/playMusic none/speak Lewis \"{{i18n:event-afterEggHunt.04}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:event-afterEggHunt.05}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:event-afterEggHunt.06}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end"
-        }
-    },
-
-    {
-        //RSV Animations
-        "Action": "EditData",
-        "Target": "Data/Festivals/spring13",
-        "TextOperations": [
-          {
-             "Operation": "Append",
-             "Target": ["Fields", "set-up", 5],
-             "Value": "/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Ian false true 500 17 18 19 18",
-          },
         ]
     },
 
@@ -190,20 +143,40 @@
       "LogName": "Torts Egg Fest Location",
       "Action": "EditData",
       "Target": "Data/Festivals/spring13",
+      "When": {
+            "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
+        },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "Torts 20 78 3",
+          "Value": "Torts 36 28 right",
           "Delimiter": "/"
         },
         {
           "Operation": "Append",
           "Target": ["Entries", "MainEvent_additionalCharacters"],
-          "Value": "Torts 21 79 3",
+          "Value": "Torts 36 28 right",
           "Delimiter": "/"
         },
       ]
+    },
+
+
+    {
+        //RSV Kids join main event VANILLA
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "RSVNPCSAttendFestivals": true,
+            "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
+            "ExpandedFestivalMaps": true
+        },
+        "Entries": {
+             "mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 27 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:event-mainEvent.01}}\"/pause 100/jump Jas/jump Vincent/jump Keahi/jump Trinnie/pause 1000/speak Lewis \"{{i18n:event-mainEvent.02}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/faceDirection Blair 1 true/faceDirection Sean 2 true/faceDirection Keahi 3 true/faceDirection Trinnie 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 true/faceDirection Trinnie 0 true/faceDirection Keahi 0 true/faceDirection Blair 0 true/faceDirection Sean 3/pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lenny 3/emote Lewis 28 true/emote Lenny 56/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:event-mainEvent.03}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:event-mainEvent.04}}\"/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -7 3 0/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -15 -9 0 9 0 0 18/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -20 -6 0 0 3/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 19 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 21 9 0 0 4 -20 0 20 0 -20 0/advancedMove Leo false 0 -10 -1 0 0 -3 -6 0 0 -2 -3 0 0 -3 -1 0 0 20 -5 0 0 -10 -2 0/advancedMove Keahi false 0 18 3 0 0 -2 3 0 0 3 -11 0 0 8 3 0 0 -3 -9 0 0 -5 20 0/advancedMove Lenny false -1 0 0 -1 -2 0 0 2 1 0 0 9 -13 0 0 -4 -9 0 10 0 -10 0 10 0 -10 0/advancedMove Trinnie false 0 3 -3 0 0 6 7 0 0 12 9 0 -11 0 0 8 -6 0 0 -6 6 0 0 8 13 0 0 -6 0 7 0 -7 0 7/advancedMove Kiarra false 8 0 -3 0 0 4 7 0 0 5 11 0 0 -7 26 0 0 -4 2 0 0 -4 -1 0 0 -1 -10 0 0 -11 -18 0/advancedMove Blair false 0 -6 3 0 -9 0 7 0 0 -8 -15 0 0 3 -1 0 0 5 6 0 0 -2 3 0 0 17 3 0 0 21 11 0/advancedMove Sean false 3 0 0 1 0 -2 2 0 0 14 12 0 0 -1 -13 0 0 8 2 0 0 -1 -2 0 0 -6 -9 0 0 6 3 0 0 -11 1 0 -13 0 0 -3/playSound whistle/jump Keahi/jump Blair/playMusic tickTock/playerControl eggHunt",
+
+             "afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:event-afterEggHunt.01}}\"/faceDirection Lenny 3/speak Lenny \"{{i18n:event-afterEggHunt.02}}\"/faceDirection Lewis 1/emote Lewis 12/speak Lewis \"{{i18n:event-afterEggHunt.03}}\"/emote Lenny 56 true/emote Lewis 28/faceDirection Lewis 2/pause 800/playMusic none/speak Lewis \"{{i18n:event-afterEggHunt.04}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:event-afterEggHunt.05}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:event-afterEggHunt.06}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end"
+        }
     },
 
 ]

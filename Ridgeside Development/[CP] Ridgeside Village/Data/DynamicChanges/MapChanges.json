@@ -758,6 +758,26 @@
 		"Update": "OnLocationChange"
     },
 
+	{
+			"LogName": "Torts Realm Warp",
+      "Action": "EditMap",
+      "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+      "MapTiles": [
+			{
+				"Position": { "X": 57, "Y": 52 },
+				"Layer": "Buildings",
+				"SetProperties": {
+				"Action": "RSVWarp Custom_Ridgeside_TortsRealm 14 38"
+               }
+            }
+		],
+	"Update": "OnLocationChange",
+	"When": {
+			"HasSeenEvent |contains=75160287": true,
+			"Day": "1, 28"
+		},
+  },
+
 //Prevent spawn in Foxbloom spots on non-Foxbloom Day
 	{
         "Action": "EditMap",
@@ -932,6 +952,76 @@
 		"FromFile": "Assets/Maps/EventMaps/RSVCleanPaulaRoom.tmx",
 		"ToArea": { "X": 0, "Y": 3, "Width": 13, "Height": 11 },
 		"When": { "HasSeenEvent": 75160349 },
+		"Update": "OnLocationChange"
+	},
+
+//Kimpoi open photo book
+	{
+	"LogName": "RSV: Open Old Photo Book after Kimpoi's 8 heart event",
+    "Action": "EditMap",
+    "Target": "Maps/Custom_Ridgeside_BertHouse",
+    "MapTiles": [
+			{
+				"Position": { "X": 9, "Y": 12 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "ShowImage \"LooseSprites/zRSVOldKids\" 3.5 ShowImage.zRSVOldKids"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160332 },
+		"Update": "OnLocationChange, OnTimeChange"
+	},
+
+//add quest boards
+	{
+		"LogName": "RSV:Add town Special Board",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+		"MapTiles": [
+			{
+				"Position": { "X": 119, "Y": 40 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "RSVSpecialOrderBoard RSVTownSO"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160207 },
+		"Update": "OnLocationChange"
+	},
+
+	{
+		"LogName": "RSV:Add Ninja Questboard",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
+		"MapTiles": [
+			{
+				"Position": { "X": 6, "Y": 6 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "RSVQuestBoard RSVNinjaBoard"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160187 },
+		"Update": "OnLocationChange"
+	},
+
+	{
+		"LogName": "RSV:Add Ninja Special Board",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVNinjaHouse",
+		"MapTiles": [
+			{
+				"Position": { "X": 3, "Y": 4 },
+				"Layer": "Buildings",
+				"SetProperties": {
+					"Action": "RSVSpecialOrderBoard RSVNinjaSO"
+				}
+			}
+		],
+		"When": { "HasSeenEvent": 75160264 },
 		"Update": "OnLocationChange"
 	},
 

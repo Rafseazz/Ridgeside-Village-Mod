@@ -27,11 +27,14 @@ namespace RidgesideVillage
         {
             Helper = helper;
             Type QFSpecialBoardClass = Type.GetType("QuestFramework.Framework.Menus.CustomOrderBoard, QuestFramework");
-
-            harmony.Patch(
+            if (QFSpecialBoardClass is not null)
+            {
+                harmony.Patch(
                 original: AccessTools.Method(QFSpecialBoardClass, "receiveLeftClick"),
                 prefix: new HarmonyMethod(typeof(SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_prefix)),
                 postfix: new HarmonyMethod(typeof(SODialogue), nameof(SpecialOrdersBoard_ReceiveLeftClick_postfix)));
+            }
+            
             harmony.Patch(
                 original: AccessTools.Method(typeof(SpecialOrder), nameof(SpecialOrder.OnFail)),
                 prefix: new HarmonyMethod(typeof(SODialogue), nameof(SODialogue.SpecialOrder_OnFail_prefix)));
@@ -64,7 +67,10 @@ namespace RidgesideVillage
                 {
                     if ((specialOrder.questKey.Value == PIKAQUEST) && (!__state))
                     {
-                        Game1.player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
+                        foreach(Farmer player in Game1.getAllFarmers())
+                        {
+                            player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
+                        }
                         Log.Trace($"RSV: Added pika_pickup conversation topic.");
                         return;
                     }

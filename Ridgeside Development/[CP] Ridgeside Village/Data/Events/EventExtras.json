@@ -2,24 +2,7 @@
 "Changes": [
 
 
-//Load blank json files for events
-	{
-		"LogName": "Load Blank Jsons for Events",
-		"Action": "Load",
-		"Target": "Data/Events/Custom_Ridgeside_RidgesideVillage, Data/Events/Custom_Ridgeside_AguarBasement, Data/Events/Custom_Ridgeside_AguarLab, Data/Events/Custom_Ridgeside_AlissaHouse, Data/Events/Custom_Ridgeside_AlissaShed, Data/Events/Custom_Ridgeside_BertHouse, Data/Events/Custom_Ridgeside_EzekielHouse, Data/Events/Custom_Ridgeside_FreddieHouse, Data/Events/Custom_Ridgeside_JericHouse, Data/Events/Custom_Ridgeside_KennethHouse, Data/Events/Custom_Ridgeside_LennyHouse, Data/Events/Custom_Ridgeside_LogCabinHotelLobby, Data/Events/Custom_Ridgeside_LogCabinHotel2ndFloor, Data/Events/Custom_Ridgeside_LogCabinHotel3rdFloor, Data/Events/Custom_Ridgeside_LolaShed, Data/Events/Custom_Ridgeside_MaddieHouse, Data/Events/Custom_Ridgeside_PikaHouse, Data/Events/Custom_Ridgeside_RSVCableCar, Data/Events/Custom_Ridgeside_RSVCliff, Data/Events/Custom_Ridgeside_RSVNinjaHouse, Data/Events/Custom_Ridgeside_Ridge, Data/Events/Custom_Ridgeside_ShiroHouse, Data/Events/Custom_Ridgeside_MysticFalls1, Data/Events/Custom_Ridgeside_MysticFalls2, Data/Events/Custom_Ridgeside_MysticFalls3, Data/Events/Custom_Ridgeside_RSVAbandonedHouse, Data/Events/Custom_Ridgeside_RidgeForest, Data/Events/Custom_Ridgeside_LogCabinEventHall, Data/Events/Custom_Ridgeside_BlairHouse, Data/Events/Custom_Ridgeside_FayeHouse, Data/Events/Custom_Ridgeside_PurpleMansion, Data/Events/Custom_Ridgeside_PurpleMansion2ndFloor, Data/Events/Custom_Ridgeside_3Bros, Data/Events/Custom_Ridgeside_3Bros2ndFloor, Data/Events/Custom_Ridgeside_RSVSewers, Data/Events/Custom_Ridgeside_PaulaClinic, Data/Events/Custom_Ridgeside_RidgeFalls, Data/Events/Custom_Ridgeside_RSVTheHike, Data/Events/Custom_Ridgeside_RSVGreenhouse1, Data/Events/Custom_Ridgeside_RSVGreenhouse2, Data/Events/Custom_Ridgeside_RSVSpiritRealm, Data/Events/Custom_Ridgeside_IanHouse, Data/Events/Custom_Ridgeside_SummitFarm",
-		"FromFile": "Data/LoadData/EmptyJson.json",
-	},
-
-//Load blank AdventureGuild json for events
-	{
-		"LogName": "Load blank AdventureGuild.json for events",
-		"Action": "Load",
-		"Target": "Data/Events/AdventureGuild",
-		"FromFile": "Data/LoadData/EmptyJson.json",
-		"When": {
-			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, Wolf.Marlon": false,
-		}
-	},
+//Loading blank jsons for events moved to the code component so SMAPI load resolution can be used.
 
 //Load Loose sprites
 	{
@@ -32,7 +15,7 @@
 	{
 		"LogName": "Special Characters",
 		"Action": "Load",
-		"Target": "Characters/RSVSpirit1, Characters/RSVSpirit2, Characters/RSVSpirit3, Characters/RSVSpirit4, Characters/RSVFirecracker, Characters/RSVLady1, Characters/RSVFlashback1, Characters/RSVFlashback2, Characters/Beast1, Characters/Beast2, Characters/Beast3, Characters/RSVSummoner1, Characters/RSVtent, Characters/RSVcampfire, Characters/RSVbunny1, Characters/RSVCart1, Characters/RSVCart2, Characters/RSVYsaDance, Characters/RSVMach, Characters/RSVDog, Characters/RSVSurprise, Characters/RSVBonfireLeft, Characters/RSVBonfireRight, Characters/RSVCableCar, Characters/RSVTemp1, Characters/RSVTemp2, Characters/RSVViperial, Characters/RSVDish, Characters/RSVGrandma, Characters/RSVBlairFish, Characters/RSVAntonFix",
+		"Target": "Characters/RSVSpirit1, Characters/RSVSpirit2, Characters/RSVSpirit3, Characters/RSVSpirit4, Characters/RSVFirecracker, Characters/RSVLady1, Characters/RSVFlashback1, Characters/RSVFlashback2, Characters/Beast1, Characters/Beast2, Characters/Beast3, Characters/RSVSummoner1, Characters/RSVtent, Characters/RSVcampfire, Characters/RSVbunny1, Characters/RSVCart1, Characters/RSVCart2, Characters/RSVYsaDance, Characters/RSVMach, Characters/RSVDog, Characters/RSVSurprise, Characters/RSVBonfireLeft, Characters/RSVBonfireRight, Characters/RSVCableCar, Characters/RSVTemp1, Characters/RSVTemp2, Characters/RSVViperial, Characters/RSVDish, Characters/RSVGrandma, Characters/RSVBlairFish, Characters/RSVAntonFix, Characters/RSVProtest, Characters/RSVBreadHouse",
 		"FromFile": "Assets/EventFiles/{{TargetWithoutPath}}.png",
 	},
 
@@ -68,6 +51,12 @@
 	    	"SummitEvent_Dialogue3_Kiarra": "{{i18n:Kiarra.summit.1}}\"/faceDirection farmer 1/pause 300/faceDirection Kiarra 3/pause 400/speak Kiarra \"{{i18n:Kiarra.summit.2}}",
 
 	    	"SummitEvent_Dialogue3_Sean": "{{i18n:Sean.summit.1}}\"/faceDirection farmer 1/pause 300/faceDirection Sean 3/pause 400/speak Sean \"{{i18n:Sean.summit.2}}",
+
+	    	"SummitEvent_Dialogue3_Blair": "{{i18n:Blair.summit.1}}\"/faceDirection farmer 1/pause 300/faceDirection Blair 3/pause 400/speak Blair \"{{i18n:Blair.summit.2}}",
+
+	    	"SummitEvent_Dialogue3_Paula": "{{i18n:Paula.summit.1}}\"/faceDirection farmer 1/pause 300/faceDirection Paula 3/pause 400/speak Paula \"{{i18n:Paula.summit.2}}",
+
+	    	"SummitEvent_Dialogue3_Anton": "{{i18n:Anton.summit.1}}\"/faceDirection farmer 1/pause 300/faceDirection Anton 3/pause 400/speak Anton \"{{i18n:Anton.summit.2}}",
 			}
 	},
 

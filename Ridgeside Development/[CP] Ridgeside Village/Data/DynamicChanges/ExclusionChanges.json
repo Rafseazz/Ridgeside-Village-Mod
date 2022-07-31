@@ -5,13 +5,145 @@
 		** Exclusion Changes
 		*********/
 			/*********
-			** Full Festivals
+			** RSV Attend Festivals
 			*********/
 			{
 				"Action": "EditData",
 				"Target": "Data/CustomNPCExclusions",
 				"TextOperations":
 				[
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ian"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Jeric"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Kenneth"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Philip"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Shiro"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Alissa"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Corine"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Flor"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Maddie"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ysabelle"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Aguar"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Bert"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Ezekiel"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Freddie"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Keahi"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Lenny"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Lola"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Olga"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Pika"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Richard"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Trinnie"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
+					{
+						"Operation": "Append",
+						"Target": ["Entries", "Yuuma"],
+						"Value": "WinterStar",
+						"Delimiter": " "
+					},
 					{
 						"Operation": "Append",
 						"Target": ["Entries", "Anton"],
@@ -97,7 +229,7 @@
 						"Delimiter": " "
 					},
 				],
-				"When": { "FullFestivals": false },
+				"When": { "RSVNPCSAttendFestivals": false },
 			},
 
 			/*********

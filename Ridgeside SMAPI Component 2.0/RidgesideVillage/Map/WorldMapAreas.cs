@@ -41,18 +41,22 @@ namespace RidgesideVillage
             }
 
             NPCMarkers = new List<NPCMarker>();
-            foreach(var npc in Utility.getAllCharacters())
+            if (ModEntry.Config.ShowVillagersOnMap)
             {
-                if (npc.CanSocialize && Areas.TryGetValue(npc.currentLocation.Name, out MapArea currentArea))
+                foreach (var npc in Utility.getAllCharacters())
                 {
-                    int yOffset = 0;
-                    if (DataModel.DrawYOffsets.ContainsKey(npc.Name))
+                    if (npc.CanSocialize && Areas.TryGetValue(npc.currentLocation.Name, out MapArea currentArea))
                     {
-                        yOffset = DataModel.DrawYOffsets[npc.Name];
+                        int yOffset = 0;
+                        if (DataModel.DrawYOffsets.ContainsKey(npc.Name))
+                        {
+                            yOffset = DataModel.DrawYOffsets[npc.Name];
+                        }
+                        NPCMarkers.Add(new NPCMarker(npc, currentArea, yOffset));
                     }
-                    NPCMarkers.Add(new NPCMarker(npc, currentArea, yOffset));
                 }
             }
+           
         }
     }
 

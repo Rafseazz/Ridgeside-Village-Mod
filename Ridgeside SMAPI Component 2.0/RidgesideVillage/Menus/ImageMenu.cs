@@ -82,6 +82,14 @@ namespace RidgesideVillage
             }
             
         }
+
+
+        internal static void Open(Texture2D image, float scale)
+        {
+            Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * scale), (int)(image.Height * scale));
+            Game1.activeClickableMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image);
+        }
+
         internal ImageMenu(int x, int y, float scale, Texture2D image):base(x, y, (int) (image.Width * scale), (int) (image.Height * scale), true)
         {
             this.image = image;

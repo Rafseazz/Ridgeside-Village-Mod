@@ -98,5 +98,35 @@
 	"MovieInvitation": "{{i18n:Anton.Dialogue.MovieInvitation}}",
 		},
 	},
+
+//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Anton",
+   "When": {  	
+   	"Relationship:Anton": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts
+	"Mon8": "{{i18n:Anton.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Anton.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Anton.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Anton.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Anton.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Anton.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Anton.Dialogue.Sun8.dating}}",
+
+	//10 Hearts
+	"Mon10": "{{i18n:Anton.Dialogue.Mon10.dating}}",
+	"Tue10": "{{i18n:Anton.Dialogue.Tue10.dating}}",
+	"Wed10": "{{i18n:Anton.Dialogue.Wed10.dating}}",
+	"Thu10": "{{i18n:Anton.Dialogue.Thu10.dating}}",
+	"Fri10": "{{i18n:Anton.Dialogue.Fri10.dating}}",
+	"Sat10": "{{i18n:Anton.Dialogue.Sat10.dating}}",
+	"Sun10": "{{i18n:Anton.Dialogue.Sun10.dating}}",
+		},
+	},
 ]
 }

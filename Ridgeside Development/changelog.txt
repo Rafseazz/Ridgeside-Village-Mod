@@ -1,31 +1,107 @@
 RSV 2.2
 ------------------------------------------------------
 Fixes:
-Fixed Kiarra's 10 heart event not starting
+Fixed Kiarra's 10 heart event and Jio's 14 heart event not starting
 Fixed mixing pixels in Alissa's Flower dance sprites
 Fixed bug where Jio didn't have any breakup, dance reject, and divorce dialogue
-Fixed some layer issues in Lenny's Office
+Fixed some bugs with Undreya's dialogue
+Fixed bugs with Wedding Reception and Anniversary Events when custom farms are installed (Thanks shekurika!)
+Fixed bug where Statue of Endless Fortune would give Error Item for Blair and Carmen's birthdays
+Ember of Resolutions now ends at 12:30 so that the event doesn't repeat
+Fixed long loading times after Torts' secret event and completing Linked Fishes quest
+Foxbloom Offering now affects grown regrowing crops as well
+Fixed bug where some RSV NPCs can't be invited to the movies
+Fixed some graphical issues in Irene's beach portrait
+Fixed Bryle standing at bus all day
+Fixed fruit tree prices going up after befriending Kimpoi
 Bunch of dialogue fixes
-Fixed some bugs with Undreya's dialogues
+Fixed one of Undreya's hiding spots not being accessible
+Fixed missing movie dialogues for Kiwi
+Fixed dialogue bug in Malaya's 2 heart event
+Fixed Alissa's sprite bugging out if she sings in the RSV Gathering
+Fixed spouse patios replacing nearby tiles
+Fixed forage spawning in unreachable places
+Fixed a missing i18n entry for Tort's 2 heart event
 
 Additions:
-Added new sprites for Paula and Anton
-Added working animations for Sean and Ian
-Added more details about the history of Ridgeside Village in scroll displayed at the hotel
+Added Blair as a new marriage candidate
+Added Anton and Paula as unlockable marriage candidates
+Added new sprites for Paula, Anton, Sean, and Ian
+Added more details about the history of Ridgeside Village in scroll displayed at the hotel (by Orthorn)
 Added theme songs for Blair, Paula, and Anton in the Extra Music Addon
-Added new sprites for Blair and Carmen
-Added new sprites for Anton and Paula
-Added new portrait expressions for Blair and Carmen
+Added new sprites for Blair, Paula, Anton, and Carmen
+Added new portrait expressions for Blair, Paula, Anton, and Carmen
 Added new portrait expressions for Anton and Paula
-Added new heart events for Blair
-Added new heart events for Paula
-Added new heart events for Anton
+Added new heart events for Blair, Paula, Anton
 Added randomized dialogue for Corine and Ezekiel when they're at the Saloon
 Paula now finished unpacking after 4 heart event
 Added schedule change for Anton after 8 heart event
-Added spouse rooms for Blair, Paula, and Anton
-Added spouse patios for Blair, Paula, and Anton
+Added spouse rooms + patios for Blair, Paula, and Anton
 Added marriage schedules for Blair, Paula, and Anton
-Added wedding reception images for Blair, Paula, and Anton! By Hime
+Added wedding reception images for Blair, Paula, and Anton! (By Hime)
+Added romantic + marriage dialogue for Blair, Paula, and Anton (by mamaesh)
+Added Irene now changes to her work (chef) outfit when at work
+Added summit events for Blair, Paula, and Anton
+Added spouse dialogue during festivals for Kiarra, Sean, Paula, Blair, and Anton
+Added RSVRoad as a new map south of RSV when Walk To Desert Redux is installed
+Added new portrait emotions for Irene
+Added new portrait emotions for Faye
+Added config to enable/disable tourists at the hotel
+Added TONS of new hotel guest variations thanks to Airyn!
+Added 4 event exclusive secret NPCs
+Added 6 and 8 heart events for Ariah, Carmen, Sonny, Kimpoi, Malaya, Shanice, Lorenzo, Louie, Maive, and Naomi.
+Added random inspection dialogues for the hotel guests.
+Added 14 heart events for Kiarra, Sean, Blair, Anton, and Paula
+Added more attendies during the Wedding/Anniversary Reception Events
+Added Warp Network Icon for the Ridge. (Thanks to NoFogBob for the help!)
+Added drinking animations for Anton, Carmen, Ezekiel, Freddie, Kiarra, Kimpoi, Lenny, Lola, Lorenzo, Olga, Richard, and Shanice
+Added new areas for Pelican Town festivals to cater RSV NPCs. Disabled when RSVNPCSAttendFestivals is set to false
+Added SVE compatibility for new areas in Pelican Town festivals
+Added a recipe book in the Pastry shop, open on weekends
+Added a new shop during the Egg Festival 
+Added ExpandedFestivalMaps config option
+Added seasonal variants for the RSV World Map Icon
+Added RSV World map indicator if NPC/Players are in the Hike Trail, Ridge Forest, Ridge Pond, Log Cabin Event Hall, Mystic Falls, Hike Greenhouse, and Abandoned Hike House
+Added over 1000+ new lines of text and dialogue in the i18n files (I'm sorry translators)
+Added config option to enable/disable NPC tracking heads in RSV's world map
+Added cable car cutscene variant when player is riding their horse
 
 Changes:
+Optimized files to improve game load on startup with RSV installed and make compatible with mods that add events to the Adventurers' Guild
+Moved Shiro 1 tile to the left when he's practicing going up and down the stairs to give way for the farmer if they're riding a mount
+Removed debug lines from console
+Changed Ember of Resolutions background music to WinterMountain
+Moved WinterMountain.wav to main file
+Malaya and Kimpoi now appear in Alissa's 8 heart event
+Tweaked some events to give more clarity on event's theme.
+Taking a one hour bath after Keahi's prank removes the stink effect
+Quality Fertilizer now harder to get at Heaps
+Made more events skippable
+Changed Ariah's 4th portrait expression from blushing to shy smile
+Maddie's 10 heart event now won't trigger during winter
+EnableBetterBusStop is now true by default
+Changed Jeric's 8 heart event to trigger when visiting the Hike Trail
+Tweaked spouse patio placements to be more compatible with custom farms
+Wedding Receptions and Anniversary Reception will now start automatically to prevent missing them causing issues
+Increased ambient light at Birthday Surprise map
+Revamped Daniels Residence
+Revamped Akina Residence
+Daniels Residence now require 4 hearts with Ezekiel to enter
+Pickens Residence now require 4 hearts with Maddie to enter
+Akina Residence now require 4 hearts with Pika to enter
+Some dialogue tweaks
+Kimpoi's 4 heart event is now prevented to trigger during the winter
+Changed festival placements for RSV NPCs
+Changed Egg Festival dialogue for Philip, Keahi, Trinnie, Louie, Sean, and Blair
+Changed Spirit Eve dialogue for Kiarra
+Improved RSV World map to have consistent pixels scaled by 5, rather than the wonky old version which was scaled by 4.5
+Improved RSV World Map tracking
+Tweaked Alissa's potraits
+Tweaked some of Daia's over-flirty dialogues that were present pre-romance
+Lowered Iron bar and Gold bar requirements for Lenny's Minecart Repair Special Order by half.
+Gave Anton legs for his beach sprites
+
+Removed:
+Removed Custom NPC Fixes as a required mod
+Removed "FullFestivals" config setting
+Removed Quest Framework as a dependency

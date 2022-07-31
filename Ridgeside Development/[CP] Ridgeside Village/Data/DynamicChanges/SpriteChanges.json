@@ -41,6 +41,17 @@
 		},
 	},
 
+	{
+		"LogName": "Irene Chef Outfit Character",
+		"Action": "EditImage",
+		"Target": "Characters/Irene",
+		"FromFile": "Assets/Characters/Irene_Chef.png",
+		"Update": "OnLocationChange",
+		"When": {
+			"LocationName": "Custom_Ridgeside_PurpleMansion"
+		},
+	},
+
 
 
 ]

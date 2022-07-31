@@ -6,6 +6,7 @@ using StardewValley;
 using StardewValley.Objects;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
+using SpaceCore.Events;
 
 namespace RidgesideVillage
 {
@@ -38,7 +39,11 @@ namespace RidgesideVillage
             helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
-            
+            SpaceEvents.OnEventFinished += OnEventFinished;
+            //SpaceEvents.OnItemEaten += OnItemEaten;
+
+            helper.Events.Content.AssetRequested += OnAssetRequested;
+
             BgUtils.Initialize(this);
 
             TortsBackground.Initialize(this);
@@ -58,6 +63,8 @@ namespace RidgesideVillage
             SpiritRealm.Initialize(this);
 
             SpecialOrders.Initialize(this);
+
+            Questing.QuestController.Initialize(this);
 
             IanShop.Initialize(this);
 
@@ -81,11 +88,17 @@ namespace RidgesideVillage
 
             Foxbloom.Initialize(this);
 
+
             //not done (yet?)
             //new CliffBackground();
 
             Helper.ConsoleCommands.Add("LocationModData", "show ModData of given location", printLocationModData);
             Helper.ConsoleCommands.Add("remove_equipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
+        }
+
+        private void OnAssetRequested(object sender, AssetRequestedEventArgs e)
+        {
+            AssetManager.LoadEmptyJsons(e);
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
@@ -96,10 +109,10 @@ namespace RidgesideVillage
         private void forgetRepeatableEvents()
         {
             string path = PathUtilities.NormalizePath("assets/RepeatableEvents.json");
-            var data = Helper.Content.Load<Dictionary<string, List<int>>>(path);
-            if(data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
+            var data = Helper.ModContent.Load<Dictionary<string, List<int>>>(path);
+            if (data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
             {
-                foreach(var entry in repeatableEvents)
+                foreach (var entry in repeatableEvents)
                 {
                     Game1.player.eventsSeen.Remove(entry);
                 }
@@ -124,7 +137,7 @@ namespace RidgesideVillage
             GameLocation location = Game1.getLocationFromName(arg2[0]);
             if (location != null)
             {
-                foreach(var key in location.modData.Keys)
+                foreach (var key in location.modData.Keys)
                 {
                     Log.Info($"{key}: {location.modData[key]}");
                 }
@@ -187,13 +200,13 @@ namespace RidgesideVillage
             Game1.player.pantsItem.Value = null;
             Game1.player.UpdateClothing();
 
-            try { Game1.player.boots?.Value.onUnequip(); } catch {}
+            try { Game1.player.boots?.Value.onUnequip(); } catch { }
             Game1.player.boots.Value = null;
             Game1.player.changeShoeColor(12);
 
-            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
             Game1.player.leftRing.Value = null;
-            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch {}
+            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
             Game1.player.rightRing.Value = null;
 
             /*
@@ -234,7 +247,7 @@ namespace RidgesideVillage
                 //if player has NOT seen portal opening or HAS seen the cleansing event remove the fire quest
                 if (!Game1.player.eventsSeen.Contains(75160256) || Game1.player.eventsSeen.Contains(75160263))
                 {
-                    for (int i = 0; i<team.specialOrders.Count; i++)
+                    for (int i = 0; i < team.specialOrders.Count; i++)
                     {
                         if (team.specialOrders[i].questKey.Equals("RSV.UntimedSpecialOrder.SpiritRealmFlames"))
                         {
@@ -246,5 +259,48 @@ namespace RidgesideVillage
             }
         }
 
+        // Make it 12:30 AM after Ember of Resolutions event
+        private void OnEventFinished(object sender, EventArgs e)
+        {
+            Event current = Game1.CurrentEvent;
+#nullable enable
+            string? name = current.FestivalName;
+#nullable disable
+            //Log.Trace($"RSV: Current event festivalName is {name}");
+            if (name == "Ember of Resolutions")
+            {
+                try
+                {
+                    var festival = Helper.Reflection.GetField<Dictionary<string, string>>(current, "festivalData").GetValue()["file"];
+                    if (festival != null && festival.Equals("winter28"))
+                    {
+                        Game1.timeOfDayAfterFade = 2430;
+                        if (Game1.IsMasterGame)
+                        {
+                            foreach (GameLocation i in Game1.locations)
+                            {
+                                foreach (Vector2 position in new List<Vector2>(i.objects.Keys))
+                                {
+                                    // Since it's already set to 10 PM
+                                    if (i.objects[position].minutesElapsed(150, i))
+                                    {
+                                        i.objects.Remove(position);
+                                    }
+                                }
+                                if (i is Farm)
+                                {
+                                    (i as Farm).timeUpdate(150);
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Error($"RSV: Error at end of EoR festival:\n{ex}");
+                }
+            }
+            //Log.Trace("RSV: Done with OnEventFinished");
+        }
     }
 }
