@@ -16,7 +16,6 @@ namespace RidgesideVillage
 
         static IModHelper Helper;
 
-        static List<Tuple<int, float>> spawnProbabilities;
         static HashSet<Vector2> TrashCansTriggeredToday = new HashSet<Vector2>();
         internal static void Setup(IModHelper Helper)
         {

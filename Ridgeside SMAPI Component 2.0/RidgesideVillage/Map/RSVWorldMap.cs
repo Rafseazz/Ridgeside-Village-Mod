@@ -10,7 +10,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI.Utilities;
 using StardewModdingAPI.Events;
-using StardewValley.Menus;
 using Microsoft.Xna.Framework.Input;
 
 namespace RidgesideVillage
@@ -54,7 +53,7 @@ namespace RidgesideVillage
         {
             if (gameMenu is GameMenu menu)
             {
-                Texture2D image = Helper.Content.Load<Texture2D>(MapPath, ContentSource.GameContent);
+                Texture2D image = Helper.GameContent.Load<Texture2D>(MapPath);
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width), (int)(image.Height));
 
                 var mapMenu = new RSVWorldMap((int)topLeft.X, (int)topLeft.Y, image);

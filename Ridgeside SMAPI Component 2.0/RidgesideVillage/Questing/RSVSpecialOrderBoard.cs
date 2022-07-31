@@ -16,8 +16,6 @@ namespace RidgesideVillage.Questing
     internal class RSVSpecialOrderBoard : SpecialOrdersBoard
     {
 
-		static IModHelper Helper;
-		static IMonitor Monitor;
 		const string NINJABOARDNAME = "RSVNinjaSO";
 		const string RSVBOARDNAME = "RSVTownSO";
 		int timestampOpened;

@@ -13,7 +13,6 @@ namespace RidgesideVillage
         public static IJsonAssetsApi JA;
         public static IWearMoreRingsApi MR;
         public static ISpaceCoreApi SC;
-        public static IQuestFrameworkApi QF;
 
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
