@@ -187,18 +187,17 @@ namespace RidgesideVillage
         }
         private static void OpenIanMenu(string tileActionString = "")
         {
-            IanCounterMenu();
-            //should be fine now for non-host players, too
-
-
-            /*
-            if (Context.IsMainPlayer)
+            bool isSomeoneHere = UtilFunctions.IsSomeoneHere(9, 14, 1, 1);
+            if (isSomeoneHere)
             {
+                IanCounterMenu();
             }
             else
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("OnlyFarmOwner"));
-            }*/
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Closed"));
+            }
+            
+            
         }
         private static void IanCounterMenu()
         {

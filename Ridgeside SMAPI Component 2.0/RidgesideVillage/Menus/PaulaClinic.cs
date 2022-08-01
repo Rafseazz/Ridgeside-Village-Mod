@@ -30,7 +30,7 @@ namespace RidgesideVillage
 
         private static void OpenPaulaMenu(string tileActionString, Vector2 position)
         {
-            bool isSomeoneHere = IsSomeoneHere();
+            bool isSomeoneHere = UtilFunctions.IsSomeoneHere(14, 12, 3, 2);
             if (isSomeoneHere && (Game1.player.health < (Game1.player.maxHealth * 0.8) || Game1.player.stamina < (Game1.player.MaxStamina * 0.8)))
             {
                 ClinicChoices();
@@ -120,23 +120,6 @@ namespace RidgesideVillage
             }
         }
 
-        private static bool IsSomeoneHere()
-        {
-            NetCollection<NPC> characters = Game1.currentLocation.characters;
-
-            bool isSomeoneHere = false;
-            foreach(NPC character in characters)
-            {
-                //Tiles in Rectangle(14, 12, 3, 2) are behind the counter
-                Rectangle behindCounterArea = new Rectangle(14 * 64, 12 * 64, 3 * 64, 2 * 64);
-                string name = character.Name;
-                if (name == "Paula" || name == "Kiarra" || name == "Anton")
-                {
-                    isSomeoneHere = isSomeoneHere || behindCounterArea.Contains((int)character.Position.X, (int)character.Position.Y);
-                }
-            }
-            return isSomeoneHere;
-        }
     }
   
 }
