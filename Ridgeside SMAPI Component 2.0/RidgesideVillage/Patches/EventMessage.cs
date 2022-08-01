@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using StardewValley;
 using StardewModdingAPI.Events;
-using StardewValley;
 using Microsoft.Xna.Framework;
 using System.Reflection;
 using Microsoft.Xna.Framework.Graphics;
@@ -55,7 +54,10 @@ namespace RidgesideVillage
             string specialOrderKey = split[2];
             try
             {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(specialOrderKey, null));
+                if (!Game1.player.team.SpecialOrderActive(specialOrderKey))
+                {
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(specialOrderKey, null));
+                }
                 @event.CurrentCommand++;
                 @event.checkForNextCommand(location, time);
             }
@@ -80,7 +82,6 @@ namespace RidgesideVillage
                 @event.CurrentCommand++;
                 if(split.Length > 3)
                 {
-                    Log.Error("Go to next command");
                     @event.checkForNextCommand(location, time);
                 }
             }

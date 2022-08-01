@@ -30,7 +30,7 @@ namespace RidgesideVillage
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
-            sprite = Helper.Content.Load<Texture2D>("assets/Mistbloom.png");
+            sprite = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/Mistbloom.png"));
         }
         public BloomProjectile()
         {}
