@@ -25,7 +25,6 @@
 			"marriage_Fri": "1000 ArchaeologyHouse 17 14 2/1600 BusStop -1 23 3",
 			"marriage_spring_19": "a1200 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Ian:checkup_married\"/1330 Custom_Ridgeside_LogCabinHotelLobby 3 5 2 ian_clean/1500 Custom_Ridgeside_RSVCliff 29 8 1/1800 BusStop -1 23 3",
 			"marriage_winter_17": "1000 Mountain 42 11 1/1700 Beach 13 21 2/2200 BusStop -1 23 3",
-
 					},
 	},
 
@@ -57,16 +56,36 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Ian",
 		"Entries": {
-			"Mon": "0 Custom_Ridgeside_SummitFarm 11 41 2/610 Custom_Ridgeside_SummitFarm 11 42 2 ian_work/2600 Custom_Ridgeside_SummitFarm 11 41 2",
-			"Tue": "GOTO Mon",
-			"Wed": "GOTO Mon",
-			"Thu": "GOTO Mon",
-			"Fri": "GOTO Mon",
-			"Sat": "GOTO Mon",
-			"Sun": "GOTO Mon",
-			"rain": "GOTO Mon",
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 11 41 2/610 Custom_Ridgeside_SummitFarm 11 42 2 ian_work/2600 Custom_Ridgeside_SummitFarm 11 41 2",
 		},
 		"When": { "HasConversationTopic: hostPlayer": "RSV.HouseCT" },
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Ian",
+		"Entries": {
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 24 47 2/610 Custom_Ridgeside_SummitFarm 23 47 2 ian_dig/2600 Custom_Ridgeside_SummitFarm 24 47 2",
+		},
+		"When": { "HasConversationTopic: hostPlayer": "RSV.ClimateCT, RSV.SprinklerCT" },
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Ian",
+		"Entries": {
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 80 42 2/610 Custom_Ridgeside_SummitFarm 81 42 2 ian_work/2600 Custom_Ridgeside_SummitFarm 80 42 2",
+		},
+		"When": { "HasConversationTopic: hostPlayer": "RSV.OreCT" },
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Ian",
+		"Entries": {
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 9 39 2/610 Custom_Ridgeside_SummitFarm 10 39 2 ian_dig/2600 Custom_Ridgeside_SummitFarm 9 39 2",
+		},
+		"When": { "HasConversationTopic: hostPlayer": "RSV.ShedCT" },
 	},
 
 ]

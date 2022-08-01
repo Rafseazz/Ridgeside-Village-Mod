@@ -160,10 +160,23 @@
    "Action": "EditData",
    "Target": "Characters/Dialogue/Sean",
    "When": {
-   	"HasConversationTopic: hostPlayer": "RSV.HouseCT",
+   	"HasConversationTopic: hostPlayer": "RSV.ActiveConstruction",
+		"Query: ({{Day}} % 2) = 0": true
    },
    "Entries": {
-		 "Custom_Ridgeside_SummitFarm": "{{i18n:Sean.house_upgrade}}",
+		 "Custom_Ridgeside_SummitFarm": "{{i18n:Sean.construction.1}}",
+		},
+	},
+
+	{
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Sean",
+   "When": {
+   	"HasConversationTopic: hostPlayer": "RSV.ActiveConstruction",
+		"Query: ({{Day}} % 2) = 1": true
+   },
+   "Entries": {
+		 "Custom_Ridgeside_SummitFarm": "{{i18n:Sean.construction.2}}",
 		},
 	},
 ]

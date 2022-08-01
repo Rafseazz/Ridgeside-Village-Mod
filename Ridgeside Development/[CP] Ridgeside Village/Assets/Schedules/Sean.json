@@ -39,16 +39,36 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Sean",
 		"Entries": {
-			"Mon": "0 Custom_Ridgeside_SummitFarm 17 47 3/610 Custom_Ridgeside_SummitFarm 16 47 2 sean_work/2600 Custom_Ridgeside_SummitFarm 17 47 2",
-			"Tue": "GOTO Mon",
-			"Wed": "GOTO Mon",
-			"Thu": "GOTO Mon",
-			"Fri": "GOTO Mon",
-			"Sat": "GOTO Mon",
-			"Sun": "GOTO Mon",
-			"rain": "GOTO Mon",
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 17 47 3/610 Custom_Ridgeside_SummitFarm 16 47 2 sean_work/2600 Custom_Ridgeside_SummitFarm 17 47 2",
 		},
 		"When": { "HasConversationTopic: hostPlayer": "RSV.HouseCT" },
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Sean",
+		"Entries": {
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 21 47 2/610 Custom_Ridgeside_SummitFarm 22 47 2 sean_blueprint/2600 Custom_Ridgeside_SummitFarm 21 47 2",
+		},
+		"When": { "HasConversationTopic: hostPlayer": "RSV.ClimateCT, RSV.SprinklerCT" },
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Sean",
+		"Entries": {
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 81 40 2/610 Custom_Ridgeside_SummitFarm 80 40 2 sean_blueprint/2600 Custom_Ridgeside_SummitFarm 81 40 2",
+		},
+		"When": { "HasConversationTopic: hostPlayer": "RSV.OreCT" },
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Sean",
+		"Entries": {
+			"{{Season}}_{{Day}}": "0 Custom_Ridgeside_SummitFarm 9 43 2/610 Custom_Ridgeside_SummitFarm 9 44 2 sean_blueprint/2600 Custom_Ridgeside_SummitFarm 9 43 2",
+		},
+		"When": { "HasConversationTopic: hostPlayer": "RSV.ShedCT" },
 	},
 
 ]
