@@ -733,6 +733,17 @@
 					   "IdleBehavior": "Wander",
 					   "FrameSizeWidth": 16,
 					   "FrameSizeHeight": 32,
+						 "Portrait": {
+							 "FrameSizeWidth": 64,
+							 "FrameSizeHeight": 64,
+						 },
+						 "DialogueSequence": [
+					     {
+					       "Text": "{{i18n:spiritfox.inspection.dialogue}} [{{spacechase0.JsonAssets/ObjectId:Old Lucky Foxtail Charm}}]",
+								 "PortraitIndex": 0,
+					       "DisplayOnce": true,
+					     },
+					   ],
 					   "DownAnimation": {
 					     "StartingFrame": 0,
 					     "NumberOfFrames": 4,

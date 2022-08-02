@@ -14,6 +14,11 @@
   "IdleBehavior": "Nothing", // Optional parameter, determines how the companion acts while idle | Options: [Nothing, Hover, Wander, Jumper]
   "FrameSizeWidth": 16, // Width of each frame / tile in pixels
   "FrameSizeHeight": 32, // Height of each frame / tile in pixels
+  "Portrait": {
+    "FrameSizeWidth": 64,
+    "FrameSizeHeight": 64,
+  },
+
   "DownAnimation": {
     "StartingFrame": 32,
     "NumberOfFrames": 4,
