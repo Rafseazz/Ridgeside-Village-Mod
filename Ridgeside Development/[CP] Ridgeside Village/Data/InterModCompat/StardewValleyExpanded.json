@@ -274,39 +274,115 @@
 	/*********
 	** Stardew Valley Fair
 	*********/
-	{
-		"Action": "EditData",
-		"Target": "Data/Festivals/fall16",
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true},
-		"TextOperations":
-		[
-			//SetUp
-   			{
-   				"Operation": "Append",
-   				"Target": ["Entries", "Set-Up_additionalCharacters"],
-   				"Value": "Aguar 45 63 up/Alissa 33 66 right/Bert 14 53 up/Corine 18 65 right/Ezekiel 24 56 right/Flor 27 76 left/Freddie 20 27 down/Ian 54 75 down/Jeric 11 62 right/Keahi 36 78 up/Kenneth 22 49 up/Lenny 27 53 down/Lola 21 27 down/Maddie 24 29 up/Olga 27 60 right/Philip 24 65 up/Pika 25 23 up/Richard 23 53 down/Shiro 23 65 up/Trinnie 15 53 up/Ysabelle 19 64 down/Yuuma 34 77 right",
-   				"Delimiter": "/"
-   			},
-		]
-	},
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall16",
+        "When": {
+            "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "ExpandedFestivalMaps": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Aguar 13 37 right/Alissa 28 14 up/Bert 23 19 right/Corine 23 13 down/Ezekiel 26 14 down/Flor 16 22 left/Freddie 27 16 right/Ian 14 35 right/Jeric 13 23 down/Keahi 12 24 right/Kenneth 24 15 up/Lenny 33 18 left/Lola 28 16 left/Maddie 13 19 down/Olga 24 19 left/Philip 21 15 right/Pika 18 12 up/Richard 32 19 up/Shiro 21 18 left/Trinnie 14 26 up/Ysabelle 22 13 down/Yuuma 20 19 up/Kimpoi 25 17 left/Malaya 25 18 left/Sonny 31 16 down/Louie 16 26 left/Maive 32 16 down/Ariah 36 19 left/Lorenzo 37 22 right/Shanice 39 22 down/Anton 17 17 left/Kiarra 39 26 left/Paula 16 16 down/Carmen 34 14 left/Blair 27 29 left/Sean 25 29 right/Faye 15 13 down/Irene 37 26 right",
+                "Delimiter": "/"
+            },
 
-	{
-			//Jio and Kiwi
-			"Action": "EditData",
-			"Target": "Data/Festivals/fall16",
-			"When": {
-					"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
-					"HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
-					"HasSeenEvent: anyPlayer|contains=75160188": true,
-			},
-			"TextOperations": [
-					{
-							"Operation": "Append",
-							"Target": ["Entries", "Set-Up_additionalCharacters"],
-							"Value": "Jio 37 10 down/Kiwi 38 10 down",
-							"Delimiter": "/"
-					},
-			]
+            //Animations
+            {
+             "Operation": "Append",
+             "Target": ["Fields", "set-up", 5],
+             "Value": "/addTemporaryActor RSVBoyOnTurbo 32 32 7 23 2 false/advancedMove RSVBoyOnTurbo true 2 0 1 3000 0 2 2 4300 -1 0 3 3000 2 0 1 4600 0 -2 4 2800 -3 0 3 3100/animate Bert true true 150 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 18 18 18 19 18 18 18 19 18 18 18 17 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 18 18 18 19 18 18 17 16 16 16 16 16 16 16 16 16 16 16 16/advancedMove Corine true 1 0 2 5600 -1 0 2 2300 1 0 2 3100 -1 0 2 8600/animate Ezekiel false true 150 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 19 19 18 19 19 19 18 19 19 19 18 19 18 17 16 16 16 16 16 16/animate Ian true 150 20 20 20 21 22 23 23 23 23 22 21 20 20 20 20 20 20 20 21 22 23 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20/advancedMove Keahi true 0 2 2 0 0 -2 -2 0/advancedMove Trinnie true 0 -2 -2 0 0 2 2 0/animate Kimpoi false true 150 20 21 22 22 22 22 21 20 20 20 20 20 20 20 20 20 20 20/animate Olga true true 150 17 17 17 17 17 17 18 19 19 19 19 18 19 19 19 19 18 19 18 17 17 17 17 17 17 17 17 18 19 19 19 18 17 17 17 17 17 17 17 17 17/animate Philip false true 200 16 16 16 16 16 16 16 16 16 16 16 17 18 16 16 16 16 16 16 16 16 16 16 16 17 18 16 16 16 16 16/advancedMove Pika true 2 0 4 7100 -2 0 4 5800 1 0 2 3400 -1 0 4 4700/animate Ariah false true 200 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 18/animate Shanice false true 200 20 20 20 21 21 20 20 20 21 21 20 20 20 21 22 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 23 22 21/animate Anton false true 150 20 20 20 20 20 21 22 21 22 22 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 22 22 22 22 22 21 20 20/animate Paula false true 200 24 24 24 24 24 26 26 24 24 29 30 31 31 31 30 30 30 31 31 31 30 30 30 29 24 24 24/animate Faye false true 180 16 17 18 17",
+            },
+        ]
+    },
+
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall16",
+        "When": {
+            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "ExpandedFestivalMaps": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 19 16 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall16",
+        "When": {
+            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "ExpandedFestivalMaps": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 11 15 right",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+		{
+        //Jio and Kiwi
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall16",
+        "When": {
+						"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+                        "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
+						"HasSeenEvent: anyPlayer|contains=75160188": true,
+                        "ExpandedFestivalMaps": true
+            },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 9 16 right/Kiwi 10 14 down",
+                "Delimiter": "/"
+            },
+
+            //Animations
+            {
+             "Operation": "Append",
+             "Target": ["Fields", "set-up", 5],
+             "Value": "/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16",
+            },
+        ]
+    },
+
+    //Torts
+    {
+      "LogName": "Torts SDV Fair Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Torts 19 19 up",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
+    {
+		"Action": "EditMap",
+		"Target": "Maps/Town-Fair",
+		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Fair.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 40, "Height": 37 },
+		"ToArea": { "X": 0, "Y": 0, "Width": 40, "Height": 37 },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+		"PatchMode": "ReplaceByLayer",
 	},
 
 	/*********
