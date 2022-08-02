@@ -61,9 +61,9 @@
 		"When": {
 			"Weather": "Sun, Wind",
 			"Time": "{{Range: 2300, 2550}}",
-			"HasSeenEvent: hostPlayer |contains=75160182": false,
+			//"HasSeenEvent: hostPlayer |contains=75160182": false,
 			// Host player has not yet met Undreya but has seen Pipo and Acorn's event
-			//"HasSeenEvent: hostPlayer |contains=75160384": true
+			"HasSeenEvent: hostPlayer |contains=75160384": true
 		},
 		"Update": "OnLocationChange, OnTimeChange"
 	},
@@ -84,8 +84,8 @@
 		"When": {
 			"Weather": "Sun, Wind",
 			"Time": "{{Range: 2300, 2550}}",
-			"HasSeenEvent: hostPlayer |contains=75160181": false,
-			//"HasSeenEvent: hostPlayer |contains=75160384": true
+			//"HasSeenEvent: hostPlayer |contains=75160181": false,
+			"HasSeenEvent: hostPlayer |contains=75160384": true
 		},
 		"Update": "OnLocationChange, OnTimeChange"
 	},
@@ -104,8 +104,8 @@
 		"When": {
 			"Time": "{{Range: 2300, 2550}}",
 			"Weather": "Sun, Wind",
-			"HasSeenEvent: hostPlayer |contains=75160181": true,
-			//"HasSeenEvent: hostPlayer |contains=75160384": true
+			//"HasSeenEvent: hostPlayer |contains=75160181": true,
+			"HasSeenEvent: hostPlayer |contains=75160384": true
 		},
 		"Update": "OnLocationChange, OnTimeChange"
     },
@@ -118,9 +118,9 @@
 		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
 		"When": {
 			"Time": "{{Range: 2300, 2550}}",
-			"HasSeenEvent: hostPlayer |contains=75160181": true,
-			"HasSeenEvent: hostPlayer |contains=75160182": false,
-			//"HasSeenEvent: hostPlayer |contains=75160182, 75160385": false,
+			//"HasSeenEvent: hostPlayer |contains=75160181": true,
+			//"HasSeenEvent: hostPlayer |contains=75160182": false,
+			"HasSeenEvent: hostPlayer |contains=75160182, 75160385": false,
 		},
 		"Update": "OnLocationChange, OnTimeChange"
 	},
@@ -131,8 +131,8 @@
 		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
 		"FromFile": "Assets/Maps/EventMaps/UndreyaUnlock.tmx",
 		"ToArea": { "X": 60, "Y": 41, "Width": 1, "Height": 2 },
-		"When": { "HasSeenEvent: hostPlayer |contains=75160182": true },
-		//"When": { "HasSeenEvent: hostPlayer |contains=75160182, 75160385": true },
+		//"When": { "HasSeenEvent: hostPlayer |contains=75160182": true },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160182, 75160385": true },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
 	//Undreya calendar
@@ -143,8 +143,8 @@
 		"FromFile": "Assets/Maps/EventMaps/RSVAbandonedHouse_Sched.tmx",
 		"ToArea": { "X": 2, "Y": 3, "Width": 1, "Height": 2 },
 		"PatchMode": "Replace",
-		"When": { "HasSeenEvent: hostPlayer |contains=75160273": true },
-		//"When": { "HasSeenEvent: hostPlayer |contains=75160273, 75160386": true },
+		//"When": { "HasSeenEvent: hostPlayer |contains=75160273": true },
+		"When": { "HasSeenEvent: hostPlayer |contains=75160273, 75160386": true },
 		"Update": "OnLocationChange"
 	},
 
