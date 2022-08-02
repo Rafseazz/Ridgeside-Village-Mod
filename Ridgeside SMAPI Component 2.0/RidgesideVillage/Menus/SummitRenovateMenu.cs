@@ -85,6 +85,8 @@ namespace RidgesideVillage
 
 		private string buildingName;
 
+		Texture2D buildingImage;
+
 		private List<Item> ingredients = new List<Item>();
 
 		private int price;
@@ -291,6 +293,7 @@ namespace RidgesideVillage
 			}
 			buildingDescription = currentBuilding.description;
 			buildingName = currentBuilding.displayName;
+			buildingImage = Helper.ModContent.Load<Texture2D>($"assets/{CurrentBlueprint.name}.png");
 		}
 
 		/*
@@ -737,14 +740,17 @@ namespace RidgesideVillage
 		{
 			exitThisMenu();
 			Game1.player.forceCanMove();
-			string dialoguePath = Helper.Translation.Get("IanShop.Construction");
+			NPC sean = Game1.getCharacterFromName("Sean");
+			sean.CurrentDialogue.Clear();
 			if (CurrentBlueprint.daysToConstruct <= 0)
 			{
-				Game1.drawDialogue(Game1.getCharacterFromName("Sean"), Game1.content.LoadString("Data\\ExtraDialogue:Robin_Instant", (LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.de) ? CurrentBlueprint.displayName : CurrentBlueprint.displayName.ToLower()));
-				return;
+				sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Instant", new { project = buildingName }), sean));
 			}
-			Game1.drawDialogue(Game1.getCharacterFromName("Sean"), Game1.content.LoadString(dialoguePath, (LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.de) ? CurrentBlueprint.displayName : CurrentBlueprint.displayName.ToLower(), (LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.de) ? CurrentBlueprint.displayName.Split(' ').Last().Split('-')
-				.Last() : ((LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.pt || LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.es || LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.it) ? CurrentBlueprint.displayName.ToLower().Split(' ').First() : CurrentBlueprint.displayName.ToLower().Split(' ').Last())));
+            else
+            {
+				sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Construction", new { project = buildingName }), sean));
+			}
+			Game1.drawDialogue(sean);
 		}
 
 		
@@ -826,8 +832,7 @@ namespace RidgesideVillage
 			{
 				base.draw(b);
 				drawTextureBox(b, xPositionOnScreen - 96, yPositionOnScreen - 16, maxWidthOfBuildingViewer + 64, maxHeightOfBuildingViewer + 64, Color.White);
-				Texture2D currentImage = Helper.ModContent.Load<Texture2D>($"assets/{CurrentBlueprint.name}.png");
-				b.Draw(currentImage, new Vector2(xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWidth * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.sourceRectForMenuView.Height * 4 / 2), currentBuilding.sourceRectForMenuView, Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
+				b.Draw(buildingImage, new Vector2(xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWidth * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.sourceRectForMenuView.Height * 4 / 2), currentBuilding.sourceRectForMenuView, Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
 				//currentBuilding.drawInMenu(b, xPositionOnScreen + maxWidthOfBuildingViewer / 2 - currentBuilding.tilesWide.Value * 64 / 2 - 64, yPositionOnScreen + maxHeightOfBuildingViewer / 2 - currentBuilding.getSourceRectForMenu().Height * 4 / 2);
 				/*if (this.CurrentBlueprint.isUpgrade())
 				{

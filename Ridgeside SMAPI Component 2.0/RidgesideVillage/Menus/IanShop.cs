@@ -53,7 +53,7 @@ namespace RidgesideVillage
         [EventPriority(EventPriority.High)]
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT) && !Game1.MasterPlayer.mailReceived.Contains(HOUSEUPGRADED);
+            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT);
 
             if (Game1.IsMasterGame)
             {
@@ -187,7 +187,7 @@ namespace RidgesideVillage
         }
         private static void OpenIanMenu(string tileActionString = "")
         {
-            bool isSomeoneHere = UtilFunctions.IsSomeoneHere(9, 14, 1, 1);
+            bool isSomeoneHere = UtilFunctions.IsSomeoneHere(8, 13, 2, 2);
             if (isSomeoneHere)
             {
                 IanCounterMenu();
