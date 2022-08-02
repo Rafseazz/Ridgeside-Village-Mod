@@ -46,6 +46,7 @@ namespace RidgesideVillage.Questing
 			TileActionHandler.RegisterTileAction("RSVSpecialOrderBoard", OpenSOBoard);
 			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true));
 			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => QuestController.PrintQuestState());
+			Helper.ConsoleCommands.Add("RSVCheckQuests", "", (s1,s2) => QuestController.CheckQuests());
 			Helper.Events.GameLoop.DayStarted += OnDayStarted;
 			Helper.Events.Player.Warped += OnWarped;
 			Helper.Events.Display.RenderedWorld += RenderQuestMarkersIfNeeded;
@@ -53,7 +54,27 @@ namespace RidgesideVillage.Questing
 			Helper.Events.GameLoop.DayEnding += OnDayEnding;
 		}
 
-		static void PrintQuestState()
+        private static void CheckQuests()
+        {
+			var questData = Helper.GameContent.Load<Dictionary<int, string>>(PathUtilities.NormalizeAssetName("Data/Quests"));
+			foreach(var key in questData.Keys)
+            {
+                try
+                {
+					Log.Debug($"Checking {key}");
+					Quest.getQuestFromId(key);
+
+				}
+                catch(Exception e)
+                {
+					Log.Error($"Failed for quest ID {key}. Stacktrace in Trace");
+					Log.Trace(e.Message);
+					Log.Trace(e.StackTrace);
+                }
+            }
+        }
+
+        static void PrintQuestState()
         {
 			foreach(var data in dailyQuestData.GetActiveValues())
             {
