@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="2237">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="6" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="2237">
  <properties>
   <property name="Arch" value="111 .01 113 .009"/>
   <property name="Debris" value="8 .01 3"/>
@@ -2233,8 +2233,9 @@
    </animation>
   </tile>
  </tileset>
- <layer id="1" name="Back" width="1" height="5">
+ <layer id="1" name="Back" width="1" height="6">
   <data encoding="csv">
+403,
 276,
 176,
 176,
@@ -2243,11 +2244,12 @@
 </data>
  </layer>
  <objectgroup id="6" name="Back"/>
- <layer id="11" name="Back2" width="1" height="5">
+ <layer id="11" name="Back2" width="1" height="6">
   <properties>
    <property name="Draw" value="Back"/>
   </properties>
   <data encoding="csv">
+0,
 255,
 338,
 338,
@@ -2255,8 +2257,9 @@
 338
 </data>
  </layer>
- <layer id="2" name="Buildings" width="1" height="5">
+ <layer id="2" name="Buildings" width="1" height="6">
   <data encoding="csv">
+0,
 0,
 0,
 0,
@@ -2264,7 +2267,7 @@
 0
 </data>
  </layer>
- <layer id="14" name="Buildings2" width="1" height="5">
+ <layer id="14" name="Buildings2" width="1" height="6">
   <properties>
    <property name="Draw" value="Buildings"/>
   </properties>
@@ -2273,12 +2276,14 @@
 0,
 0,
 0,
+0,
 0
 </data>
  </layer>
  <objectgroup id="7" name="Buildings"/>
- <layer id="3" name="Paths" width="1" height="5">
+ <layer id="3" name="Paths" width="1" height="6">
   <data encoding="csv">
+0,
 0,
 0,
 0,
@@ -2287,8 +2292,9 @@
 </data>
  </layer>
  <objectgroup id="8" name="Paths"/>
- <layer id="4" name="Front" width="1" height="5">
+ <layer id="4" name="Front" width="1" height="6">
   <data encoding="csv">
+0,
 0,
 0,
 0,
@@ -2297,8 +2303,9 @@
 </data>
  </layer>
  <objectgroup id="9" name="Front"/>
- <layer id="5" name="AlwaysFront" width="1" height="5">
+ <layer id="5" name="AlwaysFront" width="1" height="6">
   <data encoding="csv">
+0,
 0,
 0,
 0,
