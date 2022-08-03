@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI.Utilities;
+using Netcode;
 
 namespace RidgesideVillage
 {
@@ -151,6 +152,20 @@ namespace RidgesideVillage
                     return Game1.weather_debris;
             }
             return Game1.weather_sunny;
+        }
+
+        public static bool IsSomeoneHere(int x, int y, int w, int h)
+        {
+            NetCollection<NPC> characters = Game1.currentLocation.characters;
+
+            bool isSomeoneHere = false;
+            foreach (NPC character in characters)
+            {
+                //Tiles in Rectangle(14, 12, 3, 2) are behind the counter
+                Rectangle behindCounterArea = new Rectangle(x * 64, y * 64, w * 64, h * 64);
+                isSomeoneHere = isSomeoneHere || behindCounterArea.Contains((int)character.Position.X, (int)character.Position.Y);
+            }
+            return isSomeoneHere;
         }
     }  
 

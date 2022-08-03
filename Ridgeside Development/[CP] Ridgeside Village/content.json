@@ -997,7 +997,14 @@
 			"Name": "Custom_Ridgeside_RSVSummitHouse",
 			"FromMapFile": "Assets/Maps/IndoorMaps/RSVSummitHouse.tmx",
 		},
-
+		{
+			"Name": "Custom_Ridgeside_RSVSummitHouseNew",
+			"FromMapFile": "Assets/Maps/IndoorMaps/RSVSummitHouse_redone.tmx",
+		},
+		{
+			"Name": "Custom_Ridgeside_RSVSummitShed",
+			"FromMapFile": "Assets/Maps/IndoorMaps/RSVShed.tmx",
+		},
 
 		/*********
 		** QuestMaps
@@ -1210,12 +1217,12 @@
 
 	//Includes Extras
 	/*
-		Includes all data that concerns Extras, that includes: Obelisks,
+		Includes all data that concerns Extras
 	*/
 	{
 		"LogName": "Include Obelisk",
    		"Action": "Include",
-   		"FromFile": "Data/Extras/Obelisks.json",
+   		"FromFile": "Data/Extras/Buildings.json",
   },
   {
 		"LogName": "Include RSVMap",

@@ -18,7 +18,7 @@ namespace RidgesideVillage
     internal static class SummitFarm
     {
         private static IModHelper Helper { get; set; }
-        const string SUMMITFARM = "Custom_Ridgeside_SummitFarm";
+        public const string SUMMITFARM = "Custom_Ridgeside_SummitFarm";
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -34,18 +34,30 @@ namespace RidgesideVillage
             );
             /*
             harmony.Patch(
+               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.loadLights)),
+               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
+           );
+            harmony.Patch(
+               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.setUpLocationSpecificFlair)),
+               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
+           );
+            */
+            harmony.Patch(
+               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlaceThisFurnitureHere)),
+               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_CanPlaceThisFurnitureHere_Prefix))
+           );
+            harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), "resetSharedState"),
-                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SummitHouse_Postfix))
+                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_SetUpKitchen_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.loadMap)),
-                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SummitHouse_Postfix))
+                postfix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_SetUpKitchen_Postfix))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.draw)),
                 postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_draw_Postfix))
             );
-            */
         }
 
         private static void GameLocation_CanPlanTreesHere_Postfix(ref GameLocation __instance, int sapling_index, int tile_x, int tile_y, ref bool __result)
@@ -84,7 +96,30 @@ namespace RidgesideVillage
             }
         }
 
-        private static void GameLocation_SummitHouse_Postfix(ref GameLocation __instance)
+        private static bool SummitHouse_NoAmbientLight_Prefix(ref GameLocation __instance)
+        {
+            if (__instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE.Split("New")[0]) // Old Summit House
+            {
+                if (Game1.isDarkOut())
+                {
+                    Game1.ambientLight = new Color(180, 180, 0, 255);
+                }
+                return false;
+            }
+            return true;
+        }
+
+        private static bool GameLocation_CanPlaceThisFurnitureHere_Prefix(ref GameLocation __instance, StardewValley.Objects.Furniture furniture, ref bool __result)
+        {
+            if (furniture.furniture_type.Value == 15 && __instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
+            {
+                __result = true;
+                return false;
+            }
+            return true;    
+        }
+
+        private static void SummitHouse_SetUpKitchen_Postfix(ref GameLocation __instance)
         {
             if (__instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
                 SummitHouse.SetUpKitchen(__instance);
@@ -95,7 +130,7 @@ namespace RidgesideVillage
             if (__instance.NameOrUniqueName != SUMMITFARM)
                 return;
 
-            if (!Game1.MasterPlayer.mailReceived.Contains(SummitHouse.KITCHENFLAG))
+            if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.HOUSEUPGRADED))
                 return;
 
             if (Game1.mailbox.Count > 0)

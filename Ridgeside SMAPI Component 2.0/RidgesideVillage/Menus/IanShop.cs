@@ -31,7 +31,11 @@ namespace RidgesideVillage
         const int perAnimalPrice = 60;
 
         const int UNLOCKEVENT = 75160387;
-        public const string FARMUPGRADED = "RSV.SummitFarmRedone";
+        public const string HOUSEUPGRADED = "RSV.SummitHouseRedone";
+        public const string CLIMATECONTROLLED = "RSV.ClimateControlled";
+        public const string GOTSPRINKLERS = "RSV.SummitSprinklers";
+        public const string OREAREAOPENED = "RSV.SummitOreArea";
+        public const string SHEDADDED = "RSV.ShedAdded";
         const string MINECARTSFIXED = "RSV.FixedMinecart";
         private static bool canRenovate = false;
 
@@ -46,12 +50,14 @@ namespace RidgesideVillage
             TileActionHandler.RegisterTileAction("IanCounter", OpenIanMenu);
         }
 
+        [EventPriority(EventPriority.High)]
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT) && !Game1.MasterPlayer.mailReceived.Contains(FARMUPGRADED);
+            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT);
 
             if (Game1.IsMasterGame)
             {
+                // Farming services
                 var FarmModData = Game1.getFarm().modData;
 
                 if (FarmModData.ContainsKey(willFixFences))
@@ -80,6 +86,44 @@ namespace RidgesideVillage
                     Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasPetAnimals"), HUDMessage.newQuest_type));
                 }
                 Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
+
+                // Construction services
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int housect) && housect == 0)
+                {
+                    Game1.player.mailReceived.Add(HOUSEUPGRADED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.HOUSETOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int climatect) && climatect == 0)
+                {
+                    Game1.getLocationFromName(SummitFarm.SUMMITFARM).isGreenhouse.Value = true;
+                    Game1.player.mailReceived.Add(CLIMATECONTROLLED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.CLIMATETOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.SPRINKLERTOPIC, out int sprinklerct) && sprinklerct == 0)
+                {
+                    Game1.player.mailReceived.Add(GOTSPRINKLERS);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.SPRINKLERTOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.ORETOPIC, out int orect) && orect == 0)
+                {
+                    Game1.player.mailReceived.Add(OREAREAOPENED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ORETOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.SHEDTOPIC, out int shedct) && shedct == 0)
+                {
+                    Game1.player.mailReceived.Add(SHEDADDED);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.SHEDTOPIC);
+                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                }
+
+                if (Game1.player.mailReceived.Contains(GOTSPRINKLERS))
+                {
+                    WaterThePlants(Game1.getLocationFromName(SummitFarm.SUMMITFARM), 9999);
+                }
             }
         }
 
@@ -132,7 +176,7 @@ namespace RidgesideVillage
                     farmModData[willWaterPlants] = $"{wateringDaysLeft}/{numberOfTiles}";
 
                 }
-                WaterThePlants(numberOfTiles);
+                WaterThePlants(Game1.getFarm(), numberOfTiles);
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
             }
         }
@@ -143,18 +187,17 @@ namespace RidgesideVillage
         }
         private static void OpenIanMenu(string tileActionString = "")
         {
-            IanCounterMenu();
-            //should be fine now for non-host players, too
-
-
-            /*
-            if (Context.IsMainPlayer)
+            bool isSomeoneHere = UtilFunctions.IsSomeoneHere(8, 13, 2, 2);
+            if (isSomeoneHere)
             {
+                IanCounterMenu();
             }
             else
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("OnlyFarmOwner"));
-            }*/
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Closed"));
+            }
+            
+            
         }
         private static void IanCounterMenu()
         {
@@ -302,12 +345,13 @@ namespace RidgesideVillage
             }
         }
 
-        internal static void WaterThePlants(int maxNumberToWater)
+        internal static void WaterThePlants(GameLocation location, int maxNumberToWater)
         {
             int n = 0;
-            foreach (var pair in Game1.getFarm().terrainFeatures.Pairs)
+            int farm_size = location.terrainFeatures.Pairs.Count();
+            foreach (var pair in location.terrainFeatures.Pairs)
             {
-                if(n >= maxNumberToWater)
+                if(n >= maxNumberToWater || n >= farm_size)
                 {
                     break;
                 }
@@ -383,6 +427,13 @@ namespace RidgesideVillage
                 NPC sean = Game1.getCharacterFromName("Sean");
                 sean.CurrentDialogue.Clear();
                 sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), sean));
+                Game1.drawDialogue(sean);
+            }
+            else if (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.ACTIVECONSTRUCTION, out int value) && value > 0)
+            {
+                NPC sean = Game1.getCharacterFromName("Sean");
+                sean.CurrentDialogue.Clear();
+                sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AlreadyBuilding"), sean));
                 Game1.drawDialogue(sean);
             }
             else

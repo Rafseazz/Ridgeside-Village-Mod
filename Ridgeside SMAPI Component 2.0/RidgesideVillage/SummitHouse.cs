@@ -8,8 +8,10 @@ using System.Xml.Serialization;
 using StardewValley;
 using StardewValley.Objects;
 using StardewModdingAPI.Events;
+using StardewModdingAPI.Enums;
 using Microsoft.Xna.Framework;
 using StardewValley.Menus;
+using StardewValley.Locations;
 using StardewModdingAPI.Utilities;
 using xTile.Tiles;
 
@@ -24,8 +26,8 @@ namespace RidgesideVillage
 		static IMonitor Monitor;
 
 		// Kitchen definitions
-		public const string SUMMITHOUSE = "Custom_Ridgeside_RSVSummitHouse";
-		public const string KITCHENFLAG = "RSV.SummitFarmRedone";
+		public const string SUMMITHOUSE = "Custom_Ridgeside_RSVSummitHouseNew";
+		public const string SUMMITSHED = "Custom_Ridgeside_RSVSummitShed";
 
 		public static readonly Rectangle FridgeOpenedSpriteArea = new(32, 560, 16, 32);
 		public static readonly Vector2 FridgeChestPosition = new(6830);
@@ -44,8 +46,75 @@ namespace RidgesideVillage
 			Helper.Events.GameLoop.GameLaunched += GameLoop_GameLaunched;
 			Helper.Events.Input.ButtonPressed += Input_ButtonPressed;
 			Helper.Events.Display.MenuChanged += Display_MenuChanged;
+			Helper.Events.Specialized.LoadStageChanged += Specialized_LoadStageChanged;
+			Helper.Events.GameLoop.SaveLoaded += GameLoop_SaveLoaded;
 
 			// The Harmony patches are in SummitFarm bc it was already there
+		}
+
+		private static void GameLoop_SaveLoaded(object sender, SaveLoadedEventArgs args)
+        {
+			GameLocation house = Game1.getLocationFromName(SUMMITHOUSE);
+			try
+            {
+				if (house.modData["RSV.SummitHouseFurnished"] == "true")
+					return;
+			}
+			catch
+			{
+				house.modData["RSV.SummitHouseFurnished"] = "false";
+			}
+
+			house.furniture.Add(new Furniture(2742, new Vector2(1f, 5f))); // blossom rug
+			house.furniture.Add(new Furniture(1664, new Vector2(15f, 11f))); // mystic rug
+			house.furniture.Add(new Furniture(1614, new Vector2(2f, 1f))); // basic window
+			house.furniture.Add(new Furniture(1614, new Vector2(14f, 1f))); // basic window
+			house.furniture.Add(new Furniture(1614, new Vector2(17f, 1f))); // basic window
+
+			house.furniture.Add(new BedFurniture(BedFurniture.DOUBLE_BED_INDEX, new Vector2(1f, 4f))); // double bed
+			house.furniture.Add(new Furniture(1395, new Vector2(4f, 4f))); // birch end table
+			house.furniture.Add(new Furniture(1285, new Vector2(5f, 4f))); // luxury bookcase
+			house.furniture.Add(new Furniture(1134, new Vector2(2f, 8f))); // pub table
+			house.furniture.Add(new Furniture(1120, new Vector2(15f, 6f))); // oak table
+			house.furniture.Add(new Furniture(1297, new Vector2(9f, 14f))); // topiary tree
+			house.furniture.Add(new Furniture(94, new Vector2(1f, 9f))); // green stool
+			house.furniture.Add(new Furniture(94, new Vector2(4f, 9f))); // green stool
+
+			var chair1 = new Furniture(18, new Vector2(14f, 7f));
+			chair1.currentRotation.Value = 1;
+			chair1.updateRotation();
+			var chair2 = new Furniture(18, new Vector2(17f, 7f));
+			chair2.currentRotation.Value = 3;
+			chair2.updateRotation();
+			house.furniture.Add(chair1); // country chair
+			house.furniture.Add(chair2); // country chair
+
+			((DecoratableLocation)house).SetWallpaper("11", "Main");
+
+			house.modData["RSV.SummitHouseFurnished"] = "true";
+			house.ignoreLights.Value = true;
+			Log.Trace($"RSV: Added {house.furniture.Count} pieces of furniture");
+		}
+
+		[EventPriority(EventPriority.Low)] // run after Content Patcher
+		private static void Specialized_LoadStageChanged(object sender, LoadStageChangedEventArgs args)
+		{
+			if (args.NewStage is LoadStage.CreatedInitialLocations or LoadStage.SaveAddedLocations)
+			{
+				for (int i = 0; i < Game1.locations.Count; i++)
+				{
+					GameLocation location = Game1.locations[i];
+					if ((location.Name == SUMMITHOUSE || location.Name == SUMMITSHED) && location is not DecoratableLocation)
+					{
+						Log.Trace($"RSV: Found {location.Name}");
+						Game1.locations.RemoveAt(i);
+						Game1.locations.Insert(i, new DecoratableLocation(location.mapPath.Value, location.Name));
+						Log.Trace($"RSV: Made {location.Name} decoratable");
+						
+						break;
+					}
+				}
+			}
 		}
 
 		private static void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
@@ -73,24 +142,20 @@ namespace RidgesideVillage
 					if (Game1.currentLocation.Name == SUMMITHOUSE)
 					{
 						// Use here as a cooking station
-						if (CookingTileIndexes.Contains(tile.TileIndex) && Game1.MasterPlayer.mailReceived.Contains(KITCHENFLAG))
+						if (CookingTileIndexes.Contains(tile.TileIndex))
 						{
 							Log.Trace("RSV: Opening Summit House cooking menu.");
 							TryOpenCookingMenuFromKitchenTile(Game1.currentLocation, tilePosition: e.Cursor.GrabTile, button: e.Button);
 							return;
 						}
-
 						// Open fridge door
-						if (tile.TileIndex == FridgeTileIndexes[1] && Game1.MasterPlayer.mailReceived.Contains(KITCHENFLAG))
+						if (tile.TileIndex == FridgeTileIndexes[1])
 						{
 							// Open the fridge as a chest
 							Log.Trace("RSV: Opening Summit House fridge menu.");
 							TrySetFridgeDoor(Game1.currentLocation, isOpening: true, isUsingChest: true, button: e.Button);
 							return;
 						}
-
-						if (!Game1.MasterPlayer.mailReceived.Contains(KITCHENFLAG))
-							Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("RSV.SummitKitchen"));
 					}
 				}
 			}

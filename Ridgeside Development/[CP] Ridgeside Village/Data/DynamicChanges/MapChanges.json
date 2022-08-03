@@ -176,7 +176,10 @@
                }
             }
 		],
-		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"When": {
+			"HasFlag: hostPlayer": "RSV.FixedMinecart",
+			"HasMod: |contains=jibb.minecarts": false
+		},
 		"Update": "OnLocationChange"
     },
 	{
@@ -192,7 +195,10 @@
                }
             }
 		],
-		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"When": {
+			"HasFlag: hostPlayer": "RSV.FixedMinecart",
+			"HasMod: |contains=jibb.minecarts": false
+		},
 		"Update": "OnLocationChange"
 	},
 	{
@@ -208,7 +214,10 @@
                }
             }
 		],
-		"When": { "HasFlag: hostPlayer": "RSV.FixedMinecart" },
+		"When": {
+			"HasFlag: hostPlayer": "RSV.FixedMinecart",
+			"HasMod: |contains=jibb.minecarts": false
+		},
 		"Update": "OnLocationChange"
 	},
 	//Open Entrance
@@ -891,9 +900,8 @@
 				}
 			}
 		],
-		//"When": { "HasFlag: hostPlayer |contains=RSV.SummitFarmRedone": false }
+		"When": { "HasFlag: hostPlayer |contains=RSV.SummitHouseRedone": false }
 	},
-	/*
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_SummitFarm",
@@ -904,12 +912,64 @@
 				"SetProperties": {
 					"Action": "Mailbox"
 				}
-			}
+			},
 		],
-		"When": { "HasFlag: hostPlayer": "RSV.SummitFarmRedone" },
-		"Update": "OnLocationChange"
+		"When": { "HasFlag: hostPlayer": "RSV.SummitHouseRedone" }
 	},
-	*/
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_HouseRedone.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 10, "Height": 8 },
+		"ToArea": { "X": 11, "Y": 40, "Width": 10, "Height": 8 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag: hostPlayer": "RSV.SummitHouseRedone" }
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_OreArea.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 19 },
+		"ToArea": { "X": 80, "Y": 25, "Width": 13, "Height": 19 },
+		"PatchMode": "Replace",
+		"When": { "HasConversationTopic: hostPlayer": "RSV.OreCT" }
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_OreArea.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 19 },
+		"ToArea": { "X": 80, "Y": 25, "Width": 13, "Height": 19 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag: hostPlayer": "RSV.SummitOreArea" }
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_Shed.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 11 },
+		"ToArea": { "X": 9, "Y": 29, "Width": 13, "Height": 11 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag: hostPlayer": "RSV.ShedAdded" }
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_ShedStairs.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 6 },
+		"ToArea": { "X": 9, "Y": 43, "Width": 1, "Height": 6 },
+		"PatchMode": "Replace",
+		"When": { "HasConversationTopic: hostPlayer": "RSV.ShedCT" }
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_SummitFarm",
+		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_ShedStairs.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 6 },
+		"ToArea": { "X": 9, "Y": 43, "Width": 1, "Height": 6 },
+		"PatchMode": "Replace",
+		"When": { "HasFlag: hostPlayer": "RSV.ShedAdded" }
+	},
 
 //Paula Clean Room
 	{
