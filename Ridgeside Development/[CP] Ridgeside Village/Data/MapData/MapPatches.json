@@ -33,6 +33,16 @@
 	},
 	{
 		"Action": "Load",
+		"Target": "Maps/Town-Fair",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVSDVFair.tmx",
+		"When": { 
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"RSVNPCSAttendFestivals": true,
+			"ExpandedFestivalMaps": true
+		},
+	},
+	{
+		"Action": "Load",
 		"Target": "Maps/Town-Halloween",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVHalloween.tmx",
 		"When": { 
