@@ -70,5 +70,5 @@ New event precondition: rsvRidingHorse
 
 ## New Event Commands (Documentation WIP)
 
-RSVAddSO: Adds a special order ID
-RSVShowImage: Shows an image in the screen
+* RSVAddSO: Adds a special order ID
+* RSVShowImage: Shows an image in the screen
