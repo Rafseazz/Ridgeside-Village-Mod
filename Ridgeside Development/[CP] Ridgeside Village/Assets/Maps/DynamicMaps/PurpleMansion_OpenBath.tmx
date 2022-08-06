@@ -49,6 +49,9 @@
  <tileset firstgid="5325" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="950" columns="19">
   <image source="z_rsvinterior.png" width="304" height="800"/>
   <tile id="614">
+   <properties>
+    <property name="Water" value="T"/>
+   </properties>
    <animation>
     <frame tileid="614" duration="1000"/>
     <frame tileid="614" duration="1000"/>

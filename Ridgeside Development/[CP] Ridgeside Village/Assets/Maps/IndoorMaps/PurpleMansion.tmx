@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="60" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="262">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="60" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="262">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
   <property name="Doors" value="11 41 indoor 120 42 41 indoor 120 48 41 indoor 120"/>
@@ -49,6 +49,9 @@
  <tileset firstgid="5325" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="950" columns="19">
   <image source="z_rsvinterior.png" width="304" height="800"/>
   <tile id="614">
+   <properties>
+    <property name="Water" value="T"/>
+   </properties>
    <animation>
     <frame tileid="614" duration="1000"/>
     <frame tileid="614" duration="1000"/>
