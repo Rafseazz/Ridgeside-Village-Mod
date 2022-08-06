@@ -11,7 +11,6 @@ Ridgeside Village has a bunch of extra features that other mods can utilize for 
 
 ***
 
-
 ## Showing Images with Tile Action
 
 1. Create an Object Tile in the Buildings Layer in Tiled
@@ -29,8 +28,9 @@ Ridgeside Village has a bunch of extra features that other mods can utilize for 
     * Format is "ID": "weight itemID amount/weight itemID amount"
     * itemID -1 for nothing
     * Math: Item Weight/Summation of all Weight = Probability Chance of item.
-<expandedPatch>
-    <patch>
+
+Patch:
+
     {
         "LogName": "Edit Trash Can Data",
         "Action": "EditData",
@@ -39,10 +39,6 @@ Ridgeside Village has a bunch of extra features that other mods can utilize for 
             "ID" : "65 -1 0/10 72 2/30 770 5",
         }
     }
-    </patch>
-</expandedPatch>
-Patch:
-    
 
 ## Editing the Ridgeside World Map
 
