@@ -1052,6 +1052,20 @@
 		"Update": "OnLocationChange"
 	},
 
+	//Access to Amethyne Indoor Pool after 8 hearts with Maive
+	{
+		"LogName": "RSV: Access to Amethyne Pool",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_PurpleMansion",
+		"FromFile": "Assets/Maps/DynamicMaps/PurpleMansion_OpenBath.tmx",
+		"ToArea": { "X": 4, "Y": 5, "Width": 3, "Height": 3 },
+		"PatchMode": "Replace",
+		"When": {
+            "Query: {{Hearts:Maive}} >= 8": true
+        },
+		"Update": "OnLocationChange, OnTimeChange"
+	},
+
 
 ]
 }
