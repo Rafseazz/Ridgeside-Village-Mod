@@ -81,5 +81,18 @@
 			},
 		},
 
+		{
+			//Paula change dialogue if you romance her or Anton
+			"LogName": "FlowerDance - Paula dialogue change",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": {
+				"Paula": "{{i18n:Festivals.FlowerDance.Paula.change}}",
+			},
+			"When": {
+				"HasDialogueAnswer": "75163521, 75163041"
+			}
+		},
+
 ]
 }
