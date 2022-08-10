@@ -84,7 +84,7 @@
 		"When": {
 			"Weather": "Sun, Wind",
 			"Time": "{{Range: 2300, 2550}}",
-			//"HasSeenEvent: hostPlayer |contains=75160181": false,
+			"HasSeenEvent: hostPlayer |contains=75160181": false,
 			"HasSeenEvent: hostPlayer |contains=75160384": true
 		},
 		"Update": "OnLocationChange, OnTimeChange"
@@ -104,7 +104,7 @@
 		"When": {
 			"Time": "{{Range: 2300, 2550}}",
 			"Weather": "Sun, Wind",
-			//"HasSeenEvent: hostPlayer |contains=75160181": true,
+			"HasSeenEvent: hostPlayer |contains=75160181": true,
 			"HasSeenEvent: hostPlayer |contains=75160384": true
 		},
 		"Update": "OnLocationChange, OnTimeChange"
@@ -120,6 +120,7 @@
 			"Time": "{{Range: 2300, 2550}}",
 			//"HasSeenEvent: hostPlayer |contains=75160181": true,
 			//"HasSeenEvent: hostPlayer |contains=75160182": false,
+			"HasSeenEvent: hostPlayer |contains=75160181": true,
 			"HasSeenEvent: hostPlayer |contains=75160182, 75160385": false,
 		},
 		"Update": "OnLocationChange, OnTimeChange"
