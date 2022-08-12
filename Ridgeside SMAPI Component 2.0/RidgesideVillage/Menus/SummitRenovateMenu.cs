@@ -27,7 +27,7 @@ namespace RidgesideVillage
 		public const string CLIMATECONTROL = "Climate Control";
 		public const string SPRINKLERS = "Sprinkler System";
 		public const string OREAREA = "Ore Area";
-		public const string SHED = "Shed";
+		public const string SHED = "Summit Shed";
 		public const string HOUSETOPIC = "RSV.HouseCT";
 		public const string CLIMATETOPIC = "RSV.ClimateCT";
 		public const string SPRINKLERTOPIC = "RSV.SprinklerCT";
