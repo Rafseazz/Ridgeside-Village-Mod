@@ -50,10 +50,8 @@ namespace RidgesideVillage.Questing
 				this.acceptQuestButton.visible = !questData.acceptedDailyQuest;
 			}
 
-			if(this.dailyQuest is not null)
-            {
-				this.description = dailyQuest.questDescription.Replace("^", "\n");
-			}
+			this.description = dailyQuest.questDescription;
+
 			//setting here and in parent. not sure if parent is needed
 			Texture2D billboardTexture;
 			Log.Debug($"{boardType}, {VILLAGEBOARD}, {boardType.Equals(VILLAGEBOARD)}");
@@ -144,7 +142,12 @@ namespace RidgesideVillage.Questing
 
 		}
 
-		public override void receiveLeftClick(int x, int y, bool playSound = true)
+        public override void gameWindowSizeChanged(Rectangle oldBounds, Rectangle newBounds)
+        {
+			return;
+        }
+
+        public override void receiveLeftClick(int x, int y, bool playSound = true)
 		{
 			if (this.acceptQuestButton.visible && this.acceptQuestButton.containsPoint(x, y))
 			{
