@@ -109,7 +109,7 @@ namespace RidgesideVillage
 						Log.Trace($"RSV: Found {location.Name}");
 						Game1.locations.RemoveAt(i);
 						Game1.locations.Insert(i, new DecoratableLocation(location.mapPath.Value, location.Name));
-						Log.Trace($"RSV: Made {location.Name} decoratable");
+						Log.Trace($"RSV: Made {location.Name} decoratable ({location.mapPath.Value})");
 						
 						break;
 					}
