@@ -71,24 +71,29 @@ namespace RidgesideVillage.Questing
 				return;
 			}
 
+			Log.Trace("Refreshing RSV Special Orders");
 			Dictionary<string, SpecialOrderData> order_data = Game1.content.Load<Dictionary<string, SpecialOrderData>>("Data\\SpecialOrders");
 			List<string> keys = new List<string>(order_data.Keys);
 
 			for (int k = 0; k < keys.Count; k++)
 			{
 				string key = keys[k];
+				Log.Trace($"Checking {key}");
 				bool invalid = false;
 				bool repeatable = order_data[key].Repeatable.Equals("True", StringComparison.OrdinalIgnoreCase);
 				if (repeatable && Game1.MasterPlayer.team.completedSpecialOrders.ContainsKey(key))
 				{
+					Log.Trace($"Not repeatable and already done");
 					invalid = true;
 				}
 				if (Game1.dayOfMonth >= 16 && order_data[key].Duration == "Month")
 				{
+					Log.Trace($"Month SO and after 16th");
 					invalid = true;
 				}
 				if (!invalid && !SpecialOrder.CheckTags(order_data[key].RequiredTags))
 				{
+					Log.Trace($"Tags conditions not met.");
 					invalid = true;
 				}
 				if (!invalid)
