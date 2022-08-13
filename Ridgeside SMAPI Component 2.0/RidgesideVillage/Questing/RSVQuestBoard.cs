@@ -112,8 +112,12 @@ namespace RidgesideVillage.Questing
 					Utility.drawTextWithShadow(b, Game1.content.LoadString("Strings\\UI:AcceptQuest"), Game1.dialogueFont, new Vector2(this.acceptQuestButton.bounds.X + 12, this.acceptQuestButton.bounds.Y + (LocalizedContentManager.CurrentLanguageLatin ? 16 : 12)), this.fontColor);
 				}
 			}
-			
-			
+
+			if (this.upperRightCloseButton != null && this.shouldDrawCloseButton())
+			{
+				this.upperRightCloseButton.draw(b);
+			}
+
 			if (!hide_mouse)
 			{
 				Game1.mouseCursorTransparency = 1f;
@@ -131,7 +135,13 @@ namespace RidgesideVillage.Questing
 				{
 					Game1.playSound("Cowboy_gunshot");
 				}
+
+				if (this.upperRightCloseButton != null)
+				{
+					this.upperRightCloseButton.tryHover(x, y, 0.5f);
+				}
 			}
+
 		}
 
 		public override void receiveLeftClick(int x, int y, bool playSound = true)
@@ -150,6 +160,14 @@ namespace RidgesideVillage.Questing
 				Game1.player.questLog.Add(this.dailyQuest);
 
 				this.acceptQuestButton.visible = false;
+			}
+			else if (this.upperRightCloseButton != null && this.upperRightCloseButton.containsPoint(x, y))
+			{
+				if (playSound)
+				{
+					Game1.playSound("bigDeSelect");
+				}
+				this.exitThisMenu();
 			}
 		}
 	}

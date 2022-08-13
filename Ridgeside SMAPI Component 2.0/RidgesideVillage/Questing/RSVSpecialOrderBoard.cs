@@ -66,7 +66,7 @@ namespace RidgesideVillage.Questing
 					}
 				}
 			}
-			if (Game1.player.team.availableSpecialOrders.Count > 0 && !force_refresh)
+			if (!force_refresh)
 			{
 				return;
 			}
@@ -78,7 +78,8 @@ namespace RidgesideVillage.Questing
 			{
 				string key = keys[k];
 				bool invalid = false;
-				if (!invalid && order_data[key].Repeatable != "True" && Game1.MasterPlayer.team.completedSpecialOrders.ContainsKey(key))
+				bool repeatable = order_data[key].Repeatable.Equals("True", StringComparison.OrdinalIgnoreCase);
+				if (repeatable && Game1.MasterPlayer.team.completedSpecialOrders.ContainsKey(key))
 				{
 					invalid = true;
 				}
@@ -101,7 +102,7 @@ namespace RidgesideVillage.Questing
 						}
 					}
 				}
-				Log.Trace($"Order {keys} is valid: {!invalid}");
+				Log.Trace($"Order {keys[k]} is valid: {!invalid}");
 				if (invalid)
 				{
 					keys.RemoveAt(k);
