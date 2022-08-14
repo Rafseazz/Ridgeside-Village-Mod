@@ -202,23 +202,39 @@
 			"frames":
 			[
 				{
-					"frameTicks": 10,
-					"action": 1,
-					"trajectoryY": 20
+					"frameTicks": 1,
+					"action": 1
 				},
 				{
 					"frameTicks": 10,
-					"action": 1,
+					"action": 0,
 					"trajectoryY": 20
 				},
 				{
-					"frameTicks": 10,
-					"action": 1,
-					"trajectoryY": 20
+					"frameTicks": 1,
+					"action": 1
 				},
 				{
 					"frameTicks": 10,
-					"action": 1,
+					"action": 0,
+					"trajectoryY": 20
+				},
+				{
+					"frameTicks": 1,
+					"action": 1
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"trajectoryY": 20
+				},
+				{
+					"frameTicks": 1,
+					"action": 1
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
 					"trajectoryY": 20
 				},
 			]
@@ -925,398 +941,647 @@
 					}
 				},
 			]
-		}
-
-
-
-
-/*
-		{
-			"id":"4",
-			"cooldown":"1000",
-			"frames": 
-			[
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 0,
-				},
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 1,
-				},
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 2,
-				},
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 3,
-				},
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 0,
-				},
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 1,
-				},
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 2,
-				},
-				{
-					"frameTicks": 10,
-					"action": 1,
-					"relativeFacingDirection": 3,
-				},
-				{
-					"frameTicks": 1,
-					"action": 0,
-					"relativeFacingDirection": 0,
-				},
-			]
 		},
+
+		//Fox Claw: Holy Burst thingy
 		{
-			"id":"9",
-			"cooldown":"1000",
-			"frames": 
-			[
-				{
-					"frameTicks": 5,
-					"action": 1,
-					"relativeFacingDirection": 0,
-					"sound": "furnace",
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": 0,
-							"yVelocity": 10,
-							"startingPositionX": 0,
-							"startingPositionY": 96,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 5,
-					"action": 0,
-					"relativeFacingDirection": 0,
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": -7,
-							"yVelocity": 7,
-							"startingPositionX": -72,
-							"startingPositionY": 72,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 5,
-					"action": 1,
-					"relativeFacingDirection": 1,
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": 0,
-							"yVelocity": 10,
-							"startingPositionX": 0,
-							"startingPositionY": 96,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 5,
-					"action": 0,
-					"relativeFacingDirection": 1,
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": -7,
-							"yVelocity": 7,
-							"startingPositionX": -72,
-							"startingPositionY": 72,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 5,
-					"action": 1,
-					"relativeFacingDirection": 2,
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": 0,
-							"yVelocity": 10,
-							"startingPositionX": 0,
-							"startingPositionY": 96,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 5,
-					"action": 0,
-					"relativeFacingDirection": 2,
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": -7,
-							"yVelocity": 7,
-							"startingPositionX": -72,
-							"startingPositionY": 72,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 5,
-					"action": 1,
-					"relativeFacingDirection": 3,
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": 0,
-							"yVelocity": 10,
-							"startingPositionX": 0,
-							"startingPositionY": 96,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 5,
-					"action": 0,
-					"relativeFacingDirection": 3,
-					"projectiles":
-					[
-						{
-							"damage": 100,
-							"parentSheetIndex": 10,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": -7,
-							"yVelocity": 7,
-							"startingPositionX": -72,
-							"startingPositionY": 72,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": false,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
-				},
-				{
-					"frameTicks": 1,
-					"action": 0,
-					"relativeFacingDirection": 0,
-				},
-			]
-		},
-		{
-			"id":"22",
-			"cooldown":"500",
-			"frames": 
-			[
-				{
-					"frameTicks": 1,
-					"action": 1,
-					"relativeFacingDirection": 0,
-					"sound": "batFlap",
-				},
-				{
-					"frameTicks": 10,
-					"action": 0,
-					"relativeFacingDirection": 0,
-					"trajectoryX": 0,
-					"trajectoryY": 20,
-				},
-			]
-		},
-		{
-			"id":"29",
-			"cooldown":"1500",
-			"frames": 
-			[
+			"id": "Fox Claw",
+			"cooldown": 3000,
+			"frames": [
 				{
 					"frameTicks": 20,
-					"action": 2,
-					"relativeFacingDirection": 0,
-					"sound": "thunder",
+					"action": 1,
+					"projectiles":
+					[
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 0,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"firingSound": "powerup",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -21,
+							"yVelocity": -7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 21,
+							"yVelocity": -7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -14,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 14,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				},
+				{
+					"frameTicks": 20,
+					"action": 1,
+					"projectiles":
+					[
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 0,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"firingSound": "powerup",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -21,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 21,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -14,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 14,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				},
+				{
+					"frameTicks": 20,
+					"action": 1,
+					"projectiles":
+					[
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 0,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"firingSound": "powerup",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -21,
+							"yVelocity": -7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 21,
+							"yVelocity": -7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -14,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 14,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				},
+				{
+					"frameTicks": 20,
+					"action": 1,
+					"projectiles":
+					[
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 0,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"firingSound": "powerup",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -21,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 21,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -14,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 14,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				},
+				{
+					"frameTicks": 20,
+					"action": 1,
+					"projectiles":
+					[
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 0,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"firingSound": "powerup",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -21,
+							"yVelocity": -7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 21,
+							"yVelocity": -7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -14,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 14,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				},
+				{
+					"frameTicks": 20,
+					"action": 1,
+					"projectiles":
+					[
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 0,
+							"yVelocity": 21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"firingSound": "powerup",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -21,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 21,
+							"yVelocity": 7,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": -14,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+						{
+							"damage": 10,
+							"parentSheetIndex": 768,
+							"bouncesTillDestruct": 0,
+							"tailLength": 5,
+							"rotationVelocity": 0.8,
+							"xVelocity": 14,
+							"yVelocity": -21,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				},
+			]
+		},
+
+		//Free Lance: Money on crit
+		{
+			"id": "Free Lance",
+			"enchantments": [
+				{
+					"name": "Critical Hit Pay",
+					"type": "coins",
+					"parameters":
+					{
+						"trigger": "crit",
+						"chance": 100,
+						"amountMult": 1,
+						"sound": "money"
+					}
+				}	
+			]
+		},
+
+		//Golden Key Blade: chance of treasure chest on kill or heal on crit
+		{
+			"id": "Golden Key Blade",
+			"enchantments": [
+				{
+					"name": "Treasure Key",
+					"type": "loot",
+					"parameters":
+					{
+						"trigger": "slay",
+						"chance": 10,
+						"extraDropItems": "166",
+						"sound": "reward"
+					} 
+				},
+				{
+					"name": "Hospitality",
+					"type": "heal",
+					"parameters":
+					{
+						"trigger": "crit",
+						"chance": 10,
+						"amountMult": 1,
+						"sound": "healSound"
+					} 
+				},
+			]
+		},
+
+		//Gourmet Cooking Knife: Chance of getting food on kill
+		{
+			"id": "Gourmet Cooking Knife",
+			"enchantments": [
+				{
+					"name": "Combat Cuisine",
+					"type": "loot",
+					"parameters":
+					{
+						"trigger": "slay",
+						"chance": 100,
+						"extraDropItems": "226_10,194_10,198_10,228_10,202_10,225_10,606_10,903_10",
+						"sound": "crystal"
+					}
+				}	
+			]
+		},
+
+		//Heartbreaker: Dash then explode
+		{
+			"id": "Heartbreaker",
+			"cooldown": 1000,
+			"frames":
+			[
+				{
+					"frameTicks": 1,
+					"action": 1,
 				},
 				{
 					"frameTicks": 1,
 					"action": 0,
-					"relativeFacingDirection": 0,
-					"projectiles":
-					[
+					"trajectoryX": 0,
+					"trajectoryY": 30,
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"sound": "cowboy_explosion",
+					"special":
+					{
+						"name": "explosion",
+						"parameters":
 						{
-							"damage": 100,
-							"parentSheetIndex": 0,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": 0,
-							"yVelocity": 10,
-							"startingPositionX": 0,
-							"startingPositionY": 128,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": true,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
+							"damageMult": 1,
+							"minDamage": 1,
+							"maxDamage": 1,
+							"radius": 1,
+							"sound": ""
+						}
+					}
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"sound": "cowboy_explosion",
+					"special":
+					{
+						"name": "explosion",
+						"parameters":
 						{
-							"damage": 100,
-							"parentSheetIndex": 0,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": 10,
-							"yVelocity": 0,
-							"startingPositionX": 0,
-							"startingPositionY": 128,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": true,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
+							"damageMult": 1,
+							"minDamage": 1,
+							"maxDamage": 1,
+							"radius": 1,
+							"sound": ""
+						}
+					}
+				},
+				{
+					"frameTicks": 10,
+					"action": 0,
+					"sound": "cowboy_explosion",
+					"special":
+					{
+						"name": "explosion",
+						"parameters":
 						{
-							"damage": 100,
-							"parentSheetIndex": 0,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": -10,
-							"yVelocity": 0,
-							"startingPositionX": 0,
-							"startingPositionY": 128,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": true,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-						{
-							"damage": 100,
-							"parentSheetIndex": 0,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": -7,
-							"yVelocity": 7,
-							"startingPositionX": 0,
-							"startingPositionY": 128,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": true,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-						{
-							"damage": 100,
-							"parentSheetIndex": 0,
-							"bouncesTillDestruct": 0,
-							"tailLength": 1,
-							"rotationVelocity": 1,
-							"xVelocity": 7,
-							"yVelocity": 7,
-							"startingPositionX": 0,
-							"startingPositionY": 128,
-							"collisionSound": "",
-							"firingSound": "",
-							"explode": true,
-							"damagesMonsters": true,
-							"spriteFromObjectSheet": false,
-						},
-
-					]
+							"damageMult": 1,
+							"minDamage": 1,
+							"maxDamage": 1,
+							"radius": 1,
+							"sound": ""
+						}
+					}
 				},
 			]
-		},*/
+		},
 	]
 }
