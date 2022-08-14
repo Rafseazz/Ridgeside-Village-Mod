@@ -1517,7 +1517,7 @@
 		//Heartbreaker: Dash then explode
 		{
 			"id": "Heartbreaker",
-			"cooldown": 1000,
+			"cooldown": 3000,
 			"frames":
 			[
 				{
@@ -1583,5 +1583,107 @@
 				},
 			]
 		},
+
+		//Icreon: Dash forward then back
+		{
+			"id": "Icreon",
+			"cooldown": 3000,
+			"frames": [
+				{
+					"frameTicks": 1,
+					"action": 0,
+					"trajectoryX": 0,
+					"trajectoryY": 50,
+					"sound": "shwip",
+					"projectiles": [
+						{
+							"damage": 10,
+							"parentSheetIndex": 61,
+							"bouncesTillDestruct": 0,
+							"tailLength": 3,
+							"rotationVelocity": 0.1,
+							"xVelocity": 0,
+							"yVelocity": 20,
+							"startingPositionX": 0,
+							"startingPositionY": 0,
+							"collisionSound": "",
+							"firingSound": "crit",
+							"explode": false,
+							"damagesMonsters": true,
+							"spriteFromObjectSheet": true,
+						},
+					]
+				},
+				{
+					"frameTicks": 10,
+					"action": 1,
+					"sound": "shwip"
+				},
+				{
+					"frameTicks": 5,
+					"action": 0,
+					"trajectoryX": 0,
+					"trajectoryY": -50,
+					"sound": "shwip",
+				}
+			]
+		},
+
+		//Laborforce: Slam then explode
+		{
+			"id": "Laborforce",
+			"cooldown": 3000,
+			"frames": [
+				{
+					"frameTicks": 35,
+					"action": 2,
+				},
+				{
+					"frameTicks": 20,
+					"action": 0,
+					"sound": "woodWhack",
+					"special":
+					{
+						"name": "explosion",
+						"parameters":
+						{
+							"damageMult": 1,
+							"minDamage": 1,
+							"maxDamage": 0.3,
+							"radius": 1,
+						}
+					}
+				},
+			]
+		},
+
+
+
+
+/*
+TO DO:
+Lovesick
+Military Saber
+Observer's Hatchet
+Occult Blade
+Pale Wings
+Prideful
+Princess of Green
+Prismarine Mallet
+Ridgeback Hardshell
+River Harpoon
+Safeguard's Edge
+Sword of Idols
+The Green Gambler
+The Lucky Penny
+The Madame
+The Prankster
+The Silent One
+The Singing Dagger
+The Unbroken
+The Wild Whip
+Tide Bringer
+Tough Love
+*/
 	]
 }

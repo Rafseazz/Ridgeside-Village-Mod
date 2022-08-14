@@ -47,6 +47,20 @@ namespace RidgesideVillage
                 Game1.drawDialogue(__instance);
                 return false;
             }
+            /*else if ((__instance.Name == "Paula") && !who.dialogueQuestionsAnswered.Contains(75163521))
+            {
+                __instance.CurrentDialogue.Clear();
+                __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Paula.RejectProposal"), __instance));
+                Game1.drawDialogue(__instance);
+                return false;
+            }
+            else if ((__instance.Name == "Anton") && !who.dialogueQuestionsAnswered.Contains(75163041))
+            {
+                __instance.CurrentDialogue.Clear();
+                __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Anton.RejectProposal"), __instance));
+                Game1.drawDialogue(__instance);
+                return false;
+            }*/
             return true;
         }
 
