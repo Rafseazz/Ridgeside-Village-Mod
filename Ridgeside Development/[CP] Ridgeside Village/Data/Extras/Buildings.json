@@ -20,5 +20,18 @@
         "Summit Shed": "388 300/8/8/-1/-1/-1/-1/Shed/Shed/An empty building on the hill above the house. The interior can be decorated./Buildings/none/128/160/-1/null/Farm/10000/false",
       }
     },
-   ]
+
+    {
+      "LogName": "Load placeholders to prevent LookUpInfo bugs",
+      "Action": "Load",
+      "Target": "Maps/Climate Control, Maps/Ore Area, Maps/Sprinkler System, Maps/Summit House Upgrade, Maps/Summit Shed",
+      "FromFile": "Assets/Maps/Placeholder.tmx"
+    },
+
+    {
+    "Action": "Load",
+    "Target": "Buildings/Climate Control, Buildings/Ore Area, Buildings/Sprinkler System, Buildings/Summit House Upgrade, Buildings/Summit Shed",
+    "FromFile": "Assets/LooseSprites/Placeholder.png"
+    }
+  ]
 }
