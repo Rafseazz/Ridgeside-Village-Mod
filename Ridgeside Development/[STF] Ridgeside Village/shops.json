@@ -925,7 +925,7 @@
 			"ItemNames": [ "Ark Blade", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 100,
-			"When": [ "f Anton 2500" ],
+			"When": [ "f Anton 2500/!q 75163042" ],
 		},
 		{
 			"ItemType": "Weapon",
@@ -933,13 +933,6 @@
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 100,
 			"When": [ "f Ariah 2500" ],
-		},
-		{
-			"ItemType": "Weapon",
-			"ItemNames": [ "Death's Daughter", ],
-			"StockItemCurrency": "Spiritual Essence",
-			"StockCurrencyStack": 100,
-			"When": [ "f Blair 2500" ],
 		},
 		{
 			"ItemType": "Weapon",
@@ -995,7 +988,7 @@
 			"ItemNames": [ "Military Saber", ],
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 100,
-			"When": [ "f Paula 2500" ],
+			"When": [ "f Paula 2500/!q 75163521" ],
 		},
 		{
 			"ItemType": "Weapon",
@@ -1040,6 +1033,13 @@
 
 	"ItemStocks": [
 		//Weapons
+    { //Anton
+			"ItemType": "Weapon",
+			"ItemNames": [ "Ark Blade", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 100,
+			"When": [ "e 75160392" ],
+		},
     { //Kenneth
 			"ItemType": "Weapon",
 			"ItemNames": [ "Battery-Powered Battle Hammer", ],
@@ -1060,6 +1060,13 @@
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160368" ],
+		},
+    { //Blair
+			"ItemType": "Weapon",
+			"ItemNames": [ "Death's Daughter", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 100,
+			"When": [ "f Blair 2500" ],
 		},
     { //Kiarra
 			"ItemType": "Weapon",
@@ -1088,6 +1095,13 @@
 			"StockItemCurrency": "Spiritual Essence",
 			"StockCurrencyStack": 50,
 			"When": [ "e 75160150" ],
+		},
+    { //Paula
+			"ItemType": "Weapon",
+			"ItemNames": [ "Military Saber", ],
+			"StockItemCurrency": "Spiritual Essence",
+			"StockCurrencyStack": 100,
+			"When": [ "e 75160390" ],
 		},
 		{ //Flor
 			"ItemType": "Weapon",
