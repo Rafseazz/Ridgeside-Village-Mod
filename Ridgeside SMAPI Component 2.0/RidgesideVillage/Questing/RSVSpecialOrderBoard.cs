@@ -25,6 +25,8 @@ namespace RidgesideVillage.Questing
 
 		internal RSVSpecialOrderBoard(string boardType = "") : base(boardType)
 		{
+			LogCurrentlyAvailableSpecialOrders();
+
 			timestampOpened = (int)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
 			Texture2D billboardTexture;
             if (boardType.Equals(NINJABOARDNAME)){
@@ -72,6 +74,20 @@ namespace RidgesideVillage.Questing
 			}
 
 			Log.Trace("Refreshing RSV Special Orders");
+			var availableOrders = Game1.player.team.availableSpecialOrders;
+
+			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVBOARDNAME);
+			Game1.player.team.acceptedSpecialOrderTypes.Remove(NINJABOARDNAME);
+
+			for(int i=0; i< availableOrders.Count; i++)
+            {
+                if (availableOrders[i].orderType.Equals(NINJABOARDNAME) || availableOrders[i].orderType.Equals(RSVBOARDNAME))
+                {
+					Game1.player.team.availableSpecialOrders.RemoveAt(i);
+					i--;
+                }
+            }
+
 			Dictionary<string, SpecialOrderData> order_data = Game1.content.Load<Dictionary<string, SpecialOrderData>>("Data\\SpecialOrders");
 			List<string> keys = new List<string>(order_data.Keys);
 
@@ -155,12 +171,18 @@ namespace RidgesideVillage.Questing
 				}
 			}
 
+			LogCurrentlyAvailableSpecialOrders();
+
+		}
+
+		private static void LogCurrentlyAvailableSpecialOrders()
+        {
+
 			Log.Trace("Refreshed RSV SpecialOders");
 			foreach (var SO in Game1.player.team.availableSpecialOrders)
 			{
 				Log.Trace($"{SO.questKey.Value}, {SO.orderType.Value}");
 			}
-
 		}
 
 	}

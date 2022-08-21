@@ -44,7 +44,11 @@ namespace RidgesideVillage.Questing
 			Monitor = ModInstance.Monitor;
 			TileActionHandler.RegisterTileAction("RSVQuestBoard", OpenQuestBoard);
 			TileActionHandler.RegisterTileAction("RSVSpecialOrderBoard", OpenSOBoard);
-			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true));
+			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => {
+
+				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
+				Log.Info("RSV Special Orders refreshed");
+			});
 			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => QuestController.PrintQuestState());
 			Helper.ConsoleCommands.Add("RSVCheckQuests", "", (s1,s2) => QuestController.CheckQuests());
 			Helper.Events.GameLoop.DayStarted += OnDayStarted;
@@ -109,9 +113,19 @@ namespace RidgesideVillage.Questing
 					}
 				}                
             }
-        }
 
-        private static void OnWarped(object sender, WarpedEventArgs e)
+			Game1.player.team.availableSpecialOrders.OnElementChanged += AvailableSpecialOrders_OnElementChanged;
+		}
+
+		//to log if other mods mess with it
+		private static void AvailableSpecialOrders_OnElementChanged(Netcode.NetList<SpecialOrder, Netcode.NetRef<SpecialOrder>> list, int index, SpecialOrder oldValue, SpecialOrder newValue)
+		{
+			Log.Trace("Available SpecialOrders were changed");
+			Log.Trace($"Current Ingame Date: {SDate.Now()} {Game1.timeOfDay}");
+			Log.Trace($"{Environment.StackTrace}");
+		}
+
+		private static void OnWarped(object sender, WarpedEventArgs e)
         {
 			if(e.Player == Game1.player)
             {
@@ -190,7 +204,8 @@ namespace RidgesideVillage.Questing
 			Game1.activeClickableMenu = new RSVSpecialOrderBoard(type);
 		}
 
-		//choose daily quests and shuffle SO if its monday
+        //choose daily quests and shuffle SO if its monday
+        [EventPriority(EventPriority.Low - 10)]
 		private static void OnDayStarted(object sender, DayStartedEventArgs e)
 		{
 			//if monday, update special orders
@@ -209,7 +224,7 @@ namespace RidgesideVillage.Questing
             catch
             {
 				dailyQuestData.Value = new QuestData(null, null);
-				Log.Error("Failed parsing quest");
+				Log.Error("Failed parsing quests.");
 			}
 			
 		}
