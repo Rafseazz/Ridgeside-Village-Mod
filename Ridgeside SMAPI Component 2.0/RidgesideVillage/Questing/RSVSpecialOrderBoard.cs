@@ -16,8 +16,8 @@ namespace RidgesideVillage.Questing
     internal class RSVSpecialOrderBoard : SpecialOrdersBoard
     {
 
-		public const string NINJABOARDNAME = "RSVNinjaSO";
-		public const string RSVBOARDNAME = "RSVTownSO";
+		const string NINJABOARDNAME = "RSVNinjaSO";
+		const string RSVBOARDNAME = "RSVTownSO";
 		int timestampOpened;
 		static int safetyTimer = 500;
 
@@ -54,53 +54,44 @@ namespace RidgesideVillage.Questing
 		//need this public for DailySpecialOrders :p
 		//mostly copied from the decompile
 		//randomly chooses 2 SOs for each RSV board
-		public static void UpdateAvailableRSVSpecialOrders(string type)
+		public static void UpdateAvailableRSVSpecialOrders(bool force_refresh)
 		{
 			if (Game1.player.team.availableSpecialOrders is not null)
 			{
 				foreach (SpecialOrder order in Game1.player.team.availableSpecialOrders)
 				{
-					if ((order.questDuration.Value == SpecialOrder.QuestDuration.TwoDays || order.questDuration.Value == SpecialOrder.QuestDuration.ThreeDays)) // && !Game1.player.team.acceptedSpecialOrderTypes.Contains(order.orderType.Value)
+					if ((order.questDuration.Value == SpecialOrder.QuestDuration.TwoDays || order.questDuration.Value == SpecialOrder.QuestDuration.ThreeDays) && !Game1.player.team.acceptedSpecialOrderTypes.Contains(order.orderType.Value))
 					{
 						order.SetDuration(order.questDuration.Value);
 					}
 				}
 			}
-			/*
 			if (!force_refresh)
 			{
 				return;
 			}
-			*/
 
 			Log.Trace("Refreshing RSV Special Orders");
 			Dictionary<string, SpecialOrderData> order_data = Game1.content.Load<Dictionary<string, SpecialOrderData>>("Data\\SpecialOrders");
-			List<string> keys = order_data.Keys.ToList();
-			List<string> valid_SOs = new List<string> { };
-			Log.Trace($"RSV: Number of keys: {keys.Count}");
+			List<string> keys = new List<string>(order_data.Keys);
 
-			for (int n = 0; n < keys.Count; n++)
+			for (int k = 0; k < keys.Count; k++)
 			{
-				string key = keys[n];
+				string key = keys[k];
 				Log.Trace($"Checking {key}");
 				bool invalid = false;
 				bool repeatable = order_data[key].Repeatable.Equals("True", StringComparison.OrdinalIgnoreCase);
-				if (order_data[key].OrderType != type)
-				{
-					Log.Trace($"Not the correct type");
-					invalid = true;
-				}
-				else if (repeatable && Game1.MasterPlayer.team.completedSpecialOrders.ContainsKey(key))
+				if (repeatable && Game1.MasterPlayer.team.completedSpecialOrders.ContainsKey(key))
 				{
 					Log.Trace($"Not repeatable and already done");
 					invalid = true;
 				}
-				else if (Game1.dayOfMonth >= 16 && order_data[key].Duration == "Month")
+				if (Game1.dayOfMonth >= 16 && order_data[key].Duration == "Month")
 				{
 					Log.Trace($"Month SO and after 16th");
 					invalid = true;
 				}
-				else if (!invalid && !SpecialOrder.CheckTags(order_data[key].RequiredTags))
+				if (!invalid && !SpecialOrder.CheckTags(order_data[key].RequiredTags))
 				{
 					Log.Trace($"Tags conditions not met.");
 					invalid = true;
@@ -111,38 +102,24 @@ namespace RidgesideVillage.Questing
 					{
 						if ((string)specialOrder.questKey.Value == key)
 						{
-							Log.Trace($"Order currently active.");
 							invalid = true;
 							break;
 						}
 					}
-					valid_SOs.Add(key);
 				}
-				Log.Trace($"Order {keys[n]} is valid: {!invalid}");
-				/*
+				Log.Trace($"Order {keys[k]} is valid: {!invalid}");
 				if (invalid)
 				{
-					valid_SOs.RemoveAt(n);
-					n--;
+					keys.RemoveAt(k);
+					k--;
 				}
-				*/
 			}
-			Log.Trace($"RSV: {valid_SOs.Count} special orders in this type");
-			Random r = new Random((int)Game1.uniqueIDForThisGame + (int)(Game1.stats.DaysPlayed * 1.3f));
-			for (int i = 0; i < Math.Min(2, valid_SOs.Count); i++)
-			{
-				int index = r.Next(valid_SOs.Count);
-				Log.Trace($"RSV: random index is {index}");
-				SpecialOrder order = SpecialOrder.GetSpecialOrder(valid_SOs[index], r.Next());
-				Game1.player.team.availableSpecialOrders.Add(order);
-				Log.Trace($"RSV: Added order {order.questName.Value}");
-			}
-			/*
+			Random r = new Random((int)Game1.uniqueIDForThisGame + (int)((float)Game1.stats.DaysPlayed * 1.3f));
 			string[] array = new string[2] { NINJABOARDNAME, RSVBOARDNAME };
 			foreach (string type_to_find in array)
 			{
 				List<string> typed_keys = new List<string>();
-				foreach (string key3 in valid_SOs)
+				foreach (string key3 in keys)
 				{
 					if (order_data[key3].OrderType == type_to_find)
 					{
@@ -177,8 +154,8 @@ namespace RidgesideVillage.Questing
 					all_keys.Remove(key2);
 				}
 			}
-			*/
-			Log.Trace("Refreshed RSV SpecialOrders");
+
+			Log.Trace("Refreshed RSV SpecialOders");
 			foreach (var SO in Game1.player.team.availableSpecialOrders)
 			{
 				Log.Trace($"{SO.questKey.Value}, {SO.orderType.Value}");

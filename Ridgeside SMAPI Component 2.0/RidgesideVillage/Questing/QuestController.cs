@@ -18,9 +18,6 @@ namespace RidgesideVillage.Questing
 
 		static IModHelper Helper;
 		static IMonitor Monitor;
-
-		//const string NINJABOARDNAME = "RSVNinjaSO";
-		//const string RSVBOARDNAME = "RSVTownSO";
 		//static Lazy<Texture2D> questionMarkSprite = new Lazy<Texture2D>(() => Helper.Content.Load<Texture2D>(PathUtilities.NormalizePath("assets/questMark.png"), ContentSource.ModFolder));
 
 		//store available quest data for each user
@@ -47,11 +44,7 @@ namespace RidgesideVillage.Questing
 			Monitor = ModInstance.Monitor;
 			TileActionHandler.RegisterTileAction("RSVQuestBoard", OpenQuestBoard);
 			TileActionHandler.RegisterTileAction("RSVSpecialOrderBoard", OpenSOBoard);
-			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) =>
-			{
-				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(RSVSpecialOrderBoard.RSVBOARDNAME);
-				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(RSVSpecialOrderBoard.NINJABOARDNAME);
-			});
+			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true));
 			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => QuestController.PrintQuestState());
 			Helper.ConsoleCommands.Add("RSVCheckQuests", "", (s1,s2) => QuestController.CheckQuests());
 			Helper.Events.GameLoop.DayStarted += OnDayStarted;
@@ -126,20 +119,13 @@ namespace RidgesideVillage.Questing
 				{
 					CurrentLocationFormarkers.Value = LocationForMarkers.RSVVillage;
 					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160207);
-					if (Game1.dayOfMonth % 7 == 1 && Game1.player.IsMainPlayer)
-					{
-						RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(RSVSpecialOrderBoard.RSVBOARDNAME);
-					}
+
 				}
 				else if (e.NewLocation.Name.Equals("Custom_Ridgeside_RSVNinjaHouse"))
 				{
 					CurrentLocationFormarkers.Value = LocationForMarkers.NinjaHouse;
 					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160264);
 					QuestBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160187);
-					if (Game1.dayOfMonth % 7 == 1 && Game1.dayOfMonth < 16 && Game1.player.IsMainPlayer)
-					{
-						RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(RSVSpecialOrderBoard.NINJABOARDNAME);
-					}
 				}
 				else
 				{
@@ -148,6 +134,7 @@ namespace RidgesideVillage.Questing
 					QuestBoardUnlocked.Value = false;
 				}
 			}
+           
         }
 
         private static void RenderQuestMarkersIfNeeded(object sender, RenderedWorldEventArgs e)
@@ -206,6 +193,13 @@ namespace RidgesideVillage.Questing
 		//choose daily quests and shuffle SO if its monday
 		private static void OnDayStarted(object sender, DayStartedEventArgs e)
 		{
+			//if monday, update special orders
+			if (Game1.dayOfMonth % 7 == 1 && Game1.player.IsMainPlayer)
+			{
+				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
+			}
+
+
 			try
             {
 				Quest townQuest = QuestFactory.GetDailyQuest();
