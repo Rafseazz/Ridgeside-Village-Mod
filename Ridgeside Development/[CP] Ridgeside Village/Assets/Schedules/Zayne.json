@@ -5,12 +5,20 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Zayne",
 		"Entries": {
-			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 9 2/400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
 					},
-		"When": { "Query: {{RandomNumber}} < 9": true}
+		"When": { "HasSeenEvent: hostPlayer|contains=75160338": false }
 	},
 
 	//Random Visit 20% chance after seeing Maive's 4 heart event (75160338)
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Zayne",
+		"Entries": {
+			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 9 2/2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+					},
+		"When": { "Query: {{RandomNumber}} < 9": true, "HasSeenEvent: hostPlayer": 75160338 }
+	},
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Zayne",

@@ -54,8 +54,8 @@ namespace RidgesideVillage.Questing
             {
 				return null;
             }
-
 			int rand = Game1.random.Next(candidates.Count);
+			Log.Trace($"Daily Ninjaquest: ID {candidates[rand]}");
 			return Quest.getQuestFromId(candidates[rand]);
 		}
 
@@ -74,6 +74,12 @@ namespace RidgesideVillage.Questing
                 }
 			}
 			Log.Trace($"{candidates.Count} candidates for daily Quest");
+
+			if(candidates.Count == 0)
+            {
+				return null;
+            }
+
 			int rand = Game1.random.Next(candidates.Count);
 
 			Log.Trace($"chose {candidates[rand]}");
