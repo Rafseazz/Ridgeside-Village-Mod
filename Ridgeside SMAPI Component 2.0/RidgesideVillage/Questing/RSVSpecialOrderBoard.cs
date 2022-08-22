@@ -130,7 +130,7 @@ namespace RidgesideVillage.Questing
 					k--;
 				}
 			}
-			Random r = new Random((int)Game1.uniqueIDForThisGame + (int)((float)Game1.stats.DaysPlayed * 1.3f));
+			Random r = new Random((int)Game1.uniqueIDForThisGame + (int)(Game1.stats.DaysPlayed * 1.3f));
 			string[] array = new string[2] { NINJABOARDNAME, RSVBOARDNAME };
 			foreach (string type_to_find in array)
 			{

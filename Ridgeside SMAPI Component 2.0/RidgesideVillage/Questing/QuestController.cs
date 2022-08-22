@@ -28,6 +28,7 @@ namespace RidgesideVillage.Questing
 		//is board unlocked in the current map (if there is one)
 		private static readonly PerScreen<bool> SOBoardUnlocked = new();
 		private static readonly PerScreen<bool> QuestBoardUnlocked = new();
+		private static readonly PerScreen<bool> OrdersGenerated = new();
 
 		internal static readonly PerScreen<HashSet<int>> FinishedQuests = new(() => new());
 
@@ -56,6 +57,8 @@ namespace RidgesideVillage.Questing
 			Helper.Events.Display.RenderedWorld += RenderQuestMarkersIfNeeded;
 			Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
 			Helper.Events.GameLoop.DayEnding += OnDayEnding;
+
+			OrdersGenerated.Value = false;
 		}
 
         private static void CheckQuests()
@@ -95,7 +98,12 @@ namespace RidgesideVillage.Questing
 		private static void OnDayEnding(object sender, DayEndingEventArgs e)
         {
             Game1.player.modData["RSVDailiesDone"] = string.Join(",", FinishedQuests.Value);
-        }
+			if (OrdersGenerated.Value && Game1.dayOfMonth % 7 == 0 && Game1.player.IsMainPlayer)
+            {
+				OrdersGenerated.Value = false;
+            }
+
+		}
 
         //load the player's finished quests
         private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
@@ -129,6 +137,12 @@ namespace RidgesideVillage.Questing
         {
 			if(e.Player == Game1.player)
             {
+				if (!OrdersGenerated.Value && Game1.dayOfMonth % 7 == 1 && Game1.IsMasterGame &&
+					(e.NewLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage") || e.NewLocation.Name.Equals("Custom_Ridgeside_RSVNinjaHouse")))
+				{
+					RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
+				}
+
 				if (e.NewLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage"))
 				{
 					CurrentLocationFormarkers.Value = LocationForMarkers.RSVVillage;
@@ -204,17 +218,9 @@ namespace RidgesideVillage.Questing
 			Game1.activeClickableMenu = new RSVSpecialOrderBoard(type);
 		}
 
-        //choose daily quests and shuffle SO if its monday
-        [EventPriority(EventPriority.Low - 10)]
+
 		private static void OnDayStarted(object sender, DayStartedEventArgs e)
 		{
-			//if monday, update special orders
-			if (Game1.dayOfMonth % 7 == 1 && Game1.player.IsMainPlayer)
-			{
-				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
-			}
-
-
 			try
             {
 				Quest townQuest = QuestFactory.GetDailyQuest();
@@ -226,7 +232,6 @@ namespace RidgesideVillage.Questing
 				dailyQuestData.Value = new QuestData(null, null);
 				Log.Error("Failed parsing quests.");
 			}
-			
 		}
 	}
 
