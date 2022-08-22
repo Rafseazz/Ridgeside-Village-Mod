@@ -68,12 +68,8 @@ namespace RidgesideVillage.Questing
 					}
 				}
 			}
-			if (!force_refresh)
-			{
-				return;
-			}
 
-			Log.Trace("Refreshing RSV Special Orders");
+			if (force_refresh) Log.Trace("Refreshing RSV Special Orders");
 			var availableOrders = Game1.player.team.availableSpecialOrders;
 
 			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVBOARDNAME);
@@ -94,22 +90,22 @@ namespace RidgesideVillage.Questing
 			for (int k = 0; k < keys.Count; k++)
 			{
 				string key = keys[k];
-				Log.Trace($"Checking {key}");
+				if (force_refresh) Log.Trace($"Checking {key}");
 				bool invalid = false;
 				bool repeatable = order_data[key].Repeatable.Equals("True", StringComparison.OrdinalIgnoreCase);
 				if (repeatable && Game1.MasterPlayer.team.completedSpecialOrders.ContainsKey(key))
 				{
-					Log.Trace($"Not repeatable and already done");
+					if (force_refresh) Log.Trace($"Not repeatable and already done");
 					invalid = true;
 				}
 				if (Game1.dayOfMonth >= 16 && order_data[key].Duration == "Month")
 				{
-					Log.Trace($"Month SO and after 16th");
+					if (force_refresh) Log.Trace($"Month SO and after 16th");
 					invalid = true;
 				}
 				if (!invalid && !SpecialOrder.CheckTags(order_data[key].RequiredTags))
 				{
-					Log.Trace($"Tags conditions not met.");
+					if (force_refresh) Log.Trace($"Tags conditions not met.");
 					invalid = true;
 				}
 				if (!invalid)
@@ -123,7 +119,7 @@ namespace RidgesideVillage.Questing
 						}
 					}
 				}
-				Log.Trace($"Order {keys[k]} is valid: {!invalid}");
+				if (force_refresh) Log.Trace($"Order {keys[k]} is valid: {!invalid}");
 				if (invalid)
 				{
 					keys.RemoveAt(k);
@@ -178,7 +174,7 @@ namespace RidgesideVillage.Questing
 		private static void LogCurrentlyAvailableSpecialOrders()
         {
 
-			Log.Trace("Refreshed RSV SpecialOders");
+			Log.Trace("Refreshed RSV SpecialOrders");
 			foreach (var SO in Game1.player.team.availableSpecialOrders)
 			{
 				Log.Trace($"{SO.questKey.Value}, {SO.orderType.Value}");
