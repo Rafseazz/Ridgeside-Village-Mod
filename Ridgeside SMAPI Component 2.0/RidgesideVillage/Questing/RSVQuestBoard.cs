@@ -49,8 +49,14 @@ namespace RidgesideVillage.Questing
 				this.dailyQuest = questData.dailyTownQuest;
 				this.acceptQuestButton.visible = !questData.acceptedDailyQuest;
 			}
-
-			this.description = dailyQuest.questDescription;
+			if(dailyQuest != null)
+			{
+				this.description = dailyQuest.questDescription;
+            }
+            else
+            {
+				this.description = "";
+            }
 
 			//setting here and in parent. not sure if parent is needed
 			Texture2D billboardTexture;
@@ -149,7 +155,7 @@ namespace RidgesideVillage.Questing
 
         public override void receiveLeftClick(int x, int y, bool playSound = true)
 		{
-			if (this.acceptQuestButton.visible && this.acceptQuestButton.containsPoint(x, y))
+			if (this.acceptQuestButton.visible && this.acceptQuestButton.containsPoint(x, y) && this.dailyQuest != null)
 			{
 				Game1.playSound("newArtifact");
 				if (this.boardType == NINJAQUESTBOARD)

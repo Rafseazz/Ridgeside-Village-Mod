@@ -90,6 +90,7 @@ namespace RidgesideVillage.Questing
 				Log.Debug($"Townquest accepted: {questData.acceptedDailyQuest}");
 				Log.Debug($"NinjaQuest: {questData?.dailyNinjaHouseQuest?.id}");
 				Log.Debug($"NinjaQuest accepted: {questData.acceptedDailyNinjaHouseQuest}");
+				Log.Debug($"Quests done: {string.Join(",", FinishedQuests.Value)}");
 
 			}
         }
@@ -122,9 +123,10 @@ namespace RidgesideVillage.Questing
 				}                
             }
 
-			Game1.player.team.availableSpecialOrders.OnElementChanged += AvailableSpecialOrders_OnElementChanged;
+			//Game1.player.team.availableSpecialOrders.OnElementChanged += AvailableSpecialOrders_OnElementChanged;
 		}
 
+		/*
 		//to log if other mods mess with it
 		private static void AvailableSpecialOrders_OnElementChanged(Netcode.NetList<SpecialOrder, Netcode.NetRef<SpecialOrder>> list, int index, SpecialOrder oldValue, SpecialOrder newValue)
 		{
@@ -132,6 +134,7 @@ namespace RidgesideVillage.Questing
 			Log.Trace($"Current Ingame Date: {SDate.Now()} {Game1.timeOfDay}");
 			Log.Trace($"{Environment.StackTrace}");
 		}
+		*/
 
 		private static void OnWarped(object sender, WarpedEventArgs e)
         {
@@ -207,6 +210,7 @@ namespace RidgesideVillage.Questing
 		{
 			string type = name.Split()[^1];
 			Log.Trace($"Opening RSVQuestBoard {type}");
+			Log.Trace(dailyQuestData.ToString());
 			Game1.activeClickableMenu = new RSVQuestBoard(dailyQuestData.Value, type);
 		}
 
@@ -223,6 +227,7 @@ namespace RidgesideVillage.Questing
 		{
 			try
             {
+				Log.Trace($"Player has done following quests: {String.Join(",", FinishedQuests.Value)}");
 				Quest townQuest = QuestFactory.GetDailyQuest();
 				Quest ninjaQuest = QuestFactory.GetDailyNinjaQuest();
 				dailyQuestData.Value = new QuestData(townQuest, ninjaQuest);
@@ -250,6 +255,11 @@ namespace RidgesideVillage.Questing
 			this.dailyNinjaHouseQuest = dailyNinjaHouseQuest;
 			this.acceptedDailyNinjaHouseQuest = dailyNinjaHouseQuest is null;
 		}
-	}
+
+        public override string ToString()
+        {
+			return $"Quest data: Town ID {dailyTownQuest?.id} {acceptedDailyQuest}, NinjaHouse ID {dailyNinjaHouseQuest?.id} {acceptedDailyQuest}";
+        }
+    }
 }
 

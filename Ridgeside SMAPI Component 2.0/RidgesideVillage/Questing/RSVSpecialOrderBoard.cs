@@ -53,7 +53,6 @@ namespace RidgesideVillage.Questing
 		}
 
 
-		//need this public for DailySpecialOrders :p
 		//mostly copied from the decompile
 		//randomly chooses 2 SOs for each RSV board
 		public static void UpdateAvailableRSVSpecialOrders(bool force_refresh)
