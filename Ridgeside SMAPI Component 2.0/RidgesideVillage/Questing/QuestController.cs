@@ -181,7 +181,7 @@ namespace RidgesideVillage.Questing
 							new Rectangle(395, 497, 3, 8), Color.White, 0f, new Vector2(1f, 4f), 4f + Math.Max(0f, 0.25f - offset / 16f), SpriteEffects.None, 1f);
 
 					}
-					if (SOBoardUnlocked.Value && !Game1.player.team.acceptedSpecialOrderTypes.Contains("RSVTownSO"))
+					if (SOBoardUnlocked.Value && !Game1.player.team.acceptedSpecialOrderTypes.Contains("RSVTownSO") && Game1.player.team.GetAvailableSpecialOrder(type: "RSVTownSO") != null)
 					{
 						Vector2 questMarkPosition = new Vector2(119f * 64f + 27f, 39f * 64f);
 						sb.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(119f * 64f + 32f, 39.5f * 64f + offset)),
@@ -191,13 +191,13 @@ namespace RidgesideVillage.Questing
 					break;
 				case LocationForMarkers.NinjaHouse:
 					offset = 4f * (float)Math.Round(Math.Sin(Game1.currentGameTime.TotalGameTime.TotalMilliseconds / 250.0), 2);
-					if (SOBoardUnlocked.Value && !dailyQuestData.Value.acceptedDailyNinjaHouseQuest)
+					if (!dailyQuestData.Value.acceptedDailyNinjaHouseQuest)
 					{
 						sb.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(6f * 64f + 32f, 5.5f * 64f + offset)),
 							new Rectangle(395, 497, 3, 8), Color.White, 0f, new Vector2(1f, 4f), 4f + Math.Max(0f, 0.25f - offset / 16f), SpriteEffects.None, 1f);
 
 					}
-					if (!Game1.player.team.acceptedSpecialOrderTypes.Contains("RSVNinjaSO"))
+					if (SOBoardUnlocked.Value && !Game1.player.team.acceptedSpecialOrderTypes.Contains("RSVNinjaSO") && Game1.player.team.GetAvailableSpecialOrder(type: "RSVNinjaSO") != null)
 					{
 						sb.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, new Vector2(3f * 64f + 32f, 3f * 64f + offset)),
 							new Rectangle(395, 497, 3, 8), Color.White, 0f, new Vector2(1f, 4f), 4f + Math.Max(0f, 0.25f - offset / 16f), SpriteEffects.None, 1f);

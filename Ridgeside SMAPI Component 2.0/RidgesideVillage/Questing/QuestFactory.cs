@@ -50,7 +50,7 @@ namespace RidgesideVillage.Questing
 					}
 				}
 			}
-			Log.Trace($"NinjaQuest candidate count: {candidates.Count}")
+			Log.Trace($"NinjaQuest candidate count: {candidates.Count}");
 			if(candidates.Count == 0)
             {
 				return null;
