@@ -135,7 +135,19 @@
 			"Value": "{{PossibleCableCarNPCs}}, Leilani",
 			"When": {
 				"EnableOtherNPCsInCableCar": true,
-				"HasMod |contains=ZoeDoll.NPCLeilani": true
+				"HasMod |contains=ZoeDoll.NPCLeilani": true,
+				"Season": "Summer"
+			}
+		},
+
+		// June
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, June",
+			"When": {
+				"EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=ch20youk.JuneNPC": true,
+				"Season": "Fall, Winter"
 			}
 		},
 

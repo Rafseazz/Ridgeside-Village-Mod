@@ -422,19 +422,18 @@ namespace RidgesideVillage
 
         private static void RenovateOptions()
         {
-            if(!Game1.MasterPlayer.mailReceived.Contains(MINECARTSFIXED))
+            NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
+            if (!Game1.MasterPlayer.mailReceived.Contains(MINECARTSFIXED))
             {
-                NPC sean = Game1.getCharacterFromName("Sean");
-                sean.CurrentDialogue.Clear();
-                sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), sean));
-                Game1.drawDialogue(sean);
+                worker.CurrentDialogue.Clear();
+                worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), worker));
+                Game1.drawDialogue(worker);
             }
             else if (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.ACTIVECONSTRUCTION, out int value) && value > 0)
             {
-                NPC sean = Game1.getCharacterFromName("Sean");
-                sean.CurrentDialogue.Clear();
-                sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AlreadyBuilding"), sean));
-                Game1.drawDialogue(sean);
+                worker.CurrentDialogue.Clear();
+                worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AlreadyBuilding"), worker));
+                Game1.drawDialogue(worker);
             }
             else
             {

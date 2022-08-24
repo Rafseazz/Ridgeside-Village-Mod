@@ -15,6 +15,7 @@ namespace RidgesideVillage.Questing
 {
     internal class RSVSpecialOrderBoard : SpecialOrdersBoard
     {
+		static IModHelper Helper;
 
 		const string NINJABOARDNAME = "RSVNinjaSO";
 		const string RSVBOARDNAME = "RSVTownSO";
@@ -22,24 +23,24 @@ namespace RidgesideVillage.Questing
 		static int safetyTimer = 500;
 
 
-
 		internal RSVSpecialOrderBoard(string boardType = "") : base(boardType)
 		{
+			Helper = ModEntry.Helper;
 			LogCurrentlyAvailableSpecialOrders();
 
 			timestampOpened = (int)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
-			Texture2D billboardTexture;
+			Texture2D texture;
             if (boardType.Equals(NINJABOARDNAME)){
-				billboardTexture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVNinjaSOBoard");
+				texture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVNinjaSOBoard");
 
 			}else if (boardType.Equals(RSVBOARDNAME)){
-				billboardTexture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVTownSO");
+				texture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVTownSO");
             }
             else
             {
-				billboardTexture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\SpecialOrdersBoard");
+				texture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\SpecialOrdersBoard");
 			}
-			//Helper.Reflection.GetField<Texture2D>(this, "billboardTexture").SetValue(billboardTexture); //throws NRE; check later
+			Helper.Reflection.GetField<Texture2D>(this, "billboardTexture").SetValue(texture);
 
 		}
 
@@ -52,10 +53,24 @@ namespace RidgesideVillage.Questing
 			return;
 		}
 
+        public override void draw(SpriteBatch b)
+        {
+            base.draw(b);
+			if (leftOrder is null)
+            {
+				b.DrawString(Game1.dialogueFont, Helper.Translation.Get("RSV.NoNewOrders"), new Vector2(xPositionOnScreen + 125, yPositionOnScreen + 375), Game1.textColor);
+			}
+			if (rightOrder is null)
+            {
+				int indent = (boardType == NINJABOARDNAME) ? 800 : 775;
+				b.DrawString(Game1.dialogueFont, Helper.Translation.Get("RSV.NoNewOrders"), new Vector2(xPositionOnScreen + indent, yPositionOnScreen + 375), Game1.textColor);
+			}
+		}
 
-		//mostly copied from the decompile
-		//randomly chooses 2 SOs for each RSV board
-		public static void UpdateAvailableRSVSpecialOrders(bool force_refresh)
+
+        //mostly copied from the decompile
+        //randomly chooses 2 SOs for each RSV board
+        public static void UpdateAvailableRSVSpecialOrders(bool force_refresh)
 		{
 			if (Game1.player.team.availableSpecialOrders is not null)
 			{

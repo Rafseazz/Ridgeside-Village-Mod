@@ -50,8 +50,8 @@ namespace RidgesideVillage.Questing
 				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
 				Log.Info("RSV Special Orders refreshed");
 			});
-			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => QuestController.PrintQuestState());
-			Helper.ConsoleCommands.Add("RSVCheckQuests", "", (s1,s2) => QuestController.CheckQuests());
+			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => PrintQuestState());
+			Helper.ConsoleCommands.Add("RSVCheckQuests", "", (s1,s2) => CheckQuests());
 			Helper.Events.GameLoop.DayStarted += OnDayStarted;
 			Helper.Events.Player.Warped += OnWarped;
 			Helper.Events.Display.RenderedWorld += RenderQuestMarkersIfNeeded;
@@ -122,30 +122,12 @@ namespace RidgesideVillage.Questing
 					}
 				}                
             }
-
-			//Game1.player.team.availableSpecialOrders.OnElementChanged += AvailableSpecialOrders_OnElementChanged;
 		}
-
-		/*
-		//to log if other mods mess with it
-		private static void AvailableSpecialOrders_OnElementChanged(Netcode.NetList<SpecialOrder, Netcode.NetRef<SpecialOrder>> list, int index, SpecialOrder oldValue, SpecialOrder newValue)
-		{
-			Log.Trace("Available SpecialOrders were changed");
-			Log.Trace($"Current Ingame Date: {SDate.Now()} {Game1.timeOfDay}");
-			Log.Trace($"{Environment.StackTrace}");
-		}
-		*/
 
 		private static void OnWarped(object sender, WarpedEventArgs e)
         {
 			if(e.Player == Game1.player)
             {
-				if (!OrdersGenerated.Value && Game1.dayOfMonth % 7 == 1 && Game1.IsMasterGame &&
-					(e.NewLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage") || e.NewLocation.Name.Equals("Custom_Ridgeside_RSVNinjaHouse")))
-				{
-					RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
-				}
-
 				if (e.NewLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage"))
 				{
 					CurrentLocationFormarkers.Value = LocationForMarkers.RSVVillage;
@@ -223,8 +205,14 @@ namespace RidgesideVillage.Questing
 		}
 
 
+		[EventPriority(EventPriority.Low - 101)]
 		private static void OnDayStarted(object sender, DayStartedEventArgs e)
 		{
+			//if monday, update special orders
+			if (Game1.dayOfMonth % 7 == 1 && Game1.player.IsMainPlayer)
+			{
+				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: false);
+			}
 			try
             {
 				Log.Trace($"Player has done following quests: {String.Join(",", FinishedQuests.Value)}");
