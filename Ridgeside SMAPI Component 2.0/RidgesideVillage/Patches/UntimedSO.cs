@@ -160,11 +160,11 @@ namespace RidgesideVillage
                 case MEETBELINDA:
                     TryRemoveQuest(RSVConstants.PreparationsCompleteQuestID); // Added in line 137, might also have been completed upon reading ninja note 
                     TryCompleteQuest(RSVConstants.NinjaNoteQuestID); // Added in QF hooks currently
-                    TryAddQuest(RSVConstants.RaeUnsealQuestID);
+                    TryAddQuest(RSVConstants.PreUnsealQuestID);
                     break;
 
                 case PREUNSEAL:
-                    TryCompleteQuest(RSVConstants.RaeUnsealQuestID);
+                    TryCompleteQuest(RSVConstants.PreUnsealQuestID);
                     // Crystal quests are then added
                     break;
 
