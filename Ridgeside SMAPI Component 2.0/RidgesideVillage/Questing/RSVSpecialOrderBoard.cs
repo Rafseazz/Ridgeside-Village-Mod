@@ -22,6 +22,9 @@ namespace RidgesideVillage.Questing
 		int timestampOpened;
 		static int safetyTimer = 500;
 
+		const string PIKAQUEST = "RSV.SpecialOrder.PikaDeliver";
+		const string PIKATOPIC = "pika_pickup";
+
 
 		internal RSVSpecialOrderBoard(string boardType = "") : base(boardType)
 		{
@@ -64,6 +67,31 @@ namespace RidgesideVillage.Questing
             {
 				int indent = (boardType == NINJABOARDNAME) ? 800 : 775;
 				b.DrawString(Game1.dialogueFont, Helper.Translation.Get("RSV.NoNewOrders"), new Vector2(xPositionOnScreen + indent, yPositionOnScreen + 375), Game1.textColor);
+			}
+		}
+
+        public override void receiveLeftClick(int x, int y, bool playSound = true)
+        {
+			bool hadQuestBefore = false;
+			foreach (SpecialOrder specialOrder in Game1.player.team.specialOrders)
+			{
+				if (specialOrder.questKey.Value == PIKAQUEST)
+				{
+					hadQuestBefore = true;
+				}
+			}
+			base.receiveLeftClick(x, y, playSound);
+			foreach (SpecialOrder specialOrder in Game1.player.team.specialOrders)
+			{
+				if ((specialOrder.questKey.Value == PIKAQUEST) && (!hadQuestBefore))
+				{
+					foreach (Farmer player in Game1.getAllFarmers())
+					{
+						player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
+					}
+					Log.Trace($"RSV: Added pika_pickup conversation topic.");
+					return;
+				}
 			}
 		}
 
