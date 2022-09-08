@@ -12,7 +12,9 @@
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Sari",
-		"When": { "HasSeenEvent": 75160273 },
+		"When": {
+			"HasSeenEvent: hostPlayer |contains=75160273, 75160386": true
+		},
 		"Entries": {
 			"spring": "0 Custom_Ridgeside_RSVTheHike 45 59 2/610 Custom_Ridgeside_RSVTheHike 45 58 2/1800 Custom_Ridgeside_RSVTheHike 62 43 2",
 					},
