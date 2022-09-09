@@ -88,8 +88,12 @@ namespace RidgesideVillage.Questing
 				{
 					foreach (Farmer player in Game1.getAllFarmers())
 					{
-						Log.Trace($"RSV: Added pika_pickup conversation topic.");
+						if (player.activeDialogueEvents.ContainsKey(PIKATOPIC))
+                        {
+							player.activeDialogueEvents.Remove(PIKATOPIC);
+                        }
 						player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
+						Log.Trace($"RSV: Added pika_pickup conversation topic.");
 					}
 					return;
 				}
