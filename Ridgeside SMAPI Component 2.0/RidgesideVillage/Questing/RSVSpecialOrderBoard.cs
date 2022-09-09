@@ -49,7 +49,7 @@ namespace RidgesideVillage.Questing
 
 		public override void receiveRightClick(int x, int y, bool playSound = true)
 		{
-			if (this.timestampOpened + safetyTimer < Game1.currentGameTime.TotalGameTime.TotalMilliseconds)
+			if (timestampOpened + safetyTimer < Game1.currentGameTime.TotalGameTime.TotalMilliseconds)
 			{
 				base.receiveRightClick(x, y, playSound);
 			}
@@ -80,6 +80,7 @@ namespace RidgesideVillage.Questing
 					hadQuestBefore = true;
 				}
 			}
+			Log.Trace($"RSV: Had order before is {hadQuestBefore}");
 			base.receiveLeftClick(x, y, playSound);
 			foreach (SpecialOrder specialOrder in Game1.player.team.specialOrders)
 			{
@@ -87,9 +88,9 @@ namespace RidgesideVillage.Questing
 				{
 					foreach (Farmer player in Game1.getAllFarmers())
 					{
+						Log.Trace($"RSV: Added pika_pickup conversation topic.");
 						player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
 					}
-					Log.Trace($"RSV: Added pika_pickup conversation topic.");
 					return;
 				}
 			}
