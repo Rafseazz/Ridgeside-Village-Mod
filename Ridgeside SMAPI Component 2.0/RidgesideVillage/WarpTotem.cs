@@ -18,7 +18,7 @@ namespace RidgesideVillage
 
     internal static class WarpTotem
     {
-        static readonly string Destination = "Custom_Ridgeside_Ridge";
+        static readonly string Destination = RSVConstants.L_RIDGE;
         static readonly int Dest_X = 18;
         static readonly int Dest_Y = 10;
 

@@ -20,8 +20,6 @@ namespace RidgesideVillage
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
-        const string PIKAQUEST = "RSV.SpecialOrder.PikaDeliver";
-
         public static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
@@ -36,7 +34,7 @@ namespace RidgesideVillage
         {
             try
             {
-                if (__instance.questKey.Value != PIKAQUEST)
+                if (__instance.questKey.Value != RSVConstants.SO_PIKAQUEST)
                 {
                     return true;
                 }

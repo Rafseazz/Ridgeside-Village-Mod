@@ -16,30 +16,22 @@ namespace RidgesideVillage.Questing
 {
     internal class RSVQuestBoard : Billboard
     {
-
-
 		static IModHelper Helper => ModEntry.Helper;
 		int timestampOpened;
 		static int safetyTimer = 500;
 		internal Quest dailyQuest;
 		private QuestData questData;
 		private string boardType;
-		const string VILLAGEBOARD = "VillageQuestBoard";
-		const string NINJAQUESTBOARD = "RSVNinjaBoard";
 		Texture2D billboardTexture;
 		Color fontColor = Game1.textColor;
-
 		string description;
-		
-
-  
 
         internal RSVQuestBoard(QuestData questData, string boardType = "") : base(dailyQuest: true)
         {
 			this.questData = questData;
 			this.boardType = boardType;
 			timestampOpened = (int)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
-			if( boardType == NINJAQUESTBOARD)
+			if( boardType == RSVConstants.Z_NINJAQUESTBOARD)
             {
 				this.dailyQuest = questData.dailyNinjaHouseQuest;
 				this.acceptQuestButton.visible = !questData.acceptedDailyNinjaHouseQuest;
@@ -60,13 +52,13 @@ namespace RidgesideVillage.Questing
 
 			//setting here and in parent. not sure if parent is needed
 			Texture2D billboardTexture;
-			Log.Debug($"{boardType}, {VILLAGEBOARD}, {boardType.Equals(VILLAGEBOARD)}");
-			if (boardType.Equals(VILLAGEBOARD))
+			Log.Debug($"{boardType}, {RSVConstants.Z_VILLAGEBOARD}, {boardType.Equals(RSVConstants.Z_VILLAGEBOARD)}");
+			if (boardType.Equals(RSVConstants.Z_VILLAGEBOARD))
 			{
 				billboardTexture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVQuestBoard");
 
 			}
-			else if (boardType.Equals(NINJAQUESTBOARD))
+			else if (boardType.Equals(RSVConstants.Z_NINJAQUESTBOARD))
 			{
 				billboardTexture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVNinjaBoard");
 			}
@@ -81,7 +73,6 @@ namespace RidgesideVillage.Questing
 
 		}
 
-
 		public override void receiveRightClick(int x, int y, bool playSound = true)
 		{
 			if (this.timestampOpened + safetyTimer < Game1.currentGameTime.TotalGameTime.TotalMilliseconds)
@@ -90,6 +81,7 @@ namespace RidgesideVillage.Questing
 			}
 			return;
 		}
+
 		public override void draw(SpriteBatch b)
 		{
 			bool hide_mouse = false;
@@ -128,7 +120,7 @@ namespace RidgesideVillage.Questing
 				base.drawMouse(b);
 			}
 		}
-
+		
 		public override void performHoverAction(int x, int y)
 		{
 			if (dailyQuest!= null && this.acceptQuestButton.visible)
@@ -158,7 +150,7 @@ namespace RidgesideVillage.Questing
 			if (this.acceptQuestButton.visible && this.acceptQuestButton.containsPoint(x, y) && this.dailyQuest != null)
 			{
 				Game1.playSound("newArtifact");
-				if (this.boardType == NINJAQUESTBOARD)
+				if (this.boardType == RSVConstants.Z_NINJAQUESTBOARD)
 				{
 					this.questData.acceptedDailyNinjaHouseQuest = true;
 				}

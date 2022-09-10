@@ -17,7 +17,7 @@ namespace RidgesideVillage
     {
         static IModHelper Helper;
         static IMonitor Monitor;
-        const string STAYHOME = "RSV.UndreyaStayHome";
+        
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -33,7 +33,7 @@ namespace RidgesideVillage
             }
             else
             {
-                if (!Game1.player.mailReceived.Contains(STAYHOME))
+                if (!Game1.player.mailReceived.Contains(RSVConstants.M_UNDREYAHOME))
                 {
                         var responses = new List<Response>
                     {
@@ -44,14 +44,14 @@ namespace RidgesideVillage
                     {
                         delegate
                         {
-                            Game1.player.mailReceived.Add(STAYHOME);
+                            Game1.player.mailReceived.Add(RSVConstants.M_UNDREYAHOME);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("RSV.UndreyaWontPlay"));
                         },
                         delegate{}
                     };
                         Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("RSV.UndreyaSchedStop"), responses, responseActions);
                 }
-                else if (Game1.player.mailReceived.Contains(STAYHOME))
+                else if (Game1.player.mailReceived.Contains(RSVConstants.M_UNDREYAHOME))
                 {
                     var responses = new List<Response>
                     {
@@ -62,7 +62,7 @@ namespace RidgesideVillage
                     {
                         delegate
                         {
-                            Game1.player.mailReceived.Remove(STAYHOME);
+                            Game1.player.mailReceived.Remove(RSVConstants.M_UNDREYAHOME);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("RSV.UndreyaWillPlay"));
                         },
                         delegate{}

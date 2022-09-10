@@ -21,8 +21,6 @@ namespace RidgesideVillage
 
         static bool dialogueShown = false;
 
-        const int HasUnsealedRae = 75160259;
-        const int RealmCleansed = 75160263;
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -35,7 +33,7 @@ namespace RidgesideVillage
 
         private static void GetFoxbloomHint(string tileActionString, Vector2 position)
         {
-            if (!Game1.player.eventsSeen.Contains(RealmCleansed))
+            if (!Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("FoxbloomHint.Uncleansed"));
                 return;
@@ -104,7 +102,7 @@ namespace RidgesideVillage
         private static void OpenDaiaBook()
         {
             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Daia.BookOpen"));
-            if (!Game1.player.eventsSeen.Contains(HasUnsealedRae))
+            if (!Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL))
             {
                 var responses = new List<Response>
                 {
@@ -137,7 +135,7 @@ namespace RidgesideVillage
 
                 Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Daia.BookPages"), responses, responseActions);
             }
-            else if (Game1.player.eventsSeen.Contains(HasUnsealedRae) && !Game1.player.eventsSeen.Contains(75160265))
+            else if (Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL) && !Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
             {
                 var responses = new List<Response>
                 {
@@ -185,7 +183,7 @@ namespace RidgesideVillage
 
                 Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Daia.BookPages"), responses, responseActions);
             }
-            else if (Game1.player.eventsSeen.Contains(75160265))
+            else if (Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
             {
                 var responses = new List<Response>
                 {

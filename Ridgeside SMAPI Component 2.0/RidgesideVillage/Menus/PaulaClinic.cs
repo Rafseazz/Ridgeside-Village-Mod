@@ -72,13 +72,13 @@ namespace RidgesideVillage
         {
             if(Game1.player.health < (Game1.player.maxHealth * 0.8) && Game1.player.Money >= cost)
             {
-                var location = Game1.getLocationFromName("Custom_Ridgeside_PaulaClinic");
+                var location = Game1.getLocationFromName(RSVConstants.L_CLINIC);
                 
                 var events = location.GetLocationEvents();
                 
                 string eventString = events["healthCheckup"].Replace("{cost}", cost.ToString());
 
-                UtilFunctions.StartEvent(new Event(eventString), "Custom_Ridgeside_PaulaClinic", 16, 15);
+                UtilFunctions.StartEvent(new Event(eventString), RSVConstants.L_CLINIC, 16, 15);
 
                 Game1.delayedActions.Add(new DelayedAction(2000, delegate {
                     Game1.player.health = Game1.player.maxHealth;
@@ -98,13 +98,13 @@ namespace RidgesideVillage
         {
             if (Game1.player.stamina < (Game1.player.MaxStamina * 0.8) && Game1.player.Money >= cost)
             {
-                var location = Game1.getLocationFromName("Custom_Ridgeside_PaulaClinic");
+                var location = Game1.getLocationFromName(RSVConstants.L_CLINIC);
 
                 var events = location.GetLocationEvents();///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end";
                
                 string eventString = events["staminaCheckup"].Replace("{cost}", cost.ToString());
 
-                UtilFunctions.StartEvent(new Event(eventString), "Custom_Ridgeside_PaulaClinic", 16, 15);
+                UtilFunctions.StartEvent(new Event(eventString), RSVConstants.L_CLINIC, 16, 15);
 
                 Game1.delayedActions.Add(new DelayedAction(2000, delegate {
                     Game1.player.Stamina = Game1.player.MaxStamina;

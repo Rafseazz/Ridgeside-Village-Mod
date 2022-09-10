@@ -13,16 +13,12 @@ namespace RidgesideVillage
     internal static class TortsGifts
     {
         static IModHelper Helper;
-        const string TORTSREALM = "Custom_Ridgeside_TortsRealm";
 
         const string MISTBLOOM = "Mountain Mistbloom";
         const string FOXTAIL = "Old Lucky Foxtail Charm";
         const string LOVERPIE = "Strawberry Lover Pie";
-        const string LOVERFLAG = "RSV.LoverMailFlag";
         const string FAIRYFISH = "Fairytale Lionfish";
-        const string FAIRYFLAG = "RSV.FairyMailFlag";
         const string NIGHTBLACK = "Nightblack Diamond";
-        const string METEORFLAG = "RSV.MeteorMailFlag";
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -70,13 +66,13 @@ namespace RidgesideVillage
                     gifter.team.sharedDailyLuck.Value = 0.12;
                     break;
                 case LOVERPIE:
-                    gifter.mailReceived.Add(LOVERFLAG);
+                    gifter.mailReceived.Add(RSVConstants.M_TORTSLOVE);
                     break;
                 case FAIRYFISH:
-                    gifter.mailReceived.Add(FAIRYFLAG);
+                    gifter.mailReceived.Add(RSVConstants.M_TORTSFAIRY);
                     break;
                 case NIGHTBLACK:
-                    gifter.mailReceived.Add(METEORFLAG);
+                    gifter.mailReceived.Add(RSVConstants.M_TORTSMETEOR);
                     break;
                 default:
                     return;
@@ -103,17 +99,17 @@ namespace RidgesideVillage
             if (__result != null)
                 return;
             Random random = new Random((int)Game1.stats.DaysPlayed + (int)Game1.uniqueIDForThisGame / 2);
-            if (Game1.player.mailReceived.Contains(FAIRYFLAG) && random.NextDouble() < 0.25)
+            if (Game1.player.mailReceived.Contains(RSVConstants.M_TORTSFAIRY) && random.NextDouble() < 0.25)
             {
                 Log.Trace("RSV: Setting fairy event chance to 25%");
                 __result = new FairyEvent();
-                Game1.player.RemoveMail(FAIRYFLAG);
+                Game1.player.RemoveMail(RSVConstants.M_TORTSFAIRY);
             }
-            else if (Game1.player.mailReceived.Contains(METEORFLAG) && random.NextDouble() < 0.10)
+            else if (Game1.player.mailReceived.Contains(RSVConstants.M_TORTSMETEOR) && random.NextDouble() < 0.10)
             {
                 Log.Trace("RSV: Setting meteor event chance to 10%");
                 __result = new SoundInTheNightEvent(1);
-                Game1.player.RemoveMail(METEORFLAG);
+                Game1.player.RemoveMail(RSVConstants.M_TORTSMETEOR);
             }
         }
 
@@ -123,11 +119,11 @@ namespace RidgesideVillage
             {
                 try
                 {
-                    if (Game1.player.mailReceived.Contains(LOVERFLAG))
+                    if (Game1.player.mailReceived.Contains(RSVConstants.M_TORTSLOVE))
                     {
                         Log.Trace("RSV: Setting birth event chance to 50%");
                         chance = 0.5f;
-                        Game1.player.RemoveMail(LOVERFLAG);
+                        Game1.player.RemoveMail(RSVConstants.M_TORTSLOVE);
                     }
                 }
                 catch{}

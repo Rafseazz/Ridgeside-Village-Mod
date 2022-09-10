@@ -8,23 +8,12 @@ using StardewValley;
 using StardewModdingAPI.Events;
 using Microsoft.Xna.Framework;
 using StardewValley.Menus;
+using SpaceCore.Events;
 
 namespace RidgesideVillage
 {
     internal static class SpecialOrders
     {
-        const string FIXMINECART = "RSV.UntimedSpecialOrder.FixMinecart";
-        const string FIXGREENHOUSE = "RSV.UntimedSpecialOrder.FixGreenhouse";
-        const string DAIAQUEST = "RSV.UntimedSpecialOrder.DaiaQuest";
-        const string RedCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalRed";
-        const string OrangeCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalOrange";
-        const string YellowCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalYellow";
-        const string GreenCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalGreen";
-        const string BlueCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalBlue";
-        const string PurpleCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalPurple";
-        const string GrayCRYSTALQUEST = "RSV.UntimedSpecialOrder.ColorCrystalGray";
-        const string HAUNTEDGH = "RSV.UntimedSpecialOrder.HauntedGH";
-
         static IModHelper Helper;
         static IMonitor Monitor;
         internal static void Initialize(IMod ModInstance)
@@ -34,72 +23,54 @@ namespace RidgesideVillage
 
             //Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.OneSecondUpdateTicked += OnUpdate;
+            SpaceEvents.OnEventFinished += OnEventFinished;
         }
 
         private static void OnUpdate(object sender, OneSecondUpdateTickedEventArgs e)
         {
-            if (Game1.player.eventsSeen.Contains(75160190) && !Game1.player.team.SpecialOrderActive(FIXMINECART) && !Game1.player.team.completedSpecialOrders.ContainsKey(FIXMINECART))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(FIXMINECART, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160089) && !Game1.player.team.SpecialOrderActive(FIXGREENHOUSE) && !Game1.player.team.completedSpecialOrders.ContainsKey(FIXGREENHOUSE))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(FIXGREENHOUSE, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160254) && !Game1.player.team.SpecialOrderActive(DAIAQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(DAIAQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(DAIAQUEST, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160257) && !Game1.player.team.SpecialOrderActive(RedCRYSTALQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(RedCRYSTALQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RedCRYSTALQUEST, null));
-                Game1.player.mailReceived.Add("CrystalsFlagOngoing");
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160257) && !Game1.player.team.SpecialOrderActive(OrangeCRYSTALQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(OrangeCRYSTALQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(OrangeCRYSTALQUEST, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160257) && !Game1.player.team.SpecialOrderActive(YellowCRYSTALQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(YellowCRYSTALQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(YellowCRYSTALQUEST, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160257) && !Game1.player.team.SpecialOrderActive(GreenCRYSTALQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(GreenCRYSTALQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(GreenCRYSTALQUEST, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160257) && !Game1.player.team.SpecialOrderActive(BlueCRYSTALQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(BlueCRYSTALQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(BlueCRYSTALQUEST, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160257) && !Game1.player.team.SpecialOrderActive(PurpleCRYSTALQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(PurpleCRYSTALQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(PurpleCRYSTALQUEST, null));
-            }
-
-            if (Game1.player.eventsSeen.Contains(75160257) && !Game1.player.team.SpecialOrderActive(GrayCRYSTALQUEST) && !Game1.player.team.completedSpecialOrders.ContainsKey(GrayCRYSTALQUEST))
-            {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(GrayCRYSTALQUEST, null));
-            }
 
             //Specific code to give message to player upon finishing crystals quest
-            if (Game1.player.team.completedSpecialOrders.ContainsKey(RedCRYSTALQUEST) && Game1.player.team.completedSpecialOrders.ContainsKey(OrangeCRYSTALQUEST) && Game1.player.team.completedSpecialOrders.ContainsKey(YellowCRYSTALQUEST) && Game1.player.team.completedSpecialOrders.ContainsKey(GreenCRYSTALQUEST) && Game1.player.team.completedSpecialOrders.ContainsKey(BlueCRYSTALQUEST) && Game1.player.team.completedSpecialOrders.ContainsKey(PurpleCRYSTALQUEST) && Game1.player.team.completedSpecialOrders.ContainsKey(GrayCRYSTALQUEST) && Game1.player.mailReceived.Contains("CrystalsFlagOngoing"))
+            if (Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_RedCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_OrangeCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_YellowCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_GreenCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_BlueCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_PurpleCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_GrayCRYSTAL) && Game1.player.mailReceived.Contains(RSVConstants.M_CRYSTALS))
             {
-                Game1.player.mailReceived.Remove("CrystalsFlagOngoing");
+                Game1.player.mailReceived.Remove(RSVConstants.M_CRYSTALS);
                 Game1.playSound("healSound");
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("CompleteCrystalsNotif"));
             }
+        }
 
-            if (Game1.player.eventsSeen.Contains(75160269) && !Game1.player.team.SpecialOrderActive(HAUNTEDGH) && !Game1.player.team.completedSpecialOrders.ContainsKey(HAUNTEDGH))
+        static void OnEventFinished(object sender, EventArgs e)
+        {
+            if (!Game1.player.IsMainPlayer)
+                return;
+
+            switch (Game1.CurrentEvent.id)
             {
-                Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(HAUNTEDGH, null));
+                case RSVConstants.E_LENNYCARTS:
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_FIXMINECART, null));
+                    break;
+
+                case RSVConstants.E_LENNYGH:
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_FIXGREENHOUSE, null));
+                    break;
+
+                case RSVConstants.E_MEETDAIA:
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_DAIAQUEST, null));
+                    break;
+
+                case RSVConstants.E_SPIRITGH2:
+                        Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_HAUNTEDGH, null));
+                    break;
+
+                case RSVConstants.E_PREUNSEAL:
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_RedCRYSTAL, null));
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_OrangeCRYSTAL, null));
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_YellowCRYSTAL, null));
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_GreenCRYSTAL, null));
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_BlueCRYSTAL, null));
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_PurpleCRYSTAL, null));
+                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_GrayCRYSTAL, null));
+                    Game1.player.mailReceived.Add(RSVConstants.M_CRYSTALS);
+                    break;
             }
         }
     }

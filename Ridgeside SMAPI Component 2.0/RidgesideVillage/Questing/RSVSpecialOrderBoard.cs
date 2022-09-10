@@ -17,13 +17,8 @@ namespace RidgesideVillage.Questing
     {
 		static IModHelper Helper;
 
-		const string NINJABOARDNAME = "RSVNinjaSO";
-		const string RSVBOARDNAME = "RSVTownSO";
 		int timestampOpened;
 		static int safetyTimer = 500;
-
-		const string PIKAQUEST = "RSV.SpecialOrder.PikaDeliver";
-		const string PIKATOPIC = "pika_pickup";
 
 
 		internal RSVSpecialOrderBoard(string boardType = "") : base(boardType)
@@ -33,10 +28,10 @@ namespace RidgesideVillage.Questing
 
 			timestampOpened = (int)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
 			Texture2D texture;
-            if (boardType.Equals(NINJABOARDNAME)){
+            if (boardType.Equals(RSVConstants.Z_NINJAQUESTBOARD)){
 				texture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVNinjaSOBoard");
 
-			}else if (boardType.Equals(RSVBOARDNAME)){
+			}else if (boardType.Equals(RSVConstants.Z_VILLAGEBOARD)){
 				texture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVTownSO");
             }
             else
@@ -65,7 +60,7 @@ namespace RidgesideVillage.Questing
 			}
 			if (rightOrder is null)
             {
-				int indent = (boardType == NINJABOARDNAME) ? 800 : 775;
+				int indent = (boardType == RSVConstants.Z_NINJAQUESTBOARD) ? 800 : 775;
 				b.DrawString(Game1.dialogueFont, Helper.Translation.Get("RSV.NoNewOrders"), new Vector2(xPositionOnScreen + indent, yPositionOnScreen + 375), Game1.textColor);
 			}
 		}
@@ -75,7 +70,7 @@ namespace RidgesideVillage.Questing
 			bool hadQuestBefore = false;
 			foreach (SpecialOrder specialOrder in Game1.player.team.specialOrders)
 			{
-				if (specialOrder.questKey.Value == PIKAQUEST)
+				if (specialOrder.questKey.Value == RSVConstants.SO_PIKAQUEST)
 				{
 					hadQuestBefore = true;
 				}
@@ -84,15 +79,15 @@ namespace RidgesideVillage.Questing
 			base.receiveLeftClick(x, y, playSound);
 			foreach (SpecialOrder specialOrder in Game1.player.team.specialOrders)
 			{
-				if ((specialOrder.questKey.Value == PIKAQUEST) && (!hadQuestBefore))
+				if ((specialOrder.questKey.Value == RSVConstants.SO_PIKAQUEST) && (!hadQuestBefore))
 				{
 					foreach (Farmer player in Game1.getAllFarmers())
 					{
-						if (player.activeDialogueEvents.ContainsKey(PIKATOPIC))
+						if (player.activeDialogueEvents.ContainsKey(RSVConstants.CT_PIKATOPIC))
                         {
-							player.activeDialogueEvents.Remove(PIKATOPIC);
+							player.activeDialogueEvents.Remove(RSVConstants.CT_PIKATOPIC);
                         }
-						player.activeDialogueEvents.Add(PIKATOPIC, specialOrder.GetDaysLeft());
+						player.activeDialogueEvents.Add(RSVConstants.CT_PIKATOPIC, specialOrder.GetDaysLeft());
 						Log.Trace($"RSV: Added pika_pickup conversation topic.");
 					}
 					return;
@@ -119,12 +114,12 @@ namespace RidgesideVillage.Questing
 			if (force_refresh) Log.Trace("Refreshing RSV Special Orders");
 			var availableOrders = Game1.player.team.availableSpecialOrders;
 
-			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVBOARDNAME);
-			Game1.player.team.acceptedSpecialOrderTypes.Remove(NINJABOARDNAME);
+			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVConstants.Z_VILLAGEBOARD);
+			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVConstants.Z_NINJAQUESTBOARD);
 
 			for(int i=0; i< availableOrders.Count; i++)
             {
-                if (availableOrders[i].orderType.Equals(NINJABOARDNAME) || availableOrders[i].orderType.Equals(RSVBOARDNAME))
+                if (availableOrders[i].orderType.Equals(RSVConstants.Z_NINJAQUESTBOARD) || availableOrders[i].orderType.Equals(RSVConstants.Z_VILLAGEBOARD))
                 {
 					Game1.player.team.availableSpecialOrders.RemoveAt(i);
 					i--;
@@ -174,7 +169,7 @@ namespace RidgesideVillage.Questing
 				}
 			}
 			Random r = new Random((int)Game1.uniqueIDForThisGame + (int)(Game1.stats.DaysPlayed * 1.3f));
-			string[] array = new string[2] { NINJABOARDNAME, RSVBOARDNAME };
+			string[] array = new string[2] { RSVConstants.Z_NINJAQUESTBOARD, RSVConstants.Z_VILLAGEBOARD };
 			foreach (string type_to_find in array)
 			{
 				List<string> typed_keys = new List<string>();

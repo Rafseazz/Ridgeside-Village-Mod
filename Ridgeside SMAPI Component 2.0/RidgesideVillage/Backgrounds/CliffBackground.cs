@@ -17,8 +17,6 @@ namespace RidgesideVillage
         static IModHelper Helper => ModEntry.Helper;
         static IMonitor Monitor => ModEntry.ModMonitor;
 
-        const string cliffName = "Custom_Ridgeside_RSVCliff";
-
         int mapWidth;
         int mapHeight;
         int centerX;
@@ -41,15 +39,15 @@ namespace RidgesideVillage
 
         private void OnWarped(object sender, WarpedEventArgs e)
         {
-            if (e.OldLocation.Name.Equals(cliffName))
+            if (e.OldLocation.Name.Equals(RSVConstants.L_CLIFF))
             {
-                if (!e.NewLocation.Name.Equals(cliffName))
+                if (!e.NewLocation.Name.Equals(RSVConstants.L_CLIFF))
                 {
                     Helper.Events.Display.RenderingWorld -= OnRenderingWorld;
                     this.isSubscribed = false;
                 }
             }
-            else if (e.NewLocation.Name.Equals(cliffName) && !this.isSubscribed)
+            else if (e.NewLocation.Name.Equals(RSVConstants.L_CLIFF) && !this.isSubscribed)
             {
                 Helper.Events.Display.RenderingWorld += OnRenderingWorld;
                 this.isSubscribed = true;
@@ -59,7 +57,7 @@ namespace RidgesideVillage
 
         private void setup()
         {
-            GameLocation location = Game1.getLocationFromName(cliffName);
+            GameLocation location = Game1.getLocationFromName(RSVConstants.L_CLIFF);
             mapHeight = location.Map.DisplayHeight;
             mapWidth = location.Map.DisplayWidth;
             centerX = mapWidth / 2;

@@ -23,17 +23,11 @@ namespace RidgesideVillage
 		static IModHelper Helper;
 		static IMonitor Monitor;
 
-		public const string FARMUPGRADE = "Summit House Upgrade";
-		public const string CLIMATECONTROL = "Climate Control";
-		public const string SPRINKLERS = "Sprinkler System";
-		public const string OREAREA = "Ore Area";
-		public const string SHED = "Summit Shed";
-		public const string HOUSETOPIC = "RSV.HouseCT";
-		public const string CLIMATETOPIC = "RSV.ClimateCT";
-		public const string SPRINKLERTOPIC = "RSV.SprinklerCT";
-		public const string ORETOPIC = "RSV.OreCT";
-		public const string SHEDTOPIC = "RSV.ShedCT";
-		public const string ACTIVECONSTRUCTION = "RSV.ActiveConstruction";
+		const string FARMUPGRADE = "Summit House Upgrade";
+		const string CLIMATECONTROL = "Climate Control";
+		const string SPRINKLERS = "Sprinkler System";
+		const string OREAREA = "Ore Area";
+		const string SHED = "Summit Shed";
 
 		public const int region_backButton = 101;
 
@@ -141,35 +135,35 @@ namespace RidgesideVillage
 			resetBounds();
 			blueprints = new List<BluePrint>();
 
-			if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.HOUSEUPGRADED))
+			if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_HOUSEUPGRADED))
 			{
 				blueprints.Add(new BluePrint(FARMUPGRADE));
 			}
 			else
 			{
-				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
+				if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_CLIMATECONTROLLED))
 				{
 					blueprints.Add(new BluePrint(CLIMATECONTROL));
 				}
-				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.GOTSPRINKLERS))
+				if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_GOTSPRINKLERS))
 				{
 					blueprints.Add(new BluePrint(SPRINKLERS));
 				}
-				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.OREAREAOPENED))
+				if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_OREAREAOPENED))
 				{
 					blueprints.Add(new BluePrint(OREAREA));
 				}
-				if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.SHEDADDED))
+				if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_SHEDADDED))
 				{
 					blueprints.Add(new BluePrint(SHED));
 				}
 			}
 			if (blueprints.Count == 0)
             {
-				NPC sean = Game1.getCharacterFromName("Sean");
-				sean.CurrentDialogue.Clear();
-				sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AllRenovated"), sean));
-				Game1.drawDialogue(sean);
+				NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
+				worker.CurrentDialogue.Clear();
+				worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AllRenovated"), worker));
+				Game1.drawDialogue(worker);
 				return;
             }
 			setNewActiveBlueprint();
@@ -664,22 +658,22 @@ namespace RidgesideVillage
 				switch (currentBuilding.name)
 				{
 					case FARMUPGRADE:
-						Game1.MasterPlayer.activeDialogueEvents.Add(HOUSETOPIC, 3);
+						Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_HOUSEUPGRADE, 3);
 						break;
 					case CLIMATECONTROL:
-						Game1.MasterPlayer.activeDialogueEvents.Add(CLIMATETOPIC, 3);
+						Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_CLIMATE, 3);
 						break;
 					case SPRINKLERS:
-						Game1.MasterPlayer.activeDialogueEvents.Add(SPRINKLERTOPIC, 3);
+						Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_SPRINKLER, 3);
 						break;
 					case OREAREA:
-						Game1.MasterPlayer.activeDialogueEvents.Add(ORETOPIC, 3);
+						Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_OREAREA, 3);
 						break;
 					case SHED:
-						Game1.MasterPlayer.activeDialogueEvents.Add(SHEDTOPIC, 3);
+						Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_SHED, 3);
 						break;
 				}
-				Game1.MasterPlayer.activeDialogueEvents.Add(ACTIVECONSTRUCTION, 3);
+				Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_ACTIVECONSTRUCTION, 3);
 				return true;
 			}
 			catch (Exception e)
@@ -740,17 +734,17 @@ namespace RidgesideVillage
 		{
 			exitThisMenu();
 			Game1.player.forceCanMove();
-			NPC sean = Game1.getCharacterFromName("Sean");
-			sean.CurrentDialogue.Clear();
+			NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
+			worker.CurrentDialogue.Clear();
 			if (CurrentBlueprint.daysToConstruct <= 0)
 			{
-				sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Instant", new { project = buildingName }), sean));
+				worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Instant", new { project = buildingName }), worker));
 			}
             else
             {
-				sean.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Construction", new { project = buildingName }), sean));
+				worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Construction", new { project = buildingName }), worker));
 			}
-			Game1.drawDialogue(sean);
+			Game1.drawDialogue(worker);
 		}
 
 		

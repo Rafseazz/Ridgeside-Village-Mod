@@ -21,8 +21,6 @@ namespace RidgesideVillage
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
 
-        const string TORTSREALM = "Custom_Ridgeside_TortsRealm";
-
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
@@ -62,13 +60,13 @@ namespace RidgesideVillage
 
         public static void GameLocation_resetLocalState_postfix(ref GameLocation __instance)
         {
-            if (__instance.NameOrUniqueName == TORTSREALM)
+            if (__instance.NameOrUniqueName == RSVConstants.L_TORTSREALM)
                 Game1.background = new TortsBackground();
         }
 
         public static void GameLocation_cleanUpBeforePlayerExit_postfix(ref GameLocation __instance)
         {
-            if (__instance.NameOrUniqueName == TORTSREALM)
+            if (__instance.NameOrUniqueName == RSVConstants.L_TORTSREALM)
                 Game1.background = null;
         }
 

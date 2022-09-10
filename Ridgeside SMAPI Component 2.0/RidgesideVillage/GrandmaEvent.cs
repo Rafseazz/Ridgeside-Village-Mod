@@ -17,8 +17,6 @@ namespace RidgesideVillage
     {
 		static IModHelper Helper;
 		static IMonitor Monitor;
-		const int lorenzo_id = 75160333;
-		const int grandma_id = 75160383;
 
 		internal static void Initialize(IMod ModInstance)
 		{
@@ -33,12 +31,12 @@ namespace RidgesideVillage
 		{
 			if (!Game1.IsMasterGame)
 				return;
-			if (Game1.player.hasItemInInventoryNamed("Old Lucky Foxtail Charm") && Game1.player.eventsSeen.Contains(lorenzo_id) && !Game1.player.eventsSeen.Contains(grandma_id))
+			if (Game1.player.hasItemInInventoryNamed("Old Lucky Foxtail Charm") && Game1.player.eventsSeen.Contains(RSVConstants.E_LORENZO1H) && !Game1.player.eventsSeen.Contains(RSVConstants.E_GRANDMA))
 			{
 				var location = Game1.getLocationFromName("FarmHouse");
 				var events = location.GetLocationEvents();
 				string eventString = events["grandmaMessage"];
-				Game1.player.eventsSeen.Add(grandma_id);
+				Game1.player.eventsSeen.Add(RSVConstants.E_GRANDMA);
 				Log.Debug($"Now playing grandma event");
 				UtilFunctions.StartEvent(new Event(eventString), "FarmHouse", -1000, -1000);
 			}

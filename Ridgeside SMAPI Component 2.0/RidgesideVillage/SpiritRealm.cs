@@ -34,7 +34,7 @@ namespace RidgesideVillage
 
         private static void CleanseCorruptedFire(string arg1, Vector2 arg2)
         {
-            var location = Game1.getLocationFromName("Custom_Ridgeside_RSVSpiritRealm");
+            var location = Game1.getLocationFromName(RSVConstants.L_SPIRITREALM);
             int Xcoord = (int)arg2.X;
             int Ycoord = (int)arg2.Y;
 
@@ -75,7 +75,7 @@ namespace RidgesideVillage
         static void removeCorruptedFireTiles()
         {
 
-            var location = Game1.getLocationFromName("Custom_Ridgeside_RSVSpiritRealm");
+            var location = Game1.getLocationFromName(RSVConstants.L_SPIRITREALM);
             var modData = location.modData;
 
             var tilesheets = location.map.TileSheets;
@@ -107,7 +107,7 @@ namespace RidgesideVillage
 
         static void checkForCorruptedFireEvent()
         {
-            var location = Game1.getLocationFromName("Custom_Ridgeside_RSVSpiritRealm");
+            var location = Game1.getLocationFromName(RSVConstants.L_SPIRITREALM);
             var modData = location.modData;
             int counter = 0;
             foreach(var key in modData.Keys)
@@ -117,9 +117,9 @@ namespace RidgesideVillage
                 }
             }
 
-            if (Game1.player.team.SpecialOrderActive("RSV.UntimedSpecialOrder.SpiritRealmFlames"))
+            if (Game1.player.team.SpecialOrderActive(RSVConstants.SO_CLEANSING))
             {
-                SpecialOrder corruptedFireQuest = Game1.player.team.specialOrders.Where(so => so.questKey.Equals("RSV.UntimedSpecialOrder.SpiritRealmFlames")).FirstOrDefault();
+                SpecialOrder corruptedFireQuest = Game1.player.team.specialOrders.Where(so => so.questKey.Equals(RSVConstants.SO_CLEANSING)).FirstOrDefault();
                 if(corruptedFireQuest != null)
                 {
                     corruptedFireQuest.objectives[0].currentCount.Value = counter;
@@ -133,18 +133,18 @@ namespace RidgesideVillage
                 string eventScript = null;
                 foreach(var key in events.Keys)
                 {
-                    if (key.StartsWith("75160263"))
+                    if (key.StartsWith(RSVConstants.E_CLEANSED.ToString()))
                     {
                         eventScript = events[key];
                     }
                 }
                 if (!String.IsNullOrEmpty(eventScript))
                 {
-                    if (Game1.player.eventsSeen.Contains(75160263))
+                    if (Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
                     {
                         return;
                     }
-                    UtilFunctions.StartEvent(new Event(eventScript, 75160263), "Custom_Ridgeside_RSVSpiritRealm", 10, 10);
+                    UtilFunctions.StartEvent(new Event(eventScript, RSVConstants.E_CLEANSED), RSVConstants.L_SPIRITREALM, 10, 10);
                 }
                 else
                 {
@@ -156,9 +156,9 @@ namespace RidgesideVillage
 
         private static void OnWarped(object sender, WarpedEventArgs e)
         {
-            if (e.NewLocation != null && e.NewLocation.Name.Equals("Custom_Ridgeside_RSVSpiritRealm"))
+            if (e.NewLocation != null && e.NewLocation.Name.Equals(RSVConstants.L_SPIRITREALM))
             {
-                if (!Game1.player.eventsSeen.Contains(75160263))
+                if (!Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
                 {
                     e.NewLocation.waterColor.Value = new Color(250, 0, 100, 120);
                 }

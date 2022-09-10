@@ -38,7 +38,7 @@ namespace RidgesideVillage
                 selectionActions.Add(delegate
                 {
                     Game1.playSound("stairsdown");
-                    Game1.warpFarmer("Custom_Ridgeside_RSVCableCar", 25, 18, false);
+                    Game1.warpFarmer(RSVConstants.L_CABLECAR, 25, 18, false);
                 });
             }
             if (!tileActionString.Contains("2"))
@@ -47,7 +47,7 @@ namespace RidgesideVillage
                 selectionActions.Add(delegate
                 {
                     Game1.playSound("stairsdown");
-                    Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 69, 16, false);
+                    Game1.warpFarmer(RSVConstants.L_VILLAGE, 69, 16, false);
                 });
             }
             if (!tileActionString.Contains("3"))
@@ -56,7 +56,7 @@ namespace RidgesideVillage
                 selectionActions.Add(delegate
                 {
                     Game1.playSound("stairsdown");
-                    Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 16, 82, false);
+                    Game1.warpFarmer(RSVConstants.L_VILLAGE, 16, 82, false);
                 });
             }
             if (!tileActionString.Contains("4"))
@@ -65,25 +65,25 @@ namespace RidgesideVillage
                 selectionActions.Add(delegate
                 {
                     Game1.playSound("stairsdown");
-                    Game1.warpFarmer("Custom_Ridgeside_RidgesideVillage", 109, 85, false);
+                    Game1.warpFarmer(RSVConstants.L_VILLAGE, 109, 85, false);
                 });
             }
-            if (!tileActionString.Contains("5") && Game1.player.eventsSeen.Contains(75160263))
+            if (!tileActionString.Contains("5") && Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
             {
                 choices.Add(new Response("loc5", Helper.Translation.Get("MinecartLocation.5")));
                 selectionActions.Add(delegate
                 {
                     Game1.playSound("stairsdown");
-                    Game1.warpFarmer("Custom_Ridgeside_SummitFarm", 77, 48, false);
+                    Game1.warpFarmer(RSVConstants.L_SUMMITFARM, 77, 48, false);
                 });
             }
-            if (!tileActionString.Contains("6") && Game1.player.eventsSeen.Contains(75160263))
+            if (!tileActionString.Contains("6") && Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
             {
                 choices.Add(new Response("loc5", Helper.Translation.Get("MinecartLocation.6")));
                 selectionActions.Add(delegate
                 {
                     Game1.playSound("stairsdown");
-                    Game1.warpFarmer("Custom_Ridgeside_SummitFarm", 22, 41, false);
+                    Game1.warpFarmer(RSVConstants.L_SUMMITFARM, 22, 41, false);
                 });
             }
 

@@ -15,7 +15,6 @@ namespace RidgesideVillage
 {
     internal static class IanShop
     {
-        const string willWaterPlants = "IanShop.WaterPlants";
         const int waterPlantsPriceSmall = 1000;
         const int waterPlantsPriceMedium = 2500;
         const int waterPlantsPriceLarge = 5000;
@@ -24,19 +23,13 @@ namespace RidgesideVillage
         const int wplarge = 960;
         const int daysWillWater = 3;
         const int daysWillPet = 7;
-
-        const string willFixFences = "IanShop.fixFences";
-        const string willPetAnimals = "IanShop.PetAnimals";
         const int perFencePrice = 6;
         const int perAnimalPrice = 60;
 
-        const int UNLOCKEVENT = 75160387;
-        public const string HOUSEUPGRADED = "RSV.SummitHouseRedone";
-        public const string CLIMATECONTROLLED = "RSV.ClimateControlled";
-        public const string GOTSPRINKLERS = "RSV.SummitSprinklers";
-        public const string OREAREAOPENED = "RSV.SummitOreArea";
-        public const string SHEDADDED = "RSV.ShedAdded";
-        const string MINECARTSFIXED = "RSV.FixedMinecart";
+        const string willWaterPlants = "IanShop.WaterPlants";
+        const string willFixFences = "IanShop.fixFences";
+        const string willPetAnimals = "IanShop.PetAnimals";
+
         private static bool canRenovate = false;
 
         static IModHelper Helper;
@@ -53,7 +46,7 @@ namespace RidgesideVillage
         [EventPriority(EventPriority.High)]
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(UNLOCKEVENT);
+            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_SUMMITUNLOCK);
 
             if (Game1.IsMasterGame)
             {
@@ -88,41 +81,41 @@ namespace RidgesideVillage
                 Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
 
                 // Construction services
-                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.HOUSETOPIC, out int housect) && housect == 0)
+                if (Game1.player.activeDialogueEvents.TryGetValue(RSVConstants.CT_HOUSEUPGRADE, out int housect) && housect == 0)
                 {
-                    Game1.player.mailReceived.Add(HOUSEUPGRADED);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.HOUSETOPIC);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                    Game1.player.mailReceived.Add(RSVConstants.M_HOUSEUPGRADED);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_HOUSEUPGRADE);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_ACTIVECONSTRUCTION);
                 }
-                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.CLIMATETOPIC, out int climatect) && climatect == 0)
+                if (Game1.player.activeDialogueEvents.TryGetValue(RSVConstants.CT_CLIMATE, out int climatect) && climatect == 0)
                 {
-                    Game1.getLocationFromName(SummitFarm.SUMMITFARM).isGreenhouse.Value = true;
-                    Game1.player.mailReceived.Add(CLIMATECONTROLLED);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.CLIMATETOPIC);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                    Game1.getLocationFromName(RSVConstants.L_SUMMITFARM).isGreenhouse.Value = true;
+                    Game1.player.mailReceived.Add(RSVConstants.M_CLIMATECONTROLLED);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_CLIMATE);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_ACTIVECONSTRUCTION);
                 }
-                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.SPRINKLERTOPIC, out int sprinklerct) && sprinklerct == 0)
+                if (Game1.player.activeDialogueEvents.TryGetValue(RSVConstants.CT_SPRINKLER, out int sprinklerct) && sprinklerct == 0)
                 {
-                    Game1.player.mailReceived.Add(GOTSPRINKLERS);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.SPRINKLERTOPIC);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                    Game1.player.mailReceived.Add(RSVConstants.M_GOTSPRINKLERS);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_SPRINKLER);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_ACTIVECONSTRUCTION);
                 }
-                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.ORETOPIC, out int orect) && orect == 0)
+                if (Game1.player.activeDialogueEvents.TryGetValue(RSVConstants.CT_OREAREA, out int orect) && orect == 0)
                 {
-                    Game1.player.mailReceived.Add(OREAREAOPENED);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ORETOPIC);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                    Game1.player.mailReceived.Add(RSVConstants.M_OREAREAOPENED);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_OREAREA);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_ACTIVECONSTRUCTION);
                 }
-                if (Game1.player.activeDialogueEvents.TryGetValue(SummitRenovateMenu.SHEDTOPIC, out int shedct) && shedct == 0)
+                if (Game1.player.activeDialogueEvents.TryGetValue(RSVConstants.CT_SHED, out int shedct) && shedct == 0)
                 {
-                    Game1.player.mailReceived.Add(SHEDADDED);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.SHEDTOPIC);
-                    Game1.player.activeDialogueEvents.Remove(SummitRenovateMenu.ACTIVECONSTRUCTION);
+                    Game1.player.mailReceived.Add(RSVConstants.M_SHEDADDED);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_SHED);
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_ACTIVECONSTRUCTION);
                 }
 
-                if (Game1.player.mailReceived.Contains(GOTSPRINKLERS))
+                if (Game1.player.mailReceived.Contains(RSVConstants.M_GOTSPRINKLERS))
                 {
-                    WaterThePlants(Game1.getLocationFromName(SummitFarm.SUMMITFARM), 9999);
+                    WaterThePlants(Game1.getLocationFromName(RSVConstants.L_SUMMITFARM), 9999);
                 }
             }
         }
@@ -423,13 +416,13 @@ namespace RidgesideVillage
         private static void RenovateOptions()
         {
             NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
-            if (!Game1.MasterPlayer.mailReceived.Contains(MINECARTSFIXED))
+            if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_MINECARTSFIXED))
             {
                 worker.CurrentDialogue.Clear();
                 worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), worker));
                 Game1.drawDialogue(worker);
             }
-            else if (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(SummitRenovateMenu.ACTIVECONSTRUCTION, out int value) && value > 0)
+            else if (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(RSVConstants.CT_ACTIVECONSTRUCTION, out int value) && value > 0)
             {
                 worker.CurrentDialogue.Clear();
                 worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AlreadyBuilding"), worker));

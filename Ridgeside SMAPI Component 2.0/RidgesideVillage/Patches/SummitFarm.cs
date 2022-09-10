@@ -18,7 +18,6 @@ namespace RidgesideVillage
     internal static class SummitFarm
     {
         private static IModHelper Helper { get; set; }
-        public const string SUMMITFARM = "Custom_Ridgeside_SummitFarm";
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -64,7 +63,7 @@ namespace RidgesideVillage
         {
             try
             {
-                if(__instance != null && __instance.Name.Equals("Custom_Ridgeside_SummitFarm"))
+                if(__instance != null && __instance.Name.Equals(RSVConstants.L_SUMMITFARM))
                 {
                     __result = true;
                 }
@@ -82,7 +81,7 @@ namespace RidgesideVillage
         {
             try
             {
-                if (__instance != null && __instance.Name.Equals("Custom_Ridgeside_SummitFarm") && Game1.getFarm().isBuildingConstructed("Gold Clock"))
+                if (__instance != null && __instance.Name.Equals(RSVConstants.L_SUMMITFARM) && Game1.getFarm().isBuildingConstructed("Gold Clock"))
                 {
                     return false;
                 }
@@ -98,7 +97,7 @@ namespace RidgesideVillage
 
         private static bool SummitHouse_NoAmbientLight_Prefix(ref GameLocation __instance)
         {
-            if (__instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE.Split("New")[0]) // Old Summit House
+            if (__instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE.Split("New")[0]) // Old Summit House
             {
                 if (Game1.isDarkOut())
                 {
@@ -111,7 +110,7 @@ namespace RidgesideVillage
 
         private static bool GameLocation_CanPlaceThisFurnitureHere_Prefix(ref GameLocation __instance, StardewValley.Objects.Furniture furniture, ref bool __result)
         {
-            if (furniture.furniture_type.Value == 15 && __instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
+            if (furniture.furniture_type.Value == 15 && __instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE)
             {
                 __result = true;
                 return false;
@@ -121,16 +120,16 @@ namespace RidgesideVillage
 
         private static void SummitHouse_SetUpKitchen_Postfix(ref GameLocation __instance)
         {
-            if (__instance.NameOrUniqueName == SummitHouse.SUMMITHOUSE)
+            if (__instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE)
                 SummitHouse.SetUpKitchen(__instance);
         }
 
         private static void GameLocation_draw_Postfix(ref GameLocation __instance, ref SpriteBatch b)
         {
-            if (__instance.NameOrUniqueName != SUMMITFARM)
+            if (__instance.NameOrUniqueName != RSVConstants.L_SUMMITFARM)
                 return;
 
-            if (!Game1.MasterPlayer.mailReceived.Contains(IanShop.HOUSEUPGRADED))
+            if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_HOUSEUPGRADED))
                 return;
 
             if (Game1.mailbox.Count > 0)

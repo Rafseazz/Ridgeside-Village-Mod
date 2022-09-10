@@ -27,7 +27,7 @@ namespace RidgesideVillage.Patches
         {
             if (WaterEntryTime.Value != -1 && WaterEntryTime.Value + 100 < Game1.timeOfDay)
             {
-                __instance.activeDialogueEvents.Remove("keahi_prank");
+                __instance.activeDialogueEvents.Remove(RSVConstants.CT_KEAHITOPIC);
             }
         }
     }

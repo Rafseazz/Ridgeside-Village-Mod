@@ -19,7 +19,7 @@ namespace RidgesideVillage
         static IModHelper Helper;
         static IMonitor Monitor;
         const string REWARDLETTER = "MaiveSOLetter";
-        const string LOANMAIL = "RSV.TakenLoan";
+
         internal static void Initialize(IMod ModInstance)
         {
             Helper = ModInstance.Helper;
@@ -43,7 +43,7 @@ namespace RidgesideVillage
 
         private static void OnDayEnding(object sender, DayEndingEventArgs e)
         {
-            if ((Game1.player.mailReceived.Contains(LOANMAIL)) & (Game1.player.IsMainPlayer))
+            if ((Game1.player.mailReceived.Contains(RSVConstants.M_LOANMAIL)) & (Game1.player.IsMainPlayer))
             {
                 ApplyInterest();
             }
@@ -51,7 +51,7 @@ namespace RidgesideVillage
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
 
-            if ((Game1.player.mailReceived.Contains(LOANMAIL)) & (Game1.player.IsMainPlayer))
+            if ((Game1.player.mailReceived.Contains(RSVConstants.M_LOANMAIL)) & (Game1.player.IsMainPlayer))
             {
                 SendReminder();
             }
@@ -66,7 +66,7 @@ namespace RidgesideVillage
             }
             else
             {
-                if (!Game1.player.mailReceived.Contains(LOANMAIL) && Game1.player.mailReceived.Contains(REWARDLETTER))
+                if (!Game1.player.mailReceived.Contains(RSVConstants.M_LOANMAIL) && Game1.player.mailReceived.Contains(REWARDLETTER))
                 {
                     Log.Debug("MaiveLoan: Player is host and has completed SO");
                     var responses = new List<Response>
@@ -82,21 +82,21 @@ namespace RidgesideVillage
                         {
                             Game1.player.Money += 100000;
                             Game1.player.modData["RSV.loan"] = "100000";
-                            Game1.player.mailReceived.Add(LOANMAIL);
+                            Game1.player.mailReceived.Add(RSVConstants.M_LOANMAIL);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun").ToString().Replace("{amount}","100000"));
                         },
                         delegate
                         {
                             Game1.player.Money += 500000;
                             Game1.player.modData["RSV.loan"] = "500000";
-                            Game1.player.mailReceived.Add(LOANMAIL);
+                            Game1.player.mailReceived.Add(RSVConstants.M_LOANMAIL);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun").ToString().Replace("{amount}", "500000"));
                         },
                         delegate
                         {
                             Game1.player.Money += 1000000;
                             Game1.player.modData["RSV.loan"] = "1000000";
-                            Game1.player.mailReceived.Add(LOANMAIL);
+                            Game1.player.mailReceived.Add(RSVConstants.M_LOANMAIL);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.Begun").ToString().Replace("{amount}", "1000000"));
                         },
                         delegate{}
@@ -104,7 +104,7 @@ namespace RidgesideVillage
                     Log.Debug($"MaiveLoan: drawing dialogue box");
                     Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Loan.BeginQuestion"), responses, responseActions);
                 }
-                else if (Game1.player.mailReceived.Contains(LOANMAIL))
+                else if (Game1.player.mailReceived.Contains(RSVConstants.M_LOANMAIL))
                 {
                     Log.Debug($"MaiveLoan: player has active loan");
                     var responses = new List<Response>
@@ -136,7 +136,7 @@ namespace RidgesideVillage
             balance -= number;
             if (balance == 0)
             {
-                Game1.player.mailReceived.Remove(LOANMAIL);
+                Game1.player.mailReceived.Remove(RSVConstants.M_LOANMAIL);
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Loan.FullyPaid"));
             }
             else

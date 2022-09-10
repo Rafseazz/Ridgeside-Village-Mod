@@ -167,6 +167,39 @@ namespace RidgesideVillage
             }
             return isSomeoneHere;
         }
+
+        public static void TryAddQuest(int id)
+        {
+            foreach (Farmer farmer in Game1.getAllFarmers())
+            {
+                farmer.addQuest(id);
+            }
+        }
+
+        public static void TryRemoveQuest(int id)
+        {
+            if (!Game1.player.hasQuest(id))
+                return;
+
+            foreach (Farmer farmer in Game1.getAllFarmers())
+            {
+                if (farmer.hasQuest(id))
+                    farmer.removeQuest(id);
+            }
+
+        }
+
+        public static void TryCompleteQuest(int id)
+        {
+            if (!Game1.player.hasQuest(id))
+                return;
+
+            foreach (Farmer farmer in Game1.getAllFarmers())
+            {
+                if (farmer.hasQuest(id))
+                    farmer.completeQuest(id);
+            }
+        }
     }  
 
 }

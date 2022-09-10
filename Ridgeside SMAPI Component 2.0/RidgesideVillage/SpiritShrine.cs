@@ -18,7 +18,6 @@ namespace RidgesideVillage
     {
         IModHelper Helper;
 
-        const string PORTALFLAG = "RSV.Opened_Portal";
         //whether we have to check for portal finish
         internal bool StartedOpeningEvent = false;
         static List<PedestalTemplate> PedestalTemplates;
@@ -39,7 +38,7 @@ namespace RidgesideVillage
                     Log.Error("Couldnt load PedestalData. Please write a comment on the ridgeside discord or nexusmods page :)");
                 }
                 AddMissingPedestals();
-                StartedOpeningEvent = Game1.player.mailReceived.Contains(PORTALFLAG);
+                StartedOpeningEvent = Game1.player.mailReceived.Contains(RSVConstants.M_OPENEDPORTAL);
                 if (!StartedOpeningEvent)
                 {
                     Helper.Events.GameLoop.OneSecondUpdateTicked += OnOneSecondUpdateTicked;
@@ -58,7 +57,7 @@ namespace RidgesideVillage
             {
                 return;
             }
-            GameLocation location = Game1.getLocationFromName("Custom_Ridgeside_RidgeFalls");
+            GameLocation location = Game1.getLocationFromName(RSVConstants.L_FALLS);
             foreach (var pedestalTemplate in PedestalTemplates)
             {
 
@@ -73,7 +72,7 @@ namespace RidgesideVillage
         {
             if (Game1.IsMasterGame)
             {
-                GameLocation location = Game1.getLocationFromName("Custom_Ridgeside_RidgeFalls");
+                GameLocation location = Game1.getLocationFromName(RSVConstants.L_FALLS);
                 Log.Trace($"Resetting pedestal in {location.Name}");
                 foreach(var pedestal in PedestalTemplates)
                 {
@@ -96,7 +95,7 @@ namespace RidgesideVillage
             }
             try
             {
-                GameLocation location = Game1.getLocationFromName("Custom_Ridgeside_RidgeFalls");
+                GameLocation location = Game1.getLocationFromName(RSVConstants.L_FALLS);
                 bool all_done = true;
                 foreach (var pedestal in PedestalTemplates)
                 {
@@ -123,9 +122,9 @@ namespace RidgesideVillage
                     Helper.Events.GameLoop.OneSecondUpdateTicked -= OnOneSecondUpdateTicked;
                     var Events = location.GetLocationEvents();
                     
-                    var PortalEvent = new Event(Events["75160256/n InexistentMailFlag"], eventID: 75160256);
+                    var PortalEvent = new Event(Events["75160256/n InexistentMailFlag"], eventID: RSVConstants.E_OPENPORTAL);
                     // Moved add special order command to UntimedSO
-                    UtilFunctions.StartEvent(PortalEvent, "Custom_Ridgeside_RidgeFalls", 15, 43);
+                    UtilFunctions.StartEvent(PortalEvent, RSVConstants.L_FALLS, 15, 43);
                 }
             }
             catch (Exception exception) { Log.Warn("Issue with pedestals detected in OneSecondUpdate. Check Trace for Details");
@@ -140,7 +139,7 @@ namespace RidgesideVillage
         private void AddMissingPedestals()
         {
             Log.Trace("Adding pedestals");
-            GameLocation location = Game1.getLocationFromName("Custom_Ridgeside_RidgeFalls");
+            GameLocation location = Game1.getLocationFromName(RSVConstants.L_FALLS);
             foreach (var pedestal in PedestalTemplates)
             {
                 location.Objects.TryGetValue(pedestal.tilePosition, out SObject existing_object);

@@ -177,7 +177,7 @@ namespace RidgesideVillage
         {
             if (Context.IsWorldReady && this.SpiritShrine != null)
             {
-                this.SpiritShrine.OpenPortal(arg1, arg2);
+                SpiritShrine.OpenPortal(arg1, arg2);
             }
         }
 
@@ -185,7 +185,7 @@ namespace RidgesideVillage
         {
             if (Context.IsWorldReady && this.SpiritShrine != null)
             {
-                this.SpiritShrine.ResetPedestals(arg1, arg2);
+                SpiritShrine.ResetPedestals(arg1, arg2);
             }
         }
 
@@ -242,14 +242,14 @@ namespace RidgesideVillage
 
             //remove corrupted Fire SO if the player shouldnt have it
             var team = Game1.player.team;
-            if (Game1.player.IsMainPlayer && team.SpecialOrderActive(("RSV.UntimedSpecialOrder.SpiritRealmFlames")))
+            if (Game1.player.IsMainPlayer && team.SpecialOrderActive(RSVConstants.SO_CLEANSING))
             {
                 //if player has NOT seen portal opening or HAS seen the cleansing event remove the fire quest
-                if (!Game1.player.eventsSeen.Contains(75160256) || Game1.player.eventsSeen.Contains(75160263))
+                if (!Game1.player.eventsSeen.Contains(RSVConstants.E_OPENPORTAL) || Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
                 {
                     for (int i = 0; i < team.specialOrders.Count; i++)
                     {
-                        if (team.specialOrders[i].questKey.Equals("RSV.UntimedSpecialOrder.SpiritRealmFlames"))
+                        if (team.specialOrders[i].questKey.Equals(RSVConstants.SO_CLEANSING))
                         {
                             team.specialOrders.RemoveAt(i);
                             break;

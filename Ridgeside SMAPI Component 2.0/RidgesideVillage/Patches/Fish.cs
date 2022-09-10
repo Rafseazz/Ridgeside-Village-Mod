@@ -58,7 +58,7 @@ namespace RidgesideVillage
 
         public static bool DoFunction_Prefix(FishingRod __instance, GameLocation location, int x, int y, Farmer who)
         {
-            if ((location.Name == "Custom_Ridgeside_RidgePond") && Game1.player.team.SpecialOrderActive("RSV.UntimedSpecialOrder.LinkedFishes"))
+            if ((location.Name == RSVConstants.L_POND) && Game1.player.team.SpecialOrderActive(RSVConstants.SO_LINKEDFISH))
             {
                 int tileX = (int)(__instance.bobber.X / 64f);
                 int tileY = (int)(__instance.bobber.Y / 64f);
@@ -90,7 +90,7 @@ namespace RidgesideVillage
                 switch (here)
                 {
                     //Linked Fish
-                    case "Custom_Ridgeside_RidgePond":
+                    case RSVConstants.L_POND:
                         var linked_fish = new List<string> { "Bladetail Sturgeon", "Caped Tree Frog", "Cardia Septal Jellyfish", "Crimson Spiked Clam",
                             "Fairytale Lionfish", "Fixer Eel", "Golden Rose Fin", "Harvester Trout", "Lullaby Carp", "Pebble Back Crab" };
                         Random random = new();
@@ -98,9 +98,9 @@ namespace RidgesideVillage
                         shouldReplace = true;
                         break;
                     //Legendaries
-                    case "Custom_Ridgeside_RidgesideVillage":
-                    case "Custom_Ridgeside_RidgeFalls":
-                    case "Custom_Ridgeside_RidgeForest":
+                    case RSVConstants.L_VILLAGE:
+                    case RSVConstants.L_FALLS:
+                    case RSVConstants.L_FOREST:
                         replaceByFishID = TryGetLegendary(who, here, bobberTile);
                         shouldReplace = Game1.random.NextDouble() <= catchChance;
                         break;
@@ -129,7 +129,7 @@ namespace RidgesideVillage
             bool is_bait_magic = (who.CurrentTool is FishingRod rod && rod.getBaitAttachmentIndex() == MAGIC_BAIT);
             switch (location)
             {
-                case "Custom_Ridgeside_RidgesideVillage":
+                case RSVConstants.L_VILLAGE:
                     int legendary = GetFishID("Sockeye Salmon");
                     if (new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
                     {
@@ -137,7 +137,7 @@ namespace RidgesideVillage
                             fishID = legendary;
                     }
                     break;
-                case "Custom_Ridgeside_RidgeFalls":
+                case RSVConstants.L_FALLS:
                     legendary = GetFishID("Waterfall Snakehead");
                     if (new Rectangle(53, 11, 4, 4).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
                     {
@@ -145,7 +145,7 @@ namespace RidgesideVillage
                             fishID = legendary;
                     }
                     break;
-                case "Custom_Ridgeside_RidgeForest":
+                case RSVConstants.L_FOREST:
                     legendary = GetFishID("Deep Ridge Angler");
                     if (new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
                     {

@@ -14,14 +14,6 @@ namespace RidgesideVillage
 {
     internal static class HotelMenu
     {
-        const string ROOMBOOKEDFLAG = "RSV.HotelRoomBooked";
-        const string RECEPTIONBOOKEDFLAG = "RSV.ReservedReception";
-        const string RECEIVEDMAILWR = "WedReceptionMail";
-        const string BIRTHDAYBOOKEDFLAG = "RSV.BirthdayBooked";
-        const string ENGAGEDFLAG = "RSV.IsEngagedFlag";
-        const string BIRTHDAYBOOKED = "RSV.BirthdayBooked.";
-        const string ANNIVERSARYBOOKEDFLAG = "RSV.ReservedAnv";
-        const string ANNIVERSARYTODAY = "RSV.AnvToday";
         const string REWARDLETTER = "RichardSOLetter";
 
         const int ROOMPRICE = 500;
@@ -52,7 +44,7 @@ namespace RidgesideVillage
             if (!Context.IsMainPlayer)
                 return;
 
-            if (Game1.currentLocation.Name.Contains("Custom_Ridgeside_LogCabinHotel2ndFloor") && Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            if (Game1.currentLocation.Name.Contains(RSVConstants.L_HOTEL2) && Game1.player.mailReceived.Contains(RSVConstants.M_ROOMBOOKEDFLAG))
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelRoom.DirectionsAlert"));
             }
@@ -60,23 +52,22 @@ namespace RidgesideVillage
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            if (Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            if (Game1.player.mailReceived.Contains(RSVConstants.M_ROOMBOOKEDFLAG))
             {
-                Game1.player.mailReceived.Remove(ROOMBOOKEDFLAG);
+                Game1.player.mailReceived.Remove(RSVConstants.M_ROOMBOOKEDFLAG);
             }
 
             //Removes wedding reception ID from being seen AFTER seeing it.
-            if (Game1.player.eventsSeen.Contains(75160245))
+            if (Game1.player.eventsSeen.Contains(RSVConstants.E_WEDDINGRECEPTION))
             {
-                Game1.player.eventsSeen.Remove(75160245);
-                Game1.player.eventsSeen.Remove(751602450);
-                Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
+                Game1.player.eventsSeen.Remove(RSVConstants.E_WEDDINGRECEPTION);
+                Game1.player.mailReceived.Remove(RSVConstants.M_RECEPTIONBOOKEDFLAG);
             }
 
             //Adds flag if player is engaged so the mail can be sent to the player
             if (Game1.player.isEngaged())
             {
-                Game1.player.mailReceived.Add(ENGAGEDFLAG);
+                Game1.player.mailReceived.Add(RSVConstants.M_ENGAGEDFLAG);
             }
 
             //Removes flags if player isn't engaged anymore
@@ -84,56 +75,54 @@ namespace RidgesideVillage
             //Removes the wedding reception event so player can see new one after remarry
             if (!Game1.player.isEngaged())
             {
-                Game1.player.mailReceived.Remove(ENGAGEDFLAG);
-                Game1.player.mailReceived.Remove(RECEIVEDMAILWR);
+                Game1.player.mailReceived.Remove(RSVConstants.M_ENGAGEDFLAG);
+                Game1.player.mailReceived.Remove(RSVConstants.M_RECEIVEDMAILWR);
             }
 
             //If it's after wedding day and the player didn't attend their booked Wedding Reception
-            if (!(Game1.player.eventsSeen.Contains(75160245) || Game1.player.eventsSeen.Contains(751602450))
-                && !Game1.weddingToday && Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isMarried())
+            if (!(Game1.player.eventsSeen.Contains(RSVConstants.E_WEDDINGRECEPTION))
+                && !Game1.weddingToday && Game1.player.mailReceived.Contains(RSVConstants.M_RECEPTIONBOOKEDFLAG) && Game1.player.isMarried())
             {
-                Game1.player.eventsSeen.Remove(75160245);
-                Game1.player.eventsSeen.Remove(751602450);
-                Game1.player.mailReceived.Remove(RECEPTIONBOOKEDFLAG);
+                Game1.player.eventsSeen.Remove(RSVConstants.E_WEDDINGRECEPTION);
+                Game1.player.mailReceived.Remove(RSVConstants.M_RECEPTIONBOOKEDFLAG);
             }
 
             //removes booked flag next day
-            if (!Game1.player.mailReceived.Contains(BIRTHDAYBOOKEDFLAG))
+            if (!Game1.player.mailReceived.Contains(RSVConstants.M_BIRTHDAYBOOKEDFLAG))
             {
                 foreach (var entry in Game1.player.mailReceived)
                 {
-                    if (entry.StartsWith(BIRTHDAYBOOKED))
+                    if (entry.StartsWith(RSVConstants.M_BIRTHDAYBOOKED))
                     {
                         Game1.player.mailReceived.Remove(entry);
                     }
                 }
             }
 
-            if (Game1.player.eventsSeen.Contains(75160247) && Game1.player.mailReceived.Contains(BIRTHDAYBOOKEDFLAG))
+            if (Game1.player.eventsSeen.Contains(RSVConstants.E_BIRTHDAY) && Game1.player.mailReceived.Contains(RSVConstants.M_BIRTHDAYBOOKEDFLAG))
             {
-                Game1.player.eventsSeen.Remove(75160247);
-                Game1.player.mailReceived.Remove(BIRTHDAYBOOKEDFLAG);
+                Game1.player.eventsSeen.Remove(RSVConstants.E_BIRTHDAY);
+                Game1.player.mailReceived.Remove(RSVConstants.M_BIRTHDAYBOOKEDFLAG);
             }
 
             
             //Removes seeing and booking anniversary event after event
-            if (Game1.player.eventsSeen.Contains(75160248) && Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
+            if (Game1.player.eventsSeen.Contains(RSVConstants.E_ANNIVERSARY) && Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYBOOKEDFLAG))
             {
-                Game1.player.mailReceived.Remove(ANNIVERSARYBOOKEDFLAG);
+                Game1.player.mailReceived.Remove(RSVConstants.M_ANNIVERSARYBOOKEDFLAG);
             }
 
             //Removes anvtoday flag after next day
-            if (Game1.player.mailReceived.Contains(ANNIVERSARYTODAY) && Game1.player.eventsSeen.Contains(75160248))
+            if (Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYTODAY))
             {
-                Game1.player.eventsSeen.Remove(75160248);
-                Game1.player.eventsSeen.Remove(751602480);
-                Game1.player.mailReceived.Remove(ANNIVERSARYTODAY);
+                Game1.player.eventsSeen.Remove(RSVConstants.E_ANNIVERSARY);
+                Game1.player.mailReceived.Remove(RSVConstants.M_ANNIVERSARYTODAY);
             }
 
             //Adds ANNIVERSARYTODAY flag if it's the next day after booking
-            if (Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG) && !Game1.player.mailReceived.Contains(ANNIVERSARYTODAY))
+            if (Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYBOOKEDFLAG) && !Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYTODAY))
             {
-                Game1.player.mailReceived.Add(ANNIVERSARYTODAY);
+                Game1.player.mailReceived.Add(RSVConstants.M_ANNIVERSARYTODAY);
             }
 
             //Alerts player on wake up about birthday party
@@ -221,7 +210,7 @@ namespace RidgesideVillage
             {
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("HotelCounter.Booking.Free")));
             }
-            else if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            else if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(RSVConstants.M_ROOMBOOKEDFLAG))
             {
                 var responses = new List<Response>
                     {
@@ -236,7 +225,7 @@ namespace RidgesideVillage
                             // All players can go bc fuck multiplayer
                             foreach(Farmer player in Game1.getAllFarmers())
                             {
-                                player.mailReceived.Add(ROOMBOOKEDFLAG);
+                                player.mailReceived.Add(RSVConstants.M_ROOMBOOKEDFLAG);
                             }
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AfterBooking"));
                         },
@@ -245,7 +234,7 @@ namespace RidgesideVillage
 
                 Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("HotelCounter.Booking.Question"), responses, responseActions);
             }
-            else if (Game1.player.mailReceived.Contains(ROOMBOOKEDFLAG))
+            else if (Game1.player.mailReceived.Contains(RSVConstants.M_ROOMBOOKEDFLAG))
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("HotelCounter.Booking.AlreadyBooked"));
             }
@@ -264,7 +253,7 @@ namespace RidgesideVillage
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.NotEnoughMoney"));
             }            
             //If player has booked an event
-            else if (HotelMenu.IsThereUpcomingBirthdayBooked() || Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) || Game1.player.mailReceived.Contains(ANNIVERSARYBOOKEDFLAG))
+            else if (HotelMenu.IsThereUpcomingBirthdayBooked() || Game1.player.mailReceived.Contains(RSVConstants.M_RECEPTIONBOOKEDFLAG) || Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYBOOKEDFLAG))
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.AlreadyBooked"));
             }
@@ -287,7 +276,7 @@ namespace RidgesideVillage
                     responseActions.Add(birthdayAction);
 
                 }
-                if(!Game1.player.mailReceived.Contains(RECEPTIONBOOKEDFLAG) && Game1.player.isEngaged())
+                if(!Game1.player.mailReceived.Contains(RSVConstants.M_RECEPTIONBOOKEDFLAG) && Game1.player.isEngaged())
                 {
                     Response receptionesponse = new Response("weddingReception", Helper.Translation.Get("EventHallCounter.Booking.WeddingReception"));
                     responses.Add(receptionesponse);
@@ -329,7 +318,7 @@ namespace RidgesideVillage
                         delegate
                         {
                             Game1.player.Money -= WEDDINGPRICE;
-                            Game1.player.mailReceived.Add(RECEPTIONBOOKEDFLAG);
+                            Game1.player.mailReceived.Add(RSVConstants.M_RECEPTIONBOOKEDFLAG);
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.WR.AfterBooking"));
                         },
                         delegate { HandleEventHallMenu(); }
@@ -371,8 +360,8 @@ namespace RidgesideVillage
                 responseActions.Add(delegate
                 {
                     Game1.player.Money -= BIRTHDAYPRICE;
-                    Game1.player.mailReceived.Add(BIRTHDAYBOOKED + NPCName + "." + NPCtuple.Item2);
-                    Game1.player.mailReceived.Add(BIRTHDAYBOOKEDFLAG);
+                    Game1.player.mailReceived.Add(RSVConstants.M_BIRTHDAYBOOKED + NPCName + "." + NPCtuple.Item2);
+                    Game1.player.mailReceived.Add(RSVConstants.M_BIRTHDAYBOOKEDFLAG);
                     Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.Bday.AfterBooking"));
                 });
             }
@@ -399,7 +388,7 @@ namespace RidgesideVillage
             foreach (NPC k in Utility.getAllCharacters())
             {
                 //Log.Debug($"checking {k?.Name}, {k?.Birthday_Season}");
-                if (k.isVillager() && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && (Game1.player.friendshipData.ContainsKey(k.Name)))
+                if (k.isVillager() && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && Game1.player.friendshipData.ContainsKey(k.Name) && k.Name != "Krobus")
                 {
 
                     SDate birthday = new SDate(k.Birthday_Day, k.Birthday_Season.ToLower());
@@ -436,7 +425,7 @@ namespace RidgesideVillage
                 delegate
                 {
                     Game1.player.Money -= WEDDINGPRICE;
-                    Game1.player.mailReceived.Add(ANNIVERSARYBOOKEDFLAG);
+                    Game1.player.mailReceived.Add(RSVConstants.M_ANNIVERSARYBOOKEDFLAG);
                     Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Anv.AfterBooking"));
                 },
                 delegate
@@ -452,7 +441,7 @@ namespace RidgesideVillage
             SDate today = SDate.Now();
             foreach (var entry in Game1.player.mailReceived)
             {
-                if (entry.StartsWith(BIRTHDAYBOOKED))
+                if (entry.StartsWith(RSVConstants.M_BIRTHDAYBOOKED))
                 {
                     Log.Debug($"found birthday {entry}");
                     var split = entry.Split('.');
@@ -481,7 +470,7 @@ namespace RidgesideVillage
             string date = $"{today.Day}-{today.Season}-{today.Year}";
             foreach (var entry in Game1.player.mailReceived)
             {
-                if (entry.StartsWith(BIRTHDAYBOOKED) && entry.Contains(date))
+                if (entry.StartsWith(RSVConstants.M_BIRTHDAYBOOKED) && entry.Contains(date))
                 {
                     var split = entry.Split('.');
                     if(split.Length == 4)

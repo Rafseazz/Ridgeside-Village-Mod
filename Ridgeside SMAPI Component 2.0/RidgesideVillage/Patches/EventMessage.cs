@@ -97,19 +97,19 @@ namespace RidgesideVillage
         {
             try
             {
-                if (message.Contains("Custom_Ridgeside_RidgesideVillage"))
+                if (message.Contains(RSVConstants.L_VILLAGE))
                 {
-                    message = message.Replace("Custom_Ridgeside_RidgesideVillage", Helper.Translation.Get("Gathering.location"));
+                    message = message.Replace(RSVConstants.L_VILLAGE, Helper.Translation.Get("Gathering.location"));
 
                 }
-                else if (message.Contains("Custom_Ridgeside_Ridge"))
+                else if (message.Contains(RSVConstants.L_RIDGE))
                 {
-                    message = message.Replace("Custom_Ridgeside_Ridge", Helper.Translation.Get("EoR.location"));
+                    message = message.Replace(RSVConstants.L_RIDGE, Helper.Translation.Get("EoR.location"));
                 }
             }
             catch (Exception e)
             {
-                Log.Error($"Harmony patch \"{nameof(ShowGlobalMessage_Prefix)}\" has encountered an error. \n{e.ToString()}");
+                Log.Error($"Harmony patch \"{nameof(ShowGlobalMessage_Prefix)}\" has encountered an error. \n{e}");
             }
         }
 

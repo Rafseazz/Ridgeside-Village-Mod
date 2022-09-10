@@ -10,6 +10,7 @@ using StardewValley;
 using StardewValley.Quests;
 using StardewModdingAPI.Utilities;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceCore.Events;
 
 namespace RidgesideVillage.Questing
 {
@@ -57,6 +58,7 @@ namespace RidgesideVillage.Questing
 			Helper.Events.Display.RenderedWorld += RenderQuestMarkersIfNeeded;
 			Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
 			Helper.Events.GameLoop.DayEnding += OnDayEnding;
+			SpaceEvents.OnEventFinished += OnEventFinished;
 
 			OrdersGenerated.Value = false;
 		}
@@ -128,17 +130,17 @@ namespace RidgesideVillage.Questing
         {
 			if(e.Player == Game1.player)
             {
-				if (e.NewLocation.Name.Equals("Custom_Ridgeside_RidgesideVillage"))
+				if (e.NewLocation.Name.Equals(RSVConstants.L_VILLAGE))
 				{
 					CurrentLocationFormarkers.Value = LocationForMarkers.RSVVillage;
-					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160207);
+					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(RSVConstants.E_TOWNBOARD);
 
 				}
-				else if (e.NewLocation.Name.Equals("Custom_Ridgeside_RSVNinjaHouse"))
+				else if (e.NewLocation.Name.Equals(RSVConstants.L_NINJAS))
 				{
 					CurrentLocationFormarkers.Value = LocationForMarkers.NinjaHouse;
-					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160264);
-					QuestBoardUnlocked.Value = Game1.player.eventsSeen.Contains(75160187);
+					SOBoardUnlocked.Value = Game1.player.eventsSeen.Contains(RSVConstants.E_NINJABOARD);
+					QuestBoardUnlocked.Value = Game1.player.eventsSeen.Contains(RSVConstants.E_NINJAQUESTS);
 				}
 				else
 				{
@@ -224,6 +226,61 @@ namespace RidgesideVillage.Questing
             {
 				dailyQuestData.Value = new QuestData(null, null);
 				Log.Error("Failed parsing quests.");
+			}
+		}
+
+		static void OnEventFinished(object sender, EventArgs e)
+		{
+			if (!Game1.player.IsMainPlayer)
+				return;
+
+			switch (Game1.CurrentEvent.id)
+			{
+				case RSVConstants.E_MEETBELINDA:
+					UtilFunctions.TryRemoveQuest(RSVConstants.Q_PREPCOMPLETE);
+					UtilFunctions.TryCompleteQuest(RSVConstants.Q_NINJANOTE);
+					UtilFunctions.TryAddQuest(RSVConstants.Q_PREUNSEAL);
+					break;
+
+				case RSVConstants.E_PREUNSEAL:
+					UtilFunctions.TryCompleteQuest(RSVConstants.Q_PREUNSEAL);
+					// Crystal quests are then added
+					break;
+
+				case RSVConstants.E_BLISSVISIT:
+					// Comes after crystal quests are complete
+					UtilFunctions.TryAddQuest(RSVConstants.Q_RAEUNSEAL);
+					break;
+
+				case RSVConstants.E_RAEUNSEAL:
+					UtilFunctions.TryCompleteQuest(RSVConstants.Q_RAEUNSEAL);
+					UtilFunctions.TryAddQuest(RSVConstants.Q_OPENPORTAL);
+					break;
+
+				case RSVConstants.E_OPENPORTAL:
+					UtilFunctions.TryCompleteQuest(RSVConstants.Q_OPENPORTAL);
+					if (Game1.player.IsMainPlayer)
+					{
+						Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(RSVConstants.SO_CLEANSING, null));
+					}
+					break;
+
+				case RSVConstants.E_BLISSGH1:
+					UtilFunctions.TryAddQuest(RSVConstants.Q_CURSEDGH1);
+					break;
+
+				case RSVConstants.E_SPIRITGH1:
+					UtilFunctions.TryCompleteQuest(RSVConstants.Q_CURSEDGH1);
+					break;
+
+				case RSVConstants.E_BLISSGH2:
+					UtilFunctions.TryAddQuest(RSVConstants.Q_CURSEDGH2);
+					break;
+
+				case RSVConstants.E_SPIRITGH2:
+					UtilFunctions.TryCompleteQuest(RSVConstants.Q_CURSEDGH2);
+					// Greenhouse quest then added
+					break;
 			}
 		}
 	}

@@ -235,7 +235,7 @@ namespace RidgesideVillage
 
         public static bool FoxbloomCanSpawn(GameLocation here, bool spawned_today)
         {
-            if (here.Name != "Custom_Ridgeside_RidgeForest" || spawned_today)
+            if (here.Name != RSVConstants.L_FOREST || spawned_today)
             {
                 //Log.Trace("RSV: Not Ridge Forest OR Foxbloom already spawned today.");
                 return false;

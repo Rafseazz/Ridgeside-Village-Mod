@@ -25,10 +25,10 @@ namespace RidgesideVillage
         private static void OnSaveLoaded(object sender, EventArgs ex)
         {
             //mark greenhouses as greenhouses
-            List<string> locations = new List<string>() { "Custom_Ridgeside_AguarCaveTemporary", "Custom_Ridgeside_RSVGreenhouse1", "Custom_Ridgeside_RSVGreenhouse2" };
-            if (Game1.MasterPlayer.mailReceived.Contains(IanShop.CLIMATECONTROLLED))
+            List<string> locations = new List<string>() { "Custom_Ridgeside_AguarCaveTemporary", RSVConstants.L_TOWNGH, RSVConstants.L_HAUNTEDGH };
+            if (Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_CLIMATECONTROLLED))
             {
-                locations.Add("Custom_Ridgeside_SummitFarm");
+                locations.Add(RSVConstants.L_SUMMITFARM);
             }
             foreach (var name in locations)
             {
