@@ -1,5 +1,5 @@
 {
-"Changes": [
+"Changes": [	
 	{
    
    "Action": "EditData",
@@ -132,5 +132,18 @@
 	"Bad_9": "{{i18n:Philip.MarriageDialogue.Bad_9}}",
 			},
 		},
+
+	//Philip workout chance patio
+	{
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/MarriageDialoguePhilip",
+   		"Entries": {
+   			"patio_Philip": "{{i18n:Philip.MarriageDialogue.patio_Philip.workout}}",
+   		},
+   		"When": {
+   			"RandomNumber": "{{Range: 6,10}}"
+   		}
+	},
+
 	]
 }

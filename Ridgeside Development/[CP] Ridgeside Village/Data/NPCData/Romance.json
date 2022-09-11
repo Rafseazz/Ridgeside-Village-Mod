@@ -338,6 +338,18 @@
     		"Paula": "RSVSpousePatios/15/0 0 0/0 0",
     		"Anton": "RSVSpousePatios/16/0 0 0/0 0",
     	}
+    },
+
+    //Philip workout chance patio
+    {
+    	"Action": "EditData",
+    	"Target": "Data/SpousePatios",
+    	"Entries": {
+    		"Philip": "RSVSpousePatios/9/24 24 25 26 27 27 26 26 25 25 24/0 0",
+    	},
+    	"When": {
+   			"RandomNumber": "{{Range: 6,10}}"
+   		}
     }
 
 ]
