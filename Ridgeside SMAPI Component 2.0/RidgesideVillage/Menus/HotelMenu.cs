@@ -113,7 +113,7 @@ namespace RidgesideVillage
             }
 
             //Removes anvtoday flag after next day
-            if (Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYTODAY))
+            if (Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYTODAY) && Game1.player.eventsSeen.Contains(RSVConstants.E_ANNIVERSARY))
             {
                 Game1.player.eventsSeen.Remove(RSVConstants.E_ANNIVERSARY);
                 Game1.player.mailReceived.Remove(RSVConstants.M_ANNIVERSARYTODAY);
