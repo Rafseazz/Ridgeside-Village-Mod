@@ -122,8 +122,14 @@ namespace RidgesideVillage
         public const string CT_KEAHITOPIC = "keahi_stink";
 
         // Miscellaneous
+        
+        //QuestBoards
         public const string Z_VILLAGEBOARD = "VillageQuestBoard";
         public const string Z_NINJAQUESTBOARD = "RSVNinjaBoard";
+
+        //SpecialOrderBoards
+        public const string Z_VILLAGESPECIALORDERBOARD = "RSVTownSO";
+        public const string Z_NINJASPECIALORDERBOARD = "RSVNinjaSO";
 
     }
 }
