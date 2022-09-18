@@ -28,10 +28,10 @@ namespace RidgesideVillage.Questing
 
 			timestampOpened = (int)Game1.currentGameTime.TotalGameTime.TotalMilliseconds;
 			Texture2D texture;
-            if (boardType.Equals(RSVConstants.Z_NINJASPECIALORDERBOARD)){
+            if (boardType.Equals(RSVConstants.Z_NINJASPECIALORDER)){
 				texture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVNinjaSOBoard");
 
-			}else if (boardType.Equals(RSVConstants.Z_VILLAGESPECIALORDERBOARD)){
+			}else if (boardType.Equals(RSVConstants.Z_VILLAGESPECIALORDER)){
 				texture = Game1.temporaryContent.Load<Texture2D>("LooseSprites\\RSVTownSO");
             }
             else
@@ -60,7 +60,7 @@ namespace RidgesideVillage.Questing
 			}
 			if (rightOrder is null)
             {
-				int indent = (boardType == RSVConstants.Z_NINJASPECIALORDERBOARD) ? 800 : 775;
+				int indent = (boardType == RSVConstants.Z_NINJASPECIALORDER) ? 800 : 775;
 				b.DrawString(Game1.dialogueFont, Helper.Translation.Get("RSV.NoNewOrders"), new Vector2(xPositionOnScreen + indent, yPositionOnScreen + 375), Game1.textColor);
 			}
 		}
@@ -114,12 +114,12 @@ namespace RidgesideVillage.Questing
 			if (force_refresh) Log.Trace("Refreshing RSV Special Orders");
 			var availableOrders = Game1.player.team.availableSpecialOrders;
 
-			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVConstants.Z_VILLAGESPECIALORDERBOARD);
-			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVConstants.Z_NINJASPECIALORDERBOARD);
+			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVConstants.Z_VILLAGESPECIALORDER);
+			Game1.player.team.acceptedSpecialOrderTypes.Remove(RSVConstants.Z_NINJASPECIALORDER);
 
 			for(int i=0; i< availableOrders.Count; i++)
             {
-                if (availableOrders[i].orderType.Equals(RSVConstants.Z_NINJASPECIALORDERBOARD) || availableOrders[i].orderType.Equals(RSVConstants.Z_VILLAGESPECIALORDERBOARD))
+                if (availableOrders[i].orderType.Equals(RSVConstants.Z_NINJASPECIALORDER) || availableOrders[i].orderType.Equals(RSVConstants.Z_VILLAGESPECIALORDER))
                 {
 					Game1.player.team.availableSpecialOrders.RemoveAt(i);
 					i--;
@@ -169,7 +169,7 @@ namespace RidgesideVillage.Questing
 				}
 			}
 			Random r = new Random((int)Game1.uniqueIDForThisGame + (int)(Game1.stats.DaysPlayed * 1.3f));
-			string[] array = new string[2] { RSVConstants.Z_NINJASPECIALORDERBOARD, RSVConstants.Z_VILLAGESPECIALORDERBOARD };
+			string[] array = new string[2] { RSVConstants.Z_NINJASPECIALORDER, RSVConstants.Z_VILLAGESPECIALORDER };
 			foreach (string type_to_find in array)
 			{
 				List<string> typed_keys = new List<string>();

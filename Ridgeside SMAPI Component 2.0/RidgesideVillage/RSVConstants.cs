@@ -123,13 +123,13 @@ namespace RidgesideVillage
 
         // Miscellaneous
         
-        //QuestBoards
+            //QuestBoards
         public const string Z_VILLAGEBOARD = "VillageQuestBoard";
         public const string Z_NINJAQUESTBOARD = "RSVNinjaBoard";
 
-        //SpecialOrderBoards
-        public const string Z_VILLAGESPECIALORDERBOARD = "RSVTownSO";
-        public const string Z_NINJASPECIALORDERBOARD = "RSVNinjaSO";
+            //SpecialOrder Types
+        public const string Z_VILLAGESPECIALORDER = "RSVTownSO";
+        public const string Z_NINJASPECIALORDER = "RSVNinjaSO";
 
     }
 }
