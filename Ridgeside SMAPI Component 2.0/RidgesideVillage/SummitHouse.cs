@@ -51,6 +51,11 @@ namespace RidgesideVillage
 		private static void GameLoop_SaveLoaded(object sender, SaveLoadedEventArgs args)
         {
 			GameLocation house = Game1.getLocationFromName(RSVConstants.L_SUMMITHOUSE);
+			if (Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_HOUSEUPGRADED))
+			{
+				house.modData["renovated"] = "true";
+
+			}
 			try
             {
 				if (house.modData["RSV.SummitHouseFurnished"] == "true")
@@ -234,6 +239,7 @@ namespace RidgesideVillage
 				Log.Trace("RSV: No fridge found. Creating new chest to be Summit House fridge.");
 				chest = new Chest(playerChest: true, tileLocation: FridgeChestPosition, parentSheetIndex: 216);
 				chest.fridge.Value = true;
+				chest.name = Helper.Translation.Get("RSV.Fridge");
 				here.Objects[FridgeChestPosition] = chest;
 			}
 			return chest;
