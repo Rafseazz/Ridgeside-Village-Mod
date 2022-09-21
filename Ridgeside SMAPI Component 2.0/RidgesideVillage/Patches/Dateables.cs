@@ -41,15 +41,14 @@ namespace RidgesideVillage
         }
         private static bool NPC_engagementResponse_Prefix(NPC __instance)
         {
-            Farmer who = Game1.player;
-            if ((__instance.Name == "Shiro") && !who.eventsSeen.Contains(75160249))
+            if ((__instance.Name == "Shiro") && !Game1.MasterPlayer.eventsSeen.Contains(75160249))
             {
                 __instance.CurrentDialogue.Clear();
                 __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Shiro.RejectProposal"), __instance));
                 Game1.drawDialogue(__instance);
                 return false;
             }
-            else if ((__instance.Name == "Kiarra") && who.eventsSeen.Contains(502261))
+            else if ((__instance.Name == "Kiarra") && Game1.MasterPlayer.eventsSeen.Contains(502261))
             {
                 __instance.CurrentDialogue.Clear();
                 __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Kiarra.RejectProposal"), __instance));
