@@ -37,6 +37,7 @@ namespace RidgesideVillage
             Helper.Events.Player.Warped += OnWarped;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.ReturnedToTitle += OnReturnToTitle;
+            Helper.ConsoleCommands.Add("RSV_reset_artifacts", "", (_,_) => { ResetArtifacts(); Log.Info("Reset Artifacts"); });
 
             Log.Trace($"Applying Harmony Patch from \"{nameof(TreasureItems)}\".");
             harmony.Patch(
@@ -78,13 +79,16 @@ namespace RidgesideVillage
             //reset flags every season
             if(Game1.dayOfMonth == 1)
             {
-                foreach (var field in typeof(TreasureItems).GetFields(BindingFlags.Static | BindingFlags.NonPublic))
-                {
-                    if (field.Name.Contains("FLAG"))
-                    {
-                        Game1.player.mailReceived.Remove(field.GetValue(null).ToString());
-                    }
-                }
+                ResetArtifacts();   
+            }
+        }
+
+        private static void ResetArtifacts()
+        {
+            var flags = new List<string>() { RSVConstants.M_MOOSE, RSVConstants.M_FOXMASK, RSVConstants.M_SAPPHIRE, RSVConstants.M_MUSICBOX, RSVConstants.M_EVERFROST, RSVConstants.M_HEROSTATUE, RSVConstants.M_CANDELABRUM, RSVConstants.M_ELVENCOMB, RSVConstants.M_OPALHALO };
+            foreach (var flag in flags)
+            {
+                Game1.player.mailReceived.Remove(flag);
             }
         }
 
