@@ -659,6 +659,7 @@ namespace RidgesideVillage
 				{
 					case FARMUPGRADE:
 						Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_HOUSEUPGRADE, 3);
+						Game1.getLocationFromName(RSVConstants.L_SUMMITFARM).modData["renovated"] = "true";
 						break;
 					case CLIMATECONTROL:
 						Game1.MasterPlayer.activeDialogueEvents.Add(RSVConstants.CT_CLIMATE, 3);

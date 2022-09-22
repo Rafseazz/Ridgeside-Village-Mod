@@ -120,7 +120,7 @@ namespace RidgesideVillage
 
         private static void SummitHouse_SetUpKitchen_Postfix(ref GameLocation __instance)
         {
-            if (__instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE)
+            if (__instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE && __instance.modData.ContainsKey("renovated"))
                 SummitHouse.SetUpKitchen(__instance);
         }
 

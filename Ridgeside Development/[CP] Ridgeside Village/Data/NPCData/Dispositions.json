@@ -119,6 +119,7 @@
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
 		"When": { "HasDialogueAnswer": 751603262 },
+		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Kiarra": "teen/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
 		}
@@ -129,6 +130,7 @@
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
 		"When": { "HasDialogueAnswer": 75163042 },
+		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Anton": "adult/polite/neutral/neutral/male/datable/null/Town/spring 9/{{i18n:NPC_Data.Anton}}/Custom_Ridgeside_3Bros2ndFloor 18 12/{{i18n:Name.Anton}}",
 		}
@@ -139,6 +141,7 @@
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
 		"When": { "HasDialogueAnswer": 75163521 },
+		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Paula": "adult/polite/neutral/negative/female/datable/null/Town/fall 27/{{i18n:NPC_Data.Paula}}/Custom_Ridgeside_PaulaClinic 2 7/{{i18n:Name.Paula}}",
 		}

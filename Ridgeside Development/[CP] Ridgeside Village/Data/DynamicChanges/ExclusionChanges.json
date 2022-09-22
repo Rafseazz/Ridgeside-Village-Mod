@@ -464,23 +464,25 @@
 				"Action": "EditData",
 				"Target": "Data/CustomNPCExclusions",
 				"Entries": {
-					"Kiwi": null
+					"Kiwi": "ItemDelivery ShopDialog Greet BeGreeted WinterStar"
 					},
 				"When": {
 					"HasSeenEvent": 75160188
-				}
+				},
+				"Update": "OnLocationChange, OnTimeChange",
 			},
 
 			{
 				"Action": "EditData",
 				"Target": "Data/CustomNPCExclusions",
 				"Entries": {
-					"Jio": null,
-					"Daia": null
+					"Jio": "ItemDelivery ShopDialog Greet BeGreeted WinterStar",
+					"Daia": "ItemDelivery ShopDialog Greet BeGreeted WinterStar"
          },
 				"When": {
 					"HasSeenEvent: hostPlayer": 75160263
-				}
+				},
+				"Update": "OnLocationChange, OnTimeChange",
 			},
 	]
 }
