@@ -507,6 +507,50 @@
 		"Gunther": "{{i18n:InterModDialogue.GatheringDialogue.Gunther}}",
 	},
 },
+{
+	"LogName": "Gathering Free Love Compatibility - Sophia",
+	"Action": "EditData",
+	"Target": "Data/Festivals/fall20",
+	"Entries": {
+		"Sophia": "{{i18n:InterModDialogue.GatheringDialogue.Sophia_spouse}}",
+	},
+	"When": {
+		"Relationship:Sophia": "married"
+	},	
+},
+{
+	"LogName": "Gathering Free Love Compatibility - Victor",
+	"Action": "EditData",
+	"Target": "Data/Festivals/fall20",
+	"Entries": {
+		"Victor": "{{i18n:InterModDialogue.GatheringDialogue.Victor_spouse}}",
+	},
+	"When": {
+		"Relationship:Victor": "married"
+	},	
+},
+{
+	"LogName": "Gathering Free Love Compatibility - Olivia",
+	"Action": "EditData",
+	"Target": "Data/Festivals/fall20",
+	"Entries": {
+		"Olivia": "{{i18n:InterModDialogue.GatheringDialogue.Olivia_spouse}}",
+	},
+	"When": {
+		"Relationship:Olivia": "married"
+	},	
+},
+{
+	"LogName": "Gathering Free Love Compatibility - Claire",
+	"Action": "EditData",
+	"Target": "Data/Festivals/fall20",
+	"Entries": {
+		"Claire": "{{i18n:InterModDialogue.GatheringDialogue.Claire_spouse}}",
+	},
+	"When": {
+		"Relationship:Claire": "married"
+	},
+},
 //Gathering Locations
 {
 	"Action": "EditData",
@@ -551,6 +595,50 @@
 		"Martin": "{{i18n:InterModDialogue.EmberNightDialogue.Martin}}",
 		"Susan": "{{i18n:InterModDialogue.EmberNightDialogue.Susan}}",
 		"Gunther": "{{i18n:InterModDialogue.EmberNightDialogue.Gunther}}",
+	},
+},
+{
+	"LogName": "EmberOfResolutions Free Love Compatiblity - Sophia",
+	"Action": "EditData",
+	"Target": "Data/Festivals/winter28",
+	"Entries": {
+		"Sophia": "{{i18n:InterModDialogue.EmberNightDialogue.Sophia_spouse}}",
+	},
+	"When": {
+		"Relationship:Sophia": "married"
+	},
+},
+{
+	"LogName": "EmberOfResolutions Free Love Compatiblity - Victor",
+	"Action": "EditData",
+	"Target": "Data/Festivals/winter28",
+	"Entries": {
+		"Victor": "{{i18n:InterModDialogue.EmberNightDialogue.Victor_spouse}}",
+	},
+	"When": {
+		"Relationship:Victor": "married"
+	},
+},
+{
+	"LogName": "EmberOfResolutions Free Love Compatiblity - Olivia",
+	"Action": "EditData",
+	"Target": "Data/Festivals/winter28",
+	"Entries": {
+		"Olivia": "{{i18n:InterModDialogue.EmberNightDialogue.Olivia_spouse}}",
+	},
+	"When": {
+		"Relationship:Olivia": "married"
+	},
+},
+{
+	"LogName": "EmberOfResolutions Free Love Compatiblity - Claire",
+	"Action": "EditData",
+	"Target": "Data/Festivals/winter28",
+	"Entries": {
+		"Claire": "{{i18n:InterModDialogue.EmberNightDialogue.Claire_spouse}}",
+	},
+	"When": {
+		"Relationship:Claire": "married"
 	},
 },
 
