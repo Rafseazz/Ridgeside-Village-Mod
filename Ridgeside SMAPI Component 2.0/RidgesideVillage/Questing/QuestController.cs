@@ -46,11 +46,26 @@ namespace RidgesideVillage.Questing
 			Monitor = ModInstance.Monitor;
 			TileActionHandler.RegisterTileAction("RSVQuestBoard", OpenQuestBoard);
 			TileActionHandler.RegisterTileAction("RSVSpecialOrderBoard", OpenSOBoard);
-			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => {
 
+			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => {
 				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
 				Log.Info("RSV Special Orders refreshed");
 			});
+
+			Helper.ConsoleCommands.Add("RSVAddQuest", "", (s1, s2) => {
+                var quest = QuestFactory.getQuestFromId(int.Parse(s2[0]));
+				if (quest != null)
+				{
+					Game1.player.questLog.Add(quest);
+					Log.Info("Quest added.");
+				}
+                else
+                {
+
+					Log.Info("Quest not found.");
+				}
+			});
+
 			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => PrintQuestState());
 			Helper.ConsoleCommands.Add("RSVCheckQuests", "", (s1,s2) => CheckQuests());
 			Helper.Events.GameLoop.DayStarted += OnDayStarted;
@@ -71,7 +86,7 @@ namespace RidgesideVillage.Questing
                 try
                 {
 					Log.Debug($"Checking {key}");
-					Quest.getQuestFromId(key);
+					QuestFactory.getQuestFromId(key);
 
 				}
                 catch(Exception e)

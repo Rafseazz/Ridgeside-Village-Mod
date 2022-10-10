@@ -57,7 +57,7 @@ namespace RidgesideVillage.Questing
             }
 			int rand = Game1.random.Next(candidates.Count);
 			Log.Trace($"Daily Ninjaquest: ID {candidates[rand]}");
-			return Quest.getQuestFromId(candidates[rand]);
+			return QuestFactory.getQuestFromId(candidates[rand]);
 		}
 
 		static internal Quest GetRandomHandCraftedQuest()
@@ -84,7 +84,7 @@ namespace RidgesideVillage.Questing
 			int rand = Game1.random.Next(candidates.Count);
 
 			Log.Trace($"chose {candidates[rand]}");
-			return Quest.getQuestFromId(candidates[rand]);
+			return QuestFactory.getQuestFromId(candidates[rand]);
         }
 
 
@@ -151,5 +151,50 @@ namespace RidgesideVillage.Questing
 			return quest;
 
 		}
-	} 
+		static internal Quest getQuestFromId(int id)
+		{
+			Quest quest = Quest.getQuestFromId(id);
+
+			if (quest is SlayMonsterQuest monsterQuest)
+			{
+				Dictionary<int, string> questData = Game1.temporaryContent.Load<Dictionary<int, string>>("Data\\Quests");
+
+				if (questData != null && questData.ContainsKey(id))
+				{
+					string[] rawData = questData[id].Split('/');
+					string questType = rawData[0];
+					string[] conditionsSplit = rawData[4].Split(' ');
+
+					monsterQuest.loadQuestInfo();
+					monsterQuest.monster.Value.Name = conditionsSplit[0].Replace('_', ' ');
+					monsterQuest.monsterName.Value = monsterQuest.monster.Value.Name;
+					monsterQuest.numberToKill.Value = Convert.ToInt32(conditionsSplit[1]);
+					if (conditionsSplit.Length > 2)
+					{
+						monsterQuest.target.Value = conditionsSplit[2];
+					}
+					else
+					{
+						monsterQuest.target.Value = "null";
+					}
+					monsterQuest.questType.Value = 4;
+                    if (rawData.Length>=8)
+                    {
+						monsterQuest.targetMessage = rawData[9];
+                    }
+
+					monsterQuest.moneyReward.Value = Convert.ToInt32(rawData[6]);
+					monsterQuest.reward.Value = monsterQuest.moneyReward.Value;
+					monsterQuest.rewardDescription.Value = (rawData[6].Equals("-1") ? null : rawData[7]);
+					monsterQuest.parts.Clear();
+					monsterQuest.dialogueparts.Clear();
+					ModEntry.Helper.Reflection.GetField<bool>(monsterQuest, "_loadedDescription").SetValue(true);
+					return monsterQuest;
+				}
+			}
+
+			return quest;
+		}
+	}
+
 }
