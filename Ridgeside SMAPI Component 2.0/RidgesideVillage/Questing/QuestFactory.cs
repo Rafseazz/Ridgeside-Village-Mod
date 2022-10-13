@@ -178,7 +178,7 @@ namespace RidgesideVillage.Questing
 						monsterQuest.target.Value = "null";
 					}
 					monsterQuest.questType.Value = 4;
-                    if (rawData.Length>=8)
+                    if (rawData.Length>9)
                     {
 						monsterQuest.targetMessage = rawData[9];
                     }
