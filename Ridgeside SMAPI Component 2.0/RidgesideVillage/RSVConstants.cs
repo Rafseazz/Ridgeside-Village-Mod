@@ -67,6 +67,7 @@ namespace RidgesideVillage
         public const string M_ANNIVERSARYBOOKEDFLAG = "RSV.ReservedAnv";
         public const string M_ANNIVERSARYTODAY = "RSV.AnvToday";
         public const string M_CRYSTALS = "CrystalsFlagOngoing";
+            //relic items
         public const string M_MOOSE = "RSV.MooseStatue";
         public const string M_FOXMASK = "RSV.FoxMask";
         public const string M_SAPPHIRE = "RSV.Sapphire";
@@ -76,6 +77,7 @@ namespace RidgesideVillage
         public const string M_CANDELABRUM = "RSV.Candelabrum";
         public const string M_ELVENCOMB = "RSV.ElvenComb";
         public const string M_OPALHALO = "RSV.OpalHalo";
+
         public const string M_OPENEDPORTAL = "RSV.Opened_Portal";
         public const string M_UNDREYAHOME = "RSV.UndreyaStayHome";
         public const string M_TORTSLOVE = "RSV.LoverMailFlag";

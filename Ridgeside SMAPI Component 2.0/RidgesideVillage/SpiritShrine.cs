@@ -122,7 +122,7 @@ namespace RidgesideVillage
                     Helper.Events.GameLoop.OneSecondUpdateTicked -= OnOneSecondUpdateTicked;
                     var Events = location.GetLocationEvents();
                     
-                    var PortalEvent = new Event(Events["75160256/n InexistentMailFlag"], eventID: RSVConstants.E_OPENPORTAL);
+                    var PortalEvent = new Event(Events[$"{RSVConstants.E_OPENPORTAL}/H/n InexistentMailFlag"], eventID: RSVConstants.E_OPENPORTAL);
                     // Moved add special order command to UntimedSO
                     UtilFunctions.StartEvent(PortalEvent, RSVConstants.L_FALLS, 15, 43);
                 }

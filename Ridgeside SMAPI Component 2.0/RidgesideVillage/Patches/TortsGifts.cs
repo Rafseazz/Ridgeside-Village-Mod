@@ -15,6 +15,7 @@ namespace RidgesideVillage
         static IModHelper Helper;
 
         const string MISTBLOOM = "Mountain Mistbloom";
+        const string AMANCAY = "Forest Amancay";
         const string FOXTAIL = "Old Lucky Foxtail Charm";
         const string LOVERPIE = "Strawberry Lover Pie";
         const string FAIRYFISH = "Fairytale Lionfish";
@@ -62,6 +63,9 @@ namespace RidgesideVillage
                 case MISTBLOOM:
                     Game1.weatherForTomorrow = Game1.weather_rain;
                     break;
+                case AMANCAY:
+                    Game1.weatherForTomorrow = Game1.weather_sunny;
+                    break;
                 case FOXTAIL:
                     gifter.team.sharedDailyLuck.Value = 0.12;
                     break;
@@ -77,7 +81,6 @@ namespace RidgesideVillage
                 default:
                     return;
             }
-
             DoPostGiftStuff(gifter, giftee, e);
         }
 

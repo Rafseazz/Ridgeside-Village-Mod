@@ -26,6 +26,28 @@
 	]
 	},
 
+	{
+			//Marlon without SVE
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall20",
+			"When": { "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false },
+			"TextOperations": [
+					{
+							"Operation": "Append",
+							"Target": ["Entries", "Set-Up_additionalCharacters"],
+							"Value": "Marlon 101 49 down",
+							"Delimiter": "/"
+					},
+
+					{
+							"Operation": "Append",
+							"Target": ["Entries", "MainEvent_additionalCharacters"],
+							"Value": "Marlon 87 38 left",
+							"Delimiter": "/"
+					}
+			]
+	},
+
     {
         //Naomi Arrives
         "Action": "EditData",
