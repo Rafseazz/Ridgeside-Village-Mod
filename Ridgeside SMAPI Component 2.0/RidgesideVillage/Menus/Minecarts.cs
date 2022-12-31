@@ -68,7 +68,7 @@ namespace RidgesideVillage
                     Game1.warpFarmer(RSVConstants.L_VILLAGE, 109, 85, false);
                 });
             }
-            if (!tileActionString.Contains("5") && Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
+            if (!tileActionString.Contains("5") && Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_CLEANSED))
             {
                 choices.Add(new Response("loc5", Helper.Translation.Get("MinecartLocation.5")));
                 selectionActions.Add(delegate
@@ -77,7 +77,7 @@ namespace RidgesideVillage
                     Game1.warpFarmer(RSVConstants.L_SUMMITFARM, 77, 48, false);
                 });
             }
-            if (!tileActionString.Contains("6") && Game1.player.eventsSeen.Contains(RSVConstants.E_CLEANSED))
+            if (!tileActionString.Contains("6") && Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_CLEANSED))
             {
                 choices.Add(new Response("loc5", Helper.Translation.Get("MinecartLocation.6")));
                 selectionActions.Add(delegate
