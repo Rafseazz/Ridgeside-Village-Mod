@@ -57,6 +57,31 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.draw)),
                 postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_draw_Postfix))
             );
+
+            Helper.Events.Player.Warped += OnWarped;
+        }
+
+        private static void OnWarped(object sender, WarpedEventArgs e)
+        {
+            if (e.NewLocation.Name.Equals(RSVConstants.L_SUMMITFARM)){
+                if(Game1.random.NextDouble() > 0.01)
+                {
+                    return;
+                }
+
+                Random r = new Random((int)Game1.uniqueIDForThisGame + (int)Game1.stats.DaysPlayed);
+                GameLocation summitFarm = e.NewLocation;
+                for (int i = 0; i < 1000; i++)
+                {
+                    //below y = 32
+                    int x = r.Next(90);
+                    int y = r.Next(50) + 30;
+                    if (summitFarm.isTileLocationTotallyClearAndPlaceable(x, y) || summitFarm.isTileHoeDirt(new Vector2(x,y)))
+                    {
+                        summitFarm.addCritter(new StardewValley.BellsAndWhistles.Crow(x, y));
+                    }
+                }
+            }
         }
 
         private static void GameLocation_CanPlanTreesHere_Postfix(ref GameLocation __instance, int sapling_index, int tile_x, int tile_y, ref bool __result)
