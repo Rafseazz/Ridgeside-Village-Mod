@@ -88,6 +88,8 @@ namespace RidgesideVillage.Questing
 							player.activeDialogueEvents.Remove(RSVConstants.CT_PIKATOPIC);
                         }
 						player.activeDialogueEvents.Add(RSVConstants.CT_PIKATOPIC, specialOrder.GetDaysLeft());
+						player.mailReceived.Remove("Pika_" + RSVConstants.CT_PIKATOPIC);
+						Log.Trace($"RSV: Removed {"Pika_" + RSVConstants.CT_PIKATOPIC} mail flag.");
 						Log.Trace($"RSV: Added pika_pickup conversation topic.");
 					}
 					return;
