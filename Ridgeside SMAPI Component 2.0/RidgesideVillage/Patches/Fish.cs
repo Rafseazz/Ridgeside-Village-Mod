@@ -131,7 +131,7 @@ namespace RidgesideVillage
             {
                 case RSVConstants.L_VILLAGE:
                     int legendary = GetFishID("Sockeye Salmon");
-                    if (new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
+                    if (new Rectangle(71, 93, 3, 3).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, legendary))
                     {
                         if (is_bait_magic || (Game1.currentSeason.Equals("fall") && Game1.IsRainingHere(Game1.currentLocation)))
                             fishID = legendary;
@@ -139,7 +139,7 @@ namespace RidgesideVillage
                     break;
                 case RSVConstants.L_FALLS:
                     legendary = GetFishID("Waterfall Snakehead");
-                    if (new Rectangle(53, 11, 4, 4).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
+                    if (new Rectangle(53, 11, 4, 4).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, legendary))
                     {
                         if (is_bait_magic || ((Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer")) && Game1.timeOfDay >= 2000))
                             fishID = legendary;
@@ -147,7 +147,7 @@ namespace RidgesideVillage
                     break;
                 case RSVConstants.L_FOREST:
                     legendary = GetFishID("Deep Ridge Angler");
-                    if (new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, fishID))
+                    if (new Rectangle(67, 30, 5, 6).Contains((int)bobberTile.X, (int)bobberTile.Y) && !CheckCaughtBefore(who, legendary))
                     {
                         if (is_bait_magic || (Game1.currentSeason.Equals("winter") && Game1.timeOfDay >= 1200))
                             fishID = legendary;
