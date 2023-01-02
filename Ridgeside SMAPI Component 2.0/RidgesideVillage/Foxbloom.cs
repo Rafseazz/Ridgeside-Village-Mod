@@ -37,6 +37,7 @@ namespace RidgesideVillage
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             Game1.getLocationFromName(RSVConstants.L_FOREST).modData["RSV_foxbloomSpawned"] = "false";
+            spawned_today = false;
         }
 
         private static void OnWarped(object sender, WarpedEventArgs e)
