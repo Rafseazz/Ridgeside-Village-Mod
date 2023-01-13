@@ -63,42 +63,50 @@ namespace RidgesideVillage.Offering
         private void GrowPlants()
         {
             int n = 0;
-            foreach (var pair in Game1.getFarm().terrainFeatures.Pairs)
+            var locations = new List<GameLocation>() { Game1.getFarm(), Game1.getLocationFromName(RSVConstants.L_SUMMITFARM) };
+            foreach (var location in locations)
             {
-                if (n >= this.Value)
+                if (location is not null)
                 {
-                    break;
-                }
-                if (pair.Value is HoeDirt dirt && dirt.crop != null)
-                {
-                    Crop crop = dirt.crop;
-                    bool harvestable = crop.currentPhase.Value >= crop.phaseDays.Count - 1 && (!crop.fullyGrown.Value || crop.dayOfCurrentPhase.Value <= 0);
-
-                    if (harvestable)
+                    foreach (var pair in location.terrainFeatures.Pairs)
                     {
-                        continue;
-                    }
-                    else if (crop.isWildSeedCrop())
-                    {
-                        int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
-                        Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                        if (n >= this.Value)
                         {
-                            IsSpawnedObject = true,
-                            CanBeGrabbed = true
-                        });
-                        Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
-                        crop = null;
-                        dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+                            break;
+                        }
+                        if (pair.Value is HoeDirt dirt && dirt.crop != null)
+                        {
+                            Crop crop = dirt.crop;
+                            bool harvestable = crop.currentPhase.Value >= crop.phaseDays.Count - 1 && (!crop.fullyGrown.Value || crop.dayOfCurrentPhase.Value <= 0);
+
+                            if (harvestable)
+                            {
+                                continue;
+                            }
+                            else if (crop.isWildSeedCrop())
+                            {
+                                int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
+                                Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                                {
+                                    IsSpawnedObject = true,
+                                    CanBeGrabbed = true
+                                });
+                                Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                                crop = null;
+                                dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+                            }
+                            else
+                            {
+                                crop.growCompletely();
+                                Log.Verbose($"RSV: Regular crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                            }
+
+                            n++;
+                        }
                     }
-                    else
-                    {
-                        crop.growCompletely();
-                        Log.Verbose($"RSV: Regular crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
-                    } 
-                        
-                    n++;
                 }
             }
+
         }
 
         private void ApplyBuff()
