@@ -100,35 +100,6 @@ namespace RidgesideVillage
 
             cp.RegisterToken(this.ModManifest, "RSVInstallDay", () =>
             {
-                // save is loading or loaded
-                if (SaveGame.loaded?.player != null || Context.IsWorldReady)
-                {
-                    var FarmModData = Game1.getFarm().modData;
-                    const string key = "RSVInstallDay";
-                    if (FarmModData.TryGetValue(key, out string day))
-                    {
-                        return new[] { day };
-                    }
-                    else
-                    {
-                        if (Game1.player.eventsSeen.Contains(RSVConstants.E_BUSSTOP_INTRO))
-                        {
-                            FarmModData[key] = "0";
-                            return new[] { "0" };
-                        }
-                        else
-                        {
-                            FarmModData[key] = Game1.stats.DaysPlayed.ToString();
-                            return new[] { Game1.stats.DaysPlayed.ToString()};
-                        }
-                    }
-                }
-                // no save loaded (e.g. on the title screen)
-                return null;
-            });
-
-            cp.RegisterToken(this.ModManifest, "RSVInstallDay", () =>
-            {
                 if (!Config.progressiveStory)
                 {
                     return new[] { "0" };
