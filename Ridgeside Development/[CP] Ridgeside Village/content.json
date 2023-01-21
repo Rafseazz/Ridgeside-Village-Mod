@@ -664,6 +664,38 @@
 			}
 		},
 
+		//IreneTheme
+		{
+			"Name": "IreneMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "IreneMusic",
+			"Value": "Satiety",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//ZayneTheme
+		{
+			"Name": "ZayneMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "ZayneMusic",
+			"Value": "Saliency",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
 		//Anton x Paula Theme
 		{
 			"Name": "AntonPaulaMusic",
@@ -675,6 +707,22 @@
 		{
 			"Name": "AntonPaulaMusic",
 			"Value": "Companion",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//Irene x Zayne Theme
+		{
+			"Name": "IreneZayneMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "IreneZayneMusic",
+			"Value": "SincereSteps",
 			"When": {
 				"HasMod |contains=Rafseazz.RSVSAATExtra": true
 			}

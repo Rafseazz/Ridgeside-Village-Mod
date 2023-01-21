@@ -1995,9 +1995,19 @@
 		"Target": "Data/Events/ArchaeologyHouse",
 		"Entries": {
 		//Kiwi Thinking 3
-		"751604010/t 800 1300/e 75160408": "libraryTheme/16 10/farmer -1000 -1000 0 Kiwi 16 9 0/skippable/emote Kiwi 40/Speak Kiwi \"Kiwi likes the funny pictures.$h\" /end",
+		"75160410/t 800 1300/e 75160408": "libraryTheme/16 10/farmer -1000 -1000 0 Kiwi 16 9 0/skippable/emote Kiwi 40/Speak Kiwi \"Kiwi likes the funny pictures.$h\" /end",
 		},
 	},
+
+//2.3 Events - Raf
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_LennyHouse",
+		"Entries": {
+			//Irene years to know more (Irene 7 heart event)
+			"75160430/f Irene 1750/e 75160322/t 1200 1800": "jaunty/0 0/farmer 0 0 0 Irene 0 0 0 Lenny 0 0 0/skippable/"
+		}
+	}
 
 ]
 }
