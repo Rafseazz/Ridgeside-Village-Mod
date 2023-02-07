@@ -93,6 +93,30 @@
 
 	 //Special Dialogue
 	"MovieInvitation": "{{i18n:Irene.Dialogue.MovieInvitation}}",
+	"breakUp": "{{i18n:Irene.Dialogue.breakUp}}",
+	"danceRejection": "{{i18n:Irene.Dialogue.danceRejection}}",
+	"divorced": "{{i18n:Irene.Dialogue.divorced}}",
+		},
+	},
+
+	//Romantic dialogue overwrite when dating
+	{
+   
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Irene",
+   "When": {  	
+   	"Relationship:Irene": "Dating",
+   },
+   "Entries": {
+
+   	//8 Hearts and above
+	"Mon8": "{{i18n:Irene.Dialogue.Mon8.dating}}",
+	"Tue8": "{{i18n:Irene.Dialogue.Tue8.dating}}",
+	"Wed8": "{{i18n:Irene.Dialogue.Wed8.dating}}",
+	"Thu8": "{{i18n:Irene.Dialogue.Thu8.dating}}",
+	"Fri8": "{{i18n:Irene.Dialogue.Fri8.dating}}",
+	"Sat8": "{{i18n:Irene.Dialogue.Sat8.dating}}",
+	"Sun8": "{{i18n:Irene.Dialogue.Sun8.dating}}",
 		},
 	},
 ]
