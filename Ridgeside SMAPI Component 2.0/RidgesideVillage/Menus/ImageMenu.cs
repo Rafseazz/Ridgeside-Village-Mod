@@ -90,13 +90,16 @@ namespace RidgesideVillage
             Game1.activeClickableMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image);
         }
 
-        internal ImageMenu(int x, int y, float scale, Texture2D image):base(x, y, (int) (image.Width * scale), (int) (image.Height * scale), true)
+        internal ImageMenu(int x, int y, float scale, Texture2D image, bool showUpperRightCloseButton = true):base(x, y, (int) (image.Width * scale), (int) (image.Height * scale), showUpperRightCloseButton)
         {
             this.image = image;
             this.scale = scale;
             //move close button a little
-            this.upperRightCloseButton.bounds.X += 18;
-            this.upperRightCloseButton.bounds.Y -= 20;
+            if(this.upperRightCloseButton is not null)
+            {
+                this.upperRightCloseButton.bounds.X += 18;
+                this.upperRightCloseButton.bounds.Y -= 20;
+            }
 
             topLeft = new Vector2(x, y);
             targetRectangle = new Rectangle((int)topLeft.X, (int)topLeft.Y, (int)(image.Width * scale), (int)(image.Height * scale));
