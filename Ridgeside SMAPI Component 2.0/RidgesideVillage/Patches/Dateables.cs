@@ -38,7 +38,23 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(SocialPage), "drawNPCSlot"),
                 postfix: new HarmonyMethod(typeof(Dateables), nameof(SocialPage_drawNPCSlot_Postfix))
             );
+
+            Helper.Events.GameLoop.DayEnding += OnDayEnding;
         }
+
+        private static void OnDayEnding(object sender, DayEndingEventArgs e)
+        {
+            //If host has seen the respective event that prevent friendship decay, remove the decay by marking them as talked to
+            if(Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_IRENE_NODECAY) && Game1.player.friendshipData.ContainsKey("Irene"))
+            {
+                Game1.player.friendshipData["Irene"].TalkedToToday = true;
+            }
+            if (Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_ZAYNE_NODECAY) && Game1.player.friendshipData.ContainsKey("Zayne"))
+            {
+                Game1.player.friendshipData["Zayne"].TalkedToToday = true;
+            }
+        }
+
         private static bool NPC_engagementResponse_Prefix(NPC __instance)
         {
             if ((__instance.Name == "Shiro") && !Game1.MasterPlayer.eventsSeen.Contains(75160249))

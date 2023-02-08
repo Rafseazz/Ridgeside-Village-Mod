@@ -32,6 +32,8 @@ namespace RidgesideVillage
         public const int E_GRANDMA = 75160383;
         public const int E_SUMMITUNLOCK = 75160387;
         public const int E_BUSSTOP_INTRO = 75160186;
+        public const int E_IRENE_NODECAY = 75160324;
+        public const int E_ZAYNE_NODECAY = 75160338;
 
         // Quests
         public const int Q_CURSEDGH1 = 72860001;
