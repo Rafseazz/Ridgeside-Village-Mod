@@ -23,6 +23,8 @@ namespace RidgesideVillage
          // Character, 8 heart event ID/response ID for becoming datable
             { "Anton", "75160304/75163042" },
             { "Paula", "75160352/75163521" },
+            { "Irene", "75160324/7516325" },
+            { "Zayne", "75160440/7516439" },
         };
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
