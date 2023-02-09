@@ -43,6 +43,8 @@ namespace RidgesideVillage
             MethodInfo showImageCommands = typeof(EventPatches).GetMethod("command_RSVShowImage");
             ExternalAPIs.SC.AddEventCommand("RSVShowImage", showImageCommands);
 
+            MethodInfo stopShowImageCommands = typeof(EventPatches).GetMethod(nameof(EventPatches.command_RSVStopShowImage));
+            ExternalAPIs.SC.AddEventCommand("RSVStopShowImage", stopShowImageCommands);
 
             MethodInfo AddSOCommand = typeof(EventPatches).GetMethod("command_RSVAddSO");
             ExternalAPIs.SC.AddEventCommand("RSVAddSO", AddSOCommand);
@@ -69,6 +71,9 @@ namespace RidgesideVillage
             }
         }
 
+
+        static ImageMenu currImageMenu;
+
         public static void command_RSVShowImage(Event @event, GameLocation location, GameTime time, string[] split)
         {
             try
@@ -78,20 +83,63 @@ namespace RidgesideVillage
                 {
                     scale = 1f;
                 }
-                ImageMenu.Open(image, scale);
+
+                Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * scale), (int)(image.Height * scale));
+                //dialog is 500px 
+                topLeft.Y = Math.Min(topLeft.Y, Game1.viewport.Height - image.Height*scale - 510);
+                topLeft.Y = Math.Max(topLeft.Y, 0);
+                EventPatches.currImageMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image, false);
                 @event.CurrentCommand++;
-                if(split.Length > 3)
-                {
-                    @event.checkForNextCommand(location, time);
-                }
+
+
+                EventPatches.Helper.Events.Display.RenderedHud += DrawImageMenu;
+
+                @event.CurrentCommand++;
+
             }
             catch
             {
-                Log.Error($"Image {split[1]} not found");
+                if(split.Length < 1)
+                {
+                    Log.Error("RSVShowImage has no path for file");
+                }
+                else
+                {
+                    Log.Error($"Image {split[1]} not found");
+                }
                 @event.CurrentCommand++;
                 @event.checkForNextCommand(location, time);
             }
         }
+
+        private static void DrawImageMenu(object sender, RenderedHudEventArgs e)
+        {
+            if(!Game1.eventUp || EventPatches.currImageMenu is null)
+            {
+                EventPatches.Helper.Events.Display.RenderedHud -= DrawImageMenu;
+            }
+            else
+            {
+                EventPatches.currImageMenu.draw(e.SpriteBatch);
+            }
+        }
+
+        public static void command_RSVStopShowImage(Event @event, GameLocation location, GameTime time, string[] split)
+        {
+            try
+            {
+                EventPatches.Helper.Events.Display.RenderedHud -= DrawImageMenu;
+                EventPatches.currImageMenu = null;
+
+                @event.CurrentCommand++;
+            }
+            catch
+            {
+                @event.CurrentCommand++;
+                @event.checkForNextCommand(location, time);
+            }
+        }
+
 
         internal static void ShowGlobalMessage_Prefix(ref string message)
         {
