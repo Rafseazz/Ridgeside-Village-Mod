@@ -55,6 +55,18 @@
 			},
 			"Update": "OnLocationChange"
 		},
+
+		{
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": 75160338
+			},
+			"Entries": {
+				"Zayne": null
+			},
+			"Update": "OnLocationChange"
+		},
 			
 
 

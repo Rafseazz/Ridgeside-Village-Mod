@@ -1061,7 +1061,7 @@
 		"Update": "OnLocationChange"
 	},
 
-	//Access to Amethyne Indoor Pool after 8 hearts with Maive
+	//Access to Amethyne Indoor Pool after 8 hearts with Maive or Zayne
 	{
 		"LogName": "RSV: Access to Amethyne Pool",
 		"Action": "EditMap",
@@ -1070,10 +1070,31 @@
 		"ToArea": { "X": 4, "Y": 4, "Width": 3, "Height": 4 },
 		"PatchMode": "Replace",
 		"When": {
-            "Query: {{Hearts:Maive}} >= 8": true
+            "Query: {{Hearts:Maive, Zayne}} >= 8": true
         },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
+
+	// Remove tourist spawn from room Irene post 8 hearts
+	// Irene is staying at the hotel for the 1st 2 weeks per season
+	{
+       "Action": "EditMap",
+       "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+       "MapTiles": [
+          {
+             "Position": { "X": 50, "Y": 23 },
+             "Layer": "Back",
+             "SetProperties": {
+                "CustomCompanions": null
+             }
+          }
+       ],
+       "When": {
+			"HasSeenEvent: |contains=75160324": true,
+			"Day": "{{Range: 1,14}}",
+			"Query: '{{Spouse}}'='Irene'": false
+		}
+    },
 
 
 ]

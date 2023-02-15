@@ -509,5 +509,17 @@
 				},
 				"Update": "OnLocationChange, OnTimeChange",
 			},
+
+			{
+				"Action": "EditData",
+				"Target": "Data/CustomNPCExclusions",
+				"Entries": {
+					"Zayne": "ItemDelivery",
+         		},
+				"When": {
+					"HasSeenEvent: hostPlayer": 75160338
+				},
+				"Update": "OnLocationChange, OnTimeChange",
+			},
 	]
 }
