@@ -478,9 +478,34 @@
 				"Entries": {
 					"Jio": "ItemDelivery ShopDialog Greet BeGreeted WinterStar",
 					"Daia": "ItemDelivery ShopDialog Greet BeGreeted WinterStar"
-         },
+         		},
 				"When": {
 					"HasSeenEvent: hostPlayer": 75160263
+				},
+				"Update": "OnLocationChange, OnTimeChange",
+			},
+
+			{
+				"Action": "EditData",
+				"Target": "Data/CustomNPCExclusions",
+				"Entries": {
+					"Malaya": "ItemDelivery",
+					"Kimpoi": "ItemDelivery"
+         		},
+				"When": {
+					"HasSeenEvent: hostPlayer": 75160251
+				},
+				"Update": "OnLocationChange, OnTimeChange",
+			},
+
+			{
+				"Action": "EditData",
+				"Target": "Data/CustomNPCExclusions",
+				"Entries": {
+					"Naomi": "ItemDelivery",
+         		},
+				"When": {
+					"HasSeenEvent: hostPlayer": 75160249
 				},
 				"Update": "OnLocationChange, OnTimeChange",
 			},
