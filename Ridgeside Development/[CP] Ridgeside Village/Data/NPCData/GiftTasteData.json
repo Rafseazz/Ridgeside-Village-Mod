@@ -145,5 +145,19 @@
 		},
 	},
 
+	{
+		"LogName": "Gift tastes - Zayne",
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"When": {
+			"HasSeenEvent": 75160338
+		},
+		"Update": "OnLocationChange, OnTimeChange",
+		"Entries": {
+
+			"Zayne": "{{i18n:Gift.Love.Zayne}}/66 107 221/{{i18n:Gift.Like.Zayne}}/196 256 336/{{i18n:Gift.Dislike.Zayne}}/167 614 815/{{i18n:Gift.Hate.Zayne}}//{{i18n:Gift.Neutral.Zayne}}/-4/ ",
+		},
+	},
+
 ]
 }
