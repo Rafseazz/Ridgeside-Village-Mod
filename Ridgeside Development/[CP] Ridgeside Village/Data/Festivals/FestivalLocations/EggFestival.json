@@ -162,6 +162,30 @@
       ]
     },
 
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "HasSeenEvent": 75160338, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 22 35 right",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Zayne 22 35 right",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
 
     {
         //RSV Kids join main event VANILLA

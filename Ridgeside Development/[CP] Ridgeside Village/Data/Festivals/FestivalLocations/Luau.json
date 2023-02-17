@@ -97,6 +97,30 @@
         ]
     },
 
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/summer11",
+        "When": {
+            "HasSeenEvent": 75160338, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 68 24 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Zayne 68 24 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
 		{
         //Jio and Kiwi
         "Action": "EditData",

@@ -80,6 +80,30 @@
     },
 
     {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": {
+            "HasSeenEvent": 75160338, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 72 23 up",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Main-Event_additionalCharacters"],
+                "Value": "Zayne 72 23 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
         //Jio and Kiwi
 				"LogName": "Jio and Kiwi at Ice Festival",
         "Action": "EditData",

@@ -78,6 +78,23 @@
         ]
     },
 
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter25",
+        "When": {
+            "HasSeenEvent": 75160338, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 30 21 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
     //Torts
     {
       "LogName": "Torts Winter Star Location",

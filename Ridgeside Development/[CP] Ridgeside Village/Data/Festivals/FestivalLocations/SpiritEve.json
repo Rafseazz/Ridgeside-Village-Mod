@@ -59,6 +59,23 @@
         ]
     },
 
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160338, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 14 72 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
 		{
         //Jio and Kiwi
         "Action": "EditData",

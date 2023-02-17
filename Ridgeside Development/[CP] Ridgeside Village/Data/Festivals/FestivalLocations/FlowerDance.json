@@ -130,6 +130,30 @@
         ]
     },
 
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring24",
+        "When": {
+            "HasSeenEvent": 75160338, "RSVNPCSAttendFestivals": true
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 40 22 right",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Zayne 40 22 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
     //Torts
     {
       "LogName": "Torts RSV Flower Dance Location",

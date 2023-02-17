@@ -98,6 +98,30 @@
         ]
     },
 
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter28",
+        "When": {
+            "HasSeenEvent": 75160338
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 52 42 up",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Zayne 30 47 right",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
     //Torts
     {
       "LogName": "Torts Ember of Resolutions Location",

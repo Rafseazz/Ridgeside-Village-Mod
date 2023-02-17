@@ -96,6 +96,30 @@
         ]
     },
 
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall20",
+        "When": {
+            "HasSeenEvent": 75160338,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 121 47 up",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Zayne 89 43 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
 		{
         //Jio and Kiwi
         "Action": "EditData",
