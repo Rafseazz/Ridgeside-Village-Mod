@@ -15,11 +15,11 @@
 		"Target": "Characters/Schedules/Belinda",
 		"Entries": {
 			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
-			"Mon": "0 Custom_Ridgeside_RSVSpiritRealm 75 34 2/610 Custom_Ridgeside_RSVSpiritRealm 75 35 2",
-			"Wed": "0 Custom_Ridgeside_RSVSpiritRealm 12 38 2/610 Custom_Ridgeside_RSVSpiritRealm 12 39 1",
-			"Fri": "0 Custom_Ridgeside_RSVSpiritRealm 54 79 2/610 Custom_Ridgeside_RSVSpiritRealm 54 80 1",
-			"Sat": "0 Custom_Ridgeside_RSVSpiritRealm 54 79 2/610 Custom_Ridgeside_RSVSpiritRealm 54 80 1",
-			"Sun": "0 Custom_Ridgeside_RSVSpiritRealm 54 79 2/610 Custom_Ridgeside_RSVSpiritRealm 54 80 1"
+			"Mon": "0 Custom_Ridgeside_RSVSpiritRealm 54 79 2/610 Custom_Ridgeside_RSVSpiritRealm 54 80 1",
+			"Wed": "GOTO Mon",
+			"Fri": "GOTO Mon",
+			"Sat": "GOTO Mon",
+			"Sun": "GOTO Mon"
 					},
 		"When": {
 			"HasSeenEvent: hostPlayer": 75160263,
