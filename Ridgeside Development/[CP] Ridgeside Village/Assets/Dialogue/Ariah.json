@@ -95,5 +95,19 @@
 	"MovieInvitation": "{{i18n:Ariah.Dialogue.MovieInvitation}}",
 		},
 	},
+
+	//Dialogue change when Irene leaves
+	{
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Ariah",
+		"Entries": {
+			"Fri2": "{{i18n:Ariah.Dialogue.Fri2.NoIrene}}",
+			"Sun2": "{{i18n:Ariah.Dialogue.Sun2.NoIrene}}",
+			"Tue6": "{{i18n:Ariah.Dialogue.Tue6.NoIrene}}",
+		},
+		"When": {
+			"HasSeenEvent: |contains=75160324": true
+		}
+	}
 ]
 }
