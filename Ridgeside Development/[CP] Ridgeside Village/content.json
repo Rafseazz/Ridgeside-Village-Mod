@@ -391,6 +391,28 @@
 			"Value": "{{Random: 10, 1, 2, 3, 4, 5, 6, 7, 8, 9|key= RSVHotelGuestToken}}"
 		},
 
+		//Irene travel schedule for 8 heart event preconditions
+		{
+			"Name": "IreneFreeDaysForEvent",
+			"Value": "u 14 15 16 17 18/z summer fall winter",
+			"When": { "Season": "spring" }
+		},
+		{
+			"Name": "IreneFreeDaysForEvent",
+			"Value": "u 14 15 16 17 18/z spring fall winter",
+			"When": { "Season": "summer" }
+		},
+		{
+			"Name": "IreneFreeDaysForEvent",
+			"Value": "u 1 2 3 4/z spring summer winter",
+			"When": { "Season": "fall" }
+		},
+		{
+			"Name": "IreneFreeDaysForEvent",
+			"Value": "u 1 2 3 4/z spring summer fall",
+			"When": { "Season": "winter" }
+		},
+
 		//Ridgeside Extra Music Tokens
 		//AlissaTheme
 		{
