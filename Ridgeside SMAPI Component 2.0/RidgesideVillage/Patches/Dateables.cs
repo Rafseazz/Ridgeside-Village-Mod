@@ -42,6 +42,29 @@ namespace RidgesideVillage
             );
 
             Helper.Events.GameLoop.DayEnding += OnDayEnding;
+            Helper.Events.GameLoop.DayStarted += OnDayStarted;
+        }
+
+        private static void OnDayStarted(object sender, DayStartedEventArgs e)
+        {
+            NPC traveller = Game1.getCharacterFromName("Irene");
+            if (Game1.player.spouse.Contains("Irene"))
+            { 
+                if(Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
+                {
+                    if(Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
+                    {
+                        Game1.warpCharacter(traveller, RSVConstants.L_HIDDENWARP, Vector2.One);
+                    }
+                }
+                else if (Game1.currentSeason.Equals("fall") || Game1.currentSeason.Equals("winter"))
+                {
+                    if (Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
+                    {
+                        Game1.warpCharacter(traveller, RSVConstants.L_HIDDENWARP, Vector2.One);
+                    }
+                }
+            }
         }
 
         private static void OnDayEnding(object sender, DayEndingEventArgs e)

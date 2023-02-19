@@ -115,6 +115,7 @@ namespace RidgesideVillage
         public const string L_SUMMITFARM = "Custom_Ridgeside_SummitFarm";
         public const string L_SUMMITHOUSE = "Custom_Ridgeside_RSVSummitHouseNew";
         public const string L_SUMMITSHED = "Custom_Ridgeside_RSVSummitShed";
+        public const string L_HIDDENWARP = "Custom_Ridgeside_RSVHiddenWarp2";
 
         // Conversation topics
         public const string CT_HOUSEUPGRADE = "RSV.HouseCT";
