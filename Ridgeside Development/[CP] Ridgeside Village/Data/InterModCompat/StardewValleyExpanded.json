@@ -224,7 +224,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-EggFestival.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 52, "Height": 54 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 52, "Height": 54 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -233,7 +233,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "RSVNPCSAttendFestivals": true,
+            "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
             "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
         },
         "Entries": {
@@ -253,7 +253,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/FlowerFestival-Patch_SVE.tmx",
 		"FromArea": { "X": 25, "Y": 8, "Width": 25, "Height": 37 },
 		"ToArea": { "X": 25, "Y": 8, "Width": 25, "Height": 37 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -266,7 +266,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Beach-Luau.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 48, "Height": 26 },
 		"ToArea": { "X": 56, "Y": 0, "Width": 48, "Height": 26 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -279,7 +279,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall16",
         "When": {
-            "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "ExpandedFestivalMaps": true
+            "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
@@ -303,7 +303,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall16",
         "When": {
-            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "ExpandedFestivalMaps": true
+            "HasSeenEvent": 75160249, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
@@ -320,7 +320,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall16",
         "When": {
-            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "ExpandedFestivalMaps": true
+            "HasSeenEvent": 75160254, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
@@ -337,7 +337,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/fall16",
         "When": {
-            "HasSeenEvent": 75160440, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "ExpandedFestivalMaps": true
+            "HasSeenEvent": 75160440, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
@@ -357,7 +357,7 @@
 						"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
                         "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
 						"HasSeenEvent: anyPlayer|contains=75160188": true,
-                        "ExpandedFestivalMaps": true
+                        "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
             },
         "TextOperations": [
             {
@@ -381,7 +381,7 @@
       "LogName": "Torts SDV Fair Location",
       "Action": "EditData",
       "Target": "Data/Festivals/fall16",
-      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
       "TextOperations": [
         {
           "Operation": "Append",
@@ -398,7 +398,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Fair.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 40, "Height": 37 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 40, "Height": 37 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -411,7 +411,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Halloween.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 25, "Height": 24 },
 		"ToArea": { "X": 0, "Y": 53, "Width": 25, "Height": 24 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "IsOddYear": true, "ExpandedFestivalMaps": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "IsOddYear": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 	{
@@ -420,7 +420,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Halloween2.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 25, "Height": 24 },
 		"ToArea": { "X": 0, "Y": 53, "Width": 25, "Height": 24 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "IsOddYear": false, "ExpandedFestivalMaps": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "IsOddYear": false, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -430,7 +430,7 @@
 	{
 	   "Action": "EditData",
 	   "Target": "Data/Festivals/winter8",
-	   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true},
+	   "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true},
 	   "TextOperations": [
 
 	   //SetUp
@@ -491,7 +491,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
         "When": {
-            "HasSeenEvent": 75160249, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true
+            "HasSeenEvent": 75160249, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true
         },
         "TextOperations": [
             {
@@ -515,7 +515,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
         "When": {
-            "HasSeenEvent": 75160254, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true
+            "HasSeenEvent": 75160254, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true
         },
         "TextOperations": [
             {
@@ -539,7 +539,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
         "When": {
-            "HasSeenEvent": 75160440, "RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true
+            "HasSeenEvent": 75160440, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true
         },
         "TextOperations": [
             {
@@ -563,7 +563,7 @@
       "LogName": "Torts Ice Festival Location",
       "Action": "EditData",
       "Target": "Data/Festivals/winter8",
-      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true },
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true },
       "TextOperations": [
         {
           "Operation": "Append",
@@ -589,7 +589,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Christmas.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": false, "ExpandedFestivalMaps": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": false, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 
@@ -599,7 +599,7 @@
 		"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-JojaChristmas.tbin.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 59, "Height": 49 },
-		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": true, "ExpandedFestivalMaps": true },
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasSeenEvent: |contains=5553210": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
 		"PatchMode": "ReplaceByLayer",
 	},
 

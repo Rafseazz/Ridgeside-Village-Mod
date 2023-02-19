@@ -6,59 +6,59 @@
 		"Action": "Load",
 		"Target": "Maps/Forest-FlowerFestival",
 		"FromFile": "Assets/Maps/FestivalMaps/FlowerFestival-Patch.tmx",
-		"When": { 
+		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
-			"RSVNPCSAttendFestivals": true
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
 		},
 	},
 	{
 		"Action": "Load",
 		"Target": "Maps/Town-EggFestival",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVEggFestival.tmx",
-		"When": { 
+		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
-			"RSVNPCSAttendFestivals": true,
-			"ExpandedFestivalMaps": true
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 		},
 	},
 	{
 		"Action": "Load",
 		"Target": "Maps/Beach-Luau",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVLuau.tmx",
-		"When": { 
+		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
-			"RSVNPCSAttendFestivals": true,
-			"ExpandedFestivalMaps": true
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 		},
 	},
 	{
 		"Action": "Load",
 		"Target": "Maps/Town-Fair",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVSDVFair.tmx",
-		"When": { 
+		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
-			"RSVNPCSAttendFestivals": true,
-			"ExpandedFestivalMaps": true
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 		},
 	},
 	{
 		"Action": "Load",
 		"Target": "Maps/Town-Halloween",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVHalloween.tmx",
-		"When": { 
+		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
-			"RSVNPCSAttendFestivals": true,
-			"ExpandedFestivalMaps": true
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 		},
 	},
 	{
 		"Action": "Load",
 		"Target": "Maps/Town-Christmas",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVChristmas.tmx",
-		"When": { 
+		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
-			"RSVNPCSAttendFestivals": true,
-			"ExpandedFestivalMaps": true
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 		},
 	},
 
@@ -73,7 +73,7 @@
 			"ToArea": { "X": 23, "Y": 0, "Width": 12, "Height": 6 },
 			"PatchMode": "Replace",
 			"When": {
-				"EnableBetterBusStop": false
+				"Rafseazz.RidgesideVillage/EnableBetterBusStop": false
 			}
 		},
 		{
@@ -84,7 +84,7 @@
 			"ToArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
 			"PatchMode": "Replace",
 			"When": {
-				"EnableBetterBusStop": true
+				"Rafseazz.RidgesideVillage/EnableBetterBusStop": true
 			}
 		},
 		{
@@ -94,7 +94,7 @@
 			"FromArea": { "X": 0, "Y": 0, "Width": 50, "Height": 12 },
 			"ToArea": { "X": 0, "Y": 0, "Width": 50, "Height": 12 },
 			"PatchMode": "Overlay",
-			"When": { "HasMod: |contains=DaisyNiko.SVR2": false, "PoleAtBackwoods": true}
+			"When": { "HasMod: |contains=DaisyNiko.SVR2": false, "Rafseazz.RidgesideVillage/PoleAtBackwoods": true}
 		},
 
 	//Load Contest Winner Painting

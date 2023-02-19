@@ -17,84 +17,6 @@
 		75160383
 	 ],
 
-	/*********
-	** Configuration
-	*********/
-	"ConfigSchema": {
-		"RepeatCableCarCutscene": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Enable Cable Car Cutscene."
-		},
-
-		"EnableOtherNPCsInCableCar": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Enable the chances of other NPCs to appear riding the Cable Car (Along with LASV, ES and SVE NPCs)."
-		},
-
-		"EnableRidgesideMusic": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Enables music for Ridgeside Village."
-		},
-
-		"RSVNPCSAttendFestivals": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Allows RSV NPCs to attend Pelican Town Festivals."
-		},
-
-		"ExpandedFestivalMaps": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Enables the expanded festival maps. If false will use the old placements that may conflict with other mods."
-		},
-
-		"EasyIntroduction": {
-			"AllowValues": "true, false",
-			"Default": "false",
-			"Description": "RSV NPCs don't appear in Introduction quest."
-		},
-
-		"EnableBetterBusStop": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Uses Ridgeside Village's official patch for the Bus Stop by TheLimeyDragon and Rafseazz. Might be incompatible with other mods."
-		},
-
-		"PoleAtBackwoods": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Enable/Disable the cable car pole at the backwoods."
-		},
-
-		"SeasonalRSVMap": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Enable/Disable the seasonal RSV world map."
-		},
-
-		"EnableTouristNPCs": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Enable/Disable the decoration tourist NPCs in the hotel."
-		},
-
-		"EnableWTDRCompat": {
-			"AllowValues": "true, false",
-			"Default": "false",
-			"Description": "EXPERIMENTAL! Establishes better compat with Walk to Desert Redux."
-		}
-
-/*		"EnableVanillaEdits": {
-			"AllowValues": "true, false",
-			"Default": "false",
-			"Description": "Edits vanilla content to integrate Ridgeside with the base game. Might be incompatible with other mods."
-		},
-*/
-},
-
 
 	/*********
 	** Dynamic tokens
@@ -114,7 +36,7 @@
 			"Name": "PossibleCableCarNPCs",
 			"Value": "{{PossibleCableCarNPCs}}, Alex, Elliott, Harvey, Sam, Sebastian, Shane, Abigail, Emily, Haley, Leah, Maru, Penny, Caroline, Clint, Demetrius, Evelyn, George, Gus, Jas, Jodi, Kent, Lewis, Linus, Marnie, Pam, Pierre, Robin, Vincent, Willy",
 			"When": {
-				"EnableOtherNPCsInCableCar": true
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true
 			}
 		},
 
@@ -123,7 +45,7 @@
 			"Name": "PossibleCableCarNPCs",
 			"Value": "{{PossibleCableCarNPCs}}, Lunna, Raphael, Dianna, Bianka",
 			"When": {
-				"EnableOtherNPCsInCableCar": true,
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=Rafseazz.LunnaCP": true,
 				"HasSeenEvent": "75160015"
 			}
@@ -134,7 +56,7 @@
 			"Name": "PossibleCableCarNPCs",
 			"Value": "{{PossibleCableCarNPCs}}, Leilani",
 			"When": {
-				"EnableOtherNPCsInCableCar": true,
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=ZoeDoll.NPCLeilani": true,
 				"Season": "Summer"
 			}
@@ -145,7 +67,7 @@
 			"Name": "PossibleCableCarNPCs",
 			"Value": "{{PossibleCableCarNPCs}}, June",
 			"When": {
-				"EnableOtherNPCsInCableCar": true,
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=ch20youk.JuneNPC": true,
 				"Season": "Fall, Winter"
 			}
@@ -156,7 +78,7 @@
 			"Name": "PossibleCableCarNPCs",
 			"Value": "{{PossibleCableCarNPCs}}, Aideen, Jacob, Eloise, Leximonster",
 			"When": {
-				"EnableOtherNPCsInCableCar": true,
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=Lemurkat.JacobEloise.CP": true
 			}
 		},
@@ -166,7 +88,7 @@
 			"Name": "PossibleCableCarNPCs",
 			"Value": "{{PossibleCableCarNPCs}}, Mia, Sterling, Henry",
 			"When": {
-				"EnableOtherNPCsInCableCar": true,
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=Himetarts.ARV.CP": true
 			}
 		},
@@ -176,7 +98,7 @@
 			"Name": "PossibleCableCarNPCs",
 			"Value": "{{PossibleCableCarNPCs}}, Sophia, Olivia, Andy, Victor, Susan, Morris, Marlon, Claire, Martin",
 			"When": {
-				"EnableOtherNPCsInCableCar": true,
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
 			}
 		},
@@ -1256,7 +1178,7 @@
 		"FromFile": "Data/DependencyData/CustomCompanionsTourists.json",
 		"When":
 		{
-			"EnableTouristNPCs": "true"
+			"Rafseazz.RidgesideVillage/EnableTouristNPCs": "true"
 		}
 	},
 
@@ -1373,7 +1295,7 @@
   		"LogName": "Include Old Festival Placements",
   		"Action": "Include",
   		"FromFile": "Data/Festivals/FestivalLocations/OldLocations.json",
-  		"When": { "ExpandedFestivalMaps": false }
+  		"When": { "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": false }
   },
 
 
