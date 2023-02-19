@@ -172,5 +172,28 @@
       ]
     },
 
+    {
+      "LogName": "June Luau Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "When": {
+        "Relationship:June |contains=Married": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 14 4 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "June 37 6 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

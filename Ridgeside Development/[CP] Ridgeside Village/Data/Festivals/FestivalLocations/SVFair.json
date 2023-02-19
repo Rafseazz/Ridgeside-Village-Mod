@@ -119,6 +119,22 @@
       ]
     },
 
+    //June
+    {
+      "LogName": "June SDV Fair Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 35 89 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 
 ]
 }

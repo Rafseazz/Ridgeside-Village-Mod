@@ -113,5 +113,19 @@
       ]
     },
 
+    {
+      "LogName": "June Winter Star Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 27 54 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

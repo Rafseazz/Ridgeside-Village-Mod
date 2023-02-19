@@ -111,5 +111,28 @@
         },
       ]
     },
+
+    {
+      "LogName": "June Midnight Jellies Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "When": {
+        "Relationship:June |contains=Married": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 90 40 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "June 90 40 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
 ]
 }

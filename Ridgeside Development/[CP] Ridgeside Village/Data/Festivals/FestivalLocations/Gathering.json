@@ -166,6 +166,26 @@
       ]
     },
 
+		{
+      "LogName": "June RSV Gathering Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall20",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 85 42 3",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "June 78 41 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 
 
 

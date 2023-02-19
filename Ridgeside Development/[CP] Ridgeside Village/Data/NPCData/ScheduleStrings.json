@@ -5,7 +5,7 @@
 	{
 		"LogName": "Load Empty RSV Schedule Strings File",
 	 	"Action": "Load",
-	 	"Target": "Strings/schedules/Alissa, Strings/schedules/Aguar, Strings/schedules/Bert, Strings/schedules/Corine, Strings/schedules/Ezekiel, Strings/schedules/Flor, Strings/schedules/Freddie, Strings/schedules/Ian, Strings/schedules/Jeric, Strings/schedules/Keahi, Strings/schedules/Kenneth, Strings/schedules/Lenny, Strings/schedules/Lola, Strings/schedules/Maddie, Strings/schedules/Olga, Strings/schedules/Philip, Strings/schedules/Pika, Strings/schedules/Richard, Strings/schedules/Shiro, Strings/schedules/Trinnie, Strings/schedules/Ysabelle, Strings/schedules/Yuuma, Strings/schedules/Helen, Strings/schedules/Naomi, Strings/schedules/Malaya, Strings/schedules/Kimpoi, Strings/schedules/Anton, Strings/schedules/Ariah, Strings/schedules/Blair, Strings/schedules/Carmen, Strings/schedules/Faye, Strings/schedules/Irene, Strings/schedules/Kiarra, Strings/schedules/Lorenzo, Strings/schedules/Louie, Strings/schedules/Maive, Strings/schedules/Paula, Strings/schedules/Sean, Strings/schedules/Shanice, Strings/schedules/Sonny",
+	 	"Target": "Strings/schedules/Alissa, Strings/schedules/Aguar, Strings/schedules/Bert, Strings/schedules/Corine, Strings/schedules/Ezekiel, Strings/schedules/Flor, Strings/schedules/Freddie, Strings/schedules/Ian, Strings/schedules/Jeric, Strings/schedules/Keahi, Strings/schedules/Kenneth, Strings/schedules/Lenny, Strings/schedules/Lola, Strings/schedules/Maddie, Strings/schedules/Olga, Strings/schedules/Philip, Strings/schedules/Pika, Strings/schedules/Richard, Strings/schedules/Shiro, Strings/schedules/Trinnie, Strings/schedules/Ysabelle, Strings/schedules/Yuuma, Strings/schedules/Helen, Strings/schedules/Naomi, Strings/schedules/Malaya, Strings/schedules/Kimpoi, Strings/schedules/Anton, Strings/schedules/Ariah, Strings/schedules/Blair, Strings/schedules/Carmen, Strings/schedules/Faye, Strings/schedules/Irene, Strings/schedules/Kiarra, Strings/schedules/Lorenzo, Strings/schedules/Louie, Strings/schedules/Maive, Strings/schedules/Paula, Strings/schedules/Sean, Strings/schedules/Shanice, Strings/schedules/Sonny, Strings/schedules/June",
 	 	"FromFile": "Data/LoadData/EmptyJson.json"
   },
 
@@ -124,6 +124,16 @@
 		"Target": "Strings/schedules/Shiro",
 		"Entries": {
 			"checkup_waiting": "{{i18n:checkup.waiting.{{TargetWithoutPath}}}}"
+		},
+	},
+	{
+  	"Action": "EditData",
+  	"Target": "Strings/schedules/June",
+  	"Entries": {
+    	"saloon": "{{i18n:June.saloon}}",
+    	"lobby": "{{i18n:June.lobby_bookshelf}}",
+    	"winter_16": "{{i18n:June.nightmarket}}",
+    	"winter_16.spouse": "{{i18n:June.nightmarket.spouse}}"
 		},
 	},
 

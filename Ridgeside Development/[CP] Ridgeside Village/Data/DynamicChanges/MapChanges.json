@@ -1093,9 +1093,154 @@
 			"HasSeenEvent: |contains=75160324": true,
 			"Day": "{{Range: 1,14}}",
 			"Query: '{{Spouse}}'='Irene'": false
-		}
-    },
+		},
+	},
 
+	// June stuff
+
+	// Remove tourist spawn from room
+	{
+		 "Action": "EditMap",
+		 "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+		 "When": {
+			 "Season": "fall, winter",
+			 "Relationship:June |contains=Married": false,
+		 },
+		 "MapTiles": [
+				{
+					 "Position": { "X": 40, "Y": 23 },
+					 "Layer": "Back",
+					 "SetProperties": {
+							"CustomCompanions": null
+					 }
+				}
+		 ]
+	},
+
+	// Clear existing door properties
+	{
+			"LogName": "June Log Cabin 2nd Floor door change",
+			"Action": "EditMap",
+			 "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+			 "When": {
+				 "Season": "fall, winter",
+				 "Relationship:June |contains=Married": false,
+			 },
+			 "MapTiles": [
+					{
+						 "Position": { "X": 41, "Y": 19 },
+						 "Layer": "Buildings",
+						 "SetProperties": {
+								"Remove": "true"
+						 }
+					}
+			 ]
+		},
+
+		// Assign tile to be June's door
+		{
+				"LogName": "June Log Cabin 2nd Floor door change",
+				"Action": "EditMap",
+				 "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+				 "When": {
+					 "Season": "fall, winter",
+					 "Relationship:June |contains=Married": false,
+				 },
+				 "MapTiles": [
+						{
+							 "Position": { "X": 41, "Y": 19 },
+							 "Layer": "Buildings",
+							 "SetProperties": {
+									"Action": "Door June"
+							 }
+						}
+				 ]
+			},
+
+		// Edit the piano text when June is present but not playing
+			{
+	  		"LogName": "June Piano Text - Fall Winter MTW",
+	      "Action": "EditData",
+	  		"Target": "Strings/StringsFromMaps",
+	      "When": {
+					"Season": "fall, winter",
+					"DayOfWeek": "Monday, Tuesday, Wednesday",
+					"HasSeenEvent": 94620000,
+	      },
+	  		"Entries": {
+	        "rsv.hotel10": "{{i18n:i18n.piano_sign}}"
+	      }
+	    },
+			{
+				"LogName": "June Piano Text - Married +Spring Summer MTW",
+				"Action": "EditData",
+				"Target": "Strings/StringsFromMaps",
+				"When": {
+					"Season": "spring, summer",
+					"DayOfWeek": "Monday, Tuesday, Wednesday",
+					"Relationship:June |contains=Married": true,
+					"HasSeenEvent": 94620000,
+				},
+				"Entries": {
+					"rsv.hotel10": "{{i18n:i18n.piano_sign}}"
+				}
+			},
+
+		// Clear piano text on days June plays
+			{
+	  		"LogName": "June Piano Text - Fall Winter TFSS",
+	      "Action": "EditMap",
+	  		"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+	      "When": {
+					"Season": "fall, winter",
+					"DayOfWeek": "Thursday, Friday, Saturday, Sunday",
+					"HasSeenEvent": 94620000,
+	      },
+				"MapTiles": [
+					 {
+							"Position": { "X": 13, "Y": 14 },
+							"Layer": "Buildings",
+							"SetProperties": {
+								 "Remove": "true"
+							}
+					 },
+					 {
+							"Position": { "X": 14, "Y": 14 },
+							"Layer": "Buildings",
+							"SetProperties": {
+								 "Remove": "true"
+							}
+					 }
+				]
+	    },
+
+			{
+				"LogName": "June Piano Text - Married +Spring Summer TFSS",
+				"Action": "EditMap",
+				"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+				"When": {
+					"Season": "spring, summer",
+					"DayOfWeek": "Thursday, Friday, Saturday, Sunday",
+					"Relationship:June |contains=Married": true,
+					"HasSeenEvent": 94620000,
+				},
+				"MapTiles": [
+					 {
+							"Position": { "X": 13, "Y": 14 },
+							"Layer": "Buildings",
+							"SetProperties": {
+								 "Remove": "true"
+							}
+					 },
+					 {
+							"Position": { "X": 14, "Y": 14 },
+							"Layer": "Buildings",
+							"SetProperties": {
+								 "Remove": "true"
+							}
+					 }
+				]
+			},
 
 ]
 }

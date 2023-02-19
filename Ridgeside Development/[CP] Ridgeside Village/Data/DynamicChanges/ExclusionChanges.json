@@ -527,5 +527,66 @@
 				},
 				"Update": "OnLocationChange, OnTimeChange",
 			},
+
+			{
+	        "LogName": "Custom NPC Exclusions - June unmet",
+	        "Action": "EditData",
+	        "Target": "Data/CustomNPCExclusions",
+	        "When": {
+	  				"HasSeenEvent": 94620000
+	  			},
+	        "Entries": {
+	            "June": "Calendar"
+	            }
+	    },
+	    {
+	        "LogName": "Custom NPC Exclusions - June single out of town",
+	        "Action": "EditData",
+	        "Target": "Data/CustomNPCExclusions",
+	        "When": {
+	          "Season": "spring, summer",
+	          "Relationship:June |contains=Married": false
+	        },
+	        "Entries": {
+	            "June": "ItemDelivery PerfectFriend IslandVisit Introductions"
+	            }
+	    },
+	    {
+	        "LogName": "Custom NPC Exclusions - June single in town",
+	        "Action": "EditData",
+	        "Target": "Data/CustomNPCExclusions",
+	        "When": {
+	          "Season": "fall, winter",
+	          "Relationship:June |contains=Married": false,
+	          "HasMod": "spacechase0.CustomNPCFixes"
+	        },
+	        "Entries": {
+	            "June": "PerfectFriend IslandVisit"
+	            }
+	    },
+	    {
+	        "LogName": "Custom NPC Exclusions - June married, no island date",
+	        "Action": "EditData",
+	        "Target": "Data/CustomNPCExclusions",
+	        "When": {
+	          "Relationship:June |contains=Married": true,
+	          "HasSeenEvent |contains=94620142": false
+	        },
+	        "Entries": {
+	            "June": "PerfectFriend IslandVisit"
+	            }
+	    },
+	    {
+	        "LogName": "Custom NPC Exclusions - June married, had island date",
+	        "Action": "EditData",
+	        "Target": "Data/CustomNPCExclusions",
+	        "When": {
+	          "Relationship:June |contains=Married": true,
+	          "HasSeenEvent": 94620142
+	        },
+	        "Entries": {
+	            "June": "PerfectFriend"
+	            }
+	    },
 	]
 }

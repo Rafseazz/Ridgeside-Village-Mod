@@ -4,7 +4,7 @@
 //------------------------------------- D A T A B L E S -------------------------------------
 
 //------------------------
-// E N G A G E M E N T    
+// E N G A G E M E N T
 //------------------------
 
 {
@@ -13,7 +13,7 @@
 	"Action": "EditData",
 	"Target": "Data/EngagementDialogue",
 	"Entries": {
-		
+
 		"Alissa0": "{{i18n:Romance.Engagement.Alissa0}}",
 		"Alissa1": "{{i18n:Romance.Engagement.Alissa1}}",
 
@@ -71,6 +71,12 @@
 		"Zayne0": "{{i18n:Romance.Engagement.Zayne0}}",
 		"Zayne1": "{{i18n:Romance.Engagement.Zayne1}}",
 
+		"Zayne0": "{{i18n:Romance.Engagement.Zayne0}}",
+		"Zayne1": "{{i18n:Romance.Engagement.Zayne1}}",
+
+		"June0": "{{i18n:i18n.engaged0}}",
+		"June1": "{{i18n:i18n.engaged1}}",
+
 
 	},
 },
@@ -87,7 +93,7 @@
 		},
 		"When": { "Relationship:Alissa": "Engaged" },
 	},
-	{    
+	{
 		"Action": "EditData",
 		"Target": "strings/StringsFromCSFiles",
 		"Entries": {
@@ -120,7 +126,7 @@
 		},
 		"When": { "Relationship:Maddie": "Engaged" },
 	},
-	{	
+	{
 		"Action": "EditData",
 		"Target": "strings/StringsFromCSFiles",
 		"Entries": {
@@ -131,7 +137,7 @@
 		},
 		"When": { "Relationship:Ysabelle": "Engaged" },
 	},
-	{	
+	{
 		"Action": "EditData",
 		"Target": "strings/StringsFromCSFiles",
 		"Entries": {
@@ -142,7 +148,7 @@
 		},
 		"When": { "Relationship:Daia": "Engaged" },
 	},
-	{	
+	{
 		"Action": "EditData",
 		"Target": "strings/StringsFromCSFiles",
 		"Entries": {
@@ -153,7 +159,7 @@
 		},
 		"When": { "Relationship:Kiarra": "Engaged" },
 	},
-	{	
+	{
 		"Action": "EditData",
 		"Target": "strings/StringsFromCSFiles",
 		"Entries": {
@@ -164,7 +170,7 @@
 		},
 		"When": { "Relationship:Blair": "Engaged" },
 	},
-	{	
+	{
 		"Action": "EditData",
 		"Target": "strings/StringsFromCSFiles",
 		"Entries": {
@@ -175,7 +181,7 @@
 		},
 		"When": { "Relationship:Paula": "Engaged" },
 	},
-	{	
+	{
 		"Action": "EditData",
 		"Target": "strings/StringsFromCSFiles",
 		"Entries": {
@@ -186,9 +192,9 @@
 		},
 		"When": { "Relationship:Irene": "Engaged" },
 	},
-	
+
 //--------------------
-// Special Dialogue   
+// Special Dialogue
 //--------------------
 
 {
@@ -205,21 +211,21 @@
 },
 
 //-----------------------------------
-// M A R R I A G E  D I A L O G U E  
+// M A R R I A G E  D I A L O G U E
 //-----------------------------------
 
 {
 	"LogName": "Load Empty Ridgeside MarriageDialogue File",
 	"Action": "Load",
-	"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle, Characters/Dialogue/MarriageDialogueJio, Characters/Dialogue/MarriageDialogueDaia, Characters/Dialogue/MarriageDialogueKiarra, Characters/Dialogue/MarriageDialogueSean, Characters/Dialogue/MarriageDialogueBlair, Characters/Dialogue/MarriageDialoguePaula, Characters/Dialogue/MarriageDialogueAnton, Characters/Dialogue/MarriageDialogueIrene, Characters/Dialogue/MarriageDialogueZayne",
+	"Target": "Characters/Dialogue/MarriageDialogueAlissa, Characters/Dialogue/MarriageDialogueCorine, Characters/Dialogue/MarriageDialogueFlor, Characters/Dialogue/MarriageDialogueIan, Characters/Dialogue/MarriageDialogueJeric, Characters/Dialogue/MarriageDialogueKenneth, Characters/Dialogue/MarriageDialogueMaddie, Characters/Dialogue/MarriageDialoguePhilip, Characters/Dialogue/MarriageDialogueShiro, Characters/Dialogue/MarriageDialogueYsabelle, Characters/Dialogue/MarriageDialogueJio, Characters/Dialogue/MarriageDialogueDaia, Characters/Dialogue/MarriageDialogueKiarra, Characters/Dialogue/MarriageDialogueSean, Characters/Dialogue/MarriageDialogueBlair, Characters/Dialogue/MarriageDialoguePaula, Characters/Dialogue/MarriageDialogueAnton, Characters/Dialogue/MarriageDialogueIrene, Characters/Dialogue/MarriageDialogueZayne, Characters/Dialogue/MarriageDialogueJune",
 	"FromFile": "Data/LoadData/EmptyJson.json"
 },
 
 {
 	"LogName": "Include Ridgeside MarriageDialogue Files",
 	"Action": "Include",
-	"FromFile": "Assets/MarriageDialogue/MarriageDialogueAlissa.json, Assets/MarriageDialogue/MarriageDialogueCorine.json, Assets/MarriageDialogue/MarriageDialogueFlor.json, Assets/MarriageDialogue/MarriageDialogueIan.json, Assets/MarriageDialogue/MarriageDialogueJeric.json, Assets/MarriageDialogue/MarriageDialogueKenneth.json, Assets/MarriageDialogue/MarriageDialogueMaddie.json, Assets/MarriageDialogue/MarriageDialoguePhilip.json, Assets/MarriageDialogue/MarriageDialogueShiro.json, Assets/MarriageDialogue/MarriageDialogueYsabelle.json, Assets/MarriageDialogue/MarriageDialogueJio.json, Assets/MarriageDialogue/MarriageDialogueDaia.json, Assets/MarriageDialogue/MarriageDialogueKiarra.json, Assets/MarriageDialogue/MarriageDialogueSean.json, Assets/MarriageDialogue/MarriageDialogueBlair.json, Assets/MarriageDialogue/MarriageDialoguePaula.json, Assets/MarriageDialogue/MarriageDialogueAnton.json, Assets/MarriageDialogue/MarriageDialogueIrene.json, Assets/MarriageDialogue/MarriageDialogueZayne.json",
-},  
+	"FromFile": "Assets/MarriageDialogue/MarriageDialogueAlissa.json, Assets/MarriageDialogue/MarriageDialogueCorine.json, Assets/MarriageDialogue/MarriageDialogueFlor.json, Assets/MarriageDialogue/MarriageDialogueIan.json, Assets/MarriageDialogue/MarriageDialogueJeric.json, Assets/MarriageDialogue/MarriageDialogueKenneth.json, Assets/MarriageDialogue/MarriageDialogueMaddie.json, Assets/MarriageDialogue/MarriageDialoguePhilip.json, Assets/MarriageDialogue/MarriageDialogueShiro.json, Assets/MarriageDialogue/MarriageDialogueYsabelle.json, Assets/MarriageDialogue/MarriageDialogueJio.json, Assets/MarriageDialogue/MarriageDialogueDaia.json, Assets/MarriageDialogue/MarriageDialogueKiarra.json, Assets/MarriageDialogue/MarriageDialogueSean.json, Assets/MarriageDialogue/MarriageDialogueBlair.json, Assets/MarriageDialogue/MarriageDialoguePaula.json, Assets/MarriageDialogue/MarriageDialogueAnton.json, Assets/MarriageDialogue/MarriageDialogueIrene.json, Assets/MarriageDialogue/MarriageDialogueZayne.json, Assets/MarriageDialogue/MarriageDialogueJune.json",
+},
 
 
 {
@@ -246,7 +252,7 @@
 		"MovieInvite_Spouse_Anton": "{{i18n:Romance.MovieInvite.Spouse.Anton}}",
 		"MovieInvite_Spouse_Irene": "{{i18n:Romance.MovieInvite.Spouse.Irene}}",
 		"MovieInvite_Spouse_Zayne": "{{i18n:Romance.MovieInvite.Spouse.Zayne}}",
-	}, 
+	},
 },
 
 	//Flor Extra assets for 14 heart event
@@ -320,6 +326,7 @@
             "Anton": "RidgesideSpouseRooms/16",
             "Irene": "RidgesideSpouseRooms/17",
             "Zayne": "RidgesideSpouseRooms/18",
+						"Zayne": "RidgesideSpouseRooms/19",
         }
     },
 
@@ -361,6 +368,7 @@
     		"Anton": "RSVSpousePatios/16/0 0 0/0 0",
     		"Irene": "RSVSpousePatios/17/0 0 0 0 0 0 0 0 0 0 0 0 17 17 17 17 17 18 17 17 18 18 17 17 17 18 17 17 17 17/0 0",
     		"Zayne": "RSVSpousePatios/18/22 22 22 23 22 22 23 22 22 22 22 23 22 23 22 23 22 22 22 23/0 0",
+				"June": "RSVSpousePatios/19/35 35 35/0 0",
     	}
     },
 

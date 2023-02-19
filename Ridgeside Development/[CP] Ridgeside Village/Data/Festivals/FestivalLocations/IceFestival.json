@@ -152,5 +152,26 @@
       ]
     },
 
+    {
+      "LogName": "June Ice Festival Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 52 36 3",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Main-Event_additionalCharacters"],
+          "Value": "June 60 34 1",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

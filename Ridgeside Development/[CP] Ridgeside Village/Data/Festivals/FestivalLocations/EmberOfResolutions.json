@@ -143,5 +143,25 @@
       ]
     },
 
+		{
+      "LogName": "June Ember of Resolutions Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter28",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 50 34 3",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "June 30 47 1",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

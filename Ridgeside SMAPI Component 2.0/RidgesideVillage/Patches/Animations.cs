@@ -16,7 +16,7 @@ namespace RidgesideVillage
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
-        private static string[] npcs = { "Torts", "Carmen", "Blair", "Kenneth" };
+        private static string[] npcs = { "Torts", "Carmen", "Blair", "Kenneth", "June" };
 
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
@@ -61,6 +61,12 @@ namespace RidgesideVillage
                             __instance.currentLocation.playSoundAt("slosh", __instance.getTileLocation());
                         }
                         break;
+                    case "june_piano":
+                        __instance.extendSourceRect(16, 0);
+                        __instance.Sprite.SpriteWidth = 32;
+                        __instance.Sprite.ignoreSourceRectUpdates = false;
+                        __instance.Sprite.currentFrame = 8;
+                        break;
                     case "carmen_fish":
                     case "blair_fish":
                     case "kenneth_fixfront":
@@ -103,6 +109,7 @@ namespace RidgesideVillage
                     case "kenneth_fixright":
                     case "kenneth_fixback":
                     case "kenneth_fixleft":
+                    case "june_piano":
                         __instance.reloadSprite();
                         __instance.Sprite.SpriteWidth = 16;
                         __instance.Sprite.SpriteHeight = 32;

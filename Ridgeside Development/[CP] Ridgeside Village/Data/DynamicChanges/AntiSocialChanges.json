@@ -5,7 +5,7 @@
 	/*********
 	** AntiSocial Changes
 	*********/
-		
+
 		{
 			"Action": "EditData",
 			"Target": "Data/AntiSocialNPCs",
@@ -67,7 +67,32 @@
 			},
 			"Update": "OnLocationChange"
 		},
-			
+
+		{
+      "LogName": "AntiSocial Flag - June unmet",
+      "Action": "EditData",
+      "Target": "Data/AntiSocialNPCs",
+      "When": {
+        "HasSeenEvent |contains=94620000": false
+      },
+      "Entries": {
+        "June": true
+      }
+    },
+		
+    {
+      "LogName": "AntiSocial Flag - June met",
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": 94620000
+			},
+			"Entries": {
+				"June": null
+			},
+			"Update": "OnLocationChange"
+		},
+
 
 
 ]

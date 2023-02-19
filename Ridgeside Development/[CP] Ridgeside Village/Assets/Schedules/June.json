@@ -1,0 +1,78 @@
+{
+"Changes": [
+
+	//Original Schedule
+	{
+		"LogName": "June Base Schedule",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/June",
+		"Entries": {
+		  "Mon": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/800 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/1000 Custom_Ridgeside_RidgesideVillage 91 40 0/1200 Custom_Ridgeside_RidgesideVillage 101 49 2/1300 Custom_Ridgeside_RidgesideVillage 94 85 2 june_sit/a1500 Custom_Ridgeside_RidgesideVillage 86 96 1/1600 Custom_Ridgeside_RidgesideVillage 65 120 2/1630 Custom_Ridgeside_RidgesideVillage 8 102 2/1700 Custom_Ridgeside_RidgesideVillage 10 71 1/1730 Custom_Ridgeside_RidgesideVillage 37 65 2/1800 Custom_Ridgeside_RidgesideVillage 79 30 2/1830 Custom_Ridgeside_RidgesideVillage 106 23 2/2000 Custom_Ridgeside_LogCabinHotelLobby 3 5 2 june_drink/2100 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/2300 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		  "fall_Tue": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/800 Town 26 21 june_sit/1200 Forest 34 25 2/1700 Custom_Ridgeside_LogCabinHotelLobby 3 5 2 june_drink/2000 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/2300 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		  "winter_Tue": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/800 Beach 50 24 2/1700 Custom_Ridgeside_LogCabinHotelLobby 3 5 2 june_drink/2000 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/2300 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		  "Wed": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/800 Custom_Ridgeside_Ridge 15 25 2 june_swing/1200 Custom_Ridgeside_RSVCliff 82 21 1/2000 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/2300 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		  "Thu": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/800 Custom_Ridgeside_RidgesideVillage 99 40 0/1000 Custom_Ridgeside_RidgesideVillage 101 49 2/1300 Custom_Ridgeside_RidgesideVillage 120 25 2/1600 Custom_Ridgeside_LogCabinHotelLobby 8 5 0 \"Strings\\schedules\\June:lobby\"/1700 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/2100 Custom_Ridgeside_LogCabinHotelLobby 3 5 2 june_drink/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/2300 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		  "Fri": "GOTO Thu",
+		  "Sat": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/800 Custom_Ridgeside_RidgesideVillage 122 28 3/1200 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/1500 Custom_Ridgeside_LogCabinHotelLobby 1 5 2 june_drink/1700 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/2100 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		  "Sun": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/800 Custom_Ridgeside_RidgesideVillage 122 28 3/1200 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/1500 Saloon 5 20 3/2000 Saloon 2 18 0 \"Strings\\schedules\\June:saloon\"/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		  "winter_16": "0 Custom_Ridgeside_LogCabinHotel3rdFloor 11 4 2/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/a1700 Beach 10 39 2 june_drink \"Strings\\schedules\\June:winter_16\"/1950 Beach 10 37 3 \"Strings\\schedules\\June:winter_16.spouse\"/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+
+		  "marriage_Tue": "1000 Custom_Ridgeside_RSVCliff 82 21 1/1700 BusStop -1 23 3",
+		  "marriage_Thu": "a1200 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/1800 BusStop -1 23 3",
+		  "marriage_Fri": "GOTO marriage_Thu",
+		  "marriage_Sat": "GOTO marriage_Thu",
+		  "marriage_Sun": "a1200 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/1500 Saloon 5 20 3/2000 BusStop -1 23 3",
+		  "marriage_winter_16": "a1700 Beach 10 39 2 june_drink \"Strings\\schedules\\June:winter_16.spouse\"/1950 Beach 10 37 3 \"Strings\\schedules\\June:winter_16.spouse\"/2200 BusStop -1 23 3",
+
+		  "spring_Mon": "600 Custom_Ridgeside_RSVHiddenWarp2 1 1 2/2000 Custom_Ridgeside_RSVHiddenWarp2 1 5 2",
+		  "spring_Tue": "GOTO spring_Mon",
+		  "spring_Wed": "GOTO spring_Mon",
+		  "spring_Thu": "GOTO spring_Mon",
+		  "spring_Fri": "GOTO spring_Mon",
+		  "spring_Sat": "GOTO spring_Mon",
+		  "spring_Sun": "GOTO spring_Mon",
+		  "summer_Mon": "GOTO spring_Mon",
+		  "summer_Tue": "GOTO spring_Mon",
+		  "summer_Wed": "GOTO spring_Mon",
+		  "summer_Thu": "GOTO spring_Mon",
+		  "summer_Fri": "GOTO spring_Mon",
+		  "summer_Sat": "GOTO spring_Mon",
+		  "summer_Sun": "GOTO spring_Mon"
+		},
+		"When": {
+			"HasFlag |contains=RSV.CompleteDaiaQuest": false,
+		}
+	},
+
+  {
+		"LogName": "June Marriage Schedule - Fall Tuesdays",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/June",
+		"Entries": {
+			  "marriage_Tue": "1000 Forest 34 25 2/1700 BusStop -1 23 3",
+		},
+		"When": { "Season": "fall" }
+	},
+
+	{
+		"LogName": "June Marriage Schedule - Winter Tuesdays",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/June",
+		"Entries": {
+			  "marriage_Tue": "1000 Beach 50 24 2/1700 BusStop -1 23 3",
+		},
+		"When": { "Season": "winter" }
+	},
+
+	{
+		"LogName": "June Marriage Schedule - Summer Tuesdays",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/June",
+		"Entries": {
+				"marriage_Tue": "1000 Custom_Ridgeside_RidgesideVillage 91 40 0/1330 Custom_Ridgeside_RidgesideVillage 101 49 2/1700 BusStop -1 23 3",
+		},
+		"When": { "Season": "summer" }
+	},
+
+]
+}

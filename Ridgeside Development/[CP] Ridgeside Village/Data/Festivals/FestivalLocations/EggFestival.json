@@ -203,5 +203,28 @@
         }
     },
 
+    {
+      "LogName": "June Egg Fest Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "When": {
+        "Relationship:June |contains=Married": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 23 65 1",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "June 23 65 1",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

@@ -178,5 +178,28 @@
       ]
     },
 
+    {
+      "LogName": "June Flower Dance Location",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "When": {
+        "Relationship:June |contains=Married": true
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "June 41 35 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "June 41 35 2",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

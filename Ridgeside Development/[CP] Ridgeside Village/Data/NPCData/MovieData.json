@@ -310,8 +310,15 @@
       "Name": "Zayne",
       "LovedTags": [ "Popcorn" ],
       "LikedTags": [ "Sweet", "Gourmet" ],
-      "DislikedTags": [ "Kale Smootie" ]
+      "DislikedTags": [ "Kale Smoothie" ]
       },
+
+			"June": {
+				"Name": "June",
+				"LovedTags": [ "Gourmet", "Hot", "Salty" ],
+				"LikedTags": [ "Sour", "Candy", "Sweet" ],
+				"DislikedTags": [ "Fatty", "Joja", "Healthy" ]
+			},
 
 	},
 	},
@@ -8670,7 +8677,206 @@
               "ID": "reaction_7"
             }
           ]
-        }
+        },
+
+				"June": {
+          "NPCName": "June",
+          "Reactions": [
+            //Brave Little Sapling (ANIMATED) (FAMILY) (COMEDY)
+            {
+              "Tag": "spring_movie_0",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.sapling}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.during.sapling}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.sapling}}"
+                }
+              },
+              "ID": "reaction_0"
+            },
+            //Journey of the Praire King (VIDEOGAME)
+            {
+              "Tag": "summer_movie_0",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.journey}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": "PK_villain",
+                  "Script": "",
+                  "Text": "{{i18n:June.during.journey}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.journey}}"
+                }
+              },
+              "ID": "reaction_1"
+            },
+            //Mysterium (MINDFUCK) (MYSTERY)
+            {
+              "Tag": "fall_movie_0",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.mysterium}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.during.mysterium}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.mysterium}}"
+                }
+              },
+              "ID": "reaction_2"
+            },
+            //Miracle at Coldstar Ranch (WHOLESOME) (TEAR JERKER) (FAMILY)
+            {
+              "Tag": "winter_movie_0",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.coldstar}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.during.coldstar}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.coldstar}}"
+                }
+              },
+              "ID": "reaction_3"
+            },
+            //Natural Wonders: Exploring Our Vibrant World (TOUR) (EDUCATIONAL)
+            {
+              "Tag": "spring_movie_1",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.nature}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.during.nature}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.nature}}"
+                }
+              },
+              "ID": "reaction_4"
+            },
+            //Wumbus (SCI-FI) (COMEDY)
+            {
+              "Tag": "summer_movie_1",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.wumbus}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.during.wumbus}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.wumbus}}"
+                }
+              },
+              "ID": "reaction_5"
+            },
+            //Howls in the Rain (HORROR)
+            {
+              "Tag": "fall_movie_1",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.howls}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.during.howls}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.howls}}"
+                }
+              },
+              "ID": "reaction_6"
+            },
+            //Zuzu City Express (CLASSIC) (ROMANCE)
+            {
+              "Tag": "winter_movie_1",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.before.zuzu}}"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": "guyEnters",
+                  "Script": "",
+                  "Text": "{{i18n:June.during.zuzu}}"
+                },
+                "AfterMovie": {
+                  "ResponsePoint": null,
+                  "Script": "",
+                  "Text": "{{i18n:June.after.zuzu}}"
+                }
+              },
+              "ID": "reaction_7"
+            }
+          ]
+        },
+
       }
     }
   ]
