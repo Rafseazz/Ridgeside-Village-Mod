@@ -147,6 +147,10 @@ namespace RidgesideVillage.Questing
 
         public override void receiveLeftClick(int x, int y, bool playSound = true)
 		{
+			if (this.timestampOpened + safetyTimer > Game1.currentGameTime.TotalGameTime.TotalMilliseconds)
+			{
+				return;
+			}
 			if (this.acceptQuestButton.visible && this.acceptQuestButton.containsPoint(x, y) && this.dailyQuest != null)
 			{
 				Game1.playSound("newArtifact");
