@@ -277,17 +277,28 @@ namespace RidgesideVillage
 		}
 
 		public void setNewActiveBlueprint()
-		{
-			currentBuilding = blueprints[currentBlueprintIndex];
-			price = currentBuilding.moneyRequired;
-			ingredients.Clear();
-			foreach (KeyValuePair<int, int> v in currentBuilding.itemsRequired)
+        {
+            try
+            {
+
+				buildingImage = Helper.ModContent.Load<Texture2D>($"assets/{CurrentBlueprint.name}.png");
+				currentBuilding = blueprints[currentBlueprintIndex];
+				price = currentBuilding.moneyRequired;
+				ingredients.Clear();
+				foreach (KeyValuePair<int, int> v in currentBuilding.itemsRequired)
+				{
+					ingredients.Add(new StardewValley.Object(v.Key, v.Value));
+				}
+				buildingDescription = currentBuilding.description;
+				buildingName = currentBuilding.displayName;
+            }
+            catch(Exception e)
 			{
-				ingredients.Add(new StardewValley.Object(v.Key, v.Value));
-			}
-			buildingDescription = currentBuilding.description;
-			buildingName = currentBuilding.displayName;
-			buildingImage = Helper.ModContent.Load<Texture2D>($"assets/{CurrentBlueprint.name}.png");
+				Log.Error($"Failed at blueprint {blueprints[currentBlueprintIndex]}). Please notify the authors of RSV about this. :c");
+				Log.Error(e.Message);
+				Log.Error(e.StackTrace);
+            }
+			
 		}
 
 		/*
