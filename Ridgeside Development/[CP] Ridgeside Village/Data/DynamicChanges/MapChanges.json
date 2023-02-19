@@ -1070,7 +1070,19 @@
 		"ToArea": { "X": 4, "Y": 4, "Width": 3, "Height": 4 },
 		"PatchMode": "Replace",
 		"When": {
-            "Query: {{Hearts:Maive, Zayne}} >= 8": true
+            "Query: {{Hearts:Maive}} >= 8": true,
+        },
+		"Update": "OnLocationChange, OnTimeChange"
+	},
+	{
+		"LogName": "RSV: Access to Amethyne Pool",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_PurpleMansion",
+		"FromFile": "Assets/Maps/DynamicMaps/PurpleMansion_OpenBath.tmx",
+		"ToArea": { "X": 4, "Y": 4, "Width": 3, "Height": 4 },
+		"PatchMode": "Replace",
+		"When": {
+            "Query: {{Hearts:Zayne}} >= 8": true,
         },
 		"Update": "OnLocationChange, OnTimeChange"
 	},
