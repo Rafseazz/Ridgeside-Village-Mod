@@ -86,14 +86,21 @@ namespace RidgesideVillage.Offering
                             else if (crop.isWildSeedCrop())
                             {
                                 int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
-                                Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                                var Farm = Game1.getFarm();
+
+                                //check if an object is already there
+                                if (!Farm.objects.ContainsKey(dirt.currentTileLocation))
                                 {
-                                    IsSpawnedObject = true,
-                                    CanBeGrabbed = true
-                                });
-                                Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
-                                crop = null;
-                                dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+                                    Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                                    {
+                                        IsSpawnedObject = true,
+                                        CanBeGrabbed = true
+                                    });
+                                    Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                                    crop = null;
+                                    dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+
+                                }
                             }
                             else
                             {
