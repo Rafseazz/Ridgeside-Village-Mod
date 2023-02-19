@@ -1946,8 +1946,8 @@
         ],
         "UniqueAreaID": "RSV RidgeForest Wraith",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 30,
-        "MaximumSpawnsPerDay": 40,
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 35,
         "IncludeTerrainTypes": [
           "All"
         ],
@@ -2956,6 +2956,65 @@
       {
         "MonsterTypes": [
           {
+            "MonsterName": "royal serpent",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 1500,
+              "Damage": 20,
+              "SeesPlayersAtSpawn": true,
+              "DodgeChance": 0,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVSerperial",
+              "EXP": 20,
+              "Segments": 11,
+              "Loot": [
+                "Spiritual Essence",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "RSV RidgeForest Serperial",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 6,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 180,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
             "MonsterName": "ghost",
             "Settings": {
               "SpawnWeight": 3,
@@ -3199,7 +3258,68 @@
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
-      }
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "royal serpent",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 1500,
+              "Damage": 20,
+              "SeesPlayersAtSpawn": true,
+              "DodgeChance": 0,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVSerperial",
+              "EXP": 20,
+              "Segments": 11,
+              "Loot": [
+                "Spiritual Essence",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "RSV SpiritRealm Serperial",
+        "MapName": "Custom_Ridgeside_RSVSpiritRealm",
+        "MinimumSpawnsPerDay": 3,
+        "MaximumSpawnsPerDay": 5,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 240,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "CPConditions": {},
+          "EPUPreconditions": [
+            "k 75160263"
+          ],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
     ],
     "CustomTileIndex": []
   },
