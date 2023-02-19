@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="2423">
+ <tileset firstgid="1" name="zrsvspiritrealm" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="zrsvspiritrealm.png" width="400" height="1264"/>
+  <tile id="1741">
+   <animation>
+    <frame tileid="1741" duration="200"/>
+    <frame tileid="1742" duration="200"/>
+    <frame tileid="1743" duration="200"/>
+    <frame tileid="1744" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="1766">
+   <animation>
+    <frame tileid="1766" duration="200"/>
+    <frame tileid="1767" duration="200"/>
+    <frame tileid="1768" duration="200"/>
+    <frame tileid="1769" duration="200"/>
+   </animation>
+  </tile>
+  <tile id="1790">
+   <animation>
+    <frame tileid="1790" duration="300"/>
+    <frame tileid="1791" duration="300"/>
+    <frame tileid="1792" duration="300"/>
+    <frame tileid="1791" duration="300"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer id="2" name="Buildings" width="1" height="2">
+  <data encoding="csv">
+0,
+1767
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings"/>
+ <layer id="4" name="Front" width="1" height="2">
+  <data encoding="csv">
+1742,
+0
+</data>
+ </layer>
+ <objectgroup id="9" name="Front"/>
+ <layer id="5" name="AlwaysFront" width="1" height="2">
+  <data encoding="csv">
+1791,
+0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>
