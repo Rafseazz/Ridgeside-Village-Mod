@@ -2620,10 +2620,10 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="10100" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="950" columns="19">
-  <image source="z_rsvinterior.png" width="304" height="800"/>
+ <tileset firstgid="10100" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="1900" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="1600"/>
  </tileset>
- <tileset firstgid="11050" name="zrsvspecialeffects" tilewidth="16" tileheight="16" tilecount="56" columns="7">
+ <tileset firstgid="12000" name="zrsvspecialeffects" tilewidth="16" tileheight="16" tilecount="56" columns="7">
   <image source="zrsvspecialeffects.png" width="112" height="128"/>
   <tile id="0">
    <animation>
@@ -2738,46 +2738,46 @@
    </animation>
   </tile>
  </tileset>
- <tileset firstgid="11106" name="RafNPCSheet" tilewidth="16" tileheight="16" tilecount="144" columns="8">
+ <tileset firstgid="12056" name="RafNPCSheet" tilewidth="16" tileheight="16" tilecount="144" columns="8">
   <image source="RafNPCSheet.png" width="128" height="288"/>
  </tileset>
- <tileset firstgid="11250" name="FreddieShedItems" tilewidth="16" tileheight="16" tilecount="54" columns="9">
+ <tileset firstgid="12200" name="FreddieShedItems" tilewidth="16" tileheight="16" tilecount="54" columns="9">
   <image source="FreddieShedItems.png" width="144" height="96"/>
  </tileset>
- <tileset firstgid="11304" name="spring_zridgetiles" tilewidth="16" tileheight="16" tilecount="589" columns="19">
+ <tileset firstgid="12254" name="spring_zridgetiles" tilewidth="16" tileheight="16" tilecount="589" columns="19">
   <image source="spring_zridgetiles.png" width="304" height="496"/>
  </tileset>
- <tileset firstgid="11893" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+ <tileset firstgid="12843" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior.png" width="512" height="1088"/>
  </tileset>
- <tileset firstgid="14069" name="zrsvspouses" tilewidth="16" tileheight="16" tilecount="36" columns="12">
-  <image source="zrsvspouses.png" width="192" height="48"/>
+ <tileset firstgid="15019" name="zrsvspouses" tilewidth="16" tileheight="16" tilecount="72" columns="12">
+  <image source="zrsvspouses.png" width="192" height="96"/>
  </tileset>
- <tileset firstgid="14119" name="zridgesidefurniture" tilewidth="16" tileheight="16" tilecount="2048" columns="32">
+ <tileset firstgid="15091" name="zridgesidefurniture" tilewidth="16" tileheight="16" tilecount="2048" columns="32">
   <image source="zridgesidefurniture.png" width="512" height="1024"/>
  </tileset>
  <layer id="2" name="Buildings" width="16" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-9633,9632,9632,9633,11301,11303,13116,0,11328,0,9597,9612,9631,0,0,9631,
-9230,0,0,9230,11260,0,0,0,0,0,0,0,13072,0,0,0,
+9633,9632,9632,9633,12251,12253,14066,0,12278,0,9597,9612,9631,0,0,9631,
+9230,0,0,9230,12210,0,0,0,0,0,0,0,14022,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-12789,14040,9459,9459,6692,6693,6693,6694,9295,0,0,11328,9422,9644,13073,9245,
+13739,14990,9459,9459,6692,6693,6693,6694,9295,0,0,12278,9422,9644,14023,9245,
 0,0,0,0,9424,9740,9741,0,0,0,0,0,0,0,0,9459,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,12707,0,0,0,3839,3840,0,0,12406,12110,0,10509,
-9324,9296,0,0,0,0,12207,12110,3901,3902,0,12207,9597,0,0,10528,
+0,0,0,0,13657,0,0,0,3839,3840,0,0,13356,13060,0,10509,
+9324,9296,0,0,0,0,13157,13060,3901,3902,0,13157,9597,0,0,10528,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 9232,9233,9233,9232,4027,4028,4029,9231,4145,4146,4147,7831,7407,0,0,7205,
-0,12333,0,14095,0,0,2459,2460,4205,0,0,4206,7407,0,0,7230,
+0,13283,0,15045,0,0,2459,2460,4205,0,0,4206,7407,0,0,7230,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-12789,359,360,12790,14117,14118,0,0,0,0,9357,12384,9600,13072,0,9452,
-0,0,0,12789,0,0,0,0,0,0,0,0,12780,12781,13072,0
+13739,359,360,13740,15067,15068,0,0,0,0,9357,13334,13206,14022,0,9452,
+0,0,0,13739,0,0,0,0,0,0,0,0,13730,13731,14022,0
 </data>
  </layer>
  <objectgroup id="7" name="Buildings"/>
@@ -2809,11 +2809,11 @@
  <layer id="4" name="Front" width="16" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-9625,9624,9624,9625,11283,11285,0,0,11309,0,9589,9604,9623,0,0,9623,
-9221,0,0,9221,11251,0,0,0,0,0,0,0,0,0,0,0,
+9625,9624,9624,9625,12233,12235,0,0,12259,0,9589,9604,9623,0,0,9623,
+9221,0,0,9221,12201,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-12758,14008,9451,9451,6667,6668,6668,6669,9287,0,0,11309,9414,9636,0,9237,
+13708,14958,9451,9451,6667,6668,6668,6669,9287,0,0,12259,9414,9636,0,9237,
 0,0,0,0,9416,9716,9717,0,0,0,0,0,0,0,0,9451,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10472,
@@ -2822,11 +2822,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 9224,9225,9225,9224,3965,3966,3967,9223,4083,4084,4085,7806,0,0,0,7180,
-0,12301,0,14083,0,0,2397,2398,0,0,0,0,0,0,0,0,
+0,13251,0,15033,0,0,2397,2398,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-12758,327,328,12758,14105,14106,0,0,0,0,9349,0,9592,0,0,9444,
-0,0,0,12758,0,0,0,0,0,0,0,0,12748,2147496394,0,0,
+13708,327,328,13708,15055,15056,0,0,0,0,9349,0,13174,0,0,9444,
+0,0,0,13708,0,0,0,0,0,0,0,0,13698,2147497344,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
@@ -2851,7 +2851,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,12324,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,13274,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
