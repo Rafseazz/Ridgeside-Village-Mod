@@ -240,7 +240,7 @@ namespace RidgesideVillage.Questing
             catch
             {
 				dailyQuestData.Value = new QuestData(null, null);
-				Log.Error("Failed parsing quests.");
+				Log.Error("Failed parsing new quests.");
 			}
 		}
 

@@ -153,45 +153,58 @@ namespace RidgesideVillage.Questing
 		}
 		static internal Quest getQuestFromId(int id)
 		{
-			Quest quest = Quest.getQuestFromId(id);
+			Log.Trace($"Trying to load quest {id}");
+			Quest quest = null;
+            try
+            {
+				quest = Quest.getQuestFromId(id);
 
-			if (quest is SlayMonsterQuest monsterQuest)
-			{
-				Dictionary<int, string> questData = Game1.temporaryContent.Load<Dictionary<int, string>>("Data\\Quests");
-
-				if (questData != null && questData.ContainsKey(id))
+				if (quest is SlayMonsterQuest monsterQuest)
 				{
-					string[] rawData = questData[id].Split('/');
-					string questType = rawData[0];
-					string[] conditionsSplit = rawData[4].Split(' ');
+					Dictionary<int, string> questData = Game1.temporaryContent.Load<Dictionary<int, string>>("Data\\Quests");
 
-					monsterQuest.loadQuestInfo();
-					monsterQuest.monster.Value.Name = conditionsSplit[0].Replace('_', ' ');
-					monsterQuest.monsterName.Value = monsterQuest.monster.Value.Name;
-					monsterQuest.numberToKill.Value = Convert.ToInt32(conditionsSplit[1]);
-					if (conditionsSplit.Length > 2)
+					if (questData != null && questData.ContainsKey(id))
 					{
-						monsterQuest.target.Value = conditionsSplit[2];
-					}
-					else
-					{
-						monsterQuest.target.Value = "null";
-					}
-					monsterQuest.questType.Value = 4;
-                    if (rawData.Length>9)
-                    {
-						monsterQuest.targetMessage = rawData[9];
-                    }
+						string[] rawData = questData[id].Split('/');
+						string questType = rawData[0];
+						string[] conditionsSplit = rawData[4].Split(' ');
 
-					monsterQuest.moneyReward.Value = Convert.ToInt32(rawData[6]);
-					monsterQuest.reward.Value = monsterQuest.moneyReward.Value;
-					monsterQuest.rewardDescription.Value = (rawData[6].Equals("-1") ? null : rawData[7]);
-					monsterQuest.parts.Clear();
-					monsterQuest.dialogueparts.Clear();
-					ModEntry.Helper.Reflection.GetField<bool>(monsterQuest, "_loadedDescription").SetValue(true);
-					return monsterQuest;
+						monsterQuest.loadQuestInfo();
+						monsterQuest.monster.Value.Name = conditionsSplit[0].Replace('_', ' ');
+						monsterQuest.monsterName.Value = monsterQuest.monster.Value.Name;
+						monsterQuest.numberToKill.Value = Convert.ToInt32(conditionsSplit[1]);
+						if (conditionsSplit.Length > 2)
+						{
+							monsterQuest.target.Value = conditionsSplit[2];
+						}
+						else
+						{
+							monsterQuest.target.Value = "null";
+						}
+						monsterQuest.questType.Value = 4;
+						if (rawData.Length > 9)
+						{
+							monsterQuest.targetMessage = rawData[9];
+						}
+
+						monsterQuest.moneyReward.Value = Convert.ToInt32(rawData[6]);
+						monsterQuest.reward.Value = monsterQuest.moneyReward.Value;
+						monsterQuest.rewardDescription.Value = (rawData[6].Equals("-1") ? null : rawData[7]);
+						monsterQuest.parts.Clear();
+						monsterQuest.dialogueparts.Clear();
+						ModEntry.Helper.Reflection.GetField<bool>(monsterQuest, "_loadedDescription").SetValue(true);
+						return monsterQuest;
+					}
 				}
-			}
+            }
+            catch(Exception e)
+            {
+				Log.Error($"Failed parsing quest with id {id}");
+				Log.Error(e.Message);
+				Log.Error(e.StackTrace);
+				quest = null;
+            }
+			
 
 			return quest;
 		}
