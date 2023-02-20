@@ -47,28 +47,25 @@ namespace RidgesideVillage
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            foreach (Farmer o in Game1.getAllFarmers())
-            {
-                NPC traveller = Game1.getCharacterFromName("Irene");
-                if (o.spouse.Contains("Irene"))
+            NPC irene = Game1.getCharacterFromName("Irene");
+            if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendship) 
+                && friendship.Status == FriendshipStatus.Married)
+            { 
+                if (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
                 {
-                    if (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
+                    if (Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
                     {
-                        if (Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
-                        {
-                            Game1.warpCharacter(traveller, RSVConstants.L_HIDDENWARP, Vector2.One);
-                        }
+                        Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
                     }
-                    else if (Game1.currentSeason.Equals("fall") || Game1.currentSeason.Equals("winter"))
+                }
+                else if (Game1.currentSeason.Equals("fall") || Game1.currentSeason.Equals("winter"))
+                {
+                    if (Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
                     {
-                        if (Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
-                        {
-                            Game1.warpCharacter(traveller, RSVConstants.L_HIDDENWARP, Vector2.One);
-                        }
+                        Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
                     }
                 }
             }
-            return;
         }
 
         private static void OnDayEnding(object sender, TimeChangedEventArgs e)

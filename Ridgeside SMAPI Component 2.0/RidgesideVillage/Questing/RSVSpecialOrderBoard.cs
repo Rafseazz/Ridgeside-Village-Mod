@@ -67,6 +67,12 @@ namespace RidgesideVillage.Questing
 
         public override void receiveLeftClick(int x, int y, bool playSound = true)
         {
+
+			if (timestampOpened + safetyTimer > Game1.currentGameTime.TotalGameTime.TotalMilliseconds)
+			{
+				return;
+			}
+
 			bool hadQuestBefore = false;
 			foreach (SpecialOrder specialOrder in Game1.player.team.specialOrders)
 			{
