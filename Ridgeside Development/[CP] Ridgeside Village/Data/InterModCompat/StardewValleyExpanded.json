@@ -402,6 +402,33 @@
 		"PatchMode": "ReplaceByLayer",
 	},
 
+	//PonyRide Spawn tile
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town-Fair",
+		"MapTiles": [
+			{
+               "Position": { "X": 7, "Y": 27 },
+               "Layer": "Back",
+               "SetProperties": {
+                  "CustomCompanions": "Spawn 1 Rafseazz.RSVCC.PonyRide"
+               }
+            },
+		],
+		"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+	},
+
+	{
+      "Action": "EditData",
+      "Target": "{{PeacefulEnd.CustomCompanions/Companions:Rafseazz.RSVCC.PonyRide}}",
+      "Entries": {
+         "Companion": {
+            "IdleBehavior": "Wander",
+         }
+      },
+	  "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true, "RSVNPCSAttendFestivals": true, "ExpandedFestivalMaps": true },
+   	},
+
 	/*********
 	** Spirit's Eve
 	*********/

@@ -48,7 +48,19 @@
 		"FromFile": "Assets/Characters/Irene_Chef.png",
 		"Update": "OnLocationChange",
 		"When": {
-			"LocationName": "Custom_Ridgeside_PurpleMansion"
+			"LocationName": "Custom_Ridgeside_PurpleMansion",
+			"HasSeenEvent |contains=75160431": false
+		},
+	},
+
+	{
+		"LogName": "Irene Chef Outfit Character - traveling",
+		"Action": "EditImage",
+		"Target": "Characters/Irene",
+		"FromFile": "Assets/Characters/Irene_Chef.png",
+		"When": {
+			"IreneTraveling": true,
+			"HasSeenEvent |contains=75160431": true
 		},
 	},
 

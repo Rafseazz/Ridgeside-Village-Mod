@@ -412,6 +412,27 @@
 			"Value": "u 1 2 3 4/z spring summer fall",
 			"When": { "Season": "winter" }
 		},
+		{
+			"Name": "IreneTraveling",
+			"Value": true,
+			"When": { "Season": "spring, summer", "Day": "15, 16, 17, 18, 19, 20, 21" }
+		},
+		{
+			"Name": "IreneTraveling",
+			"Value": true,
+			"When": { "Season": "fall, winter", "Day": "2, 3, 4, 5, 6, 7" }
+		},
+
+		{
+			"Name": "IreneTraveling",
+			"Value": false,
+			"When": { "Season": "spring, summer", "Query: {{Day}} < 15": true, "Query: {{Day}} > 21": true }
+		},
+		{
+			"Name": "IreneTraveling",
+			"Value": false,
+			"When": { "Season": "fall, winter", "Query: {{Day}} < 2": true, "Query: {{Day}} > 7": true }
+		},
 
 		//Ridgeside Extra Music Tokens
 		//AlissaTheme
