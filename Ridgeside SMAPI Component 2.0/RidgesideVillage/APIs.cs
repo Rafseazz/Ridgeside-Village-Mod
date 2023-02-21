@@ -13,6 +13,7 @@ namespace RidgesideVillage
         public static IJsonAssetsApi JA;
         public static IWearMoreRingsApi MR;
         public static ISpaceCoreApi SC;
+        public static IShopTileFrameworkAPI STFAPI;
 
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -44,6 +45,12 @@ namespace RidgesideVillage
             if (SC == null)
             {
                 Log.Warn("SpaceCore API not found. This could lead to issues.");
+            }
+
+            STFAPI = Helper.ModRegistry.GetApi<IShopTileFrameworkAPI>("Cherry.ShopTileFramework");
+            if (STFAPI == null)
+            {
+                Log.Warn("Shop Tile Framework API not found. This could lead to issues.");
             }
         }
     }

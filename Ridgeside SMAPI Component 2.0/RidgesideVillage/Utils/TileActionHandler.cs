@@ -30,6 +30,10 @@ namespace RidgesideVillage
 
         private static void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
+
+
+            if (!e.Button.IsActionButton())
+                return;
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady)
                 return;
@@ -41,7 +45,8 @@ namespace RidgesideVillage
             || Game1.currentLocation == null
             || Game1.eventUp
             || Game1.isFestival()
-            || Game1.IsFading();
+            || Game1.IsFading()
+            || Game1.menuUp;
 
             //Will only trigger if player can move
             if (probablyDontCheck)
@@ -49,19 +54,21 @@ namespace RidgesideVillage
                 return;
             }
 
-            if (!e.Button.IsActionButton())
-                return;
-            Vector2 clickedTile;
-            if (Game1.options.gamepadControls)
+            Vector2 clickedTile = Vector2.Zero;
+            string actionString = "";
+            bool usingGamepad = Game1.options.gamepadControls;
+            if (usingGamepad)
             {
-                clickedTile = Game1.player.GetGrabTile();
+                clickedTile = Utility.clampToTile(Game1.player.GetToolLocation(Helper.Input.GetCursorPosition().ScreenPixels))/64f;
+                actionString = Game1.currentLocation.doesTileHaveProperty(((int)clickedTile.X), ((int)clickedTile.Y), "Action", "Buildings");
+                Log.Error($"{clickedTile}");
             }
-            else
+            if (!usingGamepad || String.IsNullOrWhiteSpace(actionString))
             {
                 clickedTile = Helper.Input.GetCursorPosition().GrabTile;
-            }
+                actionString = Game1.currentLocation.doesTileHaveProperty(((int)clickedTile.X), ((int)clickedTile.Y), "Action", "Buildings");
 
-            string actionString = Game1.currentLocation.doesTileHaveProperty(((int)clickedTile.X), ((int)clickedTile.Y), "Action", "Buildings");
+            }
 
             if (actionString != null && actionString != "")
             {

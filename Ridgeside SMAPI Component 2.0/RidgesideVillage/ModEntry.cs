@@ -88,6 +88,8 @@ namespace RidgesideVillage
 
             Foxbloom.Initialize(this);
 
+            ShopTileAction.Initialize(this);
+
 
             //not done (yet?)
             //new CliffBackground();
