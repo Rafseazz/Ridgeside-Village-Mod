@@ -43,6 +43,7 @@ namespace RidgesideVillage
 
             Helper.Events.GameLoop.DayEnding += OnDayEnding;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            Helper.Events.GameLoop.OneSecondUpdateTicked += OnOneSecondUpdateTicked;
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
@@ -51,9 +52,9 @@ namespace RidgesideVillage
             if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendship) 
                 && friendship.Status == FriendshipStatus.Married)
             { 
-                if(Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
+                if (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
                 {
-                    if(Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
+                    if (Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
                     {
                         Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
                     }
@@ -63,6 +64,123 @@ namespace RidgesideVillage
                     if (Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
                     {
                         Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
+                    }
+                }
+            }
+        }
+
+        private static void OnOneSecondUpdateTicked(object sender, OneSecondUpdateTickedEventArgs e)
+        {
+            //Has crucial events be marked as seen for every player when one player triggers it.
+            //Made so that it doesn't require the host to trigger the crucial event to apply changes
+            if (!Game1.IsMultiplayer)
+            {
+                return;
+            }
+
+            foreach (Farmer o in Game1.getAllFarmers())
+            {
+                //Paula's 8 heart event
+                if (o.eventsSeen.Contains(75160389)) //seen Paula's 8 heart part 2
+                {
+                    int EventID = 75160352;
+                    int EventID2 = 75160389;
+                    int ResponseID = 75163521;
+                    foreach (Farmer p in Game1.getAllFarmers())
+                    {
+                        if (!p.eventsSeen.Contains(EventID) && !p.eventsSeen.Contains(EventID2))
+                        {
+                            p.eventsSeen.Add(EventID);
+                            p.eventsSeen.Add(EventID2);
+                        }
+                    }
+
+                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Paula route; Makes Paula dateable for everyone
+                    {
+                        foreach (Farmer p in Game1.getAllFarmers())
+                        {
+                            if (!p.dialogueQuestionsAnswered.Contains(ResponseID))
+                            {
+                                p.dialogueQuestionsAnswered.Add(ResponseID);
+                            }
+                        }
+                    }
+                }
+
+                //Anton's 8 heart event
+                if (o.eventsSeen.Contains(75160304))
+                {
+                    int EventID = 75160304;
+                    int ResponseID = 75163042;
+                    foreach (Farmer p in Game1.getAllFarmers())
+                    {
+                        if (!p.eventsSeen.Contains(EventID))
+                        {
+                            p.eventsSeen.Add(EventID);
+                        }
+                    }
+
+                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Paula route; Makes Anton dateable for everyone
+                    {
+                        foreach (Farmer p in Game1.getAllFarmers())
+                        {
+                            if (!p.dialogueQuestionsAnswered.Contains(ResponseID))
+                            {
+                                p.dialogueQuestionsAnswered.Add(ResponseID);
+                            }
+                        }
+                    }
+                }
+
+                //Irene's 8 heart event
+                if (o.eventsSeen.Contains(75160431)) //seen Irene's 8 heart part 2
+                {
+                    int EventID = 75160324;
+                    int EventID2 = 75160431;
+                    int ResponseID = 7516325;
+                    foreach (Farmer p in Game1.getAllFarmers())
+                    {
+                        if (!p.eventsSeen.Contains(EventID) && !p.eventsSeen.Contains(EventID2))
+                        {
+                            p.eventsSeen.Add(EventID);
+                            p.eventsSeen.Add(EventID2);
+                        }
+                    }
+
+                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Paula route; Makes Irene dateable for everyone
+                    {
+                        foreach (Farmer p in Game1.getAllFarmers())
+                        {
+                            if (!p.dialogueQuestionsAnswered.Contains(ResponseID))
+                            {
+                                p.dialogueQuestionsAnswered.Add(ResponseID);
+                            }
+                        }
+                    }
+                }
+
+                //Zayne's 8 heart event
+                if (o.eventsSeen.Contains(75160440))
+                {
+                    int EventID = 75160440;
+                    int ResponseID = 7516439;
+                    foreach (Farmer p in Game1.getAllFarmers())
+                    {
+                        if (!p.eventsSeen.Contains(EventID))
+                        {
+                            p.eventsSeen.Add(EventID);
+                        }
+                    }
+
+                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Paula route; Makes Zayne dateable for everyone
+                    {
+                        foreach (Farmer p in Game1.getAllFarmers())
+                        {
+                            if (!p.dialogueQuestionsAnswered.Contains(ResponseID))
+                            {
+                                p.dialogueQuestionsAnswered.Add(ResponseID);
+                            }
+                        }
                     }
                 }
             }
