@@ -43,6 +43,7 @@ namespace RidgesideVillage
 
             Helper.Events.GameLoop.DayEnding += OnDayEnding;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            Helper.Events.GameLoop.OneSecondUpdateTicked += OnOneSecondUpdateTicked;
         }
 
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
@@ -68,7 +69,7 @@ namespace RidgesideVillage
             }
         }
 
-        private static void OnDayEnding(object sender, TimeChangedEventArgs e)
+        private static void OnOneSecondUpdateTicked(object sender, OneSecondUpdateTickedEventArgs e)
         {
             //Has crucial events be marked as seen for every player when one player triggers it.
             //Made so that it doesn't require the host to trigger the crucial event to apply changes
@@ -80,15 +81,17 @@ namespace RidgesideVillage
             foreach (Farmer o in Game1.getAllFarmers())
             {
                 //Paula's 8 heart event
-                if (o.eventsSeen.Contains(75160352))
+                if (o.eventsSeen.Contains(75160389)) //seen Paula's 8 heart part 2
                 {
                     int EventID = 75160352;
+                    int EventID2 = 75160389;
                     int ResponseID = 75163521;
                     foreach (Farmer p in Game1.getAllFarmers())
                     {
-                        if (!p.eventsSeen.Contains(EventID))
+                        if (!p.eventsSeen.Contains(EventID) && !p.eventsSeen.Contains(EventID2))
                         {
                             p.eventsSeen.Add(EventID);
+                            p.eventsSeen.Add(EventID2);
                         }
                     }
 
@@ -130,15 +133,17 @@ namespace RidgesideVillage
                 }
 
                 //Irene's 8 heart event
-                if (o.eventsSeen.Contains(75160324))
+                if (o.eventsSeen.Contains(75160431)) //seen Irene's 8 heart part 2
                 {
                     int EventID = 75160324;
+                    int EventID2 = 75160431;
                     int ResponseID = 7516325;
                     foreach (Farmer p in Game1.getAllFarmers())
                     {
-                        if (!p.eventsSeen.Contains(EventID))
+                        if (!p.eventsSeen.Contains(EventID) && !p.eventsSeen.Contains(EventID2))
                         {
                             p.eventsSeen.Add(EventID);
+                            p.eventsSeen.Add(EventID2);
                         }
                     }
 
