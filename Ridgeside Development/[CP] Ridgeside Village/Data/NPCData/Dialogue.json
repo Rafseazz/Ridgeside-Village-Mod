@@ -21,5 +21,28 @@
    	"FromFile": "Assets/Dialogue/Alissa.json, Assets/Dialogue/Aguar.json, Assets/Dialogue/Bert.json, Assets/Dialogue/Corine.json, Assets/Dialogue/Ezekiel.json, Assets/Dialogue/Flor.json, Assets/Dialogue/Freddie.json, Assets/Dialogue/Ian.json, Assets/Dialogue/Jeric.json, Assets/Dialogue/Jio.json, Assets/Dialogue/Keahi.json, Assets/Dialogue/Kenneth.json, Assets/Dialogue/Kiwi.json, Assets/Dialogue/Lenny.json, Assets/Dialogue/Lola.json, Assets/Dialogue/Maddie.json, Assets/Dialogue/Olga.json, Assets/Dialogue/Philip.json, Assets/Dialogue/Pika.json, Assets/Dialogue/Richard.json, Assets/Dialogue/Shiro.json, Assets/Dialogue/Trinnie.json, Assets/Dialogue/Ysabelle.json, Assets/Dialogue/Yuuma.json, Assets/Dialogue/Undreya.json, Assets/Dialogue/Helen.json, Assets/Dialogue/Daia.json, Assets/Dialogue/Belinda.json, Assets/Dialogue/Bliss.json, Assets/Dialogue/Sari.json, Assets/Dialogue/Pipo.json, Assets/Dialogue/Acorn.json, Assets/Dialogue/Naomi.json, Assets/Dialogue/Malaya.json, Assets/Dialogue/Kimpoi.json, Assets/Dialogue/Anton.json, Assets/Dialogue/Ariah.json, Assets/Dialogue/Blair.json, Assets/Dialogue/Bryle.json, Assets/Dialogue/Carmen.json, Assets/Dialogue/Faye.json, Assets/Dialogue/Irene.json, Assets/Dialogue/Kiarra.json, Assets/Dialogue/Lorenzo.json, Assets/Dialogue/Louie.json, Assets/Dialogue/Maive.json, Assets/Dialogue/Paula.json, Assets/Dialogue/Raeriyala.json, Assets/Dialogue/Sean.json, Assets/Dialogue/Shanice.json, Assets/Dialogue/Sonny.json, Assets/Dialogue/Zayne.json, Assets/Dialogue/TreehouseGirl.json, Assets/Dialogue/RelicSpirit.json, Assets/Dialogue/Torts.json, Assets/Dialogue/Althea.json, Assets/Dialogue/Lorraine.json, Assets/Dialogue/Nadaline.json, Assets/Dialogue/Zachary.json, Assets/Dialogue/June.json",
   },
 
+  //Torts bday dialogue patch
+  {
+  	"LogName": "RSV - Torts dialogue strings patch in his bday!",
+  	"Action": "EditData",
+  	"Target": "Strings/StringsFromCSFiles",
+  	"Entries": {
+  		"NPC.cs.4274": "{{i18n:Torts.NPC.cs.4274}}",
+  		"NPC.cs.4275": "{{i18n:Torts.NPC.cs.4275}}",
+  		"NPC.cs.4276": "{{i18n:Torts.NPC.cs.4276}}",
+  		"NPC.cs.4277": "{{i18n:Torts.NPC.cs.4277}}",
+  		"NPC.cs.4278": "{{i18n:Torts.NPC.cs.4278}}",
+  		"NPC.cs.4279": "{{i18n:Torts.NPC.cs.4279}}",
+  		"NPC.cs.4280": "{{i18n:Torts.NPC.cs.4280}}",
+  		"NPC.cs.4281": "{{i18n:Torts.NPC.cs.4281}}",
+  	},
+  	"When": {
+  		"LocationName": "Custom_Ridgeside_RidgesideVillage",
+  		"Day": 1,
+  		"Season": "spring"
+  	},
+  	"Update": "OnLocationChange"
+  },
+
 ]
 }
