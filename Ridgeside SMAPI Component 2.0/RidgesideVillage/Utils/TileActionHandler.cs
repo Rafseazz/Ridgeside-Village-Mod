@@ -61,7 +61,6 @@ namespace RidgesideVillage
             {
                 clickedTile = Utility.clampToTile(Game1.player.GetToolLocation(Helper.Input.GetCursorPosition().ScreenPixels))/64f;
                 actionString = Game1.currentLocation.doesTileHaveProperty(((int)clickedTile.X), ((int)clickedTile.Y), "Action", "Buildings");
-                Log.Error($"{clickedTile}");
             }
             if (!usingGamepad || String.IsNullOrWhiteSpace(actionString))
             {
