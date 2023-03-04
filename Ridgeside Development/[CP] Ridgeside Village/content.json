@@ -661,6 +661,38 @@
 			}
 		},
 
+		//FayeTheme
+		{
+			"Name": "FayeMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "FayeMusic",
+			"Value": "Daydreaming",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
+		//BryleTheme
+		{
+			"Name": "BryleMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "BryleMusic",
+			"Value": "Defending",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
 		//Anton x Paula Theme
 		{
 			"Name": "AntonPaulaMusic",
@@ -767,6 +799,10 @@
 			{
 				"Name": "Custom_Ridgeside_RidgesideVillage_CookOff",
 				"FromMapFile": "Assets/Maps/EventMaps/RidgesideVillage_CookOff.tmx",
+			},
+			{
+				"Name": "Custom_Ridgeside_RidgesideVillage_Fashion",
+				"FromMapFile": "Assets/Maps/EventMaps/RidgesideVillage_Fashion.tmx",
 			},
 			{
 				"Name": "Custom_Ridgeside_Ridge_KennethDate_OFF",
