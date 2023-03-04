@@ -2192,8 +2192,8 @@
 	"ShopName": "RSVFayeShop",
 	"StoreCurrency": "Money",
 	"CategoriesToSellHere": [],
-	"Quote": "Place your order! Designs change everyday!",
-	"MaxNumItemsSoldInStore": 2,
+	"Quote": "Fabulously place your order!",
+	"MaxNumItemsSoldInStore": 3,
 	"LocalizedQuote": {
     	//remove the "//" from your language
         //"es": "PLACEHOLDER",
@@ -2218,7 +2218,6 @@
 				"Village Color Shirt",
 				 ],
 			"StockPrice": 3000,
-			"Stock": 1,
 		},
     {
 			"ItemType": "Clothing",
@@ -2226,7 +2225,6 @@
 				"Cof-Faye Jacket",
 				 ],
 			"StockPrice": 5000,
-			"Stock": 1,
       "When": [ "n RSV.FayeJacket" ]
 		},
     {
@@ -2235,7 +2233,6 @@
 				"Cray-Faye Abstract Shirt",
 				 ],
 			"StockPrice": 5000,
-			"Stock": 1,
       "When": [ "n RSV.FayeMisc" ]
 		},
     {
@@ -2244,8 +2241,20 @@
 				"Faye-rytale Pastel",
 				 ],
 			"StockPrice": 5000,
-			"Stock": 1,
       "When": [ "n RSV.FayePastel" ]
+		},
+		{
+			"ItemType": "Clothing",
+			"ItemNames": [
+				"Dragon Sweetie Top",
+				"Fab Dusk Suit",
+				"Fairy Cutie Top",
+				"Golden Mane Top",
+				"Phoenix Confidence Jacket",
+				"Winter Royalty Top"
+				 ],
+			"StockPrice": 3000,
+      "When": [ "e 75160449" ]
 		},
 	],
 	},
