@@ -183,6 +183,32 @@ namespace RidgesideVillage
                         }
                     }
                 }
+
+                //Bryle's 8 heart event (If seen by one, seen by all)
+                if (o.eventsSeen.Contains(75160453))
+                {
+                    int EventID = 75160453;
+                    foreach (Farmer p in Game1.getAllFarmers())
+                    {
+                        if (!p.eventsSeen.Contains(EventID))
+                        {
+                            p.eventsSeen.Add(EventID);
+                        }
+                    }
+                }
+
+                //Faye's 8 heart event (If seen by one, seen by all)
+                if (o.eventsSeen.Contains(75160449))
+                {
+                    int EventID = 75160449;
+                    foreach (Farmer p in Game1.getAllFarmers())
+                    {
+                        if (!p.eventsSeen.Contains(EventID))
+                        {
+                            p.eventsSeen.Add(EventID);
+                        }
+                    }
+                }
             }
         }
 
