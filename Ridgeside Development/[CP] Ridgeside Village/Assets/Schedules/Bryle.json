@@ -11,7 +11,7 @@
 			"HasSeenEvent: hostPlayer|contains=75160375": false
 		}
 	},
-	//Random Visit 30% chance after seeing his introduction event
+	//Random Visit 40% chance after seeing his introduction event
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Bryle",
@@ -19,7 +19,7 @@
 			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 3 2/700 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
 					},
 		"When": {
-			"Query: 1 > 3": true,
+			"Query: {{RandomNumber}} > 4": true,
 			"HasSeenEvent: hostPlayer": 75160375
 		}
 	},
@@ -30,7 +30,7 @@
 			"spring": "0 BusStop 12 10 2/610 Custom_Ridgeside_JericHouse 8 5 1/1400 Custom_Ridgeside_RidgesideVillage 71 50 3/1800 Custom_Ridgeside_RidgesideVillage 29 9 0/2200 Custom_Ridgeside_JericHouse 8 5 1",
 					},
 		"When": {
-			"Query: 1 <= 3": true,
+			"Query: {{RandomNumber}} <= 4": true,
 			"HasSeenEvent: hostPlayer": 75160375
 		}
 	},

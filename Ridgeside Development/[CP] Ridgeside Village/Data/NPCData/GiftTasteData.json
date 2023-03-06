@@ -160,5 +160,19 @@
 		},
 	},
 
+	{
+		"LogName": "Gift tastes - Bryle",
+		"Action": "EditData",
+		"Target": "Data/NPCGiftTastes",
+		"When": {
+			"HasSeenEvent": 75160375
+		},
+		"Update": "OnLocationChange, OnTimeChange",
+		"Entries": {
+
+			"Bryle": "{{i18n:Gift.Love.Bryle}}/224 444 577 241/{{i18n:Gift.Like.Bryle}}/747 635/{{i18n:Gift.Dislike.Bryle}}//{{i18n:Gift.Hate.Bryle}}//{{i18n:Gift.Neutral.Bryle}}/-4/ ",
+		},
+	},
+
 ]
 }

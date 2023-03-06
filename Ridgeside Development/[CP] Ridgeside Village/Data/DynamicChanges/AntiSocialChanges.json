@@ -69,6 +69,18 @@
 		},
 
 		{
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"When": {
+				"HasSeenEvent": 75160375
+			},
+			"Entries": {
+				"Bryle": null
+			},
+			"Update": "OnLocationChange"
+		},
+
+		{
       "LogName": "AntiSocial Flag - June unmet",
       "Action": "EditData",
       "Target": "Data/AntiSocialNPCs",

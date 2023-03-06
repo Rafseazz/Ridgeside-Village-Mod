@@ -197,6 +197,10 @@ namespace RidgesideVillage
             {
                 Game1.player.friendshipData["Zayne"].TalkedToToday = true;
             }
+            if (Game1.player.friendshipData.ContainsKey("Bryle"))
+            {
+                Game1.player.friendshipData["Bryle"].TalkedToToday = true;
+            }
         }
 
         private static bool NPC_engagementResponse_Prefix(NPC __instance)
