@@ -1254,5 +1254,32 @@
 				]
 			},
 
+	{
+		"LogName": "RSV: Mansion open after 8 for Zayne's party and closes after seeing the event",
+	    "Action": "EditMap",
+	    "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+	    "MapTiles": [
+				{
+					"Position": { "X": 129, "Y": 70 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Warp 29 39 Custom_Ridgeside_PurpleMansion"
+					}
+				},
+				{
+					"Position": { "X": 130, "Y": 70 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Warp 29 39 Custom_Ridgeside_PurpleMansion"
+					}
+				}
+			],
+			"When": {
+				"HasSeenEvent: |contains=75160440": false,
+				"HasSeenEvent: |contains=75160439": true
+			},
+			"Update": "OnLocationChange, OnTimeChange"
+	},
+
 ]
 }
