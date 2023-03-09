@@ -2020,7 +2020,7 @@
 		"Target": "Data/Events/Custom_Ridgeside_RidgesideVillage",
 		"Entries": {
 			//No more running (Zayne 6 hearts)
-			"75160438/e 75160437/t 2000 2400/f Zayne 1500/w sunny/H": "nightTime/111 71/farmer 113 66 2 Zayne 111 71 3/skippable/addConversationTopic RSV_Zayne6Hearts/emote Zayne 40 true/move farmer 0 3 2/emote farmer 8/emote Zayne 8/faceDirection Zayne 1/pause 800/speak Zayne \"{{i18n:event-75160438.01}}\"/emote farmer 32/speak Zayne \"{{i18n:event-75160438.02}}\"/question fork0 \"{{i18n:event-75160438.03}}#{{i18n:event-75160438.04}}#{{i18n:event-75160438.05}}#\"/fork AskZayne/emote farmer 56/speak Zayne \"{{i18n:event-75160438.06}}\"/faceDirection Zayne 3/move farmer 0 2 2/end",
+			"75160438/e 75160437/t 2000 2400/f Zayne 1500/w sunny": "nightTime/111 71/farmer 113 66 2 Zayne 111 71 3/skippable/addConversationTopic RSV_Zayne6Hearts/emote Zayne 40 true/move farmer 0 3 2/emote farmer 8/emote Zayne 8/faceDirection Zayne 1/pause 800/speak Zayne \"{{i18n:event-75160438.01}}\"/emote farmer 32/speak Zayne \"{{i18n:event-75160438.02}}\"/question fork0 \"{{i18n:event-75160438.03}}#{{i18n:event-75160438.04}}#{{i18n:event-75160438.05}}#\"/fork AskZayne/emote farmer 56/speak Zayne \"{{i18n:event-75160438.06}}\"/faceDirection Zayne 3/move farmer 0 2 2/end",
 
 			"AskZayne": "addMailReceived RSVZayneTalkedTo/emote farmer 8/speak Zayne \"{{i18n:event-75160438.AskZayne.01}}\"/faceDirection Zayne 2/emote Zayne 40/faceDirection Zayne 1/speak Zayne \"{{i18n:event-75160438.AskZayne.02}}\"/emote farmer 8 true/faceDirection Zayne 3/move farmer -2 0 2/speak Zayne \"{{i18n:event-75160438.AskZayne.03}}\"/message \"{{i18n:event-75160438.AskZayne.04}}\"/emote Zayne 28/speak Zayne \"{{i18n:event-75160438.AskZayne.05}}\"/faceDirection Zayne 0/pause 800/speak Zayne \"{{i18n:event-75160438.AskZayne.06}}\"/faceDirection Zayne 3/emote Zayne 40/speak Zayne \"{{i18n:event-75160438.AskZayne.07}}\"/emote farmer 8/faceDirection Zayne 0/speak Zayne \"{{i18n:event-75160438.AskZayne.08}}\"/faceDirection Zayne 0/emote Zayne 40/speak Zayne \"{{i18n:event-75160438.AskZayne.09}}\"/faceDirection Zayne 3/emote Zayne 28/speak Zayne \"{{i18n:event-75160438.AskZayne.10}}\"/faceDirection Zayne 0/speak Zayne \"{{i18n:event-75160438.AskZayne.11}}\"/quickQuestion #You don't have to be afraid.#Run away then.#What exactly do you want?#Take your time.#(break)speak Zayne \"How will I know it'll work out?$s#$b#It's a risk but...$s\"(break)speak Zayne \"I think that will just make things worse...$s#$b#Hmmm...$s\"(break)speak Zayne \"I think I know what I want... But it's just my doubts... Hmmm...$s\"(break)speak Zayne \"Hmmm...$s\"(break)/emote Zayne 40/speak Zayne \"{{i18n:event-75160438.AskZayne.12}}\"/faceDirection Zayne 3/emote Zayne 40/faceDirection Zayne 0/speak Zayne \"{{i18n:event-75160438.AskZayne.13}}\"/emote farmer 56/emote Zayne 32/speak Zayne \"{{i18n:event-75160438.AskZayne.14}}\"/emote farmer 32/faceDirection Zayne 3/emote Zayne 40/emote Zayne 32/speak Zayne \"{{i18n:event-75160438.AskZayne.15}}\"/end dialogue Zayne \"{{i18n:event-75160438.AskZayne.16}}\"",
 		}
@@ -2030,8 +2030,8 @@
 		"Action": "EditData",
 		"Target": "Data/Events/Farm",
 		"Entries": {
-			//Zayne sends letter to farmer (Zayne 8 hearts part 1) //Yes the letter says to visit the Mansion between 8PM to 2AM, the Mansion will be open on those times after seeing this letter
-			"75160439/e 75160438/f Zayne 2000/x ZayneLetter": "null",
+			//Zayne sends letter to farmer (Zayne 8 hearts part 1) REQUIRES seeing Maive's 8 heart event //Yes the letter says to visit the Mansion between 8PM to 2AM, the Mansion will be open on those times after seeing this letter
+			"75160439/e 75160438/e 75160340/f Zayne 2000/x ZayneLetter": "null",
 		}
 	},
 
