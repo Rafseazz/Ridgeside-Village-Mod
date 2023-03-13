@@ -430,7 +430,7 @@ namespace RidgesideVillage
             }
             else
             {
-                Game1.activeClickableMenu = new SummitRenovateMenu();
+                SummitRenovateMenu.tryOpenRenovateMenu();
             }
         }
 

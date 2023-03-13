@@ -129,11 +129,9 @@ namespace RidgesideVillage
 
 		public BluePrint CurrentBlueprint => blueprints[currentBlueprintIndex];
 
-		public SummitRenovateMenu()
-		{
-			Game1.player.forceCanMove();
-			resetBounds();
-			blueprints = new List<BluePrint>();
+		public static void tryOpenRenovateMenu()
+        {
+			var blueprints = new List<BluePrint>();
 
 			if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_HOUSEUPGRADED))
 			{
@@ -159,13 +157,26 @@ namespace RidgesideVillage
 				}
 			}
 			if (blueprints.Count == 0)
-            {
+			{
 				NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
 				worker.CurrentDialogue.Clear();
 				worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AllRenovated"), worker));
 				Game1.drawDialogue(worker);
 				return;
             }
+            else
+            {
+
+				Game1.activeClickableMenu = new SummitRenovateMenu(blueprints);
+			}
+		}
+
+		public SummitRenovateMenu(List<BluePrint> blueprints)
+		{
+			Game1.player.forceCanMove();
+			resetBounds();
+			this.blueprints = blueprints; 
+
 			setNewActiveBlueprint();
 			if (Game1.options.SnappyMenus)
 			{
