@@ -1281,5 +1281,29 @@
 			"Update": "OnLocationChange, OnTimeChange"
 	},
 
+	//Rainy backgrounds (Thanks Kailey!)
+	{
+		"LogName": "RSV: Rainy backgrounds DAY",
+		"Action": "EditImage",
+		"Target": "Maps/{{season}}_zrsvwideview",
+		"FromFile": "Assets/Maps/TileSheets/Kailey/{{season}}_rain_day_zrsvwideview.png",
+		"When": {
+			"Weather": "Rain, Storm",
+			"Time": "{{Range: 0600, 1999}}"
+		},
+		"Update": "OnLocationChange"
+	},
+	{
+		"LogName": "RSV: Rainy backgrounds NIGHT",
+		"Action": "EditImage",
+		"Target": "Maps/{{season}}_zrsvwideviewnight",
+		"FromFile": "Assets/Maps/TileSheets/Kailey/{{season}}_rain_night_zrsvwideview.png",
+		"When": {
+			"Weather": "Rain, Storm",
+			"Time": "{{Range: 2000, 2600}}"
+		},
+		"Update": "OnLocationChange"
+	},
+
 ]
 }
