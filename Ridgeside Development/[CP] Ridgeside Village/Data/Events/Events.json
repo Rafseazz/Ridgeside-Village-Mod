@@ -2461,14 +2461,14 @@
 		}
 	},
 
-	/*
+	
 	//2.4 Stuff
 	{
 		"Action": "EditData",
 		"Target": "Data/Events/Custom_Ridgeside_FayeHouse",
 		"Entries": {
 			//Faye stay in date with farmer (Faye 10 heart event)
-			"75160454/e 75160449/D Faye/f Faye 2500": ""
+			"75160454/e 75160449/D Faye/f Faye 2500": "{{FayeMusic}}/6 15/farmer 9 18 0 Faye 6 15 3/skippable/addConversationTopic RSV_Faye10Hearts/addObject 5 15 428/addObject 6 16 428/addObject 9 15 428/addObject 7 15 615/pause 800/emote Faye 56 true/speak Faye \"A bit more and...#$b#*Yawn*$6\"/move farmer -2 0 0/emote Faye 8/faceDirection Faye 2/emote Faye 32/speak Faye \"Ah! Darling!$h\"/move Faye 0 1 1/textAboveHead Faye \"Whoops!\"/emote farmer 16 true/move Faye 1 0 2/move farmer 0 -1 0/message \"Faye almost fell down as she makes her way through the mess.\"/speak Faye \"Whoops! It's quite a mess in here, huh?$8#$b#*Yawn* I swear it wasn't this messy earlier.$6\"/message \"Faye seems drowsy.\"/emote farmer 8/emote Faye 28/speak Faye \"Sleepy? Me? Of course no-*yawn*$6#$b#-I'm not sleepy...$6#$b#...$7\"/showFrame Faye 19/emote farmer 16/message \"Faye fell asleep while standing!?\"/faceDirection Faye 2/jump Faye/emote Faye 16/speak Faye \"Ah! I'm awake! I'm awake!$3\"/emote farmer 28/speak Faye \"Okay! okay! Maybe I stayed up all night again last night...$8#$b#But daaaaarliiing!$s#$b#I was inspired, you see?$h#$b#That's why I'm working on a new design now!$h\"/advancedMove Faye false 0 1 1 1000/move farmer 1 0 3/speak Faye \"I promise I'll work on this first, then I'll take a nap!$h\"/emote farmer 28/speak Faye \"Now come give me a power hug!$h#$b#I'm sure I'll wake up when you embrace me. Teehee <$8\"/emote farmer 32/showFrame Faye 28/animate farmer true true 100 101/positionOffset Faye 2 2/positionOffset farmer -2 0/pause 100/positionOffset Faye 2 1/positionOffset farmer -2 0/pause 100/positionOffset Faye 2 1/positionOffset farmer -2 0/pause 100/positionOffset Faye 1 0/positionOffset farmer -1 0/pause 100/specificTemporarySprite heart 7 16/playSound dwop/emote farmer 16 true/emote Faye 20/message \"Faye suddenly gave you a kiss.\"/speak Faye \"Well, of course a surprise kiss from me!$h#$b#And many many MANY more kisses!$l\"/emote farmer 60 true/emote Faye 20/message \"Faye gave a bunch more kisses!\"/speak Faye \"*Yawn* Ah! I love you so so SO much, darling!$l\"/emote farmer 56/pause 800/emote farmer 40/pause 800/emote farmer 8/emote Faye 24/emote farmer 16/message \"Faye fell asleep in your arms.\"/speak Faye \"Mhmm... I promise I'll finish this then we can be alone...$7#$b#...*snore*$7\"/emote farmer 28/message \"I better carry her to her room.\"/globalFade/viewport -1000 -1000/pause 800/message \"After a couple of hours...\"/speak Faye \"AH! I fell asleep!$3#$b#Daaaaarliiiing! Why didn't you wake me up!$s#$b#Hmph! You better make it up to me now!$8#$b#Cuddle me here in bed now or else! Hmph!$8\"/end dialogue Faye \"I can't believe I fell asleep in your arms while we're standing! Ah! I must be so comfortable in your arms.$8\""
 		}
 	},
 
@@ -2477,9 +2477,9 @@
 		"Target": "Data/Events/Farm",
 		"Entries": {
 			//Bryle sends a care package (Bryle 10 heart event)
-			"75160455/e 75160453/D Bryle/f Bryle 2500/t 600 1200": ""
+			"75160455/e 75160453/D Bryle/f Bryle 2500/t 600 1200/c 3": "{{BryleMusic}}/64 15/farmer 64 16 2 Bryle 64 18 0/skippable/addConversationTopic RSV_Bryle10Hearts/pause 800/emote Bryle 32/speak Bryle \"Good morning, gorgeous.$h#$b#So... Uh... I came by because I wanted to give you this.$l#$b#It's a little care package.$h\"/emote farmer 32/emote Bryle 28/speak Bryle \"I know I'm often busy and because of that we don't get to spend much time together.$s#$b#So I arranged this little gift mostly of stuff that I hope can help you in your work and adventures.[241] [241] [241]#$b#And here...[349] [349] [349]#$b#Oh! And this one too.[253] [253] [253]\"/emote farmer 16/emote Bryle 56/speak Bryle \"I hope these stuff can help you out.#$b#I wish I can stay by your side often so I can protect and help you out.$s#$b#But I know you can take care of yourself just fine.$l#$b#I'm just maybe a bit over-protective.$h\"/emote farmer 32/speak Bryle \"Well then...#$b#Oh! I almost forgot.$h\"/positionOffset Bryle 0 -5/pause 100/positionOffset Bryle 0 -5/pause 100/positionOffset Bryle 0 -5/pause 100/playSound dwop/message \"Bryle gave you a kiss!\"/emote farmer 20/emote Bryle 20/speak Bryle \"A goodluck kiss for the road!$h#$b#I'll see you later, babe!$h#$b#Love ya!$h\"/emote farmer 32/end dialogue Bryle \"Take care of yourself, alright? I don't want you getting hurt!\""
 		}
 	}
-	*/
+	
 ]
 }
