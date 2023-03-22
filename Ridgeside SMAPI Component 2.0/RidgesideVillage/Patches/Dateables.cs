@@ -25,6 +25,8 @@ namespace RidgesideVillage
             { "Paula", "75160352/75163521" },
             { "Irene", "75160324/7516325" },
             { "Zayne", "75160440/7516439" },
+            { "Faye", "75160449/7516319" },
+            { "Bryle", "75160453/7516453" },
         };
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
@@ -120,7 +122,7 @@ namespace RidgesideVillage
                         }
                     }
 
-                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Paula route; Makes Anton dateable for everyone
+                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Anton route; Makes Anton dateable for everyone
                     {
                         foreach (Farmer p in Game1.getAllFarmers())
                         {
@@ -147,7 +149,7 @@ namespace RidgesideVillage
                         }
                     }
 
-                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Paula route; Makes Irene dateable for everyone
+                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Irene route; Makes Irene dateable for everyone
                     {
                         foreach (Farmer p in Game1.getAllFarmers())
                         {
@@ -172,7 +174,7 @@ namespace RidgesideVillage
                         }
                     }
 
-                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Paula route; Makes Zayne dateable for everyone
+                    if (o.dialogueQuestionsAnswered.Contains(ResponseID)) //Romance Zayne route; Makes Zayne dateable for everyone
                     {
                         foreach (Farmer p in Game1.getAllFarmers())
                         {
@@ -188,11 +190,25 @@ namespace RidgesideVillage
                 if (o.eventsSeen.Contains(75160453))
                 {
                     int EventID = 75160453;
+                    int ResponseID = 7516453;
                     foreach (Farmer p in Game1.getAllFarmers())
                     {
                         if (!p.eventsSeen.Contains(EventID))
                         {
                             p.eventsSeen.Add(EventID);
+                        }
+                    }
+
+                    //Adding false dialogue keys for unlocking Faye and Bryle as romance candidates
+                    // Bryle Dialogue Key: 7516453
+                    if (!o.mailReceived.Contains("FayeBryleLoveStory") && o.eventsSeen.Contains(75160453)) //No Brayle flag and seen Bryle's 8 heart event; Makes Bryle dateable for everyone
+                    {
+                        foreach (Farmer p in Game1.getAllFarmers())
+                        {
+                            if (!p.dialogueQuestionsAnswered.Contains(ResponseID))
+                            {
+                                p.dialogueQuestionsAnswered.Add(ResponseID);
+                            }
                         }
                     }
                 }
@@ -201,11 +217,26 @@ namespace RidgesideVillage
                 if (o.eventsSeen.Contains(75160449))
                 {
                     int EventID = 75160449;
+                    int ResponseID = 7516319;
                     foreach (Farmer p in Game1.getAllFarmers())
                     {
                         if (!p.eventsSeen.Contains(EventID))
                         {
                             p.eventsSeen.Add(EventID);
+                        }
+                    }
+
+                    //Adding false dialogue keys for unlocking Faye and Bryle as romance candidates
+                    // Faye Dialogue Key: 7516319
+                    if (o.mailReceived.Contains("FarmerxFaye")) //Has FarmerxFaye flag; Makes Faye dateable for everyone
+                    {
+                        foreach (Farmer p in Game1.getAllFarmers())
+                        {
+                            if (!p.dialogueQuestionsAnswered.Contains(ResponseID))
+                            {
+                                p.dialogueQuestionsAnswered.Add(ResponseID);
+                                p.mailReceived.Add("FarmerxFaye");
+                            }
                         }
                     }
                 }

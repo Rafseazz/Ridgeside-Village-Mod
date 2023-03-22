@@ -172,6 +172,28 @@
 		}
 	},
 
+	{
+		"LogName": "Faye Disposition Change",
+		"Action": "EditData",
+		"Target": "Data/NPCDispositions",
+		"When": { "HasFlag": "FarmerxFaye" },
+		"Update": "OnLocationChange, OnTimeChange",
+		"Entries": {
+			"Faye": "adult/polite/outgoing/positive/female/datable/null/Town/summer 12/{{i18n:NPC_Data.Faye}}/Custom_Ridgeside_FayeHouse 3 5/{{i18n:Name.Faye}}",
+		}
+	},
+
+	{
+		"LogName": "Bryle Disposition Change",
+		"Action": "EditData",
+		"Target": "Data/NPCDispositions",
+		"When": { "HasFlag |contains=FayeBryleLoveStory": false, "HasSeenEvent": 75160453 },
+		"Update": "OnLocationChange, OnTimeChange",
+		"Entries": {
+			"Bryle": "adult/polite/outgoing/neutral/male/datable/null/Other/summer 1/{{i18n:NPC_Data.Bryle}}/Custom_Ridgeside_RSVHiddenWarp2 8 8/{{i18n:Name.Bryle}}",
+		}
+	},
+
 
 ]
 }
