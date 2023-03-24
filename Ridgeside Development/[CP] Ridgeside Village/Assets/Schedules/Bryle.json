@@ -20,7 +20,8 @@
 					},
 		"When": {
 			"Query: {{RandomNumber}} > 4": true,
-			"HasSeenEvent: hostPlayer": 75160375
+			"HasSeenEvent: hostPlayer": 75160375,
+			"HasSeenEvent: |contains=75160453": false
 		}
 	},
 	{
@@ -37,6 +38,19 @@
 	},
 
 	//Additional visit to Ninja House after seeing 8 heart event
+	//Random Visit 60% chance if seen 8 heart event
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Bryle",
+		"Entries": {
+			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 3 2/700 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+					},
+		"When": {
+			"Query: {{RandomNumber}} > 6": true,
+			"HasSeenEvent: hostPlayer": 75160375,
+			"HasSeenEvent: |contains=75160453": true
+		}
+	},
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Bryle",
@@ -45,9 +59,32 @@
 			"3": "0 BusStop 12 10 2/610 Custom_Ridgeside_JericHouse 8 5 1/1200 Custom_Ridgeside_Ridge 85 27 2/1800 Custom_Ridgeside_RidgesideVillage 29 9 0/2200 Custom_Ridgeside_JericHouse 8 5 1"
 					},
 		"When": {
-			"Query: {{RandomNumber}} <= 4": true,
+			"Query: {{RandomNumber}} <= 6": true,
 			"HasSeenEvent: hostPlayer": 75160375,
 			"HasSeenEvent: |contains=75160453": true
+		}
+	},
+
+	//Marriage schedule:
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Bryle",
+		"Entries": {
+			"marriage_Mon": "a800 Custom_Ridgeside_JericHouse 8 5 1/1200 Custom_Ridgeside_RidgesideVillage 71 50 3/1600 Custom_Ridgeside_RidgesideVillage 29 9 0/2000 BusStop -1 23 3",
+			"marriage_Thu": "a1200 Custom_Ridgeside_Ridge 85 27 2/1600 Custom_Ridgeside_RidgesideVillage 29 9 0/2000 BusStop -1 23 3",
+					},
+	},
+
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Bryle",
+		"Entries": {
+			//Leaving to work as a body guard (Wednesdays and Fridays NOT a holiday)
+			"marriage_Wed": "0 Custom_Ridgeside_RSVHiddenWarp2 0 3 2/700 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
+			"marriage_Fri": "GOTO marriage_Wed",
+					},
+		"when": {
+			"HasValue:{{DayEvent}}": false
 		}
 	},
 

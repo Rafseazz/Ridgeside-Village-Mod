@@ -11,7 +11,12 @@
 
 			"rain": "830 Custom_Ridgeside_FayeHouse 7 5 2/1700 Custom_Ridgeside_LogCabinHotel2ndFloor 29 24 0/2100 Custom_Ridgeside_FayeHouse 3 5 2 faye_sleep",
 
-			"fall_12": "830 Custom_Ridgeside_FayeHouse 7 5 2/a1200 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Faye:checkup\"/1330 Custom_Ridgeside_LogCabinHotel2ndFloor 29 24 0/2100 Custom_Ridgeside_FayeHouse 3 5 2 faye_sleep"
+			"fall_12": "830 Custom_Ridgeside_FayeHouse 7 5 2/a1200 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Faye:checkup\"/1330 Custom_Ridgeside_LogCabinHotel2ndFloor 29 24 0/2100 Custom_Ridgeside_FayeHouse 3 5 2 faye_sleep",
+
+			"marriage_Mon": "a1000 Custom_Ridgeside_RidgesideVillage 90 38 2 faye_fan/1400 Custom_Ridgeside_RidgesideVillage 88 37 0/1600 Custom_Ridgeside_RidgesideVillage 97 40 0/1800 Custom_Ridgeside_RidgesideVillage 90 38 2 faye_fan/2000 BusStop -1 23 3",
+			"marriage_Fri": "GOTO marriage_Mon",
+			"marriage_Thu": "1200 Custom_Ridgeside_LogCabinHotel2ndFloor 29 24 0/1800 BusStop -1 23 3",
+			"marriage_fall_12": "a1200 Custom_Ridgeside_PaulaClinic 18 5 3 \"Strings\\schedules\\Faye:checkup\"/1330 Custom_Ridgeside_LogCabinHotel2ndFloor 29 24 0/1800 BusStop -1 23 3"
 					},
 	},
 
@@ -21,6 +26,8 @@
 		"Target": "Characters/Schedules/Faye",
 		"Entries": {
 			"Tue": "700 Custom_Ridgeside_FayeHouse 4 15 square_2_1_0/900 Custom_Ridgeside_RidgesideVillage 90 38 2 faye_fan/1400 Custom_Ridgeside_RSVGreenhouse1 21 22 3/1800 Custom_Ridgeside_RidgesideVillage 90 38 2 faye_fan/2300 Custom_Ridgeside_FayeHouse 3 5 2 faye_sleep",
+
+			"marriage_Tue": "a900 Custom_Ridgeside_RidgesideVillage 90 38 2 faye_fan/1400 Custom_Ridgeside_RSVGreenhouse1 21 22 3/1800 BusStop -1 23 3",
 					},
 		"When": {
 			"HasFlag: hostPlayer |contains=GH1letter": true,

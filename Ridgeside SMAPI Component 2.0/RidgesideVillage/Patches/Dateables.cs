@@ -51,8 +51,8 @@ namespace RidgesideVillage
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             NPC irene = Game1.getCharacterFromName("Irene");
-            if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendship) 
-                && friendship.Status == FriendshipStatus.Married)
+            if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendshipIrene) 
+                && friendshipIrene.Status == FriendshipStatus.Married)
             { 
                 if (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
                 {
@@ -66,6 +66,19 @@ namespace RidgesideVillage
                     if (Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
                     {
                         Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
+                    }
+                }
+            }
+
+            NPC bryle = Game1.getCharacterFromName("Bryle");
+            if (bryle is not null && Game1.player.friendshipData.TryGetValue("Bryle", out var friendshipBryle)
+                && friendshipBryle.Status == FriendshipStatus.Married)
+            {
+                if (Game1.Date.DayOfWeek.Equals("Wednesday") || Game1.Date.DayOfWeek.Equals("Friday"))
+                {
+                    if (!Game1.isFestival())
+                    {
+                        Game1.warpCharacter(bryle, RSVConstants.L_HIDDENWARP, Vector2.One);
                     }
                 }
             }
