@@ -188,5 +188,28 @@
       ]
     },
 
+    {
+      "LogName": "Leo - Vanilla Ember of Resolutions Location - AFTER seeing his 6 Heart Event",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter28",
+      "When": {
+            "HasSeenEvent": 6497428,
+        },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Leo 41 25 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Leo 54 45 3",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
 ]
 }

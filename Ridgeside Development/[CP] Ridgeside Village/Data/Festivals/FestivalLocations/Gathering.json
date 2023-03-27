@@ -191,7 +191,7 @@
       ]
     },
 
-		{
+	{
       "LogName": "June RSV Gathering Location",
       "Action": "EditData",
       "Target": "Data/Festivals/fall20",
@@ -206,6 +206,29 @@
           "Operation": "Append",
           "Target": ["Entries", "MainEvent_additionalCharacters"],
           "Value": "June 78 41 0",
+          "Delimiter": "/"
+        },
+      ]
+    },
+
+    {
+      "LogName": "Leo - Vanilla Gathering Location - AFTER seeing his 6 Heart Event",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall20",
+      "When": {
+            "HasSeenEvent": 6497428,
+        },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters"],
+          "Value": "Leo 65 37 3",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Leo 65 37 1",
           "Delimiter": "/"
         },
       ]
