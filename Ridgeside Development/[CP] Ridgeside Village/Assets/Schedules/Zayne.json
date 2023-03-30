@@ -51,7 +51,7 @@
 		"When": { "Query: {{RandomNumber}} >= 5": true, "HasSeenEvent: hostPlayer": 75160338, "HasSeenEvent: |contains=75160436": true, "HasSeenEvent: |contains=75160440": false }
 	},
 
-	//Sure visits during Sundays after seeing 6 heart event
+	//Always visits during Sundays after seeing 6 heart event
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Zayne",
@@ -78,6 +78,16 @@
 			"marriage_Fri": "610 Custom_Ridgeside_RidgesideVillage 120 67 3/1000 Custom_Ridgeside_RidgesideVillage 100 42 0/1400 Custom_Ridgeside_PurpleMansion 47 32 0/2000 BusStop -1 23 3",
 					},
 		"When": { "HasSeenEvent": 75160440 }
+	},
+
+	// Always visits on birthday
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Zayne",
+		"Entries": {
+			"fall_2": "0 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2/610 Custom_Ridgeside_RidgesideVillage 120 67 3/1000 Custom_Ridgeside_RidgesideVillage 100 42 0/1400 Custom_Ridgeside_PurpleMansion 47 32 0/2000 Custom_Ridgeside_PurpleMansion 55 32 0/2400 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2 zayne_sleep",
+					},
+		"When": { "HasSeenEvent: hostPlayer|contains=75160338": true }
 	},
 
 ]

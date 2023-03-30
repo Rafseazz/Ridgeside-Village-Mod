@@ -88,5 +88,15 @@
 		}
 	},
 
+	// Always visits on birthday
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Bryle",
+		"Entries": {
+			"summer_1": "0 BusStop 12 10 2/610 Custom_Ridgeside_JericHouse 8 5 1/1400 Custom_Ridgeside_RidgesideVillage 71 50 3/1800 Custom_Ridgeside_RidgesideVillage 29 9 0/2200 Custom_Ridgeside_JericHouse 8 5 1",
+					},
+		"When": { "HasSeenEvent: hostPlayer|contains=75160375": true }
+	},
+
 ]
 }
