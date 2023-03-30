@@ -180,7 +180,10 @@
       "LogName": "June Ice Festival Location",
       "Action": "EditData",
       "Target": "Data/Festivals/winter8",
-      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "When": {
+        "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
+      },
       "TextOperations": [
         {
           "Operation": "Append",

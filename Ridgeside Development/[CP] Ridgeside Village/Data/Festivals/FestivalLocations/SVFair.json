@@ -141,12 +141,16 @@
       "LogName": "June SDV Fair Location",
       "Action": "EditData",
       "Target": "Data/Festivals/fall16",
-      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "When": {
+        "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
+        "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+        "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+      },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "June 35 89 2",
+          "Value": "June 27 9 2",
           "Delimiter": "/"
         },
       ]

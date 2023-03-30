@@ -194,13 +194,15 @@
       "Action": "EditData",
       "Target": "Data/Festivals/summer11",
       "When": {
-        "Relationship:June |contains=Married": true
+        "Relationship:June |contains=Married": true,
+        "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+        "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
       },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "June 14 4 2",
+          "Value": "June 74 6 2",
           "Delimiter": "/"
         },
         {

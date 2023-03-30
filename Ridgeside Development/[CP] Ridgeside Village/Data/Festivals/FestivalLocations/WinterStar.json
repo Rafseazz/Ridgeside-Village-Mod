@@ -134,11 +134,14 @@
       "LogName": "June Winter Star Location",
       "Action": "EditData",
       "Target": "Data/Festivals/winter25",
+      "When": {
+            "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+        },
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "June 27 54 2",
+          "Value": "June 33 36 3",
           "Delimiter": "/"
         },
       ]
