@@ -51,8 +51,8 @@ namespace RidgesideVillage
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             NPC irene = Game1.getCharacterFromName("Irene");
-            if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendshipIrene) 
-                && friendshipIrene.Status == FriendshipStatus.Married)
+            if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendship) 
+                && friendship.Status == FriendshipStatus.Married)
             { 
                 if (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
                 {

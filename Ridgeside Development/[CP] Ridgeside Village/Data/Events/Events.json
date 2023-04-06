@@ -2503,22 +2503,46 @@
 	{
 		"Action": "EditData",
 		"Target": "Data/Events/FarmHouse", //1st Upgrade
-		"When": { "FarmHouseUpgrade |contains=1": true, "DayOfWeek |contains=Wednesday, Friday": true },
+		"When": { "FarmHouseUpgrade |contains=1": true, "Relationship:Bryle": "Married" },
 		"Entries": {
 			//Bryle works at the city inform to leave (Wednesdays and Fridays)
-			"75160460/O Bryle/F/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Bryle 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Bryle 32/speak Bryle \"{{i18n:event-75160460.01}}\"/emote farmer 56/end",
+			"75160460/O Bryle/F/t 600 610/d Mon Tue Thu Sat Sun": "continue/-1000 -1000/farmer 7 5 3 Bryle 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/warp Bryle 5 5/emote Bryle 32/speak Bryle \"{{i18n:event-75160460.01}}\"/emote farmer 56/end",
 		}
 	},
 
 	{
 		"Action": "EditData",
 		"Target": "Data/Events/FarmHouse", //2nd Upgrade
-		"When": { "FarmHouseUpgrade |contains=1": false, "DayOfWeek |contains=Wednesday, Friday": true },
+		"When": { "FarmHouseUpgrade |contains=1": false, "Relationship:Bryle": "Married" },
 		"Entries": {
 			//Bryle works at the city inform to leave (Wednesdays and Fridays)
-			"75160460/O Bryle/F/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Bryle 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Bryle 32/speak Bryle \"{{i18n:event-75160460.01}}\"/emote farmer 56/end",
+			"75160460/O Bryle/F/t 600 610/d Mon Tue Thu Sat Sun": "continue/-1000 -1000/farmer 10 14 3 Bryle 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/warp Bryle 8 14/emote Bryle 32/speak Bryle \"{{i18n:event-75160460.01}}\"/emote farmer 56/end",
 		}
 	},
+
+	//Break up events
+	//UNUSED until bugs are resolved
+	/*
+	{
+		"Action": "EditData",
+		"Target": "Data/Events/Custom_Ridgeside_LogCabinHotel2ndFloor",
+		"When": {
+			"Relationship:Alissa": "Dating",
+			"Relationship:Blair": "Dating",
+			"Relationship:Corine": "Dating",
+			"Relationship:Flor": "Dating",
+			"Relationship:Kiarra": "Dating",
+			"Relationship:Maddie": "Dating",
+			"Relationship:Ysabelle": "Dating",
+		},
+		"Entries": {
+			//When dating all girls (Alissa, Blair, Corine, Flor, Kiarra, Maddie, and Ysabelle)
+			"75160461": "playful/23 15/farmer 23 15 1 Alissa 31 9 2 Blair 29 12 0 Corine 28 9 1 Flor 27 8 2 Kiarra 27 11 1 Maddie 31 11 3 Ysabelle 29 9 2/viewport move 1 -1 2000/move farmer 5 0 1/startJittering/faceDirection farmer 2 true/animate farmer false true 100 94/jump farmer/pause 2000/stopAnimation farmer/showFrame farmer 0/stopJittering/playSound thudStep/faceDirection farmer 3 true/showFrame farmer 7 true/startJittering/faceDirection Alissa 2 true/faceDirection Blair 2 true/faceDirection Corine 2 true/faceDirection Flor 2 true/faceDirection Kiarra 2 true/faceDirection Maddie 2 true/faceDirection Ysabelle 2 true/textAboveHead Kiarra \"And where do you think you're going?\"/textAboveHead Alissa \"Stop!\"/textAboveHead Flor \"Cease!\"/pause 3000/stopJittering/showFrame farmer 6 true/pause 500/faceDirection farmer 0/move farmer 1 0 0/playMusic none/emote farmer 28/pause 500/speak Kiarra \"You really thought we wouldn't know? Hmm, @?$a#$b#About you dating all of us at the same time?$a\"/speak Maddie \"Ugh! I should've never trusted you!$a\"/speak Blair \"Was this all just a game? What's wrong with you?$a\"/speak Alissa \"I thought... we had something special...$s\"/speak Corine \"You disgust me.$a\"/speak Ysabelle \"Hmph!$a\"/speak Flor \"*Sniff*$s\"/pause 500/playMusic ragtime/speak Ysabelle \"Well, We won't stand for this!$a\"/speak Kiarra \"Do you have anything to say for yourself?$a\"/pause 1000/question fork1",
+
+			//Rabbit's foot vesion
+			"75160461/i 446": "playful/-1000 -1000//pause 1000/message \"For some reason, you decide to place your hand in your pocket...\"/pause 500/message \"You touch the rabbit's foot, and feel a sense of relief...\""
+		}
+	}*/
 	
 ]
 }
