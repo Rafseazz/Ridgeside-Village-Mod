@@ -69,23 +69,21 @@ namespace RidgesideVillage
                     }
                 }
             }
-
-            NPC bryle = Game1.getCharacterFromName("Bryle");
-            if (bryle is not null && Game1.player.friendshipData.TryGetValue("Bryle", out var friendshipBryle)
-                && friendshipBryle.Status == FriendshipStatus.Married)
-            {
-                if (Game1.Date.DayOfWeek.Equals("Wednesday") || Game1.Date.DayOfWeek.Equals("Friday"))
-                {
-                    if (!Game1.isFestival())
-                    {
-                        Game1.warpCharacter(bryle, RSVConstants.L_HIDDENWARP, Vector2.One);
-                    }
-                }
-            }
         }
 
         private static void OnOneSecondUpdateTicked(object sender, OneSecondUpdateTickedEventArgs e)
         {
+            //Bryle leaves
+            NPC bryle = Game1.getCharacterFromName("Bryle");
+            if (bryle is not null && Game1.player.friendshipData.TryGetValue("Bryle", out var friendship)
+                && friendship.Status == FriendshipStatus.Married)
+            {
+                if (Game1.player.eventsSeen.Contains(75160460) && !bryle.currentLocation.Equals(RSVConstants.L_HIDDENWARP))
+                {
+                    Game1.warpCharacter(bryle, RSVConstants.L_HIDDENWARP, Vector2.One);
+                }
+            }
+
             //Has crucial events be marked as seen for every player when one player triggers it.
             //Made so that it doesn't require the host to trigger the crucial event to apply changes
             if (!Game1.IsMultiplayer)
