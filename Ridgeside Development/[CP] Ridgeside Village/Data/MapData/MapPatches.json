@@ -73,7 +73,9 @@
 			"ToArea": { "X": 23, "Y": 0, "Width": 12, "Height": 6 },
 			"PatchMode": "Replace",
 			"When": {
-				"Rafseazz.RidgesideVillage/EnableBetterBusStop": false
+				"Rafseazz.RidgesideVillage/EnableBetterBusStop": false,
+				"HasMod: |contains=DaisyNiko.SVR2": false,
+				"HasMod: |contains=DaisyNiko.SVR3": false,
 			}
 		},
 		{
@@ -84,7 +86,9 @@
 			"ToArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
 			"PatchMode": "Replace",
 			"When": {
-				"Rafseazz.RidgesideVillage/EnableBetterBusStop": true
+				"Rafseazz.RidgesideVillage/EnableBetterBusStop": true,
+				"HasMod: |contains=DaisyNiko.SVR2": false,
+				"HasMod: |contains=DaisyNiko.SVR3": false,
 			}
 		},
 		{
