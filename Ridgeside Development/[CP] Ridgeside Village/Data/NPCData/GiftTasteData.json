@@ -151,7 +151,7 @@
 		"Action": "EditData",
 		"Target": "Data/NPCGiftTastes",
 		"When": {
-			"HasSeenEvent": 75160338
+			"HasSeenEvent: hostPlayer |contains=75160338": true
 		},
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
@@ -165,7 +165,7 @@
 		"Action": "EditData",
 		"Target": "Data/NPCGiftTastes",
 		"When": {
-			"HasSeenEvent": 75160375
+			"HasSeenEvent: hostPlayer |contains=75160375": true
 		},
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
