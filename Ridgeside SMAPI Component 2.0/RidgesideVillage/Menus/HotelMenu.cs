@@ -356,7 +356,13 @@ namespace RidgesideVillage
             foreach(var NPCtuple in NPCList)
             {
                 string NPCName = NPCtuple.Item1;
-                responses.Add(new Response(NPCName, Game1.getCharacterFromName(NPCName).displayName));
+                NPC npc = Game1.getCharacterFromName(NPCName);
+                if(npc is null)
+                {
+                    Log.Trace($"Couldn't find npc {NPCName} in birthday code/hotel menu");
+                    continue;
+                }
+                responses.Add(new Response(NPCName, npc.displayName));
                 responseActions.Add(delegate
                 {
                     Game1.player.Money -= BIRTHDAYPRICE;
