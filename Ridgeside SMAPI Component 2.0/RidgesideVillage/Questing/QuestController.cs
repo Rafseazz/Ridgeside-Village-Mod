@@ -234,13 +234,17 @@ namespace RidgesideVillage.Questing
             {
 				Log.Trace($"Player has done following quests: {String.Join(",", FinishedQuests.Value)}");
 				Quest townQuest = QuestFactory.GetDailyQuest();
-				Quest ninjaQuest = QuestFactory.GetDailyNinjaQuest();
+				Quest ninjaQuest = null;
+				if (Game1.player.eventsSeen.Contains(75160187))
+				{
+					ninjaQuest = QuestFactory.GetDailyNinjaQuest();
+                }
 				dailyQuestData.Value = new QuestData(townQuest, ninjaQuest);
 			}
             catch
             {
 				dailyQuestData.Value = new QuestData(null, null);
-				Log.Error("Failed parsing new quests.");
+				Log.Trace("Failed parsing new quests.");
 			}
 		}
 
