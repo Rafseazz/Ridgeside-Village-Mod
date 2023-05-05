@@ -15,22 +15,13 @@ namespace RidgesideVillage
 {
     internal static class IanShop
     {
-        const int waterPlantsPriceSmall = 1000;
-        const int waterPlantsPriceMedium = 2500;
-        const int waterPlantsPriceLarge = 5000;
-        const int wpsmall = 120;
-        const int wpmedium = 480;
-        const int wplarge = 960;
-        const int daysWillWater = 3;
-        const int daysWillPet = 7;
-        const int perFencePrice = 6;
-        const int perAnimalPrice = 60;
+        const int perCropPrice = 50;
+        const int perFencePrice = 10;
+        const int perAnimalPrice = 100;
 
         const string willWaterPlants = "IanShop.WaterPlants";
-        const string willFixFences = "IanShop.fixFences";
+        const string willFixFences = "IanShop.FixFences";
         const string willPetAnimals = "IanShop.PetAnimals";
-
-        private static bool canRenovate = false;
 
         static IModHelper Helper;
         static IMonitor Monitor;
@@ -46,7 +37,6 @@ namespace RidgesideVillage
         [EventPriority(EventPriority.High)]
         private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
-            canRenovate = Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_SUMMITUNLOCK);
 
             if (Game1.IsMasterGame)
             {
@@ -55,30 +45,18 @@ namespace RidgesideVillage
 
                 if (FarmModData.ContainsKey(willFixFences))
                 {
-                    FixTheFences();
-                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasFixedFences"), HUDMessage.newQuest_type));
-                    FarmModData.Remove(willFixFences);
+                    fixFences(FarmModData);
                 }
 
                 if (FarmModData.ContainsKey(willPetAnimals))
                 {
-                    if (!FarmModData.TryGetValue(willPetAnimals, out string value) || !int.TryParse(value, out int daysLeft) || daysLeft <= 0)
-                    {
-                        FarmModData.Remove(willPetAnimals);
-                        return;
-                    }
-                    else if (daysLeft == 1)
-                    {
-                        FarmModData.Remove(willPetAnimals);
-                    }
-                    else
-                    {
-                        FarmModData[willPetAnimals] = (daysLeft - 1).ToString();
-                    }
-                    petAnimals();
-                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasPetAnimals"), HUDMessage.newQuest_type));
+                    petAnimalsDaily(FarmModData);
                 }
-                Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsIfNeeded;
+
+                if (FarmModData.ContainsKey(willWaterPlants))
+                {
+                    Helper.Events.GameLoop.OneSecondUpdateTicked += waterPlantsDaily;
+                }
 
                 // Construction services
                 if (Game1.player.activeDialogueEvents.TryGetValue(RSVConstants.CT_HOUSEUPGRADE, out int housect) && housect == 0)
@@ -115,63 +93,67 @@ namespace RidgesideVillage
 
                 if (Game1.player.mailReceived.Contains(RSVConstants.M_GOTSPRINKLERS))
                 {
-                    WaterThePlants(Game1.getLocationFromName(RSVConstants.L_SUMMITFARM), 9999);
+                    UtilFunctions.WaterPlants(Game1.getLocationFromName(RSVConstants.L_SUMMITFARM));
                 }
             }
         }
 
-        private static void petAnimals()
+        private static void petAnimalsDaily(ModDataDictionary modData)
         {
             var FarmAnimals = Game1.getFarm().getAllFarmAnimals();
+            int price = perAnimalPrice * FarmAnimals.Count;
+            if (Game1.player.Money < price)
+            {
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.NotEnoughMoneyHUD").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.PetAnimals")), HUDMessage.newQuest_type));
+                modData.Remove(willPetAnimals);
+            }
             foreach(var farmAnimal in FarmAnimals)
             {
                 farmAnimal.pet(Game1.player, is_auto_pet: false);
             }
+            Game1.player.Money -= price;
+            Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasPetAnimals") + price + "g", HUDMessage.newQuest_type));
+            Log.Debug($"RSV: {FarmAnimals.Count} animals pet for {price}g");
         }
 
         //Will water plants if player has flag
         //format is daysLeft/Size
-        private static void waterPlantsIfNeeded(object sender, OneSecondUpdateTickedEventArgs e)
+        private static void waterPlantsDaily(object sender, OneSecondUpdateTickedEventArgs e)
         {
 
-            Helper.Events.GameLoop.OneSecondUpdateTicked -= waterPlantsIfNeeded;
+            Helper.Events.GameLoop.OneSecondUpdateTicked -= waterPlantsDaily;
             var farmModData = Game1.getFarm().modData;
             if (Game1.IsRainingHere(Game1.getFarm()))
             {
                 return;
             }
-            if (farmModData.TryGetValue(willWaterPlants, out string value))
+            int n = UtilFunctions.WaterPlants(Game1.getFarm());
+            int price = perCropPrice * n;
+            Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered") + price + "g", HUDMessage.newQuest_type));
+            Log.Debug($"RSV: {n} crops watered for {price}g");
+            if (Game1.player.Money <= 0)
             {
-                var valueSplit = value.Split('/');
-                if (valueSplit.Length != 2)
-                {
-                    return;
-                }
-
-                int wateringDaysLeft = int.Parse(valueSplit[0]);
-                int numberOfTiles = int.Parse(valueSplit[1]);
-
-                if(wateringDaysLeft <= 0)
-                {
-                    //shouldnt happen
-                    farmModData.Remove(willWaterPlants);
-                    return;
-                }
-                else if(wateringDaysLeft == 0)
-                {
-                    //last day. remove flag
-                    Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.Deadline"), HUDMessage.newQuest_type));
-                    farmModData.Remove(willWaterPlants);
-                }
-                else
-                {
-                    wateringDaysLeft--;
-                    farmModData[willWaterPlants] = $"{wateringDaysLeft}/{numberOfTiles}";
-
-                }
-                WaterThePlants(Game1.getFarm(), numberOfTiles);
-                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered"), HUDMessage.newQuest_type));
+                Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.NotEnoughMoneyHUD").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.WaterPlants")), HUDMessage.newQuest_type));
+                farmModData.Remove(willWaterPlants);
             }
+        }
+
+        private static void fixFences(ModDataDictionary modData)
+        {
+            int n = 0;
+            foreach (Fence fence in Game1.getFarm().Objects.Values.OfType<Fence>())
+            {
+                fence.repair();
+                fence.health.Value *= 2f;
+                fence.maxHealth.Value = fence.health.Value;
+                if (fence.isGate.Value)
+                    fence.health.Value *= 2f;
+                n++;
+            }
+            int price = perFencePrice * n;
+            Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasFixedFences") + price + "g", HUDMessage.newQuest_type));
+            Log.Debug($"RSV: {n} fences fixed for {price}g");
+            modData.Remove(willFixFences);
         }
 
         private static void OpenIanMenu(string tileActionString, Vector2 position)
@@ -197,7 +179,7 @@ namespace RidgesideVillage
             var responses = new List<Response>
             {
                 new Response("waterPlants", Helper.Translation.Get("IanShop.WaterPlants")),
-                new Response("fixFences", Helper.Translation.Get("IanShop.fixFences")),
+                new Response("fixFences", Helper.Translation.Get("IanShop.FixFences")),
                 new Response("willPet", Helper.Translation.Get("IanShop.PetAnimals")),
                 new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
             };
@@ -221,7 +203,7 @@ namespace RidgesideVillage
                 }
             };
 
-            if (canRenovate)
+            if (Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_SUMMITUNLOCK))
             {
                 responses.Insert(3, new Response("renovate", Helper.Translation.Get("IanShop.SummitFarm")));
                 responseActions.Insert(3, delegate { RenovateOptions(); });
@@ -231,157 +213,142 @@ namespace RidgesideVillage
 
         private static void PetAnimalsMenu()
         {
+            var modData = Game1.getFarm().modData;
             int n = Game1.getFarm().getAllFarmAnimals().Count();
-
-            if (!Game1.getFarm().modData.ContainsKey(willPetAnimals) && n > 0)
+            if (n > 0)
             {
                 var responses = new List<Response>
                 {
-                    new Response("petAnimals", Helper.Translation.Get("IanShop.PetAnimalsSelection") + (n * perAnimalPrice) + "$"),
+                    new Response("petAnimals", Helper.Translation.Get("IanShop.PetAnimalsSelection").ToString().Replace("{{amount}}", perAnimalPrice.ToString())),
+                    new Response("cancelService", Helper.Translation.Get("IanShop.CancelService")),
                     new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
                 };
                 var responseActions = new List<Action>
                 {
                     delegate
                     {
-                        if(Game1.player.Money >= n * perAnimalPrice)
+                        if (modData.ContainsKey(willPetAnimals))
                         {
-                            Game1.player.Money -= (n * perAnimalPrice);
-                            Game1.getFarm().modData.Add(willPetAnimals, daysWillPet.ToString());
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.PetThanks"));
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceAlreadyActive").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.PetAnimals").ToString().ToLower()));
                         }
-                        else
+                        else if (Game1.player.Money < n * perAnimalPrice)
                         {
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
                         }
+                        else
+                        {
+                            Game1.getFarm().modData.Add(willPetAnimals, perCropPrice.ToString());
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceStarted").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.PetAnimals").ToString().ToLower()));
+                        }
+                    },
+                    delegate
+                    {
+                        var modData = Game1.getFarm().modData;
+                        if (modData.ContainsKey(willPetAnimals))
+                        {
+                            Game1.getFarm().modData.Remove(willPetAnimals);
+                        }
+                        Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceCancelled").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.PetAnimals")));
                     },
                     delegate
                     {
                         IanCounterMenu();
                     }
                 };
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.PetMenu"), responses, responseActions);
+                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.PetAnimalsMenu"), responses, responseActions);
             }
             else if (n <= 0)
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.YouHaveNoAnimals"));
-            }
-            else
-            {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.AlreadyWillPet"));
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.NoAnimals"));
             }
         }
 
         private static void WaterPlantsMenu()
         {
-            if (!Game1.getFarm().modData.ContainsKey(willWaterPlants))
+            var modData = Game1.getFarm().modData;
+            var responses = new List<Response>
             {
-                var responses = new List<Response>
+                new Response("waterPlants", Helper.Translation.Get("IanShop.WaterPlantsSelection").ToString().Replace("{{amount}}", (perCropPrice).ToString())),
+                new Response("cancelService", Helper.Translation.Get("IanShop.CancelService")),
+                new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
+            };
+            var responseActions = new List<Action>
+            {
+                delegate
                 {
-                    new Response("small", wpsmall + Helper.Translation.Get("IanShop.WaterInfo") + waterPlantsPriceSmall + "$"),
-                    new Response("medium", wpmedium + Helper.Translation.Get("IanShop.WaterInfo") + waterPlantsPriceMedium + "$"),
-                    new Response("large", wplarge + Helper.Translation.Get("IanShop.WaterInfo") + waterPlantsPriceLarge + "$"),
-                    new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
-                };
-                var responseActions = new List<Action>
-                {
-                    delegate
+                    if (!modData.ContainsKey(willWaterPlants))
                     {
-                        if(Game1.player.Money < waterPlantsPriceSmall)
-                        {
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
-                        }
-                        else
-                        {
-                            Game1.player.Money -= waterPlantsPriceSmall;
-                            Game1.getFarm().modData.Add(willWaterPlants, $"{daysWillWater}/{wpsmall}");
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Thankyou"));
-                        };
-                    },
-                    delegate
-                    {
-                        if(Game1.player.Money < waterPlantsPriceMedium)
-                        {
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
-                        }
-                        else
-                        {
-                            Game1.player.Money -= waterPlantsPriceMedium;
-                            Game1.getFarm().modData.Add(willWaterPlants, $"{daysWillWater}/{wpmedium}");
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Thankyou"));
-                        };
-                    },
-                    delegate
-                    {
-                        if(Game1.player.Money < waterPlantsPriceLarge)
-                        {
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
-                        }
-                        else
-                        {
-                            Game1.player.Money -= waterPlantsPriceLarge;
-                            Game1.getFarm().modData.Add(willWaterPlants, $"{daysWillWater}/{wplarge}");
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.Thankyou"));
-                        };
-                    },
-                    delegate
-                    {
-                        IanCounterMenu();
+                        modData.Add(willWaterPlants, perCropPrice.ToString());
+                        Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceStarted").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.WaterPlants").ToString().ToLower()));
                     }
-                };
-
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.WaterPlantsMenu"), responses, responseActions);
-            }
-            else
-            {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.AlreadyWatering"));
-            }
-        }
-
-        internal static void WaterThePlants(GameLocation location, int maxNumberToWater)
-        {
-            int n = 0;
-            int farm_size = location.terrainFeatures.Pairs.Count();
-            foreach (var pair in location.terrainFeatures.Pairs)
-            {
-                if(n >= maxNumberToWater || n >= farm_size)
+                    else
+                    {
+                        Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceAlreadyActive").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.WaterPlants").ToString().ToLower()));
+                    }
+                },
+                delegate
                 {
-                    break;
-                }
-
-                if (pair.Value is HoeDirt dirt && dirt.state.Value == 0 && dirt.crop != null)
+                    if (modData.ContainsKey(willWaterPlants))
+                    {
+                        modData.Remove(willWaterPlants);
+                        Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceCancelled").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.WaterPlants")));
+                        return;
+                    }
+                    else
+                    {
+                        Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceNotActive").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.WaterPlants").ToString().ToLower()));
+                    }
+                },
+                delegate
                 {
-                    dirt.state.Value = 1;
-                    n++;
+                    IanCounterMenu();
                 }
-            }
-            
+            };
+
+            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.WaterPlantsMenu"), responses, responseActions);
         }
       
         private static void FixFencesMenu()
         {
             int n = Game1.getFarm().Objects.Values.OfType<Fence>().Count();
-
-            if (!Game1.getFarm().modData.ContainsKey(willFixFences) && n > 0)
+            var modData = Game1.getFarm().modData;
+            if (n > 0)
             {
                 var responses = new List<Response>
                 {
-                    new Response("fixFence", n + Helper.Translation.Get("IanShop.Fences") + (n * perFencePrice) + "$"),
+                    new Response("fixFence", n + Helper.Translation.Get("IanShop.FixFencesSelection").ToString().Replace("{{amount}}", (perFencePrice).ToString())),
+                    new Response("cancelService", Helper.Translation.Get("IanShop.CancelService")),
                     new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
                 };
                 var responseActions = new List<Action>
                 {
                     delegate
                     {
-                        if(Game1.player.Money >= n * perFencePrice)
+                        if (modData.ContainsKey(willFixFences))
                         {
-                            Game1.player.Money -= (n * perFencePrice);
-                            Game1.getFarm().modData.Add(willFixFences, "");
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.FenceThanks"));
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceAlreadyActive").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.FixFences".ToString().ToLower())));
+                        }
+                        else if(Game1.player.Money < n * perFencePrice)
+                        {
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
                         }
                         else
                         {
-                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
+                            modData.Add(willFixFences, perFencePrice.ToString());
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceStarted").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.FixFences").ToString().ToLower()));
+                        }
+                    },
+                    delegate
+                    {
+                        if (modData.ContainsKey(willFixFences))
+                        {
+                            Game1.getFarm().modData.Remove(willFixFences);
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceCancelled").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.FixFences")));
+                            return;
+                        }
+                        else
+                        {
+                            Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceNotActive").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.FixFences").ToString().ToLower()));
                         }
                     },
                     delegate
@@ -389,34 +356,22 @@ namespace RidgesideVillage
                         IanCounterMenu();
                     }
                 };
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.FenceMenu"), responses, responseActions);
-            }
-            else if (n <= 0)
-            {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.YouHaveNoFences"));
+                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("IanShop.FixFencesMenu"), responses, responseActions);
             }
             else
             {
-                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.AlreadyWillFix"));
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.NoFences"));
             }
         }
-
-        private static void FixTheFences()
-        {
-            foreach (Fence fence in Game1.getFarm().Objects.Values.OfType<Fence>())
-            {
-                fence.repair();
-                fence.health.Value *= 2f;
-                fence.maxHealth.Value = fence.health.Value;
-                if (fence.isGate.Value)
-                    fence.health.Value *= 2f;
-            }
-        }
-
+        
         private static void RenovateOptions()
         {
             NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
-            if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_MINECARTSFIXED))
+            if (!Game1.player.IsMainPlayer)
+            {
+                Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.OnlyFarmOwner"));
+            }
+            else if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_MINECARTSFIXED))
             {
                 worker.CurrentDialogue.Clear();
                 worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.BrokenCarts"), worker));

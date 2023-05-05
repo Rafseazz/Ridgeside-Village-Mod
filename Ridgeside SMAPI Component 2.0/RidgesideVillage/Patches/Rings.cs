@@ -108,7 +108,7 @@ namespace RidgesideVillage
         {
             // looks like {BELRING, RAERING} when sorted
             string[] our_rings = { BELRING, BOTHRING, RAERING, STEALTHRING };
-            ; string[] their_rings = { __instance.Name, ring.Name };
+            string[] their_rings = { __instance.Name, ring.Name };
             var overlap = our_rings.Intersect(their_rings);
             int overlap_size = overlap.Count();
             if (overlap_size == 0)
@@ -136,7 +136,15 @@ namespace RidgesideVillage
         /// <param name="id">The ring ID to match.</param>
         public static bool HasRingEquipped(int id)
         {
-
+            var rings = UtilFunctions.GetAllRings(Game1.player);
+            foreach(var ring in rings)
+            {
+                if (ring.GetEffectsOfRingMultiplier(id) is int count && count > 0) {
+                    return true;
+                }
+            }
+            return false;
+            /*
             if (Game1.player.leftRing.Value?.GetEffectsOfRingMultiplier(id) is int count && count > 0)
             {
                 return true;
@@ -145,6 +153,7 @@ namespace RidgesideVillage
 
             if (ExternalAPIs.MR?.CountEquippedRings(Game1.player, id) is int count3 && count3 > 0) { return true; }
             return false;
+            */
         }
     }
 
