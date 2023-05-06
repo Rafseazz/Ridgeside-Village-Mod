@@ -129,6 +129,7 @@ namespace RidgesideVillage
             }
             int n = UtilFunctions.WaterPlants(Game1.getFarm());
             int price = perCropPrice * n;
+            Game1.player.Money -= price;
             Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered") + price + "g", HUDMessage.newQuest_type));
             Log.Debug($"RSV: {n} crops watered for {price}g");
             if (Game1.player.Money <= 0)
@@ -151,6 +152,7 @@ namespace RidgesideVillage
                 n++;
             }
             int price = perFencePrice * n;
+            Game1.player.Money -= price;
             Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasFixedFences") + price + "g", HUDMessage.newQuest_type));
             Log.Debug($"RSV: {n} fences fixed for {price}g");
             modData.Remove(willFixFences);

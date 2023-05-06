@@ -48,32 +48,34 @@
 
 	"IanShop.Closed": "Sorry, we're closed! (Open 9AM - 5PM except Sundays.)",
 	"IanShop.Open": "Odd Jobs Services",
-	"IanShop.WaterPlants": "Watering crops",
-	"IanShop.Cancel": "Nevermind",
+	"IanShop.Cancel": "Back",
 	"IanShop.Bye": "Please come again!",
-	"IanShop.Raining": "It's raining. The crop watering service will be extended a day.",
-	"IanShop.Thankyou": "You left an order.#The workers will water crops and tilled soil in your farm tomorrow.",
-	"IanShop.Deadline": "The crop watering service ends today.",
-	"IanShop.WaterInfo": " plots for ",
-	"IanShop.AlreadyWatering": "The workers are already watering your crops!",
-	"IanShop.WaterPlantsMenu": "The workers will water this many plots in your farm for the next 3 days (If it rains, you're refunded a portion of the pay.):",
-	"IanShop.HasWatered": "Your crops have been watered.",
-	"IanShop.fixFences": "Fixing fences",
-	"IanShop.FenceMenu": "You have currently this much fences. Please don't add new ones or else the workers may fix the wrong ones tomorrow.",
-	"IanShop.Fences": "x Fences to fix for ",
-	"IanShop.FenceThanks": "You left an order.#The workers will fix your fences tomorrow.",
-	"IanShop.AlreadyWillFix": "You have already hired the workers to fix fences tomorrow.",
-	"IanShop.HasFixedFences": "Your fences have been fixed",
-	"IanShop.YouHaveNoFences": "You have no fences at your farm!",
-	"IanShop.OnlyFarmOwner": "Only the farm owner can access this.",
-	"IanShop.PetThanks": "The workers will pet your animals for a week",
-	"IanShop.PetAnimals": "Petting animals",
-	"IanShop.PetAnimalsSelection": "Hire workers for a week for ",
-	"IanShop.YouHaveNoAnimals": "You don't have any animals to pet.",
-	"IanShop.AlreadyWillPet": "You already hired the workers to pet your animals.",
-	"IanShop.PetMenu": "Do you want to hire the workers to pet your animals?",
-	"IanShop.HasPetAnimals": "The workers have pet your farm animals for today.",
+	"IanShop.ServiceAlreadyActive": "You have already hired the {{serviceName}} service.",
+	"IanShop.ServiceNotActive": "You cannot cancel the {{serviceName}} service as it is not currently hired.",
+	"IanShop.ServiceStarted": "Odd Jobs will begin the {{serviceName}} service from tomorrow. Please visit anytime to cancel the service. Thank you for your patronage!",
+	"IanShop.CancelService": "Cancel service",
+	"IanShop.ServiceCancelled": "{{serviceName}} service cancelled. Please visit again to renew the service.",
+	// Crop watering
+	"IanShop.WaterPlants": "Crop watering",
+	"IanShop.WaterPlantsMenu": "Hire the workers to water your crops?",
+	"IanShop.WaterPlantsSelection": "Hire workers to water your farm for {{amount}}$ per crop per day not raining",
+	"IanShop.HasWatered": "Odd Jobs has watered your crops today for a total of ",
+	// Animal petting
+	"IanShop.PetAnimals": "Animal petting",
+	"IanShop.PetAnimalsMenu": "Hire the workers to pet your animals?",
+	"IanShop.PetAnimalsSelection": "Hire workers for {{amount}}$ per animal per day",
+	"IanShop.NoAnimals": "You don't have any animals to pet.",
+	"IanShop.HasPetAnimals": "Odd Jobs has pet your farm animals for today for a total of ",
+	"IanShop.NotEnoughMoneyHUD": "{{serviceName}} service cancelled due to insufficient funds. Please visit Odd Jobs to renew the service.",
+	// Fence fixing
+	"IanShop.FixFences": "Fence repair",
+	"IanShop.FixFencesMenu": "Hire the workers to fix your fences?",
+	"IanShop.FixFencesSelection": "Hire workers to fix all fences tomorrow for {{amount}}$ per fence",
+	"IanShop.HasFixedFences": "Your fences have been fixed for a total of ",
+	"IanShop.NoFences": "You have no fences at your farm!",
+	// Renovations
 	"IanShop.SummitFarm": "Summit Farm upgrades",
+	"IanShop.OnlyFarmOwner": "Only the farm owner can renovate the Summit Farm.",
 	"IanShop.BrokenCarts": "Hm, I wish we could help you out, @, but I don't know how we'd get the materials all the way to the top of the ridge summit...$2#$b#Maybe if the old minecarts were fixed, we could use those?$1",
 	"IanShop.Construction": "Alright, we'll start the {{project}} project right away!",
 	"IanShop.Instant": "Alright! The {{project}} actually comes pre-assembled, so we'll deliver it to your farm ASAP!",
@@ -179,21 +181,33 @@
 	"FoxbloomHint.Cleansed": "The books are all written in different languages... But one piques your interest. The handwriting appears to be Belinda's.",
 	"FoxbloomHint.Text": "The fox's flower is so rare that no one has ever found more than one in a single day. It is known to appear near the mysterious crystals in the forest.^^^^Moreover, it will only reveal itself to the fox's mask in the mountain forest during one of the Sundays of each season. As to which Sunday it will be this month, I believe I've devised a formula to determine the exact date: [letterbg LooseSprites/FoxbloomHints.opener 0]",
 
+	// 9 - 2
 	"FoxbloomHint.easy.7": "Location: Amethyne Mansion [letterbg LooseSprites/FoxbloomHints.easy 0]",
+	// 14
 	"FoxbloomHint.easy.14": "Location: Ridge Falls [letterbg LooseSprites/FoxbloomHints.easy 1]",
+	// 7 * 3
 	"FoxbloomHint.easy.21": "Location: Ridgeside Village^^^^^^^^^^(Note: Animal color does not matter.) [letterbg LooseSprites/FoxbloomHints.easy 2]",
+	// 4 * 7
 	"FoxbloomHint.easy.28": "Location: Kimpoi's Shed [letterbg LooseSprites/FoxbloomHints.easy 3]",
 
 	//Non-English characters are there to create an indent on the first line - If your language is Japanese or Korean, replace your character with the one not from your alphabet
+	// 9 - (4/2)
 	"FoxbloomHint.medium.7": "あ   Islands in the Spirit Realm^    Trees in the Mystic Falls of Love [letterbg LooseSprites/FoxbloomHints.medium 0]",
-	"FoxbloomHint.medium.14": "Among Ridgeside villagers only:^    Number of scarecrows in the village^    Parents with children living in the village [letterbg LooseSprites/FoxbloomHints.medium 1]",
+	// 6 + 8 ("scarecrows" -> "plain scarecrows")
+	"FoxbloomHint.medium.14": "Among Ridgeside villagers only:^    Number of plain scarecrows in the village^    Parents with children living in the village [letterbg LooseSprites/FoxbloomHints.medium 1]",
+	// 10 + 11
 	"FoxbloomHint.medium.21": "아   Plants in Maddie's house^    Seats* in the Ridgeside Clinic building^^^^^^^^*(Note: \"Seats\" as in places you can sit.) [letterbg LooseSprites/FoxbloomHints.medium 2]",
+	// (5 * 5) + 3
 	"FoxbloomHint.medium.28": "Location: Ridgeside Village^    Windmills^    Multi-floor buildings^    Stone bridges [letterbg LooseSprites/FoxbloomHints.medium 3]",
 
+	// (50 - 36)/(50 - 48)
 	"FoxbloomHint.hard.7": "Location: Nightingale Orchard^    Total fruit on trees each day in spring^    Total fruit on trees each day in summer^    Yearly average of total fruit on trees each day (excluding winter) [letterbg LooseSprites/FoxbloomHints.hard 0]",
-	"FoxbloomHint.hard.14": "Location: Heaps Convenience Store interior^    Total signs (all)^    Total \"HEAPS\" signs^    Total white \"SALE\" signs^    Total blue \"SALE\" signs [letterbg LooseSprites/FoxbloomHints.hard 1]",
+	// 2 * (8 - 3 + 2)
+	"FoxbloomHint.hard.14": "Location: Heaps Convenience Store interior floors^    Total signs (all)^    Total \"HEAPS\" signs^    Total white \"SALE\" signs^    Total blue \"SALE\" signs [letterbg LooseSprites/FoxbloomHints.hard 1]",
+	// (18 * 12)/9 - 3
 	"FoxbloomHint.hard.21": "Location: Ridge Forest^    Total number of waterfalls^    Total horizontal bridges^    Total distinct cliff levels*^    Total vertical bridges^^^^^^*(Note: Including non-accessible levels.) [letterbg LooseSprites/FoxbloomHints.hard 2]",
-	"FoxbloomHint.hard.28": "Among Ridgeside villagers only:^    Most common Tuesday birthday^    Total female villagers born in winter^    Number of villagers with an even birthday during the first week of the month [letterbg LooseSprites/FoxbloomHints.hard 3]",
+	// 16 * (3/sq(4)) + 4 (last hint changed)
+	"FoxbloomHint.hard.28": "Among Ridgeside villagers only:^    Most common Tuesday birthday^    Total female villagers born in winter^    Number of villagers with a Saturday birthday [letterbg LooseSprites/FoxbloomHints.hard 3]",
 
 	"RSV.MapIconName": "Ridgeside Village",
 
