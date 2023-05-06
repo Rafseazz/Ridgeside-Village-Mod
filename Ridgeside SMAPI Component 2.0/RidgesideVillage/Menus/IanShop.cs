@@ -15,9 +15,9 @@ namespace RidgesideVillage
 {
     internal static class IanShop
     {
-        const int perCropPrice = 50;
+        const int perCropPrice = 5;
         const int perFencePrice = 10;
-        const int perAnimalPrice = 100;
+        const int perAnimalPrice = 10;
 
         const string willWaterPlants = "IanShop.WaterPlants";
         const string willFixFences = "IanShop.FixFences";
