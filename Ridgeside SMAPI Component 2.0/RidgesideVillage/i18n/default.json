@@ -181,23 +181,31 @@
 	"FoxbloomHint.Cleansed": "The books are all written in different languages... But one piques your interest. The handwriting appears to be Belinda's.",
 	"FoxbloomHint.Text": "The fox's flower is so rare that no one has ever found more than one in a single day. It is known to appear near the mysterious crystals in the forest.^^^^Moreover, it will only reveal itself to the fox's mask in the mountain forest during one of the Sundays of each season. As to which Sunday it will be this month, I believe I've devised a formula to determine the exact date: [letterbg LooseSprites/FoxbloomHints.opener 0]",
 
+	// 9 - 2
 	"FoxbloomHint.easy.7": "Location: Amethyne Mansion [letterbg LooseSprites/FoxbloomHints.easy 0]",
+	// 14
 	"FoxbloomHint.easy.14": "Location: Ridge Falls [letterbg LooseSprites/FoxbloomHints.easy 1]",
+	// 7 * 3
 	"FoxbloomHint.easy.21": "Location: Ridgeside Village^^^^^^^^^^(Note: Animal color does not matter.) [letterbg LooseSprites/FoxbloomHints.easy 2]",
 	"FoxbloomHint.easy.28": "Location: Kimpoi's Shed [letterbg LooseSprites/FoxbloomHints.easy 3]",
 
 	//Non-English characters are there to create an indent on the first line - If your language is Japanese or Korean, replace your character with the one not from your alphabet
+	// 9 - (4/2)
 	"FoxbloomHint.medium.7": "あ   Islands in the Spirit Realm^    Trees in the Mystic Falls of Love [letterbg LooseSprites/FoxbloomHints.medium 0]",
-	"FoxbloomHint.medium.14": "Among Ridgeside villagers only:^    Number of scarecrows in the village^    Parents with children living in the village [letterbg LooseSprites/FoxbloomHints.medium 1]",
+	// 6 + 8 ("scarecrows" -> "plain scarecrows")
+	"FoxbloomHint.medium.14": "Among Ridgeside villagers only:^    Number of plain scarecrows in the village^    Parents with children living in the village [letterbg LooseSprites/FoxbloomHints.medium 1]",
+	// 10 + 11
 	"FoxbloomHint.medium.21": "아   Plants in Maddie's house^    Seats* in the Ridgeside Clinic building^^^^^^^^*(Note: \"Seats\" as in places you can sit.) [letterbg LooseSprites/FoxbloomHints.medium 2]",
+	// (5 * 5) + 3
 	"FoxbloomHint.medium.28": "Location: Ridgeside Village^    Windmills^    Multi-floor buildings^    Stone bridges [letterbg LooseSprites/FoxbloomHints.medium 3]",
 
+	// (50 - 36)/(50 - 48)
 	"FoxbloomHint.hard.7": "Location: Nightingale Orchard^    Total fruit on trees each day in spring^    Total fruit on trees each day in summer^    Yearly average of total fruit on trees each day (excluding winter) [letterbg LooseSprites/FoxbloomHints.hard 0]",
 	// 2 * (8 - 3 + 2) (NEED TO FIX)
 	"FoxbloomHint.hard.14": "Location: Heaps Convenience Store interior floors^    Total signs (all)^    Total \"HEAPS\" signs^    Total white \"SALE\" signs^    Total blue \"SALE\" signs [letterbg LooseSprites/FoxbloomHints.hard 1]",
-	// (18 * 12)/9 - 3 = 21
+	// (18 * 12)/9 - 3
 	"FoxbloomHint.hard.21": "Location: Ridge Forest^    Total number of waterfalls^    Total horizontal bridges^    Total distinct cliff levels*^    Total vertical bridges^^^^^^*(Note: Including non-accessible levels.) [letterbg LooseSprites/FoxbloomHints.hard 2]",
-	// 16 * (3/sq(4)) + 4 = 28
+	// 16 * (3/sq(4)) + 4 (last hint changed)
 	"FoxbloomHint.hard.28": "Among Ridgeside villagers only:^    Most common Tuesday birthday^    Total female villagers born in winter^    Number of villagers with a Saturday birthday [letterbg LooseSprites/FoxbloomHints.hard 3]",
 
 	"RSV.MapIconName": "Ridgeside Village",
