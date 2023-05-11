@@ -20,6 +20,20 @@
 					},
 	},
 
+	// Watching June
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Yuuma",
+		"Entries": {
+			"fall_Sun": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/a1200 Custom_Ridgeside_LogCabinHotelLobby 19 14 3/1500 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+			"winter_Sun": "GOTO fall_Sun"
+			"rain": "700 Custom_Ridgeside_ShiroHouse 3 5 0/1000 Custom_Ridgeside_LogCabinHotelLobby 19 14 3/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+					},
+		"When": {
+			"HasSeenEvent": 94620000,
+		}
+	},
+
 	//Greenhouse schedule
 	{
 		"Action": "EditData",
