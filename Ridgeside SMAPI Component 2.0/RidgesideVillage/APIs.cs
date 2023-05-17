@@ -11,7 +11,6 @@ namespace RidgesideVillage
     {
         public static IContentPatcherApi CP;
         public static IJsonAssetsApi JA;
-        public static IWearMoreRingsApi MR;
         public static ISpaceCoreApi SC;
         public static IShopTileFrameworkAPI STFAPI;
 
@@ -33,12 +32,6 @@ namespace RidgesideVillage
             if(JA == null)
             {
                 Log.Warn("Json Assets API not found. This could lead to issues.");
-            }
-
-            MR = Helper.ModRegistry.GetApi<IWearMoreRingsApi>("bcmpinc.WearMoreRings");
-            if (MR == null)
-            {
-                Log.Trace("Wear More Rings API not found. Using base game ring slots only.");
             }
 
             SC = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");

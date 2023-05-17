@@ -20,6 +20,35 @@
 					},
 	},
 
+	// Watching June
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Yuuma",
+		"Entries": {
+			"Sun": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/a1200 Custom_Ridgeside_LogCabinHotelLobby 19 14 3/1500 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+			"rain": "700 Custom_Ridgeside_ShiroHouse 3 5 0/1000 Custom_Ridgeside_LogCabinHotelLobby 19 14 3/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+					},
+		"When": {
+			"HasSeenEvent": 94620000,
+			"HasSeenEvent|contains=94621000": false
+			"Query: '{{Season}} in ('fall', 'winter')' OR '{{Relationship:June:married}} = true'": true
+		}
+	},
+
+	// Piano lessons
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Yuuma",
+		"Entries": {
+			"Sun": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/a1500 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 yuuma_piano/1700 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+			"rain": "700 Custom_Ridgeside_ShiroHouse 3 5 0/1000 Custom_Ridgeside_LogCabinHotelLobby 19 14 3/1600 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+					},
+		"When": {
+			"HasSeenEvent|contains=94621000": true,
+			"Query: '{{Season}} in ('fall', 'winter')' OR '{{Relationship:June:married}} = true'": true
+		}
+	},
+
 	//Greenhouse schedule
 	{
 		"Action": "EditData",
@@ -29,6 +58,18 @@
 					},
 		"When": {
 			"HasFlag: hostPlayer |contains=GH1letter": true,
+		}
+	},
+
+	// Kids hang out
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Yuuma",
+		"Entries": {
+			"Mon": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/1000 Custom_Ridgeside_RidgesideVillage 58 61 0/1400 Custom_Ridgeside_RidgesideVillage 122 105 0/1800 Custom_Ridgeside_ShiroHouse 3 5 0/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+					},
+		"When": {
+			"HasSeenEvent|contains=75160113": true
 		}
 	},
 
