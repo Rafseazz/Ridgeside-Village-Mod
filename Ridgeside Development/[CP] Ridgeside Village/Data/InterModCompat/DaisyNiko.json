@@ -1,0 +1,30 @@
+{
+"Changes": [
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/BusStop",
+			"FromFile": "Assets/Maps/InterModMaps/BusSVR2.tmx",
+			"FromArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
+			"ToArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
+			"PatchMode": "Replace",
+			"When": {
+				"Rafseazz.RidgesideVillage/EnableBetterBusStop": true,
+				"HasMod: |contains=DaisyNiko.SVR2": true,
+			}
+		},
+
+		{
+			"Action": "EditMap",
+			"Target": "Maps/BusStop",
+			"FromFile": "Assets/Maps/InterModMaps/BusSVR3.tmx",
+			"FromArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
+			"ToArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
+			"PatchMode": "Replace",
+			"When": {
+				"Rafseazz.RidgesideVillage/EnableBetterBusStop": true,
+				"HasMod: |contains=DaisyNiko.SVR3": true,
+			}
+		},
+]
+}

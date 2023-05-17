@@ -725,6 +725,22 @@
 			}
 		},
 
+		//Bryle x Faye Theme
+		{
+			"Name": "BryleFayeMusic",
+			"Value": "sweet",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": false
+			}
+		},
+		{
+			"Name": "BryleFayeMusic",
+			"Value": "Delighting",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSAATExtra": true
+			}
+		},
+
 
 		//FallInRidgeside
 		{
@@ -1294,7 +1310,7 @@
 	{
 		"LogName": "Include all InterModCompat files",
 		"Action": "Include",
-		"FromFile": "Data/InterModCompat/CustomGiftDialogue.json, Data/InterModCompat/EastScarpe.json, Data/InterModCompat/KarmyllasImmersiveMaps.json, Data/InterModCompat/StardewValleyExpanded.json, Data/InterModCompat/TownSchool.json, Data/InterModCompat/WarpNetwork.json, Data/InterModCompat/EventLookup.json, Data/InterModCompat/WalkToDesertRedux.json, Data/InterModCompat/FreeLove.json",
+		"FromFile": "Data/InterModCompat/CustomGiftDialogue.json, Data/InterModCompat/EastScarpe.json, Data/InterModCompat/KarmyllasImmersiveMaps.json, Data/InterModCompat/StardewValleyExpanded.json, Data/InterModCompat/TownSchool.json, Data/InterModCompat/WarpNetwork.json, Data/InterModCompat/EventLookup.json, Data/InterModCompat/WalkToDesertRedux.json, Data/InterModCompat/FreeLove.json, Data/InterModCompat/DaisyNiko.json",
 	},
 
 	//Includes Map Data

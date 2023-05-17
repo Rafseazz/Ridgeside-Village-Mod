@@ -1,5 +1,7 @@
 ﻿using StardewValley;
 using StardewValley.Locations;
+using StardewValley.Objects;
+using StardewValley.TerrainFeatures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -199,6 +201,49 @@ namespace RidgesideVillage
                 if (farmer.hasQuest(id))
                     farmer.completeQuest(id);
             }
+        }
+
+        public static IEnumerable<Ring> GetAllRings(Farmer f)
+        {
+            if (f == null) throw new ArgumentNullException(nameof(f));
+            var stack = new Stack<Ring>();
+            stack.Push(f.leftRing.Value);
+            stack.Push(f.rightRing.Value);
+            while (stack.Count > 0)
+            {
+                var ring = stack.Pop();
+                if (ring is CombinedRing)
+                {
+                    foreach (var cr in ((CombinedRing)ring).combinedRings)
+                    {
+                        stack.Push(cr);
+                    }
+                }
+                else if (ring != null)
+                {
+                    yield return ring;
+                }
+            }
+        }
+
+        public static int WaterPlants(GameLocation location)
+        {
+            int n = 0;
+            int farm_size = location.terrainFeatures.Pairs.Count();
+            foreach (var pair in location.terrainFeatures.Pairs)
+            {
+                if (n >= farm_size)
+                {
+                    break;
+                }
+
+                if (pair.Value is HoeDirt dirt && dirt.state.Value == 0 && dirt.crop != null)
+                {
+                    dirt.state.Value = 1;
+                    n++;
+                }
+            }
+            return n;
         }
     }  
 

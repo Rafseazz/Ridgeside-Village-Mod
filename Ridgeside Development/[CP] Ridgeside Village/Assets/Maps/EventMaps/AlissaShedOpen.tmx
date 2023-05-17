@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="147">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="16" height="18" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="147">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
  </properties>
@@ -48,8 +48,8 @@
  <tileset firstgid="7117" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior" width="512" height="1088"/>
  </tileset>
- <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="589" columns="19">
-  <image source="z_rsvinterior.png" width="304" height="496"/>
+ <tileset firstgid="9293" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="1900" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="1600"/>
  </tileset>
  <layer id="1" name="Back" width="16" height="18">
   <data encoding="csv">
@@ -85,7 +85,7 @@
 4069,4103,4103,4103,4103,4103,4103,4103,4103,4103,4103,4103,4103,4103,4103,4073,
 4069,6152,4894,4895,4896,0,6152,0,0,0,5184,5704,9695,9696,9697,4073,
 4069,6152,4926,4927,4928,0,6152,0,8034,0,0,8010,9714,9715,9716,4073,
-4069,0,4958,6152,0,0,0,0,8066,8067,8068,8042,0,0,0,4073,
+4069,4901,4958,6152,0,0,0,0,8066,8067,8068,8042,0,0,0,4073,
 4069,0,4990,0,0,0,4895,4896,0,0,0,0,0,0,0,4073,
 4069,0,5022,0,0,0,4927,4928,0,0,0,0,0,0,0,4073,
 4069,0,0,0,0,0,0,0,0,0,0,0,9695,9696,9697,4073,
@@ -216,7 +216,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,6120,4862,4863,4864,0,6120,0,0,0,0,5672,9676,9677,9678,0,
 0,6120,0,0,0,0,6120,0,8002,0,0,7946,9698,9699,9700,0,
-0,0,0,6120,0,0,0,0,0,8035,8036,0,0,0,0,0,
+0,4870,0,6120,0,0,0,0,0,8035,8036,0,0,0,0,0,
 0,0,0,0,0,0,4863,4864,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,9676,9677,9678,0,
