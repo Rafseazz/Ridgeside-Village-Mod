@@ -1,0 +1,133 @@
+{
+	"Format": "1.19.0",
+
+	"DynamicTokens": [
+		{
+			"Name": "RandomNumber",
+			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
+		},
+	],
+
+	"Changes": [
+
+		/*-----------------------------------
+		Everyone (Basic Code)
+		-----------------------------------*/
+		//Normal Clothes
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Corine, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Ian, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Ysabelle, Portraits/Yuuma, Portraits/Undreya, Portraits/Helen, Portraits/Daia, Portraits/Belinda, Portraits/Bliss, Portraits/Sari, Portraits/Pipo, Portraits/Acorn, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Raeriyala, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/TreehouseGirl, Portraits/RelicSpirit, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Corine, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Ian, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Ysabelle, Characters/Yuuma, Characters/Undreya, Characters/Helen, Characters/Daia, Characters/Belinda, Characters/Bliss, Characters/Sari, Characters/Pipo, Characters/Acorn, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Raeriyala, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/TreehouseGirl, Characters/RelicSpirit, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
+			"When": {
+				"Weather |contains=Rain, Storm": false,
+				"HasFile:{{FromFile}}": true
+			}
+		},
+
+		//Rain Clothes
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Corine, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Ian, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Ysabelle, Portraits/Yuuma, Portraits/Undreya, Portraits/Helen, Portraits/Daia, Portraits/Belinda, Portraits/Bliss, Portraits/Sari, Portraits/Pipo, Portraits/Acorn, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Raeriyala, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/TreehouseGirl, Portraits/RelicSpirit, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Corine, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Ian, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Ysabelle, Characters/Yuuma, Characters/Undreya, Characters/Helen, Characters/Daia, Characters/Belinda, Characters/Bliss, Characters/Sari, Characters/Pipo, Characters/Acorn, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Raeriyala, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/TreehouseGirl, Characters/RelicSpirit, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rain.png",
+			"When": {
+				"Weather |contains=Rain, Storm": true,
+				"Season": "Spring, Summer, Fall",
+				"HasFile:{{FromFile}}": true
+			}
+		},
+
+		//Hats
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Corine, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Ian, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Ysabelle, Portraits/Yuuma, Portraits/Undreya, Portraits/Helen, Portraits/Daia, Portraits/Belinda, Portraits/Bliss, Portraits/Sari, Portraits/Pipo, Portraits/Acorn, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Raeriyala, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/TreehouseGirl, Portraits/RelicSpirit, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Corine, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Ian, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Ysabelle, Characters/Yuuma, Characters/Undreya, Characters/Helen, Characters/Daia, Characters/Belinda, Characters/Bliss, Characters/Sari, Characters/Pipo, Characters/Acorn, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Raeriyala, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/TreehouseGirl, Characters/RelicSpirit, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}hat.png",
+			"When": {
+				"Weather |contains=Rain, Storm": false,
+				"HasFile:{{FromFile}}": true,
+				"IsOutdoors": true
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Corine, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Ian, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Ysabelle, Portraits/Yuuma, Portraits/Undreya, Portraits/Helen, Portraits/Daia, Portraits/Belinda, Portraits/Bliss, Portraits/Sari, Portraits/Pipo, Portraits/Acorn, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Raeriyala, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/TreehouseGirl, Portraits/RelicSpirit, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Corine, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Ian, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Ysabelle, Characters/Yuuma, Characters/Undreya, Characters/Helen, Characters/Daia, Characters/Belinda, Characters/Bliss, Characters/Sari, Characters/Pipo, Characters/Acorn, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Raeriyala, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/TreehouseGirl, Characters/RelicSpirit, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainhat.png",
+			"When": {
+				"Weather |contains=Rain, Storm": true,
+				"Season": "Spring, Summer, Fall",
+				"HasFile:{{FromFile}}": true,
+				"IsOutdoors": true
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+
+		//Torts things
+
+			{//default look
+				"Action": "EditImage",
+				"Target": "Portraits/Torts, Characters/Torts",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
+				"When": {
+					"Query: {{RandomNumber}} >= 4": true, 
+				},
+				"Update": "OnLocationChange",
+			},
+
+
+		//Ezekiel Hat
+
+			{//Wears hat during bad weather
+				"Action": "EditImage",
+				"Target": "Portraits/Ezekiel, Characters/Ezekiel",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
+				"When": {
+					"Weather |contains=Rain, Storm, Snow": true,
+					"HasFile:{{FromFile}}": true,
+					"IsOutdoors": true
+				},
+				"Update": "OnLocationChange",
+				"PatchMode": "Overlay"
+			},
+
+			{//Wears hat randomly
+				"Action": "EditImage",
+				"Target": "Portraits/Ezekiel, Characters/Ezekiel",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
+				"When": {
+					"Query: {{RandomNumber}} >= 6": true, 
+					"HasFile:{{FromFile}}": true,
+					"IsOutdoors": true
+				},
+				"Update": "OnLocationChange",
+				"PatchMode": "Overlay"
+			},
+
+		//Work Clothes
+
+			//Daia
+			{
+				"Action": "EditImage",
+				"Target": "Portraits/Daia, Characters/Daia",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_work.png",
+				"When": {
+					"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls": false,
+				},
+				"Update": "OnLocationChange",
+			},
+			//Daia Mask
+			{
+				"Action": "EditImage",
+				"Target": "Portraits/Daia",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_mask.png",
+				"When": {
+					"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls": false,
+					"Query: {{RandomNumber}} = 6, 9": true, 
+				},
+				"Update": "OnLocationChange",
+				"PatchMode": "Overlay",
+			},
+	] 
+}
