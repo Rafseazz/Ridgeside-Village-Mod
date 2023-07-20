@@ -128,12 +128,12 @@
       ]
     },
 
+    //June
     {
       "LogName": "June Spirit's Eve Location",
       "Action": "EditData",
       "Target": "Data/Festivals/fall27",
-      "When": {
-        "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false },
+      "When": { "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true },
       "TextOperations": [
         {
           "Operation": "Append",
