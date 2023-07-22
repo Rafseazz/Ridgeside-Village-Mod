@@ -30,8 +30,8 @@
 					},
 		"When": {
 			"HasSeenEvent": 94620000,
-			"HasSeenEvent|contains=94621000": false
-			"Query: '{{Season}} in ('fall', 'winter')' OR '{{Relationship:June:married}} = true'": true
+			"HasSeenEvent|contains=94621000": false,
+			"Query: '{{Season}}' in ('fall', 'winter') OR '{{Relationship:June |contains=married}}' = 'true'": true
 		}
 	},
 
