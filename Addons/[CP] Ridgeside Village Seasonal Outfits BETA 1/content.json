@@ -76,6 +76,18 @@
 				"Update": "OnLocationChange",
 			},
 
+		//Kiwi things
+
+			{//default look
+				"Action": "EditImage",
+				"Target": "Portraits/Kiwi, Characters/Kiwi",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
+				"When": {
+					"Query: {{RandomNumber}} >= 5": true, 
+				},
+				"Update": "OnLocationChange",
+			},
+
 		//Aguar random change
 		{
 			"Action": "EditImage",
