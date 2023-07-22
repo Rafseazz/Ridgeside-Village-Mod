@@ -76,6 +76,26 @@
 				"Update": "OnLocationChange",
 			},
 
+		//Aguar random change
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2, 3, 4 |key=aguaroutfit}}.png",
+			"When": {
+				"HasFile:{{FromFile}}": true
+			}
+		},
+
+		//Undreya random change
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Undreya, Characters/Undreya",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2 |key=undreyaoutfit}}.png",
+			"When": {
+				"HasFile:{{FromFile}}": true
+			}
+		},
+
 
 		//Ezekiel Hat
 
