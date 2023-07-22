@@ -16,7 +16,7 @@
 			"spring": "0 {{Random: {{TortsRandomSchedule}}}}/1530 {{Random: {{TortsRandomSchedule}}}}/2000 Custom_Ridgeside_RidgesideVillage 57 53 2 torts_sleep",
 		},
 		"When": {
-			"Query: {{RandomNumber}} <= 1": true,
+			"Query: {{RandomNumber}} = 1": true, "Query: {{Day}} >= 2": true, "Query: {{Day}} < 28": true,
 		}
 	},
 
