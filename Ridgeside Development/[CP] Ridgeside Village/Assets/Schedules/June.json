@@ -83,5 +83,15 @@
 		"When": { "Season": "summer" }
 	},
 
+	{
+		"LogName": "June Schedule - Cafe",
+		"Action": "EditData",
+		"Target": "Characters/Schedules/June",
+		"Entries": {
+			"Sat": "0 Custom_Ridgeside_LogCabinHotel2ndFloor 36 22 0/610 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/800 Custom_Ridgeside_RidgesideVillage 122 28 3/1200 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/1500 Custom_Ridgeside_LogCabinHotelLobby 38 14 2 june_drink/1700 Custom_Ridgeside_LogCabinHotelLobby 13 14 0 june_piano/2100 Custom_Ridgeside_LogCabinHotel2ndFloor 40 22 2/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 38 22 2 june_sleep",
+		},
+		"When": { "HasFlag: hostPlayer |contains=RSV.UnlockHotelExpansion": true },
+	},
+
 ]
 }

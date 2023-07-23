@@ -71,7 +71,7 @@
 				"Target": "Portraits/Torts, Characters/Torts",
 				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
 				"When": {
-					"Query: {{RandomNumber}} >= 4": true, 
+					"Query: {{RandomNumber}} >= 3": true,
 				},
 				"Update": "OnLocationChange",
 			},
@@ -83,7 +83,7 @@
 				"Target": "Portraits/Kiwi, Characters/Kiwi",
 				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
 				"When": {
-					"Query: {{RandomNumber}} >= 5": true, 
+					"Query: {{RandomNumber}} >= 5": true,
 				},
 				"Update": "OnLocationChange",
 			},
@@ -104,7 +104,8 @@
 			"Target": "Portraits/Undreya, Characters/Undreya",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2 |key=undreyaoutfit}}.png",
 			"When": {
-				"HasFile:{{FromFile}}": true
+				"HasFile:{{FromFile}}": true,
+				"LocationName": "Custom_Ridgeside_RSVAbandonedHouse, Custom_Ridgeside_RSVTheHike"
 			}
 		},
 
@@ -129,7 +130,7 @@
 				"Target": "Portraits/Ezekiel, Characters/Ezekiel",
 				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
 				"When": {
-					"Query: {{RandomNumber}} >= 6": true, 
+					"Query: {{RandomNumber}} >= 6": true,
 					"HasFile:{{FromFile}}": true,
 					"IsOutdoors": true
 				},
@@ -139,27 +140,70 @@
 
 		//Work Clothes
 
+			//Map properties for Daia
+			{
+				 "Action": "EditMap",
+				 "Target": "Maps/Custom_Ridgeside_Ridge, Maps/Custom_Ridgeside_RidgeForest, Maps/Custom_Ridgeside_RSVSpiritRealm, Maps/Custom_Ridgeside_RSVNinjaHouse, Maps/Custom_Ridgeside_RidgeFalls",
+				 "MapProperties": {
+                "UniquePortrait": "Daia",
+								"UniqueSprite": "Daia",
+            },
+			},
+
 			//Daia
 			{
-				"Action": "EditImage",
-				"Target": "Portraits/Daia, Characters/Daia",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_work.png",
-				"When": {
-					"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls": false,
-				},
-				"Update": "OnLocationChange",
+				"Action": "Load",
+				"Target": "Characters/Daia_Custom_Ridgeside_Ridge, Characters/Daia_Custom_Ridgeside_RidgeForest, Characters/Daia_Custom_Ridgeside_RSVSpiritRealm, Characters/Daia_Custom_Ridgeside_RSVNinjaHouse, Characters/Daia_Custom_Ridgeside_RidgeFalls",
+				"FromFile": "Assets/Characters/Daia/Daia_ninja.png",
+			},
+			{
+				"Action": "Load",
+				"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls",
+				"FromFile": "Assets/Portraits/Daia/Daia_ninja.png",
 			},
 			//Daia Mask
 			{
 				"Action": "EditImage",
-				"Target": "Portraits/Daia",
+				"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls",
+				"FromFile": "Assets/Portraits/Daia/Daia_mask.png",
+				"When": {
+					"Query: {{RandomNumber}} = 6, 9": true,
+				},
+				"PatchMode": "Overlay",
+			},
+			//Jio Mask
+			{
+				"Action": "EditImage",
+				"Target": "Portraits/Jio, Characters/Jio",
 				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_mask.png",
 				"When": {
-					"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls": false,
-					"Query: {{RandomNumber}} = 6, 9": true, 
+					"Query: {{LocationName|contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls}} OR ({{Random:{{Range:1,10}}|key=jiomask}} < {{Hearts:Jio}})": true,
 				},
 				"Update": "OnLocationChange",
 				"PatchMode": "Overlay",
 			},
-	] 
+
+		//Corine at-home wear
+			{
+				"Action": "EditImage",
+				"Target": "Portraits/Corine_Custom_Ridgeside_EzekielHouse",
+				"FromFile": "Assets/Portraits/Corine/Corine_{{season}}.png",
+			},
+			{
+				"Action": "EditImage",
+				"Target": "Characters/Corine_Custom_Ridgeside_EzekielHouse",
+				"FromFile": "Assets/Characters/Corine/Corine_{{season}}.png",
+			},
+
+		//Irene traveling
+			{
+				"Action": "EditImage",
+				"Target": "Portraits/Irene, Characters/Irene",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_chef.png",
+				"When": {
+					"Query: ({{Season|contains=spring,summer}} AND {{Day|contains=15, 16, 17, 18, 19, 20, 21}}) OR ({{Season|contains=fall,winter}} AND {{Day|contains=2, 3, 4, 5, 6, 7}})": true,
+					"HasSeenEvent |contains=75160431": true
+				},
+			},
+	]
 }
