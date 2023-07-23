@@ -13,10 +13,11 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Torts",
 		"Entries": {
-			"spring": "0 {{Random: {{TortsRandomSchedule}}}}/1530 {{Random: {{TortsRandomSchedule}}}}/2000 Custom_Ridgeside_RidgesideVillage 57 53 2 torts_sleep",
+			"spring": "0 {{Random: {{TortsRandomSchedule}}|key=tortssched}}/610 {{Random: {{TortsRandomSchedule}}|key=tortssched}}/1530 {{Random: {{TortsRandomSchedule}}}}/2000 Custom_Ridgeside_RidgesideVillage 57 53 2 torts_sleep",
 		},
 		"When": {
-			"Query: {{RandomNumber}} = 1": true, "Query: {{Day}} >= 2": true, "Query: {{Day}} < 28": true,
+			"Query: {{RandomNumber}} = 1": true,
+			"Day|contains={{Range:2,27}}": true,
 		}
 	},
 

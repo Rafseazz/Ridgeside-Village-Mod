@@ -31,7 +31,7 @@
 		"When": {
 			"HasSeenEvent": 94620000,
 			"HasSeenEvent|contains=94621000": false,
-			"Query: '{{Season}}' in ('fall', 'winter') OR '{{Relationship:June |contains=married}}' = 'true'": true
+			"Query: {{Season|contains=fall, winter}} OR {{Relationship:June |contains=Married}}": true
 		}
 	},
 
@@ -45,7 +45,7 @@
 					},
 		"When": {
 			"HasSeenEvent|contains=94621000": true,
-			"Query: '{{Season}} in ('fall', 'winter')' OR '{{Relationship:June:married}} = true'": true
+			"Query: {{Season|contains=fall, winter}} OR {{Relationship:June |contains=Married}}": true
 		}
 	},
 
@@ -66,7 +66,7 @@
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Yuuma",
 		"Entries": {
-			"Mon": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/1000 Custom_Ridgeside_RidgesideVillage 58 61 0 \"Strings\\schedules\\Yuuma:stage\"/1400 Custom_Ridgeside_RidgesideVillage 122 105 0 \"Strings\\schedules\\Yuuma:aqualab\"/1800 Custom_Ridgeside_ShiroHouse 3 5 0 \"Strings\\schedules\\Yuuma:afterplaying\"/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
+			"Mon": "900 Custom_Ridgeside_ShiroHouse 22 12 0 square_3_1_0/a1200 Custom_Ridgeside_RidgesideVillage 58 61 0 \"Strings\\schedules\\Yuuma:stage\"/1400 Custom_Ridgeside_RidgesideVillage 122 105 0 \"Strings\\schedules\\Yuuma:aqualab\"/1800 Custom_Ridgeside_ShiroHouse 3 5 0 \"Strings\\schedules\\Yuuma:afterplaying\"/2000 Custom_Ridgeside_ShiroHouse 14 5 0 yuuma_sleep",
 					},
 		"When": {
 			"HasSeenEvent|contains=75160113": true

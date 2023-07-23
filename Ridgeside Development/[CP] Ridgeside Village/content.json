@@ -28,7 +28,7 @@
 		// Ridgeside
 		{
 			"Name": "PossibleCableCarNPCs",
-			"Value": "Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Anton, Ariah, Blair, Carmen, Faye, Irene, Kiarra, Lorenzo, Louie, Paula, Sean, Shanice, Sonny"
+			"Value": "Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, June, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Anton, Ariah, Blair, Carmen, Faye, Irene, Kiarra, Lorenzo, Louie, Paula, Sean, Shanice, Sonny"
 		},
 
 		// Vanilla
@@ -62,17 +62,6 @@
 			}
 		},
 
-		// June
-		{
-			"Name": "PossibleCableCarNPCs",
-			"Value": "{{PossibleCableCarNPCs}}, June",
-			"When": {
-				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
-				"HasMod |contains=ch20youk.JuneNPC": true,
-				"Season": "Fall, Winter"
-			}
-		},
-
 		// East Scarpe
 		{
 			"Name": "PossibleCableCarNPCs",
@@ -100,6 +89,16 @@
 			"When": {
 				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+
+		// Jorts and Jean
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, JeanCat, JortsCat",
+			"When": {
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=tiakall.jortsandjean": true
 			}
 		},
 

@@ -56,6 +56,34 @@ namespace RidgesideVillage
                 return null;
             });
 
+            cp.RegisterToken(this.ModManifest, "IreneTraveling", () =>
+            {
+                // or save is currently loading
+                if (SaveGame.loaded?.player != null || Context.IsWorldReady)
+                {
+                    var Spouse = Game1.getCharacterFromName(Game1.player.spouse);
+                    if (Spouse != null)
+                    {
+                        string gender;
+                        switch (Spouse.Gender)
+                        {
+                            case 0:
+                                gender = "male";
+                                break;
+                            case 1:
+                                gender = "female";
+                                break;
+                            default:
+                                gender = "undefined";
+                                break;
+                        }
+                        return new[] { gender };
+                    }
+                }
+                // no save loaded (e.g. on the title screen)
+                return null;
+            });
+
             cp.RegisterToken(this.ModManifest, "Celebrant", () =>
             {
                 // or save is currently loading
