@@ -33,7 +33,15 @@
 			"Name": "RandomNumber",
 			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
 		},
-
+		{
+			"Name": "IreneTraveling",
+			"Value": false,
+		},
+		{
+			"Name": "IreneTraveling",
+			"Value": true,
+			"When": { "Query: ({{Season|contains=spring,summer}} AND {{Day|contains=15, 16, 17, 18, 19, 20, 21}}) OR ({{Season|contains=fall,winter}} AND {{Day|contains=2, 3, 4, 5, 6, 7}})": true }
+		},
 		{
 		  "Name": "SeasonalIanToken",
 		  "Value": "true",
@@ -217,34 +225,6 @@
 			}
 		},
 
-		//Hats
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Corine, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Ian, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Ysabelle, Portraits/Yuuma, Portraits/Undreya, Portraits/Daia, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Corine, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Ian, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Ysabelle, Characters/Yuuma, Characters/Undreya, Characters/Daia, Characters/Acorn, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}hat.png",
-			"When": {
-				"Weather |contains=Rain, Storm": false,
-				"HasFile:{{FromFile}}": true,
-				"IsOutdoors": true
-			},
-			"Update": "OnLocationChange",
-			"PatchMode": "Overlay"
-		},
-
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Corine, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Ian, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Ysabelle, Portraits/Yuuma, Portraits/Undreya, Portraits/Daia, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Corine, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Ian, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Ysabelle, Characters/Yuuma, Characters/Undreya, Characters/Daia, Characters/Acorn, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainhat.png",
-			"When": {
-				"Weather |contains=Rain, Storm": true,
-				"Season": "Spring, Summer, Fall",
-				"HasFile:{{FromFile}}": true,
-				"IsOutdoors": true
-			},
-			"Update": "OnLocationChange",
-			"PatchMode": "Overlay"
-		},
-
 		//Torts things
 			{//default look
 				"Action": "EditImage",
@@ -253,7 +233,6 @@
 				"When": {
 					"Query: {{RandomNumber}} >= 3": true,
 				},
-				"Update": "OnLocationChange",
 			},
 
 		//Kiwi things
@@ -262,9 +241,8 @@
 				"Target": "Portraits/Kiwi, Characters/Kiwi",
 				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
 				"When": {
-					"Query: {{RandomNumber}} >= 5": true,
+					"Query: {{RandomNumber}} >= 4": true,
 				},
-				"Update": "OnLocationChange",
 			},
 
 		//Aguar random change
@@ -288,33 +266,47 @@
 			}
 		},
 
-
-		//Ezekiel Hat
-			{//Wears hat during bad weather
+	//Hats
+		//Normal hats
+		{
 				"Action": "EditImage",
-				"Target": "Portraits/Ezekiel, Characters/Ezekiel",
+				"Target": "Portraits/Aguar, Characters/Aguar, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Sonny, Characters/Sonny",
 				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
 				"When": {
-					"Weather |contains=Rain, Storm, Snow": true,
+					"Query: {{Weather|contains=Rain, Storm, Snow}} OR {{RandomNumber|contains=6,7,8,9,10}}": true,
 					"HasFile:{{FromFile}}": true,
 					"IsOutdoors": true
 				},
 				"Update": "OnLocationChange",
 				"PatchMode": "Overlay"
+		},
+		//Seasonal hats
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Portraits/Louie, Portraits/Maive, Portraits/Richard, Portraits/Sonny, Characters/Faye, Characters/Louie, Characters/Maive, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}hat.png",
+			"When": {
+				"Weather |contains=Rain, Storm": false,
+				"HasFile:{{FromFile}}": true,
+				"IsOutdoors": true
 			},
-
-			{//Wears hat randomly
-				"Action": "EditImage",
-				"Target": "Portraits/Ezekiel, Characters/Ezekiel",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
-				"When": {
-					"Query: {{RandomNumber}} >= 6": true,
-					"HasFile:{{FromFile}}": true,
-					"IsOutdoors": true
-				},
-				"Update": "OnLocationChange",
-				"PatchMode": "Overlay"
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		//Rain hats
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Blair, Portraits/Richard, Characters/Blair, Characters/Richard",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainhat.png",
+			"When": {
+				"Weather |contains=Rain, Storm": true,
+				"Season": "Spring, Summer, Fall",
+				"HasFile:{{FromFile}}": true,
+				"IsOutdoors": true
 			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
 
 		//Work Clothes
 			//Philip
@@ -395,9 +387,36 @@
 				"Target": "Portraits/Irene, Characters/Irene",
 				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_chef.png",
 				"When": {
-					"Query: ({{Season|contains=spring,summer}} AND {{Day|contains=15, 16, 17, 18, 19, 20, 21}}) OR ({{Season|contains=fall,winter}} AND {{Day|contains=2, 3, 4, 5, 6, 7}})": true,
+					"IreneTraveling": true,
 					"HasSeenEvent |contains=75160431": true
 				},
+			},
+			//Uses umbrella while raining but not traveling
+			{
+				"Action": "EditImage",
+				"Target": "Portraits/Irene, Characters/Irene",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainumbrella.png",
+				"When": {
+					"Weather |contains=Rain, Storm": true,
+					"IreneTraveling": false,
+					"IsOutdoors": true
+				},
+				"Update": "OnLocationChange",
+				"PatchMode": "Overlay"
+			},
+			//Doesn't wear fall hat with chef's clothes or when raining
+			{
+				"Action": "EditImage",
+				"Target": "Portraits/Irene, Characters/Irene",
+				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fallhat.png",
+				"When": {
+					"Weather |contains=Rain, Storm": false,
+					"Season": "Fall",
+					"IreneTraveling": false,
+					"IsOutdoors": true
+				},
+				"Update": "OnLocationChange",
+				"PatchMode": "Overlay"
 			},
 	]
 }
