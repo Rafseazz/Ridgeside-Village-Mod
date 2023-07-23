@@ -37,7 +37,7 @@
 		{
 		  "Name": "SeasonalIanToken",
 		  "Value": "true",
-		},	
+		},
 		{
 		  "Name": "SeasonalIanToken",
 		  "Value": "{{Random: true, false}}",
@@ -45,14 +45,14 @@
 		},
 		{
 		  "Name": "SeasonalIanToken",
-		  "Value": "false", 
+		  "Value": "false",
 		  "When": { "HasMod |contains=x3n3as.RSVSeasonalIan": true, "x3n3as_Ian_Closet_Mod_Randomized_Outfits_Compatibility": false }
 		},
 
 		{
 		  "Name": "SeasonalCorineToken",
 		  "Value": "true",
-		},	
+		},
 		{
 		  "Name": "SeasonalCorineToken",
 		  "Value": "{{Random: true, false}}",
@@ -60,14 +60,14 @@
 		},
 		{
 		  "Name": "SeasonalCorineToken",
-		  "Value": "false", 
+		  "Value": "false",
 		  "When": { "HasMod |contains=x3n3as.RSVSeasonalCorine": true, "x3n3as_Corine_Closet_Mod_Randomized_Outfits_Compatibility": false }
 		},
 
 		{
 		  "Name": "SeasonalYsabelleToken",
 		  "Value": "true",
-		},	
+		},
 		{
 		  "Name": "SeasonalYsabelleToken",
 		  "Value": "{{Random: true, false}}",
@@ -75,14 +75,14 @@
 		},
 		{
 		  "Name": "SeasonalYsabelleToken",
-		  "Value": "false", 
+		  "Value": "false",
 		  "When": { "HasMod |contains=x3n3as.RSVSeasonalYsabelle": true, "x3n3as_Ysabelle_Closet_Mod_Randomized_Outfits_Compatibility": false }
 		},
 
 		{
 		  "Name": "SeasonalAlissaToken",
 		  "Value": "true",
-		},	
+		},
 		{
 		  "Name": "SeasonalAlissaToken",
 		  "Value": "{{Random: true, false}}",
@@ -90,7 +90,7 @@
 		},
 		{
 		  "Name": "SeasonalAlissaToken",
-		  "Value": "false", 
+		  "Value": "false",
 		  "When": { "HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true, "ZoeDoll_Alissa_Closet_Mod_Randomized_Outfits_Compatibility": false }
 		},
 	],
@@ -246,7 +246,6 @@
 		},
 
 		//Torts things
-
 			{//default look
 				"Action": "EditImage",
 				"Target": "Portraits/Torts, Characters/Torts",
@@ -258,7 +257,6 @@
 			},
 
 		//Kiwi things
-
 			{//default look
 				"Action": "EditImage",
 				"Target": "Portraits/Kiwi, Characters/Kiwi",
@@ -292,7 +290,6 @@
 
 
 		//Ezekiel Hat
-
 			{//Wears hat during bad weather
 				"Action": "EditImage",
 				"Target": "Portraits/Ezekiel, Characters/Ezekiel",
@@ -320,8 +317,26 @@
 			},
 
 		//Work Clothes
-
-			//Map properties for Daia
+			//Philip
+			{
+				 "Action": "EditMap",
+				 "Target": "Maps/Custom_Ridgeside_ShiroHouse",
+				 "MapProperties": {
+                "UniquePortrait": "Philip",
+								"UniqueSprite": "Philip",
+            },
+			},
+			{
+				"Action": "Load",
+				"Target": "Characters/Philip_Custom_Ridgeside_ShiroHouse",
+				"FromFile": "Assets/Characters/Philip/Philip_work.png",
+			},
+			{
+				"Action": "Load",
+				"Target": "Portraits/Philip_Custom_Ridgeside_ShiroHouse",
+				"FromFile": "Assets/Portraits/Philip/Philip_work.png",
+			},
+			//Daia
 			{
 				 "Action": "EditMap",
 				 "Target": "Maps/Custom_Ridgeside_Ridge, Maps/Custom_Ridgeside_RidgeForest, Maps/Custom_Ridgeside_RSVSpiritRealm, Maps/Custom_Ridgeside_RSVNinjaHouse, Maps/Custom_Ridgeside_RidgeFalls",
@@ -330,8 +345,6 @@
 								"UniqueSprite": "Daia",
             },
 			},
-
-			//Daia
 			{
 				"Action": "Load",
 				"Target": "Characters/Daia_Custom_Ridgeside_Ridge, Characters/Daia_Custom_Ridgeside_RidgeForest, Characters/Daia_Custom_Ridgeside_RSVSpiritRealm, Characters/Daia_Custom_Ridgeside_RSVNinjaHouse, Characters/Daia_Custom_Ridgeside_RidgeFalls",
