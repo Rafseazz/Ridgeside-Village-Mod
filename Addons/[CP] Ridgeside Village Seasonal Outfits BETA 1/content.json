@@ -1,200 +1,271 @@
 {
 	"Format": "1.19.0",
-	"ConfigSchema": {
-		"x3n3as_Ian_Closet_Mod_Randomized_Outfits_Compatibility": {
-			"AllowValues": "true, false",
-			"Default": "true",
-			"Description": "Randomize outfits between the mod mentioned.",
+	"ConfigSchema": 
+	{
+		"Lightweight Outfits": 
+		{
+			"AllowValues":"true, false",
+			"Default": "false",
+			"Description": "Removes location-based changes for more performance.",
 			"AllowBlank": false
 		},
-		"x3n3as_Corine_Closet_Mod_Randomized_Outfits_Compatibility": {
+		"x3n3as's Ian Seasonals": 
+		{
 			"AllowValues": "true, false",
 			"Default": "true",
-			"Description": "Randomize outfits between the mod mentioned.",
+			"Description": "True randomizes outfits between Rafseazz's outfits and x3n3as's outfits. False shows only x3n3as's outfits.",
 			"AllowBlank": false
 		},
-		"x3n3as_Ysabelle_Closet_Mod_Randomized_Outfits_Compatibility": {
+		"x3n3as's Corine Seasonals": 
+		{
 			"AllowValues": "true, false",
 			"Default": "true",
-			"Description": "Randomize outfits between the mod mentioned.",
+			"Description": "True randomizes outfits between Rafseazz's outfits and x3n3as's outfits. False shows only x3n3as's outfits.",
 			"AllowBlank": false
 		},
-		"ZoeDoll_Alissa_Closet_Mod_Randomized_Outfits_Compatibility": {
+		"x3n3as's Ysabelle Seasonals": 
+		{
 			"AllowValues": "true, false",
 			"Default": "true",
-			"Description": "Randomize outfits between the mod mentioned.",
+			"Description": "True randomizes outfits between Rafseazz's outfits and x3n3as's outfits. False shows only x3n3as's outfits.",
 			"AllowBlank": false
 		},
+		"ZoeDoll's Alissa Seasonals": 
+		{
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "True randomizes outfits between Rafseazz's outfits and ZoeDoll's outfits. False shows only ZoeDoll's outfits.",
+			"AllowBlank": false
+		}
 	},
 
 
-	"DynamicTokens": [
+	"DynamicTokens": 
+	[
 		{
 			"Name": "RandomNumber",
 			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
 		},
+
+		{
+		  	"Name": "SeasonalRainToken",
+		  	"Value": "{{season}}"
+		},
+		{
+		  	"Name": "SeasonalRainToken",
+		  	"Value": "rain",
+		  	"When": 
+		  	{ 
+				"Weather |contains=Rain, Storm, Snow": true,
+				"Season": "Spring, Summer, Fall"
+		  	}
+		},
+
 		{
 			"Name": "IreneTraveling",
-			"Value": false,
+			"Value": "false"
 		},
 		{
 			"Name": "IreneTraveling",
-			"Value": true,
-			"When": { "Query: ({{Season|contains=spring,summer}} AND {{Day|contains=15, 16, 17, 18, 19, 20, 21}}) OR ({{Season|contains=fall,winter}} AND {{Day|contains=2, 3, 4, 5, 6, 7}})": true }
+			"Value": "true",
+			"When": 
+			{ 
+				"Season |contains= spring, summer": true,
+				"Day |contains= 15, 16, 17, 18, 19, 20, 21": true 
+			}
 		},
 		{
-		  "Name": "SeasonalIanToken",
-		  "Value": "true",
-		},
-		{
-		  "Name": "SeasonalIanToken",
-		  "Value": "{{Random: true, false}}",
-		  "When": { "HasMod |contains=x3n3as.RSVSeasonalIan": true, "x3n3as_Ian_Closet_Mod_Randomized_Outfits_Compatibility": true }
-		},
-		{
-		  "Name": "SeasonalIanToken",
-		  "Value": "false",
-		  "When": { "HasMod |contains=x3n3as.RSVSeasonalIan": true, "x3n3as_Ian_Closet_Mod_Randomized_Outfits_Compatibility": false }
+			"Name": "IreneTraveling",
+			"Value": "true",
+			"When": 
+			{ 
+				"Season |contains= fall, winter": true,
+				"Day |contains= 2, 3, 4, 5, 6, 7": true 
+			}
 		},
 
 		{
-		  "Name": "SeasonalCorineToken",
-		  "Value": "true",
+			"Name": "JioMasked",
+			"Value": "false"
 		},
 		{
-		  "Name": "SeasonalCorineToken",
-		  "Value": "{{Random: true, false}}",
-		  "When": { "HasMod |contains=x3n3as.RSVSeasonalCorine": true }
+			"Name": "JioMasked",
+			"Value": "true",
+			"When": 
+			{ 
+				"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls": true
+			}
 		},
 		{
-		  "Name": "SeasonalCorineToken",
-		  "Value": "false",
-		  "When": { "HasMod |contains=x3n3as.RSVSeasonalCorine": true, "x3n3as_Corine_Closet_Mod_Randomized_Outfits_Compatibility": false }
+			"Name": "JioMasked",
+			"Value": "true",
+			"When": 
+			{ 
+				"Hearts:Jio": "{{Range: 0,7}}"
+			}
+		},
+		{
+			"Name": "JioMasked",
+			"Value": "true",
+			"When": 
+			{ 
+				"Hearts:Jio": "{{Range: 8,10}}",
+				"RandomNumber |contains= 4, 5, 6": false
+			}
+		},
+		{
+			"Name": "JioMasked",
+			"Value": "false",
+			"When": 
+			{ 
+				"Relationship:Jio": "Married",
+				"LocationName |contains= Farm, FarmHouse": true
+			}
 		},
 
 		{
-		  "Name": "SeasonalYsabelleToken",
-		  "Value": "true",
+		  	"Name": "SeasonalIanToken",
+		  	"Value": "true"
 		},
 		{
-		  "Name": "SeasonalYsabelleToken",
-		  "Value": "{{Random: true, false}}",
-		  "When": { "HasMod |contains=x3n3as.RSVSeasonalYsabelle": true }
+		  	"Name": "SeasonalIanToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When": 
+			{ 
+				"HasMod |contains=x3n3as.RSVSeasonalIan": true, 
+		  		"x3n3as's Ian Seasonals": true 
+			}
 		},
 		{
-		  "Name": "SeasonalYsabelleToken",
-		  "Value": "false",
-		  "When": { "HasMod |contains=x3n3as.RSVSeasonalYsabelle": true, "x3n3as_Ysabelle_Closet_Mod_Randomized_Outfits_Compatibility": false }
+		  	"Name": "SeasonalIanToken",
+		  	"Value": "false",
+		  	"When": 
+			{ 
+				"HasMod |contains=x3n3as.RSVSeasonalIan": true, 
+				"x3n3as's Ian Seasonals": false 
+			}
 		},
 
 		{
-		  "Name": "SeasonalAlissaToken",
-		  "Value": "true",
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": "true"
 		},
 		{
-		  "Name": "SeasonalAlissaToken",
-		  "Value": "{{Random: true, false}}",
-		  "When": { "HasMod |contains=ZoeDoll.RSVSeasonalAlissa": true }
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When": 
+			{ 
+				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
+				"x3n3as's Corine Seasonals": true 
+			}
 		},
 		{
-		  "Name": "SeasonalAlissaToken",
-		  "Value": "false",
-		  "When": { "HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true, "ZoeDoll_Alissa_Closet_Mod_Randomized_Outfits_Compatibility": false }
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": "false",
+		  	"When": 
+			{ 
+				"HasMod |contains=x3n3as.RSVSeasonalCorine": true, 
+				"x3n3as's Corine Seasonals": false 
+			}
 		},
+
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": "true",
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When": 
+			{ 
+				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
+				"x3n3as's Ysabelle Seasonals": true 
+			}
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": "false",
+		  	"When": 
+			{ 
+				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true, 
+				"x3n3as's Ysabelle Seasonals": false 
+			}
+		},
+
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": "true"
+		},
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When": 
+			{ 
+				"HasMod |contains=ZoeDoll.RSVSeasonalAlissa": true,
+				"ZoeDoll's Alissa Seasonals": true
+			}
+		},
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": "false",
+		  	"When": 
+			{ 
+				"HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true, 
+				"ZoeDoll's Alissa Seasonals": false 
+			}
+		}
 	],
 
 	"Changes": [
 
-		//Compat with other seasonal outfit mods for RSV (true = on, false = off then randomly use other seasonals)
+		/*-----------------------------------
+		Compat with other seasonal outfit mods for RSV
+		-----------------------------------*/
 
 		//Ian
 		{
+			"LogName": "RSV Ian Seasonals",
 			"Action": "EditImage",
 			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
-			"When": {
-				"Weather |contains=Rain, Storm": false,
-				"HasFile:{{FromFile}}": true,
-				"SeasonalIanToken": true
-			}
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rain.png",
-			"When": {
-				"Weather |contains=Rain, Storm": true,
-				"Season": "Spring, Summer, Fall",
-				"HasFile:{{FromFile}}": true,
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When": 
+			{
 				"SeasonalIanToken": true
 			}
 		},
 
 		//Corine
 		{
+			"LogName": "RSV Corine Seasonals",
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
-			"When": {
-				"Weather |contains=Rain, Storm": false,
-				"HasFile:{{FromFile}}": true,
-				"SeasonalCorineToken": true
-			}
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rain.png",
-			"When": {
-				"Weather |contains=Rain, Storm": true,
-				"Season": "Spring, Summer, Fall",
-				"HasFile:{{FromFile}}": true,
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When": 
+			{
 				"SeasonalCorineToken": true
 			}
 		},
 
 		//Ysabelle
 		{
+			"LogName": "RSV Ysabelle Seasonals",
 			"Action": "EditImage",
 			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
-			"When": {
-				"Weather |contains=Rain, Storm": false,
-				"HasFile:{{FromFile}}": true,
-				"SeasonalYsabelleToken": true
-			}
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rain.png",
-			"When": {
-				"Weather |contains=Rain, Storm": true,
-				"Season": "Spring, Summer, Fall",
-				"HasFile:{{FromFile}}": true,
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When": 
+			{
 				"SeasonalYsabelleToken": true
 			}
 		},
 
 		//Alissa
 		{
+			"LogName": "RSV Alissa Seasonals",
 			"Action": "EditImage",
 			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
-			"When": {
-				"Weather |contains=Rain, Storm": false,
-				"HasFile:{{FromFile}}": true,
-				"SeasonalAlissaToken": true
-			}
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rain.png",
-			"When": {
-				"Weather |contains=Rain, Storm": true,
-				"Season": "Spring, Summer, Fall",
-				"HasFile:{{FromFile}}": true,
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When": 
+			{
 				"SeasonalAlissaToken": true
 			}
 		},
@@ -202,221 +273,240 @@
 		/*-----------------------------------
 		Everyone else (Basic Code)
 		-----------------------------------*/
-		//Normal Clothes
+
+		//Normal/Rain Clothes
 		{
+			"LogName": "RSV Seasonals",
 			"Action": "EditImage",
-			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Yuuma, Portraits/Undreya, Portraits/Daia, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Yuuma, Characters/Undreya, Characters/Daia, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
-			"When": {
-				"Weather |contains=Rain, Storm": false,
-				"HasFile:{{FromFile}}": true
-			}
+			"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/Jio, Characters/Jio, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kiarra, Characters/Kiarra, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png"
 		},
 
-		//Rain Clothes
+		//Sonny seasonals
 		{
+			"LogName": "RSV Sonny Seasonals",
 			"Action": "EditImage",
-			"Target": "Portraits/Aguar, Portraits/Alissa, Portraits/Bert, Portraits/Ezekiel, Portraits/Flor, Portraits/Freddie, Portraits/Jeric, Portraits/Jio, Portraits/Keahi, Portraits/Kenneth, Portraits/Kiwi, Portraits/Lenny, Portraits/Lola, Portraits/Maddie, Portraits/Olga, Portraits/Philip, Portraits/Pika, Portraits/Richard, Portraits/Shiro, Portraits/Trinnie, Portraits/Yuuma, Portraits/Undreya, Portraits/Daia, Portraits/Naomi, Portraits/Malaya, Portraits/Kimpoi, Portraits/Anton, Portraits/Ariah, Portraits/Blair, Portraits/Bryle, Portraits/Carmen, Portraits/Faye, Portraits/Irene, Portraits/Kiarra, Portraits/Lorenzo, Portraits/Louie, Portraits/Maive, Portraits/Paula, Portraits/Sean, Portraits/Shanice, Portraits/Sonny, Portraits/Zayne, Portraits/Torts, Portraits/Althea, Portraits/Lorraine, Portraits/Nadaline, Portraits/Zachary, Portraits/June, Characters/Aguar, Characters/Alissa, Characters/Bert, Characters/Ezekiel, Characters/Flor, Characters/Freddie, Characters/Jeric, Characters/Jio, Characters/Keahi, Characters/Kenneth, Characters/Kiwi, Characters/Lenny, Characters/Lola, Characters/Maddie, Characters/Olga, Characters/Philip, Characters/Pika, Characters/Richard, Characters/Shiro, Characters/Trinnie, Characters/Yuuma, Characters/Undreya, Characters/Daia, Characters/Acorn, Characters/Naomi, Characters/Malaya, Characters/Kimpoi, Characters/Anton, Characters/Ariah, Characters/Blair, Characters/Bryle, Characters/Carmen, Characters/Faye, Characters/Irene, Characters/Kiarra, Characters/Lorenzo, Characters/Louie, Characters/Maive, Characters/Paula, Characters/Sean, Characters/Shanice, Characters/Sonny, Characters/Zayne, Characters/Torts, Characters/Althea, Characters/Lorraine, Characters/Nadaline, Characters/Zachary, Characters/June",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rain.png",
-			"When": {
-				"Weather |contains=Rain, Storm": true,
-				"Season": "Spring, Summer, Fall",
-				"HasFile:{{FromFile}}": true
+			"Target": "Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_summer.png",
+			"When":
+			{
+				"Season": "summer"
 			}
 		},
-
-		//Torts things
-			{//default look
-				"Action": "EditImage",
-				"Target": "Portraits/Torts, Characters/Torts",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
-				"When": {
-					"Query: {{RandomNumber}} >= 3": true,
-				},
-			},
-
-		//Kiwi things
-			{//default look
-				"Action": "EditImage",
-				"Target": "Portraits/Kiwi, Characters/Kiwi",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
-				"When": {
-					"Query: {{RandomNumber}} >= 4": true,
-				},
-			},
 
 		//Aguar random change
 		{
+			"LogName": "RSV Aguar Random Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2, 3, 4 |key=aguaroutfit}}.png",
-			"When": {
-				"HasFile:{{FromFile}}": true
-			}
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2, 3, 4 |key=aguaroutfit}}.png"
 		},
 
 		//Undreya random change
 		{
+			"LogName": "RSV Undreya Random Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Undreya, Characters/Undreya",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2 |key=undreyaoutfit}}.png",
-			"When": {
-				"HasFile:{{FromFile}}": true,
-				"LocationName": "Custom_Ridgeside_RSVAbandonedHouse, Custom_Ridgeside_RSVTheHike"
+			"When": 
+			{
+				"LocationName |contains= Custom_Ridgeside_RSVAbandonedHouse, Custom_Ridgeside_RSVTheHike": true
+			},
+			"Update": "OnLocationChange",
+		},
+
+		//Torts default
+		{
+			"LogName": "RSV Torts Seasonals",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
+			"When": 
+			{
+				"RandomNumber": "{{Range: 1,3}}"
 			}
 		},
 
-	//Hats
+		//Kiwi seasonal
+		{
+			"LogName": "RSV Kiwi Seasonals",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiwi, Characters/Kiwi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
+			"When": 
+			{
+				"RandomNumber": "{{Range: 1,5}}"
+			}
+		},
+
+		/*-----------------------------------
+		Work Clothes
+		-----------------------------------*/
+
+		//Philip
+		{
+			"LogName": "RSV Philip Work Outfit Map",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_ShiroHouse",
+			"MapProperties": 
+			{
+                "UniquePortrait": "Philip",
+				"UniqueSprite": "Philip"
+            }
+		},
+		{
+			"LogName": "RSV Philip Work Outfit",
+			"Action": "Load",
+			"Target": "Portraits/Philip_Custom_Ridgeside_ShiroHouse, Characters/Philip_Custom_Ridgeside_ShiroHouse",
+			"FromFile": "Assets/{{TargetPathOnly}}/Philip/Philip_work.png"
+		},
+		//Daia
+		{
+			"LogName": "RSV Daia Work Outfit Map",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_Ridge, Maps/Custom_Ridgeside_RidgeForest, Maps/Custom_Ridgeside_RSVSpiritRealm, Maps/Custom_Ridgeside_RSVNinjaHouse, Maps/Custom_Ridgeside_RidgeFalls",
+			"MapProperties": 
+			{
+                "UniquePortrait": "Daia",
+				"UniqueSprite": "Daia"
+            }
+		},
+		{
+			"LogName": "RSV Daia Work Outfit",
+			"Action": "Load",
+			"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls, Characters/Daia_Custom_Ridgeside_Ridge, Characters/Daia_Custom_Ridgeside_RidgeForest, Characters/Daia_Custom_Ridgeside_RSVSpiritRealm, Characters/Daia_Custom_Ridgeside_RSVNinjaHouse, Characters/Daia_Custom_Ridgeside_RidgeFalls",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_ninja.png"
+		},
+		//Daia Mask
+		{
+			"LogName": "RSV Daia Work Outfit Mask",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls",
+			"FromFile": "Assets/Portraits/Daia/Daia_mask.png",
+			"When": 
+			{
+				"RandomNumber |contains= 6, 9": true
+			},
+			"PatchMode": "Overlay"
+		},
+		//Jio Mask
+		{
+			"LogName": "RSV Jio Work Outfit Mask",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_mask.png",
+			"When": 
+			{
+				"JioMasked": true
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+
+		//Corine at-home wear
+		{
+			"LogName": "RSV Corine At Home Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Corine_Custom_Ridgeside_EzekielHouse, Characters/Corine_Custom_Ridgeside_EzekielHouse",
+			"FromFile": "Assets/{{TargetPathOnly}}/Corine/Corine_{{season}}.png"
+		},
+
+		//Irene traveling
+		{
+			"LogName": "RSV Irene Work Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_chef.png",
+			"When": 
+			{
+				"IreneTraveling": true,
+				"HasSeenEvent |contains= 75160431": true
+			}
+		},
+
+		/*-----------------------------------
+		Hats
+		-----------------------------------*/
+
 		//Normal hats
 		{
-				"Action": "EditImage",
-				"Target": "Portraits/Aguar, Characters/Aguar, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Sonny, Characters/Sonny",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
-				"When": {
-					"Query: {{Weather|contains=Rain, Storm, Snow}} OR {{RandomNumber|contains=6,7,8,9,10}}": true,
-					"HasFile:{{FromFile}}": true,
-					"IsOutdoors": true
-				},
-				"Update": "OnLocationChange",
-				"PatchMode": "Overlay"
+			"LogName": "RSV Hats",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
+			"When": 
+			{
+				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR '{{RandomNumber|contains=6,7,8,9,10}}' = 'true'": true,
+				"IsOutdoors": true,
+				"Lightweight Outfits": "false"
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
 		},
 		//Seasonal hats
 		{
+			"LogName": "RSV Seasonal Hats",
 			"Action": "EditImage",
-			"Target": "Portraits/Faye, Portraits/Louie, Portraits/Maive, Portraits/Richard, Portraits/Sonny, Characters/Faye, Characters/Louie, Characters/Maive, Characters/Sonny",
+			"Target": "Portraits/Faye, Characters/Faye, Portraits/Louie, Characters/Louie, Portraits/Maive, Characters/Maive, Portraits/Richard, Characters/Richard, Portraits/Sonny, Characters/Sonny",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}hat.png",
 			"When": {
 				"Weather |contains=Rain, Storm": false,
 				"HasFile:{{FromFile}}": true,
-				"IsOutdoors": true
+				"IsOutdoors": true,
+				"Lightweight Outfits": "false"
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		},
 		//Rain hats
 		{
+			"LogName": "RSV Rain Hats",
 			"Action": "EditImage",
-			"Target": "Portraits/Blair, Portraits/Richard, Characters/Blair, Characters/Richard",
+			"Target": "Portraits/Blair, Characters/Blair, Portraits/Richard, Characters/Richard",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainhat.png",
-			"When": {
-				"Weather |contains=Rain, Storm": true,
+			"When": 
+			{
+				"Weather |contains=Rain, Storm, Snow": true,
 				"Season": "Spring, Summer, Fall",
 				"HasFile:{{FromFile}}": true,
-				"IsOutdoors": true
+				"IsOutdoors": true,
+				"Lightweight Outfits": "true"
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		},
-
-		//Work Clothes
-			//Philip
+		//Irene umbrella while raining but not traveling
+		{
+			"LogName": "RSV Irene Umbrella",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainumbrella.png",
+			"When": 
 			{
-				 "Action": "EditMap",
-				 "Target": "Maps/Custom_Ridgeside_ShiroHouse",
-				 "MapProperties": {
-                "UniquePortrait": "Philip",
-								"UniqueSprite": "Philip",
-            },
+				"Weather |contains= Rain, Storm": true,
+				"IreneTraveling": false,
+				"IsOutdoors": true,
+				"Lightweight Outfits": "false"
 			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		//Irene fall hat not with chef's clothes or when raining
+		{
+			"LogName": "RSV Irene Hats",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fallhat.png",
+			"When": 
 			{
-				"Action": "Load",
-				"Target": "Characters/Philip_Custom_Ridgeside_ShiroHouse",
-				"FromFile": "Assets/Characters/Philip/Philip_work.png",
-			},
-			{
-				"Action": "Load",
-				"Target": "Portraits/Philip_Custom_Ridgeside_ShiroHouse",
-				"FromFile": "Assets/Portraits/Philip/Philip_work.png",
-			},
-			//Daia
-			{
-				 "Action": "EditMap",
-				 "Target": "Maps/Custom_Ridgeside_Ridge, Maps/Custom_Ridgeside_RidgeForest, Maps/Custom_Ridgeside_RSVSpiritRealm, Maps/Custom_Ridgeside_RSVNinjaHouse, Maps/Custom_Ridgeside_RidgeFalls",
-				 "MapProperties": {
-                "UniquePortrait": "Daia",
-								"UniqueSprite": "Daia",
-            },
-			},
-			{
-				"Action": "Load",
-				"Target": "Characters/Daia_Custom_Ridgeside_Ridge, Characters/Daia_Custom_Ridgeside_RidgeForest, Characters/Daia_Custom_Ridgeside_RSVSpiritRealm, Characters/Daia_Custom_Ridgeside_RSVNinjaHouse, Characters/Daia_Custom_Ridgeside_RidgeFalls",
-				"FromFile": "Assets/Characters/Daia/Daia_ninja.png",
-			},
-			{
-				"Action": "Load",
-				"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls",
-				"FromFile": "Assets/Portraits/Daia/Daia_ninja.png",
-			},
-			//Daia Mask
-			{
-				"Action": "EditImage",
-				"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls",
-				"FromFile": "Assets/Portraits/Daia/Daia_mask.png",
-				"When": {
-					"Query: {{RandomNumber}} = 6, 9": true,
-				},
-				"PatchMode": "Overlay",
-			},
-			//Jio Mask
-			{
-				"Action": "EditImage",
-				"Target": "Portraits/Jio, Characters/Jio",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_mask.png",
-				"When": {
-					"Query: {{LocationName|contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls}} OR ({{Random:{{Range:1,10}}|key=jiomask}} < {{Hearts:Jio}})": true,
-				},
-				"Update": "OnLocationChange",
-				"PatchMode": "Overlay",
-			},
-
-		//Corine at-home wear
-			{
-				"Action": "EditImage",
-				"Target": "Portraits/Corine_Custom_Ridgeside_EzekielHouse",
-				"FromFile": "Assets/Portraits/Corine/Corine_{{season}}.png",
-			},
-			{
-				"Action": "EditImage",
-				"Target": "Characters/Corine_Custom_Ridgeside_EzekielHouse",
-				"FromFile": "Assets/Characters/Corine/Corine_{{season}}.png",
-			},
-
-		//Irene traveling
-			{
-				"Action": "EditImage",
-				"Target": "Portraits/Irene, Characters/Irene",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_chef.png",
-				"When": {
-					"IreneTraveling": true,
-					"HasSeenEvent |contains=75160431": true
-				},
-			},
-			//Uses umbrella while raining but not traveling
-			{
-				"Action": "EditImage",
-				"Target": "Portraits/Irene, Characters/Irene",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainumbrella.png",
-				"When": {
-					"Weather |contains=Rain, Storm": true,
-					"IreneTraveling": false,
-					"IsOutdoors": true
-				},
-				"Update": "OnLocationChange",
-				"PatchMode": "Overlay"
-			},
-			//Doesn't wear fall hat with chef's clothes or when raining
-			{
-				"Action": "EditImage",
-				"Target": "Portraits/Irene, Characters/Irene",
-				"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fallhat.png",
-				"When": {
-					"Weather |contains=Rain, Storm": false,
-					"Season": "Fall",
-					"IreneTraveling": false,
-					"IsOutdoors": true
-				},
-				"Update": "OnLocationChange",
-				"PatchMode": "Overlay"
-			},
+				"Weather |contains= Rain, Storm": false,
+				"Season": "Fall",
+				"IreneTraveling": false,
+				"IsOutdoors": true,
+				"Lightweight Outfits": "false"
+			}, 
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		}
 	]
 }
