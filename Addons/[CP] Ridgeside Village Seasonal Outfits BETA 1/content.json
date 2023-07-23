@@ -1,36 +1,36 @@
 {
 	"Format": "1.19.0",
-	"ConfigSchema": 
+	"ConfigSchema":
 	{
-		"Lightweight Outfits": 
+		"Lightweight Outfits":
 		{
 			"AllowValues":"true, false",
 			"Default": "false",
 			"Description": "Removes location-based changes for more performance.",
 			"AllowBlank": false
 		},
-		"x3n3as's Ian Seasonals": 
+		"x3n3as's Ian Seasonals":
 		{
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "True randomizes outfits between Rafseazz's outfits and x3n3as's outfits. False shows only x3n3as's outfits.",
 			"AllowBlank": false
 		},
-		"x3n3as's Corine Seasonals": 
+		"x3n3as's Corine Seasonals":
 		{
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "True randomizes outfits between Rafseazz's outfits and x3n3as's outfits. False shows only x3n3as's outfits.",
 			"AllowBlank": false
 		},
-		"x3n3as's Ysabelle Seasonals": 
+		"x3n3as's Ysabelle Seasonals":
 		{
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "True randomizes outfits between Rafseazz's outfits and x3n3as's outfits. False shows only x3n3as's outfits.",
 			"AllowBlank": false
 		},
-		"ZoeDoll's Alissa Seasonals": 
+		"ZoeDoll's Alissa Seasonals":
 		{
 			"AllowValues": "true, false",
 			"Default": "true",
@@ -40,7 +40,7 @@
 	},
 
 
-	"DynamicTokens": 
+	"DynamicTokens":
 	[
 		{
 			"Name": "RandomNumber",
@@ -54,9 +54,9 @@
 		{
 		  	"Name": "SeasonalRainToken",
 		  	"Value": "rain",
-		  	"When": 
-		  	{ 
-				"Weather |contains=Rain, Storm, Snow": true,
+		  	"When":
+		  	{
+				"Weather |contains=Rain, Storm": true,
 				"Season": "Spring, Summer, Fall"
 		  	}
 		},
@@ -68,19 +68,19 @@
 		{
 			"Name": "IreneTraveling",
 			"Value": "true",
-			"When": 
-			{ 
+			"When":
+			{
 				"Season |contains= spring, summer": true,
-				"Day |contains= 15, 16, 17, 18, 19, 20, 21": true 
+				"Day |contains= 15, 16, 17, 18, 19, 20, 21": true
 			}
 		},
 		{
 			"Name": "IreneTraveling",
 			"Value": "true",
-			"When": 
-			{ 
+			"When":
+			{
 				"Season |contains= fall, winter": true,
-				"Day |contains= 2, 3, 4, 5, 6, 7": true 
+				"Day |contains= 2, 3, 4, 5, 6, 7": true
 			}
 		},
 
@@ -91,24 +91,24 @@
 		{
 			"Name": "JioMasked",
 			"Value": "true",
-			"When": 
-			{ 
+			"When":
+			{
 				"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls": true
 			}
 		},
 		{
 			"Name": "JioMasked",
 			"Value": "true",
-			"When": 
-			{ 
+			"When":
+			{
 				"Hearts:Jio": "{{Range: 0,7}}"
 			}
 		},
 		{
 			"Name": "JioMasked",
 			"Value": "true",
-			"When": 
-			{ 
+			"When":
+			{
 				"Hearts:Jio": "{{Range: 8,10}}",
 				"RandomNumber |contains= 4, 5, 6": false
 			}
@@ -116,8 +116,8 @@
 		{
 			"Name": "JioMasked",
 			"Value": "false",
-			"When": 
-			{ 
+			"When":
+			{
 				"Relationship:Jio": "Married",
 				"LocationName |contains= Farm, FarmHouse": true
 			}
@@ -130,19 +130,19 @@
 		{
 		  	"Name": "SeasonalIanToken",
 		  	"Value": "{{Random: true, false}}",
-		  	"When": 
-			{ 
-				"HasMod |contains=x3n3as.RSVSeasonalIan": true, 
-		  		"x3n3as's Ian Seasonals": true 
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
+		  		"x3n3as's Ian Seasonals": true
 			}
 		},
 		{
 		  	"Name": "SeasonalIanToken",
 		  	"Value": "false",
-		  	"When": 
-			{ 
-				"HasMod |contains=x3n3as.RSVSeasonalIan": true, 
-				"x3n3as's Ian Seasonals": false 
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
+				"x3n3as's Ian Seasonals": false
 			}
 		},
 
@@ -153,19 +153,19 @@
 		{
 		  	"Name": "SeasonalCorineToken",
 		  	"Value": "{{Random: true, false}}",
-		  	"When": 
-			{ 
+		  	"When":
+			{
 				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
-				"x3n3as's Corine Seasonals": true 
+				"x3n3as's Corine Seasonals": true
 			}
 		},
 		{
 		  	"Name": "SeasonalCorineToken",
 		  	"Value": "false",
-		  	"When": 
-			{ 
-				"HasMod |contains=x3n3as.RSVSeasonalCorine": true, 
-				"x3n3as's Corine Seasonals": false 
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
+				"x3n3as's Corine Seasonals": false
 			}
 		},
 
@@ -176,19 +176,19 @@
 		{
 		  	"Name": "SeasonalYsabelleToken",
 		  	"Value": "{{Random: true, false}}",
-		  	"When": 
-			{ 
+		  	"When":
+			{
 				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
-				"x3n3as's Ysabelle Seasonals": true 
+				"x3n3as's Ysabelle Seasonals": true
 			}
 		},
 		{
 		  	"Name": "SeasonalYsabelleToken",
 		  	"Value": "false",
-		  	"When": 
-			{ 
-				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true, 
-				"x3n3as's Ysabelle Seasonals": false 
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
+				"x3n3as's Ysabelle Seasonals": false
 			}
 		},
 
@@ -199,8 +199,8 @@
 		{
 		  	"Name": "SeasonalAlissaToken",
 		  	"Value": "{{Random: true, false}}",
-		  	"When": 
-			{ 
+		  	"When":
+			{
 				"HasMod |contains=ZoeDoll.RSVSeasonalAlissa": true,
 				"ZoeDoll's Alissa Seasonals": true
 			}
@@ -208,10 +208,10 @@
 		{
 		  	"Name": "SeasonalAlissaToken",
 		  	"Value": "false",
-		  	"When": 
-			{ 
-				"HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true, 
-				"ZoeDoll's Alissa Seasonals": false 
+		  	"When":
+			{
+				"HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true,
+				"ZoeDoll's Alissa Seasonals": false
 			}
 		}
 	],
@@ -228,7 +228,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Ian, Characters/Ian",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When": 
+			"When":
 			{
 				"SeasonalIanToken": true
 			}
@@ -240,7 +240,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When": 
+			"When":
 			{
 				"SeasonalCorineToken": true
 			}
@@ -252,7 +252,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When": 
+			"When":
 			{
 				"SeasonalYsabelleToken": true
 			}
@@ -264,7 +264,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Alissa, Characters/Alissa",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When": 
+			"When":
 			{
 				"SeasonalAlissaToken": true
 			}
@@ -308,7 +308,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Undreya, Characters/Undreya",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2 |key=undreyaoutfit}}.png",
-			"When": 
+			"When":
 			{
 				"LocationName |contains= Custom_Ridgeside_RSVAbandonedHouse, Custom_Ridgeside_RSVTheHike": true
 			},
@@ -321,7 +321,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Torts, Characters/Torts",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
-			"When": 
+			"When":
 			{
 				"RandomNumber": "{{Range: 1,3}}"
 			}
@@ -333,7 +333,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Kiwi, Characters/Kiwi",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
-			"When": 
+			"When":
 			{
 				"RandomNumber": "{{Range: 1,5}}"
 			}
@@ -348,11 +348,11 @@
 			"LogName": "RSV Philip Work Outfit Map",
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_ShiroHouse",
-			"MapProperties": 
+			"MapProperties":
 			{
-                "UniquePortrait": "Philip",
+        "UniquePortrait": "Philip",
 				"UniqueSprite": "Philip"
-            }
+			}
 		},
 		{
 			"LogName": "RSV Philip Work Outfit",
@@ -365,11 +365,11 @@
 			"LogName": "RSV Daia Work Outfit Map",
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_Ridge, Maps/Custom_Ridgeside_RidgeForest, Maps/Custom_Ridgeside_RSVSpiritRealm, Maps/Custom_Ridgeside_RSVNinjaHouse, Maps/Custom_Ridgeside_RidgeFalls",
-			"MapProperties": 
+			"MapProperties":
 			{
-                "UniquePortrait": "Daia",
+        "UniquePortrait": "Daia",
 				"UniqueSprite": "Daia"
-            }
+			}
 		},
 		{
 			"LogName": "RSV Daia Work Outfit",
@@ -383,7 +383,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls",
 			"FromFile": "Assets/Portraits/Daia/Daia_mask.png",
-			"When": 
+			"When":
 			{
 				"RandomNumber |contains= 6, 9": true
 			},
@@ -395,7 +395,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Jio, Characters/Jio",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_mask.png",
-			"When": 
+			"When":
 			{
 				"JioMasked": true
 			},
@@ -417,7 +417,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_chef.png",
-			"When": 
+			"When":
 			{
 				"IreneTraveling": true,
 				"HasSeenEvent |contains= 75160431": true
@@ -434,7 +434,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Sonny, Characters/Sonny",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
-			"When": 
+			"When":
 			{
 				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR '{{RandomNumber|contains=6,7,8,9,10}}' = 'true'": true,
 				"IsOutdoors": true,
@@ -464,7 +464,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Blair, Characters/Blair, Portraits/Richard, Characters/Richard",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainhat.png",
-			"When": 
+			"When":
 			{
 				"Weather |contains=Rain, Storm, Snow": true,
 				"Season": "Spring, Summer, Fall",
@@ -481,7 +481,7 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainumbrella.png",
-			"When": 
+			"When":
 			{
 				"Weather |contains= Rain, Storm": true,
 				"IreneTraveling": false,
@@ -497,14 +497,14 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fallhat.png",
-			"When": 
+			"When":
 			{
 				"Weather |contains= Rain, Storm": false,
 				"Season": "Fall",
 				"IreneTraveling": false,
 				"IsOutdoors": true,
 				"Lightweight Outfits": "false"
-			}, 
+			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		}
