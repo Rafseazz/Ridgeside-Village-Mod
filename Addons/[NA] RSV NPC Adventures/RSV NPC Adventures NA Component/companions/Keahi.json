@@ -1,0 +1,75 @@
+{
+  "Format": "2.0",
+  "Name": "Keahi",
+  "Skills": [
+
+    //Forager
+    {
+      "Name": "forager"
+    },
+
+  ],
+  "Rules": {
+    //Basics
+    "": "accept", //acceptance when asked
+    "!f Keahi 1": "reject", //talked once
+    
+    //Normal
+    //Requires seen 4 heart event + 4 hearts and above with Keahi and Pika
+    "!f Pika 1000": "reject",
+    "!f Keahi 1000": "reject",
+    "k 75160083": "reject",
+
+    //Marriage
+    //no rules
+  },
+  
+  "Bedtime": "2000",
+  "BedtimeSpouse": "2530",
+  
+  "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
+  	"Mining": 2,
+  	"Crafting": 2,
+    "MaxStamina": 30
+  },
+  "BuffsDescription": "[Keahi.buffs]",
+  
+  "Weapons": {
+    /*"0": "Obsidian Edge",
+	  "1": "Obsidian Edge",
+	  "2": "Obsidian Edge",
+	  "3": "Obsidian Edge",
+	  "4": "Dark Sword",
+	  "5": "Dark Sword",
+	  "6": "Lava Katana",
+	  "7": "Dwarf Sword",
+	  "8": "Galaxy Sword",
+	  "9": "Dragontooth Cutlass",
+	  "10": "Infinity Blade"*/
+
+    "0": "The Prankster",
+  },
+
+  "IdleBehaviors": [
+    {
+      "Behavior": "Animate",
+      "Animations": [
+        "keahi_jump",
+        "keahi_dance"
+      ],
+      "Tendency": 3,
+      "MinDuration": 3,
+      "MaxDuration": 10,
+      //"Condition": "insert condition here"
+    },
+
+    {
+      "Behavior": "Lookaround",
+      "FaceMinSeconds": 2,
+      "FaceMaxSeconds": 5,
+      "Tendency": 2,
+      "MinDuration": 10,
+      "MaxDuration": 20
+    },
+	]
+}

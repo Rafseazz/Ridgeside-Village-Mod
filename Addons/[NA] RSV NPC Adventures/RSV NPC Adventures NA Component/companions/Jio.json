@@ -1,0 +1,113 @@
+{
+  "Format": "2.0",
+  "Name": "Jio",
+  "Skills": [
+
+    //Fighter or Warrior Skill
+    {
+      "Name": "fighter",
+      "IsWarrior": true, //Fight with fists boiii
+      "Strength": 1.0,
+      "Speed": 1.0,
+      "Effeciency": 1.0,
+      "Cooldown": 50, //advanced
+      "AttackRadius": 1.25,
+      "BackupRadius": 0.9,
+      "FistCooldown": 1200,
+      "MissChance": 0.0,
+      "ExtraSpeed": 0,
+      "ExtraStrength": 0,
+      "DefendRadius": 6.0,
+      "ReturnRadius": 11.0
+    },
+
+    //Shooter
+    {
+      "Name": "shooter",
+      "Damage": 5,
+      "CollisionSound": "throw",
+      "Cooldown": 1000, //ms
+      "ChargeTime": 300, //ms
+      "Projectile": 719, //springobjects tilesheet
+      "Explode": false,
+      "MinShootRange": 1.0,
+      "MaxShootRange": 1.0,
+      "ShotSpeed": 1.0,
+      "LightingShot": false, //emit light
+    },
+
+    //Protector
+    {
+      "Name": "protector",
+      "Type": "Attack", //IMPORTANT (Invincibility or Attack)
+      "UseChance": 0.5, //% chance
+      "Duration": 5,
+      "Cooldown": 120,
+      "Amount": 5, //Increase of attack power IF Attack Type protector
+      "Description": "[Jio.protector]"
+    },
+
+  ],
+  "Rules": {
+    //Basics
+    "": "accept", //acceptance when asked
+    "!f Jio 1": "reject", //talked once
+    
+    //Normal
+    //Requires seen 4 heart event + 4 hearts and above
+    "!f Jio 1000": "reject",
+    "k 75160079": "reject",
+
+    //Marriage
+    //no rules
+  },
+  
+  "Bedtime": "2200",
+  "BedtimeSpouse": "2530",
+  
+  "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
+  	"Attack": 3,
+  	"Speed": 1,
+  },
+  "BuffsDescription": "[Jio.buffs]",
+  
+  "Weapons": {
+    /*"0": "Obsidian Edge",
+	  "1": "Obsidian Edge",
+	  "2": "Obsidian Edge",
+	  "3": "Obsidian Edge",
+	  "4": "Dark Sword",
+	  "5": "Dark Sword",
+	  "6": "Lava Katana",
+	  "7": "Dwarf Sword",
+	  "8": "Galaxy Sword",
+	  "9": "Dragontooth Cutlass",
+	  "10": "Infinity Blade"*/
+
+    "0": "Obsidian Edge",
+    "10": "Occult Blade"
+  },
+
+  "IdleBehaviors": [
+    {
+      "Behavior": "Animate",
+      "Animations": [
+        "jio_meditate",
+        "jio_fight"
+      ],
+      "Tendency": 3,
+      "MinDuration": 3,
+      "MaxDuration": 10,
+      //"Condition": "insert condition here"
+    },
+
+    {
+      "Behavior": "Lookaround",
+      "FaceMinSeconds": 2,
+      "FaceMaxSeconds": 5,
+      "Tendency": 2,
+      "MinDuration": 10,
+      "MaxDuration": 20
+    },
+	]
+}

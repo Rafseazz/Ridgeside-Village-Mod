@@ -1,0 +1,79 @@
+{
+  "Format": "2.0",
+  "Name": "Trinnie",
+  "Skills": [
+
+    //Doctor Skill
+    {
+      "Name": "doctor",
+      "HealCooldown": 4800,
+      "MedKits": 1,
+      "CanSaveLife": false,
+      "HealSideEffectEvery": 180, //Regen tick
+    },
+
+  ],
+  "Rules": {
+    //Basics
+    "": "accept", //acceptance when asked
+    "!f Trinnie 1": "reject", //talked once
+    
+    //Normal
+    //Requires seen 4 heart event + 4 hearts and above with Trinnie and Pika
+    "!f Olga 1000": "reject",
+    "!f Trinnie 1000": "reject",
+    "k 75160107": "reject",
+
+    //Marriage
+    //no rules
+  },
+  
+  "Bedtime": "2000",
+  "BedtimeSpouse": "2530",
+  
+  "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
+    "Farming": 2,
+    "Foraging": 2,
+    "MaxStamina": 30
+  },
+  "BuffsDescription": "[Trinnie.buffs]",
+  
+  "Weapons": {
+    /*"0": "Obsidian Edge",
+    "1": "Obsidian Edge",
+    "2": "Obsidian Edge",
+    "3": "Obsidian Edge",
+    "4": "Dark Sword",
+    "5": "Dark Sword",
+    "6": "Lava Katana",
+    "7": "Dwarf Sword",
+    "8": "Galaxy Sword",
+    "9": "Dragontooth Cutlass",
+    "10": "Infinity Blade"*/
+
+    "0": "Princess of Green",
+  },
+
+  "IdleBehaviors": [
+    {
+      "Behavior": "Animate",
+      "Animations": [
+        "trinnie_jump",
+        "trinnie_dance"
+      ],
+      "Tendency": 3,
+      "MinDuration": 3,
+      "MaxDuration": 10,
+      //"Condition": "insert condition here"
+    },
+
+    {
+      "Behavior": "Lookaround",
+      "FaceMinSeconds": 2,
+      "FaceMaxSeconds": 5,
+      "Tendency": 2,
+      "MinDuration": 10,
+      "MaxDuration": 20
+    },
+  ]
+}

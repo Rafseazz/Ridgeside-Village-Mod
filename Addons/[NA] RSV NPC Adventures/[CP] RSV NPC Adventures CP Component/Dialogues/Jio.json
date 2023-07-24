@@ -1,0 +1,128 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Jio",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Jio",
+      "Entries": {
+        "companionAccepted": "Noted. Lead the way.",
+        "companionAccepted_Dating": "I'll be by your side. Lead the way.",
+        "companionAccepted_Spouse": "I'll be by your side, my love. Lead the way.",
+
+        "companionRejected": "I'm busy.",
+        "companionRejected_Dating": "I'm sorry, but I'm busy today.$s",
+        "companionRejected_Spouse": "I'm sorry, my love, but I'm busy today.$s",
+
+        "companionRejectedNight": "I refuse. It's late. It's dangerous for someone like you.",
+        "companionRejectedNight_Dating": "I'll have to refuse, @. It may be too dangerous for you to accompany me on my missions this late. Go home.",
+        "companionRejectedNight_Spouse": "I'll have to refuse, my love. I don't want you getting hurt accompanying me this late.",
+
+        "companionDismiss": "I understand. Farewell.",
+        "companionDismiss_Dating": "I understand.#$b#Farewell and please take care, @.",
+        "companionDismiss_Spouse": "I understand, my love.#$b#I'll see you back home. Please take care.$s",
+
+        "companionDismissAuto": "I have more missions to attend to.#$b#Farewell.",
+        "companionDismissAuto_Dating": "@, Pardon me but I need to go.#$b#I have more missions to attend to.#$b#Farewell, and please take care.",
+        "companionDismissAuto_Spouse": "My love, Pardon me but I need to go.#$b#I have more missions to attend to.#$b#Farewell and please take care. I'll see you back home.$h",
+
+        "companionRecruited": "Don't waste my time and just lead the way.",
+        "companionRecruited_Dating": "Lead the way, @.#$b#I'll be by your side.",
+        "companionRecruited_Spouse": "Lead the way, my love.#$b#I'm always here for you.$h",
+
+        "farmerRunAway": "You're being too hasty, slow down.$a",
+
+        "farmerRunAway_Dating": "You're being too hasty, @. Slow down.$a",
+
+        "farmerRunAway_Spouse": "You're being too hasty, my love. You might get hurt! Slow down!$a",
+
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "Interesting farm.#$b#There are traces of magic in the area.#$b#Intriguing...",
+        "companion_Farm~1": "You seem to be doing a good job with your daily farm tasks.#$b#You have my respect.$h",
+        //Weather
+        "companion_Farm_Rainy": "The rain provides, doesn't it?#$b#You better be thankful for it.",
+        "companion_Farm_Snowy": "The glistening white snow covers your barren farm.#$b#The soil slumbers.",
+        //Season
+        "companion_Farm_Spring": "Plan carefully for your crops, farmer.#$b#You don't know how essential you are to the valley's stability.",
+        "companion_Farm_Summer": "The spirit of the sun is quite active in these times.#$b#She adores the view of crops though, so you better please her.",
+        "companion_Farm_Fall": "The piles of leaves are quite convenient as hiding spots.$h#$b#This is a good season.",
+        "companion_Farm_Winter": "Your barren croplands make way for your attention to focus on other duties.#$b#Don't let their sacrifice be in vain.",
+        //Entering
+        "companionEnter_Farm": "Traces of spiritual magic linger in the air...#$b#I assume this spirit is close to you.",
+        "companionEnter_Farm_Night": "You have lurking would-be visitors on the borders of your farm.#$b#Some have good intentions, some have malicious acts planned.#$b#Be wary.",
+        //Night
+        "companion_Farm_Night": "This place attracts all kinds of mystical beings and spirits.#$b#And they seem to be more active at night.#$b#You have an interesting land under your care, farmer.",
+
+        //Dating
+        //General
+        "companion_Farm_Dating": "@, the farm is improving slowly but surely.#$b#I'm proud of you.$h",
+        "companion_Farm_Dating~1": "Your grandfather's spirit seems to linger around.#$b#Even if they're just faint traces.#$b#He must be watching over you.$h",
+        //Weather
+        "companion_Farm_Rainy_Dating": "@, you're wet.#$b#Here.$l#$b#%Jio put you under his coat.#$b#I think that's passable, for now.$l",
+        "companion_Farm_Snowy_Dating": "@? Do you feel cold?#$b#My coat is always welcome for your embrace.$l#$b#Just say the word, I'm here.$h",
+        //Season
+        "companion_Farm_Spring_Dating": "I have some knowledge about crops and their growth cycle.#$b#So if you ever need assistance in planning for your crops this year, don't hesitate to ask for my assistance, @.$h",
+        "companion_Farm_Summer_Dating": "The spirit of the sun seems to enjoy the productivity and organization of this valley.#$b#The Mistress and the Mountain Spirit informed me about it the other day.$h",
+        "companion_Farm_Fall_Dating": "Shall I teach you how to hide in piles of fallen leaves, @?#$b#It sounds like a silly skill, but it may one day save your life.$h",
+        "companion_Farm_Winter_Dating": "%Jio held your hand.#$b#It's warm.$l",
+        //Entering
+        "companionEnter_Farm_Dating": "Traces of spiritual magic linger in the air...#$b#You and your family seem to have a strong affinity for the spiritual, @.",
+        "companionEnter_Farm_Night_Dating": "You have lurking would-be visitors on the borders of your farm.#$b#Some have good intentions, some have malicious acts planned.#$b#Be wary, @.#$b#If anything happens, I'll rush to your side.",
+        //Night
+        "companion_Farm_Night_Dating": "%Jio held your hand.#$b#If you're ever feeling lonely in nights like this...$l#$b#Don't be hesitant to call my name, as I'll rush to your company, @.$l",
+
+        //Spouse
+        //General
+        "companion_Farm_Spouse": "My love, the farm's improving by the day.#$b#I just want to say I'm really proud of you.$h#$b#I know your ancestors are too.$h",
+        "companion_Farm_Spouse~1": "The farm is abundant of the spiritual energy of your ancestors, my love.#$b#I sense they're looking out for you and our family.#$b#I'm quite pleased.$l",
+        //Weather
+        "companion_Farm_Rainy_Spouse": "%Jio wiped some of the rain in your face.#$b#Let's not stay out too long in the rain, my love.#$b#I don't want you getting ill.",
+        "companion_Farm_Snowy_Spouse": "%Jio embraced you.#$b#There. Now you're warmer, my love.#$b#I shall protect you even from the glistening snow!$h",
+        //Season
+        "companion_Farm_Spring_Spouse": "You seem to be doing a great job with how you're planning for the year of farming, my love.#$b#I'm proud of you.$h",
+        "companion_Farm_Summer_Spouse": "%Jio wiped a rolling sweat from your face.#$b#Don't push yourself too hard, my love.#$b#Let me lighten the load whenever you need it to be.$h",
+        "companion_Farm_Fall_Spouse": "We usually increase the intensity of our training during this season due to the upcoming winter, where the corruption is, for some unknown reason, stronger.#$b#Care to join me, my love?$h",
+        "companion_Farm_Winter_Spouse": "The bare farmlands give this place an empty feeling.#$b#Don't fret, my love. As I'll always be here, through thick and thin, just so you won't ever feel lonely.$l",
+        //Entering
+        "companionEnter_Farm_Spouse": "Traces of spiritual magic linger in the air...#$b#You and your family seem to have a strong affinity for the spiritual, my love.",
+        "companionEnter_Farm_Night_Spouse": "You have lurking would-be visitors on the borders of your farm.#$b#Some have good intentions, some have malicious acts planned.#$b#Be wary, @.#$b#If anything happens, I'll protect you, my love.",
+        //Night
+        "companion_Farm_Night_Spouse": "%Jio held your hand.#$b#If you're ever feeling lonely in nights like this...$l#$b#Don't be hesitant to call my name, as I'll be by your side before you would even know it, my love.$l",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+        "companion_Town_Rainy": "It's nice to brood in the rain.",
+        "companion_Town_Night": "It's peaceful here.#$b#Too peaceful...",
+        "companion_Town_Night~1": "In one of my late-night patrols, I saw something peculiar.#$b#A woman with hair the shade of green was walking towards the forest.#$b#It wasn't on my mission details so why should I bother.",
+        "companion_Town": "I dislike strolling around in public due to people staring.#$b#They don't seem to understand the practicality of my outfit.$a",
+        "companion_Custom_Ridgeside_RidgesideVillage": "This is a peaceful village filled with good people.#$b#It's nice to be assigned to this sector of the valley.$h",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "Kiwi has been spotted by a lot of locals lately and I've yet to speak to her about it.#$b#She should be more careful as she could get herself in danger.$s",
+        "companion_Custom_Ridgeside_Ridge": "Meditating under the waterfalls sounds difficult but it brings out inner peace once you've got used to it.#$b#Don't get me wrong, it is still a difficult task and requires a lot of concentration.#$b#But it's a nice analogy to the saying, sometimes through time and pain can someone find themselves.",
+        "companion_Custom_Ridgeside_RidgeFalls": "The Mountain Spirit, Mistress Raeriyala, is a being clouded in mystery.#$b#Even more so than our lady.#$b#A hint of pain hides behind her kind smile.#$b#It's like, she's suffering...#$b#Maybe it relates to why the Mistress has been overprotective of her since then.#$b#It's like she knows something is heaving down the great spirit, but she can't do anything about it.$s",
+        "companion_Custom_Ridgeside_RidgeFalls~1": "Don't forget to pay your respects to the Mountain Spirit, @.#$b#Will all that the spirit does to protect this valley, we should show our appreciation.#$b#Without her, Gabriella's forces would be stronger than they are now.#$b#I don't think any of us will be able to hold them off as long as we have like right now.#$b#And so, I owe my life to her.",
+        "companion_Custom_Ridgeside_RidgeForest": "An adventurer and cartographer once tried to find and document as many secrets as they can uncover in this forest.#$b#That was years ago, though. Long before my team was assigned to this sector.#$b#All that remains of them are their old tent and some pages from their journal.",
+        "companion_AdventureGuild": "The Adventure Guild and I.... aren't very fond of each other.#$b#Can we make this quick?$a",
+        "companion_Beach": "I wonder why the merfolk seem fond of patrolling this beach.#$b#You might have not noticed, but they're here often compared to any other beach in the valley.#$b#It's like, they're searching for something.",
+        "companion_WizardHouse": "The Wizard might be an odd one, but he means well.#$b#The following respects him to a high degree.",
+        "companion_AguarLab": "The Hydromancer here is always at hard at work making sure this mountain's unstable terrain doesn't collapse on in itself.#$b#He has been warning the people here for centuries but they don't seem to listen.#$b#He could've left them and given up, but instead, he remained and worked on making sure this mountain never hurts anyone.#$b#I deeply respect him.#$b#That is why this mountain is a major target of Gabriella, as she feeds off misery and chaos.$s#$b#With one of her goals is to destroy every last line of defense that's protecting this mountain.#$b#Imagine what would happen if she succeeds... Not just people losing their lives, but her gaining even more power to threaten this world's very existence.",
+
+      //Suggestion
+        "companionSuggest": "Let me accompany you today. Don't ask questions.#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Dating": "@? May I accompany you today? I wish to spend time with you.$l#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Spouse": "My love? May I accompany you today? I desire to spend time with you.$l#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "Good. Let's go.",
+        "companionSuggest_No": "Hmm...",
+
+        "companionSuggest_Yes_Dating": "I greatly appreciate it, @. I'll follow you anywhere.",
+        "companionSuggest_No_Dating": "I understand, @. Be careful on your travels.",
+
+        "companionSuggest_Yes_Spouse": "I greatly appreciate it, my love. I'll follow you anywhere.$h",
+  "companionSuggest_No_Spouse": "I understand, my love. Please be careful on your travels.",
+      }
+    }
+  ]
+}
