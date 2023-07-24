@@ -36,6 +36,13 @@
 			"Default": "true",
 			"Description": "True randomizes outfits between Rafseazz's outfits and ZoeDoll's outfits. False shows only ZoeDoll's outfits.",
 			"AllowBlank": false
+		},
+		"UndyneWolf's Kiarra Seasonals":
+		{
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "True randomizes outfits between Rafseazz's outfits and UndyneWolf's outfits. False shows only UndyneWolf's outfits.",
+			"AllowBlank": false
 		}
 	},
 
@@ -213,6 +220,29 @@
 				"HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true,
 				"ZoeDoll's Alissa Seasonals": false
 			}
+		},
+
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": "true"
+		},
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When":
+			{
+				"HasMod |contains=UndyneWolf.SeasonalKiarra": true,
+				"UndyneWolf's Kiarra Seasonals": true
+			}
+		},
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": "false",
+		  	"When":
+			{
+				"HasMod |contains=UndyneWolf.SeasonalKiarra": true,
+				"UndyneWolf's Kiarra Seasonals": false
+			}
 		}
 	],
 
@@ -270,6 +300,18 @@
 			}
 		},
 
+		//Kiarra
+		{
+			"LogName": "RSV Kiarra Seasonals",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalKiarraToken": true
+			}
+		},
+
 		/*-----------------------------------
 		Everyone else (Basic Code)
 		-----------------------------------*/
@@ -278,7 +320,7 @@
 		{
 			"LogName": "RSV Seasonals",
 			"Action": "EditImage",
-			"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/Jio, Characters/Jio, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kiarra, Characters/Kiarra, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne",
+			"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/Jio, Characters/Jio, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png"
 		},
 
