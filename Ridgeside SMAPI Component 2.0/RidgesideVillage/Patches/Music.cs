@@ -9,7 +9,7 @@ using StardewValley;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI.Utilities;
 using StardewModdingAPI.Events;
-    
+
 namespace RidgesideVillage
 {
     internal static class Music
@@ -23,6 +23,7 @@ namespace RidgesideVillage
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
+
             Log.Trace($"Applying Harmony Patch \"{nameof(Music)}\".");
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.getSongTitleFromCueName)),
@@ -31,11 +32,14 @@ namespace RidgesideVillage
 
             CueToSongMap = Helper.ModContent.Load<Dictionary<string, string>>("assets/MusicDisplayNames.json");
 
+            Helper.Events.Player.Warped += OnWarped;
+            Helper.Events.GameLoop.TimeChanged += OnTimeChanged;
+
         }
 
         internal static bool getSongTitleFromCueName_prefix(string cueName, ref string __result)
         {
-            if(CueToSongMap.TryGetValue(cueName, out var title))
+            if (CueToSongMap.TryGetValue(cueName, out var title))
             {
                 __result = title;
                 return false;
@@ -43,5 +47,37 @@ namespace RidgesideVillage
             return true;
         }
 
+        internal static void OnWarped(object sender, WarpedEventArgs e)
+        {
+            if (e.NewLocation.Name.Equals(RSVConstants.L_HOTEL) && JuneAtPiano())
+            {
+                Game1.changeMusicTrack("JunePiano");
+            }
+            else if (e.OldLocation.Name.Equals(RSVConstants.L_HOTEL) && Game1.getMusicTrackName() == "JunePiano")
+            {
+                Game1.updateMusic();
+            }
+        }
+
+        internal static void OnTimeChanged(object sender, TimeChangedEventArgs e)
+        {
+            if (Game1.currentLocation.Name.Equals(RSVConstants.L_HOTEL) && JuneAtPiano() && Game1.getMusicTrackName() != "JunePiano")
+            {
+                Game1.changeMusicTrack("JunePiano");
+            }
+            if (Game1.currentLocation.Name.Equals(RSVConstants.L_HOTEL) && !JuneAtPiano() && Game1.getMusicTrackName() == "JunePiano")
+            {
+                Game1.changeMusicTrack("none");
+            }
+        }
+
+        internal static bool JuneAtPiano()
+        {
+            NPC June = Game1.getCharacterFromName("June");
+            if (!June.currentLocation.Name.Equals(RSVConstants.L_HOTEL)) return false;
+            Vector2 pos = June.getTileLocation();
+            if ((pos.X == 13) && (pos.Y == 14)) return true;
+            return false;
+        }
     }
 }

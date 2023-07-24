@@ -163,9 +163,8 @@ namespace RidgesideVillage
             bool isSomeoneHere = false;
             foreach (NPC character in characters)
             {
-                //Tiles in Rectangle(14, 12, 3, 2) are behind the counter
-                Rectangle behindCounterArea = new Rectangle(x * 64, y * 64, w * 64, h * 64);
-                isSomeoneHere = isSomeoneHere || behindCounterArea.Contains((int)character.Position.X, (int)character.Position.Y);
+                Rectangle validArea = new Rectangle(x * 64, y * 64, w * 64, h * 64);
+                isSomeoneHere = isSomeoneHere || validArea.Contains((int)character.Position.X, (int)character.Position.Y);
             }
             return isSomeoneHere;
         }
