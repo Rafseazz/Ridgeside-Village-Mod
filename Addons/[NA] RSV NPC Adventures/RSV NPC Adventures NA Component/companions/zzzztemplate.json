@@ -1,7 +1,20 @@
 {
   "Format": "2.0",
-  "Name": "Kenneth",
+  "Name": "Bianka",
   "Skills": [
+    { "Name": "doctor" },
+    { "Name": "fighter" }
+
+    /*Template so my life's easier mwehehe - raf
+    
+    //Doctor Skill
+    {
+      "Name": "doctor",
+      "HealCooldown": 4800,
+      "MedKits": 3,
+      "CanSaveLife": true,
+      "HealSideEffectEvery": 180, //Regen tick
+    },
 
     //Fighter or Warrior Skill
     {
@@ -21,31 +34,78 @@
       "ReturnRadius": 11.0
     },
 
+    //Scared Skill
+    {
+      "Name": "scared",
+      "Duration": 1500,
+      "MinCooldown": 4,
+      "MaxCooldown": 40,
+      "CryChanceRatio": 8, //Lower = higher chance
+      "Frame": 1, //sprite frame when scared
+    },
+
+    //Forager
+    {
+      "Name": "forager"
+    },
+
+    //Spiritual
+    {
+      "Name": "spiritual",
+      "KeepFriendship": true, //Attack monsters = lose friendship
+      "FriendshipPointsLossOnAttack": 10,
+      "FriendshipPointsLossOnKill": 75
+    },
+
+    //Fisherman
+    {
+      "Name": "fisherman"
+    },
+
     //Shooter
     {
       "Name": "shooter",
-      "Damage": 3,
+      "Damage": 1,
       "CollisionSound": "hammer",
-      "Cooldown": 500, //ms
+      "Cooldown": 1000, //ms
       "ChargeTime": 300, //ms
-      "Projectile": 787, //springobjects tilesheet
+      "Projectile": 390, //springobjects tilesheet
       "Explode": false,
       "MinShootRange": 1.0,
       "MaxShootRange": 1.0,
       "ShotSpeed": 1.0,
-      "LightingShot": true, //emit light
+      "LightingShot": false, //emit light
     },
 
+    //Protector
+    {
+      "Name": "protector",
+      "Type": "", //IMPORTANT (Invincibility or Attack)
+      "UseChance": 0.5, //% chance
+      "Duration": 5,
+      "Cooldown": 120,
+      "Amount": 0, //Increase of attack power IF Attack Type protector
+      "Description": "[npc.protector]"
+    },
+
+    //Charmer
+    {
+      "Name": "charmer",
+      "GrantFriendshipFactor": 1.0, //Multiplier
+      "ExtraFriendshipPoints": 0 //Extra FP on top of the bonus
+    }
+
+    */
   ],
   "Rules": {
     //Basics
     "": "accept", //acceptance when asked
-    "!f Kenneth 1": "reject", //talked once
+    "!f Bianka 1": "reject", //talked once
     
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Kenneth 1000": "reject",
-    "k 75160158": "reject",
+    "!f Bianka 1000": "reject",
+    "k 75160017": "reject",
 
     //Marriage
     //no rules
@@ -55,9 +115,10 @@
   "BedtimeSpouse": "2530",
   
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
-  	"Crafting": 5
+  	"Luck": 3,
+  	"MagneticRadius": 64,
   },
-  "BuffsDescription": "[Kenneth.buffs]",
+  "BuffsDescription": "[bianka.buffs]",
   
   "Weapons": {
     /*"0": "Obsidian Edge",
@@ -73,14 +134,15 @@
 	  "10": "Infinity Blade"*/
 
     "0": "Obsidian Edge",
-    "10": "Battery Powered Battle Hammer"
+    "5": "Void Blessed Hammer"
   },
 
   "IdleBehaviors": [
     {
       "Behavior": "Animate",
       "Animations": [
-        "kenneth_onfirerandomly",
+        "bianka_dance",
+        "bianka_meditate"
       ],
       "Tendency": 3,
       "MinDuration": 3,
