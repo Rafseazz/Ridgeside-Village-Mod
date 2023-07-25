@@ -59,6 +59,15 @@ namespace RidgesideVillage
             );
 
             Helper.Events.Player.Warped += OnWarped;
+            Helper.Events.GameLoop.DayEnding += OnDayEnded;
+        }
+
+        private static void OnDayEnded(object sender, DayEndingEventArgs e)
+        {
+            if (Game1.getFarm().isBuildingConstructed("Gold Clock") && !Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_GOLDCLOCK))
+            {
+                Game1.MasterPlayer.mailReceived.Add(RSVConstants.M_GOLDCLOCK);
+            }
         }
 
         private static void OnWarped(object sender, WarpedEventArgs e)

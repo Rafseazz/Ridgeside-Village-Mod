@@ -37,7 +37,5 @@ namespace RidgesideVillage
 
         public bool EnableWTDRCompat = false;
 
-        public bool ImmersiveJioMarriageDialogue = true;
-
     }
 }
