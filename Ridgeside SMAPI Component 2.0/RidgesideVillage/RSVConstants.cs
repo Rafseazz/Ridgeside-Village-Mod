@@ -93,6 +93,7 @@ namespace RidgesideVillage
         public const string M_GOTSPRINKLERS = "RSV.SummitSprinklers";
         public const string M_OREAREAOPENED = "RSV.SummitOreArea";
         public const string M_SHEDADDED = "RSV.ShedAdded";
+        public const string M_GOLDCLOCK = "RSV.HasGoldClock";
 
         // Location names
         public const string L_VILLAGE = "Custom_Ridgeside_RidgesideVillage";
