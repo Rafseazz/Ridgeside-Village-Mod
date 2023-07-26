@@ -6,27 +6,26 @@
 	*********/
 
 	{
-		"LogName": "Corine Ninja Outfit Portrait",
-		"Action": "EditImage",
+		"LogName": "Corine Ninja Outfit Sprite",
+		"Action": "Load",
 		"Target": "Portraits/Corine",
 		"FromFile": "Assets/Portraits/Corine_Ninja.png",
-		"Update": "OnLocationChange",
 		"When": {
 			"HasSeenEvent: hostPlayer": 75160125,
-			"LocationName": "Custom_Ridgeside_RidgesideVillage, Custom_Ridgeside_Ridge, Farm, FarmHouse, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVCorineDate",
 			"DayOfWeek": "Thursday",
 		},
+	},
+	{
+		"Action": "Load",
+		"Target": "Portraits/Corine_Custom_Ridgeside_EzekielHouse",
+		"FromFile": "Assets/Portraits/Corine.png",
 	},
 
 	{
 		"LogName": "Maddie Lab Outfit Portrait",
-		"Action": "EditImage",
-		"Target": "Portraits/Maddie",
-		"FromFile": "Assets/Portraits/Maddie_Lab.png",
-		"Update": "OnLocationChange",
-		"When": {
-			"LocationName": "Custom_Ridgeside_AguarLab"
-		},
+		"Action": "Load",
+		"Target": "Portraits/Maddie_Custom_Ridgeside_AguarLab",
+		"FromFile": "Assets/Portraits/Maddie_Lab.png"
 	},
 
 	{
@@ -54,12 +53,10 @@
 
 	{
 		"LogName": "Irene Chef Outfit Portrait",
-		"Action": "EditImage",
-		"Target": "Portraits/Irene",
+		"Action": "Load",
+		"Target": "Portraits/Irene_Custom_Ridgeside_PurpleMansion",
 		"FromFile": "Assets/Portraits/Irene_Chef.png",
-		"Update": "OnLocationChange",
 		"When": {
-			"LocationName": "Custom_Ridgeside_PurpleMansion",
 			"HasSeenEvent |contains=75160431": false
 		},
 	},

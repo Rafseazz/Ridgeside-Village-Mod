@@ -162,7 +162,7 @@ namespace RidgesideVillage
                         Log.Error(BULLET + helper.Translation.Get("smapi.outdated"));
                     else
                         Log.Error(BULLET + helper.Translation.Get("mod.info", new { modName = dependency.name, author = dependency.author}));
-                    Log.Error(INDENT + dependency.url);
+                        Log.Error(INDENT + dependency.url);
                 }
             }
             if (!isInstalledCorrectly)

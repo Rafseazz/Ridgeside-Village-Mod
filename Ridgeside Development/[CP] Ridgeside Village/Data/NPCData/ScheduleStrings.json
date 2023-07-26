@@ -228,6 +228,16 @@
 			"checkup": "{{i18n:checkup.{{TargetWithoutPath}}}}",
 			"checkup_waiting": "{{i18n:checkup.waiting.{{TargetWithoutPath}}}}",
 			"checkup_waiting_2": "{{i18n:checkup.waiting.2.{{TargetWithoutPath}}}}",
+			"stage": "{{i18n:stage.{{TargetWithoutPath}}}}",
+			"aqualab": "{{i18n:aqualab.{{TargetWithoutPath}}}}",
+		},
+	},
+	{
+		"Action": "EditData",
+		"Target": "Strings/schedules/Keahi",
+		"When": { "HasSeenEvent": 75160374 },
+		"Entries": {
+			"stage": "{{i18n:stage.{{TargetWithoutPath}}-withLouie}}",
 		},
 	},
 	{
@@ -237,6 +247,16 @@
 		"Entries": {
 			"checkup": "{{i18n:checkup.{{TargetWithoutPath}}}}",
 			"checkup_waiting": "{{i18n:checkup.waiting.{{TargetWithoutPath}}}}",
+			"stage": "{{i18n:stage.{{TargetWithoutPath}}}}",
+			"aqualab": "{{i18n:aqualab.{{TargetWithoutPath}}}}",
+		},
+	},
+	{
+		"Action": "EditData",
+		"Target": "Strings/schedules/Trinnie",
+		"When": { "HasSeenEvent": 75160113 },
+		"Entries": {
+			"stage": "{{i18n:stage.{{TargetWithoutPath}}-withYuuma}}",
 		},
 	},
 	{
@@ -246,10 +266,13 @@
 		"Entries": {
 			"checkup": "{{i18n:checkup.y1.{{TargetWithoutPath}}}}",
 			"checkup_waiting": "{{i18n:checkup.waiting.{{TargetWithoutPath}}}}",
+			"in_lesson": "{{i18n:lesson.{{RandomNumber}}.Yuuma}}",
+			"stage": "{{i18n:stage.{{TargetWithoutPath}}}}",
+			"aqualab": "{{i18n:aqualab.{{TargetWithoutPath}}}}",
+			"afterplaying": "{{i18n:afterplaying.{{TargetWithoutPath}}}}",
 		},
 	},
 	{
-		"LogName": "Yuuma",
 		"Action": "EditData",
 		"Target": "Strings/schedules/Yuuma",
 		"When": { "HasSeenEvent": 75160249 },
@@ -373,6 +396,9 @@
 		"Entries": {
 			"checkup": "{{i18n:checkup.{{TargetWithoutPath}}}}",
 			"checkup_waiting": "{{i18n:checkup.waiting.{{TargetWithoutPath}}}}",
+			"stage": "{{i18n:stage.{{TargetWithoutPath}}}}",
+			"aqualab": "{{i18n:aqualab.{{TargetWithoutPath}}}}",
+			"afterplaying": "{{i18n:afterplaying.{{TargetWithoutPath}}}}",
 		},
 	},
 	{
@@ -401,6 +427,18 @@
 			"checkup": "{{i18n:checkup.{{TargetWithoutPath}}}}",
 			"checkup_waiting": "{{i18n:checkup.waiting.{{TargetWithoutPath}}}}",
 		},
+	},
+	{
+		"LogName": "June",
+  	"Action": "EditData",
+  	"Target": "Strings/schedules/June",
+  	"Entries": {
+    	"saloon": "{{i18n:June.saloon}}",
+    	"lobby": "{{i18n:June.lobby_bookshelf}}",
+    	"winter_16": "{{i18n:June.nightmarket}}",
+    	"winter_16.spouse": "{{i18n:June.nightmarket.spouse}}",
+    	"in_lesson": "{{i18n:lesson.{{RandomNumber}}.June}}",
+  	}
 	},
 
 	//Paula (a bit more complicated)

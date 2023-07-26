@@ -28,7 +28,7 @@
 		// Ridgeside
 		{
 			"Name": "PossibleCableCarNPCs",
-			"Value": "Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Anton, Ariah, Blair, Carmen, Faye, Irene, Kiarra, Lorenzo, Louie, Paula, Sean, Shanice, Sonny"
+			"Value": "Aguar, Alissa, Bert, Corine, Ezekiel, Flor, Freddie, Ian, Jeric, June, Keahi, Kenneth, Lenny, Lola, Maddie, Olga, Philip, Pika, Richard, Shiro, Trinnie, Ysabelle, Yuuma, Anton, Ariah, Blair, Carmen, Faye, Irene, Kiarra, Lorenzo, Louie, Paula, Sean, Shanice, Sonny"
 		},
 
 		// Vanilla
@@ -62,17 +62,6 @@
 			}
 		},
 
-		// June
-		{
-			"Name": "PossibleCableCarNPCs",
-			"Value": "{{PossibleCableCarNPCs}}, June",
-			"When": {
-				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
-				"HasMod |contains=ch20youk.JuneNPC": true,
-				"Season": "Fall, Winter"
-			}
-		},
-
 		// East Scarpe
 		{
 			"Name": "PossibleCableCarNPCs",
@@ -100,6 +89,16 @@
 			"When": {
 				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+
+		// Jorts and Jean
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, JeanCat, JortsCat",
+			"When": {
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=tiakall.jortsandjean": true
 			}
 		},
 
@@ -789,6 +788,22 @@
 				"HasMod |contains=Rafseazz.RSVSAATExtra": true
 			}
 		},
+
+			//Torts Schedule Tokens
+
+	{
+		"Name": "TortsRandomSchedule",
+		"Value": "Custom_Ridgeside_RidgesideVillage 98 115 0, Custom_Ridgeside_RidgesideVillage 143 72 3, Custom_Ridgeside_RidgesideVillage 64 20 2, Custom_Ridgeside_RidgesideVillage 23 32 0, Custom_Ridgeside_RidgesideVillage 9 48 2, Custom_Ridgeside_Ridge 22 38 0, Custom_Ridgeside_Ridge 22 14 2, Mountain 54 32 0, Mountain 39 9 1, Beach 56 9 1, Beach 38 31 2, Town 47 78 1, Town 87 50 2, Town 57 21 2, Town 74 99 1, Forest 35 7 2, Forest 20 73 1, Forest 96 94 2"
+
+	},
+	{
+		"Name": "TortsRandomSchedule",
+		"Value": "{{TortsRandomSchedule}}, Custom_EastScarpe 39 100 1, Custom_EastScarpe 6 91 2, Custom_EastScarpe 23 62 2",
+		"When": {
+			"HasMod |contains=Lemurkat.JacobEloise.CP": true
+		}
+	},
+
 	],
 
 	/*********

@@ -205,18 +205,6 @@
     }
   },
 
-  { // Schedule dialogue
-
-  "Action": "EditData",
-  "Target": "Strings/schedules/June",
-  "Entries": {
-    "saloon": "{{i18n:June.saloon}}",
-    "lobby": "{{i18n:June.lobby_bookshelf}}",
-    "winter_16": "{{i18n:June.nightmarket}}",
-    "winter_16.spouse": "{{i18n:June.nightmarket.spouse}}"
-  }
-},
-
 {
   "LogName": "June SDV Fair Dialogue",
   "Action": "EditData",
@@ -481,15 +469,6 @@
   },
   "Entries": {
     "winter_12": "{{i18n:June.richard}}",
-  }
-},
-{
-  "LogName": "June in bed dialogue",
-  "Action": "EditData",
-  "Target": "strings/StringsFromCSFiles",
-  "When": { "Spouse": "June" },
-  "Entries": {
-    "NPC.cs.4499": "{{i18n:June.in_bed}}",
   }
 },
 

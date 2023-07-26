@@ -146,6 +146,24 @@
 		},
 	},
 
+	//Torts ES hated item
+	{
+	"Action": "EditData",
+	"Target": "Data/NPCGiftTastes",
+	"When": {
+		"HasMod |contains=TheFrenchDodo.RodneyOBrien.JA": true,
+		"HasMod |contains=spacechase0.JsonAssets": true
+	},
+	"TextOperations": [
+		{
+			"Operation": "Append",
+			"Target": ["Fields", "Torts", 7],
+			"Value": "{{spacechase0.JsonAssets/ObjectId:An autographed photo}}",
+			"Delimiter": " "
+		},
+	]
+	},
+
 	{
 		"LogName": "Gift tastes - Zayne",
 		"Action": "EditData",

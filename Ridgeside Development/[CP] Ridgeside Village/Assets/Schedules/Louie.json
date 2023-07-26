@@ -15,5 +15,17 @@
 					},
 	},
 
+	//Playing with other kids
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Louie",
+		"Entries": {
+			"Mon": "700 Custom_Ridgeside_PurpleMansion 47 7 2/a1200 Custom_Ridgeside_RidgesideVillage 59 61 0 \"Strings\\schedules\\Louie:stage\"/1400 Custom_Ridgeside_RidgesideVillage 127 105 2 \"Strings\\schedules\\Louie:aqualab\"/1800 Custom_Ridgeside_PurpleMansion 47 7 2 \"Strings\\schedules\\Louie:afterplaying\"/2000 Custom_Ridgeside_PurpleMansion2ndFloor 17 9 2 louie_sleep",
+					},
+		"When": {
+			"HasSeenEvent|contains=75160374": true
+		}
+	},
+
 ]
 }

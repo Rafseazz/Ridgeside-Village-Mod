@@ -1,0 +1,89 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Trinnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Trinnie",
+      "Entries": {
+        "companionAccepted": "I'd be happy to!$h#$b#I'll be the best chaperone you ever have!$h",
+        "companionRejected": "Aw, mommy says I have to finish my big girl chores first.$s",
+        "companionRejectedNight": "What?$u#$b#This late at night?$u#$b#No, I'm not scared!$a#$b#I just can't go because mommy and daddy say I have to stay with them tonight.$a",
+        "companionDismiss": "Aww, done already?$s#$b#But we were having so much fun!$s#$b#Oh alright. I'll see if I can find Keahi again!$h",
+        "companionDismissAuto": "Hey, @!#$b#My mommy and daddy will be looking for me soon and Keahi might be missing me.$4#$b#I should go home now, bye!",
+        "companionRecruited": "Okay, so what are we doing today?#$b#Am I going to help you climb mountains?#$b#Will we fight monsters? Please let us fight monsters!$h#$b#Wait nevermind, let's not fight– I don't know how to fight monsters.$u#$b#Maybe we can go help out at Pika's I think Keahi can help us there instead$4",
+
+        "farmerRunAway": "Wait, slow down! I can't catch up!$s",
+        "heal": "Oh no! You're hurt.$s#$b#Here, I can help you with that.$h#$b#That's what I'm here for! To save the day!$h",
+        "nomedkits": "Uh oh.$u#$b#I'm out of mommy's special band-aid.$s",
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "Wow! Your crops are so many!$h#$b#I wish I could have my own farm soon.#$b#I'll fill it with flowers and lots and lots of trees that grow fruit so I can help Keahi make juice!$h",
+        "companion_Farm~1": "Oh wow! Your farm looks great, @!$h#$#b#Do you think I could put potted plants here?#$b#I can give you some of my cute flowers to decorate your farm!$h",
+        //Weather
+        "companion_Farm_Rainy": "Oh no!$s#$b#Mommy will get mad at me if I get mud on my overalls.$s",
+        "companion_Farm_Snowy": "Brr! It's so cold!$s#$b#Do you think we could go to Pika's and get something warm to drink?#$b#I could also ask Keahi if he has an extra jacket I could borrow.$4",
+        //Season
+        "companion_Farm_Spring": "The flowers are blooming so well this year.$h",
+        "companion_Farm_Summer": "Yikes.$u#$b#It's super hot here at this time.$s#$b#Maybe when we're done I could ask Keahi and Blair and Sean to go to the beach with me.$h#$b#Would you like to come too if we do?",
+        "companion_Farm_Fall": "The piles and flakes of leaves make me want to spread them all around!$h#$b#I could throw water at Keahi then throw a bucket of leaves on him after.$h#$b#He'll look like the fall monster! Tee hee.$h",
+        "companion_Farm_Winter": "Hey, @! Can I make some snow angels in your farm?#$b#Please? Please? Pretty PUH-LEEZ?$s",
+        //Entering
+        "companionEnter_Farm": "Wow, your farm looks so cool!$h#$b#But not as cool as big sis Alissa's. She has lots of fruits and other stuff growing on her farm.#$b#Maybe she could teach you how to make your farm as pretty as hers! I could ask her to help you!$h#$b#Or maybe I could help you!$h#$b#Big sis Alissa says that I'm good in farming too.$l",
+        "companionEnter_Farm_Night": "It's super dark now.$u#$b#Why are we still going into your farm?$u#$b#You crazy.$u",
+        //Night
+        "companion_Farm_Night": "I'm not scared of the dark anymore.#$b#Daddy says I'm a big girl.$h#$b#I'm even braver than Keahi.$h#$b#%Trinnie trips.#$b#WAAAAAH!$s",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+        "companion_Town_Rainy": "My hair's getting al wet!$s#$b#Mommy said I'll get sick my hair gets wet from the rain!$s#$b#@! I'll be sick! Oh no!$s",
+        "companion_Town_Night": "The pretty lamps are pretty at night time, right @?$h#$b#Not as pretty as me though!$h",
+        "companion_Town": "I wish there were more kids here in town.#$b#Sometimes, I wish we have a large kid army so we have bunches of tea parties!$h",
+        "companion_Custom_Ridgeside_RidgesideVillage": "I can smell tasty food! It must be from Pika's!$h#$b#Let's go, @, let's go!$h",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "I wanna stroll around town in my princess dress.#$b#But Mommy said no coz I'll get mud all over it.$s",
+        "companion_Custom_Ridgeside_RidgeFalls": "WOAH! This place is so pretty! Like straight out a fairytale!$h#$b#I bet I'm it's long lost princess!$h",
+        "companion_Custom_Ridgeside_RSVTheHike": "There was a sign near hear reading 'Beware of falling boulders'#$b#To be honest, I've never seen any falling boulder here before.#$b#The sign lied!$a",
+        "companion_Custom_Ridgeside_Ridge": "Blair says that this is a nice place to fish.#$b#I don't really like fishing though, so I don't go with them when Blair and Sean come here to fish.#$b#Fishies are slimey so I don't want to touch them.$u",
+        "companion_Custom_Ridgeside_SummitFarm": "Holy Yoba, look at the view!$h#$b#I'm the queen of the world!$h",
+        "companion_Custom_Ridgeside_RidgeForest": "@!!! Let's get out of here!!!$s#$b#I don't wanna be here anymore!$s",
+        "companion_Custom_Ridgeside_RSVCliff": "Jeric had a cute horse named Pegasus before.#$b#Then one day I didn't see her anymore.#$b#The adults say she flew back home.#$b#Aww, she could've taken me with her so I can rule the pegasuses and unicornsies.$s",
+        "companion_Custom_Ridgeside_RSVCableCar": "One time, Keahi and I wanted to prevent the cable car from going.#$b#So we put tons and tons of tapes in the floor!$h#$b#But then all of them got ripped when the car started!$s#$b#That was our whole month's allowance worth of tape!$s",
+        "companion_Custom_Ridgeside_3Bros": "Mommy and Daddy sometimes bring me when they buy groceries here.#$b#I just buy bunches of chocolate and candy because Daddy lets me.$h#$b#Mommy would take out half of what I put in the cart though, she's so mean!$s",
+        "companion_Custom_Ridgeside_3Bros2ndFloor": "This place has a second floor!?$u#$b#That's so cool! I never knew!$u",
+        "companion_Custom_Ridgeside_AguarLab": "Ew what are those in the bottles?#$b#I heard they are little monsters and that creepy blue hair man will take over the village with it.#$b#Mom said I shouldn't be mean to people though and blue hair old man is kind, just grumpy.#$b#Still, I'll be careful!$a",
+        "companion_Custom_Ridgeside_AlissaShed": "I like hanging out in here sometimes, because it feels like I'm the princess of fruits.#$b#BEHOLD! MY FRUITY SUBJECTS!$h",
+        "companion_Custom_Ridgeside_AlissaHouse": "Big sis Alissa has this notebook full of words and letters on top of words.#$b#She said they were chords.#$b#This music stuff don't make a lot of sense for me, but I love to hear her sing so I just act I understand it.$h#$b#Do you think I'll have a lovely voice when I get big too?$h#$b#I think so too, then Keahi will fall in love with me!$h",
+        "companion_Custom_Ridgeside_BertHouse": "Daddy has this big gridball helmet that has stinky sweaty smell.#$b#It has words that said Big Bad Bert too, but I think it's lying.#$b#Because Daddy is really sweet, and kind, and fluffy!$h",
+        "companion_Custom_Ridgeside_BertHouse2ndFloor": "See all these plants in my room?#$b#They're my roommates!$h#$b#I read them bed time stories every night so they get big and strong like me!$h",
+        "companion_Custom_Ridgeside_BlairHouse": "I never undertand why we pray.#$b#Miss Carmen and Blair sometimes kneel and pray in front of that big golden table.#$b#But Mommy said I should not be noisy and pray with them sometimes too because she said that's what good girls do.",
+        "companion_Custom_Ridgeside_EzekielHouse": "Miss Corine is really nice and pretty! We play with her doll house here sometimes!$h#$b#Granpappy Ezekiel is scary though, but he's kind.#$b#He gave me and Keahi some Ice Cream when we met him at Pika's the other day!$h",
+        "companion_Custom_Ridgeside_FayeHouse": "Miss Faye is my favorite adult ever!$h#$b#She gave me bunches of princess dresses and gowns for my birthday!$h#$b#She's my fairy godmother!$h",
+        "companion_Custom_Ridgeside_FreddieHouse": "Granny Lola always comes out of her shed smelling like coal and smoke.#$b#I think she likes to cook a lot but is bad at it that's why she burns a lot of food and she tries to keep it hiding as she's practicing.#$b#I mean, big sis Alissa's bad at cooking too, so I understand.$h",
+        "companion_Custom_Ridgeside_IanHouse": "Sean had us kids help him with minding the shop here one time and we had tons and tons of fun!$h#$b#People were coming here asking for help on bunches of stuff and we wrote them down on this book here.#$b#We didn't get payed though!$s#$b#But we got some Cherry Berry Shakies after!$h",
+        "companion_Custom_Ridgeside_JericHouse": "Mister Jeric is weird, but he has a nice fluffy hair that I like.$h#$b#I also like to chase after his chickens with Keahi when we visit his farm.$h#$b#But he has this one chicken that's chasing us instead!$u#$b#We call him 'The Poulterminator' and he's scary.$u",
+        "companion_Custom_Ridgeside_KennethHouse": "Mister Kenneth has so much computers!$u#$b#I wonder how much his electric bill is.#$b#One time, I heard Mommy scold Daddy about the electric bill because Dad forgot to turn off the TV and fell asleep in the couch the whole night.#$b#I don't know what an electric bill is but it sounds scary.$u",
+        "companion_Custom_Ridgeside_LennyHouse": "Miss Lenny doesn't want to be called Granny Lenny because she said she's still young.#$b#Her hair is all white and has lines in her face when she smiles though, but I do think she's really pretty, so I do think it fits to call her Miss Lenny.$h#$b#Whenever my family comes here sometimes, Miss Lenny always brings out cookies and hot cocoa!$h#$b#She's the best!$h",
+        "companion_Custom_Ridgeside_LogCabinHotelEventHall": "I want my next birthday party to be here!$h#$b#We can have bunches and bunches of balloons everywhere! Then tons of flowers!$h#$b#That would be so pretty!$h",
+        "companion_Custom_Ridgeside_LogCabinHotelLobby": "I have to admit, Miss Ysa is really pretty.$a#$b#But I don't like that Keahi says she's pretty but not me.$a#$b#Do you think if I color my hair pink, Keahi will say I'm pretty too?$s",
+        "companion_Custom_Ridgeside_LogCabinHotel2ndFloor": "Sometimes, I see Miss Flor reading in here.#$b#She has bunches and bunches of books!$u#$b#I bet she has a very big brain too! Maybe that's why she slouches because her brain is heavy. Yep yep.#$b#I want to be as smart as Miss Flor someday.$h",
+        "companion_Custom_Ridgeside_LogCabinHotel3rdFloor": "Yay! The floor in this place is really soft and bouncy!$h#$b#Keahi and I like to lay down here and jump around.#$b#It's sometimes smells like sweat though.$u",
+        "companion_Custom_Ridgeside_MaddieHouse": "Miss Maddie showed me some of her bracelets and necklaces last time and they were so pretty!$h#$b#She told me not to tell anyone though, so just pretend you didn't know that, okay?$h",
+        "companion_Custom_Ridgeside_PaulaClinic": "Miss Paula came back to the village a few seasons before you arrived, @.#$b#She said she came back from a scary place called 'The Battlefield'.$u#$b#She looked sad, so Jas, Keahi, Vincent and I gave her a big big BIG hug.#$b#She cried a bit though, but she smiled, so mission accomplished!$h",
+        "companion_Custom_Ridgeside_PikaHouse": "This house always smells like food.#$b#I wonder why Pika isn't big and fluffy though, coz if I were him, I'd get to eat bunches of tasty food everyday!$h#$b#Mommy said that's how Daddy got so fluffy!$h",
+        "companion_Custom_Ridgeside_PurpleMansion": "This place is really big! Like woah!$u#$b#I always thought a princess was living in this purple castle, then too bad it was just a mean kid named Louie.#$b#Louie is mean he said my hair looked like a big seaweed wig.$s#$b#I don't like him.$s",
+        "companion_Custom_Ridgeside_PurpleMansion2ndFloor": "That was bunches and bunches of stairs!$u#$b#I hope we can slide our way back down.$s",
+        "companion_Custom_Ridgeside_RSVSewers": "Ew! This place stinks!$s",
+        "companion_Custom_Ridgeside_RSVSummitHouse": "This place looks really old, @.#$b#Are we gonna clean it up then turn it into a princess castle?$h",
+        "companion_Custom_Ridgeside_ShiroHouse": "Yuuma has bunches and bunches of pretty drawings.#$b#But he rarely plays with us recently.$s#$b#I hope we get to play with him more soon.$s",
+
+      //Suggestion
+        "companionSuggest": "Hey 'ya, @! Can I follow you today? I promise I'll be good! Pleaaasseee?$h#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes":"Yay!#$h#$b#We're going to have so much fun today!$h#$b#We'll be going off on exciting adventures!$h",
+        "companionSuggest_No": "You're no fun!$s",
+      }
+    }
+  ]
+}

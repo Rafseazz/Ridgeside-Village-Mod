@@ -1,0 +1,24 @@
+﻿{
+  "Format": "1.26.0",
+  "Changes": [
+
+    {
+      "Action": "Include",
+      "FromFile": "Data/Animations.json, Data/Mail.json, Strings/SpeechBubbles.json"
+    },
+
+    {
+      "Action": "Include",
+      "FromFile": "Dialogues/Alissa.json, Dialogues/Corine.json, Dialogues/Daia.json, Dialogues/Flor.json, Dialogues/Ian.json, Dialogues/Jeric.json, Dialogues/Jio.json, Dialogues/Keahi.json, Dialogues/Kenneth.json, Dialogues/Kiwi.json, Dialogues/Maddie.json, Dialogues/Philip.json, Dialogues/Shiro.json, Dialogues/Trinnie.json, Dialogues/Ysabelle.json"
+    },
+
+    {
+      "LogName": "Load translations",
+      "Action": "Include",
+      "FromFile": "Locale/{{language}}/content.json",
+      "When": {
+        "HasFile:{{FromFile}}": true
+      }
+    }
+  ]
+}

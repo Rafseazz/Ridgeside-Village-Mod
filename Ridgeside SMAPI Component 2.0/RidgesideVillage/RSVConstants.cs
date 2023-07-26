@@ -93,6 +93,7 @@ namespace RidgesideVillage
         public const string M_GOTSPRINKLERS = "RSV.SummitSprinklers";
         public const string M_OREAREAOPENED = "RSV.SummitOreArea";
         public const string M_SHEDADDED = "RSV.ShedAdded";
+        public const string M_GOLDCLOCK = "RSV.HasGoldClock";
 
         // Location names
         public const string L_VILLAGE = "Custom_Ridgeside_RidgesideVillage";
@@ -103,6 +104,7 @@ namespace RidgesideVillage
         public const string L_CABLECAR = "Custom_Ridgeside_RSVCableCar";
         public const string L_CLIFF = "Custom_Ridgeside_RSVCliff";
         public const string L_CLINIC = "Custom_Ridgeside_PaulaClinic";
+        public const string L_HOTEL = "Custom_Ridgeside_LogCabinHotelLobby";
         public const string L_HOTEL2 = "Custom_Ridgeside_LogCabinHotel2ndFloor";
         public const string L_HOTEL3 = "Custom_Ridgeside_LogCabinHotel3rdFloor";
         public const string L_ALISSASHED = "Custom_Ridgeside_AlissaShed";

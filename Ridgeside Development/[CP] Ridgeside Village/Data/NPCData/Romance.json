@@ -273,6 +273,28 @@
 	},
 },
 
+	//Philip not-so-extra assets (for Seasonal Outfits compat)
+	{
+		"LogName": "Philip work portrait",
+		"Action": "Load",
+		"Target": "Portraits/Philip_Work",
+		"FromFile": "Assets/Portraits/Philip.png"
+	},
+	{
+		"LogName": "Philip work sprite",
+		"Action": "Load",
+		"Target": "Characters/Philip_Work",
+		"FromFile": "Assets/Characters/Philip.png"
+	},
+
+	//Corine extra assets
+	{
+		"LogName": "Corine Extra Assets",
+		"Action": "Load",
+		"Target": "Portraits/Corine_Ninja, Characters/Corine_Ninja",
+		"FromFile": "Assets/{{Target}}.png"
+	},
+
 	//Flor Extra assets for 14 heart event
 	{
 		"LogName": "Flor Extra Assets",
@@ -281,19 +303,11 @@
 		"FromFile": "Assets/{{Target}}.png"
 	},
 
-	//Maddie Extra assets for 14 heart event
+	//Maddie Extra assets
 	{
 		"LogName": "Maddie Extra Assets",
 		"Action": "Load",
-		"Target": "Portraits/Maddie_Merida, Portraits/Maddie_Ariel, Portraits/Maddie_Elsa, Characters/Maddie_Merida, Characters/Maddie_Ariel, Characters/Maddie_Elsa",
-		"FromFile": "Assets/{{Target}}.png"
-	},
-
-	//Maddie lab outfit
-	{
-		"LogName": "Daia Extra Assets",
-		"Action": "Load",
-		"Target": "Portraits/Maddie_Lab, Characters/Maddie_Lab",
+		"Target": "Portraits/Maddie_Merida, Portraits/Maddie_Ariel, Portraits/Maddie_Elsa, Characters/Maddie_Merida, Characters/Maddie_Ariel, Characters/Maddie_Elsa, Portraits/Maddie_Lab, Characters/Maddie_Lab",
 		"FromFile": "Assets/{{Target}}.png"
 	},
 
@@ -352,9 +366,9 @@
             "Anton": "RidgesideSpouseRooms/16",
             "Irene": "RidgesideSpouseRooms/17",
             "Zayne": "RidgesideSpouseRooms/18",
-			"June": "RidgesideSpouseRooms/19",
-			"Faye": "RidgesideSpouseRooms/20",
-			"Bryle": "RidgesideSpouseRooms/21",
+						"June": "RidgesideSpouseRooms/19",
+						"Faye": "RidgesideSpouseRooms/20",
+						"Bryle": "RidgesideSpouseRooms/21",
         }
     },
 
@@ -396,9 +410,9 @@
     		"Anton": "RSVSpousePatios/16/0 0 0/0 0",
     		"Irene": "RSVSpousePatios/17/0 0 0 0 0 0 0 0 0 0 0 0 17 17 17 17 17 18 17 17 18 18 17 17 17 18 17 17 17 17/0 0",
     		"Zayne": "RSVSpousePatios/18/22 22 22 23 22 22 23 22 22 22 22 23 22 23 22 23 22 22 22 23/0 0",
-			"June": "RSVSpousePatios/19/35 35 35/0 0",
-			"Faye": "RSVSpousePatios/20/16 17 18 17/0 0",
-			"Bryle": "RSVSpousePatios/21/0 0 0/0 0",
+				"June": "RSVSpousePatios/19/35 35 35/0 0",
+				"Faye": "RSVSpousePatios/20/16 17 18 17/0 0",
+				"Bryle": "RSVSpousePatios/21/0 0 0/0 0",
     	}
     },
 

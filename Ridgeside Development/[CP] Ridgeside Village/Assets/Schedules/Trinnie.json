@@ -35,5 +35,17 @@
 		}
 	},
 
+	//Playing with other kids
+	{
+		"Action": "EditData",
+		"Target": "Characters/Schedules/Trinnie",
+		"Entries": {
+			"Mon": "700 Custom_Ridgeside_RidgesideVillage 92 39 3/a1200 Custom_Ridgeside_RidgesideVillage 57 60 1 trinnie_jump \"Strings\\schedules\\Trinnie:stage\"/1400 Custom_Ridgeside_RidgesideVillage 125 108 2 \"Strings\\schedules\\Trinnie:aqualab\"/1800 Custom_Ridgeside_BertHouse 13 5 3/2100 Custom_Ridgeside_BertHouse2ndFloor 18 5 0 trinnie_sleep",
+					},
+		"When": {
+			"HasSeenEvent:": "75160113, 75160374",
+		}
+	},
+
 ]
 }

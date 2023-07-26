@@ -1,0 +1,36 @@
+{
+    "Name": "Ridgeside Village Seasonal Outfits",
+    "Author": "Rafseazz",
+    "Version": "1.0",
+    "UniqueID": "Rafseazz.RSVSeasonalOutfits",
+    "MinimumApiVersion": "2.11.2",
+    "UpdateKeys": [ "Nexus:???" ],
+    "Dependencies": [
+        {
+            "UniqueID": "Rafseazz.RSVCP",
+            "IsRequired": true
+        },
+
+        //False Dependencies
+        {
+            "UniqueID": "x3n3as.RSVSeasonalIan",
+            "IsRequired": false
+        },
+        {
+            "UniqueID": "x3n3as.RSVSeasonalCorine",
+            "IsRequired": false
+        },
+        {
+            "UniqueID": "x3n3as.RSVSeasonalYsabelle",
+            "IsRequired": false
+        },
+        {
+            "UniqueID": "ZoeDoll.RSVSeasonalAlissa",
+            "IsRequired": false
+        },
+    ],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher",
+        "MinimumVersion": "1.9"
+    }
+}
