@@ -159,7 +159,7 @@ namespace RidgesideVillage
 
         private static bool CheckCaughtBefore(Farmer who, int fishID)
         {
-            if (Helper.ModRegistry.IsLoaded("DaLion.ImmersiveProfessions") && who.professions.Contains(100 + Farmer.angler))
+            if (Helper.ModRegistry.IsLoaded("DaLion.Overhaul") && who.professions.Contains(100 + Farmer.angler))
             {
                 return false;
             }
