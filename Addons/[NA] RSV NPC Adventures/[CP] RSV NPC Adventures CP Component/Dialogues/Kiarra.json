@@ -1,0 +1,132 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Kiarra", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiarra", //Change Name
+      "Entries": {
+        "companionAccepted": "Sure, why not? I know some great hiking spots around here..$h",
+        "companionAccepted_Dating": "So are you asking me out on a date, then?$4#$b#Of course I'll be happy to go with you.$h",
+        "companionAccepted_Spouse": "I'd love to, treasure.$l#$b#Where would you like to go this time?$h",
+
+        "companionRejected": "Sorry, I have to take care of some things first.#$b#Try not to solve all the world's problems today, okay? Leave some for the rest of us.$h",
+        "companionRejected_Dating": "Sorry, @.#$b#I still have to finalize some posters for a client.#$b#Enjoy though, @.#$b#Make a difference!$l",
+        "companionRejected_Spouse": "Sorry, treasure, I'm a little tied up now. I'll make it up to you when I'm done.$2#$b#Or if you want to do some phone banking with me, you can hop right in!$h",
+
+        "companionRejectedNight": "Sorry, it's a little late for me, @..#$b#I have to be up and at 'em early tomorrow.",
+        "companionRejectedNight_Dating": "It's already late, @.#$b#You need your beauty sleep to take on the world, too.$h",
+        "companionRejectedNight_Spouse": "You want to head out at this hour? I'm good, but don't let me stop you from getting stuff done.", 
+
+        "companionDismiss": "Done for the day? It was fun, let's do it again sometime.$1",
+        "companionDismiss_Dating": "Aw, our date is over already?#$b#So, uh... do I get a good night kiss?$4",
+        "companionDismiss_Spouse": "Okay, you finish up and I'll see you at home.",
+
+        "companionDismissAuto": "Hey, it's getting pretty late, so I'm gonna jet. Got a big day tomorrow!$1",
+        "companionDismissAuto_Dating": "I'm going to head back home now, okay? Lorenzo will think we're up to some shenanigans if I stay out too much later.$4",
+        "companionDismissAuto_Spouse": "Whew, I'm bushed. I'll catch you at home, okay?",
+
+        "companionRecruited": "Okay, where are we heading, cousin?",
+        "companionRecruited_Dating": "Okay, let's go! Take me somewhere exciting!$1",
+        "companionRecruited_Spouse": "So, where did you have in mind? Someplace private, perhaps?$1",
+
+        "farmerRunAway": "Slow down, cousin! I'm built for endurance, not speed!$3",
+        "giveForages": "Tried this one before? I promise it's edible.$1",
+        "heal": "Hold still for a sec and let me patch you up.",
+        "nomedkits": "Dannazione! I'm out of bandages!$2",
+
+        "farmerRunAway_Dating": "If you want me to chase you, I'm all for it, but you have to let me catch you eventually.$1",
+        "giveForages_Dating": "Here, @. Gotta keep your energy up!",
+        "heal_Dating": "C'mere. I'm not going to kiss it better, but you should find my first-aid skills better than that.$1",
+        "nomedkits_Dating": "You're really good at getting banged up, and not in the fun way, huh?$2",
+
+        "farmerRunAway_Spouse": "@, do I need to keep you on a leash?$1",
+        "giveForages_Spouse": "Here. A treasure for my treasure.$1",
+        "heal_Spouse": "Oh, you. What would you do without me?$1",
+        "nomedkits_Spouse": "Merda! I'm out of supplies!$2",
+
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "So this is the fabled %farm farm, huh?$1",
+        "companion_Farm~1": "Mm, smells like earth and grass out here!  And just a bit of fertilizer, heh.",
+        //Weather
+        "companion_Farm_Rainy": "We're soaked already, want to dry off inside for a bit?",
+        "companion_Farm_Snowy": "There's snow all in my hair. The true biodegradable glitter, huh?$1",
+        //Season
+        "companion_Farm_Spring": "Mm, smells like earth and grass out here!  And just a bit of fertilizer, heh.",
+        "companion_Farm_Summer": "And this is why we don't wear all black all the time in summer, Kiarra. You did this to yourself.$2",
+        "companion_Farm_Fall": "The colors out here are amazing. Like nature's last hurrah before winter, huh?",
+        "companion_Farm_Winter": "With the snow covering everything, it looks like a picture out here. Or maybe a blank canvas!$1",
+
+        //Dating
+        //Weather
+        "companion_Farm_Rainy_Dating": "Ugh, I'm so totally wet.#$b#You did this to me, you know!$1",
+        "companion_Farm_Snowy_Dating": "The snow in your hair looks like little diamonds. It makes me want to paint your picture.$4",
+        //Season
+        "companion_Farm_Spring_Dating": "Someday, @, this will all be yours.#$B#You're supposed to respond with 'what, the fenceposts?' Did you never see that meme on social media?$1",
+        "companion_Farm_Summer_Dating": "Hey, @, think these are ready to be harvested? And could be eaten, like, right now?$1",
+        "companion_Farm_Fall_Dating": "You know, part of being a creator is just experiencing a lot to form the seeds of future projects.#$b#I'm definitely planting this imagery!$1",
+        "companion_Farm_Winter_Dating": "Porca miseria, @, you've got to have some leg muscles on you if you're walking around in snow like this all the time.",
+
+        //Spouse
+        //Weather
+        "companion_Farm_Rainy_Spouse": "Should we duck inside for a bit?#$b#If you manage to catch a cold because of this, I'm going to strap you to the bed until you get well, just so you know.$1",
+        "companion_Farm_Snowy_Spouse": "You know, I never get tired of seeing you covered in tiny snowflakes. It's so cute.$1",
+        //Season
+        "companion_Farm_Spring_Spouse": "Need a hand with some of the spring planting, @? I have no idea what I'm doing still, but happy to help!$1",
+        "companion_Farm_Summer_Spouse": "Are you staying hydrated, @? Want some of my water?#$b#You know, in some cultures this is like a kiss.$4",
+        "companion_Farm_Fall_Spouse": "You know, I appreciate that you never cut the grassy areas or rake the leaves. Those are important to local bug populations.#$b#Most people may not care, but that's why your farm always has fireflies, too!$1",
+        "companion_Farm_Winter_Spouse": "Lorenzo would always tell me to wear a hat when I'd go out in temperatures like this, but I was stubborn. Never liked how a hat looks on my head.",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        "companion_Town": "I don't really get much opportunity to come down to Pelican Town, so it's nice to visit. I'm really only down for festivals and such.",
+        "companion_Forest":  "Wow, the forest down at this elevation is completely different from the mountains.",
+        "companion_Woods": "Yoba Santo, what a cool little glade! It feels so removed from civilization, it's almost magical.$1",
+        "companion_Mine": "I think I hear bats. Cool animals, but be careful around them, @. They can pass on some really nasty diseases.",
+        "companion_Saloon": "Thirsty, @? Or you just want to turn this into a party?$1",
+        "companion_Sewer": "Are those fish in the sewer water? Life, uh, really does find a way, huh?$3",
+        "companion_BugLand":  "Uh, Lewis really needs to come check on his reclamation pond more than once a decade.$3",
+        "companion_JojaMart":  "You brought me here because we're going to commit some sabotage, right?",
+        "companion_ArchaeologyHouse":  "Ooh, while we're here, let's check the shelves. I need a couple of new reference texts.",
+        "companion_BathHouse_Entry":  "Oh, time for a little R&R? I'll just follow you in, don't mind me.$1^Oh, time for a little R&R? Let's take a load off.$1",
+        "companion_BathHouse_Entry_Dating":  "Ooh, a date at the spa? You do know how to pamper me, @.$4",
+        "companion_BathHouse_Entry_Spouse":  "We might have a bath at home, but there's nothing like a proper steamy bathhouse for a little spice.$4",
+        "companion_BathHouse_MensLocker":  "Ah, the forbidden land! Nah, just kidding, Lorenzo used to take me in here with him when I was a kid.$1",
+        "companion_BathHouse_MensLocker_Dating":  "Ah, the forbidden land! I haven't been in here since I was a kid. Kinda makes me want to be a bit naughty like a kid, too.$4",
+        "companion_BathHouse_WomensLocker_Dating":  "Just the two of us in this space alone, away from men... It's kind of exciting, isn't it?$4",
+        "companion_Custom_Ridgeside_RidgesideVillage": "You ever think about different perspectives, @? I grew up here, but you're new. Everything must seem so unfamiliar.",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "I know every nook and cranny of this place, so feel free to ask me for trivia, @.$1",
+        "companion_Custom_Ridgeside_3Bros2ndFloor": "You could take me anywhere in the world, @, but you wanted to come to my house?$1",
+        "companion_Custom_Ridgeside_3Bros2ndFloor_Dating": "Col cavolo, @, not here! My brother's downstairs!$4",
+        "companion_Custom_Ridgeside_3Bros2ndFloor_Spouse": "Even though I'm married and have my own house with you, @, this place will always feel like home, too.",
+        "companion_Custom_Ridgeside_Ridge": "It doesn't take long to get out of town and into the wilderness, huh, cousin?",
+        "companion_Custom_Ridgeside_RidgeFalls": "What an incredible waterfall!$1#$b#Huh? Spirit? What do you mean, @?",
+        "companion_Custom_Ridgeside_RidgeForest": "I can't believe we found a path further up! Let's look around everywhere, @!$1",
+        "companion_Custom_Ridgeside_SummitFarm": "Wow, I didn't even realize there was an old farm up here. I could never see the summit clearly because of all the mist.",
+        "companion_Custom_Ridgeside_RSVCliff": "How do you feel about heights, @? I dare you to get closer than me.$1",
+        "companion_Custom_Ridgeside_RSVTheHike": "This is my favorite place to come hike. I'm always poking around up here.$1",
+        "companion_Custom_Ridgeside_RSVGreenhouse2": "Wait a minute, I don't remember there being a greenhouse here before. You been doing secret construction projects in your free time, @?",
+        "companion_Custom_Ridgeside_AguarCave": "What a neat little cave! I wonder what kind of ecosystem's growing down here?$1",
+
+      //Suggestion
+        "companionSuggest": "Hey, you want to hang out today?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Let's do it!!#$r -1 0 No#Maybe next time?",
+        "companionSuggest_Dating": "Want to have a little date today, @?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Let's do it!#$r -1 0 No#Maybe next time?",
+        "companionSuggest_Spouse": "Want to run away into the woods and become hermits?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Let's do it!#$r -1 0 No#Maybe next time?",
+
+        "companionSuggest_Yes": "Sweet, let's go!",
+        "companionSuggest_No": "No worries, catch you later then!",
+
+        "companionSuggest_Yes_Dating": "Yeah! Let's go have some fun!",
+        "companionSuggest_No_Dating": "I'll hold you to that, then.",
+
+        "companionSuggest_Yes_Spouse": "Haha, I suppose we can return later, but let's go be hermits today then!",
+        "companionSuggest_No_Spouse": "You're so responsible sometimes. No worries, we can abandon civilization some other time.",
+
+      }
+    }
+  ]
+}

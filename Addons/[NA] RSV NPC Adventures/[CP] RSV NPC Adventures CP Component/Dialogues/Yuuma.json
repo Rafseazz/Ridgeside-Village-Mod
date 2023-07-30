@@ -1,0 +1,48 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Yuuma", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Yuuma", //Change Name
+      "Entries": {
+        "companionAccepted": "Oh, okay. Let's go I guess.",
+        "companionRejected": "No, sorry. I'm busy.",
+        "companionRejectedNight": "No, it's dark out. Bye.",
+        "companionDismiss": "Oh, okay. Bye then.",
+        "companionDismissAuto": "I'll be going home now. Bye.",
+        "companionRecruited": "Hm? Where are headed to?",
+
+        "farmerRunAway": "Don't leave me behind!",
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "Your farm looks nice, @.$h#$b#I like how hardworking you are.",
+        "companion_Farm~1": "Do you need help around here?#$b#I can help you if you want.#$b#But only after I do my house chores first though.",
+        //Weather
+        "companion_Farm_Rainy": "Grown-ups say you shouldn't stay out in the rain for too long or else you get sick.#$b#I don't want my friends getting sick, so take care! Okay?$s",
+        "companion_Farm_Snowy": "The farm looks lonely in this season, huh?#$b#But I bet you have animals to keep it company.$h#$b#For me, I think that's nice.",
+        //Season
+        "companion_Farm_Spring": "Crops in the spring are tasty.$h#$b#I always like cooking spring crops for my brother when he's feeling down.$h#$b#I hope he's cheered up when I do, though.",
+        "companion_Farm_Summer": "I wonder if I can buy some cold juice later before I get back home.#$b#So that if ever anyone needs it, it's there.$h#$b#Oh! You can always tell me if you want one too. I can drop you some.",
+        "companion_Farm_Fall": "I always see Keahi and Trinnie play around piles of leaves.#$b#They make such a mess, but it seems like they're having fun though.",
+        "companion_Farm_Winter": "Before my father left for work, we would always build a snowman in our lawn.$h#$b#Once we made something so big my big brother thought it was a monster!$h",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        "companion_Town": "Even if Pelican Town is a bit far, I still like coming here.#$b#It's nice.$h#$b#The people are too!$h",
+        "companion_Custom_Ridgeside_RidgesideVillage": "Can we check on my big brother when we pass by my house?#$b#I just want to make sure he's fine.",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "I once saw Mr. Sonny bring a basket full of fruits to the ridge.#$b#Maybe he went out for a picnic?#$b#It's not my business to eavesdrop though. Mother said that's bad.",
+
+      //Suggestion
+        "companionSuggest": "Hey, so... Can I tag along with you today?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "Yay! Thank you.$h",
+        "companionSuggest_No": "Oh, it's okay. I understand.$s",
+
+      }
+    }
+  ]
+}

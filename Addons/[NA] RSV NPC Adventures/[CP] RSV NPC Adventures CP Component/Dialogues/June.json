@@ -1,0 +1,150 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for June", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/June", //Change Name
+      "Entries": {
+        "companionAccepted": "Sure, I could use some fresh air.$h",
+        "companionAccepted_Dating": "I'd be happy to go with you, @.$8",
+        "companionAccepted_Spouse": "Of course I will, honey. I'm always eager to be by your side.$8",
+
+        "companionRejected": "I'm sorry, I have to prepare some sheet music for work.$s",
+        "companionRejected_Dating": "Could we do a raincheck, @? I'm just so busy today...$6#$b#Some other time, okay? Take care.$h",
+        "companionRejected_Spouse": "Sorry, dear. I can't right now... I'm not really in the mood for a stroll.$s#$b#I'll just wait for you at home, okay?$h#$b#I'll keep the bed warm for you.$9",
+
+        "companionRejectedNight": "Now? Don't you think it's a bit late for that?$6#$#Sorry, @, but I'll have to pass...$s",
+        "companionRejectedNight_Dating": "It's awfully late, @.$7#$b#Not to mention dark... And eerie...$s",
+        "companionRejectedNight_Spouse": "I'm sorry, I just don't have the energy to go running around at this hour.$s#$b#But I'll make it up to you when you get back, I promise.$9",
+
+        "companionDismiss": "Thank you for bringing me along. I had a lot of fun!$h#$b#We should do this again soon.",
+        "companionDismiss_Dating": "I had a great time with you today, @.$1#$b#I'm looking forward to going on more adventures with you soon.$1",
+        "companionDismiss_Spouse": "I had a great time, @.$h#$b#Stay safe. I love you, honey <$4",
+
+        "companionDismissAuto": "You and I both have to get up early, so it's probably best that I head home now.#$b#Don't stay out too late, @.",
+        "companionDismissAuto_Dating": "Well, I'm gonna head back to the hotel now, honey.#$b#Hm... Any chance I could tempt you into spending the night with me?$9#$b#Well, I'll be waiting...$9",
+        "companionDismissAuto_Spouse": "C'mon, honey, let's head home.#$b#Don't want to? Well, what if I promise to make it worth your while?$9",
+
+        "companionRecruited": "I wonder what adventures await us today, @?$1",
+        "companionRecruited~1": "I may not be of much use fighting, but I'm plenty tall, so maybe I'll make a good human shield...?$3",
+        "companionRecruited_Dating": "So, what are we doing today?$h#$b#Oh, I know! Maybe we could go up to the Ridge and watch the fish for a while?$8",
+        "companionRecruited_Dating~1": "Hm... Honey, do we have to go fight monsters today?$s#$b#Because when you asked me to explore town alone with you, I had some other things in mind...$9",
+        "companionRecruited_Spouse": "Spending time with you is more than I could ever ask for.$l#$b#So, where do you want to go, @?$h",
+        "companionRecruited_Spouse~1": "You know I love traveling with you, honey.$1#$b#No matter where you take me, it always feels like home with you by my side.$l",
+
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "You've done an amazing job with the farm.$h",
+        "companion_Farm~1": "The crops are so vibrantly colored and the backdrop is beautiful.#$b#What you've built here is a true work of art.",
+        //Weather
+        "companion_Farm_Rainy": "Ugh, rain!?$a#$b#...We should get inside asap, @. Too long out here and my hair gel will get all sticky.$s",
+        "companion_Farm_Snowy": "Cold weather really is superior.#$b#You can always put more layers on, but there's a limit to how many you can take off, y'know?$h#$e#Hm, you don't know? Well, perhaps I could show you, then...$9",
+        //Season
+        "companion_Farm_Spring": "Say, do you grow any fruit trees? Alissa told me about the ones her family grows, and I've been dying to try some.$h",
+        "companion_Farm_Summer": "I always get teased for being named after a summer month yet hating the heat...$s#$b#But in my native language, \"June\" isn't a month, it's just a name. It's not my fault it's contradictory.$s",
+        "companion_Farm_Fall": "Say, are you able to make apple juice? Not apple wine, just juice.#$b#...Oh. That's a shame.$s",
+        "companion_Farm_Winter": "What sort of things do you do on your farm in the winter, @? Could you show me?$h",
+        "companionEnter_Farm": "I can really tell how much of yourself you've poured into this farm, @.$h#$b#It's funny, even your farm is so distinctly \"you\".$8",
+        "companionEnter_Farm_Night": "It's getting late, @. I'll have to head home soon.",
+        "companion_Farm_Night": "The night here is simply breathtaking.$h",
+
+        //Dating
+        //General
+        "companion_Farm_Dating": "It's astonishing how you take care of the farm all by yourself, @. I think it's amazing.$h#$b#But then again, you always amaze me.$l",
+        "companion_Farm_Dating~1": "Hm, maybe I should move out of the hotel and live here instead?$h#$b#Oh, I wouldn't intrude. You could just stick me in the doghouse and bring me inside when you feel like it.$9",
+        //Weather
+        "companion_Farm_Rainy_Dating": "The rain is really coming down...$s#$b#Do you have an umbrella on you? If not, I could cover you with my coat.",
+        "companion_Farm_Snowy_Dating": "@, here, come closer.$h#$b#Stay tight against me and I promise I'll keep you warm.$l",
+        //Season
+        "companion_Farm_Fall_Dating": "There's nothing in this world as beautiful as the fall colors.$8#$b#Well, with one notable exception.$9",
+        "companion_Farm_Winter_Dating": "You know how each snowflake is a unique, beautiful crystal glimmer that never repeats twice?$h#$b#That's exactly what each moment with you feels like.$l",
+        //Custom
+        "companionEnter_Farm_Dating": "Hmm...$h#$b#Oh, I just... I can see myself staying here with you, is all. It's... homey.$l",
+        "companionEnter_Farm_Night_Dating": "It's a beautiful night for a stroll, don't you think?$1",
+        "companion_Farm_Night_Dating": "This place is so big... Do you ever get lost here?#$b#I know I would. I have the navigational skills of a Roomba.$s",
+
+
+        //Spouse
+        //General
+        "companion_Farm_Spouse": "My love, you are so good at what you do.$l#$b#I know I'm no expert, but in all my travels, this farm is the best I've seen.$h",
+        "companion_Farm_Spouse~1": "Honey, do you speak any foreign languages?$l#$b#Well, tu sei l'amore della mia vita <$4#$e#Oh, I don't actually speak the language.#$b#Actually, I asked Lorenzo to teach that phrase to me so I could say it to you... Is that weird?$s",
+        //Weather
+        "companion_Farm_Rainy_Spouse": "Look at you! You're absolutely soaked.$h#$b#Good thing you have me to take care of you. Now let's get inside, shall we?$9",
+        "companion_Farm_Snowy_Spouse": "Oh, honey, you're shivering! My poor baby...$7#$b#Come closer to me, love. I'll warm you right up.$l",
+        //Season
+        "companion_Farm_Spring_Spouse": "Oh no, I can feel my eyes itching already... I think I forgot to take allergy medicine today.$7#$b#I swear, I never got allergies this bad until I came here.$s#$b#But don't worry. It's all worth it just to be here, to be with you.$l",
+        "companion_Farm_Summer_Spouse": "Okay, I've got to get out of these clothes before I melt.$s#$b#@, I need you to take me inside and cut the clothes off me like a paramedic treating an emergency victim.$3#$b#...Just kidding. Please don't ever cut my clothes up. I *will* cry.$7",
+        "companion_Farm_Fall_Spouse": "Fall has always been my favorite season, but after moving here, I don't see how anyone couldn't love it as much as I do.$h#$b#The forest turns such beautiful shades of red and gold and everything in between... It feels like I'm living in a dream.$h#$b#But then again, maybe that's just because I'm living with you.$l",
+        "companion_Farm_Winter_Spouse": "Sometimes winter can get too cold even for me, but at least it gives me an excuse to snuggle with you.$h#$b#Not that I ever need an excuse. How about we go warm up by the fire right now?$9",
+        //Custom
+        "companionEnter_Farm_Spouse": "Ah... Every time I enter, it feels like the first time.$h#$b#What? Of course I meant the farm, honey! Tsk tsk, get your mind out of the gutter.$9",
+        "companionEnter_Farm_Night_Spouse": "Home sweet home!$h#$b#That was exhausting, but every second spent with you is worth it.$l#$b#Now, what do you say we go recharge?$9",
+        "companion_Farm_Night_Spouse": "...Oh, did you say something, honey?$7#$b#Sorry, I was lost in your eyes.$h#$b#Though I'd rather like to get lost in you right now...$9",
+
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        //Town
+        "companion_Town": "I need to remember to organize my sheet music.#$b#Did I bring all of it to the lobby already?$3",
+        "companion_Town~1": "Such a quaint little town, but it's homey.$1",
+        "companion_Town_Rainy": "The sound of rain is so calming, don't you think?$h",
+        "companion_Town_Night": "I'm glad I get to be here. You'd never see stars in Zuzu City like this.$4",
+        "companion_Town_Night~1": "Midnight strolls are always nice. It's a great opportunity to clear your head.$h",
+        //Ridgeside Village
+        "companion_Custom_Ridgeside_RidgesideVillage": "Strolling around the village is a great way to pass the time.$1#$b#If only I didn't have to work so often...$s#$b#Not that I don't enjoy my work, of course! There's just... so little time in the day, y'know?$7",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "I always start off my week with a walk around the whole village. Want me to show you my route?$1#$b#It's rather long, but somehow I don't think a bit more alone time with you would hurt.$9",
+        "companion_Custom_Ridgeside_RidgesideVillage_Spouse": "Ooh, let's visit Pika's if we have the time.$h#$b#The things that man can do with a clove of garlic should be studied by world peace ambassadors.$8",
+        //Ridgeside Clinic
+        "companion_Custom_Ridgeside_PaulaClinic": "Have you not been feeling well? Please take care of yourself, @.$7",
+        //Log Cabin Hotel
+        "companion_Custom_Ridgeside_LogCabinHotelLobby": "Did you know this piano is nearly forty years old? Richard has taken such good care of it, you'd never guess.$1",
+        "companion_Custom_Ridgeside_LogCabinHotelLobby_Dating": "...Oh, what's this? The key to my private hotel room that's only one floor above us fell out of my pocket!$6#$b#It's a good thing I found it, seeing as it's the only key, to a room I have all to myself, with a bed in it, and did I mention all the privacy...?$9",
+        "companion_Custom_Ridgeside_LogCabinHotelLobby_Spouse": "Oh, the hotel?$6#$b#Don't tell me, you want to rent a room together?$l#$b#Great minds. I can't tell you how many times I thought about sneaking you into my room back when we were dating...$9",
+         "companion_Custom_Ridgeside_LogCabinHotelLobby2ndFloor": "The rooms in the hotel are a bit cramped, but I don't mind.#$b#It just encourages me to get out more and do stuff like this.$h",
+         "companion_Custom_Ridgeside_LogCabinHotelLobby2ndFloor_Dating": "...$3#$e#What am I thinking about? Oh, nothing, just how easy it would be to take you to my room, lock the door behind us, and make you–$9#$b#Ugh, nevermind. If I say anymore, I'll be in actual pain.$2",
+         "companion_Custom_Ridgeside_LogCabinHotelLobby2ndFloor_Spouse": "...Be careful now, @. If you're trying to tempt me, I can guarantee it'll only end with Richard fining us for a noise violation.$9",
+         "companion_Custom_Ridgeside_LogCabinHotelLobby3rdFloor": "Do you want to go to the gym?#$b#Hm, I'm not really dressed for it, so I'll have to pass, but I assure you I can do plenty of lifting.$9",
+         "companion_Custom_Ridgeside_LogCabinHotelLobby3rdFloor_Dating": "Are you going to work out?#$b#Well, I'm happy to spot you if you want, but I'm pretty sure I'll get far too distracted to do it right.$9#$b#Maybe we should just skip to the post-workout stretch? Now *that's* something I can do for you right.$9",
+         "companion_Custom_Ridgeside_LogCabinHotelLobby3rdFloor_Spouse": "Hey, honey... Remember that time we snuck out onto the balcony together?$9#$b#It was freezing cold, but the warmth of your skin on mine felt like it would make me melt, and I...$l#$b#...Dammit. Can we just go home already? If you're trying to tease me into submission, you've more than succeeded.$5",
+        //Ridge Falls
+        "companion_Custom_Ridgeside_RidgeFalls": "Ah, how serene...!$8#$b#I just can't believe a place this romantic is tucked away back here, right under everyone's noses.$h#$b#Thank you for bringing me here, @.$8",
+        "companion_Custom_Ridgeside_RidgeFalls_Dating": "I could spend forever here with you, @.$h#$b#Just you and me, lying in the grass, listening to the water trickle by us, while I pick tiny pink petals out of your hair and cover you in kisses...$l",
+        "companion_Custom_Ridgeside_RidgeFalls_Spouse": "Hm... How cold do you think this water is? It looks like it'd be warm, don't you think?#$b#Because I'd love nothing more than to jump into this lake with you.$h",
+        //Beach
+        "companion_Beach": "I've always loved coming to the beach.$1#$b#The only issue is the sand gets everywhere...$3#$b#And I do mean everywhere...$s",
+        "companion_Beach_Winter": "The snow and the sea... Some people don't get to see either in their lifetimes, but here we are with both right in front of us.$h#$b#I don't know. It just makes me think that, no matter how much I've been through, I'm still so blessed to be surrounded by nature.$h",
+        "companion_Saloon": "The saloon? Hey, I'm always down.$h#$b#Let's just not stay too long, okay? Because– Hm, how to put this delicately...$s#$b#The more I drink, the more cocky I get, and soon enough I'll invite you back to my room for what I'll pretend is an \"after-party\"...$3#$b#That or I'll hit on the jukebox. One of the two.$s",
+        "companion_Saloon_Dating": "A drink? ...No, I really shouldn't.$s#$b#Hey, don't look at me like that. I could drink you under the table if I wanted. Back in Zuzu I used to pound–$9#$b#...And that's exactly why I won't.$s",
+        "companion_Saloon_Spouse": "...Psst, honey. Could you order the peach cocktail and pretend like it's for you, and then sneak it to me?$7#$b#...I know, I know. I shouldn't be embarrassed, but... please?$s",
+        "companion_Custom_Ridgeside_RSVCliff": "It's awfully windy up here, but doesn't the breeze feel nice?$8",
+        "companion_Custom_Ridgeside_RSVCliff_Dating": "Honey, come here. Let's just sit on the bench and relax a bit.$h@#b#I want to take some time to admire the world that brought me to you.$l",
+        "companion_Custom_Ridgeside_RSVCliff_Spouse": "Want to know a secret, honey?$h#$b#Whenever it's just the two of us in the cable car, my mind can't help but drift to all the things I could do to you in ten minutes...$9",
+        "companion_Custom_Ridgeside_Ridge": "I'm glad this place is so close to the hotel. It's a great place to come and sit on the swing, watch the fish, clear my head...$h",
+        "companion_Custom_Ridgeside_Ridge_Dating": "Honey, how about I sit on the swing and you sit in my lap?$h#$b#Don't worry about it falling, I'll hold you tight.$l",
+        "companion_Custom_Ridgeside_Ridge_Spouse": "Why don't we sit on the edge of the dock together for a bit?$8#$b#...Actually, nevermind. I'd be tempted to kiss you, and then I'd be tempted to do more than just kiss you, and that makes it all too likely for us to fall in.$h",
+        "companion_Custom_Ridgeside_RSVNinjaHouse": "...What exactly is this place? Though I get the feeling that I'm not supposed to know...$s",
+        "companion_Custom_Ridgeside_LolaShed": "Well, this place sure is odd. Who does it belong to?$3#$b#...Lola? Ha ha, very funny. Now really, whose shed is this?$6",
+
+
+      //Suggestion
+        "companionSuggest": "Hey, @? Can I tag along today?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Dating": "Say, @... Would you like to go for a walk together?$h#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Spouse": "@? I know you're busy, but I want to spend some more time together...$s#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "Really?$h#$b#Great, I could use a chance to stretch my legs.$8",
+        "companionSuggest_No": "Oh, I'm sorry. I didn't realize you were busy.#$b#Another time, then.$h",
+
+        "companionSuggest_Yes_Dating": "Great!$h#$b#Well then, let's get going!$8",
+        "companionSuggest_No_Dating": "Oh, no worries! We'll catch up later.$h",
+
+        "companionSuggest_Yes_Spouse": "You mean it? Great!$8#$b#Sorry if I'm being clingy. I just really like hanging out with you. You're my best friend, y'know?$l",
+        "companionSuggest_No_Spouse": "Oh, okay...$s#$b#Don't be gone too long, though. I'm already starting to miss you.$l",
+
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Blair", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Blair", //Change Name
+      "Entries": {
+         "companionAccepted": "Sure, @!#$b#I'll show you how to have some fun around here!$h",
+        "companionAccepted_Dating": "Afraid you're gonna get bored without me huh?$7#$b#Of course I'll come with you.$h",
+        "companionAccepted_Spouse": "Of course, babe! I'm always ready for an adventure with you!$h",
+
+        "companionRejected": "Sorry, Sean and I have plans to cook up something for Keahi and Trinnie.$7",
+        "companionRejected_Dating": "Sorry babe, Mama's been asking me to fix up some of our 'special bait'.$s#$b#I'll make it up to you on our next date.<",
+        "companionRejected_Spouse": "Aww, sorry babe. But you're just gonna have to miss me right now.#$b#I promised Trinnie I'd teach her how to cartwheel.#$b#I'll make it up to you when we get back home okay?$l",
+
+        "companionRejectedNight": "Uh, isn't it too late?#$b#Mama would be suspicious if I stroll around this late with an acquaintance.",
+        "companionRejectedNight_Dating": "Aww, babe. It's late and I'm tired.$s#$b#Can we reschedule the stroll another time?",
+        "companionRejectedNight_Spouse": "Aww, babe. It's late already.$s#$b#Can't we just stay in bed, cuddle, and... play games?$7",
+
+        "companionDismiss": "Wow, that was some adventure!$h#$b#We've got to bring Sean and the kids next time!$h#$b#We'll play games and look for treasure with them! Haha!",
+        "companionDismiss_Dating": "Thank you for taking me on your stroll, babe.#$b#I really had fun!$h",
+        "companionDismiss_Spouse": "It still feels like the first time we took a stroll together.$l#$b#I really had fun going on an adventure with you babe.$h#$b#Till our next adventure?$l",
+
+        "companionDismissAuto": "Hey, it's late already. Mama will be loca if I get home too late.$u",
+        "companionDismissAuto_Dating": "Babe, I'll go ahead alright?#$b#I've got an early morning tomorrow.#$b#See you tomorrow, babe! Muah! <",
+        "companionDismissAuto_Spouse": "Babe, I'll head on home alright?#$b#I'll prep the bed and start up the fire for us. Teehee.$l#$b#Then we'll cuddle and play around.$h",
+
+        "companionRecruited": "So, where are we going?#$b#Did you wanna go to the falls?#$b#Or the Ridge?#$b#Oh, oh! Or maybe the beach!$h",
+        "companionRecruited_Dating": "What's our route today babe?",
+        "companionRecruited_Spouse": "Now, now, where are you taking your wonderful wife?$7#$b#Haha, I'm excited to stroll with you, babe! I miss you.$l",
+
+        "farmerRunAway": "Hold up! Jeez you're fast! We could use you playing tag!$h",
+        "giveForages": "Keahi says these are good. Here, have some!",
+
+        "farmerRunAway_Dating": "Jeez babe, slow down. What are you running away from?$u",
+        "giveForages_Dating": "Babe, you gotta try these!",
+
+        "farmerRunAway_Spouse": "Babe! No fair. Don't leave me here alone.$s",
+        "giveForages_Spouse": "Babe, have some!",
+        
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "Wow, that's quite the farm you got there, @.",
+        "companion_Farm~1": "Have you ever thought about putting some yard games on your farm?#$b#You've got so much space it'll be fun to play around here!$h",
+        //Weather
+        "companion_Farm_Rainy": "Ah, rain. Crops' source of food for growth.#$b#We just have to keep our heads dry, mama says they make our head frizz.$u",
+        "companion_Farm_Snowy": "Brr, it's cold. Why don't we make snow people in front of your house?$h",
+        //Season
+        "companion_Farm_Spring": "The crops are really blooming during this time of year, huh?#$b#You're really doing a good job on your farm, @!$h",
+        "companion_Farm_Summer": "Sheesh, it gets really hot out here.$u#$b#But man, your crops look good.#$b#What do you do to keep them healthy during summer?",
+        "companion_Farm_Fall": "Remember to rake in those fallen leaves.#$b#If you'd like, I could help you during my free time!$h",
+        "companion_Farm_Winter": "It's crazy how the winter season covers up everything.#$b#Oh well, it gives you enough time to plan out your landscape for spring!$h",
+
+        //Dating
+        //General
+        "companion_Farm_Dating": "Nice babe, looks like you really did a lot of hard work on your farm!",
+        "companion_Farm_Dating~1": "You're farm looks so good babe.$h#$b#If you need my help with anything just let me know okay?",
+        //Weather
+        "companion_Farm_Rainy_Dating": "Yikes, this rain isn't good for our hair babe.$u#$b#I'm scared you'll see me frizz out.$s#$b#Whatever! Let's play tag, babe! It's fun to play under the rain!$h",
+        "companion_Farm_Snowy_Dating": "Babe, let's go make snow angels!$h",
+        //Season
+        "companion_Farm_Spring_Dating": "I like how the crops bloom around your farm, babe!$h#$b#Just like how I bloom whenever I'm with you...$l",
+        "companion_Farm_Summer_Dating": "Babe, come here let me wipe of your sweat.$l",
+        "companion_Farm_Fall_Dating": "What if we make a pile with those leaves and jump in them together?$h",
+        "companion_Farm_Winter_Dating": "I sometimes find the blank space of winter pretty.#$b#Hmm, what if we make crazy messages in the snow?$h",
+
+        //Spouse
+        //General
+        "companion_Farm_Spouse": "Our farm has grown a lot, babe.#$b#You did a good job nurturing it from the start.$l",
+        "companion_Farm_Spouse~1": "Hmm, maybe we should build swings and the like so that Trinnie and Keahi could come here and play?#$b#Maybe even our future kids someday.$l",
+        //Weather
+        "companion_Farm_Rainy_Spouse": "It really is fun strolling under the rain with you.$h",
+        "companion_Farm_Snowy_Spouse": "Let's make a snow-family babe!#$b#That'll be a cute way to welcome our guests into  the farm.$l",
+        //Season
+        "companion_Farm_Spring_Spouse": "The crops are thriiving, babe! The farm looks so pretty!$h",
+        "companion_Farm_Summer_Spouse": "Jeez this heat really makes me want to take some layers off.$u#$b#Haha, on a more serious note though. The farm looks spectacular. We have to make sure we water them just right.",
+        "companion_Farm_Fall_Spouse": "Maybe we could use the leaves as part of our costumes for Spirit's eve, don't you think so babe?",
+        "companion_Farm_Winter_Spouse": "One good thing about winter is that we get to spend more time together than focusing on the crops in our farm.$h#$b#Don't get me wrong though, I also like working on the farm with you, babe.$l",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        "companion_Town": "If you like we could check out the playground. Last time I went here Sean buried some 'treasure' maybe we could look for it together.$h",
+        "companion_Custom_Ridgeside_RidgesideVillage": "The village has always been a safe space for me, ever since papa left.$s#$b#I still miss him very much.$s",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "It's crazy how this village was once inhabited by magical creatures, or so the storybooks says.",
+
+      //Suggestion
+        "companionSuggest": "Hey! Can I hang out with you today?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Dating": "Hey! Let's go on a date today? Come on! Please?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Spouse": "Hey, babe! Let's go on a date today? Come on! Pretty please?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "Nice! Thanks, @. I swear I'll show you a good time!",
+        "companionSuggest_No": "Aw, too bad. Ok bye.$s",
+
+        "companionSuggest_Yes_Dating": "Yay, you really can't stand being away from me too, huh babe?$h",
+        "companionSuggest_No_Dating": "Fine, maybe next time.$s",
+
+        "companionSuggest_Yes_Spouse": "Yay! Another adventure with you!$h#$b#We'll imagine going to far off lands and fighting dragons around!$h",
+        "companionSuggest_No_Spouse": "Aw, okay. I'll go with Sean and the kids then.",
+
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Lenny", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lenny", //Change Name
+      "Entries": {
+         "companionAccepted": "Why didn't ya invite me sooner? Let's go!$h",
+        "companionRejected": "I'm sorry but I have a bunch of paperwork deadlines today!",
+        "companionRejectedNight": "Sorry, no. Tonight's book-and-wine-bath-night!",
+        "companionDismiss": "That was fun little adventure. Haha! Thanks for the time!",
+        "companionDismissAuto": "Phew! I think I had enough adventure today. Thanks for the time though!",
+        "companionRecruited": "Buckle up, buckaroo! Where are we headed first?$h",
+
+        "farmerRunAway": "Hey! Wait up! These old bones aren't as limber as they used to be!",
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "My oh my! Your farm's just a beauty, isn't it?$h#$b#I'm sure your grandparents would be real proud of what you have here.",
+        "companion_Farm~1": "Ooh! We up to do some farm work today?#$b#We can call up Ian and Sean so it's a party!$h",
+        //Weather
+        "companion_Farm_Rainy": "The rain can be fun, yeah I get it.#$b#But let's not spend too much time under it though! Medical bills are expensive!$h#$b#So let me teach you how to do a rain dance! Here look!$h",
+        "companion_Farm_Snowy": "Brrr! It's chilly out here, isn't it?#$b#Ah, these old bones don't seem to cope well with extreme cold.$s#$b#I would appreciate it if we get out the cold as soon as we can.",
+        //Season
+        "companion_Farm_Spring": "Now now, I know I have a lot of paperwork to do because it's the start of a new year but...#$b#Come on! I can't just let a beautiful day like this go to waste if I spend it indoors, right?$h",
+        "companion_Farm_Summer": "Lewlew, I mean, my brother always adored the beach when we were young.#$b#We lived close by one, so it we were there almost everyday!$h#$b#I'm not sure how he feels about iit now though.$h#$b#But just mention something about purple swimming trunks and he'll have his face redder than a tomato!$h",
+        "companion_Farm_Fall": "You know, when I was but a wee lass, I always saw Madame Maive visit this farm alongside your grandmother.#$b#I guess maybe because before she had the some free time during this season because its when her parents usually go out on business trips.",
+        "companion_Farm_Winter": "So, how are your animals during the winter?#$b#You have a horse around too, right?#$b#Ooh! I wanna see your big boy or girl up close if we have time!$h",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        "companion_Town": "Hey! Wanna drop by Lewlew's office and annoy him?#$b#Haha! I'm kidding! I actually do have some papers here I can drop by if we have a chance though.",
+        "companion_Custom_Ridgeside_RidgesideVillage": "Ah, I'll never get tired strolling around this village.#$b#For some reason, it just gives me a sense of calm and joy seeing things be in order.#$b#Between you and me, I genuinely appreciate the help Madame Maive lends me in managing all this.#$b#I honestly think that I'd be having a hard time if she isn't there to help me out when I'm in complicated situations.$h#$b#But I gotta pull my own weight too, you know?#$b#So I can help make this place as happy as it can be.$h",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "Let's visit everyone whenever we can! I think that would be a fun little adventure we can do today!$h#$b#Announcing uninvited has less consequences when you're an authority! Hehe.#$b#Hey! Don't look at me like that! I promise I'm not abusing my powers!$h",
+
+      //Suggestion
+        "companionSuggest": "Oh, @! Are you free today? Mind if I tag along?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "I could always count on you! Lead the way!",
+        "companionSuggest_No": "Aww, that's a bummer. But I understand! See ya!",
+
+      }
+    }
+  ]
+}

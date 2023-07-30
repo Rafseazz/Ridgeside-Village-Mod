@@ -1,0 +1,91 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Zayne", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Zayne", //Change Name
+      "Entries": {
+        "companionAccepted": "Sure! I've got time to spare.",
+        "companionAccepted_Dating": "For you, I'd be glad to.",
+        "companionAccepted_Spouse": "For you, my whole day's free.",
+
+        "companionRejected": "My apologies, but I'll have to decline.",
+        "companionRejected_Dating": "I apologize, but I'm quite busy today. Perhaps next time?",
+        "companionRejected_Spouse": "I apologize, but I'm afraid I'm quite busy today, love.",
+
+        "companionRejectedNight": "I'm afraid it's quite late for a stroll, isn't it?",
+        "companionRejectedNight_Dating": "I apologize, but it's quite late for a stroll, isn't it?",
+        "companionRejectedNight_Spouse": "I apologize, love. But I need to wake up early for tomorrow's endeavors.",
+
+        "companionDismiss": "I had a splendid time. See you around!",
+        "companionDismiss_Dating": "It was a splendid time around your company. See you around!",
+        "companionDismiss_Spouse": "I had a splendid time with you, love. I'll see you around, then.",
+
+        "companionDismissAuto": "I'm afraid I better get going. Goodbye!",
+        "companionDismissAuto_Dating": "I'm afraid I have to head home now, @. Goodbye!",
+        "companionDismissAuto_Spouse": "I'm afraid I'll be heading home earlier, love. I'll see you later! Take care!",
+
+        "companionRecruited": "So what are the plans for today?",
+        "companionRecruited_Dating": "So what are the date plans for today?",
+        "companionRecruited_Spouse": "Lead the way, love. I'll follow you anywhere.$h",
+
+        "farmerRunAway": "Your pace is too fast! Slow down!",
+
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "Just from the view, I can see how good a quality your farm possesses. Good work, @.$h",
+        "companion_Farm~1": "Do you have any helpers around, @?#$b#I can't imagine you running all this alone.#$b#Wait, what? You do!?$3",
+        //Weather
+        "companion_Farm_Rainy": "The beauty of this valley is that pollution isn't as much of a problem.#$b#And so, being soaked under this rain doesn't feel as unsanitary than any the polluted cities I'm constantly visiting.",
+        "companion_Farm_Snowy": "With all this snow, the farm looks kind of bare.#$b#But at least you have your animals for another source of income, right?$h",
+        //Season
+        "companion_Farm_Spring": "Flower related merchandise are usually a hit during this season.#$b#And so, it's usually a big focus of my aunt on her designs.#$b#But she once mentioned she grew to adore flowers because of your grandmother.#$b#I wonder how close they were before.",
+        "companion_Farm_Summer": "I wonder if it's a good idea to invest in beachside resorts and amenities this season.#$b#I'll be contacting the investment management department about this later.",
+        "companion_Farm_Fall": "Grandmother seems to find solace in this season, or at least it's what she once mentioned to me before.#$b#Apparently she has fond memories of this season from her childhood.#$b#She never disclosed what memories though.",
+        "companion_Farm_Winter": "Besides animals, what would be your other sources of income during this season?#$b#I bet farmers are always resourceful enough to find alternative work in the meantime, right?",
+
+        //Dating
+        //General
+        "companion_Farm_Dating": "If you ever need some assistance on the farm, don't hesitate to tell me, okay?#$b#I can always hire workers to work for you if the need ever rises.$h",
+        "companion_Farm_Dating~1": "Your honest hard work never goes by unseen, you know that?#$b#The valley deeply admires your work, @. You should be proud of that!$h",
+        //Weather
+        "companion_Farm_Rainy_Dating": "If you're ever sick from working under the rain, don't hesitate to contact me.#$b#I'll send for the best medical team there is to care for you! I'll be there too of course!$h",
+        "companion_Farm_Snowy_Dating": "So what if... I buy you a personal snow plow?#$b#Oh wait! That sounds dangerous! Nevermind!$3",
+      
+        //Spouse
+        //General
+        "companion_Farm_Spouse": "I would never be not impressed with the fruits of your labor, love.#$b#Your farm's success is evident in how pretty and functional it looks!$h",
+        "companion_Farm_Spouse~1": "Your honest hard work never goes by unseen, you know that?#$b#The valley deeply admires your work, love. And I'm loudly proud of you for that!$h",
+        //Weather
+        "companion_Farm_Rainy_Spouse": "The rain's a nice help for watering crops, right?#$b#I'm fascinated on how farmers use the elements to their advantage.",
+        "companion_Farm_Rainy_Spouse~1": "If you're ever sick from working under the rain, don't hesitate to contact me.#$b#I'll send for the best medical team there is to care for you! I'll be there too of course!$h",
+        "companion_Farm_Snowy_Spouse": "So what if... I buy you a personal snow plow operated by a professional?#$b#Ah! Wait! I don't think we have room to park that here though.$s",
+    
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        "companion_Town": "Small and quiet towns like this is a nice break from all the busy cities I've been to lately.#$b#I'm glad we have our home here.$h",
+        "companion_Custom_Ridgeside_RidgesideVillage": "If we have time, we should pay a visit to Grandmother and the family.#$b#Grandmother has been asking how you've been by the way.#$b#I think she likes you!$h",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "Louie said that this place is boring or needs something new.#$b#I believe that he's wrong though, and that he just hadn't put the time in to actually appreciate this village.#$b#My late Grandfather was a silent man, but he deeply appreciated nature and the sights around this village.#$b#So I'm thankful to him for the influence he instilled to me.$h",
+
+      //Suggestion
+        "companionSuggest": "May I ask if I can join you on your endeavors today? I'm quite interested.#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Dating": "May I ask if I can join you today? I would like to spend some time with you.#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Spouse": "May I ask if I can join you today? I would like to spend some time with you today, love.#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "Splendid! Shall we?",
+        "companionSuggest_No": "I understand. Thank you for the time!",
+
+        "companionSuggest_Yes_Dating": "Splendid! Shall we?",
+        "companionSuggest_No_Dating": "I understand. Maybe next time then.",
+
+        "companionSuggest_Yes_Spouse": "Splendid! Shall we, love?",
+        "companionSuggest_No_Spouse": "I understand. I shall we be seeing you around, then.",
+
+      }
+    }
+  ]
+}

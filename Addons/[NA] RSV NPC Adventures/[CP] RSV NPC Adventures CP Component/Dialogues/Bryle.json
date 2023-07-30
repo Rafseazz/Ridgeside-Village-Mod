@@ -1,0 +1,91 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Bryle", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Bryle", //Change Name
+      "Entries": {
+         "companionAccepted": "Alright! Where are we headed first?",
+        "companionAccepted_Dating": "Alright! Where are we headed first, babe?",
+        "companionAccepted_Spouse": "Alright! Where are we headed first, babe?",
+
+        "companionRejected": "I'm busy today, sorry!",
+        "companionRejected_Dating": "I'm sorry but I'm a bit busy today.$s",
+        "companionRejected_Spouse": "I'm sorry but I'm a bit busy today, babe. Maybe next time?$s",
+
+        "companionRejectedNight": "It's a bit late though? I'm sorry but I need to be early tomorrow.",
+        "companionRejectedNight_Dating": "It's kinda late though, babe? I'm sorry but I need to be early tomorrow. ",
+        "companionRejectedNight_Spouse": "It's kinda late though, babe? I'm sorry but I need to be early tomorrow. Maybe next time?",
+
+        "companionDismiss": "Alright! Until next time.",
+        "companionDismiss_Dating": "Alright! Until next time, babe!",
+        "companionDismiss_Spouse": "Alright! Until next time, babe! Be careful out there, okay?",
+
+        "companionDismissAuto": "I have to get going now. See ya!",
+        "companionDismissAuto_Dating": "I have to get going now. See ya, babe!",
+        "companionDismissAuto_Spouse": "Hey, babe? I think I'll head home first. I'll see you there! Take care on your way home, okay?",
+
+        "companionRecruited": "Know any good spots to hang out?",
+        "companionRecruited_Dating": "Know any good spots to hang out, babe?",
+        "companionRecruited_Spouse": "Know any good spots to hang out, babe? Maybe do some investigating too?",
+
+        "farmerRunAway": "Hey! Wait up!",
+
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "What do you do after you've done all your farm work for the day? Any hobbies?",
+        "companion_Farm~1": "Wow! You maintain all this by yourself? You're quite a hardworker aren't ya?",
+        //Weather
+        "companion_Farm_Rainy": "Well atleast you don't have to water any crops today, right?",
+        "companion_Farm_Snowy": "Need any snow shoveling done? Might need more than just us two to handle all this though.$h",
+        //Season
+        "companion_Farm_Spring": "How do plan out when and what crops to plant? I admire how you and Jeric get it done!",
+        "companion_Farm_Summer": "Back in days, Jeric and I would chill around the ice cream shop near the beach at Zuzu during the summer time.#$b#Though we had to save up a couple days before just for some good ice cream.$h",
+        "companion_Farm_Fall": "The governor usually likes to take vacations in their family getaway home during this season.#$b#Been there bunch of times ofcourse, it's quite homey.",
+        "companion_Farm_Winter": "During this season, there's a spike of reports about a mysterious black figure lurking around Pelican Town.#$b#I wonder what the local authorities do to handle those reports.",
+        "companion_Farm_Spring~1": "Season of flowers, huh?#$b#*Shudder* It reminds me of the time we were paranoid as the governor visited a garden of poisonous plants!$3",
+
+        //Dating
+        //General
+        "companion_Farm_Dating": "Need any help around here, babe?",
+        "companion_Farm_Dating~1": "How do you... milk cows?#$b#I've always been confused how exactly that's done.",
+        //Weather
+        "companion_Farm_Rainy_Dating": "Hey, don't forget to use an umbrella, okay?#$b#I don't want you getting sick.$s",
+        "companion_Farm_Snowy_Dating": "Oh? Babe? You cold?#$b#Come here then!$h",
+
+        //Spouse
+        //General
+        "companion_Farm_Spouse": "I've been thinking of installing some security cameras around the farm, babe.#$b#You wouldn't mind, right?",
+        "companion_Farm_Spouse~1": "Paranoid? Me? Psh! Who said that?#$b#Now come help me set-up some electric fences I bought from Kenneth.$h",
+        //Weather
+        "companion_Farm_Rainy_Spouse": "Babe? Why are we staying out here in the rain?$6#$b#*sigh* Just don't get sick, okay?$a#$b#Don't worry though! I got your clumsy butt covered.$h",
+        "companion_Farm_Snowy_Spouse": "Hey, clumsy baby.#$b#Watch your step around the slippery snow, alright?#$b#It's fine though, I won't ever get tired of catching you back up.$h",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        "companion_Town": "A small town like this has its perks, security-wise.#$b#Like you know everyone, so it's easier to trust.#$b#But don't ever be too lenient! Always stay alert regardless! Better safe than sorry!$h",
+        "companion_Custom_Ridgeside_RidgesideVillage": "I always did wonder... Who were the first family to have taken residence in this village?#$b#Maybe the Amethynes? Or maybe the Lidens?#$b#I saw a book at the library last time and saw that the Lidens were miners before they became farmers.#$b#So it got me thinking.",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "Hey, let's visit Jeric when we get the chance.#$b#I bet lil bro's quite lonely up there in his farm.$h#$b#Nah, who am I kidding? That extroverted charmer probably has some friends over again.$h",
+
+      //Suggestion
+        "companionSuggest": "Hey? You free today? Mind if I tag along?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Dating": "Hey, babe? You free today? Mind if I tag along?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Spouse": "Hey, babe? You free today? Mind if I tag along? Maybe a date?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "Cool! Lead the way!$h",
+        "companionSuggest_No": "Aw, that's too bad. See you around then!",
+
+        "companionSuggest_Yes_Dating": "Cool! Lead the way, babe!$h",
+        "companionSuggest_No_Dating": "Aw, that's too bad, babe. See you around then!",
+
+        "companionSuggest_Yes_Spouse": "Cool! Any interesting places to visit today, babe?",
+        "companionSuggest_No_Spouse": "Aw, that's too bad, babe. I'll see you later then, yeah?",
+
+      }
+    }
+  ]
+}

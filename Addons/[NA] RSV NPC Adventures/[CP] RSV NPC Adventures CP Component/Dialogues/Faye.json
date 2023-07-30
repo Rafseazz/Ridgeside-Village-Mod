@@ -1,0 +1,107 @@
+﻿{
+  "Changes": [
+    {
+      "LogName": "Companion dialogues for Faye", //Change Name
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Faye", //Change Name
+      "Entries": {
+        "companionAccepted": "Oh how fabulous!$h#$b#Let's go! I know some really nice places to hang out!$h",
+        "companionAccepted_Dating": "Fabulous, sweetie!$8#$b#I'd be happy to keep you company!$h#$b#Provided that we grab dinner afterwards, of course!$8",
+        "companionAccepted_Spouse": "My, my, tee hee.$8#$b#You really like strolling with me, huh sweetie?$l#$b#Of course that's a fabulous idea!$h",
+
+        "companionRejected": "%Faye yawns.#$b#Oh I'm sorry I just feel quite tired today.$6#$b#Maybe next time?",
+        "companionRejected_Dating": "Sorry, sweetie!$s#$b#I have to finish something first.#$b#I have designs due and Pika has been asking for new table cloths since last week.$u",
+        "companionRejected_Spouse": "%Faye is sleeping.#$b#Zzz... Oh!$7#$b#Sweetie! I'm sorry, I must be so tired.$u#$b#It's been crazy at work and I woke up in the middle of the night earlier because I had a dream about my designs talking to me, and they told me what to do to finish them.$h",
+
+        "companionRejectedNight": "Oh no, it's too late, @.$u#$b#Sorry! Maybe next time.",
+        "companionRejectedNight_Dating": "Aww, I'm sleepy sweetie.$6#$b#What if we just cuddle instead?$l",
+        "companionRejectedNight_Spouse": "I'm sorry sweetie, I have to finish some stuff first.$s#$b#Maybe I can catch up when I'm done?",
+
+        "companionDismiss": "That was fabulous, @!$h#$b#I had fun, even if it was a bit tiring.$8#$b#Thanks a lot, @.$h",
+        "companionDismiss_Dating": "%Faye starts yawning.#$b#Ooh, I had fun sweetie.$6#$b#Thank you for bringing me with you on your little adventure.$l",
+        "companionDismiss_Spouse": "Wasn't that Fabulous, sweetie?$h#$b#The whole adventure felt like the first time we had our stroll!$h#$b#Remember when I almost fell on the ridge?$h",
+
+        "companionDismissAuto": "Hey, @?#$b#Can I go ahead? I still have work tomorrow.#$b#Thanks for including me today. I had fun.$h",
+        "companionDismissAuto_Dating": "Sweetie, I'm afraid I must leave already.#$b#I want to sleep early tonight because I have an early start tomorrow.#$b#I'll try to finish my crochet napkins before I go out.$h",
+        "companionDismissAuto_Spouse": "Sweetie, can we go home already?#$b#I saw something during our walk and I want to write it down and create it before I forget.$h",
+
+        "companionRecruited": "So, what have you been up to since you arrived, @?#$b#Have you already tried Pika's?$h#$b#Do you know that Keahi has been cooking there sometimes? That boy has such talent.$h#$b#He and Trinnie sometimes even help me with my sewing, either by threading the needle or modeling.$8",
+        "companionRecruited_Dating": "Do you remember last time, we went sandwich hopping from Pika's to the Saloon.$h#$b#Maybe we could do another restaurant hopping date again?$8#$b#This time we could try pastries!$l",
+        "companionRecruited_Spouse": "Where do you want to go sweetie?#$b#We could go over to the cliff and watch the sky and the town?#$b#I'll bring my sketchbook, and I'll make you my model.$8",
+
+        "farmerRunAway": "Hey, wait!$u#$b#Hold on, @! Gosh, you must be in a hurry.$u",
+        "giveForages": "Keahi told me this was something good to scavenge. Here, you go!$h",
+
+        "farmerRunAway_Dating": "Sweetie, wait for me!$u#$b#I don't have long legs like you do.$u",
+        "giveForages_Dating": "Sweetie, why don't you try this?",
+      
+        "farmerRunAway_Spouse": "*Huff huff*$u#$b#Sweetie, wait for me! Gosh$a#$b#Hmph, I'm getting tired of running.$s",
+        "giveForages_Spouse": "Hey, I found this and I think you'd like it sweetie.#$b#Here you go!$h",
+       
+
+      //Locations (Farm)
+        //Friends
+        //General
+        "companion_Farm": "Wow, your farm looks quite nice @.$h",
+        "companion_Farm~1": "You know when I arrived, Jeric tried helping me to start my own vavavoom garden.#$b#But hihi, it turns out I don't quite have the green thumb you guys have.$l#$b#I can only keep little plants alive.$s",
+        //Weather
+        "companion_Farm_Rainy": "You know, the rain looks kind of pretty.#$b#It makes me a bit hungry tho.$8#$b#Maybe we could grab some cocoa over at Pika's or the Log Cabin Hotel?$h",
+        "companion_Farm_Snowy": "Wow, your farm looks fabulous coated in white snow.$h",
+        //Season
+        "companion_Farm_Spring": "Doesn't the colors just give you a ton of inspiration, @?#$b#It just looks so fabulous!$h",
+        "companion_Farm_Summer": "Golly, it's hot.$u#$b#Let's get some refreshments at the Log Cabin  Hotel after, @?",
+        "companion_Farm_Fall": "These fall leaves look so cute. Hey maybe we could make a dress or skirt out of the leaves and model it around the village?$h#$b#I'm sure the kids will love it.$8",
+        "companion_Farm_Winter": "I remember when I made a snowflake dress for Ysa once.#$b#What about you, @?#$b#Do you like dressing up for fun?",
+
+        //Dating
+        //General
+        "companion_Farm_Dating": "The farm looks fabulous sweetie!#$b#Could use some decorations here and there, but it's all good.$h#$b#I'm so proud of what your doing for your farm.$h",
+        "companion_Farm_Dating~1": "Fabulous, sweetie!$8#$b#Your farm has improved so much!$h",
+        //Weather
+        "companion_Farm_Rainy_Dating": "Gosh, this rain kinda sucks.$s#$b#Oh well, at least I look cute even when I'm wet.$8#$b#But what's even better is that the rain is taking care of the farm for you so we have more time!$l",
+        "companion_Farm_Snowy_Dating": "Sweetie why don't we use some food coloring and mix it with the ice, then make some snow-models!$h#$b#This is the perfect weather for it!$h",
+        //Season
+        "companion_Farm_Spring_Dating": "Sightseeing for pretty colors, pretty flowers, and pretty people like you, sweetie.#$b#Now that is the way to go on an adventure!$h",
+        "companion_Farm_Summer_Dating": "%Faye fans herself.#$b#Come here sweetie, I'll wipe of your sweat and fan you.",
+        "companion_Farm_Fall_Dating": "You know, the colors of fall are just so pleasing to the eye?#$b#Isn't it fabulous, sweetie?#$b#We should do fall colors for our outfit on our next date.$8",
+        "companion_Farm_Winter_Dating": "Sweetie, can you give me a hug?#$b#...$7#$b#Oh my, your arms just felt so comfy that I just fell asleep on you.$8#$b#That's kind of crazy, huh?$l",
+
+        //Spouse
+        //General
+        "companion_Farm_Spouse": "I'm so proud of the hard work that you've put into the farm, sweetie.$l#$b#It really shows how much you love the place.",
+        "companion_Farm_Spouse~1": "I'm really glad that your grandfather gave you this farm, sweetie.$l#$b#It's like the universe gave me the chance to meet my food-sleep buddy!$h",
+        //Weather
+        "companion_Farm_Rainy_Spouse": "The rain looks good on you, sweetie.$l#$b#%Faye cups your face and then hugs you.<#$b#I love you, @.#$b#Thank you for bringing me on this adventure called life.$8",
+        "companion_Farm_Snowy_Spouse": "Next time we do this, I'll ask Pika to make us a picnic basket.$;#$b#Hey! It's also nice to go on a picnic in the snow!$l#$b#The basket will be full of cocoa and grilled cheese!$h",
+        //Season
+        "companion_Farm_Spring_Spouse": "Sweetie, do you think we could make some ornaments for the farm?#$b#We could place them all around so that it'll look pretty.$h",
+        "companion_Farm_Summer_Spouse": "Golly, it really feels so hot.$u#$b#Sweetie, we should hydrate.#$b#And maybe we could also grab some food too.$h",
+        "companion_Farm_Fall_Spouse": "Golly, the cold breeze makes me feel kind of hungry.$s#$b#Or sleepy?$6#$b#Hmm, what should we do first sweetie?$",
+        "companion_Farm_Winter_Spouse": "We should stockpile on logs and tons of snacks, sweetie!$h#$b#Maybe we should run over to Heaps and Pika's to grab food.#$b#And maybe we could hibernate like bears!$h#$b#%Faye yawns...#$b#Thinking about it makes me sleepy, golly.$6",
+
+      //Locations (Others)
+      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
+      //Feel free to change/remove/add! (During editing)
+
+        "companion_Town": "What's the place that you frequent in town, @?#$b#I know a lot of cool spots here to nap.$8#$b#I could show you if you like.$h",
+        "companion_Custom_Ridgeside_RidgesideVillage": "Hey, @?#$b#What was your first impression when you first visited the village?#$b#I know Miss Lenny's introduction may be a little overwhelming at first.#$b#But it's cute how enthusiastic she is about everybody here.$h",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "Do you want to see the ridge?#$b#I could show you a great place to fish!$h#$b#I sometimes help Keahi catch some, haha that little boy really does have his talents.$h",
+
+      //Suggestion
+        "companionSuggest": "Ooh! Are you going somewhere? Can I tag along?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Dating": "Ooh sweetie! Are you going somewhere? Can I tag along?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest_Spouse": "Ooh sweetie! Are you going somewhere? Can I tag along? I want to find some fabulous inspiration!#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+
+        "companionSuggest_Yes": "Yay, thanks @. I'll do my best to be a good tour guide.$h",
+        "companionSuggest_No": "Oh, sorry for bothering you.$s",
+
+        "companionSuggest_Yes_Dating": "Fabulous!$h#$b#We're going to have so much fun, sweetie!$h",
+        "companionSuggest_No_Dating": "Oh, okay.#$b#I guess I'll just look for something to eat by myself.$s",
+
+        "companionSuggest_Yes_Spouse": "That's fabulous, sweetie!$h#$b#I'm glad I could go with you on an adventure again.$l",
+        "companionSuggest_No_Spouse": "Aww, okay.$s#$b#I guess I could go home and sleep then.$6",
+
+      }
+    }
+  ]
+}
