@@ -428,18 +428,6 @@
    		}
     },
 
-		//Jio patio portrait
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Jio",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_Patio.png",
-			"Update": "OnLocationChange",
-			"When":
-			{
-				"LocationName": "Farm"
-			}
-		},
-
 		{    //Summit RSV spouse dialogue additions
 	 	"Action": "EditData",
      	"Target": "Data/ExtraDialogue",
