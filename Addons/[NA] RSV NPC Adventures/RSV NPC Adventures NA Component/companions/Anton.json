@@ -33,20 +33,21 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Anton 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Anton/!f Anton 2000": "reject",
+    "O Anton": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Anton 1000": "reject",
     "k 75160302": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
-  "Bedtime": "2200",
+  "Bedtime": "2300",
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack

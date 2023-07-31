@@ -38,27 +38,28 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Kenneth 1": "reject", //talked once
-    
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Kenneth/!f Kenneth 2000": "reject",
+    "O Kenneth": "accept",
+
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Kenneth 1000": "reject",
     "k 75160158": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
-  
+
   "Bedtime": "2200",
   "BedtimeSpouse": "2530",
-  
+
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
   	"Crafting": 5
   },
   "BuffsDescription": "[Kenneth.buffs]",
-  
+
   "Weapons": {
     /*"0": "Obsidian Edge",
 	  "1": "Obsidian Edge",
@@ -82,7 +83,7 @@
       "Animations": [
         "kenneth_onfirerandomly",
       ],
-      "Tendency": 3,
+      "Tendency": 1,
       "MinDuration": 3,
       "MaxDuration": 10,
       //"Condition": "insert condition here"

@@ -28,17 +28,18 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Blair 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Blair/!f Blair 2000": "reject",
+    "O Blair": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Blair 1000": "reject",
     "k 75160310": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
   "Bedtime": "2200",

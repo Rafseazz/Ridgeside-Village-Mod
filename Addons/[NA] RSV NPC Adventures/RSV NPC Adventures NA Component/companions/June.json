@@ -34,20 +34,25 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f June 1": "reject", //talked once
+    //Work
+    "npcAt 13 14": "reject companionRejectedWork",
+    "!d Mon Tue Wed/r 0.2": "reject",
+
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O June/!f June 2000": "reject",
+    "O June": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f June 1000": "reject",
     "k 94620004": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
-  "Bedtime": "2200",
+  "Bedtime": "2300",
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
@@ -77,12 +82,11 @@
     {
       "Behavior": "Animate",
       "Animations": [
-        "june_drink",
-        "june_read"
+        "june_drink"
       ],
       "Tendency": 3,
-      "MinDuration": 3,
-      "MaxDuration": 10,
+      "MinDuration": 5,
+      "MaxDuration": 20,
       //"Condition": "insert condition here"
     },
 

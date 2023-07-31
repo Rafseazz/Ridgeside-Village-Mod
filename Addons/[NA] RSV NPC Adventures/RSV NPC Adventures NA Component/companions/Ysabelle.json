@@ -23,28 +23,29 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Ysabelle 1": "reject", //talked once
-    
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Ysabelle/!f Ysabelle 2000": "reject",
+    "O Ysabelle": "accept",
+
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Ysabelle 1000": "reject",
     "k 75160142": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
-  
+
   "Bedtime": "2200",
   "BedtimeSpouse": "2530",
-  
+
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
   	"Speed": 3,
   	"MaxStamina": 20,
   },
   "BuffsDescription": "[Ysabelle.buffs]",
-  
+
   "Weapons": {
     /*"0": "Obsidian Edge",
 	  "1": "Obsidian Edge",

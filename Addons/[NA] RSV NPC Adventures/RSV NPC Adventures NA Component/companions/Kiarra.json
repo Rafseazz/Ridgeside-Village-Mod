@@ -27,20 +27,21 @@
     },
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Kiarra 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Kiarra/!f Kiarra 2000": "reject",
+    "O Kiarra": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Kiarra 1000": "reject",
     "k 75160326": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
-  "Bedtime": "2200",
+  "Bedtime": "2300",
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack

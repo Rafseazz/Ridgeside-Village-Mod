@@ -28,17 +28,18 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Irene 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Irene/!f Irene 2000": "reject",
+    "O Irene": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Irene 1000": "reject",
     "k 75160321": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
   "Bedtime": "2200",

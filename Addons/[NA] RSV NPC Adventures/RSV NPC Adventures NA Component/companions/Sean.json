@@ -22,20 +22,21 @@
     },
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Sean 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Sean/!f Sean 2000": "reject",
+    "O Sean": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Sean 1000": "reject",
     "k 75160354": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
-  "Bedtime": "2200",
+  "Bedtime": "2300",
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
@@ -67,7 +68,7 @@
       "Animations": [
         "sean_chill",
       ],
-      "Tendency": 3,
+      "Tendency": 4,
       "MinDuration": 3,
       "MaxDuration": 10,
       //"Condition": "insert condition here"
@@ -77,7 +78,7 @@
       "Behavior": "Lookaround",
       "FaceMinSeconds": 2,
       "FaceMaxSeconds": 5,
-      "Tendency": 2,
+      "Tendency": 3,
       "MinDuration": 10,
       "MaxDuration": 20
     },

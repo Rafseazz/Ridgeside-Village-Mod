@@ -33,17 +33,18 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Bryle 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Bryle/!f Bryle 2000": "reject",
+    "O Bryle": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Bryle 1000": "reject",
     "k 75160451": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
   "Bedtime": "2200",

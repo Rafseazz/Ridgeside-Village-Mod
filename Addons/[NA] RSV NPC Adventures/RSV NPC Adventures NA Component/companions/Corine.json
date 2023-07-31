@@ -28,29 +28,30 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Corine 1": "reject", //talked once
-    
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Corine/!f Corine 2000": "reject",
+    "O Corine": "accept",
+
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Corine 1000": "reject",
     "k 75160123": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
-  
+
   "Bedtime": "2200",
   "BedtimeSpouse": "2530",
-  
+
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
   	"Speed": 1,
   	"Defense": 64,
     "Attack": 1
   },
   "BuffsDescription": "[Corine.buffs]",
-  
+
   "Weapons": {
     "0": "Obsidian Edge",
     "10": "Icreon"

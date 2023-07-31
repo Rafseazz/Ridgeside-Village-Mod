@@ -21,16 +21,6 @@
       "ReturnRadius": 11.0
     },
 
-    //Protector
-    {
-      "Name": "protector",
-      "Type": "Invincibility", //IMPORTANT (Invincibility or Attack)
-      "UseChance": 0.5, //% chance
-      "Duration": 5,
-      "Cooldown": 120,
-      "Description": "[Zayne.protector]"
-    },
-
     //Charmer
     {
       "Name": "charmer",
@@ -40,17 +30,18 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Zayne 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Zayne/!f Zayne 2000": "reject",
+    "O Zayne": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Zayne 1000": "reject",
     "k 75160437": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
   "Bedtime": "2200",

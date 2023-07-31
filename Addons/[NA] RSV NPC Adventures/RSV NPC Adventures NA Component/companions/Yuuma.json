@@ -6,28 +6,24 @@
     //Spiritual
     {
       "Name": "spiritual",
-      "KeepFriendship": true, //Attack monsters = lose friendship
+      "KeepFriendship": true, //false = Attack monsters, lose friendship
       "FriendshipPointsLossOnAttack": 10,
       "FriendshipPointsLossOnKill": 75
     },
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Yuuma 1": "reject", //talked once
-
     //Normal
     //Requires seen 4 heart event + 4 hearts and above with Yuuma and Naomi
     "!f Naomi 1000": "reject",
     "!f Yuuma 1000": "reject",
     "k 75160111": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
-  "Bedtime": "2200",
+  "Bedtime": "2000",
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack

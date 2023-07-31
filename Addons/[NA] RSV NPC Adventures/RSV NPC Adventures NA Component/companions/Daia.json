@@ -45,28 +45,29 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Daia 1": "reject", //talked once
-    
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Daia/!f Daia 2000": "reject",
+    "O Daia": "accept",
+
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Daia 1000": "reject",
     "k 75160202": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
-  
-  "Bedtime": "2200",
+
+  "Bedtime": "2400",
   "BedtimeSpouse": "2530",
-  
+
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
   	"Luck": 2,
   	"MagneticRadius": 32,
   },
   "BuffsDescription": "[Daia.buffs]",
-  
+
   "Weapons": {
     "0": "Obsidian Edge",
     "10": "Dusked Kunai"

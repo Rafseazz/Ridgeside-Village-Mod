@@ -23,27 +23,28 @@
     },
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Alissa 1": "reject", //talked once
-    
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Alissa/!f Alissa 2000": "reject",
+    "O Alissa": "accept",
+
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Alissa 1000": "reject",
     "k 75160115": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
-  
-  "Bedtime": "2000",
+
+  "Bedtime": "2100",
   "BedtimeSpouse": "2530",
-  
+
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
   	"Farming": 3,
   },
   "BuffsDescription": "[Alissa.buffs]",
-  
+
   "Weapons": {
     "0": "Obsidian Edge",
     "10": "The Singing Dagger"

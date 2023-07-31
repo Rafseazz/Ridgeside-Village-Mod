@@ -28,17 +28,18 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Faye 1": "reject", //talked once
+    //Marriage
+    //Reject if under 8 hearts, otherwise always go
+    "O Faye/!f Faye 2000": "reject",
+    "O Faye": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
     "!f Faye 1000": "reject",
     "k 75160318": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
   "Bedtime": "2200",

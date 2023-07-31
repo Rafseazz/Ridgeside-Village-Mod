@@ -30,17 +30,13 @@
 
   ],
   "Rules": {
-    //Basics
-    "": "accept", //acceptance when asked
-    "!f Lenny 1": "reject", //talked once
-
     //Normal
     //Requires seen 6 heart event + 6 hearts and above
     "!f Lenny 1500": "reject",
     "k 75160088": "reject",
 
-    //Marriage
-    //no rules
+    //Basics
+    "": "accept", //acceptance when asked
   },
 
   "Bedtime": "2200",
