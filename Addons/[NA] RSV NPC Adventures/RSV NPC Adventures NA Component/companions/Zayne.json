@@ -1,20 +1,7 @@
 {
   "Format": "2.0",
-  "Name": "Bianka",
+  "Name": "Zayne",
   "Skills": [
-    { "Name": "doctor" },
-    { "Name": "fighter" }
-
-    /*Template so my life's easier mwehehe - raf
-    
-    //Doctor Skill
-    {
-      "Name": "doctor",
-      "HealCooldown": 4800,
-      "MedKits": 3,
-      "CanSaveLife": true,
-      "HealSideEffectEvery": 180, //Regen tick
-    },
 
     //Fighter or Warrior Skill
     {
@@ -34,78 +21,33 @@
       "ReturnRadius": 11.0
     },
 
-    //Scared Skill
-    {
-      "Name": "scared",
-      "Duration": 1500,
-      "MinCooldown": 4,
-      "MaxCooldown": 40,
-      "CryChanceRatio": 8, //Lower = higher chance
-      "Frame": 1, //sprite frame when scared
-    },
-
-    //Forager
-    {
-      "Name": "forager"
-    },
-
-    //Spiritual
-    {
-      "Name": "spiritual",
-      "KeepFriendship": true, //Attack monsters = lose friendship
-      "FriendshipPointsLossOnAttack": 10,
-      "FriendshipPointsLossOnKill": 75
-    },
-
-    //Fisherman
-    {
-      "Name": "fisherman"
-    },
-
-    //Shooter
-    {
-      "Name": "shooter",
-      "Damage": 1,
-      "CollisionSound": "hammer",
-      "Cooldown": 1000, //ms
-      "ChargeTime": 300, //ms
-      "Projectile": 390, //springobjects tilesheet
-      "Explode": false,
-      "MinShootRange": 1.0,
-      "MaxShootRange": 1.0,
-      "ShotSpeed": 1.0,
-      "LightingShot": false, //emit light
-    },
-
     //Protector
     {
       "Name": "protector",
-      "Type": "", //IMPORTANT (Invincibility or Attack)
+      "Type": "Invincibility", //IMPORTANT (Invincibility or Attack)
       "UseChance": 0.5, //% chance
       "Duration": 5,
       "Cooldown": 120,
-      "Amount": 0, //Increase of attack power IF Attack Type protector
-      "Description": "[npc.protector]"
+      "Description": "[Zayne.protector]"
     },
 
     //Charmer
     {
       "Name": "charmer",
-      "GrantFriendshipFactor": 1.0, //Multiplier
+      "GrantFriendshipFactor": 1.3, //Multiplier
       "ExtraFriendshipPoints": 0 //Extra FP on top of the bonus
     }
 
-    */
   ],
   "Rules": {
     //Basics
     "": "accept", //acceptance when asked
-    "!f Bianka 1": "reject", //talked once
+    "!f Zayne 1": "reject", //talked once
     
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Bianka 1000": "reject",
-    "k 75160017": "reject",
+    "!f Zayne 1000": "reject",
+    "k 75160437": "reject",
 
     //Marriage
     //no rules
@@ -115,10 +57,10 @@
   "BedtimeSpouse": "2530",
   
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
-  	"Luck": 3,
-  	"MagneticRadius": 64,
+  	"Defense": 2,
+  	"MagneticRadius": 32,
   },
-  "BuffsDescription": "[bianka.buffs]",
+  "BuffsDescription": "[Zayne.buffs]",
   
   "Weapons": {
     /*"0": "Obsidian Edge",
@@ -134,15 +76,14 @@
 	  "10": "Infinity Blade"*/
 
     "0": "Obsidian Edge",
-    "5": "Void Blessed Hammer"
+    "5": "Amethyst Lance"
   },
 
   "IdleBehaviors": [
     {
       "Behavior": "Animate",
       "Animations": [
-        "bianka_dance",
-        "bianka_meditate"
+        "zayne_call",
       ],
       "Tendency": 3,
       "MinDuration": 3,

@@ -1,0 +1,77 @@
+{
+  "Format": "2.0",
+  "Name": "Yuuma",
+  "Skills": [
+
+    //Spiritual
+    {
+      "Name": "spiritual",
+      "KeepFriendship": true, //Attack monsters = lose friendship
+      "FriendshipPointsLossOnAttack": 10,
+      "FriendshipPointsLossOnKill": 75
+    },
+
+  ],
+  "Rules": {
+    //Basics
+    "": "accept", //acceptance when asked
+    "!f Yuuma 1": "reject", //talked once
+    
+    //Normal
+    //Requires seen 4 heart event + 4 hearts and above with Yuuma and Naomi
+    "!f Naomi 1000": "reject",
+    "!f Yuuma 1000": "reject",
+    "k 75160111": "reject",
+
+    //Marriage
+    //no rules
+  },
+  
+  "Bedtime": "2200",
+  "BedtimeSpouse": "2530",
+  
+  "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
+  	"Farming": 1,
+  	"MaxStamina": 32,
+  },
+  "BuffsDescription": "[Yuuma.buffs]",
+  
+  "Weapons": {
+    /*"0": "Obsidian Edge",
+	  "1": "Obsidian Edge",
+	  "2": "Obsidian Edge",
+	  "3": "Obsidian Edge",
+	  "4": "Dark Sword",
+	  "5": "Dark Sword",
+	  "6": "Lava Katana",
+	  "7": "Dwarf Sword",
+	  "8": "Galaxy Sword",
+	  "9": "Dragontooth Cutlass",
+	  "10": "Infinity Blade"*/
+
+    "0": "Obsidian Edge",
+    "5": "The Silent One"
+  },
+
+  "IdleBehaviors": [
+    {
+      "Behavior": "Animate",
+      "Animations": [
+        "yuuma_read",
+      ],
+      "Tendency": 3,
+      "MinDuration": 3,
+      "MaxDuration": 10,
+      //"Condition": "insert condition here"
+    },
+
+    {
+      "Behavior": "Lookaround",
+      "FaceMinSeconds": 2,
+      "FaceMaxSeconds": 5,
+      "Tendency": 2,
+      "MinDuration": 10,
+      "MaxDuration": 20
+    },
+	]
+}

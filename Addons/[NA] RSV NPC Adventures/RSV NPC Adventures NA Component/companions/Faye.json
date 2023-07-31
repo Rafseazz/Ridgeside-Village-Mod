@@ -1,0 +1,92 @@
+{
+  "Format": "2.0",
+  "Name": "Faye",
+  "Skills": [
+
+    //Fighter or Warrior Skill
+    {
+      "Name": "fighter",
+      "IsWarrior": false, //Fight with fists boiii
+      "Strength": 1.0,
+      "Speed": 1.0,
+      "Effeciency": 1.0,
+      "Cooldown": 50, //advanced
+      "AttackRadius": 1.25,
+      "BackupRadius": 0.9,
+      "FistCooldown": 1200,
+      "MissChance": 0.0,
+      "ExtraSpeed": 0,
+      "ExtraStrength": 0,
+      "DefendRadius": 6.0,
+      "ReturnRadius": 11.0
+    },
+
+    //Forager
+    {
+      "Name": "forager"
+    },
+
+  ],
+  "Rules": {
+    //Basics
+    "": "accept", //acceptance when asked
+    "!f Faye 1": "reject", //talked once
+    
+    //Normal
+    //Requires seen 4 heart event + 4 hearts and above
+    "!f Faye 1000": "reject",
+    "k 75160318": "reject",
+
+    //Marriage
+    //no rules
+  },
+  
+  "Bedtime": "2200",
+  "BedtimeSpouse": "2530",
+  
+  "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
+  	"Speed": 2,
+  	"Foraging": 1,
+    "Farming": 1
+  },
+  "BuffsDescription": "[Faye.buffs]",
+  
+  "Weapons": {
+    /*"0": "Obsidian Edge",
+	  "1": "Obsidian Edge",
+	  "2": "Obsidian Edge",
+	  "3": "Obsidian Edge",
+	  "4": "Dark Sword",
+	  "5": "Dark Sword",
+	  "6": "Lava Katana",
+	  "7": "Dwarf Sword",
+	  "8": "Galaxy Sword",
+	  "9": "Dragontooth Cutlass",
+	  "10": "Infinity Blade"*/
+
+    "0": "Obsidian Edge",
+    "5": "Fairy Needle"
+  },
+
+  "IdleBehaviors": [
+    {
+      "Behavior": "Animate",
+      "Animations": [
+        "faye_fan",
+      ],
+      "Tendency": 3,
+      "MinDuration": 3,
+      "MaxDuration": 10,
+      //"Condition": "insert condition here"
+    },
+
+    {
+      "Behavior": "Lookaround",
+      "FaceMinSeconds": 2,
+      "FaceMaxSeconds": 5,
+      "Tendency": 2,
+      "MinDuration": 10,
+      "MaxDuration": 20
+    },
+	]
+}
