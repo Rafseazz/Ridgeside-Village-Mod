@@ -5,42 +5,42 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Louie", //Change Name
       "Entries": {
-        "companionAccepted": "Why not? Why shouldn't I grace you of my presence?",
-        "companionRejected": "Huh? No. Ew.",
-        "companionRejectedNight": "Huh? No. Ew. It's night time you know? Weirdo.",
-        "companionDismiss": "Farewell, then. I was getting bored anyways.",
-        "companionDismissAuto": "I'm getting bored. I'm going home to play video games now.",
-        "companionRecruited": "I expect to be entertained. No pressure!",
+        "companionAccepted": "{{i18n:Louie.Dialogue.companionAccepted}}",
+        "companionRejected": "{{i18n:Louie.Dialogue.companionRejected}}",
+        "companionRejectedNight": "{{i18n:Louie.Dialogue.companionRejectedNight}}",
+        "companionDismiss": "{{i18n:Louie.Dialogue.companionDismiss}}",
+        "companionDismissAuto": "{{i18n:Louie.Dialogue.companionDismissAuto}}",
+        "companionRecruited": "{{i18n:Louie.Dialogue.companionRecruited}}",
 
-        "farmerRunAway": "HALT! STOP! Slow down!$a",
+        "farmerRunAway": "{{i18n:Louie.Dialogue.farmerRunAway}}",
 
       //Locations (Farm)
         //Friends
         //General
-        "companion_Farm": "Eh? Of all places why spend time around a farm?#$b#Oh yeah, you work here.#$b#Make it quick.",
-        "companion_Farm~1": "Hm? Why are we here?#$b#Don't tell me I have to help you with farm work!?$a#$b#Hmph!$a",
+        "companion_Farm": "{{i18n:Louie.Dialogue.companion_Farm}}",
+        "companion_Farm~1": "{{i18n:Louie.Dialogue.companion_Farm~1}}",
         //Weather
-        "companion_Farm_Rainy": "Hey, you! I'm being soaked in the rain here!$a#$b#And the muddy farm land isn't helping either!$a",
-        "companion_Farm_Snowy": "Huh? Is the farm even profitable under all this snow?#$b#Oh, yeah. You have beasts that provide you with sustenance.#$b#Carry on.",
+        "companion_Farm_Rainy": "{{i18n:Louie.Dialogue.companion_Farm_Rainy}}",
+        "companion_Farm_Snowy": "{{i18n:Louie.Dialogue.companion_Farm_Snowy}}",
         //Season
-        "companion_Farm_Spring": "I must say, your farm looks quite good in this close-up view#$b#You have my approval! You should be proud!$h",
-        "companion_Farm_Summer": "Can you grow some corn?#$b#Oh and some melons too would you?#$b#In case I crave for dishes that need those, we have a supply.#$b#Carry on.",
-        "companion_Farm_Fall": "Ah, while I'm here. I order you to grow some pumpkins around your farm.#$b#I want to practice my pumpkin carving skills, so if I need some I can conveniently acquire some.#$b#Carry on.",
-        "companion_Farm_Winter": "So... How good are the quality of your sheep wool?#$b#Ah, why bother asking you. Nevermind..#$b#Carry on.",
+        "companion_Farm_Spring": "{{i18n:Louie.Dialogue.companion_Farm_Spring}}",
+        "companion_Farm_Summer": "{{i18n:Louie.Dialogue.companion_Farm_Summer}}",
+        "companion_Farm_Fall": "{{i18n:Louie.Dialogue.companion_Farm_Fall}}",
+        "companion_Farm_Winter": "{{i18n:Louie.Dialogue.companion_Farm_Winter}}",
 
       //Locations (Others)
       //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
       //Feel free to change/remove/add! (During editing)
 
-        "companion_Town": "This town is quite... shabby?#$b#I'm not too surprised though, the mayor here isn't that competent.",
-        "companion_Custom_Ridgeside_RidgesideVillage": "Ah, such a beautiful view of the Purple Mansion from here.#$b#What am I saying? Of course it's wonderful to look at no matter what the view!$h#$b#Don't you agree?",
-        "companion_Custom_Ridgeside_RidgesideVillage~1": "I wonder whats the deal with all these scattered gemstones around the village.#$b#They don't look too valuable, but Grandmother said that those stones are important relics of this village's history.#$b#I don't get it though, they're just stones!$a#$b#But I'd never dare question Grandmother's wisdom. So it's whatever.",
+        "companion_Town": "{{i18n:Louie.Dialogue.companion_Town}}",
+        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Louie.Dialogue.companion_Custom_Ridgeside_RidgesideVillage}}",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "{{i18n:Louie.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~1}}",
 
       //Suggestion
-        "companionSuggest": "I've decided to grace you with my company today!#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest": "{{i18n:Louie.Dialogue.companionSuggest}}",
 
-        "companionSuggest_Yes": "Of course! Why wouldn't you accept?",
-        "companionSuggest_No": "How dare you decline such an offer!? Hmph!$a",
+        "companionSuggest_Yes": "{{i18n:Louie.Dialogue.companionSuggest_Yes}}",
+        "companionSuggest_No": "{{i18n:Louie.Dialogue.companionSuggest_No}}",
 
       }
     }

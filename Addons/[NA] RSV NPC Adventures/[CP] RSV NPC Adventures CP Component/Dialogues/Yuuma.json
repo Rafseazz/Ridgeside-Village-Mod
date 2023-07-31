@@ -5,42 +5,42 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Yuuma", //Change Name
       "Entries": {
-        "companionAccepted": "Oh, okay. Let's go I guess.",
-        "companionRejected": "No, sorry. I'm busy.",
-        "companionRejectedNight": "No, it's dark out. Bye.",
-        "companionDismiss": "Oh, okay. Bye then.",
-        "companionDismissAuto": "I'll be going home now. Bye.",
-        "companionRecruited": "Hm? Where are headed to?",
+        "companionAccepted": "{{i18n:Yuuma.Dialogue.companionAccepted}}",
+        "companionRejected": "{{i18n:Yuuma.Dialogue.companionRejected}}",
+        "companionRejectedNight": "{{i18n:Yuuma.Dialogue.companionRejectedNight}}",
+        "companionDismiss": "{{i18n:Yuuma.Dialogue.companionDismiss}}",
+        "companionDismissAuto": "{{i18n:Yuuma.Dialogue.companionDismissAuto}}",
+        "companionRecruited": "{{i18n:Yuuma.Dialogue.companionRecruited}}",
 
-        "farmerRunAway": "Don't leave me behind!",
+        "farmerRunAway": "{{i18n:Yuuma.Dialogue.farmerRunAway}}",
 
       //Locations (Farm)
         //Friends
         //General
-        "companion_Farm": "Your farm looks nice, @.$h#$b#I like how hardworking you are.",
-        "companion_Farm~1": "Do you need help around here?#$b#I can help you if you want.#$b#But only after I do my house chores first though.",
+        "companion_Farm": "{{i18n:Yuuma.Dialogue.companion_Farm}}",
+        "companion_Farm~1": "{{i18n:Yuuma.Dialogue.companion_Farm~1}}",
         //Weather
-        "companion_Farm_Rainy": "Grown-ups say you shouldn't stay out in the rain for too long or else you get sick.#$b#I don't want my friends getting sick, so take care! Okay?$s",
-        "companion_Farm_Snowy": "The farm looks lonely in this season, huh?#$b#But I bet you have animals to keep it company.$h#$b#For me, I think that's nice.",
+        "companion_Farm_Rainy": "{{i18n:Yuuma.Dialogue.companion_Farm_Rainy}}",
+        "companion_Farm_Snowy": "{{i18n:Yuuma.Dialogue.companion_Farm_Snowy}}",
         //Season
-        "companion_Farm_Spring": "Crops in the spring are tasty.$h#$b#I always like cooking spring crops for my brother when he's feeling down.$h#$b#I hope he's cheered up when I do, though.",
-        "companion_Farm_Summer": "I wonder if I can buy some cold juice later before I get back home.#$b#So that if ever anyone needs it, it's there.$h#$b#Oh! You can always tell me if you want one too. I can drop you some.",
-        "companion_Farm_Fall": "I always see Keahi and Trinnie play around piles of leaves.#$b#They make such a mess, but it seems like they're having fun though.",
-        "companion_Farm_Winter": "Before my father left for work, we would always build a snowman in our lawn.$h#$b#Once we made something so big my big brother thought it was a monster!$h",
+        "companion_Farm_Spring": "{{i18n:Yuuma.Dialogue.companion_Farm_Spring}}",
+        "companion_Farm_Summer": "{{i18n:Yuuma.Dialogue.companion_Farm_Summer}}",
+        "companion_Farm_Fall": "{{i18n:Yuuma.Dialogue.companion_Farm_Fall}}",
+        "companion_Farm_Winter": "{{i18n:Yuuma.Dialogue.companion_Farm_Winter}}",
 
       //Locations (Others)
       //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
       //Feel free to change/remove/add! (During editing)
 
-        "companion_Town": "Even if Pelican Town is a bit far, I still like coming here.#$b#It's nice.$h#$b#The people are too!$h",
-        "companion_Custom_Ridgeside_RidgesideVillage": "Can we check on my big brother when we pass by my house?#$b#I just want to make sure he's fine.",
-        "companion_Custom_Ridgeside_RidgesideVillage~1": "I once saw Mr. Sonny bring a basket full of fruits to the ridge.#$b#Maybe he went out for a picnic?#$b#It's not my business to eavesdrop though. Mother said that's bad.",
+        "companion_Town": "{{i18n:Yuuma.Dialogue.companion_Town}}",
+        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Yuuma.Dialogue.companion_Custom_Ridgeside_RidgesideVillage}}",
+        "companion_Custom_Ridgeside_RidgesideVillage~1": "{{i18n:Yuuma.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~1}}",
 
       //Suggestion
-        "companionSuggest": "Hey, so... Can I tag along with you today?#$q -1 -1#Is it okay for me to follow you today?#$r -1 0 Yes#Yeah sure!#$r -1 0 No#I'm sorry but maybe next time",
+        "companionSuggest": "{{i18n:Yuuma.Dialogue.companionSuggest}}",
 
-        "companionSuggest_Yes": "Yay! Thank you.$h",
-        "companionSuggest_No": "Oh, it's okay. I understand.$s",
+        "companionSuggest_Yes": "{{i18n:Yuuma.Dialogue.companionSuggest_Yes}}",
+        "companionSuggest_No": "{{i18n:Yuuma.Dialogue.companionSuggest_No}}",
 
       }
     }
