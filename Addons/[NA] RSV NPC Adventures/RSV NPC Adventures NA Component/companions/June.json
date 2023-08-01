@@ -35,8 +35,9 @@
   ],
   "Rules": {
     //Work
-    "npcAt 13 14": "reject companionRejectedWork",
-    "!d Mon Tue Wed/r 0.2": "reject",
+    //Never go while at piano, otherwise 20% chance of rejecting on work days
+    //"NPCAt 13 14": "reject companionRejectedWork",
+    "d Mon Tue Wed/r 0.2": "reject",
 
     //Marriage
     //Reject if under 8 hearts, otherwise always go
