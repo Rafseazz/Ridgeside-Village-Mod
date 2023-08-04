@@ -28,6 +28,12 @@
 
   ],
   "Rules": {
+    //Work
+    "t 900 1200/!O Faye/!z rainy/d Thu": "reject companionRejectedWork",
+    "t 1800 2300/!O Faye/!z rainy/d Thu": "reject companionRejectedWork",
+    "t 1000 1400/O Faye/!z rainy/d Tue Wed Thu Sat Sun": "reject companionRejectedWork_Spouse",
+    "t 1800 2000/O Faye/!z rainy/d Tue Wed Thu Sat Sun": "reject companionRejectedWork_Spouse",
+
     //Marriage
     //Reject if under 8 hearts, otherwise always go
     "O Faye/!f Faye 2000": "reject",

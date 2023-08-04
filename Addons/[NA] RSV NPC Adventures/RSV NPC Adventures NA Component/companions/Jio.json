@@ -48,7 +48,20 @@
     },
 
   ],
+  "CanSuggest": false,
+  "Price": 1000,
+  "Sales": {
+    "O Jio": 0.0,
+    "D Jio/f Jio 2000": 0.5,
+    "f Jio 2500": 0.5,
+  },
   "Rules": {
+    //Combat
+    "z fall/z winter/t 2000 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
+    "!z fall/t 1900 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
+    "!z winter/t 1800 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
+    "!SkillLevel combat 6": "reject companionRejected_Weak",
+
     //Marriage
     //Reject if under 8 hearts, otherwise always go
     "O Jio/!f Jio 2000": "reject",
@@ -56,8 +69,8 @@
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Jio 1000": "reject",
-    "k 75160079": "reject",
+    //"!f Jio 1000": "reject",
+    //"k 75160079": "reject",
 
     //Basics
     "": "accept", //acceptance when asked
@@ -93,20 +106,28 @@
     {
       "Behavior": "Animate",
       "Animations": [
-        "jio_meditate",
         "jio_fight"
       ],
-      "Tendency": 3,
-      "MinDuration": 3,
-      "MaxDuration": 10,
-      //"Condition": "insert condition here"
+      "Tendency": 1,
+      "MinDuration": 2,
+      "MaxDuration": 5,
+    },
+
+    {
+      "Behavior": "Animate",
+      "Animations": [
+        "jio_meditate"
+      ],
+      "Tendency": 2,
+      "MinDuration": 10,
+      "MaxDuration": 20,
     },
 
     {
       "Behavior": "Lookaround",
       "FaceMinSeconds": 2,
       "FaceMaxSeconds": 5,
-      "Tendency": 2,
+      "Tendency": 3,
       "MinDuration": 10,
       "MaxDuration": 20
     },

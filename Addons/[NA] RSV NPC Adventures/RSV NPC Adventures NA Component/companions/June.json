@@ -35,9 +35,10 @@
   ],
   "Rules": {
     //Work
-    //Never go while at piano, otherwise 20% chance of rejecting on work days
-    //"NPCAt 13 14": "reject companionRejectedWork",
-    "d Mon Tue Wed/r 0.2": "reject",
+    "t 1700 2100/d Mon Tue Wed Sun/!O June": "reject companionRejectedWork",
+    "t 1200 1500/d Mon Tue Wed Thu Fri/!O June": "reject companionRejectedWork",
+    "t 1200 1800/d Mon Tue Wed/O June/!z rainy": "reject companionRejectedWork_Spouse",
+    "t 1200 1500/!d Sun/O June/!z rainy": "reject companionRejectedWork_Spouse",
 
     //Marriage
     //Reject if under 8 hearts, otherwise always go
@@ -85,9 +86,9 @@
       "Animations": [
         "june_drink"
       ],
-      "Tendency": 3,
-      "MinDuration": 5,
-      "MaxDuration": 20,
+      "Tendency": 2,
+      "MinDuration": 3,
+      "MaxDuration": 5,
       //"Condition": "insert condition here"
     },
 
@@ -95,7 +96,7 @@
       "Behavior": "Lookaround",
       "FaceMinSeconds": 2,
       "FaceMaxSeconds": 5,
-      "Tendency": 2,
+      "Tendency": 3,
       "MinDuration": 10,
       "MaxDuration": 20
     },
