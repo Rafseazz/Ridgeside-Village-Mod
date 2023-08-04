@@ -44,7 +44,20 @@
     }
 
   ],
+  "CanSuggest": false,
+  "Price": 1000,
+  "Sales": {
+    "O Daia": 0.0,
+    "D Daia/f Daia 2000": 0.5,
+    "f Daia 2500": 0.5,
+  },
   "Rules": {
+    //Combat
+    "z fall/z winter/t 2000 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
+    "!z fall/t 1900 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
+    "!z winter/t 1800 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
+    "!SkillLevel combat 6": "reject companionRejected_Weak",
+
     //Marriage
     //Reject if under 8 hearts, otherwise always go
     "O Daia/!f Daia 2000": "reject",
@@ -52,8 +65,8 @@
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Daia 1000": "reject",
-    "k 75160202": "reject",
+    //"!f Daia 1000": "reject",
+    //"k 75160202": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

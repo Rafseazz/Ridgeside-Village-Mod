@@ -26,6 +26,13 @@
       "Name": "forager"
     },
   ],
+  "CanSuggest": false,
+  "Price": 500,
+  "Sales": {
+    "O Ian": 0.0,
+    "D Ian/f Ian 2000": 0.5,
+    "f Ian 2500": 0.5,
+  },
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
@@ -34,8 +41,8 @@
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Ian 1000": "reject",
-    "k 75160147": "reject",
+    //"!f Ian 1000": "reject",
+    //"k 75160147": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

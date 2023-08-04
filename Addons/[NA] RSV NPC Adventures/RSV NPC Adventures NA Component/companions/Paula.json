@@ -32,6 +32,11 @@
 
   ],
   "Rules": {
+    //Work
+    "t 800 1700/d Wed/!O Paula": "reject companionRejectedWork",
+    "t 1000 1700/!d Wed/!O Paula": "reject companionRejectedWork",
+    "t 800 1600/d Tue Thu Sat Sun/O Paula/!z rainy": "reject companionRejectedWork_Spouse",
+
     //Marriage
     //Reject if under 8 hearts, otherwise always go
     "O Paula/!f Paula 2000": "reject",

@@ -28,6 +28,10 @@
 
   ],
   "Rules": {
+    //Saloon - reject
+    "t 1500 2300/!z rainy/!O Corine/!d Fri": "reject companionRejectedSaloon",
+    "t 1330 2000/!z rainy/O Corine/!d Fri": "reject companionRejectedSaloon_Spouse",
+
     //Marriage
     //Reject if under 8 hearts, otherwise always go
     "O Corine/!f Corine 2000": "reject",
@@ -37,6 +41,15 @@
     //Requires seen 4 heart event + 4 hearts and above
     "!f Corine 1000": "reject",
     "k 75160123": "reject",
+
+    //Pika's - accept
+    "t 900 2300/e 75160125/Hn GH1letter/!z rainy/!O Corine/d Tue Fri Thu": "accept companionAcceptedWork",
+    "t 900 2300/Hn GH1letter/!z rainy/!O Corine/d Tue Fri": "accept companionAcceptedWork",
+    "t 900 2300/e 75160125/!z rainy/!O Corine/d Thu Fri": "accept companionAcceptedWork",
+    "t 900 2300/!z rainy/!O Corine/d Fri": "accept companionAcceptedWork",
+
+    "t 1200 1800/e 75160125/!z rainy/O Corine/d Tue Fri Thu Sat Sun": "accept companionAcceptedWork_Spouse",
+    "t 1200 1800/!z rainy/O Corine/d Tue Fri Sat Sun": "accept companionAcceptedWork_Spouse",
 
     //Basics
     "": "accept", //acceptance when asked
