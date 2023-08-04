@@ -43,52 +43,24 @@
 
 
       //Locations (Farm)
-        //Friends
         //General
-        "companion_Farm": "{{i18n:Faye.Dialogue.companion_Farm}}",
-        "companion_Farm~1": "{{i18n:Faye.Dialogue.companion_Farm~1}}",
         //Weather
         "companion_Farm_Rainy": "{{i18n:Faye.Dialogue.companion_Farm_Rainy}}",
         "companion_Farm_Snowy": "{{i18n:Faye.Dialogue.companion_Farm_Snowy}}",
-        //Season
-        "companion_Farm_spring": "{{i18n:Faye.Dialogue.companion_Farm_spring}}",
-        "companion_Farm_summer": "{{i18n:Faye.Dialogue.companion_Farm_summer}}",
-        "companion_Farm_fall": "{{i18n:Faye.Dialogue.companion_Farm_fall}}",
-        "companion_Farm_winter": "{{i18n:Faye.Dialogue.companion_Farm_winter}}",
 
         //Dating
-        //General
-        "companion_Farm_Dating": "{{i18n:Faye.Dialogue.companion_Farm_Dating}}",
-        "companion_Farm_Dating~1": "{{i18n:Faye.Dialogue.companion_Farm_Dating~1}}",
         //Weather
         "companion_Farm_Rainy_Dating": "{{i18n:Faye.Dialogue.companion_Farm_Rainy_Dating}}",
         "companion_Farm_Snowy_Dating": "{{i18n:Faye.Dialogue.companion_Farm_Snowy_Dating}}",
-        //Season
-        "companion_Farm_spring_Dating": "{{i18n:Faye.Dialogue.companion_Farm_spring_Dating}}",
-        "companion_Farm_summer_Dating": "{{i18n:Faye.Dialogue.companion_Farm_summer_Dating}}",
-        "companion_Farm_fall_Dating": "{{i18n:Faye.Dialogue.companion_Farm_fall_Dating}}",
-        "companion_Farm_winter_Dating": "{{i18n:Faye.Dialogue.companion_Farm_winter_Dating}}",
 
         //Spouse
-        //General
-        "companion_Farm_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_Spouse}}",
-        "companion_Farm_Spouse~1": "{{i18n:Faye.Dialogue.companion_Farm_Spouse~1}}",
         //Weather
         "companion_Farm_Rainy_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_Rainy_Spouse}}",
         "companion_Farm_Snowy_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_Snowy_Spouse}}",
-        //Season
-        "companion_Farm_spring_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_spring_Spouse}}",
-        "companion_Farm_summer_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_summer_Spouse}}",
-        "companion_Farm_fall_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_fall_Spouse}}",
-        "companion_Farm_winter_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_winter_Spouse}}",
 
       //Locations (Others)
-      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
-      //Feel free to change/remove/add! (During editing)
-
         "companion_Town": "{{i18n:Faye.Dialogue.companion_Town}}",
-        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Faye.Dialogue.companion_Custom_Ridgeside_RidgesideVillage}}",
-        "companion_Custom_Ridgeside_RidgesideVillage~1": "{{i18n:Faye.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~1}}",
+        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Faye.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~{{Random: 0, 1}}}}",
 
       //Suggestion
         "companionSuggest": "{{i18n:Faye.Dialogue.companionSuggest}}",
@@ -105,6 +77,50 @@
         "companionSuggest_No_Spouse": "{{i18n:Faye.Dialogue.companionSuggest_No_Spouse}}",
 
       }
-    }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Faye",
+      "When": { "Season": "spring" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Faye.Dialogue.companion_Farm~{{Random: 0, 1, spring}} }}",
+        "companion_Farm_Dating": "{{i18n:Faye.Dialogue.companion_Farm_Dating~{{Random: 0, 1, spring}}}}",
+        "companion_Farm_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, spring}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Faye",
+      "When": { "Season": "summer" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Faye.Dialogue.companion_Farm~{{Random: 0, 1, summer}}}}",
+        "companion_Farm_Dating": "{{i18n:Faye.Dialogue.companion_Farm_Dating~{{Random: 0, 1, summer}}}}",
+        "companion_Farm_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, summer}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Faye",
+      "When": { "Season": "fall" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Faye.Dialogue.companion_Farm~{{Random: 0, 1, fall}}}}",
+        "companion_Farm_Dating": "{{i18n:Faye.Dialogue.companion_Farm_Dating~{{Random: 0, 1, fall}}}}",
+        "companion_Farm_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, fall}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Faye",
+      "When": { "Season": "winter" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Faye.Dialogue.companion_Farm~{{Random: 0, 1, winter}} }}",
+        "companion_Farm_Dating": "{{i18n:Faye.Dialogue.companion_Farm_Dating~{{Random: 0, 1, winter}}}}",
+        "companion_Farm_Spouse": "{{i18n:Faye.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, winter}}}}",
+      }
+    },
   ]
 }
