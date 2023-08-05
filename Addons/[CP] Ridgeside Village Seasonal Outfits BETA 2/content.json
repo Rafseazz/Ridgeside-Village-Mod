@@ -289,9 +289,11 @@ Compat with other seasonal outfit mods for RSV
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
 			"When":
 			{
+				"LocationName": "temp",
 				"SeasonalIanToken": true,
 				"HasFile:{{FromFile}}": true
-			}
+			},
+			"Update": "OnLocationChange",
 		},
 
 		//Corine
@@ -312,9 +314,11 @@ Compat with other seasonal outfit mods for RSV
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
 			"When":
 			{
+				"LocationName": "temp",
 				"SeasonalCorineToken": true,
 				"HasFile:{{FromFile}}": true
-			}
+			},
+			"Update": "OnLocationChange",
 		},
 
 		//Ysabelle
@@ -335,9 +339,11 @@ Compat with other seasonal outfit mods for RSV
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
 			"When":
 			{
+				"LocationName": "temp",
 				"SeasonalYsabelleToken": true,
 				"HasFile:{{FromFile}}": true
-			}
+			},
+			"Update": "OnLocationChange",
 		},
 
 		//Alissa
@@ -358,9 +364,11 @@ Compat with other seasonal outfit mods for RSV
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
 			"When":
 			{
+				"LocationName": "temp",
 				"SeasonalAlissaToken": true,
 				"HasFile:{{FromFile}}": true
-			}
+			},
+			"Update": "OnLocationChange",
 		},
 
 		//Kiarra
@@ -381,9 +389,11 @@ Compat with other seasonal outfit mods for RSV
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
 			"When":
 			{
+				"LocationName": "temp",
 				"SeasonalKiarraToken": true,
 				"HasFile:{{FromFile}}": true
-			}
+			},
+			"Update": "OnLocationChange",
 		},
 
 /*-----------------------------------
@@ -518,6 +528,20 @@ Work Clothes
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		},
+		//Jio Festival outfits when @ 4 hearts or more
+		{
+			"LogName": "RSV Jio Festival Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
+			"When":
+			{
+				"LocationName": "temp",
+				"Hearts:Jio": "{{Range: 4, 14}}",
+				"HasFile:{{FromFile}}": true
+			},
+			"Update": "OnLocationChange",
+		},
 
 		//Corine at-home wear
 		{
@@ -631,12 +655,14 @@ Festivals
 	{
 		"LogName": "RSV Festival Outfits",
 		"Action": "EditImage",
-		"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/Jio, Characters/Jio, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne",
+		"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne, Portraits/Sonny, Characters/Sonny, Portraits/Aguar, Characters/Aguar,",
 		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{festival}}.png",
 		"When":
 		{
+			"LocationName": "temp",
 			"HasFile:{{FromFile}}": true
 		},
+		"Update": "OnLocationChange",
 	},
 ]
 }
