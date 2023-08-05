@@ -6,7 +6,7 @@
     //Fighter or Warrior Skill
     {
       "Name": "fighter",
-      "IsWarrior": true, //Fight with fists boiii
+      "IsWarrior": false, //Fight with fists boiii
       "Strength": 1.0,
       "Speed": 2.0,
       "Effeciency": 1.0,
@@ -14,24 +14,24 @@
       "AttackRadius": 1.5,
       "BackupRadius": 0.9,
       "FistCooldown": 1200,
-      "MissChance": 0.0,
+      "MissChance": -0.99,
       "ExtraSpeed": 0,
       "ExtraStrength": 0,
-      "DefendRadius": 6.0,
-      "ReturnRadius": 11.0
+      "DefendRadius": 8.0,
+      "ReturnRadius": 10.0
     },
 
     //Shooter
     {
       "Name": "shooter",
-      "Damage": 7,
+      "Damage": 10,
       "CollisionSound": "throw",
-      "Cooldown": 1000, //ms
-      "ChargeTime": 300, //ms
+      "Cooldown": 500, //ms
+      "ChargeTime": 100, //ms
       "Projectile": 719, //springobjects tilesheet
       "Explode": false,
       "MinShootRange": 1.0,
-      "MaxShootRange": 2.0,
+      "MaxShootRange": 10.0,
       "ShotSpeed": 1.2,
       "LightingShot": false, //emit light
     },
@@ -40,7 +40,7 @@
     {
       "Name": "charmer",
       "GrantFriendshipFactor": 1.0, //Multiplier
-      "ExtraFriendshipPoints": 10 //Extra FP on top of the bonus
+      "ExtraFriendshipPoints": 15, //Extra FP on top of the bonus,
     }
 
   ],
@@ -48,8 +48,8 @@
   "Price": 1000,
   "Sales": {
     "O Daia": 0.0,
-    "D Daia/f Daia 2000": 0.5,
-    "f Daia 2500": 0.5,
+    "D Daia/f Daia 2500/e 75160208": 0.5,
+    "f Daia 2000/!D Dia/e 75160205": 0.5,
   },
   "Rules": {
     //Combat

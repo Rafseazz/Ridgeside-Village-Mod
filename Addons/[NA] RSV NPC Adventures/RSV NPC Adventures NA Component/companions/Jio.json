@@ -6,32 +6,32 @@
     //Fighter or Warrior Skill
     {
       "Name": "fighter",
-      "IsWarrior": true, //Fight with fists boiii
+      "IsWarrior": false, //Fight with fists boiii
       "Strength": 1.2,
       "Speed": 2.0,
       "Effeciency": 1.0,
       "Cooldown": 50, //advanced
-      "AttackRadius": 1.5,
+      "AttackRadius": 2.0,
       "BackupRadius": 0.9,
       "FistCooldown": 1200,
-      "MissChance": 0.0,
+      "MissChance": -0.99,
       "ExtraSpeed": 0,
-      "ExtraStrength": 0,
-      "DefendRadius": 6.0,
-      "ReturnRadius": 11.0
+      "ExtraStrength": 25,
+      "DefendRadius": 15.0,
+      "ReturnRadius": 99.0
     },
 
     //Shooter
     {
       "Name": "shooter",
-      "Damage": 10,
+      "Damage": 20,
       "CollisionSound": "throw",
       "Cooldown": 1000, //ms
       "ChargeTime": 300, //ms
       "Projectile": 719, //springobjects tilesheet
       "Explode": false,
       "MinShootRange": 1.0,
-      "MaxShootRange": 1.0,
+      "MaxShootRange": 2.0,
       "ShotSpeed": 1.0,
       "LightingShot": false, //emit light
     },
@@ -40,10 +40,10 @@
     {
       "Name": "protector",
       "Type": "Attack", //IMPORTANT (Invincibility or Attack)
-      "UseChance": 0.5, //% chance
+      "UseChance": 0.75, //% chance
       "Duration": 5,
-      "Cooldown": 120,
-      "Amount": 5, //Increase of attack power IF Attack Type protector
+      "Cooldown": 100,
+      "Amount": 10, //Increase of attack power IF Attack Type protector
       "Description": "[Jio.protector]"
     },
 
@@ -52,8 +52,8 @@
   "Price": 1000,
   "Sales": {
     "O Jio": 0.0,
-    "D Jio/f Jio 2000": 0.5,
-    "f Jio 2500": 0.5,
+    "D Jio/f Jio 2500/e 75160200": 0.5,
+    "f Jio 2000/!D Jio/e 75160081": 0.5,
   },
   "Rules": {
     //Combat
