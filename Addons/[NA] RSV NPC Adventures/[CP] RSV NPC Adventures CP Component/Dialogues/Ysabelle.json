@@ -38,17 +38,9 @@
 
       //Locations (Farm)
         //Friends
-        //General
-        "companion_Farm": "{{i18n:Ysabelle.Dialogue.companion_Farm}}",
-        "companion_Farm~1": "{{i18n:Ysabelle.Dialogue.companion_Farm~1}}",
         //Weather
         "companion_Farm_Rainy": "{{i18n:Ysabelle.Dialogue.companion_Farm_Rainy}}",
         "companion_Farm_Snowy": "{{i18n:Ysabelle.Dialogue.companion_Farm_Snowy}}",
-        //Season
-        "companion_Farm_spring": "{{i18n:Ysabelle.Dialogue.companion_Farm_spring}}",
-        "companion_Farm_summer": "{{i18n:Ysabelle.Dialogue.companion_Farm_summer}}",
-        "companion_Farm_fall": "{{i18n:Ysabelle.Dialogue.companion_Farm_fall}}",
-        "companion_Farm_winter": "{{i18n:Ysabelle.Dialogue.companion_Farm_winter}}",
         //Entering
         "companionEnter_Farm": "{{i18n:Ysabelle.Dialogue.companionEnter_Farm}}",
         "companionEnter_Farm_Night": "{{i18n:Ysabelle.Dialogue.companionEnter_Farm_Night}}",
@@ -56,17 +48,9 @@
         "companion_Farm_Night": "{{i18n:Ysabelle.Dialogue.companion_Farm_Night}}",
 
         //Dating
-        //General
-        "companion_Farm_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Dating}}",
-        "companion_Farm_Dating~1": "{{i18n:Ysabelle.Dialogue.companion_Farm_Dating~1}}",
         //Weather
         "companion_Farm_Rainy_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Rainy_Dating}}",
         "companion_Farm_Snowy_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Snowy_Dating}}",
-        //Season
-        "companion_Farm_spring_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_spring_Dating}}",
-        "companion_Farm_summer_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_summer_Dating}}",
-        "companion_Farm_fall_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_fall_Dating}}",
-        "companion_Farm_winter_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_winter_Dating}}",
         //Entering
         "companionEnter_Farm_Dating": "{{i18n:Ysabelle.Dialogue.companionEnter_Farm_Dating}}",
         "companionEnter_Farm_Night_Dating": "{{i18n:Ysabelle.Dialogue.companionEnter_Farm_Night_Dating}}",
@@ -74,17 +58,9 @@
         "companion_Farm_Night_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Night_Dating}}",
 
         //Spouse
-        //General
-        "companion_Farm_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Spouse}}",
-        "companion_Farm_Spouse~1": "{{i18n:Ysabelle.Dialogue.companion_Farm_Spouse~1}}",
         //Weather
         "companion_Farm_Rainy_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Rainy_Spouse}}",
         "companion_Farm_Snowy_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Snowy_Spouse}}",
-        //Season
-        "companion_Farm_spring_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_spring_Spouse}}",
-        "companion_Farm_summer_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_summer_Spouse}}",
-        "companion_Farm_fall_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_fall_Spouse}}",
-        "companion_Farm_winter_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_winter_Spouse}}",
         //Entering
         "companionEnter_Farm_Spouse": "{{i18n:Ysabelle.Dialogue.companionEnter_Farm_Spouse}}",
         "companionEnter_Farm_Night_Spouse": "{{i18n:Ysabelle.Dialogue.companionEnter_Farm_Night_Spouse}}",
@@ -92,12 +68,9 @@
         "companion_Farm_Night_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Night_Spouse}}",
 
       //Locations (Others)
-      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
-      //Feel free to change/remove/add! (During editing)
         "companion_Town_Rainy": "{{i18n:Ysabelle.Dialogue.companion_Town_Rainy}}",
         "companion_Town": "{{i18n:Ysabelle.Dialogue.companion_Town}}",
-        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Ysabelle.Dialogue.companion_Custom_Ridgeside_RidgesideVillage}}",
-        "companion_Custom_Ridgeside_RidgesideVillage~1": "{{i18n:Ysabelle.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~1}}",
+        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Ysabelle.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~{{Random:0,1}}}}",
         "companion_Custom_Ridgeside_Ridge": "{{i18n:Ysabelle.Dialogue.companion_Custom_Ridgeside_Ridge}}",
         "companion_Custom_Ridgeside_LogCabinHotel2ndFloor_Dating": "{{i18n:Ysabelle.Dialogue.companion_Custom_Ridgeside_LogCabinHotel2ndFloor_Dating}}",
         "companion_Custom_Ridgeside_EventHall": "{{i18n:Ysabelle.Dialogue.companion_Custom_Ridgeside_EventHall}}",
@@ -118,6 +91,50 @@
         "companionSuggest_Yes_Spouse": "{{i18n:Ysabelle.Dialogue.companionSuggest_Yes_Spouse}}",
         "companionSuggest_No_Spouse": "{{i18n:Ysabelle.Dialogue.companionSuggest_No_Spouse}}",
       }
-    }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Ysabelle",
+      "When": { "Season": "spring" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Ysabelle.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, spring}}}}",
+        "companion_Farm_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Dating~{{Random:{{Random: 0, 1}}, spring}}}}",
+        "companion_Farm_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Spouse~{{Random:{{Random: 0, 1}}, spring}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Ysabelle",
+      "When": { "Season": "summer" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Ysabelle.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, summer}}}}",
+        "companion_Farm_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Dating~{{Random:{{Random: 0, 1}}, summer}}}}",
+        "companion_Farm_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Spouse~{{Random:{{Random: 0, 1}}, summer}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Ysabelle",
+      "When": { "Season": "fall" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Ysabelle.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, fall}}}}",
+        "companion_Farm_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Dating~{{Random:{{Random: 0, 1}}, fall}}}}",
+        "companion_Farm_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Spouse~{{Random:{{Random: 0, 1}}, fall}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Ysabelle",
+      "When": { "Season": "winter" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Ysabelle.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, winter}}}}",
+        "companion_Farm_Dating": "{{i18n:Ysabelle.Dialogue.companion_Farm_Dating~{{Random:{{Random: 0, 1}}, winter}}}}",
+        "companion_Farm_Spouse": "{{i18n:Ysabelle.Dialogue.companion_Farm_Spouse~{{Random:{{Random: 0, 1}}, winter}}}}",
+      }
+    },
   ]
 }

@@ -7,7 +7,7 @@
     {
       "Name": "fighter",
       "IsWarrior": true, //Fight with fists boiii
-      "Strength": 1.0,
+      "Strength": 1.2,
       "Speed": 1.0,
       "Effeciency": 1.0,
       "Cooldown": 50, //advanced
@@ -17,7 +17,7 @@
       "MissChance": 0.0,
       "ExtraSpeed": 0,
       "ExtraStrength": 0,
-      "DefendRadius": 6.0,
+      "DefendRadius": 10.0,
       "ReturnRadius": 11.0
     },
 
@@ -25,9 +25,9 @@
     {
       "Name": "protector",
       "Type": "Invincibility", //IMPORTANT (Invincibility or Attack)
-      "UseChance": 0.5, //% chance
+      "UseChance": 0.75, //% chance
       "Duration": 5,
-      "Cooldown": 120,
+      "Cooldown": 100,
       "Description": "[Bryle.protector]"
     },
 
@@ -58,8 +58,8 @@
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
-  	"Attack": 3,
-  	"Defense": 1,
+  	"Attack": 2,
+  	"Defense": 3,
   },
   "BuffsDescription": "[Bryle.buffs]",
 

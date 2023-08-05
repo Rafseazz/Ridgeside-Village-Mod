@@ -7,11 +7,11 @@
     {
       "Name": "fighter",
       "IsWarrior": true, //Fight with fists boiii
-      "Strength": 1.0,
-      "Speed": 1.0,
+      "Strength": 1.2,
+      "Speed": 2.0,
       "Effeciency": 1.0,
       "Cooldown": 50, //advanced
-      "AttackRadius": 1.25,
+      "AttackRadius": 1.5,
       "BackupRadius": 0.9,
       "FistCooldown": 1200,
       "MissChance": 0.0,
@@ -24,7 +24,7 @@
     //Shooter
     {
       "Name": "shooter",
-      "Damage": 5,
+      "Damage": 10,
       "CollisionSound": "throw",
       "Cooldown": 1000, //ms
       "ChargeTime": 300, //ms
@@ -81,7 +81,7 @@
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
   	"Attack": 3,
-  	"Speed": 1,
+  	"Speed": 3,
   },
   "BuffsDescription": "[Jio.buffs]",
 

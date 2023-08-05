@@ -8,10 +8,10 @@
       "Name": "fighter",
       "IsWarrior": true, //Fight with fists boiii
       "Strength": 1.0,
-      "Speed": 1.0,
+      "Speed": 2.0,
       "Effeciency": 1.0,
       "Cooldown": 50, //advanced
-      "AttackRadius": 1.25,
+      "AttackRadius": 1.5,
       "BackupRadius": 0.9,
       "FistCooldown": 1200,
       "MissChance": 0.0,
@@ -24,15 +24,15 @@
     //Shooter
     {
       "Name": "shooter",
-      "Damage": 10,
+      "Damage": 7,
       "CollisionSound": "throw",
       "Cooldown": 1000, //ms
       "ChargeTime": 300, //ms
       "Projectile": 719, //springobjects tilesheet
       "Explode": false,
       "MinShootRange": 1.0,
-      "MaxShootRange": 1.0,
-      "ShotSpeed": 1.0,
+      "MaxShootRange": 2.0,
+      "ShotSpeed": 1.2,
       "LightingShot": false, //emit light
     },
 
@@ -76,8 +76,8 @@
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
-  	"Luck": 2,
-  	"MagneticRadius": 32,
+  	"Luck": 3,
+  	"MagneticRadius": 64,
   },
   "BuffsDescription": "[Daia.buffs]",
 
