@@ -21,13 +21,12 @@
   ],
   "Rules": {
     //Normal
-    //Requires seen 4 heart event + 4 hearts and above with Louie, Sonny
-    "!f Sonny 1000": "reject",
-    "!f Louie 1000": "reject",
-    "k 75160372": "reject",
+    //Requires seen 4 heart event + 4 hearts and above with Louie, Sonny/Maive
+    "e 75160372/f Louie 1000/f Sonny 1000": "accept",
+    "e 75160372/f Louie 1000/f Maive 1000": "accept",
 
     //Basics
-    "": "accept", //acceptance when asked
+    "": "reject", //acceptance when asked
   },
 
   "Bedtime": "2000",
