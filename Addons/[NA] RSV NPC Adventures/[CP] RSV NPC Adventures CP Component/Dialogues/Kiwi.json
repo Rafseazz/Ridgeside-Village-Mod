@@ -17,31 +17,17 @@
 
       //Locations (Farm)
         //Friends
-        //General
-        "companion_Farm": "{{i18n:Kiwi.Dialogue.companion_Farm}}",
-        "companion_Farm~1": "{{i18n:Kiwi.Dialogue.companion_Farm~1}}",
         //Weather
         "companion_Farm_Rainy": "{{i18n:Kiwi.Dialogue.companion_Farm_Rainy}}",
         "companion_Farm_Snowy": "{{i18n:Kiwi.Dialogue.companion_Farm_Snowy}}",
-        //Season
-        "companion_Farm_spring": "{{i18n:Kiwi.Dialogue.companion_Farm_spring}}",
-        "companion_Farm_summer": "{{i18n:Kiwi.Dialogue.companion_Farm_summer}}",
-        "companion_Farm_fall": "{{i18n:Kiwi.Dialogue.companion_Farm_fall}}",
-        "companion_Farm_winter": "{{i18n:Kiwi.Dialogue.companion_Farm_winter}}",
-        //Entering
-        "companionEnter_Farm": "{{i18n:Kiwi.Dialogue.companionEnter_Farm}}",
-        "companionEnter_Farm_Night": "{{i18n:Kiwi.Dialogue.companionEnter_Farm_Night}}",
         //Night
-        "companion_Farm_Night": "{{i18n:Kiwi.Dialogue.companion_Farm_Night}}",
+        "companion_Farm_Night": "{{i18n:Kiwi.Dialogue.companion_Farm_Night~{{Random:0,1}}}}",
 
       //Locations (Others)
-      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
-      //Feel free to change/remove/add! (During editing)
         "companion_Town_Rainy": "{{i18n:Kiwi.Dialogue.companion_Town_Rainy}}",
         "companion_Town_Night": "{{i18n:Kiwi.Dialogue.companion_Town_Night}}",
         "companion_Town": "{{i18n:Kiwi.Dialogue.companion_Town}}",
-        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Kiwi.Dialogue.companion_Custom_Ridgeside_RidgesideVillage}}",
-        "companion_Custom_Ridgeside_RidgesideVillage~1": "{{i18n:Kiwi.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~1}}",
+        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Kiwi.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~{{Random:0,1}}}}",
         "companion_Custom_Ridgeside_RidgeFalls": "{{i18n:Kiwi.Dialogue.companion_Custom_Ridgeside_RidgeFalls}}",
         "companion_Custom_Ridgeside_RSVTheHike": "{{i18n:Kiwi.Dialogue.companion_Custom_Ridgeside_RSVTheHike}}",
         "companion_Custom_Ridgeside_Ridge": "{{i18n:Kiwi.Dialogue.companion_Custom_Ridgeside_Ridge}}",
@@ -59,6 +45,42 @@
         "companionSuggest_Yes": "{{i18n:Kiwi.Dialogue.companionSuggest_Yes}}",
         "companionSuggest_No": "{{i18n:Kiwi.Dialogue.companionSuggest_No}}",
       }
-    }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiwi",
+      "When": { "Season": "spring" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiwi.Dialogue.companion_Farm~{{Random:0, 1, 2 spring}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiwi",
+      "When": { "Season": "summer" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiwi.Dialogue.companion_Farm~{{Random:0, 1, 2 summer}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiwi",
+      "When": { "Season": "fall" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiwi.Dialogue.companion_Farm~{{Random:0, 1, 2 fall}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiwi",
+      "When": { "Season": "winter" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiwi.Dialogue.companion_Farm~{{Random:0, 1, 2 winter}}}}",
+      }
+    },
   ]
 }

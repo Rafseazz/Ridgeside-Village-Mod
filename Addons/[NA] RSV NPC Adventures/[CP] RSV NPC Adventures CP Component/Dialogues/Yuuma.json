@@ -16,25 +16,13 @@
 
       //Locations (Farm)
         //Friends
-        //General
-        "companion_Farm": "{{i18n:Yuuma.Dialogue.companion_Farm}}",
-        "companion_Farm~1": "{{i18n:Yuuma.Dialogue.companion_Farm~1}}",
         //Weather
         "companion_Farm_Rainy": "{{i18n:Yuuma.Dialogue.companion_Farm_Rainy}}",
         "companion_Farm_Snowy": "{{i18n:Yuuma.Dialogue.companion_Farm_Snowy}}",
-        //Season
-        "companion_Farm_spring": "{{i18n:Yuuma.Dialogue.companion_Farm_spring}}",
-        "companion_Farm_summer": "{{i18n:Yuuma.Dialogue.companion_Farm_summer}}",
-        "companion_Farm_fall": "{{i18n:Yuuma.Dialogue.companion_Farm_fall}}",
-        "companion_Farm_winter": "{{i18n:Yuuma.Dialogue.companion_Farm_winter}}",
 
       //Locations (Others)
-      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
-      //Feel free to change/remove/add! (During editing)
-
         "companion_Town": "{{i18n:Yuuma.Dialogue.companion_Town}}",
-        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Yuuma.Dialogue.companion_Custom_Ridgeside_RidgesideVillage}}",
-        "companion_Custom_Ridgeside_RidgesideVillage~1": "{{i18n:Yuuma.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~1}}",
+        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Yuuma.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~{{Random:0,1}}}}",
 
       //Suggestion
         "companionSuggest": "{{i18n:Yuuma.Dialogue.companionSuggest}}",
@@ -43,6 +31,42 @@
         "companionSuggest_No": "{{i18n:Yuuma.Dialogue.companionSuggest_No}}",
 
       }
-    }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Yuuma",
+      "When": { "Season": "spring" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Yuuma.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, spring}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Yuuma",
+      "When": { "Season": "summer" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Yuuma.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, summer}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Yuuma",
+      "When": { "Season": "fall" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Yuuma.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, fall}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Yuuma",
+      "When": { "Season": "winter" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Yuuma.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, winter}}}}",
+      }
+    },
   ]
 }

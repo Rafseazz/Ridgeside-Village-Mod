@@ -9,6 +9,8 @@
         "companionAccepted_Dating": "{{i18n:Bryle.Dialogue.companionAccepted_Dating}}",
         "companionAccepted_Spouse": "{{i18n:Bryle.Dialogue.companionAccepted_Spouse}}",
 
+        "companionRejectedMoney": "{{i18n:Bryle.Dialogue.companionRejectedMoney}}",
+
         "companionRejected": "{{i18n:Bryle.Dialogue.companionRejected}}",
         "companionRejected_Dating": "{{i18n:Bryle.Dialogue.companionRejected_Dating}}",
         "companionRejected_Spouse": "{{i18n:Bryle.Dialogue.companionRejected_Spouse}}",
@@ -74,7 +76,7 @@
       "Target": "Characters/Dialogue/Bryle",
       "When": { "Season": "spring" },
       "Entries": {
-        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: 0, 1, spring0, spring1}}}}",
+        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: {{Random: 0, 1}}, spring0, spring1}}}}",
       }
     },
 
@@ -83,7 +85,7 @@
       "Target": "Characters/Dialogue/Bryle",
       "When": { "Season": "summer" },
       "Entries": {
-        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: 0, 1, summer}}}}",
+        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: {{Random: 0, 1}}, summer}}}}",
       }
     },
 
@@ -92,7 +94,7 @@
       "Target": "Characters/Dialogue/Bryle",
       "When": { "Season": "fall" },
       "Entries": {
-        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: 0, 1, fall}}}}",
+        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: {{Random: 0, 1}}, fall}}}}",
       }
     },
 
@@ -101,7 +103,7 @@
       "Target": "Characters/Dialogue/Bryle",
       "When": { "Season": "winter" },
       "Entries": {
-        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: 0, 1, winter}}}}",
+        "companion_Farm": "{{i18n:Bryle.Dialogue.companion_Farm~{{Random: {{Random: 0, 1}}, winter}}}}",
       }
     },
 

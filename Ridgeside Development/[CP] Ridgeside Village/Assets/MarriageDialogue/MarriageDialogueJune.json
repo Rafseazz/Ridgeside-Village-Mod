@@ -6,10 +6,10 @@
   "Target": "Characters/Dialogue/MarriageDialogueJune",
   "Entries": {
 
-    "patio_June": "{{i18n:June.patio}}",
-    "spouseRoom_June": "{{i18n:June.spouseRoom}}",
-    "funLeave_June": "{{i18n:June.jobLeave}}",
-    "funReturn_June": "{{i18n:June.jobReturn}}",
+    "patio_June": "{{i18n:June.patio.{{Random:0,1,2,3,4,5}}}}",
+    "spouseRoom_June": "{{i18n:June.spouseRoom.{{Random:0,1,2,3,4,5}}}}",
+    "funLeave_June": "{{i18n:June.jobLeave.{{Random:0,1,2,3,4,5}}}}",
+    "funReturn_June": "{{i18n:June.jobReturn.{{Random:0,1,2,3,4,5}}}}",
 
   // Day-specific
     "spring_1": "{{i18n:June.spring_1.spouse}}",

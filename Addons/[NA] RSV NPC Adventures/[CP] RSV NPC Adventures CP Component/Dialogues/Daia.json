@@ -9,6 +9,10 @@
         "companionAccepted_Dating": "{{i18n:Daia.Dialogue.companionAccepted_Dating}}",
         "companionAccepted_Spouse": "{{i18n:Daia.Dialogue.companionAccepted_Spouse}}",
 
+        "companionRejectedMoney": "{{i18n:Daia.Dialogue.companionRejectedMoney}}",
+        "companionRejected_Weak": "{{i18n:Daia.Dialogue.companionRejected_Weak}}",
+        "companionRejectedNight_Weak": "{{i18n:Daia.Dialogue.companionRejectedNight_Weak}}",
+
         "companionRejected": "{{i18n:Daia.Dialogue.companionRejected}}",
         "companionRejected_Dating": "{{i18n:Daia.Dialogue.companionRejected_Dating}}",
         "companionRejected_Spouse": "{{i18n:Daia.Dialogue.companionRejected_Spouse}}",
@@ -47,31 +51,22 @@
         //Weather
         "companion_Farm_Rainy": "{{i18n:Daia.Dialogue.companion_Farm_Rainy}}",
         "companion_Farm_Snowy": "{{i18n:Daia.Dialogue.companion_Farm_Snowy}}",
-        //Entering
-        "companionEnter_Farm": "{{i18n:Daia.Dialogue.companionEnter_Farm}}",
-        "companionEnter_Farm_Night": "{{i18n:Daia.Dialogue.companionEnter_Farm_Night}}",
         //Night
-        "companion_Farm_Night": "{{i18n:Daia.Dialogue.companion_Farm_Night}}",
+        "companion_Farm_Night": "{{i18n:Daia.Dialogue.companion_Farm_Night~{{Random:0,1}}}}",
 
         //Dating
         //Weather
         "companion_Farm_Rainy_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Rainy_Dating}}",
         "companion_Farm_Snowy_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Snowy_Dating}}",
-        //Entering
-        "companionEnter_Farm_Dating": "{{i18n:Daia.Dialogue.companionEnter_Farm_Dating}}",
-        "companionEnter_Farm_Night_Dating": "{{i18n:Daia.Dialogue.companionEnter_Farm_Night_Dating}}",
         //Night
-        "companion_Farm_Night_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Night_Dating}}",
+        "companion_Farm_Night_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Night_Dating~{{Random:0,1}}}}",
 
         //Spouse
         //Weather
         "companion_Farm_Rainy_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Rainy_Spouse}}",
         "companion_Farm_Snowy_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Snowy_Spouse}}",
-        //Entering
-        "companionEnter_Farm_Spouse": "{{i18n:Daia.Dialogue.companionEnter_Farm_Spouse}}",
-        "companionEnter_Farm_Night_Spouse": "{{i18n:Daia.Dialogue.companionEnter_Farm_Night_Spouse}}",
         //Night
-        "companion_Farm_Night_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Night_Spouse}}",
+        "companion_Farm_Night_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Night_Spouse~{{Random:0,1}}}}",
 
       //Locations (Others)
         "companion_Town_Rainy": "{{i18n:Daia.Dialogue.companion_Town_Rainy}}",
@@ -103,9 +98,9 @@
       "Target": "Characters/Dialogue/Daia",
       "When": { "Season": "spring" },
       "Entries": {
-        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, spring}}}}",
-        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, spring}}}}",
-        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, spring}}}}",
+        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, 2 spring}}}}",
+        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, 2 spring}}}}",
+        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, 2 spring}}}}",
       }
     },
 
@@ -114,9 +109,9 @@
       "Target": "Characters/Dialogue/Daia",
       "When": { "Season": "summer" },
       "Entries": {
-        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, summer}}}}",
-        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, summer}}}}",
-        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, summer}}}}",
+        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, 2 summer}}}}",
+        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, 2 summer}}}}",
+        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, 2 summer}}}}",
       }
     },
 
@@ -125,9 +120,9 @@
       "Target": "Characters/Dialogue/Daia",
       "When": { "Season": "fall" },
       "Entries": {
-        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, fall}}}}",
-        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, fall}}}}",
-        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, fall}}}}",
+        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, 2 fall}}}}",
+        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, 2 fall}}}}",
+        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, 2 fall}}}}",
       }
     },
 
@@ -136,9 +131,9 @@
       "Target": "Characters/Dialogue/Daia",
       "When": { "Season": "winter" },
       "Entries": {
-        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, winter}}}}",
-        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, winter}}}}",
-        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, winter}}}}",
+        "companion_Farm": "{{i18n:Daia.Dialogue.companion_Farm~{{Random: 0, 1, 2 winter}}}}",
+        "companion_Farm_Dating": "{{i18n:Daia.Dialogue.companion_Farm_Dating~{{Random: 0, 1, 2 winter}}}}",
+        "companion_Farm_Spouse": "{{i18n:Daia.Dialogue.companion_Farm_Spouse~{{Random: 0, 1, 2 winter}}}}",
       }
     },
 

@@ -15,13 +15,12 @@
   ],
   "Rules": {
     //Normal
-    //Requires seen 4 heart event + 4 hearts and above with Trinnie and Olga
-    "!f Olga 1000": "reject",
-    "!f Trinnie 1000": "reject",
-    "k 75160107": "reject",
+    //Requires seen 4 heart event + 4 hearts and above with Trinnie and Olga/Bert
+    "e 75160107/f Trinnie 1000/f Bert 1000": "accept",
+    "e 75160107/f Trinnie 1000/f Olga 1000": "accept",
 
     //Basics
-    "": "accept", //acceptance when asked
+    "": "reject", //acceptance when asked
   },
 
   "Bedtime": "2000",

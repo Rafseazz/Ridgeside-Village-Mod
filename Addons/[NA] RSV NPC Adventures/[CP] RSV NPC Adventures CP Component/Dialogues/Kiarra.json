@@ -47,41 +47,31 @@
 
       //Locations (Farm)
         //Friends
-        //General
-        "companion_Farm": "{{i18n:Kiarra.Dialogue.companion_Farm}}",
-        "companion_Farm~1": "{{i18n:Kiarra.Dialogue.companion_Farm~1}}",
         //Weather
         "companion_Farm_Rainy": "{{i18n:Kiarra.Dialogue.companion_Farm_Rainy}}",
         "companion_Farm_Snowy": "{{i18n:Kiarra.Dialogue.companion_Farm_Snowy}}",
-        //Season
-        "companion_Farm_spring": "{{i18n:Kiarra.Dialogue.companion_Farm_spring}}",
-        "companion_Farm_summer": "{{i18n:Kiarra.Dialogue.companion_Farm_summer}}",
-        "companion_Farm_fall": "{{i18n:Kiarra.Dialogue.companion_Farm_fall}}",
-        "companion_Farm_winter": "{{i18n:Kiarra.Dialogue.companion_Farm_winter}}",
 
         //Dating
         //Weather
         "companion_Farm_Rainy_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_Rainy_Dating}}",
         "companion_Farm_Snowy_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_Snowy_Dating}}",
         //Season
-        "companion_Farm_spring_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_spring_Dating}}",
-        "companion_Farm_summer_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_summer_Dating}}",
-        "companion_Farm_fall_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_fall_Dating}}",
-        "companion_Farm_winter_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_winter_Dating}}",
+        "companion_Farm_spring_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_Dating~spring}}",
+        "companion_Farm_summer_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_Dating~summer}}",
+        "companion_Farm_fall_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_Dating~fall}}",
+        "companion_Farm_winter_Dating": "{{i18n:Kiarra.Dialogue.companion_Farm_Dating~winter}}",
 
         //Spouse
         //Weather
         "companion_Farm_Rainy_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_Rainy_Spouse}}",
         "companion_Farm_Snowy_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_Snowy_Spouse}}",
         //Season
-        "companion_Farm_spring_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_spring_Spouse}}",
-        "companion_Farm_summer_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_summer_Spouse}}",
-        "companion_Farm_fall_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_fall_Spouse}}",
-        "companion_Farm_winter_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_winter_Spouse}}",
+        "companion_Farm_spring_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_Spouse~spring}}",
+        "companion_Farm_summer_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_Spouse~summer}}",
+        "companion_Farm_fall_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_Spouse~fall}}",
+        "companion_Farm_winter_Spouse": "{{i18n:Kiarra.Dialogue.companion_Farm_Spouse~winter}}",
 
       //Locations (Others)
-      //Format: "companion_(location name)" https://www.npcadventures.dev/docs/modding/dialogues
-      //Feel free to change/remove/add! (During editing)
 
         "companion_Town": "{{i18n:Kiarra.Dialogue.companion_Town}}",
         "companion_Forest": "{{i18n:Kiarra.Dialogue.companion_Forest}}",
@@ -98,8 +88,7 @@
         "companion_BathHouse_MensLocker": "{{i18n:Kiarra.Dialogue.companion_BathHouse_MensLocker}}",
         "companion_BathHouse_MensLocker_Dating": "{{i18n:Kiarra.Dialogue.companion_BathHouse_MensLocker_Dating}}",
         "companion_BathHouse_WomensLocker_Dating": "{{i18n:Kiarra.Dialogue.companion_BathHouse_WomensLocker_Dating}}",
-        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Kiarra.Dialogue.companion_Custom_Ridgeside_RidgesideVillage}}",
-        "companion_Custom_Ridgeside_RidgesideVillage~1": "{{i18n:Kiarra.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~1}}",
+        "companion_Custom_Ridgeside_RidgesideVillage": "{{i18n:Kiarra.Dialogue.companion_Custom_Ridgeside_RidgesideVillage~{{Random:0,1}}}}",
         "companion_Custom_Ridgeside_3Bros2ndFloor": "{{i18n:Kiarra.Dialogue.companion_Custom_Ridgeside_3Bros2ndFloor}}",
         "companion_Custom_Ridgeside_3Bros2ndFloor_Dating": "{{i18n:Kiarra.Dialogue.companion_Custom_Ridgeside_3Bros2ndFloor_Dating}}",
         "companion_Custom_Ridgeside_3Bros2ndFloor_Spouse": "{{i18n:Kiarra.Dialogue.companion_Custom_Ridgeside_3Bros2ndFloor_Spouse}}",
@@ -127,6 +116,42 @@
         "companionSuggest_No_Spouse": "{{i18n:Kiarra.Dialogue.companionSuggest_No_Spouse}}",
 
       }
-    }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiarra",
+      "When": { "Season": "spring" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiarra.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, spring}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiarra",
+      "When": { "Season": "summer" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiarra.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, summer}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiarra",
+      "When": { "Season": "fall" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiarra.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, fall}}}}",
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Kiarra",
+      "When": { "Season": "winter" },
+      "Entries": {
+        "companion_Farm": "{{i18n:Kiarra.Dialogue.companion_Farm~{{Random:{{Random: 0, 1}}, winter}}}}",
+      }
+    },
   ]
 }

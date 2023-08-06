@@ -7,18 +7,18 @@
     {
       "Name": "fighter",
       "IsWarrior": true, //Fight with fists boiii
-      "Strength": 1.0,
-      "Speed": 1.0,
+      "Strength": 1.2,
+      "Speed": 2.2,
       "Effeciency": 1.0,
-      "Cooldown": 50, //advanced
-      "AttackRadius": 1.25,
+      "Cooldown": 40, //advanced
+      "AttackRadius": 1.5,
       "BackupRadius": 0.9,
       "FistCooldown": 1200,
-      "MissChance": 0.0,
-      "ExtraSpeed": 0,
+      "MissChance": -0.99,
+      "ExtraSpeed": 2,
       "ExtraStrength": 0,
-      "DefendRadius": 6.0,
-      "ReturnRadius": 11.0
+      "DefendRadius": 15.0,
+      "ReturnRadius": 99.0
     },
 
     //Forager
@@ -30,11 +30,10 @@
   "Rules": {
     //Normal
     //Requires seen 8 heart event + 10 hearts
-    "!f Kiwi 2500": "reject",
-    "k 75160180": "reject",
+    "f Kiwi 2500/e 75160180": "accept",
 
     //Basics
-    "": "accept", //acceptance when asked
+    "": "reject",
   },
 
   "Bedtime": "2400",

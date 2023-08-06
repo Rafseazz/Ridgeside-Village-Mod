@@ -28,6 +28,11 @@
 
   ],
   "Rules": {
+    //Work
+    "t 1130 1400/Hn GH1Letter/!d Mon/!O Maddie/!z rainy": "reject companionRejectedWork",
+    "t 1000 1400/!u 10 20/d Sun/!O Maddie": "reject companionRejectedWork",
+    "t 1200 1400/d Tue Thu Fri Sat Sun/O Maddie/!z rainy": "reject companionRejectedWork_Spouse",
+
     //Marriage
     //Reject if under 8 hearts, otherwise always go
     "O Maddie/!f Maddie 2000": "reject",

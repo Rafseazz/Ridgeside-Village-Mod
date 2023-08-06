@@ -7,14 +7,14 @@
     {
       "Name": "fighter",
       "IsWarrior": true, //Fight with fists boiii
-      "Strength": 1.0,
+      "Strength": 1.2,
       "Speed": 1.0,
       "Effeciency": 1.0,
       "Cooldown": 50, //advanced
       "AttackRadius": 1.25,
       "BackupRadius": 0.9,
       "FistCooldown": 1200,
-      "MissChance": 0.0,
+      "MissChance": -0.75,
       "ExtraSpeed": 0,
       "ExtraStrength": 0,
       "DefendRadius": 6.0,
@@ -25,9 +25,9 @@
     {
       "Name": "protector",
       "Type": "Invincibility", //IMPORTANT (Invincibility or Attack)
-      "UseChance": 0.5, //% chance
-      "Duration": 5,
-      "Cooldown": 120,
+      "UseChance": 0.99, //% chance
+      "Duration": 7,
+      "Cooldown": 100,
       "Description": "[Bryle.protector]"
     },
 
@@ -36,8 +36,7 @@
   "Price": 500,
   "Sales": {
     "O Bryle": 0.0,
-    "D Bryle/f Bryle 2000": 0.5,
-    "f Bryle 2500": 0.5,
+    "f Bryle 2000/e 75160453": 0.5,
   },
   "Rules": {
     //Marriage
@@ -58,8 +57,8 @@
   "BedtimeSpouse": "2530",
 
   "Buffs": { //Farming, Fishing, Mining, Luck, Foraging, Crafting, MaxStamina, MagneticRadius, Speed, Defense, Attack
-  	"Attack": 3,
-  	"Defense": 1,
+  	"Attack": 2,
+  	"Defense": 3,
   },
   "BuffsDescription": "[Bryle.buffs]",
 
