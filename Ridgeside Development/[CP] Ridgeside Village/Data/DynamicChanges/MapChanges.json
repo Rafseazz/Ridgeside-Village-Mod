@@ -1131,7 +1131,7 @@
 
 	// Clear existing door properties
 	{
-			"LogName": "June Log Cabin 2nd Floor door change",
+			"LogName": "June Log Cabin Hotel door change",
 			"Action": "EditMap",
 			 "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
 			 "When": {
@@ -1151,7 +1151,7 @@
 
 		// Assign tile to be June's door
 		{
-				"LogName": "June Log Cabin 2nd Floor door change",
+				"LogName": "June Log Cabin Hotel door change",
 				"Action": "EditMap",
 				 "Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
 				 "When": {
@@ -1171,39 +1171,40 @@
 
 		// Edit the piano text when June is present but not playing
 			{
-	  		"LogName": "June Piano Text - Fall Winter MTW",
+	  		"LogName": "June Piano Text Edit - Unmarried",
 	      "Action": "EditData",
 	  		"Target": "Strings/StringsFromMaps",
 	      "When": {
 					"Season": "fall, winter",
 					"DayOfWeek": "Monday, Tuesday, Wednesday",
+					"Relationship:June |contains=Married": false,
 					"HasSeenEvent": 94620000,
 	      },
 	  		"Entries": {
-	        "rsv.hotel10": "{{i18n:June.piano_sign}}"
+	        "rsv.hotel10": "{{i18n:June.piano_sign.unmarried}}"
 	      }
 	    },
 			{
-				"LogName": "June Piano Text - Married +Spring Summer MTW",
+				"LogName": "June Piano Text Edit - Married",
 				"Action": "EditData",
 				"Target": "Strings/StringsFromMaps",
 				"When": {
-					"Season": "spring, summer",
-					"DayOfWeek": "Monday, Tuesday, Wednesday",
+					"DayOfWeek": "Monday, Tuesday, Wednesday, Thursday, Friday",
 					"Relationship:June |contains=Married": true,
 					"HasSeenEvent": 94620000,
 				},
 				"Entries": {
-					"rsv.hotel10": "{{i18n:June.piano_sign}}"
+					"rsv.hotel10": "{{i18n:June.piano_sign.married}}"
 				}
 			},
 
 		// Clear piano text on days June plays
 			{
-	  		"LogName": "June Piano Text - Fall Winter TFSS",
+	  		"LogName": "June Piano Text Clear - Unmarried",
 	      "Action": "EditMap",
 	  		"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
 	      "When": {
+					"Relationship:June |contains=Married": false,
 					"Season": "fall, winter",
 					"DayOfWeek": "Thursday, Friday, Saturday, Sunday",
 					"HasSeenEvent": 94620000,
@@ -1227,12 +1228,11 @@
 	    },
 
 			{
-				"LogName": "June Piano Text - Married +Spring Summer TFSS",
+				"LogName": "June Piano Text Clear - Married",
 				"Action": "EditMap",
 				"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
 				"When": {
-					"Season": "spring, summer",
-					"DayOfWeek": "Thursday, Friday, Saturday, Sunday",
+					"DayOfWeek": "Saturday, Sunday",
 					"Relationship:June |contains=Married": true,
 					"HasSeenEvent": 94620000,
 				},

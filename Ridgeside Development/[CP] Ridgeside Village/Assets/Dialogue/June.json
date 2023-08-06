@@ -22,6 +22,12 @@
     "winter_28": "{{i18n:June.winter_28}}",
 
     // No hearts
+    "Mon": "{{i18n:June.Mon}}",
+    "Tue": "{{i18n:June.Tue}}",
+    "Wed": "{{i18n:June.Wed}}",
+    "Thu": "{{i18n:June.Thu}}",
+    "Fri": "{{i18n:June.Fri}}",
+    "Sat": "{{i18n:June.Sat}}",
     "fall_Mon": "{{i18n:June.fall_Mon}}",
     "fall_Tue": "{{i18n:June.fall_Tue}}",
     "fall_Wed": "{{i18n:June.fall_Wed}}",
@@ -38,6 +44,12 @@
     "winter_Sun": "{{i18n:June.winter_Sun}}",
 
     // Two hearts
+    "Mon2": "{{i18n:June.Mon2}}",
+    "Tue2": "{{i18n:June.Tue2}}",
+    "Wed2": "{{i18n:June.Wed2}}",
+    "Thu2": "{{i18n:June.Thu2}}",
+    "Fri2": "{{i18n:June.Fri2}}",
+    "Sat2": "{{i18n:June.Sat2}}",
     "fall_Mon2": "{{i18n:June.fall_Mon2}}",
     "fall_Tue2": "{{i18n:June.fall_Tue2}}",
     "fall_Wed2": "{{i18n:June.fall_Wed2}}",
@@ -54,6 +66,12 @@
     "winter_Sun2": "{{i18n:June.winter_Sun2}}",
 
     // Four hearts
+    "Mon4": "{{i18n:June.Mon4}}",
+    "Tue4": "{{i18n:June.Tue4}}",
+    "Wed4": "{{i18n:June.Wed4}}",
+    "Thu4": "{{i18n:June.Thu4}}",
+    "Fri4": "{{i18n:June.Fri4}}",
+    "Sat4": "{{i18n:June.Sat4}}",
     "fall_Mon4": "{{i18n:June.fall_Mon4}}",
     "fall_Tue4": "{{i18n:June.fall_Tue4}}",
     "fall_Wed4": "{{i18n:June.fall_Wed4}}",
@@ -70,6 +88,12 @@
     "winter_Sun4": "{{i18n:June.winter_Sun4}}",
 
     // Six hearts
+    "Mon6": "{{i18n:June.Mon6}}",
+    "Tue6": "{{i18n:June.Tue6}}",
+    "Wed6": "{{i18n:June.Wed6}}",
+    "Thu6": "{{i18n:June.Thu6}}",
+    "Fri6": "{{i18n:June.Fri6}}",
+    "Sat6": "{{i18n:June.Sat6}}",
     "fall_Mon6": "{{i18n:June.fall_Mon6}}",
     "fall_Tue6": "{{i18n:June.fall_Tue6}}",
     "fall_Wed6": "{{i18n:June.fall_Wed6}}",
@@ -86,6 +110,12 @@
     "winter_Sun6": "{{i18n:June.winter_Sun6}}",
 
     // Eight hearts
+    "Mon8": "{{i18n:June.Mon8}}",
+    "Tue8": "{{i18n:June.Tue8}}",
+    "Wed8": "{{i18n:June.Wed8}}",
+    "Thu8": "{{i18n:June.Thu8}}",
+    "Fri8": "{{i18n:June.Fri8}}",
+    "Sat8": "{{i18n:June.Sat8}}",
     "fall_Mon8": "{{i18n:June.fall_Mon8}}",
     "fall_Tue8": "{{i18n:June.fall_Tue8}}",
     "fall_Wed8": "{{i18n:June.fall_Wed8}}",
@@ -102,6 +132,12 @@
     "winter_Sun8": "{{i18n:June.winter_Sun8}}",
 
     // Ten hearts
+    "Mon10": "{{i18n:June.Mon10}}",
+    "Tue10": "{{i18n:June.Tue10}}",
+    "Wed10": "{{i18n:June.Wed10}}",
+    "Thu10": "{{i18n:June.Thu10}}",
+    "Fri10": "{{i18n:June.Fri10}}",
+    "Sat10": "{{i18n:June.Sat10}}",
     "fall_Mon10": "{{i18n:June.fall_Mon10}}",
     "fall_Tue10": "{{i18n:June.fall_Tue10}}",
     "fall_Wed10": "{{i18n:June.fall_Wed10}}",
@@ -192,16 +228,6 @@
     // Misc
     "MovieInvitation": "{{i18n:June.MovieInvitation}}",
     "MovieInvite_Spouse_June": "{{i18n:June.MovieInvitation}}",
-    //"Saloon_2_18": "Single June at the Saloon",
-
-    // Hopefully this dialogue never shows up
-    "Mon": "{{i18n:June.error}}",
-    "Tue": "{{i18n:June.error}}",
-    "Wed": "{{i18n:June.error}}",
-    "Thu": "{{i18n:June.error}}",
-    "Fri": "{{i18n:June.error}}",
-    "Sat": "{{i18n:June.error}}",
-    "Sun": "{{i18n:June.error}}",
     }
   },
 
@@ -255,13 +281,11 @@
     "June_spouse": "{{i18n:June.ember.spouse}}"
   }
 },
-
-// Festivals June can only attend when married
 {
   "Action": "EditData",
   "Target": "Data/Festivals/spring13",
   "Entries": {
-    "June": "{{i18n:June.error}}",
+    "June": "{{i18n:June.egghunt}}",
     "June_spouse": "{{i18n:June.egghunt.spouse}}"
   }
 },
@@ -269,7 +293,7 @@
   "Action": "EditData",
   "Target": "Data/Festivals/spring24",
   "Entries": {
-    "June": "{{i18n:June.error}}",
+    "June": "{{i18n:June.dance}}",
     "June_spouse": "{{i18n:June.dance.spouse}}"
   }
 },
@@ -277,7 +301,7 @@
   "Action": "EditData",
   "Target": "Data/Festivals/summer11",
   "Entries": {
-    "June": "{{i18n:June.error}}",
+    "June": "{{i18n:June.luau}}",
     "June_spouse": "{{i18n:June.luau.spouse}}"
   }
 },
@@ -285,7 +309,7 @@
   "Action": "EditData",
   "Target": "Data/Festivals/summer28",
   "Entries": {
-    "June": "{{i18n:June.error}}",
+    "June": "{{i18n:June.jellies}}",
     "June_spouse": "{{i18n:June.jellies.spouse}}"
   }
 },
