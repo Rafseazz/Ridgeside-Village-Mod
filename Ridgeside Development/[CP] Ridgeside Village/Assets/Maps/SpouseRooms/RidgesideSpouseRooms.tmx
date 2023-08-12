@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="30" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="15">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="30" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="150">
  <tileset firstgid="1" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
   <image source="townInterior.png" width="512" height="1088"/>
   <tile id="333">
@@ -534,7 +534,7 @@
 187,81,81,81,81,188,187,81,81,81,81,188,187,81,81,81,81,188,187,81,81,81,81,188,187,81,81,81,81,188,
 113,113,3331,3332,113,113,113,113,113,113,113,113,219,4156,4157,4158,113,220,219,113,113,113,113,220,219,113,113,113,113,220,
 364,496,3356,3357,3358,402,525,526,527,646,647,696,6375,4168,4169,4170,644,645,6759,525,526,527,644,645,4770,4771,4772,2633,2634,5736,
-0,0,0,0,780,0,0,492,0,0,727,728,0,0,492,0,4178,0,2148,0,0,0,587,588,0,0,0,0,0,0,
+0,0,0,0,780,0,0,492,0,0,727,728,0,0,492,0,4178,0,0,0,0,0,587,588,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,1518,0,0,0,0,0,0,0,0,0,0,619,620,0,0,0,5536,5537,0,
 0,589,590,591,648,649,0,0,0,0,0,0,0,0,0,0,0,364,0,1180,0,0,2148,1919,0,0,554,5568,5569,0,
 0,0,0,0,0,0,0,0,0,0,315,0,0,0,0,492,940,941,0,432,0,0,0,315,0,0,0,1224,554,0,
@@ -625,13 +625,13 @@
 0,0,0,0,2348,2349,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,748,0,0,0,0,0,0,0,
 0,473,474,475,2373,2374,0,0,0,0,0,425,0,0,0,0,413,332,0,0,0,0,0,0,0,0,0,528,529,530,
 0,314,0,0,0,0,0,0,0,0,0,370,0,0,0,444,0,464,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,425,0,0,0,0,0,0,0,1281,1282,1284,1285,0,0,0,0,0,680,681,
+0,0,0,0,0,0,0,0,0,2147484080,0,425,0,0,0,0,0,0,0,1281,1282,1284,1285,0,0,0,0,0,680,681,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,257,3029,3030,257,0,0,257,0,0,1346,0,1174,404,405,343,0,0,0,0,0,0,0,0,0,257,0,182,184,0,
 0,289,0,3028,289,0,0,289,0,0,0,0,1206,1207,0,375,580,581,0,0,0,0,580,581,0,289,0,0,0,0,
 332,464,3140,3163,3333,370,493,494,495,614,615,664,6367,745,709,675,612,613,6751,493,494,495,612,613,4738,4739,4740,2608,2609,5704,
-0,0,0,0,748,0,0,0,0,0,695,0,0,0,0,0,4166,0,2116,0,0,0,555,556,0,0,0,0,0,0,
+0,0,0,0,748,0,0,0,0,0,695,0,0,0,0,0,4166,0,0,0,0,0,555,556,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,1486,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,557,558,559,616,617,0,0,0,0,0,0,0,0,0,0,0,332,0,0,0,0,2116,1887,0,0,0,0,6075,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,908,909,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -707,30 +707,580 @@
 </data>
  </layer>
  <objectgroup id="6" name="Back"/>
- <objectgroup id="7" name="Buildings" visible="0">
+ <objectgroup id="7" name="Buildings">
   <object id="3" name="TileData" x="400" y="480" width="16" height="16">
    <properties>
-    <property name="Action" value="Message &quot;JuneHouse.1&quot;"/>
+    <property name="Action" value="Message &quot;June.room.0&quot;"/>
    </properties>
   </object>
   <object id="4" name="TileData" x="416" y="480" width="16" height="16">
    <properties>
-    <property name="Action" value="Message &quot;JuneHouse.1&quot;"/>
+    <property name="Action" value="Message &quot;June.room.0&quot;"/>
    </properties>
   </object>
   <object id="5" name="TileData" x="448" y="480" width="16" height="16">
    <properties>
-    <property name="Action" value="Message &quot;JuneHouse.3&quot;"/>
+    <property name="Action" value="Message &quot;June.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="59" name="TileData" x="448" y="368" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Blair.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="63" name="TileData" x="432" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Blair.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="64" name="TileData" x="304" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Sean.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="65" name="TileData" x="368" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Sean.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="66" name="TileData" x="288" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Sean.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="67" name="TileData" x="272" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kiarra.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="68" name="TileData" x="256" y="352" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kiarra.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="69" name="TileData" x="240" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kiarra.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="71" name="TileData" x="144" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ysabelle.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="135" name="TileData" x="80" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Shiro.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="137" name="TileData" x="32" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Shiro.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="139" name="TileData" x="64" y="384" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Shiro.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="140" name="TileData" x="80" y="384" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Shiro.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="138" name="TileData" x="48" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Shiro.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="136" name="TileData" x="0" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Shiro.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="74" name="TileData" x="400" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Philip.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="80" name="TileData" x="288" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Maddie.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="92" name="TileData" x="240" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kenneth.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="87" name="TileData" x="208" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kenneth.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="93" name="TileData" x="144" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jio.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="94" name="TileData" x="160" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jio.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="95" name="TileData" x="176" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jio.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="96" name="TileData" x="144" y="240" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jio.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="97" name="TileData" x="16" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="142" name="TileData" x="16" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="146" name="TileData" x="16" y="240" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="98" name="TileData" x="32" y="240" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="147" name="TileData" x="32" y="224" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="99" name="TileData" x="64" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="104" name="TileData" x="448" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ian.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="105" name="TileData" x="464" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ian.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="106" name="TileData" x="400" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ian.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="107" name="TileData" x="384" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ian.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="108" name="TileData" x="448" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ian.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="110" name="TileData" x="288" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Flor.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="115" name="TileData" x="240" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Daia.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="118" name="TileData" x="192" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Daia.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="119" name="TileData" x="160" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Flor.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="120" name="TileData" x="160" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Corine.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="124" name="TileData" x="128" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Corine.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="125" name="TileData" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Corine.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="141" name="TileData" x="112" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Corine.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="128" name="TileData" x="0" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Alissa.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="132" name="TileData" x="16" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Alissa.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="129" name="TileData" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Alissa.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="130" name="TileData" x="80" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Alissa.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="131" name="TileData" x="80" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Alissa.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="126" name="TileData" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Corine.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="127" name="TileData" x="160" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Corine.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="116" name="TileData" x="256" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Daia.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="117" name="TileData" x="272" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Daia.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="111" name="TileData" x="320" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Flor.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="112" name="TileData" x="352" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Flor.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="113" name="TileData" x="368" y="48" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Flor.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="114" name="TileData" x="368" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Flor.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="109" name="TileData" x="464" y="112" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ian.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="102" name="TileData" x="64" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="103" name="TileData" x="64" y="272" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Jeric.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="88" name="TileData" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kenneth.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="89" name="TileData" x="256" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kenneth.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="81" name="TileData" x="304" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Maddie.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="83" name="TileData" x="336" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Maddie.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="84" name="TileData" x="352" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Maddie.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="85" name="TileData" x="368" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Maddie.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="82" name="TileData" x="320" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Maddie.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="76" name="TileData" x="416" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Philip.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="77" name="TileData" x="432" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Philip.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="78" name="TileData" x="448" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Philip.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="79" name="TileData" x="464" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Philip.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="75" name="TileData" x="448" y="256" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Philip.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="72" name="TileData" x="160" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ysabelle.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="73" name="TileData" x="160" y="352" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Ysabelle.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="70" name="TileData" x="272" y="400" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Kiarra.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="62" name="TileData" x="464" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Blair.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="60" name="TileData" x="448" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Blair.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="61" name="TileData" x="432" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Blair.room.0&quot;"/>
    </properties>
   </object>
   <object id="6" name="TileData" x="464" y="480" width="16" height="16">
    <properties>
-    <property name="Action" value="Message &quot;JuneHouse.4&quot;"/>
+    <property name="Action" value="Message &quot;June.room.3&quot;"/>
    </properties>
   </object>
   <object id="7" name="TileData" x="464" y="528" width="16" height="16">
    <properties>
-    <property name="Action" value="Message &quot;JuneHouse.2&quot;"/>
+    <property name="Action" value="Message &quot;June.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="24" name="TileData" x="336" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Zayne.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="25" name="TileData" x="320" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Zayne.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="26" name="TileData" x="352" y="528" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Zayne.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="27" name="TileData" x="288" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Zayne.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="134" name="TileData" x="304" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Zayne.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="29" name="TileData" x="208" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Irene.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="40" name="TileData" x="128" y="528" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Anton.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="143" name="TileData" x="128" y="544" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Anton.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="42" name="TileData" x="112" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Anton.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="44" name="TileData" x="80" y="544" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Paula.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="133" name="TileData" x="80" y="512" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Paula.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="54" name="TileData" x="80" y="528" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Paula.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="56" name="TileData" x="48" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Paula.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="57" name="TileData" x="16" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Paula.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="58" name="TileData" x="0" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Paula.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="35" name="TileData" x="144" y="528" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Anton.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="145" name="TileData" x="144" y="544" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Anton.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="37" name="TileData" x="160" y="528" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Anton.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="144" name="TileData" x="160" y="544" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Anton.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="30" name="TileData" x="272" y="512" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Irene.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="31" name="TileData" x="272" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Irene.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="32" name="TileData" x="256" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Irene.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="33" name="TileData" x="240" y="480" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Irene.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="15" name="TileData" x="96" y="624" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Bryle.room.0&quot;"/>
+   </properties>
+  </object>
+  <object id="18" name="TileData" x="144" y="672" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Bryle.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="149" name="TileData" x="144" y="688" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Bryle.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="17" name="TileData" x="128" y="672" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Bryle.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="148" name="TileData" x="128" y="688" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Bryle.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="19" name="TileData" x="48" y="656" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Faye.room.3&quot;"/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="64" y="624" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Faye.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="23" name="TileData" x="80" y="624" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Faye.room.1&quot;"/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="64" y="688" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Faye.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="21" name="TileData" x="80" y="688" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Faye.room.2&quot;"/>
+   </properties>
+  </object>
+  <object id="16" name="TileData" x="112" y="624" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;Bryle.room.1&quot;"/>
    </properties>
   </object>
   <object id="10" name="TileData" x="416" y="528" width="16" height="16">

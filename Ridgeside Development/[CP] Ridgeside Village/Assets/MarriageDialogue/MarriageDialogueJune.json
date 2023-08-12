@@ -116,5 +116,18 @@
     "Bad_9": "{{i18n:June.Bad_9}}"
   }
 },
+
+{
+  "LogName": "June Tue marriage dialogue",
+  "Action": "EditData",
+  "Target": "Characters/Dialogue/MarriageDialogueJune",
+  "When": {
+    "DayOfWeek": "Tuesday"
+  },
+  "Entries": {
+    "funLeave_June": "{{i18n:June.funLeave_{{Season}}.{{Day}}}}",
+    "funReturn_June": "{{i18n:June.funReturn_{{Season}}.{{Day}}}}",
+  }
+},
 	]
 }

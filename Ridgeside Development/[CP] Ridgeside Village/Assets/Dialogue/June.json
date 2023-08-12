@@ -398,69 +398,6 @@
     "June": "{{i18n:June.jellies.spouse}}"
   }
 },
-
-{
-  "LogName": "June 'fun leave' dialogue",
-  "Action": "EditData",
-  "Target": "Characters/Dialogue/MarriageDialogueJune",
-  "When": {
-    "Season": "fall",
-    "DayOfWeek": "Tuesday"
-  },
-  "Entries": {
-    "funLeave_June": "{{i18n:June.funLeave_fall}}",
-    "funReturn_June": "{{i18n:June.funReturn_fall}}",
-  }
-},
-{
-  "LogName": "June 'fun leave' dialogue",
-  "Action": "EditData",
-  "Target": "Characters/Dialogue/MarriageDialogueJune",
-  "When": {
-    "Season": "winter",
-    "DayOfWeek": "Tuesday"
-  },
-  "Entries": {
-    "funLeave_June": "{{i18n:June.funLeave_winter}}",
-    "funReturn_June": "{{i18n:June.funReturn_winter}}",
-  }
-},
-{
-  "LogName": "June 'fun leave' dialogue",
-  "Action": "EditData",
-  "Target": "Characters/Dialogue/MarriageDialogueJune",
-  "When": {
-    "Season": "spring",
-    "DayOfWeek": "Tuesday"
-  },
-  "Entries": {
-    "funLeave_June": "{{i18n:June.funLeave_spring}}",
-    "funReturn_June": "{{i18n:June.funReturn_spring}}",
-  }
-},
-{
-  "LogName": "June 'fun leave' dialogue",
-  "Action": "EditData",
-  "Target": "Characters/Dialogue/MarriageDialogueJune",
-  "When": {
-    "Season": "summer",
-    "DayOfWeek": "Tuesday",
-    "HasMod": "spacechase0.JsonAssets"
-  },
-  "Entries": {
-    "funLeave_June": "{{i18n:June.funLeave_summer}}",
-    "funReturn_June": "{{i18n:June.funReturn_summer.1}} [{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}} {{spacechase0.JsonAssets/ObjectId:Ridge Fruity Plate}} {{spacechase0.JsonAssets/ObjectId:Zesty Tuna}}]#$b#{{i18n:June.funReturn_summer.2}}"
-  }
-},
-{
-  "LogName": "June alternate patio dialogue",
-  "Action": "EditData",
-  "Target": "Characters/Dialogue/MarriageDialogueJune",
-  "When": { "RandomNumber": "{{Range: 0,4}}" },
-  "Entries": {
-    "patio_June": "{{i18n:June.patio.2}}",
-  }
-},
 {
   "LogName": "June romance dialogue",
   "Action": "EditData",
