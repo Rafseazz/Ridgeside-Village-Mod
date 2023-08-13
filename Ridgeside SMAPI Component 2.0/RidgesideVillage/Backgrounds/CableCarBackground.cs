@@ -50,14 +50,14 @@ namespace RidgesideVillage
                 return;
             if (current.id != 94621001)
                 return;
-            Log.Trace($"RSV: Current command: " + current.currentCommand);
+            //Log.Trace($"RSV: Current command: " + current.currentCommand);
             if (current.CurrentCommand > 75)
                 return;
             Vector2 new_offset = offset + speed;
             if (new_offset.X > 0 && new_offset.Y > 0)
                 return;
             offset = new_offset;
-            Log.Trace($"RSV: Cable car offset: " + offset.X + " " + offset.Y);
+            //Log.Trace($"RSV: Cable car offset: " + offset.X + " " + offset.Y);
         }
 
         public void Draw(SpriteBatch b)
