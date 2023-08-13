@@ -45,28 +45,40 @@ namespace RidgesideVillage
 
         public static void Background_update_postfix(Background __instance, xTile.Dimensions.Rectangle viewport)
         {
-            if (__instance is TortsBackground bg)
+            if (__instance is TortsBackground tortsbg)
             {
-                bg.Update(viewport);
+                tortsbg.Update(viewport);
+            }
+            else if (__instance is CableCarBackground ccbg)
+            {
+                ccbg.Update(viewport);
             }
         }
 
         public static void Background_draw_postfix(Background __instance, SpriteBatch b)
         {
-            if (__instance is TortsBackground bg)
-                bg.Draw(b);
-            
+            if (__instance is TortsBackground tortsbg)
+            {
+                tortsbg.Draw(b);
+            }
+            else if (__instance is CableCarBackground ccbg)
+            {
+                ccbg.Draw(b);
+            }
+
         }
 
         public static void GameLocation_resetLocalState_postfix(ref GameLocation __instance)
         {
             if (__instance.NameOrUniqueName == RSVConstants.L_TORTSREALM)
                 Game1.background = new TortsBackground();
+            else if (__instance.NameOrUniqueName == RSVConstants.L_CABLECARBG)
+                Game1.background = new CableCarBackground();
         }
 
         public static void GameLocation_cleanUpBeforePlayerExit_postfix(ref GameLocation __instance)
         {
-            if (__instance.NameOrUniqueName == RSVConstants.L_TORTSREALM)
+            if (__instance.NameOrUniqueName == RSVConstants.L_TORTSREALM || __instance.NameOrUniqueName == RSVConstants.L_CABLECARBG)
                 Game1.background = null;
         }
 

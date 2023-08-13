@@ -47,6 +47,7 @@ namespace RidgesideVillage
             BgUtils.Initialize(this);
 
             TortsBackground.Initialize(this);
+            CableCarBackground.Initialize(this);
             SummitRenovateMenu.Initialize(this);
 
             BloomProjectile.Initialize(this);

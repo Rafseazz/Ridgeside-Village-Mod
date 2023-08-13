@@ -52,7 +52,7 @@ namespace RidgesideVillage
         : base(new Color(0, 0, 12), false)
         {
             Log.Trace($"RSV: Creating Torts bg");
-            torts = Helper.ModContent.Load<Texture2D>("assets/Torts.png");
+            //torts = Helper.ModContent.Load<Texture2D>("assets/Torts.png");
             torts = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/Torts.png"));
             torts_position = new Vector2(10f, 6f) * Game1.tileSize;
             /*
