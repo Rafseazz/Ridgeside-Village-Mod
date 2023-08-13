@@ -536,7 +536,7 @@ Work Clothes
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		},
-		//Jio Festival outfits when @ 4 hearts or more
+		//Jio Festival outfits when married
 		{
 			"LogName": "RSV Jio Festival Outfits",
 			"Action": "EditImage",
@@ -545,13 +545,13 @@ Work Clothes
 			"When":
 			{
 				"LocationName": "temp",
-				"Hearts:Jio": "{{Range: 4, 14}}",
+				"Relationship:Jio": "Married",
 				"HasFile:{{FromFile}}": true
 			},
 			"Update": "OnLocationChange",
 		},
 
-		//Corine at-home wear
+		//Corine ninja at-home wear
 		{
 			"LogName": "RSV Corine At Home Outfit",
 			"Action": "EditImage",
@@ -573,15 +573,14 @@ Work Clothes
 		},
 
 /*-----------------------------------
-Hats
+Accessories
 -----------------------------------*/
-
-		//Normal hats
+		//Year-round accessories
 		{
-			"LogName": "RSV Hats",
+			"LogName": "RSV Accessories",
 			"Action": "EditImage",
-			"Target": "Portraits/Aguar, Characters/Aguar, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Sonny, Characters/Sonny",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_hat.png",
+			"Target": "Portraits/Aguar, Characters/Aguar, Portraits/Ezekiel, Characters/Ezekiel",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc.png",
 			"When":
 			{
 				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR '{{RandomNumber|contains=6,7,8,9,10}}' = 'true'": true,
@@ -595,10 +594,10 @@ Hats
 		{
 			"LogName": "RSV Seasonal Hats",
 			"Action": "EditImage",
-			"Target": "Portraits/Faye, Characters/Faye, Portraits/Louie, Characters/Louie, Portraits/Maive, Characters/Maive, Portraits/Richard, Characters/Richard, Portraits/Sonny, Characters/Sonny",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}hat.png",
+			"Target": "Portraits/Blair, Characters/Blair, Portraits/Faye, Characters/Faye, Portraits/Louie, Characters/Louie, Portraits/Maive, Characters/Maive, Portraits/Richard, Characters/Richard, Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
 			"When": {
-				"Weather |contains=Rain, Storm": false,
+				//"RandomNumber|contains=6,7,8,9,10": true, //(Do we want them all wearing hats at the same time?)
 				"HasFile:{{FromFile}}": true,
 				"IsOutdoors": true,
 				"Lightweight Outfits": "false"
@@ -606,49 +605,14 @@ Hats
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		},
-		//Rain hats
+		//Irene specifically
 		{
-			"LogName": "RSV Rain Hats",
-			"Action": "EditImage",
-			"Target": "Portraits/Blair, Characters/Blair, Portraits/Richard, Characters/Richard",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainhat.png",
-			"When":
-			{
-				"Weather |contains=Rain, Storm, Snow": true,
-				"Season": "Spring, Summer, Fall",
-				"HasFile:{{FromFile}}": true,
-				"IsOutdoors": true,
-				"Lightweight Outfits": "true"
-			},
-			"Update": "OnLocationChange",
-			"PatchMode": "Overlay"
-		},
-		//Irene umbrella while raining but not traveling
-		{
-			"LogName": "RSV Irene Umbrella",
+			"LogName": "RSV Irene Accessories",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_rainumbrella.png",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
 			"When":
 			{
-				"Weather |contains= Rain, Storm": true,
-				"IreneTraveling": false,
-				"IsOutdoors": true,
-				"Lightweight Outfits": "false"
-			},
-			"Update": "OnLocationChange",
-			"PatchMode": "Overlay"
-		},
-		//Irene fall hat not with chef's clothes or when raining
-		{
-			"LogName": "RSV Irene Hats",
-			"Action": "EditImage",
-			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fallhat.png",
-			"When":
-			{
-				"Weather |contains= Rain, Storm": false,
-				"Season": "Fall",
 				"IreneTraveling": false,
 				"IsOutdoors": true,
 				"Lightweight Outfits": "false"
