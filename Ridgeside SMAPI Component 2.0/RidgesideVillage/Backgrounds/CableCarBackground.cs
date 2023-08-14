@@ -25,9 +25,6 @@ namespace RidgesideVillage
         {
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
-
-            Helper.Events.Display.RenderingWorld += OnRenderingWorld;
-            Helper.Events.Display.RenderedWorld += OnRenderedWorld;
         }
 
         public CableCarBackground()
@@ -39,7 +36,7 @@ namespace RidgesideVillage
             Game1.player.eventsSeen.Add(75160175);
             Game1.player.eventsSeen.Add(75160176);
             bg = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/CableCarBg.png"));
-            speed = new Vector2(0.5f, 0.31f);
+            speed = new Vector2(0.5f, 0.315f);
             offset = new Vector2(bg.Width, bg.Height) * -2;
         }
 
@@ -64,14 +61,8 @@ namespace RidgesideVillage
         {
             try
             {
-                Game1.spriteBatch.End();
-                Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
-
                 Rectangle display = new Rectangle(0, 0, Game1.viewport.Width, Game1.viewport.Height);
                 b.Draw(bg, Game1.GlobalToLocal(Game1.viewport, offset), display, Color.White, 0, Vector2.Zero, Game1.pixelZoom, SpriteEffects.None, 1);
-
-                Game1.spriteBatch.End();
-                Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             }
             catch (Exception ex)
             {
@@ -79,28 +70,6 @@ namespace RidgesideVillage
                 Game1.spriteBatch.End();
                 Game1.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp);
             }
-        }
-
-        private static void OnRenderingWorld(object sender, RenderingWorldEventArgs e)
-        {
-            if (Game1.background is CableCarBackground)
-            {
-                // This part doesn't do anything normally (https://github.com/MonoGame/MonoGame/issues/5441),
-                // but SpriteMaster makes it work. So need this for compatibility.
-                if (Game1.graphics.PreferredDepthStencilFormat != DepthFormat.Depth24Stencil8)
-                {
-                    Game1.graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
-                    Game1.graphics.ApplyChanges();
-                }
-
-                BgUtils.DefaultStencilOverride = BgUtils.StencilDarken;
-                Game1.graphics.GraphicsDevice.Clear(ClearOptions.Stencil, Color.Transparent, 0, 0);
-            }
-        }
-
-        private static void OnRenderedWorld(object sender, RenderedWorldEventArgs e)
-        {
-            BgUtils.DefaultStencilOverride = null;
         }
     }
 }
