@@ -2145,33 +2145,22 @@
 			//Irene travels around the world
 			/*Irene travel schedules:
 				Spring 15-21
-				Summer 15-21
 				Fall 2-7
-				Winter 2-7
 			*/
 			//Irene says hello whenever she arrives if dating the farmer. SPRING
 			"75160445/D Irene/u 22/z summer/z fall/z winter": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160445.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160445.02}}\"/end",
 
-			//Irene says hello whenever she arrives if dating the farmer. SUMMER
-			"75160445/D Irene/u 22/z spring/z fall/z winter": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160445.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160445.02}}\"/end",
 
 			//Irene says hello whenever she arrives if dating the farmer. FALL
 			"75160445/D Irene/u 8/z spring/z summer/z winter": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160445.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160445.02}}\"/end",
 
-			//Irene says hello whenever she arrives if dating the farmer. WINTER
-			"75160445/D Irene/u 8/z spring/z summer/z fall": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160445.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160445.02}}\"/end",
 
 			//Irene says good bye whenever she leaves if dating the farmer. SPRING
 			"75160446/D Irene/u 15/z summer/z fall/z winter": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160446.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160446.02}}\"/end",
 
-			//Irene says good bye whenever she leaves if dating the farmer. SUMMER
-			"75160446/D Irene/u 15/z spring/z fall/z winter": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160446.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160446.02}}\"/end",
-
 			//Irene says good bye whenever she leaves if dating the farmer. FALL
 			"75160446/D Irene/u 2/z spring/z summer/z winter": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160446.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160446.02}}\"/end",
 
-			//Irene says good bye whenever she leaves if dating the farmer. WINTER
-			"75160446/D Irene/u 2/z spring/z summer/z fall": "continue/64 15/farmer 64 16 2 Irene 64 18 0/skippable/emote Irene 32/speak Irene \"{{i18n:event-75160446.01}}\"/emote farmer 56/emote Irene 32/speak Irene \"{{i18n:event-75160446.02}}\"/end",
 		}
 	},
 
@@ -2183,26 +2172,18 @@
 			//Irene says hello whenever she arrives if married to the farmer. SPRING
 			"75160447/O Irene/u 22/z summer/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
 
-			//Irene says hello whenever she arrives if married to the farmer. SUMMER
-			"75160447/O Irene/u 22/z spring/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
 
 			//Irene says hello whenever she arrives if married to the farmer. FALL
 			"75160447/O Irene/u 8/z spring/z summer/z winter/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
 
-			//Irene says hello whenever she arrives if married to the farmer. WINTER
-			"75160447/O Irene/u 8/z spring/z summer/z fall/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
 
 			//Irene says good bye whenever she leaves if married to the farmer. SPRING
 			"75160448/O Irene/u 15/z summer/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
 
-			//Irene says good bye whenever she leaves if married to the farmer. SUMMER
-			"75160448/O Irene/u 15/z spring/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
 
 			//Irene says good bye whenever she leaves if married to the farmer. FALL
 			"75160448/O Irene/u 2/z spring/z summer/z winter/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
 
-			//Irene says good bye whenever she leaves if married to the farmer. WINTER
-			"75160448/O Irene/u 2/z spring/z summer/z fall/t 600 610": "continue/-1000 -1000/farmer 7 5 3 Irene 5 5 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
 		}
 	},
 
@@ -2214,26 +2195,15 @@
 			//Irene says hello whenever she arrives if married to the farmer. SPRING
 			"75160447/O Irene/u 22/z summer/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
 
-			//Irene says hello whenever she arrives if married to the farmer. SUMMER
-			"75160447/O Irene/u 22/z spring/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
-
 			//Irene says hello whenever she arrives if married to the farmer. FALL
 			"75160447/O Irene/u 8/z spring/z summer/z winter/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
-
-			//Irene says hello whenever she arrives if married to the farmer. WINTER
-			"75160447/O Irene/u 8/z spring/z summer/z fall/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160447.01}}\"/emote farmer 56/end",
 
 			//Irene says good bye whenever she leaves if married to the farmer. SPRING
 			"75160448/O Irene/u 15/z summer/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
 
-			//Irene says good bye whenever she leaves if married to the farmer. SUMMER
-			"75160448/O Irene/u 15/z spring/z fall/z winter/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
-
 			//Irene says good bye whenever she leaves if married to the farmer. FALL
 			"75160448/O Irene/u 2/z spring/z summer/z winter/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
 
-			//Irene says good bye whenever she leaves if married to the farmer. WINTER
-			"75160448/O Irene/u 2/z spring/z summer/z fall/t 600 610": "continue/-1000 -1000/farmer 10 14 3 Irene 8 14 1/makeInvisible 5 5 5 1/makeInvisible 8 14 5 1/skippable/viewport -100 -100 true unfreeze/emote Irene 32/speak Irene \"{{i18n:event-75160448.01}}\"/emote farmer 56/end",
 		}
 	},
 

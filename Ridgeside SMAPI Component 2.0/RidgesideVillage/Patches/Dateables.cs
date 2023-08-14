@@ -54,14 +54,14 @@ namespace RidgesideVillage
             if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendship) 
                 && friendship.Status == FriendshipStatus.Married)
             { 
-                if (Game1.currentSeason.Equals("spring") || Game1.currentSeason.Equals("summer"))
+                if (Game1.currentSeason.Equals("spring"))
                 {
                     if (Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
                     {
                         Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
                     }
                 }
-                else if (Game1.currentSeason.Equals("fall") || Game1.currentSeason.Equals("winter"))
+                else if (Game1.currentSeason.Equals("fall"))
                 {
                     if (Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
                     {
