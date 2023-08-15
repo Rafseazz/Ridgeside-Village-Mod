@@ -54,6 +54,7 @@ namespace RidgesideVillage
             );
 
             Helper.Events.Multiplayer.ModMessageReceived += OnMessageReceived;
+            Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.DayEnding += OnDayEnding;
             Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             SpaceEvents.OnEventFinished += OnEventFinished;
@@ -214,16 +215,6 @@ namespace RidgesideVillage
                     Game1.warpCharacter(bryle, RSVConstants.L_HIDDENWARP, Vector2.One);
                 }
             }
-            //Teleport Irene
-            else if (Game1.CurrentEvent.id == 75160448)
-            {
-                NPC irene = Game1.getCharacterFromName("Irene");
-                if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var f2)
-                    && f2.Status == FriendshipStatus.Married)
-                {
-                    Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
-                }
-            }
         }
 
         private static void OnDayEnding(object sender, DayEndingEventArgs e)
@@ -239,19 +230,13 @@ namespace RidgesideVillage
             if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendship)
                 && friendship.Status == FriendshipStatus.Married)
             {
-                if (Game1.currentSeason.Equals("spring"))
+                if (Game1.currentSeason.Equals("spring") && Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
                 {
-                    if (Game1.dayOfMonth >= 15 && Game1.dayOfMonth <= 21)
-                    {
-                        Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
-                    }
+                    Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
                 }
-                else if (Game1.currentSeason.Equals("fall"))
+                else if (Game1.currentSeason.Equals("fall") && Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
                 {
-                    if (Game1.dayOfMonth >= 2 && Game1.dayOfMonth <= 7)
-                    {
-                        Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
-                    }
+                    Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
                 }
             }
         }
