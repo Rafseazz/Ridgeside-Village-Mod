@@ -205,23 +205,24 @@ namespace RidgesideVillage
             }
 
             //Teleport Bryle
-            if (!(Game1.CurrentEvent.id == 75160460))
-                return;
-            NPC bryle = Game1.getCharacterFromName("Bryle");
-            if (bryle is not null && Game1.player.friendshipData.TryGetValue("Bryle", out var f1)
-                && f1.Status == FriendshipStatus.Married)
+            if (Game1.CurrentEvent.id == 75160460)
             {
-                Game1.warpCharacter(bryle, RSVConstants.L_HIDDENWARP, Vector2.One);
+                NPC bryle = Game1.getCharacterFromName("Bryle");
+                if (bryle is not null && Game1.player.friendshipData.TryGetValue("Bryle", out var f1)
+                    && f1.Status == FriendshipStatus.Married)
+                {
+                    Game1.warpCharacter(bryle, RSVConstants.L_HIDDENWARP, Vector2.One);
+                }
             }
-
             //Teleport Irene
-            if (!(Game1.CurrentEvent.id == 75160448))
-                return;
-            NPC irene = Game1.getCharacterFromName("Irene");
-            if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var f2)
-                && f2.Status == FriendshipStatus.Married)
+            else if (Game1.CurrentEvent.id == 75160448)
             {
-                Game1.warpCharacter(bryle, RSVConstants.L_HIDDENWARP, Vector2.One);
+                NPC irene = Game1.getCharacterFromName("Irene");
+                if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var f2)
+                    && f2.Status == FriendshipStatus.Married)
+                {
+                    Game1.warpCharacter(irene, RSVConstants.L_HIDDENWARP, Vector2.One);
+                }
             }
         }
 
