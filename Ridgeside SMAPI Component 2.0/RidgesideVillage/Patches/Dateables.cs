@@ -64,7 +64,6 @@ namespace RidgesideVillage
             Helper.Events.Multiplayer.ModMessageReceived += OnMessageReceived;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.DayEnding += OnDayEnding;
-            Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             SpaceEvents.OnEventFinished += OnEventFinished;
         }
