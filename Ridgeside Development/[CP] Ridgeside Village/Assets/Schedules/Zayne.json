@@ -26,7 +26,7 @@
 		}
 	},
 
-	//Post 8 hearts schedule (Amethyne Head Schedule)
+	//Post eight hearts schedule (Amethyne Head Schedule)
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Zayne",
@@ -42,7 +42,7 @@
 			"marriage_Thu": "900 Custom_Ridgeside_RSVCliff 50 21 0/1500 Custom_Ridgeside_PurpleMansion 47 32 0/2000 BusStop -1 23 3",
 			"marriage_Fri": "610 Custom_Ridgeside_RidgesideVillage 120 67 3/1000 Custom_Ridgeside_RidgesideVillage 100 42 0/1400 Custom_Ridgeside_PurpleMansion 47 32 0/2000 BusStop -1 23 3",
 					},
-		"When": {  }
+		"When": { "HasSeenEvent|contains=75160440": true }
 	},
 
 	// Always visits on birthday
