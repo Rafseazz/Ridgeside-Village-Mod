@@ -66,14 +66,14 @@ namespace RidgesideVillage
         {
             if (sync_direction > 0 && Game1.IsMasterGame)
                 return;
-            Log.Trace($"RSV: Syncing datable info. Direction = " + sync_direction);
+            //Log.Trace($"RSV: Syncing datable info. Direction = " + sync_direction);
             Farmer currentPlayer = Game1.player;
             foreach (string name in unlockables.Keys)
             {
                 string[] info = unlockables[name].Split('/');
-                Log.Trace($"RSV: Checking {name} event {info[0]}.");
+                //Log.Trace($"RSV: Checking {name} event {info[0]}.");
                 int eventID = int.Parse(info[0]);
-                Log.Trace($"RSV: Checking event ID {eventID}...");
+                //Log.Trace($"RSV: Checking event ID {eventID}...");
                 // For all entries, make sure all players have seen the event in the first bucket if anyone has
                 if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
                 {
@@ -167,7 +167,7 @@ namespace RidgesideVillage
             if (e.FromModID != ModManifest.UniqueID)
                 return;
             string message = e.ReadAs<string>();
-            Log.Trace($"RSV: {Game1.player.Name} received message {e.Type} {message} received.");
+            //Log.Trace($"RSV: {Game1.player.Name} received message {e.Type} {message} received.");
             switch (e.Type)
             {
                 case "EventSeen":
