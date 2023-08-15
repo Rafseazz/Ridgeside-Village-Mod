@@ -23,19 +23,27 @@ namespace RidgesideVillage
         private static IManifest ModManifest;
 
         private static string[] travelers = { "Bryle", "Irene", "June", "Zayne" };
-        private static Dictionary<string, string> unlockables = new Dictionary<string, string>(){
-         // Character, deciding heart event ID/response ID or mail flag
-            { "Anton", "75160304/75163042" },
-            { "Paula", "75160352/75163521" },
-            { "Irene", "75160324/7516325" },
-            { "Zayne", "75160440/7516439" },
-            { "Faye", "75160319/FayeBryleLoveStory" },
-        // Character, follow-up event ID (if different from event ID above)
-            //{ "PaulaPt2", "75160389" },
-            { "IrenePt2", "75160431" },
-            { "Bryle", "75160453" }, // Not a follow-up per se, but datability decided in Faye's event
-            { "Faye8", "75160320" }, // Lead-up to the actual fashion show but should only be shown once anyway
-            { "Faye8Pt2", "75160449" },
+        private static Dictionary<string, string> to_be_broadcast = new Dictionary<string, string>(){
+         // Important event, extra info type/extra info ID
+         // e: event only, r: response ID, m: mail flag
+            { "75160304", "r/75163042" }, // Anton
+            { "75160352", "r/75163521" }, // Paula
+            { "75160324", "r/7516325" }, // Irene
+            { "75160440", "r/7516439" }, //Zayne
+            { "75160319", "m/FayeBryleLoveStory" }, //Faye + Bryle
+            { "75160431", "e/" }, // Irene follow-up
+            { "75160320", "e/" }, // Faye fashion show notice
+            { "75160449", "e/" }, // Faye fashion show
+        };
+        private static Dictionary<string, string> unlock_rules = new Dictionary<string, string>(){
+         // Character, deciding heart event ID/unlock cond type/cond ID
+         // r: response, m: mail, !: does not have
+            { "Anton", "75160304/r/75163042" },
+            { "Paula", "75160352/r/75163521" },
+            { "Irene", "75160324/r/7516325" },
+            { "Zayne", "75160440/r/7516439" },
+            { "Faye", "75160449/!m/FayeBryleLoveStory" },
+            { "Bryle", "75160453/!m/FayeBryleLoveStory" },
         };
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper, IManifest manifest)
@@ -70,12 +78,10 @@ namespace RidgesideVillage
                 return;
             //Log.Trace($"RSV: Syncing datable info. Direction = " + sync_direction);
             Farmer currentPlayer = Game1.player;
-            foreach (string name in unlockables.Keys)
+            foreach (string key in to_be_broadcast.Keys)
             {
-                string[] info = unlockables[name].Split('/');
-                //Log.Trace($"RSV: Checking {name} event {info[0]}.");
-                int eventID = int.Parse(info[0]);
-                //Log.Trace($"RSV: Checking event ID {eventID}...");
+                int eventID = int.Parse(key);
+                string[] info = to_be_broadcast[key].Split('/');
                 // For all entries, make sure all players have seen the event in the first bucket if anyone has
                 if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
                 {
@@ -96,16 +102,16 @@ namespace RidgesideVillage
                 }
 
                 // For each listing with a second item in the list, use that as condition and make sure it's universally met or unmet
+                var id_type = info[0];
                 int responseID;
                 string mailID;
                 bool decision_made;
-                switch (name)
+                switch (id_type)
                 {
+                    case "e":
+                        break;
                     // Unlocked by dialogue ID
-                    case "Anton":
-                    case "Paula":
-                    case "Irene":
-                    case "Zayne":
+                    case "r":
                         if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
                         {
                             responseID = int.Parse(info[1]);
@@ -132,7 +138,7 @@ namespace RidgesideVillage
                         }
                         break;
                     // Unlocked by mail flag
-                    case "Faye":
+                    case "m":
                         if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
                         {
                             mailID = info[1];
@@ -159,7 +165,7 @@ namespace RidgesideVillage
                         }
                         break;
                     default:
-                        return;
+                        break;
                 }
             }
         }
@@ -185,7 +191,7 @@ namespace RidgesideVillage
                     Log.Trace($"RSV: Marked mail {message} as received.");
                     break;
                 default:
-                    return;
+                    break;
             }
         }
 
@@ -264,11 +270,17 @@ namespace RidgesideVillage
         private static void SocialPage_drawNPCSlot_Postfix(SocialPage __instance, SpriteBatch b, int i)
         {
             string name = __instance.names[i] as string;
-            if (unlockables.Keys.Contains(name) && !SocialPage.isDatable(name))
+            if (unlock_rules.Keys.Contains(name) && !SocialPage.isDatable(name))
             {
-                int event_id = int.Parse(unlockables[name].Split("/")[0]);
-                int romance_id = int.Parse(unlockables[name].Split("/")[1]);
-                if (Game1.player.eventsSeen.Contains(event_id) && !Game1.player.dialogueQuestionsAnswered.Contains(romance_id))
+                int event_id = int.Parse(unlock_rules[name].Split("/")[0]);
+                string id_type = unlock_rules[name].Split("/")[1];
+                var romance_id = unlock_rules[name].Split("/")[2];
+                bool unlocked = false;
+                if (id_type == "r")
+                    unlocked = Game1.player.dialogueQuestionsAnswered.Contains(int.Parse(romance_id));
+                else if (id_type == "!m")
+                    unlocked = !Game1.player.mailReceived.Contains(romance_id);
+                if (Game1.player.eventsSeen.Contains(event_id) && unlocked)
                     return;
                 int width = (IClickableMenu.borderWidth * 3 + 128 - 40 + 192) / 2;
                 string text = Game1.parseText(Helper.Translation.Get("RelationshipStatus.Locked"), Game1.smallFont, width);
