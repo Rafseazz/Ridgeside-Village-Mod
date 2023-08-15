@@ -132,7 +132,7 @@
 		"LogName": "Anton Disposition Change",
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
-		"When": { "HasDialogueAnswer": 75163042 },
+		"When": { "HasSeenEvent": 75160304, "HasDialogueAnswer": 75163042 },
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Anton": "adult/polite/neutral/neutral/male/datable/Paula/Town/spring 9/{{i18n:NPC_Data.Anton}}/Custom_Ridgeside_3Bros2ndFloor 18 12/{{i18n:Name.Anton}}",
@@ -143,7 +143,7 @@
 		"LogName": "Paula Disposition Change",
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
-		"When": { "HasDialogueAnswer": 75163521 },
+		"When": { "HasSeenEvent": 75160352, "HasDialogueAnswer": 75163521 },
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Paula": "adult/polite/neutral/negative/female/datable/Anton/Town/fall 27/{{i18n:NPC_Data.Paula}}/Custom_Ridgeside_PaulaClinic 2 7/{{i18n:Name.Paula}}",
@@ -154,7 +154,7 @@
 		"LogName": "Irene Disposition Change",
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
-		"When": { "HasDialogueAnswer": 7516325 },
+		"When": { "HasSeenEvent": 75160324, "HasDialogueAnswer": 7516325 },
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Irene": "adult/polite/neutral/positive/female/datable/Zayne/Other/winter 27/{{i18n:NPC_Data.Irene}}/Custom_Ridgeside_PurpleMansion 2 44/{{i18n:Name.Irene}}",
@@ -165,7 +165,7 @@
 		"LogName": "Zayne Disposition Change",
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
-		"When": { "HasDialogueAnswer": 7516439 },
+		"When": { "HasSeenEvent": 75160440, "HasDialogueAnswer": 7516439 },
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Zayne": "adult/polite/outgoing/positive/male/datable/Irene/Town/fall 2/{{i18n:NPC_Data.Zayne}}/Custom_Ridgeside_RSVHiddenWarp2 10 8/{{i18n:Name.Zayne}}",
@@ -176,7 +176,7 @@
 		"LogName": "Faye Disposition Change",
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
-		"When": { "HasFlag": "FarmerxFaye" },
+		"When": { "HasSeenEvent": 75160449, "HasFlag |contains=FayeBryleLoveStory": false },
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Faye": "adult/polite/outgoing/positive/female/datable/Bryle/Town/summer 12/{{i18n:NPC_Data.Faye}}/Custom_Ridgeside_FayeHouse 3 5/{{i18n:Name.Faye}}",
@@ -187,7 +187,7 @@
 		"LogName": "Bryle Disposition Change",
 		"Action": "EditData",
 		"Target": "Data/NPCDispositions",
-		"When": { "HasFlag |contains=FayeBryleLoveStory": false, "HasSeenEvent": 75160453 },
+		"When": { "HasSeenEvent": 75160453, "HasFlag |contains=FayeBryleLoveStory": false },
 		"Update": "OnLocationChange, OnTimeChange",
 		"Entries": {
 			"Bryle": "adult/polite/outgoing/neutral/male/datable/Faye/Other/summer 1/{{i18n:NPC_Data.Bryle}}/Custom_Ridgeside_RSVHiddenWarp2 8 8/{{i18n:Name.Bryle}}",

@@ -11,16 +11,7 @@
 		"When": { "HasSeenEvent: hostPlayer|contains=75160338": false }
 	},
 
-	//Random Visit 40% chance after seeing Maive's 4 heart event (75160338)
-	{
-		"Action": "EditData",
-		"Target": "Characters/Schedules/Zayne",
-		"Entries": {
-			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 9 2/2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
-			"rain": "0 Custom_Ridgeside_RSVHiddenWarp2 0 9 2/400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
-					},
-		"When": { "Query: {{RandomNumber}} < 7": true, "HasSeenEvent: hostPlayer": 75160338, "HasSeenEvent: |contains=75160436": false, "HasSeenEvent: |contains=75160440": false  }
-	},
+	//Visits three days a week after intro, four days a week after two hearts, four days a week including sunday after six hearts
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Zayne",
@@ -28,37 +19,11 @@
 			"spring": "0 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2/610 Custom_Ridgeside_RidgesideVillage 120 67 3/1000 Custom_Ridgeside_RidgesideVillage 100 42 0/1400 Custom_Ridgeside_PurpleMansion 47 32 0/2000 Custom_Ridgeside_PurpleMansion 55 32 0/2400 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2 zayne_sleep",
 			"rain": "0 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2/610 Custom_Ridgeside_PurpleMansion2ndFloor 43 22 2 zayne_call/900 Custom_Ridgeside_PurpleMansion 50 7 2/1200 Custom_Ridgeside_PurpleMansion 2 7 2 zayne_call/1500 Custom_Ridgeside_PurpleMansion 55 32 0/2000 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2 zayne_sleep",
 					},
-		"When": { "Query: {{RandomNumber}} >= 7": true, "HasSeenEvent: hostPlayer": 75160338, "HasSeenEvent: |contains=75160436": false, "HasSeenEvent: |contains=75160440": false }
-	},
-
-	//Increase chance of visit to 60% after seeing 2 heart event
-	{
-		"Action": "EditData",
-		"Target": "Characters/Schedules/Zayne",
-		"Entries": {
-			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 9 2/2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
-			"rain": "0 Custom_Ridgeside_RSVHiddenWarp2 0 9 2/400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
-					},
-		"When": { "Query: {{RandomNumber}} < 5": true, "HasSeenEvent: hostPlayer": 75160338, "HasSeenEvent: |contains=75160436": true, "HasSeenEvent: |contains=75160440": false  }
-	},
-	{
-		"Action": "EditData",
-		"Target": "Characters/Schedules/Zayne",
-		"Entries": {
-			"spring": "0 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2/610 Custom_Ridgeside_RidgesideVillage 120 67 3/1000 Custom_Ridgeside_RidgesideVillage 100 42 0/1400 Custom_Ridgeside_PurpleMansion 47 32 0/2000 Custom_Ridgeside_PurpleMansion 55 32 0/2400 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2 zayne_sleep",
-			"rain": "0 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2/610 Custom_Ridgeside_PurpleMansion2ndFloor 43 22 2 zayne_call/900 Custom_Ridgeside_PurpleMansion 50 7 2/1200 Custom_Ridgeside_PurpleMansion 2 7 2 zayne_call/1500 Custom_Ridgeside_PurpleMansion 55 32 0/2000 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2 zayne_sleep",
-					},
-		"When": { "Query: {{RandomNumber}} >= 5": true, "HasSeenEvent: hostPlayer": 75160338, "HasSeenEvent: |contains=75160436": true, "HasSeenEvent: |contains=75160440": false }
-	},
-
-	//Always visits during Sundays after seeing 6 heart event
-	{
-		"Action": "EditData",
-		"Target": "Characters/Schedules/Zayne",
-		"Entries": {
-			"Sun": "0 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2/610 Custom_Ridgeside_PurpleMansion 55 32 0/a1000 Custom_Ridgeside_RSVCliff 50 21 0/a1600 Custom_Ridgeside_PurpleMansion 47 32 0/2100 Custom_Ridgeside_PurpleMansion2ndFloor 41 5 2 zayne_sleep",
-					},
-		"When": { "HasSeenEvent": 75160438 }
+		"When": {
+			"DayOfWeek|contains={{Rafseazz.RidgesideVillage/ZayneWeeklyVisitDays}}": true,
+			"HasSeenEvent: hostPlayer": 75160338,
+			"HasSeenEvent|contains=75160440": false
+		}
 	},
 
 	//Post 8 hearts schedule (Amethyne Head Schedule)
@@ -77,7 +42,7 @@
 			"marriage_Thu": "900 Custom_Ridgeside_RSVCliff 50 21 0/1500 Custom_Ridgeside_PurpleMansion 47 32 0/2000 BusStop -1 23 3",
 			"marriage_Fri": "610 Custom_Ridgeside_RidgesideVillage 120 67 3/1000 Custom_Ridgeside_RidgesideVillage 100 42 0/1400 Custom_Ridgeside_PurpleMansion 47 32 0/2000 BusStop -1 23 3",
 					},
-		"When": { "HasSeenEvent": 75160440 }
+		"When": {  }
 	},
 
 	// Always visits on birthday

@@ -11,19 +11,7 @@
 			"HasSeenEvent: hostPlayer|contains=75160375": false
 		}
 	},
-	//Random Visit 40% chance after seeing his introduction event
-	{
-		"Action": "EditData",
-		"Target": "Characters/Schedules/Bryle",
-		"Entries": {
-			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 3 2/700 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
-					},
-		"When": {
-			"Query: {{RandomNumber}} > 4": true,
-			"HasSeenEvent: hostPlayer": 75160375,
-			"HasSeenEvent: |contains=75160453": false
-		}
-	},
+	//Visits four days a week after intro, six days a week after eight heart event
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Bryle",
@@ -31,35 +19,19 @@
 			"spring": "0 BusStop 12 10 2/610 Custom_Ridgeside_JericHouse 8 5 1/1400 Custom_Ridgeside_RidgesideVillage 71 50 3/1800 Custom_Ridgeside_RidgesideVillage 29 9 0/2200 Custom_Ridgeside_JericHouse 8 5 1",
 					},
 		"When": {
-			"Query: {{RandomNumber}} <= 4": true,
+			"DayOfWeek|contains={{Rafseazz.RidgesideVillage/BryleWeeklyVisitDays}}": true,
 			"HasSeenEvent: hostPlayer": 75160375,
-			"HasSeenEvent: |contains=75160453": false
 		}
 	},
 
-	//Additional visit to Ninja House after seeing 8 heart event
-	//Random Visit 60% chance if seen 8 heart event
+	//Additional visit to Ninja House after seeing eight heart event
 	{
 		"Action": "EditData",
 		"Target": "Characters/Schedules/Bryle",
 		"Entries": {
-			"spring": "0 Custom_Ridgeside_RSVHiddenWarp2 0 3 2/700 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
-					},
-		"When": {
-			"Query: {{RandomNumber}} > 6": true,
-			"HasSeenEvent: hostPlayer": 75160375,
-			"HasSeenEvent: |contains=75160453": true
-		}
-	},
-	{
-		"Action": "EditData",
-		"Target": "Characters/Schedules/Bryle",
-		"Entries": {
-			"spring": "0 BusStop 12 10 2/610 Custom_Ridgeside_JericHouse 8 5 1/1400 Custom_Ridgeside_RidgesideVillage 71 50 3/1800 Custom_Ridgeside_RidgesideVillage 29 9 0/2200 Custom_Ridgeside_JericHouse 8 5 1",
 			"3": "0 BusStop 12 10 2/610 Custom_Ridgeside_JericHouse 8 5 1/1200 Custom_Ridgeside_Ridge 85 27 2/1800 Custom_Ridgeside_RidgesideVillage 29 9 0/2200 Custom_Ridgeside_JericHouse 8 5 1"
 					},
 		"When": {
-			"Query: {{RandomNumber}} <= 6": true,
 			"HasSeenEvent: hostPlayer": 75160375,
 			"HasSeenEvent: |contains=75160453": true
 		}

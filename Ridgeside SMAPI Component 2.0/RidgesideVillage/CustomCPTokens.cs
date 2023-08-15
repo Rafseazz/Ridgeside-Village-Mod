@@ -28,7 +28,7 @@ namespace RidgesideVillage
         public void RegisterTokens() {
             var cp = ExternalAPIs.CP;
 
-          cp.RegisterToken(this.ModManifest, "SpouseGender", () =>
+            cp.RegisterToken(this.ModManifest, "SpouseGender", () =>
             {
                 // or save is currently loading
                 if (SaveGame.loaded?.player != null || Context.IsWorldReady)
@@ -157,6 +157,52 @@ namespace RidgesideVillage
                 }
                 // no save loaded (e.g. on the title screen)
                 return null;
+            });
+
+            cp.RegisterToken(this.ModManifest, "ZayneWeeklyVisitDays", () => {
+                int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                if (randomseed is not null)
+                {   //Seed the random with a seed that changes weekly
+                    Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_ZAYNE_INTRO + ((randomseed.Value - 1) / 7));
+                    List<string> weekdays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+                    List<string> visits = null;
+                    if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_6H))
+                    {
+                        visits = weekdays.GetRange(0, 5).OrderBy(x => random.Next()).Take(3).Append("Sunday").ToList();
+                    }
+                    else if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_2H))
+                    {
+                        visits = weekdays.OrderBy(x => random.Next()).Take(4).ToList();
+                    }
+                    else if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_INTRO))
+                    {
+                        visits = weekdays.OrderBy(x => random.Next()).Take(3).ToList();
+                    }
+                    if (visits is not null)
+                        return new[] { string.Join(",", visits.ToArray()) };
+                }
+                return null; //return null for an unready token.
+            });
+
+            cp.RegisterToken(this.ModManifest, "BryleWeeklyVisitDays", () => {
+                int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                if (randomseed is not null)
+                {   //Seed the random with a seed that changes weekly
+                    Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_BRYLE_INTRO + ((randomseed.Value - 1) / 7));
+                    List<string> weekdays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+                    List<string> visits = null;
+                    if (Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_8H))
+                    {
+                        visits = weekdays.OrderBy(x => random.Next()).Take(6).ToList();
+                    }
+                    else if (Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_INTRO))
+                    {
+                        visits = weekdays.OrderBy(x => random.Next()).Take(4).ToList();
+                    }
+                    if (visits is not null)
+                        return new[] { string.Join(",", visits.ToArray()) };
+                }
+                return null; //return null for an unready token.
             });
         }
 
