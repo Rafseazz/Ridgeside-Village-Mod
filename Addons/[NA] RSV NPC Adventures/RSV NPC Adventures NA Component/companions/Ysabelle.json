@@ -6,7 +6,7 @@
     //Fighter or Warrior Skill
     {
       "Name": "fighter",
-      "IsWarrior": false, //Fight with fists boiii
+      "IsWarrior": true, //Fight with fists boiii
       "Strength": 1.0,
       "Speed": 2.0,
       "Effeciency": 1.0,
@@ -19,6 +19,17 @@
       "ExtraStrength": 0,
       "DefendRadius": 6.0,
       "ReturnRadius": 11.0
+    },
+
+    //Protector
+    {
+      "Name": "protector",
+      "Type": "Attack", //IMPORTANT (Invincibility or Attack)
+      "UseChance": 0.5, //% chance
+      "Duration": 5,
+      "Cooldown": 120,
+      "Amount": 3, //Increase of attack power IF Attack Type protector
+      "Description": "[June.protector]"
     },
 
   ],

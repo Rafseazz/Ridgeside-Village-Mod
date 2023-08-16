@@ -6,7 +6,7 @@
     //Fighter or Warrior Skill
     {
       "Name": "fighter",
-      "IsWarrior": false, //Fight with fists boiii
+      "IsWarrior": true, //Fight with fists boiii
       "Strength": 1.0,
       "Speed": 1.0,
       "Effeciency": 1.0,
@@ -24,7 +24,7 @@
     //Protector
     {
       "Name": "protector",
-      "Type": "Attack", //IMPORTANT (Invincibility or Attack)
+      "Type": "Invincibility", //IMPORTANT (Invincibility or Attack)
       "UseChance": 0.5, //% chance
       "Duration": 5,
       "Cooldown": 120,
@@ -37,7 +37,7 @@
     //Work
     "t 1700 2100/d Mon Tue Wed Sun/!O June": "reject companionRejectedWork",
     "t 1200 1500/d Mon Tue Wed Thu Fri/!O June": "reject companionRejectedWork",
-    "t 1200 1800/d Mon Tue Wed/O June/!z rainy": "reject companionRejectedWork_Spouse",
+    "t 1200 1800/!d Sat/O June/!z rainy": "reject companionRejectedWork_Spouse",
     "t 1200 1500/!d Sun/O June/!z rainy": "reject companionRejectedWork_Spouse",
 
     //Marriage
