@@ -273,60 +273,6 @@
 	},
 },
 
-	//Philip not-so-extra assets (for Seasonal Outfits compat)
-	{
-		"LogName": "Philip work portrait",
-		"Action": "Load",
-		"Target": "Portraits/Philip_Work",
-		"FromFile": "Assets/Portraits/Philip.png"
-	},
-	{
-		"LogName": "Philip work sprite",
-		"Action": "Load",
-		"Target": "Characters/Philip_Work",
-		"FromFile": "Assets/Characters/Philip.png"
-	},
-
-	//Corine extra assets
-	{
-		"LogName": "Corine Extra Assets",
-		"Action": "Load",
-		"Target": "Portraits/Corine_Ninja, Characters/Corine_Ninja",
-		"FromFile": "Assets/{{Target}}.png"
-	},
-
-	//Flor Extra assets for 14 heart event
-	{
-		"LogName": "Flor Extra Assets",
-		"Action": "Load",
-		"Target": "Portraits/Flor_Dress, Characters/Flor_Dress",
-		"FromFile": "Assets/{{Target}}.png"
-	},
-
-	//Maddie Extra assets
-	{
-		"LogName": "Maddie Extra Assets",
-		"Action": "Load",
-		"Target": "Portraits/Maddie_Merida, Portraits/Maddie_Ariel, Portraits/Maddie_Elsa, Characters/Maddie_Merida, Characters/Maddie_Ariel, Characters/Maddie_Elsa, Portraits/Maddie_Lab, Characters/Maddie_Lab",
-		"FromFile": "Assets/{{Target}}.png"
-	},
-
-	//Ysabelle Extra assets for 14 heart event
-	{
-		"LogName": "Ysa Extra Assets",
-		"Action": "Load",
-		"Target": "Portraits/Ysabelle_Ball, Characters/Ysabelle_Ball",
-		"FromFile": "Assets/{{Target}}.png"
-	},
-
-	//Daia Extra assets for 14 heart event
-	{
-		"LogName": "Daia Extra Assets",
-		"Action": "Load",
-		"Target": "Portraits/Daia_Party, Characters/Daia_Party",
-		"FromFile": "Assets/{{Target}}.png"
-	},
-
 	//Jio and Daia become date-able
 	{
 		"Action": "EditData",
