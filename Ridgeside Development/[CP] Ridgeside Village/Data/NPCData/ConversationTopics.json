@@ -637,6 +637,22 @@
 			"june_arrival": "{{i18n:June.june_arrival.{{TargetWithoutPath}}}}",
 		},
 	},
+	// For AgentLyoko~
+	{
+		"LogName": "Daia",
+		"Action": "EditData",
+		"Target": "Characters/Dialogue/Daia",
+		"Entries": {
+			"june_return": "{{i18n:june_return.Daia-i}}
+			#$q 1010010/1010011 null#{{i18n:june_return.Daia-q}}
+					#$r 1010010 0 june_return-r1#{{i18n:june_return.Daia-o1}}
+					#$r 1010011 -5 june_return-r2#{{i18n:june_return.Daia-o2}}
+			",
+			"june_return-r1": "{{i18n:june_return.Daia-r1}}",
+			"june_return-r2": "{{i18n:june_return.Daia-r2}}",
+		},
+		"When": { "Relationship:Daia": "Married" },
+	},
 
 	{
 		"LogName": "Anton",
