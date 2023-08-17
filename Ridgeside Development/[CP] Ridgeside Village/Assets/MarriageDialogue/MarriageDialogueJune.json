@@ -6,10 +6,8 @@
   "Target": "Characters/Dialogue/MarriageDialogueJune",
   "Entries": {
 
-    "patio_June": "{{i18n:June.patio.{{Random:0,1,2,3,4,5}}}}",
     "spouseRoom_June": "{{i18n:June.spouseRoom.{{Random:0,1,2,3,4,5}}}}",
     "funLeave_June": "{{i18n:June.jobLeave.{{Random:0,1,2,3,4,5}}}}",
-    "funReturn_June": "{{i18n:June.jobReturn.{{Random:0,1,2,3,4,5}}}}",
 
   // Day-specific
     "spring_1": "{{i18n:June.spring_1.spouse}}",
@@ -116,17 +114,68 @@
     "Bad_9": "{{i18n:June.Bad_9}}"
   }
 },
-
 {
-  "LogName": "June Tue marriage dialogue",
+ "Action": "EditData",
+ "Target": "Characters/Dialogue/MarriageDialogueJune",
+ "When": {
+	 "DayOfWeek|contains=Tuesday": false,
+	 "Query: {{{{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=1}}": true,
+ },
+ "Entries": {
+	 "funReturn_June": "{{i18n:June.jobReturn.1}}[ {{spacechase0.JsonAssets/ObjectId:Fluffy Apple Crumble}} {{spacechase0.JsonAssets/ObjectId:Strawberry Lover Pie}} {{spacechase0.JsonAssets/ObjectId:Hundred Flavor Doughnut}} {{spacechase0.JsonAssets/ObjectId:Ridge Apple Cake}} {{spacechase0.JsonAssets/ObjectId:Clementine Cake}} {{spacechase0.JsonAssets/ObjectId:Kedi Delight}} ]",
+	}
+},
+{
+ "Action": "EditData",
+ "Target": "Characters/Dialogue/MarriageDialogueJune",
+ "When": {
+	 "DayOfWeek|contains=Tuesday": false,
+	 "Query: {{{{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=1}}": false,
+ },
+ "Entries": {
+	 "funReturn_June": "{{i18n:June.funReturn.{{Random: 0, 2, 3, 4, 5}}}}",
+	}
+},
+{
+ "Action": "EditData",
+ "Target": "Characters/Dialogue/MarriageDialogueJune",
+ "When": { "Query: {{{{Random: 1, 2, 3, 4, 5|key=June}}|contains=4}}": true },
+ "Entries": {
+	 "patio_June": "{{i18n:June.patio.4-1}}[{{spacechase0.JsonAssets/ObjectId:Summit Iced Tea}}]#$b#{{i18n:June.patio.4-2}}",
+	}
+},
+{
+ "Action": "EditData",
+ "Target": "Characters/Dialogue/MarriageDialogueJune",
+ "When": { "Query: {{{{Random: 1, 2, 3, 4, 5|key=June}}|contains=4}}": false },
+ "Entries": {
+	 "patio_June": "{{i18n:June.patio.{{Random: 1, 2, 3, 5}}}}",
+	}
+},
+{
+  "LogName": "June Tue marriage dialogue general",
   "Action": "EditData",
   "Target": "Characters/Dialogue/MarriageDialogueJune",
   "When": {
-    "DayOfWeek": "Tuesday"
+    "DayOfWeek": "Tuesday",
+		"Season|contains=summer": false,
+		"Day|contains=9": false
   },
   "Entries": {
     "funLeave_June": "{{i18n:June.funLeave_{{Season}}.{{Day}}}}",
     "funReturn_June": "{{i18n:June.funReturn_{{Season}}.{{Day}}}}",
+  }
+},
+{
+  "LogName": "June Tue marriage dialogue Summer 9",
+  "Action": "EditData",
+  "Target": "Characters/Dialogue/MarriageDialogueJune",
+  "When": {
+    "Season": "Summer",
+		"Day": "9"
+  },
+  "Entries": {
+    "funReturn_June": "{{i18n:June.funReturn_Summer.9-1}}[{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}} {{spacechase0.JsonAssets/ObjectId:Ridge Fruity Plate}} {{spacechase0.JsonAssets/ObjectId:Zesty Tuna}} {{spacechase0.JsonAssets/ObjectId:Arugula Roll}}]#$b#{{i18n:June.funReturn_Summer.9-2}}",
   }
 },
 	]
