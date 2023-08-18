@@ -46,7 +46,6 @@ namespace RidgesideVillage
                 GMCM.AddBoolOption(ModManifest, () => Config.PoleAtBackwoods, (bool val) => Config.PoleAtBackwoods = val, () => i18n.Get("PoleAtBackwoods"), () => i18n.Get("PoleAtBackwoods.Description"));
                 GMCM.AddBoolOption(ModManifest, () => Config.SeasonalRSVMap, (bool val) => Config.SeasonalRSVMap = val, () => i18n.Get("SeasonalRSVMap"), () => i18n.Get("SeasonalRSVMap.Description"));
                 GMCM.AddBoolOption(ModManifest, () => Config.EnableTouristNPCs, (bool val) => Config.EnableTouristNPCs = val, () => i18n.Get("EnableTouristNPCs"), () => i18n.Get("EnableTouristNPCs.Description"));
-                GMCM.AddBoolOption(ModManifest, () => Config.EnableWTDRCompat, (bool val) => Config.EnableWTDRCompat = val, () => i18n.Get("EnableWTDRCompat"), () => i18n.Get("EnableWTDRCompat.Description"));
             }
             
 
@@ -66,8 +65,6 @@ namespace RidgesideVillage
                 CP.RegisterToken(this.ModManifest, "PoleAtBackwoods", () => new string[] { Config.PoleAtBackwoods.ToString() });
                 CP.RegisterToken(this.ModManifest, "SeasonalRSVMap", () => new string[] { Config.SeasonalRSVMap.ToString() });
                 CP.RegisterToken(this.ModManifest, "EnableTouristNPCs", () => new string[] { Config.EnableTouristNPCs.ToString() });
-                CP.RegisterToken(this.ModManifest, "EnableWTDRCompat", () => new string[] { Config.EnableWTDRCompat.ToString() });
-
             }
 
         }
