@@ -49,6 +49,7 @@ namespace RidgesideVillage
 
         internal static void OnWarped(object sender, WarpedEventArgs e)
         {
+            if (e.NewLocation is null) return;
             if (e.NewLocation.Name.Equals(RSVConstants.L_HOTEL) && JuneAtPiano())
                 Game1.changeMusicTrack("JunePiano");
             else if (!e.NewLocation.Name.Equals(RSVConstants.L_HOTEL) && Game1.getMusicTrackName() == "JunePiano")
@@ -61,6 +62,7 @@ namespace RidgesideVillage
 
         internal static void OnTimeChanged(object sender, TimeChangedEventArgs e)
         {
+            if (Game1.currentLocation is null) return;
             if (Game1.currentLocation.Name.Equals(RSVConstants.L_HOTEL) && JuneAtPiano() && Game1.getMusicTrackName() != "JunePiano")
                 Game1.changeMusicTrack("JunePiano");
             if (Game1.currentLocation.Name.Equals(RSVConstants.L_HOTEL) && !JuneAtPiano() && Game1.getMusicTrackName() == "JunePiano")

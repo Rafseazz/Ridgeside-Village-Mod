@@ -77,6 +77,9 @@
 //Leaving
 	"funLeave_Jio": "{{i18n:Jio.MarriageDialogue.funLeave_Jio.{{Random: 1, 2, 3, 4}}}}",
 
+//Returning
+	"funReturn_Jio": "{{i18n:Jio.MarriageDialogue.funReturn_1-1}}[{{spacechase0.JsonAssets/ObjectId:Arugula Roll}} {{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Honey Ginger Whitefish}} {{spacechase0.JsonAssets/ObjectId:Zesty Tuna}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}} {{spacechase0.JsonAssets/ObjectId:Ginger Arugula Fried Rice}}]#$b#{{i18n:Jio.MarriageDialogue.funReturn_1-2}}",
+
 //One kid
 	"OneKid_0": "{{i18n:Jio.MarriageDialogue.OneKid_0}}",
 	"OneKid_1": "{{i18n:Jio.MarriageDialogue.OneKid_1}}",
@@ -130,17 +133,9 @@
 	{
    "Action": "EditData",
    "Target": "Characters/Dialogue/MarriageDialogueJio",
-	 "When": { "Query: {{{{Random: 1, 2, 3, 4, 5|key=Jio}}|contains=5}}": true },
+	 "When": { "Query: {{Random: 1, 2, 3, 4, 5|key=Jio}}|contains=1": false },
    "Entries": {
-		 "funReturn_Jio": "{{i18n:Jio.MarriageDialogue.funReturn_5-1}}[{{spacechase0.JsonAssets/ObjectId:Arugula Roll}} {{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Honey Ginger Whitefish}} {{spacechase0.JsonAssets/ObjectId:Zesty Tuna}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}} {{spacechase0.JsonAssets/ObjectId:Ginger Arugula Fried Rice}}]#$b#{{i18n:Jio.MarriageDialogue.funReturn_5-2}}",
-		}
-	},
-	{
-   "Action": "EditData",
-   "Target": "Characters/Dialogue/MarriageDialogueJio",
-	 "When": { "Query: {{{{Random: 1, 2, 3, 4, 5|key=Jio}}|contains=5}}": false },
-   "Entries": {
-		 "funReturn_Jio": "{{i18n:Jio.MarriageDialogue.funReturn_Jio.{{Random: 1, 2, 3, 4}}}}",
+		 "funReturn_Jio": "{{i18n:Jio.MarriageDialogue.funReturn_Jio.{{Random: 2, 3, 4, 5}}}}",
 		}
 	},
 	]
