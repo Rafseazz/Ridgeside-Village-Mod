@@ -7,7 +7,9 @@
   "Entries": {
 
     "spouseRoom_June": "{{i18n:June.spouseRoom.{{Random:0,1,2,3,4,5}}}}",
+		"patio_June": "{{i18n:June.patio.0-1}}[{{spacechase0.JsonAssets/ObjectId:Summit Iced Tea}}]#$b#{{i18n:June.patio.0-2}}",
     "funLeave_June": "{{i18n:June.jobLeave.{{Random:0,1,2,3,4,5}}}}",
+		"funReturn_June": "{{i18n:June.jobReturn.0}}[ {{spacechase0.JsonAssets/ObjectId:Fluffy Apple Crumble}} {{spacechase0.JsonAssets/ObjectId:Strawberry Lover Pie}} {{spacechase0.JsonAssets/ObjectId:Hundred Flavor Doughnut}} {{spacechase0.JsonAssets/ObjectId:Ridge Apple Cake}} {{spacechase0.JsonAssets/ObjectId:Clementine Cake}} {{spacechase0.JsonAssets/ObjectId:Kedi Delight}} ]",
 
   // Day-specific
     "spring_1": "{{i18n:June.spring_1.spouse}}",
@@ -119,37 +121,18 @@
  "Target": "Characters/Dialogue/MarriageDialogueJune",
  "When": {
 	 "DayOfWeek|contains=Tuesday": false,
-	 "Query: {{{{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=1}}": true,
+	 "Query: {{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=0": false,
  },
  "Entries": {
-	 "funReturn_June": "{{i18n:June.jobReturn.1}}[ {{spacechase0.JsonAssets/ObjectId:Fluffy Apple Crumble}} {{spacechase0.JsonAssets/ObjectId:Strawberry Lover Pie}} {{spacechase0.JsonAssets/ObjectId:Hundred Flavor Doughnut}} {{spacechase0.JsonAssets/ObjectId:Ridge Apple Cake}} {{spacechase0.JsonAssets/ObjectId:Clementine Cake}} {{spacechase0.JsonAssets/ObjectId:Kedi Delight}} ]",
+	 "funReturn_June": "{{i18n:June.jobReturn.{{Random: 1, 2, 3, 4, 5}}}}",
 	}
 },
 {
  "Action": "EditData",
  "Target": "Characters/Dialogue/MarriageDialogueJune",
- "When": {
-	 "DayOfWeek|contains=Tuesday": false,
-	 "Query: {{{{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=1}}": false,
- },
+ "When": { "Query: {{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=0": false },
  "Entries": {
-	 "funReturn_June": "{{i18n:June.funReturn.{{Random: 0, 2, 3, 4, 5}}}}",
-	}
-},
-{
- "Action": "EditData",
- "Target": "Characters/Dialogue/MarriageDialogueJune",
- "When": { "Query: {{{{Random: 1, 2, 3, 4, 5|key=June}}|contains=4}}": true },
- "Entries": {
-	 "patio_June": "{{i18n:June.patio.4-1}}[{{spacechase0.JsonAssets/ObjectId:Summit Iced Tea}}]#$b#{{i18n:June.patio.4-2}}",
-	}
-},
-{
- "Action": "EditData",
- "Target": "Characters/Dialogue/MarriageDialogueJune",
- "When": { "Query: {{{{Random: 1, 2, 3, 4, 5|key=June}}|contains=4}}": false },
- "Entries": {
-	 "patio_June": "{{i18n:June.patio.{{Random: 1, 2, 3, 5}}}}",
+	 "patio_June": "{{i18n:June.patio.{{Random: 1, 2, 3, 4, 5}}}}",
 	}
 },
 {
