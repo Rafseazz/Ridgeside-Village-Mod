@@ -1,5 +1,5 @@
 {
-	"Format": "1.27.0",
+	"Format": "1.29.0",
 	"ConfigSchema":
 	{
 		"Lightweight Outfits":
@@ -108,7 +108,7 @@
 			"Value": "true",
 			"When":
 			{
-				"Season": "Spring",
+				"Season |contains= spring, summer": true,
 				"Day |contains= 15, 16, 17, 18, 19, 20, 21": true
 			}
 		},
@@ -117,7 +117,7 @@
 			"Value": "true",
 			"When":
 			{
-				"Season": "Fall",
+				"Season |contains= fall, winter": true,
 				"Day |contains= 2, 3, 4, 5, 6, 7": true
 			}
 		},
@@ -646,6 +646,7 @@ Festivals
 		"LogName": "RSV Seasonal Spirit's Eve Positions Y1",
 		"Action": "Include",
 		"FromFile": "Data/FestivalLocations/SpiritEveY1.json",
+		"Update": "OnLocationChange",
 		"When": {
 			"IsOddYear": true,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
