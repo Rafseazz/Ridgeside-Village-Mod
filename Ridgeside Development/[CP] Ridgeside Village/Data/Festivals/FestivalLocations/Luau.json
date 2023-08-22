@@ -12,14 +12,14 @@
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Aguar 92 12 right/Alissa 82 16 down/Bert 79 20 right/Corine 70 23 right/Ezekiel 76 10 down/Flor 69 18 right/Freddie 73 20 right/Ian 73 9 down/Jeric 73 23 left/Keahi 86 18 down/Kenneth 75 17 up/Lenny 80 8 down/Lola 74 20 left/Maddie 83 24 down/Olga 80 20 left/Philip 81 13 up/Pika 85 11 left/Richard 66 8 right/Shiro 88 17 down/Trinnie 86 20 up/Ysabelle 71 22 down/Yuuma 88 19 left/Kimpoi 83 19 left/Malaya 82 19 right/Sonny 69 7 down/Louie 87 21 up/Maive 68 8 left/Ariah 67 24 down/Lorenzo 77 19 left/Shanice 76 19 right/Anton 86 14 left/Kiarra 82 10 down/Paula 84 14 right/Carmen 77 13 up/Blair 66 12 left/Sean 64 12 right/Faye 73 14 down/Irene 74 11 right",
+                "Value": "Aguar 92 12 right/Alissa 82 16 down/Bert 79 20 right/Corine 70 23 right/Ezekiel 76 10 down/Flor 69 18 right/Freddie 73 20 right/Ian 73 9 down/Jeric 73 23 left/Keahi 86 18 down/Kenneth 75 17 up/Lenny 80 8 down/Lola 74 20 left/Maddie 83 24 down/Olga 80 20 left/Philip 81 13 up/Pika 85 11 left/Richard 66 8 right/Shiro 88 17 down/Trinnie 86 20 up/Ysabelle 71 22 down/Yuuma 88 19 left/Kimpoi 83 19 left/Malaya 82 19 right/Sonny 69 7 down/Louie 87 21 up/Maive 68 8 left/Ariah 67 24 down/Lorenzo 77 19 left/Shanice 76 19 right/Anton 86 14 left/Kiarra 82 10 down/Paula 84 14 right/Carmen 77 13 up/Blair 66 12 left/Sean 64 12 right/Faye 73 14 down/Irene 74 11 right/Torts 89 24 down",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Aguar 92 12 right/Alissa 82 16 down/Bert 79 20 right/Corine 70 23 right/Ezekiel 76 10 down/Flor 69 18 right/Freddie 73 20 right/Ian 73 9 down/Jeric 73 23 left/Keahi 86 18 down/Kenneth 75 17 up/Lenny 80 8 down/Lola 74 20 left/Maddie 83 24 down/Olga 80 20 left/Philip 81 13 up/Pika 85 11 left/Richard 66 8 right/Shiro 88 17 down/Trinnie 86 20 up/Ysabelle 71 22 down/Yuuma 88 19 left/Kimpoi 83 19 left/Malaya 82 19 right/Sonny 69 7 down/Louie 87 21 up/Maive 68 8 left/Ariah 67 24 down/Lorenzo 77 19 left/Shanice 76 19 right/Anton 86 14 left/Kiarra 82 10 down/Paula 84 14 right/Carmen 77 13 up/Blair 66 12 left/Sean 64 12 right/Faye 73 14 down/Irene 74 11 right",
+                "Value": "Aguar 92 12 right/Alissa 82 16 down/Bert 79 20 right/Corine 70 23 right/Ezekiel 76 10 down/Flor 69 18 right/Freddie 73 20 right/Ian 73 9 down/Jeric 73 23 left/Keahi 86 18 down/Kenneth 75 17 up/Lenny 80 8 down/Lola 74 20 left/Maddie 83 24 down/Olga 80 20 left/Philip 81 13 up/Pika 85 11 left/Richard 66 8 right/Shiro 88 17 down/Trinnie 86 20 up/Ysabelle 71 22 down/Yuuma 88 19 left/Kimpoi 83 19 left/Malaya 82 19 right/Sonny 69 7 down/Louie 87 21 up/Maive 68 8 left/Ariah 67 24 down/Lorenzo 77 19 left/Shanice 76 19 right/Anton 86 14 left/Kiarra 82 10 down/Paula 84 14 right/Carmen 77 13 up/Blair 66 12 left/Sean 64 12 right/Faye 73 14 down/Irene 74 11 right/Torts 89 24 down",
                 "Delimiter": "/"
             },
 
@@ -126,7 +126,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/summer11",
         "When": {
-            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true, "Query: {{RandomNumber}} <= 4": true,
+            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {
@@ -163,30 +163,6 @@
                 "Delimiter": "/"
             },
         ]
-    },
-
-    //Torts
-    {
-      "LogName": "Torts Luau Location",
-      "Action": "EditData",
-      "Target": "Data/Festivals/summer11",
-      "When": {
-        "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
-      },
-      "TextOperations": [
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "Torts 89 24 down",
-          "Delimiter": "/"
-        },
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "MainEvent_additionalCharacters"],
-          "Value": "Torts 89 24 down",
-          "Delimiter": "/"
-        },
-      ]
     },
 
     {

@@ -159,48 +159,62 @@ namespace RidgesideVillage
                 return null;
             });
 
-            cp.RegisterToken(this.ModManifest, "ZayneWeeklyVisitDays", () => {
-                int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
-                if (randomseed is not null)
-                {   //Seed the random with a seed that changes weekly
-                    Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_ZAYNE_INTRO + ((randomseed.Value - 1) / 7));
-                    List<string> weekdays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-                    List<string> visits = null;
-                    if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_6H))
-                    {
-                        visits = weekdays.GetRange(0, 5).OrderBy(x => random.Next()).Take(3).Append("Sunday").ToList();
+            cp.RegisterToken(this.ModManifest, "ZayneWeeklyVisitDays", () =>
+            {
+                if (Game1.MasterPlayer is not null && Context.IsWorldReady)
+                {
+                    int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                    if (randomseed is not null)
+                    {   //Seed the random with a seed that changes weekly
+                        Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_ZAYNE_INTRO + ((randomseed.Value - 1) / 7));
+                        List<string> visits = GetFestivalDaysAndBday("Zayne");
+                        //Log.Debug("RSV: Festival days and birthday for Zayne are " + visits.ToString());
+                        if (!visits.Contains("Sunday") && Game1.player.friendshipData.TryGetValue("Zayne", out var friendship)
+                        && Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_ZAYNE_6H))
+                        {
+                            visits.Add("Sunday");
+                        }
+                        List<string> weekdays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" }.Except(visits).ToList();
+                        if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_6H))
+                        {
+                            visits = visits.Concat(weekdays.OrderBy(x => random.Next()).Take(4 - visits.Count)).ToList();
+                        }
+                        else if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_2H))
+                        {
+                            visits = visits.Concat(weekdays.OrderBy(x => random.Next()).Take(4 - visits.Count)).ToList();
+                        }
+                        else if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_INTRO))
+                        {
+                            visits = visits.Concat(weekdays.OrderBy(x => random.Next()).Take(3 - visits.Count)).ToList();
+                        }
+                        if (visits is not null)
+                            return new[] { string.Join(",", visits.ToArray()) };
                     }
-                    else if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_2H))
-                    {
-                        visits = weekdays.OrderBy(x => random.Next()).Take(4).ToList();
-                    }
-                    else if (Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_INTRO))
-                    {
-                        visits = weekdays.OrderBy(x => random.Next()).Take(3).ToList();
-                    }
-                    if (visits is not null)
-                        return new[] { string.Join(",", visits.ToArray()) };
                 }
                 return null; //return null for an unready token.
             });
 
             cp.RegisterToken(this.ModManifest, "BryleWeeklyVisitDays", () => {
-                int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
-                if (randomseed is not null)
-                {   //Seed the random with a seed that changes weekly
-                    Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_BRYLE_INTRO + ((randomseed.Value - 1) / 7));
-                    List<string> weekdays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-                    List<string> visits = null;
-                    if (Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_8H))
-                    {
-                        visits = weekdays.OrderBy(x => random.Next()).Take(6).ToList();
+                if (Game1.MasterPlayer is not null && Context.IsWorldReady)
+                {
+                    int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                    if (randomseed is not null)
+                    {   //Seed the random with a seed that changes weekly
+                        Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_BRYLE_INTRO + ((randomseed.Value - 1) / 7));
+                        List<string> visits = GetFestivalDaysAndBday("Bryle");
+                        //Log.Debug("RSV: Festival days and birthday for Bryle are " + visits.ToString());
+                        List<string> weekdays = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" }.Except(visits).ToList();
+                        if (Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_8H))
+                        {
+                            visits = visits.Concat(weekdays.OrderBy(x => random.Next()).Take(6 - visits.Count)).ToList();
+                        }
+                        else if (Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_INTRO))
+                        {
+                            visits = visits.Concat(weekdays.OrderBy(x => random.Next()).Take(4 - visits.Count)).ToList();
+                        }
+                        if (visits is not null)
+                            return new[] { string.Join(",", visits.ToArray()) };
                     }
-                    else if (Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_INTRO))
-                    {
-                        visits = weekdays.OrderBy(x => random.Next()).Take(4).ToList();
-                    }
-                    if (visits is not null)
-                        return new[] { string.Join(",", visits.ToArray()) };
                 }
                 return null; //return null for an unready token.
             });
@@ -359,6 +373,68 @@ namespace RidgesideVillage
             }
             Log.Trace("RSV: Foxbloom can spawn!");
             return true;
+        }
+
+        public static List<string> GetFestivalDaysAndBday(string name)
+        {
+            List<string> weekdays = new List<string>();
+            var date = Game1.dayOfMonth;
+            switch (Game1.currentSeason)
+            {
+                case "spring":
+                    if (date > 7 && date < 15)
+                    {
+                        weekdays.Add("Saturday");
+                    }
+                    else if (date > 21 && date <= 28)
+                    {
+                        weekdays.Add("Wednesday");
+                    }
+                    break;
+                case "summer":
+                    if (name == "Bryle" && date < 8)
+                    {
+                        // Bryle's birthday 
+                        weekdays.Add("Monday");
+                    }
+                    else if (date > 7 && date < 15)
+                    {
+                        weekdays.Add("Thursday");
+                    }
+                    else if (date > 21 && date <= 28)
+                    {
+                        weekdays.Add("Sunday");
+                    }
+                    break;
+                case "fall":
+                    if (name == "Zayne" && date < 8)
+                    {
+                        // Bryle's birthday 
+                        weekdays.Add("Tuesday");
+                    }
+                    if (date > 14 && date < 22)
+                    {
+                        weekdays.Add("Tuesday");
+                        weekdays.Add("Saturday");
+                    }
+                    else if (date > 21 && date <= 28)
+                    {
+                        weekdays.Add("Saturday");
+                    }
+                    break;
+                case "winter":
+                    if (date > 7 && date < 15)
+                    {
+                        weekdays.Add("Monday");
+                    }
+                    else if (date > 21 && date <= 28)
+                    {
+                        weekdays.Add("Thursday");
+                        weekdays.Add("Sunday");
+                    }
+                    break;
+            }
+            return weekdays.ToList();
         }
 
     }

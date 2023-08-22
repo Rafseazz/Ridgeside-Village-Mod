@@ -11,14 +11,14 @@
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down/Kimpoi 57 44 down/Malaya 58 44 down/Sonny 72 21 down/Louie 87 28 up/Maive 71 21 down/Ariah 70 21 right/Lorenzo 60 28 right/Shanice 60 29 right/Anton 71 11 down/Kiarra 72 14 up/Paula 72 12 down/Carmen 73 50 down/Blair 73 13 left/Sean 70 12 right/Faye 92 27 left/Irene 82 28 down",
+                "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down/Kimpoi 57 44 down/Malaya 58 44 down/Sonny 72 21 down/Louie 87 28 up/Maive 71 21 down/Ariah 70 21 right/Lorenzo 60 28 right/Shanice 60 29 right/Anton 71 11 down/Kiarra 72 14 up/Paula 72 12 down/Carmen 73 50 down/Blair 73 13 left/Sean 70 12 right/Faye 92 27 left/Irene 82 28 down/Torts 77 41 1/June 52 36 3",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Main-Event_additionalCharacters"],
-                "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down/Kimpoi 57 44 down/Malaya 58 44 down/Sonny 72 21 down/Louie 87 28 up/Maive 71 21 down/Ariah 70 21 right/Lorenzo 60 28 right/Shanice 60 29 right/Anton 71 11 down/Kiarra 72 14 up/Paula 72 12 down/Carmen 73 50 down/Blair 73 13 left/Sean 70 12 right/Faye 92 27 left/Irene 82 28 down",
+                "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 63 26 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 58 35 right/Freddie 80 33 left/Ian 83 30 left/Jeric 58 46 right/Keahi 91 33 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 61 26 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 88 26 down/Trinnie 89 33 right/Ysabelle 63 20 right/Yuuma 86 26 down/Kimpoi 57 44 down/Malaya 58 44 down/Sonny 72 21 down/Louie 87 28 up/Maive 71 21 down/Ariah 70 21 right/Lorenzo 60 28 right/Shanice 60 29 right/Anton 71 11 down/Kiarra 72 14 up/Paula 72 12 down/Carmen 73 50 down/Blair 73 13 left/Sean 70 12 right/Faye 92 27 left/Irene 82 28 down/Torts 74 41 0/June 60 34 1",
                 "Delimiter": "/"
             },
 
@@ -152,52 +152,6 @@
                 "Delimiter": "/"
             },
         ]
-    },
-
-    //Torts
-    {
-      "LogName": "Torts Ice Festival Location",
-      "Action": "EditData",
-      "Target": "Data/Festivals/winter8",
-      "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true },
-      "TextOperations": [
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "Torts 77 41 1",
-          "Delimiter": "/"
-        },
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "Main-Event_additionalCharacters"],
-          "Value": "Torts 74 41 0",
-          "Delimiter": "/"
-        },
-      ]
-    },
-
-    {
-      "LogName": "June Ice Festival Location",
-      "Action": "EditData",
-      "Target": "Data/Festivals/winter8",
-      "When": {
-        "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
-        "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
-      },
-      "TextOperations": [
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "June 52 36 3",
-          "Delimiter": "/"
-        },
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "Main-Event_additionalCharacters"],
-          "Value": "June 60 34 1",
-          "Delimiter": "/"
-        },
-      ]
     },
 
 ]

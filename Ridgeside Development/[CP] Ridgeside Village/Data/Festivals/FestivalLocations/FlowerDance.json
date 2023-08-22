@@ -12,14 +12,14 @@
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Aguar 44 41 down/Alissa 27 20 right/Bert 30 22 down/Corine 37 25 right/Ezekiel 31 28 down/Flor 34 30 left/Freddie 36 28 down/Ian 31 33 down/Jeric 38 23 down/Keahi 31 24 left/Kenneth 41 20 down/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 up/Olga 29 20 left/Philip 42 21 left/Pika 33 28 down/Richard 36 21 down/Shiro 34 26 left/Trinnie 29 24 right/Ysabelle 39 25 left/Yuuma 33 25 down/Sonny 33 20 left/Louie 32 20 down/Maive 34 22 right/Ariah 31 20 down/Lorenzo 43 27 left/Shanice 42 27 right/Anton 45 27 left/Kiarra 44 26 down/Paula 45 28 left/Carmen 29 32 up/Blair 28 24 left/Sean 27 24 right/Faye 38 30 down/Irene 40 21 right",
+                "Value": "Aguar 44 41 down/Alissa 27 20 right/Bert 30 22 down/Corine 37 25 right/Ezekiel 31 28 down/Flor 34 30 left/Freddie 36 28 down/Ian 31 33 down/Jeric 38 23 down/Keahi 31 24 left/Kenneth 41 20 down/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 up/Olga 29 20 left/Philip 42 21 left/Pika 33 28 down/Richard 36 21 down/Shiro 34 26 left/Trinnie 29 24 right/Ysabelle 39 25 left/Yuuma 33 25 down/Sonny 33 20 left/Louie 32 20 down/Maive 34 22 right/Ariah 31 20 down/Lorenzo 43 27 left/Shanice 42 27 right/Anton 45 27 left/Kiarra 44 26 down/Paula 45 28 left/Carmen 29 32 up/Blair 28 24 left/Sean 27 24 right/Faye 38 30 down/Irene 40 21 right/Torts 34 25 1",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Aguar 44 41 left/Alissa 27 20 left/Bert 30 22 left/Corine 37 25 left/Ezekiel 31 28 left/Flor 34 30 left/Freddie 36 28 left/Ian 31 33 left/Jeric 38 23 left/Keahi 31 24 left/Kenneth 41 20 left/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 left/Olga 29 20 left/Philip 42 21 left/Pika 33 28 left/Richard 36 21 left/Shiro 34 26 left/Trinnie 29 24 left/Ysabelle 39 25 left/Yuuma 33 25 left/Sonny 33 20 left/Louie 32 20 left/Maive 34 22 left/Ariah 31 20 left/Lorenzo 43 27 left/Shanice 42 27 left/Anton 45 27 left/Kiarra 44 26 left/Paula 45 28 left/Carmen 29 32 left/Blair 28 24 left/Sean 27 24 left/Faye 38 30 left/Irene 40 21 left",
+                "Value": "Aguar 44 41 left/Alissa 27 20 left/Bert 30 22 left/Corine 37 25 left/Ezekiel 31 28 left/Flor 34 30 left/Freddie 36 28 left/Ian 31 33 left/Jeric 38 23 left/Keahi 31 24 left/Kenneth 41 20 left/Lenny 6 21 down/Lola 37 28 left/Maddie 38 33 left/Olga 29 20 left/Philip 42 21 left/Pika 33 28 left/Richard 36 21 left/Shiro 34 26 left/Trinnie 29 24 left/Ysabelle 39 25 left/Yuuma 33 25 left/Sonny 33 20 left/Louie 32 20 left/Maive 34 22 left/Ariah 31 20 left/Lorenzo 43 27 left/Shanice 42 27 left/Anton 45 27 left/Kiarra 44 26 left/Paula 45 28 left/Carmen 29 32 left/Blair 28 24 left/Sean 27 24 left/Faye 38 30 left/Irene 40 21 left/Torts 34 25 1",
                 "Delimiter": "/"
             },
 
@@ -159,7 +159,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring24",
         "When": {
-            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Query: {{RandomNumber}} <= 4": true,
+            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
         },
         "TextOperations": [
             {
@@ -176,30 +176,6 @@
                 "Delimiter": "/"
             },
         ]
-    },
-
-    //Torts
-    {
-      "LogName": "Torts RSV Flower Dance Location",
-      "Action": "EditData",
-      "Target": "Data/Festivals/spring24",
-      "When": {
-        "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
-        },
-      "TextOperations": [
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "Torts 34 25 1",
-          "Delimiter": "/"
-        },
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "MainEvent_additionalCharacters"],
-          "Value": "Torts 34 25 1",
-          "Delimiter": "/"
-        },
-      ]
     },
 
     {
