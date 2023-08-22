@@ -427,7 +427,8 @@
          "PatchMode": "Overlay",
          "Update": "OnLocationChange",
     	 "When": {
-             "HasSeenEvent: hostPlayer": 75160271,
+             //"HasSeenEvent: hostPlayer": 75160271,
+						 "HasFlag: hostPlayer |contains=RSV.HauntedGHFix": true,
       	}
       	},
 
