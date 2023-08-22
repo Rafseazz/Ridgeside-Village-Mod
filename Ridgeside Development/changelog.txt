@@ -4,8 +4,9 @@ RSV 2.5.1
 Fixed June & Jio dialogue errors
 Readded missing file for Treble Cleaver
 Changed JA to use i18n format
-Hopefully fixed Music.cs error
+Fixed Music.cs Null Reference exception
 Fixed Irene standing on top of Bryle on Spirit's Eve
+Bryle and Zayne's random weekly visit days now account for festivals and their birthdays
 
 Hotfix 3:
 Fixed Irene leaving event error
@@ -17,42 +18,6 @@ Fixed Irene work outfit error
 Hotfix 1:
 Fixed string error in Flor's spouse room
 Fixed error in June fall1 schedule
-
-New content:
-Added spouse room strings (bc why not)
-Added 3 new weapons; Amethyst Lance, Guardian Greatsword, and Treble Cleaver
-Added June/Yuuma piano lesson event
-Added June reunion event for fall 1st when dating
-New Jio marriage dialogue by tiakall and moetrash
-More June marriage dialogue
-Yuuma and Louie will hang out with Trinnie and Keahi after seeing their 8H events
-Added a 10% chance for Torts to go to random locations all over the game
-Added more animations for some NPCs
-
-Changes:
-Bryle and Zayne now visit set number of random days per week rather than by random chance
-Reduced Irene's travel schedules by 50%. Now she only leaves for a week during spring and fall season
-Tweaked Jio's portraits
-Tweaked June's portraits and sprites
-Reworked Ysabelle's portraits
-Edited Faye's 6 heart event with Bryle so that you don't have to throw Faye to the wolves to get them together
-Changed June's music to load through SMAPI rather than CP
-Tweaked dispositions for Anton, Paula, Bryle, Faye, Zayne, and Irene to include their pairs as rival hearts (index 6)
-Made Maive's 4 heart event broadcast + skippable
-Tweaked colors for cable car and summit farm backgrounds for fall season
-Edited random guest dialogue
-Restructured some portrait/sprite stuff for compat with upcoming Seasonal Outfits add-on
-
-Bug fixes:
-Fixed June not attending Spirit's Eve with SVE
-Fixed June dialogue bugs (IF YOU SEE THIS, PLEASE... fkn bane of moe's existence)
-Fixed bug in Zayne's 4 heart event
-Locked romance candidates becoming unlocked should apply for all farmers, no matter who unlocked them
-Fixed formatting issue in Odd Jobs fence repair menu
-Adjusted Kiarra's walk path during Luau to avoid bumping into Zoedoll's Leilani NPC
-Lewis fully walks off map in Sean's 4 heart event
-Removed WTDR compatibility as it's broken anyway
-Fixed a bunch of typos
 
 
 
