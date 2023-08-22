@@ -119,6 +119,14 @@
 {
  "Action": "EditData",
  "Target": "Characters/Dialogue/MarriageDialogueJune",
+ "When": { "Query: {{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=0": false },
+ "Entries": {
+	 "patio_June": "{{i18n:June.patio.{{Random: 1, 2, 3, 4, 5}}}}",
+	}
+},
+{
+ "Action": "EditData",
+ "Target": "Characters/Dialogue/MarriageDialogueJune",
  "When": {
 	 "DayOfWeek|contains=Tuesday": false,
 	 "Query: {{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=0": false,
@@ -128,12 +136,16 @@
 	}
 },
 {
- "Action": "EditData",
- "Target": "Characters/Dialogue/MarriageDialogueJune",
- "When": { "Query: {{Random: 0, 1, 2, 3, 4, 5|key=June}}|contains=0": false },
- "Entries": {
-	 "patio_June": "{{i18n:June.patio.{{Random: 1, 2, 3, 4, 5}}}}",
-	}
+  "LogName": "June Tue marriage dialogue Summer 9",
+  "Action": "EditData",
+  "Target": "Characters/Dialogue/MarriageDialogueJune",
+  "When": {
+    "Season": "Summer",
+		"Day": "9"
+  },
+  "Entries": {
+    "funReturn_June": "{{i18n:June.funReturn_Summer.9-1}}[{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}} {{spacechase0.JsonAssets/ObjectId:Ridge Fruity Plate}} {{spacechase0.JsonAssets/ObjectId:Zesty Tuna}} {{spacechase0.JsonAssets/ObjectId:Arugula Roll}}]#$b#{{i18n:June.funReturn_Summer.9-2}}",
+  }
 },
 {
   "LogName": "June Tue marriage dialogue general",
@@ -147,18 +159,6 @@
   "Entries": {
     "funLeave_June": "{{i18n:June.funLeave_{{Season}}.{{Day}}}}",
     "funReturn_June": "{{i18n:June.funReturn_{{Season}}.{{Day}}}}",
-  }
-},
-{
-  "LogName": "June Tue marriage dialogue Summer 9",
-  "Action": "EditData",
-  "Target": "Characters/Dialogue/MarriageDialogueJune",
-  "When": {
-    "Season": "Summer",
-		"Day": "9"
-  },
-  "Entries": {
-    "funReturn_June": "{{i18n:June.funReturn_Summer.9-1}}[{{spacechase0.JsonAssets/ObjectId:Fried Fish a la Ridge}} {{spacechase0.JsonAssets/ObjectId:Fried Mountain Greens}} {{spacechase0.JsonAssets/ObjectId:Ridge Fruity Plate}} {{spacechase0.JsonAssets/ObjectId:Zesty Tuna}} {{spacechase0.JsonAssets/ObjectId:Arugula Roll}}]#$b#{{i18n:June.funReturn_Summer.9-2}}",
   }
 },
 	]
