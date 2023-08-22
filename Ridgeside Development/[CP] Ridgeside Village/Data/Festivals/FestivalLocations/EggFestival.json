@@ -13,14 +13,14 @@
             {
                 "Operation": "Append",
                 "Target": ["Entries", "Set-Up_additionalCharacters"],
-                "Value": "Aguar 21 27 right/Alissa 42 28 left/Bert 31 25 right/Corine 25 22 right/Ezekiel 33 36 up/Flor 33 24 down/Freddie 36 32 down/Ian 16 22 right/Jeric 14 24 down/Keahi 39 22 right/Kenneth 32 31 down/Lenny 37 25 up/Lola 37 32 left/Maddie 29 27 down/Olga 41 26 down/Philip 33 29 up/Pika 34 35 left/Richard 36 34 up/Shiro 35 28 right/Trinnie 38 23 down/Ysabelle 27 22 left/Yuuma 37 28 left/Sonny 24 33 down/Louie 25 35 down/Maive 23 34 down/Ariah 20 34 down/Lorenzo 42 32 left/Shanice 40 32 right/Anton 11 25 up/Kiarra 20 21 down/Paula 12 25 up/Carmen 31 33 right/Blair 41 36 left/Sean 39 36 right/Faye 13 27 down/Irene 29 29 up",
+                "Value": "Aguar 21 27 right/Alissa 42 28 left/Bert 31 25 right/Corine 25 22 right/Ezekiel 33 36 up/Flor 33 24 down/Freddie 36 32 down/Ian 16 22 right/Jeric 14 24 down/Keahi 39 22 right/Kenneth 32 31 down/Lenny 37 25 up/Lola 37 32 left/Maddie 29 27 down/Olga 41 26 down/Philip 33 29 up/Pika 34 35 left/Richard 36 34 up/Shiro 35 28 right/Trinnie 38 23 down/Ysabelle 27 22 left/Yuuma 37 28 left/Sonny 24 33 down/Louie 25 35 down/Maive 23 34 down/Ariah 20 34 down/Lorenzo 42 32 left/Shanice 40 32 right/Anton 11 25 up/Kiarra 20 21 down/Paula 12 25 up/Carmen 31 33 right/Blair 41 36 left/Sean 39 36 right/Faye 13 27 down/Irene 29 29 up/Torts 36 28 right",
                 "Delimiter": "/"
             },
 
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
-                "Value": "Aguar 21 27 right/Alissa 42 28 left/Bert 31 25 right/Corine 25 22 right/Ezekiel 33 36 up/Flor 33 24 down/Freddie 36 32 down/Ian 16 22 right/Jeric 14 24 down/Keahi 39 22 right/Kenneth 32 31 down/Lenny 37 25 up/Lola 37 32 left/Maddie 29 27 down/Olga 41 26 down/Philip 33 29 up/Pika 34 35 left/Richard 36 34 up/Shiro 35 28 right/Trinnie 38 23 down/Ysabelle 27 22 left/Yuuma 37 28 left/Sonny 24 33 down/Louie 25 35 down/Maive 23 34 down/Ariah 20 34 down/Lorenzo 42 32 left/Shanice 40 32 right/Anton 11 25 up/Kiarra 20 21 down/Paula 12 25 up/Carmen 31 33 right/Blair 41 36 left/Sean 39 36 right/Faye 13 27 down/Irene 29 29 up",
+                "Value": "Aguar 21 27 right/Alissa 42 28 left/Bert 31 25 right/Corine 25 22 right/Ezekiel 33 36 up/Flor 33 24 down/Freddie 36 32 down/Ian 16 22 right/Jeric 14 24 down/Keahi 39 22 right/Kenneth 32 31 down/Lenny 37 25 up/Lola 37 32 left/Maddie 29 27 down/Olga 41 26 down/Philip 33 29 up/Pika 34 35 left/Richard 36 34 up/Shiro 35 28 right/Trinnie 38 23 down/Ysabelle 27 22 left/Yuuma 37 28 left/Sonny 24 33 down/Louie 25 35 down/Maive 23 34 down/Ariah 20 34 down/Lorenzo 42 32 left/Shanice 40 32 right/Anton 11 25 up/Kiarra 20 21 down/Paula 12 25 up/Carmen 31 33 right/Blair 41 36 left/Sean 39 36 right/Faye 13 27 down/Irene 29 29 up/Torts 36 28 right",
                 "Delimiter": "/"
             },
 
@@ -138,30 +138,6 @@
         ]
     },
 
-    //Torts
-    {
-      "LogName": "Torts Egg Fest Location",
-      "Action": "EditData",
-      "Target": "Data/Festivals/spring13",
-      "When": {
-            "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
-        },
-      "TextOperations": [
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "Set-Up_additionalCharacters"],
-          "Value": "Torts 36 28 right",
-          "Delimiter": "/"
-        },
-        {
-          "Operation": "Append",
-          "Target": ["Entries", "MainEvent_additionalCharacters"],
-          "Value": "Torts 36 28 right",
-          "Delimiter": "/"
-        },
-      ]
-    },
-
     {
         //Zayne Arrives
         "Action": "EditData",
@@ -191,7 +167,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/spring13",
         "When": {
-            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true, "Query: {{RandomNumber}} <= 4": true,
+            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
         },
         "TextOperations": [
             {

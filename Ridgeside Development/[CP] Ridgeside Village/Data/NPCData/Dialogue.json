@@ -43,6 +43,25 @@
   	},
   	"Update": "OnLocationChange"
   },
+  {
+   "Action": "EditData",
+   "Target": "Characters/Dialogue/Torts",
+	 "When": {
+		 "LocationName": "Custom_Ridgeside_TortsRealm",
+     "Day": 1,
+     "Season": "spring",
+	 },
+   "Entries": {
+		 "NPC.cs.4274": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4275": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4276": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4277": "{{i18n:Torts.birthday.love.realm}}",
+	   "NPC.cs.4278": "{{i18n:Torts.birthday.hate.realm}}",
+	   "NPC.cs.4279": "{{i18n:Torts.birthday.neutral.realm}}",
+	   "NPC.cs.4280": "{{i18n:Torts.birthday.neutral.realm}}",
+	   "NPC.cs.4281": "{{i18n:Torts.birthday.neutral.realm}}",
+		},
+	},
 
 ]
 }
