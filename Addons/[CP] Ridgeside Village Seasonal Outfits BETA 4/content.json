@@ -1,5 +1,5 @@
 {
-	"Format": "1.19.0",
+	"Format": "1.27.0",
 	"ConfigSchema":
 	{
 		"Lightweight Outfits":
@@ -69,6 +69,11 @@
 		},
 
 		{
+			"Name": "IsOddYear",
+			"Value": "{{Query: {{Year}} % 2 = 1}}"
+		},
+
+		{
 		  	"Name": "Festival",
 		  	"Value": "spring13",
 		  	"When": {
@@ -103,7 +108,7 @@
 			"Value": "true",
 			"When":
 			{
-				"Season |contains= spring, summer": true,
+				"Season": "Spring",
 				"Day |contains= 15, 16, 17, 18, 19, 20, 21": true
 			}
 		},
@@ -112,7 +117,7 @@
 			"Value": "true",
 			"When":
 			{
-				"Season |contains= fall, winter": true,
+				"Season": "Fall",
 				"Day |contains= 2, 3, 4, 5, 6, 7": true
 			}
 		},
@@ -635,6 +640,27 @@ Festivals
 			"HasFile:{{FromFile}}": true
 		},
 		"Update": "OnLocationChange",
+	},
+
+	{
+		"LogName": "RSV Seasonal Spirit's Eve Positions Y1",
+		"Action": "Include",
+		"FromFile": "Data/FestivalLocations/SpiritEveY1.json",
+		"When": {
+			"IsOddYear": true,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
+		}
+	},
+	{
+		"LogName": "RSV Seasonal Spirit's Eve Positions Y2",
+		"Action": "Include",
+		"FromFile": "Data/FestivalLocations/SpiritEveY2.json",
+		"When": {
+			"IsOddYear": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
+		}
 	},
 ]
 }
