@@ -42,11 +42,14 @@ namespace RidgesideVillage
             harmony.Patch(
                 original: AccessTools.Method(typeof(MapPage), nameof(MapPage.receiveLeftClick)),
                 prefix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_receiveLeftClick_Prefix))
-            );            
-            harmony.Patch(
-              original: AccessTools.Constructor(typeof(MapPage), new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) }),
-              postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_Constructor_Postfix))
             );
+            if (Constants.TargetPlatform != GamePlatform.Android)
+            {
+                harmony.Patch(
+                  original: AccessTools.Constructor(typeof(MapPage), new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) }),
+                  postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_Constructor_Postfix))
+                );
+            }
             if (Helper.ModRegistry.IsLoaded("Bouhm.NPCMapLocations"))
             {
                 try
@@ -77,12 +80,16 @@ namespace RidgesideVillage
                 upNeighborID = 1001
             };
 
+            Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             Helper.Events.Display.WindowResized += OnWindowResized;
         }
 
-        private static void MapPage_Constructor_Postfix(MapPage __instance)
+        private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
         {
             RSVIcon = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites/RSVIcon"));
+        }
+        private static void MapPage_Constructor_Postfix(MapPage __instance)
+        {
             __instance.points.Add(RSVButton);
             ClickableComponent DesertArea = __instance.points.Where(x => x.myID == 1001).ElementAtOrDefault(0);
             if(DesertArea != null)
@@ -110,7 +117,7 @@ namespace RidgesideVillage
         {
             try
             {
-              if(whichTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside"))
+                if (whichTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside") && Constants.TargetPlatform != GamePlatform.Android)
                 {
                     RSVWorldMap.Open(Game1.activeClickableMenu);
                 }

@@ -29,6 +29,11 @@ namespace RidgesideVillage
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
+            if (Constants.TargetPlatform == GamePlatform.Android)
+            {
+                return;
+            }
+
             Helper = helper;
             sprite = Helper.ModContent.Load<Texture2D>("assets/Poof.png");
 

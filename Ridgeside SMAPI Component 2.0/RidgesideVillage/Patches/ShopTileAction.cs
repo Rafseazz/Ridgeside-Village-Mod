@@ -42,14 +42,17 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(ShopMenu), nameof(ShopMenu.receiveRightClick)),
                 prefix: new HarmonyMethod(typeof(ShopTileAction), nameof(safetyTimer_prefix))
             );
-            harmony.Patch(
-                original: AccessTools.Method(typeof(ShopMenu), nameof(ShopMenu.receiveKeyPress)),
-                prefix: new HarmonyMethod(typeof(ShopTileAction), nameof(safetyTimer_prefix))
-            );
-            harmony.Patch(
-                original: AccessTools.Method(typeof(ShopMenu), nameof(ShopMenu.receiveGamePadButton)),
-                prefix: new HarmonyMethod(typeof(ShopTileAction), nameof(safetyTimer_prefix))
-            );
+            if (Constants.TargetPlatform != GamePlatform.Android)
+            {
+                harmony.Patch(
+                    original: AccessTools.Method(typeof(ShopMenu), nameof(ShopMenu.receiveKeyPress)),
+                    prefix: new HarmonyMethod(typeof(ShopTileAction), nameof(safetyTimer_prefix))
+                );
+                harmony.Patch(
+                    original: AccessTools.Method(typeof(ShopMenu), nameof(ShopMenu.receiveGamePadButton)),
+                    prefix: new HarmonyMethod(typeof(ShopTileAction), nameof(safetyTimer_prefix))
+                );
+            }
 
 
         }
