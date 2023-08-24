@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using SpaceCore.Events;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
@@ -19,7 +20,30 @@ namespace RidgesideVillage
         internal static void Initialize(IModHelper Helper)
         {
             TileActionHandler.Helper = Helper;
-            TileActionHandler.Helper.Events.Input.ButtonPressed += OnButtonPressed;
+            if (Constants.TargetPlatform == GamePlatform.Android)
+            {
+                SpaceEvents.ActionActivated += OnActionActivated;
+            }
+            else
+            {
+                TileActionHandler.Helper.Events.Input.ButtonPressed += OnButtonPressed;
+            } 
+        }
+
+        private static void OnActionActivated(object sender, EventArgsAction e)
+        {
+            if (e.Action != null && e.Action != "")
+            {
+                Log.Trace($"Checking for {e.Action}");
+                foreach (var key in tileActions.Keys)
+                {
+                    if (e.Action.StartsWith(key))
+                    {
+                        tileActions[key](e.ActionString, new Vector2(e.Position.X, e.Position.Y));
+                        break;
+                    }
+                }
+            }
         }
 
         internal static void RegisterTileAction(string name, Action<string, Vector2> actionFunction)
@@ -30,8 +54,6 @@ namespace RidgesideVillage
 
         private static void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
-
-
             if (!e.Button.IsActionButton())
                 return;
             // ignore if player hasn't loaded a save yet
