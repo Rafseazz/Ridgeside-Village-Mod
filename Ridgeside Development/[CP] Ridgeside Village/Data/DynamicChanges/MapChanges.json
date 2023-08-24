@@ -1306,5 +1306,19 @@
 		"Update": "OnLocationChange"
 	},
 
+	{
+		"LogName": "RSV: Irene Work Outfit at Mansion",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_PurpleMansion",
+		"MapProperties":
+		{
+			"UniquePortrait": "Irene",
+			"UniqueSprite": "Irene"
+		},
+		"When": {
+			"HasSeenEvent |contains=75160431": false
+		},
+	},
+
 ]
 }
