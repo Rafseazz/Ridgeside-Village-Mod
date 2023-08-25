@@ -86,7 +86,14 @@ namespace RidgesideVillage
 
         private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
         {
-            RSVIcon = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites/RSVIcon"));
+            try
+            {
+                RSVIcon = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites/RSVIcon"));
+            }
+            catch
+            {
+               Log.Debug("RSV: Failed to get RSVIcon on SaveLoaded event");
+            }
         }
         private static void MapPage_Constructor_Postfix(MapPage __instance)
         {
@@ -130,6 +137,10 @@ namespace RidgesideVillage
 
         internal static void MapPage_draw_Postfix(ref MapPage __instance, SpriteBatch b) {
             Game1.drawDialogueBox(ButtonArea.X - 92 + 60, ButtonArea.Y - 16 - 80, 250 - 42, 232, false, true);
+            if (RSVIcon is null)
+            {
+                RSVIcon = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName("LooseSprites/RSVIcon"));
+            }
             b.Draw(RSVIcon, new Vector2(EventDetection.ButtonArea.X, EventDetection.ButtonArea.Y), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0.1f);
             Point mouseCoords = Game1.getMousePosition(true);
             if (ButtonArea.Contains(mouseCoords.X, mouseCoords.Y))
