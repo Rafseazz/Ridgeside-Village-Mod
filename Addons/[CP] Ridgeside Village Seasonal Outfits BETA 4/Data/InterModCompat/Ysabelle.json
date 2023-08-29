@@ -1,0 +1,78 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Ysabelle Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalYsabelleToken": true
+			}
+		},
+		{
+			"LogName": "RSV Ysabelle Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"SeasonalYsabelleToken": true,
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Ysabelle Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"SeasonalYsabelleToken": true,
+			},
+			"Update": "OnLocationChange",
+		},
+
+		// Not affected by other mod
+		{
+			"LogName": "RSV Ysabelle Egg Fest Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring13.png",
+			"When":
+			{
+				"DayEvent": "egg festival",
+				"LocationName": "Town, temp",
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Ysabelle Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Ysabelle Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+			}
+		},
+	]
+}

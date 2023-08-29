@@ -49,12 +49,12 @@
 
 	"DynamicTokens":
 	[
+	// World
 		{
 			"Name": "RandomNumber",
 			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
 		},
 
-		// World
 		{
 		  	"Name": "SeasonalRainToken",
 		  	"Value": "{{season}}"
@@ -73,54 +73,7 @@
 			"Value": "{{Query: {{Year}} % 2 = 1}}"
 		},
 
-		{
-		  	"Name": "Festival",
-		  	"Value": "spring13",
-		  	"When": {
-					"DayEvent": "egg festival",
-					"LocationName": "Town, temp"
-		  	}
-		},
-		{
-		  	"Name": "Festival",
-		  	"Value": "spring24",
-		  	"When": {
-					"DayEvent": "flower dance",
-					"LocationName": "Forest, temp"
-		  	}
-		},
-		{
-		  	"Name": "Festival",
-		  	"Value": "fall27",
-		  	"When": {
-					"DayEvent": "spirit's eve",
-					"LocationName": "Town, temp"
-				}
-		},
-
-		// RSV-specific
-		{
-			"Name": "IreneTraveling",
-			"Value": "false"
-		},
-		{
-			"Name": "IreneTraveling",
-			"Value": "true",
-			"When":
-			{
-				"Season |contains= spring": true,
-				"Day |contains= 15, 16, 17, 18, 19, 20, 21": true
-			}
-		},
-		{
-			"Name": "IreneTraveling",
-			"Value": "true",
-			"When":
-			{
-				"Season |contains= fall": true,
-				"Day |contains= 2, 3, 4, 5, 6, 7": true
-			}
-		},
+	// RSV-specific
 		{
 			"Name": "JioMasked",
 			"Value": "false"
@@ -161,76 +114,9 @@
 			}
 		},
 
-		// Other mod compat
-		{
-		  	"Name": "SeasonalIanToken",
-		  	"Value": "true"
-		},
-		{
-		  	"Name": "SeasonalIanToken",
-		  	"Value": "{{Random: true, false}}",
-		  	"When":
-			{
-				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
-		  		"x3n3as's Ian Seasonals": true
-			}
-		},
-		{
-		  	"Name": "SeasonalIanToken",
-		  	"Value": "false",
-		  	"When":
-			{
-				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
-				"x3n3as's Ian Seasonals": false
-			}
-		},
+	// Other mod compat
 
-		{
-		  	"Name": "SeasonalCorineToken",
-		  	"Value": "true"
-		},
-		{
-		  	"Name": "SeasonalCorineToken",
-		  	"Value": "{{Random: true, false}}",
-		  	"When":
-			{
-				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
-				"x3n3as's Corine Seasonals": true
-			}
-		},
-		{
-		  	"Name": "SeasonalCorineToken",
-		  	"Value": "false",
-		  	"When":
-			{
-				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
-				"x3n3as's Corine Seasonals": false
-			}
-		},
-
-		{
-		  	"Name": "SeasonalYsabelleToken",
-		  	"Value": "true",
-		},
-		{
-		  	"Name": "SeasonalYsabelleToken",
-		  	"Value": "{{Random: true, false}}",
-		  	"When":
-			{
-				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
-				"x3n3as's Ysabelle Seasonals": true
-			}
-		},
-		{
-		  	"Name": "SeasonalYsabelleToken",
-		  	"Value": "false",
-		  	"When":
-			{
-				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
-				"x3n3as's Ysabelle Seasonals": false
-			}
-		},
-
+		//Alissa
 		{
 		  	"Name": "SeasonalAlissaToken",
 		  	"Value": "true"
@@ -254,6 +140,55 @@
 			}
 		},
 
+		//Corine
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": "true"
+		},
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
+				"x3n3as's Corine Seasonals": true
+			}
+		},
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": "false",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
+				"x3n3as's Corine Seasonals": false
+			}
+		},
+
+		//Ian
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": "true"
+		},
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
+		  	"x3n3as's Ian Seasonals": true
+			}
+		},
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": "false",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
+				"x3n3as's Ian Seasonals": false
+			}
+		},
+
+		//Kiarra
 		{
 		  	"Name": "SeasonalKiarraToken",
 		  	"Value": "true"
@@ -275,7 +210,31 @@
 				"HasMod |contains=UndyneWolf.SeasonalKiarra": true,
 				"UndyneWolf's Kiarra Seasonals": false
 			}
-		}
+		},
+
+		//Ysabelle
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": "true",
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": "{{Random: true, false}}",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
+				"x3n3as's Ysabelle Seasonals": true
+			}
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": "false",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
+				"x3n3as's Ysabelle Seasonals": false
+			}
+		},
 	],
 
 	"Changes": [
@@ -284,129 +243,30 @@
 Compat with other seasonal outfit mods for RSV
 -----------------------------------*/
 
-		//Ian
 		{
-			"LogName": "RSV Ian Seasonals",
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalIanToken": true
-			}
+			"LogName": "RSV Alissa Seasonal +Compat",
+			"Action": "Include",
+			"FromFile": "Data/InterModCompat/Alissa.json",
 		},
 		{
-			"LogName": "RSV Ian Festival Outfits",
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
-			"When":
-			{
-				"LocationName": "temp",
-				"SeasonalIanToken": true,
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
-		},
-
-		//Corine
-		{
-			"LogName": "RSV Corine Seasonals",
-			"Action": "EditImage",
-			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalCorineToken": true
-			}
+			"LogName": "RSV Corine Seasonal +Compat",
+			"Action": "Include",
+			"FromFile": "Data/InterModCompat/Corine.json",
 		},
 		{
-			"LogName": "RSV Corine Festival Outfits",
-			"Action": "EditImage",
-			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
-			"When":
-			{
-				"LocationName": "temp",
-				"SeasonalCorineToken": true,
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
-		},
-
-		//Ysabelle
-		{
-			"LogName": "RSV Ysabelle Seasonals",
-			"Action": "EditImage",
-			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalYsabelleToken": true
-			}
+			"LogName": "RSV Ian Seasonal +Compat",
+			"Action": "Include",
+			"FromFile": "Data/InterModCompat/Ian.json",
 		},
 		{
-			"LogName": "RSV Ysabelle Festival Outfits",
-			"Action": "EditImage",
-			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
-			"When":
-			{
-				"LocationName": "temp",
-				"SeasonalYsabelleToken": true,
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
-		},
-
-		//Alissa
-		{
-			"LogName": "RSV Alissa Seasonals",
-			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalAlissaToken": true
-			}
+			"LogName": "RSV Kiarra Seasonal +Compat",
+			"Action": "Include",
+			"FromFile": "Data/InterModCompat/Kiarra.json",
 		},
 		{
-			"LogName": "RSV Alissa Festival Outfits",
-			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
-			"When":
-			{
-				"LocationName": "temp",
-				"SeasonalAlissaToken": true,
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
-		},
-
-		//Kiarra
-		{
-			"LogName": "RSV Kiarra Seasonals",
-			"Action": "EditImage",
-			"Target": "Portraits/Kiarra, Characters/Kiarra",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalKiarraToken": true
-			}
-		},
-		{
-			"LogName": "RSV Kiarra Festival Outfits",
-			"Action": "EditImage",
-			"Target": "Portraits/Kiarra, Characters/Kiarra",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
-			"When":
-			{
-				"LocationName": "temp",
-				"SeasonalKiarraToken": true,
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
+			"LogName": "RSV Ysabelle Seasonal +Compat",
+			"Action": "Include",
+			"FromFile": "Data/InterModCompat/Ysabelle.json",
 		},
 
 /*-----------------------------------
@@ -417,7 +277,7 @@ Everyone else (Basic Code)
 		{
 			"LogName": "RSV Seasonals",
 			"Action": "EditImage",
-			"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/Jio, Characters/Jio, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne",
+			"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/Jio, Characters/Jio, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png"
 		},
 
@@ -454,7 +314,7 @@ Everyone else (Basic Code)
 			"Update": "OnLocationChange",
 		},
 
-		//Torts default
+		//Torts
 		{
 			"LogName": "RSV Torts Seasonals",
 			"Action": "EditImage",
@@ -462,11 +322,11 @@ Everyone else (Basic Code)
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
 			"When":
 			{
-				"RandomNumber": "{{Range: 2,9}}"
+				"RandomNumber": "1, 10"
 			}
 		},
 
-		//Kiwi seasonal
+		//Kiwi
 		{
 			"LogName": "RSV Kiwi Seasonals",
 			"Action": "EditImage",
@@ -482,7 +342,7 @@ Everyone else (Basic Code)
 Work Clothes
 -----------------------------------*/
 
-		//Philip
+		//Philip Work
 		{
 			"LogName": "RSV Philip Work Outfit Map",
 			"Action": "EditMap",
@@ -499,7 +359,7 @@ Work Clothes
 			"Target": "Portraits/Philip_Custom_Ridgeside_ShiroHouse, Characters/Philip_Custom_Ridgeside_ShiroHouse",
 			"FromFile": "Assets/{{TargetPathOnly}}/Philip/Philip_work.png"
 		},
-		//Daia
+		//Daia Work
 		{
 			"LogName": "RSV Daia Work Outfit Map",
 			"Action": "EditMap",
@@ -543,38 +403,45 @@ Work Clothes
 		},
 		//Jio Festival outfits when married
 		{
-			"LogName": "RSV Jio Festival Outfits",
+			"LogName": "RSV Jio Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Jio, Characters/Jio",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Festival}}.png",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
 			"When":
 			{
-				"LocationName": "temp",
-				"Relationship:Jio": "Married",
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
 				"HasFile:{{FromFile}}": true
 			},
 			"Update": "OnLocationChange",
 		},
-
-		//Corine ninja at-home wear
 		{
-			"LogName": "RSV Corine At Home Outfit",
+			"LogName": "RSV Jio Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
-			"Target": "Portraits/Corine_Custom_Ridgeside_EzekielHouse, Characters/Corine_Custom_Ridgeside_EzekielHouse",
-			"FromFile": "Assets/{{TargetPathOnly}}/Corine/Corine_{{season}}.png"
-		},
-
-		//Irene traveling
-		{
-			"LogName": "RSV Irene Work Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_chef.png",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
 			"When":
 			{
-				"IreneTraveling": true,
-				"HasSeenEvent |contains= 75160431": true
-			}
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"HasFile:{{FromFile}}": true
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Jio Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"HasFile:{{FromFile}}": true
+			},
+			"Update": "OnLocationChange",
 		},
 
 /*-----------------------------------
@@ -588,9 +455,10 @@ Accessories
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc.png",
 			"When":
 			{
-				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR '{{RandomNumber|contains=6,7,8,9,10}}' = 'true'": true,
+				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR '{{RandomNumber|contains=6,7,8,9,10}}' = 'true'": true, //(Do we want them all wearing hats at the same time?)
 				"IsOutdoors": true,
-				"Lightweight Outfits": "false"
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
@@ -599,28 +467,14 @@ Accessories
 		{
 			"LogName": "RSV Seasonal Hats",
 			"Action": "EditImage",
-			"Target": "Portraits/Blair, Characters/Blair, Portraits/Faye, Characters/Faye, Portraits/Louie, Characters/Louie, Portraits/Maive, Characters/Maive, Portraits/Richard, Characters/Richard, Portraits/Sonny, Characters/Sonny",
+			"Target": "Portraits/Blair, Characters/Blair, Portraits/Faye, Characters/Faye, Portraits/Irene, Characters/Irene, Portraits/Louie, Characters/Louie, Portraits/Maive, Characters/Maive, Portraits/Richard, Characters/Richard, Portraits/Sonny, Characters/Sonny",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
 			"When": {
 				//"RandomNumber|contains=6,7,8,9,10": true, //(Do we want them all wearing hats at the same time?)
+				"IsOutdoors": true,
 				"HasFile:{{FromFile}}": true,
-				"IsOutdoors": true,
-				"Lightweight Outfits": "false"
-			},
-			"Update": "OnLocationChange",
-			"PatchMode": "Overlay"
-		},
-		//Irene specifically
-		{
-			"LogName": "RSV Irene Accessories",
-			"Action": "EditImage",
-			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"IreneTraveling": false,
-				"IsOutdoors": true,
-				"Lightweight Outfits": "false"
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
@@ -630,18 +484,43 @@ Accessories
 Festivals
 -----------------------------------*/
 	{
-		"LogName": "RSV Festival Outfits",
+		"LogName": "RSV Flower Dance Outfits",
 		"Action": "EditImage",
 		"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne, Portraits/Sonny, Characters/Sonny, Portraits/Aguar, Characters/Aguar,",
-		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{festival}}.png",
-		"When":
-		{
-			"LocationName": "temp",
-			"HasFile:{{FromFile}}": true
+		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+		"When": {
+			"DayEvent": "flower dance",
+			"LocationName": "Forest, temp",
+			"HasFile:{{FromFile}}": true,
+		},
+		"Update": "OnLocationChange",
+	},
+	{
+		"LogName": "RSV Spirit's Eve Y1 Outfits",
+		"Action": "EditImage",
+		"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne, Portraits/Sonny, Characters/Sonny, Portraits/Aguar, Characters/Aguar,",
+		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+		"When": {
+			"DayEvent": "spirit's eve",
+			"LocationName": "Town, temp",
+			"HasFile:{{FromFile}}": true,
+		},
+		"Update": "OnLocationChange",
+	},
+	{
+		"LogName": "RSV Spirit's Eve Y2 Outfits",
+		"Action": "EditImage",
+		"Target": "Portraits/Anton, Characters/Anton, Portraits/Ariah, Characters/Ariah, Portraits/Bert, Characters/Bert, Portraits/Blair, Characters/Blair, Portraits/Bryle, Characters/Bryle, Portraits/Carmen, Characters/Carmen, Portraits/Daia, Characters/Daia, Portraits/Ezekiel, Characters/Ezekiel, Portraits/Faye, Characters/Faye, Portraits/Flor, Characters/Flor, Portraits/Freddie, Characters/Freddie, Portraits/Irene, Characters/Irene, Portraits/Jeric, Characters/Jeric, Portraits/June, Characters/June, Portraits/Keahi, Characters/Keahi, Portraits/Kenneth, Characters/Kenneth, Portraits/Kimpoi, Characters/Kimpoi, Portraits/Lenny, Characters/Lenny, Portraits/Lola, Characters/Lola, Portraits/Lorenzo, Characters/Lorenzo, Portraits/Louie, Characters/Louie, Portraits/Maddie, Characters/Maddie, Portraits/Maive, Characters/Maive, Portraits/Malaya, Characters/Malaya, Portraits/Naomi, Characters/Naomi, Portraits/Olga, Characters/Olga, Portraits/Paula, Characters/Paula, Portraits/Philip, Characters/Philip, Portraits/Pika, Characters/Pika, Portraits/Richard, Characters/Richard, Portraits/Sean, Characters/Sean, Portraits/Shanice, Characters/Shanice, Portraits/Shiro, Characters/Shiro, Portraits/Torts, Characters/Torts, Portraits/Trinnie, Characters/Trinnie, Portraits/Yuuma, Characters/Yuuma, Portraits/Zayne, Characters/Zayne, Portraits/Sonny, Characters/Sonny, Portraits/Aguar, Characters/Aguar,",
+		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+		"When": {
+			"DayEvent": "spirit's eve",
+			"LocationName": "Town, temp",
+			"HasFile:{{FromFile}}": true,
 		},
 		"Update": "OnLocationChange",
 	},
 
+	// Spirit's Eve changes
 	{
 		"LogName": "RSV Seasonal Spirit's Eve Positions Y1",
 		"Action": "Include",
@@ -663,5 +542,27 @@ Festivals
 			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
 		}
 	},
+	/*
+	{
+		"LogName": "RSV Seasonal Spirit's Eve Dialogue Y1",
+		"Action": "Include",
+		"FromFile": "Data/Dialogue/SpiritEveY1.json",
+		"When": {
+			"IsOddYear": true,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
+		}
+	},
+	{
+		"LogName": "RSV Seasonal Spirit's Eve Dialogue Y2",
+		"Action": "Include",
+		"FromFile": "Data/Dialogue/SpiritEveY2.json",
+		"When": {
+			"IsOddYear": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
+		}
+	},
+	*/
 ]
 }

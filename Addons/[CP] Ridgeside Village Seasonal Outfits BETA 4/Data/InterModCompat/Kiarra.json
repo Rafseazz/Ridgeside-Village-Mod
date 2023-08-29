@@ -1,0 +1,67 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Kiarra Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalKiarraToken": true
+			}
+		},
+		{
+			"LogName": "RSV Kiarra Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"SeasonalKiarraToken": true,
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Kiarra Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"SeasonalKiarraToken": true,
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Kiarra Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"SeasonalKiarraToken": true,
+			},
+			"Update": "OnLocationChange",
+		},
+
+		// Not affected by other mods
+		{
+			"LogName": "RSV Kiarra Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+			}
+		},
+	]
+}
