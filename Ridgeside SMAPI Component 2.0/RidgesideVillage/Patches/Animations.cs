@@ -34,11 +34,13 @@ namespace RidgesideVillage
                 prefix: new HarmonyMethod(typeof(Animations), nameof(finishRouteBehavior_Prefix))
             );
             Helper.Events.GameLoop.DayEnding += DayEnd;
-            Helper.Events.Player.Warped += OnWarped;
+            if (Helper.ModRegistry.IsLoaded("Rafseazz.RSVSeasonalOutfits"))
+                Helper.Events.Player.Warped += OnWarped;
         }
 
         internal static void OnWarped(object sender, WarpedEventArgs e)
         {
+            // For clearing TempAnimatedSprite characters' dialogue in Seasonal Outfits Spirit's Eve
             if (e.NewLocation is null) return;
             if (Game1.currentSeason + Game1.dayOfMonth == "fall27" && e.NewLocation.Name.Equals("Town"))
             {
