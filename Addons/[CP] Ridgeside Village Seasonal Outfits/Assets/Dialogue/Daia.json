@@ -12,6 +12,18 @@
 		},
 	},
 
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Change Dating",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+   		"Relationship:Daia": "Dating",
+   },
+   "Entries": {
+ 	  "Daia_y2": "{{i18n:SpiritEve.Daia.2_dating}}",
+		},
+	},
+
 //Free Love back-up
 	{
 	 "LogName": "Daia Spirit's Eve Dialogue Change (Free Love back-up)",
