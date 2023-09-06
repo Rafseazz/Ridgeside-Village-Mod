@@ -1,0 +1,30 @@
+{
+"Changes": [
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Daia": "{{i18n:SpiritEve.Daia.1}}",
+ 	  "Daia_y2": "{{i18n:SpiritEve.Daia.2}}",
+ 	  "Daia_spouse": "{{i18n:SpiritEve.Daia_spouse.1}}",
+ 	  "Daia_spouse_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Daia": "Married",
+   },
+   "Entries": {
+	   "Daia": "{{i18n:SpiritEve.Daia_spouse.1}}",
+	   "Daia_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
+		},
+	},
+]
+}

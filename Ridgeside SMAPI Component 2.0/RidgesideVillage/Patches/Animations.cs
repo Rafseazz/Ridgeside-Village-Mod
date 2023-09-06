@@ -17,6 +17,8 @@ namespace RidgesideVillage
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
         private static string[] npcs = { "Torts", "Carmen", "Blair", "Kenneth", "June" };
+        private static string[] npcs_fall27_1 = { "Kenneth", "Pika", "Trinnie" };
+        private static string[] npcs_fall27_2 = { "Faye", "Kenneth", "Philip", "Shiro", "Zayne" };
 
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
@@ -32,6 +34,29 @@ namespace RidgesideVillage
                 prefix: new HarmonyMethod(typeof(Animations), nameof(finishRouteBehavior_Prefix))
             );
             Helper.Events.GameLoop.DayEnding += DayEnd;
+            Helper.Events.Player.Warped += OnWarped;
+        }
+
+        internal static void OnWarped(object sender, WarpedEventArgs e)
+        {
+            if (e.NewLocation is null) return;
+            if (Game1.currentSeason + Game1.dayOfMonth == "fall27" && e.NewLocation.Name.Equals("Town"))
+            {
+                if (Game1.year % 2 == 1)
+                {
+                    foreach (string name in npcs_fall27_1)
+                    {
+                        Game1.getCharacterFromName(name).CurrentDialogue.Clear();
+                    }
+                }
+                else
+                {
+                    foreach (string name in npcs_fall27_2)
+                    {
+                        Game1.getCharacterFromName(name).CurrentDialogue.Clear();
+                    }
+                }
+            }
         }
 
         internal static void startRouteBehavior_Postfix(ref NPC __instance, string behaviorName)

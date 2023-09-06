@@ -1,0 +1,40 @@
+{
+"Changes": [
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Corine": "{{i18n:SpiritEve.Corine.1}}",
+ 	  "Corine_y2": "{{i18n:SpiritEve.Corine.2}}",
+ 	  "Corine_spouse": "{{i18n:SpiritEve.Corine_spouse.1}}",
+ 	  "Corine_spouse_y2": "{{i18n:SpiritEve.Corine_spouse.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change (post 8 heart)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": { "HasSeenEvent": 75160125 },
+   "Entries": {
+	   "Corine_y2": "{{i18n:SpiritEve.Corine_spouse.2-8heart}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Corine": "Married",
+   },
+   "Entries": {
+	   "Corine": "{{i18n:SpiritEve.Corine_spouse.1}}",
+	   "Corine_y2": "{{i18n:SpiritEve.Corine_spouse.2}}",
+		},
+	},
+]
+}

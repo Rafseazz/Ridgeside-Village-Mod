@@ -1,0 +1,26 @@
+{
+"Changes": [
+	{
+	 "LogName": "Pika Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": true,
+   },
+   "Entries": {
+		"Pika": "{{i18n:SpiritEve.Pika.1}}",
+		},
+	},
+	{
+	 "LogName": "Pika Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+   },
+   "Entries": {
+		"Pika": "{{i18n:SpiritEve.Pika.2}}",
+		},
+	},
+]
+}

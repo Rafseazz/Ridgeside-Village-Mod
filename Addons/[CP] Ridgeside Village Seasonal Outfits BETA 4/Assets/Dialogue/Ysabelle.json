@@ -1,0 +1,31 @@
+{
+"Changes": [
+	{
+	 "LogName": "Ysabelle Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Ysabelle": "{{i18n:SpiritEve.Ysabelle.1}}",
+ 	  "Ysabelle_y2": "{{i18n:SpiritEve.Ysabelle.2}}",
+ 	  "Ysabelle_spouse": "{{i18n:SpiritEve.Ysabelle_spouse.1}}",
+ 	  "Ysabelle_spouse_y2": "{{i18n:SpiritEve.Ysabelle_spouse.2}}",
+		},
+	},
+
+
+//Free Love back-up
+	{
+	 "LogName": "Ysabelle Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Ysabelle": "Married",
+   },
+   "Entries": {
+	   "Ysabelle": "{{i18n:SpiritEve.Ysabelle_spouse.1}}",
+	   "Ysabelle_y2": "{{i18n:SpiritEve.Ysabelle_spouse.2}}",
+		},
+	},
+]
+}

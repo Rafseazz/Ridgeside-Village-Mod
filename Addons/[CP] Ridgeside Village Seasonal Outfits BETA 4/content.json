@@ -2,11 +2,18 @@
 	"Format": "1.29.0",
 	"ConfigSchema":
 	{
+		"Festival Dialogue Edits":
+		{
+			"AllowValues":"true, false",
+			"Default": "true",
+			"Description": "Replaces characters' Spirit's Eve dialogue from the main mod with dialogue that references their costumes. (Requires RSV's Expanded Festival Maps.)",
+			"AllowBlank": false
+		},
 		"Lightweight Outfits":
 		{
 			"AllowValues":"true, false",
 			"Default": "false",
-			"Description": "Removes location-based changes for more performance.",
+			"Description": "Removes location-based changes for better performance.",
 			"AllowBlank": false
 		},
 		"x3n3as's Ian Seasonals":
@@ -401,48 +408,6 @@ Work Clothes
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		},
-		//Jio Festival outfits when married
-		{
-			"LogName": "RSV Jio Flower Dance Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Jio, Characters/Jio",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
-			"When":
-			{
-				"DayEvent": "flower dance",
-				"LocationName": "Forest, temp",
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Jio Spirit's Eve Outfit Y1",
-			"Action": "EditImage",
-			"Target": "Portraits/Jio, Characters/Jio",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": true,
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Jio Spirit's Eve Outfit Y2",
-			"Action": "EditImage",
-			"Target": "Portraits/Jio, Characters/Jio",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": false,
-				"HasFile:{{FromFile}}": true
-			},
-			"Update": "OnLocationChange",
-		},
 
 /*-----------------------------------
 Accessories
@@ -517,12 +482,52 @@ Festivals
 			"DayEvent": "spirit's eve",
 			"LocationName": "Town, temp",
 			"IsOddYear": false,
-			//"HasFile:{{FromFile}}": true,
 		},
 		"Update": "OnLocationChange",
 	},
-
-	// Spirit's Eve changes
+	//Jio Festival outfits when married
+	{
+		"LogName": "RSV Jio Flower Dance Outfit",
+		"Action": "EditImage",
+		"Target": "Portraits/Jio, Characters/Jio",
+		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+		"When":
+		{
+			"Relationship:Jio|contains=married": true,
+			"DayEvent": "flower dance",
+			"LocationName": "Forest, temp",
+		},
+		"Update": "OnLocationChange",
+	},
+	{
+		"LogName": "RSV Jio Spirit's Eve Outfit Y1",
+		"Action": "EditImage",
+		"Target": "Portraits/Jio, Characters/Jio",
+		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+		"When":
+		{
+			"Relationship:Jio|contains=married": true,
+			"DayEvent": "spirit's eve",
+			"LocationName": "Town, temp",
+			"IsOddYear": true,
+		},
+		"Update": "OnLocationChange",
+	},
+	{
+		"LogName": "RSV Jio Spirit's Eve Outfit Y2",
+		"Action": "EditImage",
+		"Target": "Portraits/Jio, Characters/Jio",
+		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+		"When":
+		{
+			"Relationship:Jio|contains=married": true,
+			"DayEvent": "spirit's eve",
+			"LocationName": "Town, temp",
+			"IsOddYear": false,
+		},
+		"Update": "OnLocationChange",
+	},
+	// Spirit's Eve location changes
 	{
 		"LogName": "RSV Seasonal Spirit's Eve Positions Y1",
 		"Action": "Include",
@@ -544,27 +549,16 @@ Festivals
 			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
 		}
 	},
-	/*
+	// Spirit's Eve dialogue changes
 	{
-		"LogName": "RSV Seasonal Spirit's Eve Dialogue Y1",
-		"Action": "Include",
-		"FromFile": "Data/Dialogue/SpiritEveY1.json",
+		"LogName": "Include Ridgeside Dialogue Files",
+   	"Action": "Include",
 		"When": {
-			"IsOddYear": true,
+			"Festival Dialogue Edits": true,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
 			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
-		}
-	},
-	{
-		"LogName": "RSV Seasonal Spirit's Eve Dialogue Y2",
-		"Action": "Include",
-		"FromFile": "Data/Dialogue/SpiritEveY2.json",
-		"When": {
-			"IsOddYear": false,
-			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
-			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
-		}
-	},
-	*/
+		},
+   	"FromFile": "Assets/Dialogue/Alissa.json, Assets/Dialogue/Aguar.json, Assets/Dialogue/Bert.json, Assets/Dialogue/Corine.json, Assets/Dialogue/Ezekiel.json, Assets/Dialogue/Flor.json, Assets/Dialogue/Freddie.json, Assets/Dialogue/Ian.json, Assets/Dialogue/Jeric.json, Assets/Dialogue/Jio.json, Assets/Dialogue/Keahi.json, Assets/Dialogue/Kenneth.json, Assets/Dialogue/Kiwi.json, Assets/Dialogue/Lenny.json, Assets/Dialogue/Lola.json, Assets/Dialogue/Maddie.json, Assets/Dialogue/Olga.json, Assets/Dialogue/Philip.json, Assets/Dialogue/Pika.json, Assets/Dialogue/Richard.json, Assets/Dialogue/Shiro.json, Assets/Dialogue/Trinnie.json, Assets/Dialogue/Ysabelle.json, Assets/Dialogue/Yuuma.json, Assets/Dialogue/Daia.json, Assets/Dialogue/Naomi.json, Assets/Dialogue/Malaya.json, Assets/Dialogue/Kimpoi.json, Assets/Dialogue/Anton.json, Assets/Dialogue/Ariah.json, Assets/Dialogue/Blair.json, Assets/Dialogue/Bryle.json, Assets/Dialogue/Carmen.json, Assets/Dialogue/Faye.json, Assets/Dialogue/Irene.json, Assets/Dialogue/Kiarra.json, Assets/Dialogue/Lorenzo.json, Assets/Dialogue/Louie.json, Assets/Dialogue/Maive.json, Assets/Dialogue/Paula.json, Assets/Dialogue/Sean.json, Assets/Dialogue/Shanice.json, Assets/Dialogue/Sonny.json, Assets/Dialogue/Zayne.json, Assets/Dialogue/Torts.json, Assets/Dialogue/June.json",
+  },
 ]
 }

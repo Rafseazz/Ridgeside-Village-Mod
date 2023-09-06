@@ -1,0 +1,31 @@
+{
+"Changes": [
+	{
+	 "LogName": "Shiro Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Shiro": "{{i18n:SpiritEve.Shiro.1}}",
+ 	  "Shiro_y2": "{{i18n:SpiritEve.Shiro.2}}",
+ 	  "Shiro_spouse": "{{i18n:SpiritEve.Shiro_spouse.1}}",
+ 	  "Shiro_spouse_y2": "{{i18n:SpiritEve.Shiro_spouse.2}}",
+		},
+	},
+
+
+//Free Love back-up
+	{
+	 "LogName": "Shiro Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Shiro": "Married",
+   },
+   "Entries": {
+	   "Shiro": "{{i18n:SpiritEve.Shiro_spouse.1}}",
+	   "Shiro_y2": "{{i18n:SpiritEve.Shiro_spouse.2}}",
+		},
+	},
+]
+}

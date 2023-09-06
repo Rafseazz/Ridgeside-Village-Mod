@@ -1,0 +1,27 @@
+{
+"Changes": [
+	{
+	 "LogName": "Trinnie Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": true,
+   },
+   "Entries": {
+		"Trinnie": "{{i18n:SpiritEve.Trinnie.1}}",
+		},
+	},
+	
+	{
+	 "LogName": "Trinnie Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+   },
+   "Entries": {
+		"Trinnie": "{{i18n:SpiritEve.Trinnie.2}}",
+		},
+	},
+]
+}

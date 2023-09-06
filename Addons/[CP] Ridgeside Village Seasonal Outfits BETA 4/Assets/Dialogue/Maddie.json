@@ -1,0 +1,40 @@
+{
+"Changes": [
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Maddie": "{{i18n:SpiritEve.Maddie.1}}",
+ 	  "Maddie_y2": "{{i18n:SpiritEve.Maddie.2}}",
+ 	  "Maddie_spouse": "{{i18n:SpiritEve.Maddie_spouse.1}}",
+ 	  "Maddie_spouse_y2": "{{i18n:SpiritEve.Maddie_spouse.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change (Jeric married)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": { "Relationship:Jeric": "Married" },
+   "Entries": {
+ 	  "Maddie_y2": "{{i18n:SpiritEve.Maddie.2-jeric}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Maddie": "Married",
+   },
+   "Entries": {
+	   "Maddie": "{{i18n:SpiritEve.Maddie_spouse.1}}",
+	   "Maddie_y2": "{{i18n:SpiritEve.Maddie_spouse.2}}",
+		},
+	},
+]
+}

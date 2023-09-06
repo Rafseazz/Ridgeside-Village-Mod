@@ -1,0 +1,30 @@
+{
+"Changes": [
+	{
+	 "LogName": "Alissa Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Alissa": "{{i18n:SpiritEve.Alissa.1}}",
+ 	  "Alissa_y2": "{{i18n:SpiritEve.Alissa.2}}",
+ 	  "Alissa_spouse": "{{i18n:SpiritEve.Alissa_spouse.1}}",
+ 	  "Alissa_spouse_y2": "{{i18n:SpiritEve.Alissa_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Alissa Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Alissa": "Married",
+   },
+   "Entries": {
+	   "Alissa": "{{i18n:SpiritEve.Alissa_spouse.1}}",
+	   "Alissa_y2": "{{i18n:SpiritEve.Alissa_spouse.2}}",
+		},
+	},
+]
+}

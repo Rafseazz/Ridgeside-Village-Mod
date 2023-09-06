@@ -1,0 +1,44 @@
+{
+"Changes": [
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Anton": "{{i18n:SpiritEve.Anton.1}}",
+ 	  "Anton_y2": "{{i18n:SpiritEve.Anton.2}}",
+ 	  "Anton_spouse": "{{i18n:SpiritEve.Anton_spouse.1}}",
+ 	  "Anton_spouse_y2": "{{i18n:SpiritEve.Anton_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Anton": "Married",
+   },
+   "Entries": {
+	   "Anton": "{{i18n:SpiritEve.Anton_spouse.1}}",
+	   "Anton_y2": "{{i18n:SpiritEve.Anton_spouse.2}}",
+		},
+	},
+
+//With Ian mod
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change (With Ian seasonals)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		 "SeasonalIanToken": false,
+		 "HasMod|contains=x3n3as.RSVSeasonalIan": true,
+	 },
+   "Entries": {
+	   "Anton_y2": "{{i18n:SpiritEve.Anton.2-ian}}",
+		},
+	},
+]
+}

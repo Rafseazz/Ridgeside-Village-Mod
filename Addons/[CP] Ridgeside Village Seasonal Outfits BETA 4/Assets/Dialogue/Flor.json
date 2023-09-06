@@ -1,0 +1,30 @@
+{
+"Changes": [
+	{
+	 "LogName": "Flor Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Flor": "{{i18n:SpiritEve.Flor.1}}",
+ 	  "Flor_y2": "{{i18n:SpiritEve.Flor.2}}",
+ 	  "Flor_spouse": "{{i18n:SpiritEve.Flor_spouse.1}}",
+ 	  "Flor_spouse_y2": "{{i18n:SpiritEve.Flor_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Flor Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Flor": "Married",
+   },
+   "Entries": {
+	   "Flor": "{{i18n:SpiritEve.Flor_spouse.1}}",
+	   "Flor_y2": "{{i18n:SpiritEve.Flor_spouse.2}}",
+		},
+	},
+]
+}

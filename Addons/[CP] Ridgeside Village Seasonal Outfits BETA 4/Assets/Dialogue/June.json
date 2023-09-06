@@ -1,0 +1,30 @@
+{
+"Changes": [
+	{
+	 "LogName": "June Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"June": "{{i18n:SpiritEve.June.1}}",
+ 	  "June_y2": "{{i18n:SpiritEve.June.2}}",
+ 	  "June_spouse": "{{i18n:SpiritEve.June_spouse.1}}",
+ 	  "June_spouse_y2": "{{i18n:SpiritEve.June_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "June Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:June": "Married",
+   },
+   "Entries": {
+	   "June": "{{i18n:SpiritEve.June_spouse.1}}",
+	   "June_y2": "{{i18n:SpiritEve.June_spouse.2}}",
+		},
+	},
+]
+}

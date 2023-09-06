@@ -1,0 +1,56 @@
+{
+"Changes": [
+	{
+	 "LogName": "Philip Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": true,
+   },
+   "Entries": {
+		"Philip": "{{i18n:SpiritEve.Philip.1}}",
+ 	  "Philip_spouse": "{{i18n:SpiritEve.Philip_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Philip Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+   },
+   "Entries": {
+		"Philip": "{{i18n:SpiritEve.Philip.2}}",
+ 	  "Philip_spouse": "{{i18n:SpiritEve.Philip_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Philip Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Philip": "Married",
+		"IsOddYear": true,
+   },
+   "Entries": {
+	   "Philip": "{{i18n:SpiritEve.Philip_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Philip Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Philip": "Married",
+		"IsOddYear": false,
+   },
+   "Entries": {
+	   "Philip": "{{i18n:SpiritEve.Philip_spouse.2}}",
+		},
+	},
+]
+}

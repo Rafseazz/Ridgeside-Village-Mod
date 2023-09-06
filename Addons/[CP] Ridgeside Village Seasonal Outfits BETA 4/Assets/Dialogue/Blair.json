@@ -1,0 +1,30 @@
+{
+"Changes": [
+	{
+	 "LogName": "Blair Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Blair": "{{i18n:SpiritEve.Blair.1}}",
+ 	  "Blair_y2": "{{i18n:SpiritEve.Blair.2}}",
+ 	  "Blair_spouse": "{{i18n:SpiritEve.Blair_spouse.1}}",
+ 	  "Blair_spouse_y2": "{{i18n:SpiritEve.Blair_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Blair Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Blair": "Married",
+   },
+   "Entries": {
+	   "Blair": "{{i18n:SpiritEve.Blair_spouse.1}}",
+	   "Blair_y2": "{{i18n:SpiritEve.Blair_spouse.2}}",
+		},
+	},
+]
+}
