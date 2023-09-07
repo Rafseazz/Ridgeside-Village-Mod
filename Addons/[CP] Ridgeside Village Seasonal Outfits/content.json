@@ -90,7 +90,7 @@
 			"Value": "true",
 			"When":
 			{
-				"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls": true
+				"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls, Temp": true
 			}
 		},
 
@@ -387,14 +387,15 @@ Work Clothes
 		{
 			"LogName": "RSV Daia Work Outfit Mask",
 			"Action": "EditImage",
-			"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls",
-			"FromFile": "Assets/Portraits/Daia/Daia_mask.png",
+			"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls, Characters/Daia_Custom_Ridgeside_Ridge, Characters/Daia_Custom_Ridgeside_RidgeForest, Characters/Daia_Custom_Ridgeside_RSVSpiritRealm, Characters/Daia_Custom_Ridgeside_RSVNinjaHouse, Characters/Daia_Custom_Ridgeside_RidgeFalls",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_mask.png",
 			"When":
 			{
 				"RandomNumber |contains= 6, 9": true
 			},
 			"PatchMode": "Overlay"
 		},
+
 		//Jio Mask
 		{
 			"LogName": "RSV Jio Work Outfit Mask",
