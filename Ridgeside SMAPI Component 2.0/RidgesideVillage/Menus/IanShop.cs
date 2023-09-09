@@ -61,7 +61,7 @@ namespace RidgesideVillage
                 // Construction services
                 if (Game1.player.activeDialogueEvents.TryGetValue(RSVConstants.CT_HOUSEUPGRADE, out int housect) && housect == 0)
                 {
-                    Game1.player.mailReceived.Add(RSVConstants.M_HOUSEUPGRADED);
+                    Game1.player.mailbox.Add(RSVConstants.M_HOUSEUPGRADED);
                     Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_HOUSEUPGRADE);
                     Game1.player.activeDialogueEvents.Remove(RSVConstants.CT_ACTIVECONSTRUCTION);
                 }
