@@ -415,13 +415,13 @@ Accessories
 -----------------------------------*/
 		//Year-round accessories
 		{
-			"LogName": "RSV Accessories",
+			"LogName": "RSV Accessories - Year-round",
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar, Portraits/Ezekiel, Characters/Ezekiel",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc.png",
 			"When":
 			{
-				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR '{{RandomNumber|contains=6,7,8,9,10}}' = 'true'": true, //(Do we want them all wearing hats at the same time?)
+				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR ({{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5)": true,
 				"IsOutdoors": true,
 				"HasValue:{{DayEvent}}": false,
 				"Lightweight Outfits": false
@@ -429,18 +429,34 @@ Accessories
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
 		},
-		//Seasonal hats
+		//Rain accessories
 		{
-			"LogName": "RSV Seasonal Hats",
+			"LogName": "RSV Accessories - Rain",
 			"Action": "EditImage",
-			"Target": "Portraits/Blair, Characters/Blair, Portraits/Faye, Characters/Faye, Portraits/Irene, Characters/Irene, Portraits/Louie, Characters/Louie, Portraits/Maive, Characters/Maive, Portraits/Richard, Characters/Richard, Portraits/Sonny, Characters/Sonny",
+			"Target": "Portraits/Blair, Characters/Blair",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
 			"When": {
-				//"RandomNumber|contains=6,7,8,9,10": true, //(Do we want them all wearing hats at the same time?)
-				"IsOutdoors": true,
 				"HasFile:{{FromFile}}": true,
+				"IsOutdoors": true,
 				"HasValue:{{DayEvent}}": false,
 				"Lightweight Outfits": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		//Seasonal accessories
+		{
+			"LogName": "RSV Accessories - Seasonal",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Characters/Faye, Portraits/Irene, Characters/Irene, Portraits/Louie, Characters/Louie, Portraits/Maive, Characters/Maive, Portraits/Richard, Characters/Richard, Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"When": {
+				"HasFile:{{FromFile}}": true,
+				"Weather|contains=Rain, Storm, Snow": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false,
+				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"
@@ -449,6 +465,18 @@ Accessories
 /*-----------------------------------
 Festivals
 -----------------------------------*/
+	{
+		"LogName": "RSV Egg Fest Outfits",
+		"Action": "EditImage",
+		"Target": "Portraits/Corine, Characters/Corine, Portraits/Ysabelle, Characters/Ysabelle",
+		"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring13.png",
+		"When": {
+			"DayEvent": "egg festival",
+			"LocationName": "Town, temp",
+			"HasFile:{{FromFile}}": true,
+		},
+		"Update": "OnLocationChange",
+	},
 	{
 		"LogName": "RSV Flower Dance Outfits",
 		"Action": "EditImage",
