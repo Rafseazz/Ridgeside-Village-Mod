@@ -66,7 +66,6 @@
 			    "Jas": "{{i18n:GatheringDialogue.Jas}}",
 			    "Vincent": "{{i18n:GatheringDialogue.Vincent}}",
 			    "Willy": "{{i18n:GatheringDialogue.Willy}}",
-				"Marlon": "{{i18n:GatheringDialogue.Marlon}}",
 				"Wizard": "{{i18n:GatheringDialogue.Wizard}}",
 				"Leo": "{{i18n:GatheringDialogue.Leo}}",
 
@@ -136,6 +135,15 @@
 					"Shane_spouse": "{{i18n:GatheringDialogue.Shane.spouse}}",
 
 			},
+		},
+		{
+				//Marlon without SVE
+				"Action": "EditData",
+				"Target": "Data/Festivals/fall20",
+				"When": { "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false },
+				"Entries": {
+						"Marlon": "{{i18n:GatheringDialogue.Marlon}}",
+				}
 		},
 
 ]
