@@ -1320,5 +1320,32 @@
 		},
 	},
 
+	{
+		"LogName": "RSV: Traveling Cart at Hike Trail",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 5 },
+		"ToArea": { "X": 48, "Y": 20, "Width": 9, "Height": 5 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"Time": "{{Range: 0600, 1950}}",
+			//"DayOfWeek": "Wednesday"
+		},
+	},
+	{
+		"LogName": "RSV: Traveling Cart at Hike Trail",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart-Empty.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 5 },
+		"ToArea": { "X": 48, "Y": 20, "Width": 9, "Height": 5 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"Time": "{{Range: 2000, 2600}}",
+			//"DayOfWeek": "Wednesday"
+		},
+	},
+
 ]
 }

@@ -102,6 +102,16 @@
 			}
 		},
 
+		// The Stray Catfe
+		{
+			"Name": "PossibleCableCarNPCs",
+			"Value": "{{PossibleCableCarNPCs}}, Tabitha, Theo",
+			"When": {
+				"Rafseazz.RidgesideVillage/EnableOtherNPCsInCableCar": true,
+				"HasMod |contains=ch20youk.TSCCP": true
+			}
+		},
+
 		//World State
 		{
 			"Name": "RSVWorldState",

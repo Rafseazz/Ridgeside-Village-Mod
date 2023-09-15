@@ -244,6 +244,19 @@ namespace RidgesideVillage
             }
             return n;
         }
+
+        public static string GetFiance(Farmer player)
+        {
+            var friend_data = player.friendshipData;
+            foreach(var key in friend_data.Keys)
+            {
+                if (friend_data[key].Status == FriendshipStatus.Engaged)
+                {
+                    return key;
+                }
+            }
+            return null;
+        }
     }  
 
 }
