@@ -1170,6 +1170,20 @@
 				 ]
 			},
 
+			{
+				"LogName": "Put June's stuff in room",
+				"Action": "EditMap",
+				"Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+				"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart.tmx",
+				"FromArea": { "X": 0, "Y": 0, "Width": 8, "Height": 9 },
+				"ToArea": { "X": 35, "Y": 18, "Width": 8, "Height": 9 },
+				"PatchMode": "ReplaceByLayer",
+				"When": {
+					"Season": "fall, winter",
+					"Relationship:June |contains=Married": false,
+				},
+			},
+
 		// Edit the piano text when June is present but not playing
 			{
 	  		"LogName": "June Piano Text Edit - Unmarried",
@@ -1330,7 +1344,7 @@
 		"PatchMode": "ReplaceByLayer",
 		"When": {
 			"Time": "{{Range: 0600, 1950}}",
-			//"DayOfWeek": "Wednesday"
+			"DayOfWeek": "Wednesday"
 		},
 	},
 	{
@@ -1343,7 +1357,7 @@
 		"PatchMode": "ReplaceByLayer",
 		"When": {
 			"Time": "{{Range: 2000, 2600}}",
-			//"DayOfWeek": "Wednesday"
+			"DayOfWeek": "Wednesday"
 		},
 	},
 
