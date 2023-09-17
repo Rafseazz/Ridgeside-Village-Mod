@@ -1361,5 +1361,32 @@
 		},
 	},
 
+	{
+		"LogName": "RSV: Irene's Room at Amethynes Empty",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_PurpleMansion",
+		"FromFile": "Assets/Maps/DynamicMaps/PurpleMansion_NoIrene.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 14, "Height": 8 },
+		"ToArea": { "X": 0, "Y": 40, "Width": 14, "Height": 8 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"HasSeenEvent |contains=75160431": true
+		},
+	},
+	/*
+	{
+		"LogName": "RSV: Irene Room at Faye's",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_FayeHouse",
+		"FromFile": "Assets/Maps/DynamicMaps/FayeHouse_Irene.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 9 },
+		"ToArea": { "X": 1, "Y": 1, "Width": 13, "Height": 9 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"HasSeenEvent |contains=75160431": false
+		},
+	},
+	*/
+
 ]
 }

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="14" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="263">
+ <properties>
+  <property name="AmbientLight" value="95 95 95"/>
+  <property name="Doors" value="11 41 indoor 120 42 41 indoor 120 48 41 indoor 120"/>
+ </properties>
+ <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
+  <image source="paths" width="64" height="144"/>
+  <tile id="0">
+   <properties>
+    <property name="PathType" value="NE"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="PathType" value="SE"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="PathType" value="WS"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="PathType" value="WN"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="PathType" value="Crossroad"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="PathType" value="End"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="37" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2213" name="springobjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
+  <image source="springobjects" width="384" height="624"/>
+ </tileset>
+ <tileset firstgid="3149" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="5325" name="z_rsvinterior" tilewidth="16" tileheight="16" tilecount="1900" columns="19">
+  <image source="z_rsvinterior.png" width="304" height="1600"/>
+  <tile id="614">
+   <animation>
+    <frame tileid="614" duration="1000"/>
+    <frame tileid="614" duration="1000"/>
+    <frame tileid="597" duration="1000"/>
+    <frame tileid="597" duration="1000"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="7225" name="zrsvwallsfloorcopy" tilewidth="16" tileheight="16" tilecount="560" columns="16">
+  <image source="zrsvwallsfloorcopy.png" width="256" height="560"/>
+ </tileset>
+ <tileset firstgid="7785" name="bathhouse" tilewidth="16" tileheight="16" tilecount="240" columns="15">
+  <image source="bathhouse_tiles.png" width="240" height="256"/>
+  <tile id="78">
+   <animation>
+    <frame tileid="78" duration="1000"/>
+    <frame tileid="65" duration="1000"/>
+    <frame tileid="65" duration="1000"/>
+    <frame tileid="78" duration="1000"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="8025" name="zridgesidefurniture" tilewidth="16" tileheight="16" tilecount="2048" columns="32">
+  <image source="zridgesidefurniture.png" width="512" height="1024"/>
+ </tileset>
+ <tileset firstgid="10073" name="farmhouse_tiles" tilewidth="16" tileheight="16" tilecount="264" columns="12">
+  <image source="farmhouse_tiles.png" width="192" height="352"/>
+ </tileset>
+ <tileset firstgid="10337" name="zridgesideCraftables" tilewidth="16" tileheight="16" tilecount="448" columns="8">
+  <image source="zridgesideCraftables.png" width="128" height="896"/>
+ </tileset>
+ <tileset firstgid="10785" name="CarolineGreenhouseTiles" tilewidth="16" tileheight="16" tilecount="128" columns="8">
+  <image source="CarolineGreenhouseTiles.png" width="128" height="256"/>
+ </tileset>
+ <tileset firstgid="10913" name="Festivals" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="Festivals.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="11937" name="RafNPCSheet" tilewidth="16" tileheight="16" tilecount="144" columns="8">
+  <image source="RafNPCSheet.png" width="128" height="288"/>
+ </tileset>
+ <layer id="1" name="Back" width="14" height="8">
+  <data encoding="csv">
+0,205,205,205,205,205,205,205,205,205,205,7774,205,0,
+0,205,205,205,205,205,205,205,205,205,205,7758,205,0,
+0,0,0,0,0,0,0,0,0,0,0,269,0,0,
+0,301,300,301,300,301,300,301,300,301,300,301,300,0,
+0,269,268,269,268,269,268,269,268,269,268,269,268,0,
+0,301,300,301,300,301,300,301,300,301,300,301,300,0,
+0,269,268,269,268,269,268,269,268,269,268,269,268,0,
+0,301,300,301,300,301,300,301,300,301,300,301,300,0
+</data>
+ </layer>
+ <objectgroup id="6" name="Back"/>
+ <layer id="13" name="Back2" width="14" height="8">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,175,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,9648,9649,9649,9649,9649,9649,9650,0,0,0,0,0,
+0,0,9680,9681,9681,9681,9681,9681,9682,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="Buildings" width="14" height="8">
+  <properties>
+   <property name="AmbientLight" value="255 255 255"/>
+  </properties>
+  <data encoding="csv">
+101,0,0,0,0,0,0,0,0,0,92,0,91,105,
+101,111,111,111,111,111,111,111,111,111,124,157,123,105,
+101,143,143,143,143,143,143,143,143,143,156,0,155,105,
+101,393,394,9448,0,0,8569,8570,8571,8151,0,0,9386,105,
+101,0,0,0,0,0,0,0,0,0,0,0,0,105,
+101,357,358,0,0,0,0,0,0,0,0,0,0,105,
+101,0,0,0,0,0,0,0,0,0,0,0,0,105,
+133,0,0,0,0,8764,8765,0,0,0,9532,680,681,167
+</data>
+ </layer>
+ <layer id="17" name="Schedule" width="14" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,11987,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings">
+  <object id="262" name="TileData" x="176" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="14" name="Buildings2" width="14" height="8">
+  <properties>
+   <property name="Draw" value="Buildings"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="Paths" width="14" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,9,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,9,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <objectgroup id="9" name="Front"/>
+ <layer id="11" name="Front" width="14" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,9579,9580,9581,0,0,125,0,0,
+0,0,0,0,0,0,9611,9612,9613,0,0,0,9322,0,
+0,0,0,9416,0,0,8537,8538,8539,0,0,0,9354,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,9500,616,617,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Front2" width="14" height="8">
+  <properties>
+   <property name="Draw" value="Front"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,252,0,0,0,
+0,361,362,517,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,427,428,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,8732,8733,0,0,0,0,0,0,0,
+0,202,202,202,202,202,202,202,202,202,202,202,202,0
+</data>
+ </layer>
+ <objectgroup id="12" name="Front2"/>
+ <layer id="5" name="AlwaysFront" width="14" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,395,396,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,9468,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="16" name="AlwaysFront2" width="14" height="8">
+  <properties>
+   <property name="Draw" value="AlwaysFront"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>
