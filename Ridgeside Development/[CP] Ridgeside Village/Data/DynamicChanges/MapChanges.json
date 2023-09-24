@@ -1170,6 +1170,20 @@
 				 ]
 			},
 
+			{
+				"LogName": "Put June's stuff in room",
+				"Action": "EditMap",
+				"Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+				"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart.tmx",
+				"FromArea": { "X": 0, "Y": 0, "Width": 8, "Height": 9 },
+				"ToArea": { "X": 35, "Y": 18, "Width": 8, "Height": 9 },
+				"PatchMode": "ReplaceByLayer",
+				"When": {
+					"Season": "fall, winter",
+					"Relationship:June |contains=Married": false,
+				},
+			},
+
 		// Edit the piano text when June is present but not playing
 			{
 	  		"LogName": "June Piano Text Edit - Unmarried",
@@ -1319,6 +1333,60 @@
 			"HasSeenEvent |contains=75160431": false
 		},
 	},
+
+	{
+		"LogName": "RSV: Traveling Cart at Hike Trail",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 5 },
+		"ToArea": { "X": 48, "Y": 20, "Width": 9, "Height": 5 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"Time": "{{Range: 0600, 1950}}",
+			"DayOfWeek": "Wednesday"
+		},
+	},
+	{
+		"LogName": "RSV: Traveling Cart at Hike Trail",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart-Empty.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 5 },
+		"ToArea": { "X": 48, "Y": 20, "Width": 9, "Height": 5 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"Time": "{{Range: 2000, 2600}}",
+			"DayOfWeek": "Wednesday"
+		},
+	},
+
+	{
+		"LogName": "RSV: Irene's Room at Amethynes Empty",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_PurpleMansion",
+		"FromFile": "Assets/Maps/DynamicMaps/PurpleMansion_NoIrene.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 14, "Height": 8 },
+		"ToArea": { "X": 0, "Y": 40, "Width": 14, "Height": 8 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"HasSeenEvent |contains=75160431": true
+		},
+	},
+	/*
+	{
+		"LogName": "RSV: Irene Room at Faye's",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_FayeHouse",
+		"FromFile": "Assets/Maps/DynamicMaps/FayeHouse_Irene.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 9 },
+		"ToArea": { "X": 1, "Y": 1, "Width": 13, "Height": 9 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"HasSeenEvent |contains=75160431": false
+		},
+	},
+	*/
 
 ]
 }
