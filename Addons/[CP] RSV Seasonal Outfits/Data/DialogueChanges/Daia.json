@@ -38,6 +38,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		 	"HasSeenEvent": 75160263,
    		"Relationship:Daia": "Dating",
 			"Jeric": "enabled, festivals only",
    },
@@ -52,6 +53,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		"HasSeenEvent": 75160263,
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Daia": "Married",
    },

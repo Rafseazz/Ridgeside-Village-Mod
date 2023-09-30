@@ -433,10 +433,17 @@
 			"Value": "true",
 			"When":
 			{
-				"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls, Beach, Temp": true
+				"HasSeenEvent|contains=75160263": false
 			}
 		},
-
+		{
+			"Name": "JioMasked",
+			"Value": "true",
+			"When":
+			{
+				"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls Temp": true
+			}
+		},
 		{
 			"Name": "JioMasked",
 			"Value": "true",
@@ -485,8 +492,17 @@
 		  	"Value": false,
 		  	"When":
 			{
-				"HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true,
-				"Alissa": "disabled, festivals only"
+				"HasValue:{{DayEvent}}": false,
+				"Alissa": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Alissa": "festivals always"
 			}
 		},
 
@@ -509,8 +525,17 @@
 		  	"Value": false,
 		  	"When":
 			{
-				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
-				"Corine": "enabled, festivals only"
+				"HasValue:{{DayEvent}}": false,
+				"Corine": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Corine": "festivals always"
 			}
 		},
 
@@ -533,8 +558,17 @@
 		  	"Value": false,
 		  	"When":
 			{
-				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
-				"Ian": "enabled, festivals only"
+				"HasValue:{{DayEvent}}": false,
+				"Ian": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Ian": "festivals always"
 			}
 		},
 
@@ -557,8 +591,17 @@
 		  	"Value": false,
 		  	"When":
 			{
-				"HasMod |contains=UndyneWolf.SeasonalKiarra": true,
-				"Kiarra": "disabled, festivals only"
+				"HasValue:{{DayEvent}}": false,
+				"Kiarra": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Kiarra": "festivals always"
 			}
 		},
 
@@ -581,8 +624,17 @@
 		  	"Value": false,
 		  	"When":
 			{
-				"HasMod |contains=VinillaBean.SeanSeasonals": true,
-				"Sean": "disabled, festivals only"
+				"HasValue:{{DayEvent}}": false,
+				"Sean": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalSeanToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Sean": "festivals always"
 			}
 		},
 
@@ -605,8 +657,17 @@
 		  	"Value": false,
 		  	"When":
 			{
-				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
-				"Ysabelle": "disabled, festivals only"
+				"HasValue:{{DayEvent}}": false,
+				"Ysabelle": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Ysabelle": "festivals always"
 			}
 		},
 	],
@@ -908,7 +969,7 @@ Dialogue Changes
 	{
 		"LogName": "Include Ridgeside Dialogue Files",
    	"Action": "Include",
-		"FromFile": "Assets/Dialogue/Alissa.json, Assets/Dialogue/Aguar.json, Assets/Dialogue/Bert.json, Assets/Dialogue/Corine.json, Assets/Dialogue/Ezekiel.json, Assets/Dialogue/Flor.json, Assets/Dialogue/Freddie.json, Assets/Dialogue/Ian.json, Assets/Dialogue/Jeric.json, Assets/Dialogue/Jio.json, Assets/Dialogue/Keahi.json, Assets/Dialogue/Kenneth.json, Assets/Dialogue/Kiwi.json, Assets/Dialogue/Lenny.json, Assets/Dialogue/Lola.json, Assets/Dialogue/Maddie.json, Assets/Dialogue/Olga.json, Assets/Dialogue/Philip.json, Assets/Dialogue/Pika.json, Assets/Dialogue/Richard.json, Assets/Dialogue/Shiro.json, Assets/Dialogue/Trinnie.json, Assets/Dialogue/Ysabelle.json, Assets/Dialogue/Yuuma.json, Assets/Dialogue/Daia.json, Assets/Dialogue/Naomi.json, Assets/Dialogue/Malaya.json, Assets/Dialogue/Kimpoi.json, Assets/Dialogue/Anton.json, Assets/Dialogue/Ariah.json, Assets/Dialogue/Blair.json, Assets/Dialogue/Bryle.json, Assets/Dialogue/Carmen.json, Assets/Dialogue/Faye.json, Assets/Dialogue/Irene.json, Assets/Dialogue/Kiarra.json, Assets/Dialogue/Lorenzo.json, Assets/Dialogue/Louie.json, Assets/Dialogue/Maive.json, Assets/Dialogue/Paula.json, Assets/Dialogue/Sean.json, Assets/Dialogue/Shanice.json, Assets/Dialogue/Sonny.json, Assets/Dialogue/Zayne.json, Assets/Dialogue/Torts.json, Assets/Dialogue/June.json",
+		"FromFile": "Data/DialogueChanges/Alissa.json, Data/DialogueChanges/Aguar.json, Data/DialogueChanges/Bert.json, Data/DialogueChanges/Corine.json, Data/DialogueChanges/Ezekiel.json, Data/DialogueChanges/Flor.json, Data/DialogueChanges/Freddie.json, Data/DialogueChanges/Ian.json, Data/DialogueChanges/Jeric.json, Data/DialogueChanges/Jio.json, Data/DialogueChanges/Keahi.json, Data/DialogueChanges/Kenneth.json, Data/DialogueChanges/Kiwi.json, Data/DialogueChanges/Lenny.json, Data/DialogueChanges/Lola.json, Data/DialogueChanges/Maddie.json, Data/DialogueChanges/Olga.json, Data/DialogueChanges/Philip.json, Data/DialogueChanges/Pika.json, Data/DialogueChanges/Richard.json, Data/DialogueChanges/Shiro.json, Data/DialogueChanges/Trinnie.json, Data/DialogueChanges/Ysabelle.json, Data/DialogueChanges/Yuuma.json, Data/DialogueChanges/Daia.json, Data/DialogueChanges/Naomi.json, Data/DialogueChanges/Malaya.json, Data/DialogueChanges/Kimpoi.json, Data/DialogueChanges/Anton.json, Data/DialogueChanges/Ariah.json, Data/DialogueChanges/Blair.json, Data/DialogueChanges/Bryle.json, Data/DialogueChanges/Carmen.json, Data/DialogueChanges/Faye.json, Data/DialogueChanges/Irene.json, Data/DialogueChanges/Kiarra.json, Data/DialogueChanges/Lorenzo.json, Data/DialogueChanges/Louie.json, Data/DialogueChanges/Maive.json, Data/DialogueChanges/Paula.json, Data/DialogueChanges/Sean.json, Data/DialogueChanges/Shanice.json, Data/DialogueChanges/Sonny.json, Data/DialogueChanges/Zayne.json, Data/DialogueChanges/Torts.json, Data/DialogueChanges/June.json",
 		"When": {
 			"Festival Dialogue Edits": true,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -924,7 +985,7 @@ Other Patches
 	{
 		"LogName": "RSV Seasonal Spirit's Eve Positions Y1",
 		"Action": "Include",
-		"FromFile": "Data/FestivalTweaks/SpiritEveY1.json",
+		"FromFile": "Data/FestivalChanges/SpiritEveY1.json",
 		"Update": "OnLocationChange",
 		"When": {
 			"IsOddYear": true,
@@ -935,7 +996,7 @@ Other Patches
 	{
 		"LogName": "RSV Seasonal Spirit's Eve Positions Y2",
 		"Action": "Include",
-		"FromFile": "Data/FestivalTweaks/SpiritEveY2.json",
+		"FromFile": "Data/FestivalChanges/SpiritEveY2.json",
 		"When": {
 			"IsOddYear": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
