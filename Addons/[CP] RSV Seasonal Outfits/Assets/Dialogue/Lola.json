@@ -4,7 +4,10 @@
 	 "LogName": "Lola Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-	 "When": { "Lola": "enabled, festivals only", },
+	 "When": {
+		 "Freddie": "enabled, festivals only",
+		 "Lola": "enabled, festivals only",
+	 },
    "Entries": {
 		 "Lola": "{{i18n:SpiritEve.Lola.1}}",
 	   "Lola_y2": "{{i18n:SpiritEve.Lola.2}}",

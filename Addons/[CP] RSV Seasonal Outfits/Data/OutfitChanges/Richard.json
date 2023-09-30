@@ -4,7 +4,7 @@
 			"LogName": "RSV Richard Seasonal Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Richard, Characters/Richard",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Richard_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"Richard": "enabled"
@@ -14,7 +14,7 @@
 			"LogName": "RSV Richard Rain Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Richard, Characters/Richard",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Richard_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"SeasonalRainToken": "rain",
@@ -25,7 +25,7 @@
 			"LogName": "RSV Accessories - Richard",
 			"Action": "EditImage",
 			"Target": "Portraits/Richard, Characters/Richard",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Richard_acc_{{SeasonalRainToken}}.png",
 			"When": {
 				"Richard": "enabled",
 				"SeasonalRainToken": "rain, winter",
@@ -41,7 +41,7 @@
 			"LogName": "RSV Richard Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Richard, Characters/Richard",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Richard_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
@@ -54,7 +54,7 @@
 			"LogName": "RSV Richard Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Richard, Characters/Richard",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Richard_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
@@ -68,7 +68,7 @@
 			"LogName": "RSV Richard Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Richard, Characters/Richard",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Richard_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",

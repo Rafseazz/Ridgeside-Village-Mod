@@ -4,7 +4,7 @@
 			"LogName": "RSV Sonny Seasonals",
 			"Action": "EditImage",
 			"Target": "Portraits/Sonny, Characters/Sonny",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_summer.png",
+			"FromFile": "Assets/{{Target}}/Sonny_summer.png",
 			"When":
 			{
 				"Sonny": "enabled",
@@ -15,7 +15,7 @@
 			"LogName": "RSV Accessories - Sonny",
 			"Action": "EditImage",
 			"Target": "Portraits/Sonny, Characters/Sonny",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Sonny_acc_{{SeasonalRainToken}}.png",
 			"When": {
 				"Sonny": "enabled",
 				"SeasonalRainToken|contains=rain": false,
@@ -31,7 +31,7 @@
 			"LogName": "RSV Sonny Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Sonny, Characters/Sonny",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Sonny_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
@@ -44,7 +44,7 @@
 			"LogName": "RSV Sonny Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Sonny, Characters/Sonny",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Sonny_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
@@ -58,7 +58,7 @@
 			"LogName": "RSV Sonny Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Sonny, Characters/Sonny",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Sonny_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",

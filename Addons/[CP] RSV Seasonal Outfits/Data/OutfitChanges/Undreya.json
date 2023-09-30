@@ -4,7 +4,7 @@
 			"LogName": "RSV Undreya Random Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Undreya, Characters/Undreya",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2 |key=UndreyaOutfit}}.png",
+			"FromFile": "Assets/{{Target}}/Undreya_{{Random: 1, 2 |key=UndreyaOutfit}}.png",
 			"When":
 			{
 				"Undreya": "enabled",
@@ -16,7 +16,7 @@
 			"LogName": "RSV Undreya Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Undreya, Characters/Undreya",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Undreya_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
@@ -29,7 +29,7 @@
 			"LogName": "RSV Undreya Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Undreya, Characters/Undreya",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Undreya_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
@@ -43,7 +43,7 @@
 			"LogName": "RSV Undreya Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Undreya, Characters/Undreya",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Undreya_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",

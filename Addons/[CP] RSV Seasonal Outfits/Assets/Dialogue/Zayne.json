@@ -20,13 +20,12 @@
 	 "When": {
 		"IsOddYear": false,
 		"Zayne": "enabled, festivals only",
+		"Irene": "enabled, festivals only",
 	 },
 	 "Entries": {
 		"Zayne": "{{i18n:SpiritEve.Zayne.2-single}}",
-		"Zayne_spouse": "{{i18n:SpiritEve.Zayne_spouse.2}}",
 		},
 	},
-
 	{
 	 "LogName": "Zayne Spirit's Eve Dialogue Change (dating Irene)",
    "Action": "EditData",
@@ -36,10 +35,23 @@
 		 "HasDialogueAnswer": 7516325,
 		 "IsOddYear": false,
 		 "Zayne": "enabled, festivals only",
+		 "Irene": "enabled, festivals only",
 	 },
    "Entries": {
-		 "Zayne_y2": "{{i18n:SpiritEve.Zayne.2-irene}}"
+		 "Zayne": "{{i18n:SpiritEve.Zayne.2-irene}}"
 	 },
+	},
+	{
+	 "LogName": "Zayne Spirit's Eve Dialogue Change Y2 (spouse)",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+		"Zayne": "enabled, festivals only",
+	 },
+	 "Entries": {
+		"Zayne_spouse": "{{i18n:SpiritEve.Zayne_spouse.2}}",
+		},
 	},
 
 

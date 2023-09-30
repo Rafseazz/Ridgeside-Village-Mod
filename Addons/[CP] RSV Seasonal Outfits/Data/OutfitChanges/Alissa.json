@@ -4,7 +4,7 @@
 			"LogName": "RSV Alissa Seasonal Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Alissa_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"Alissa": "enabled",
@@ -15,7 +15,7 @@
 			"LogName": "RSV Alissa Rain Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Alissa_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"SeasonalRainToken": "rain",
@@ -26,12 +26,12 @@
 			"LogName": "RSV Alissa Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Alissa_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"Alissa": "enabled, festivals only",
+				"Alissa": "enabled, festivals always",
 			},
 			"Update": "OnLocationChange",
 		},
@@ -39,14 +39,13 @@
 			"LogName": "RSV Alissa Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Alissa_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"Alissa": "enabled, festivals only",
-				"SeasonalAlissaToken": true,
+				"Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -54,14 +53,13 @@
 			"LogName": "RSV Alissa Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Alissa_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"Alissa": "enabled, festivals only",
-				"SeasonalAlissaToken": true,
+				"Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},

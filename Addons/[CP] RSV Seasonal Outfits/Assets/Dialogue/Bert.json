@@ -1,12 +1,27 @@
 {
 "Changes": [
 	{
-	 "LogName": "Bert Spirit's Eve Dialogue Change",
+	 "LogName": "Bert Spirit's Eve Dialogue Change Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-	 "When": { "Bert": "enabled, festivals only", },
+	 "When": {
+		 "Bert": "enabled, festivals only",
+		 "Olga": "enabled, festivals only",
+	 },
    "Entries": {
 		 "Bert": "{{i18n:SpiritEve.Bert.1}}",
+		},
+	},
+	{
+	 "LogName": "Bert Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Bert": "enabled, festivals only",
+		 "Olga": "enabled, festivals only",
+		 "Trinnie": "enabled, festivals only",
+	 },
+   "Entries": {
 	   "Bert_y2": "{{i18n:SpiritEve.Bert.2}}",
 		},
 	},

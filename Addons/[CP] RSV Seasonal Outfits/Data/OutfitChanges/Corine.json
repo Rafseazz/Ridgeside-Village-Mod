@@ -4,7 +4,7 @@
 			"LogName": "RSV Corine Seasonal Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Corine_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"SeasonalCorineToken": true,
@@ -15,7 +15,7 @@
 			"LogName": "RSV Corine Rain Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Corine_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"SeasonalRainToken": "rain",
@@ -26,12 +26,12 @@
 			"LogName": "RSV Corine Egg Fest Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring13.png",
+			"FromFile": "Assets/{{Target}}/Corine_spring13.png",
 			"When":
 			{
 				"DayEvent": "egg festival",
 				"LocationName": "Town, temp",
-				"Corine": "enabled, festivals only"
+				"Corine": "enabled, festivals always"
 			},
 			"Update": "OnLocationChange",
 		},
@@ -39,13 +39,12 @@
 			"LogName": "RSV Corine Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Corine_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"SeasonalCorineToken": true,
-				"Corine": "enabled, festivals only"
+				"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -53,13 +52,13 @@
 			"LogName": "RSV Corine Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Corine_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"Corine": "enabled, festivals only"
+				"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -67,14 +66,13 @@
 			"LogName": "RSV Corine Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Corine, Characters/Corine",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Corine_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"SeasonalCorineToken": true,
-				"Corine": "enabled, festivals only"
+				"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},

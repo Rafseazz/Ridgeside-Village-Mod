@@ -31,8 +31,7 @@
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"SeasonalKiarraToken": true,
-				"Kiarra": "enabled, festivals only"
+				"Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -46,8 +45,7 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"SeasonalKiarraToken": true,
-				"Kiarra": "enabled, festivals only"
+				"Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -61,8 +59,7 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"SeasonalKiarraToken": true,
-				"Kiarra": "enabled, festivals only"
+				"Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},

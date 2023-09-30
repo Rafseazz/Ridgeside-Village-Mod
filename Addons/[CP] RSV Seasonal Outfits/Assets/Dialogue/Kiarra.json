@@ -5,8 +5,8 @@
 	 "Action": "EditData",
 	 "Target": "Data/Festivals/spring24",
 	 "When": {
-		 "Kiarra": "enabled, festivals only",
-		 "SeasonalKiarraToken": true,
+		 // Comment about Corine's dress
+		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
 	 },
 	 "Entries": {
 		"Kiarra": "{{i18n:FlowerDance.Kiarra}}",
@@ -18,8 +18,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
-		 "Kiarra": "enabled, festivals only",
-		 "SeasonalKiarraToken": true,
+		 "Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
 	 },
    "Entries": {
 		"Kiarra": "{{i18n:SpiritEve.Kiarra.1}}",
@@ -37,8 +36,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Kiarra": "Married",
-		"Kiarra": "enabled, festivals only",
-		"SeasonalKiarraToken": true,
+		"Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
    },
    "Entries": {
 	   "Kiarra": "{{i18n:SpiritEve.Kiarra_spouse.1}}",

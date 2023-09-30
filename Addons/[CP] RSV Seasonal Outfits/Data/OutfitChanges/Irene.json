@@ -4,7 +4,7 @@
 			"LogName": "RSV Irene Seasonal Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Irene_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"Irene": "enabled"
@@ -14,7 +14,7 @@
 			"LogName": "RSV Irene Rain Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Irene_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"SeasonalRainToken": "rain",
@@ -25,7 +25,7 @@
 			"LogName": "RSV Accessories - Irene",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_fall.png",
+			"FromFile": "Assets/{{Target}}/Irene_acc_fall.png",
 			"When": {
 				"Irene": "enabled",
 				"SeasonalRainToken": "fall",
@@ -41,7 +41,7 @@
 			"LogName": "RSV Irene Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Irene_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
@@ -54,7 +54,7 @@
 			"LogName": "RSV Irene Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Irene_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
@@ -68,7 +68,7 @@
 			"LogName": "RSV Irene Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Irene_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",

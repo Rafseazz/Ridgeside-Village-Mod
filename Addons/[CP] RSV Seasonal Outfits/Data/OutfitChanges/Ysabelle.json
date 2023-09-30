@@ -44,8 +44,7 @@
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"SeasonalYsabelleToken": true,
-				"Ysabelle": "enabled, festivals only"
+				"Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -59,7 +58,7 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"Ysabelle": "enabled, festivals only"
+				"Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -73,8 +72,7 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"SeasonalYsabelleToken": true,
-				"Ysabelle": "enabled, festivals only"
+				"Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},

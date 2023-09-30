@@ -1,38 +1,17 @@
 {
 	"Changes": [
 		{
-			"LogName": "RSV Aguar Seasonal Outfits",
-			"Action": "EditImage",
-			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"Aguar": "enabled"
-			}
-		},
-		{
-			"LogName": "RSV Aguar Rain Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalRainToken": "rain",
-				"Aguar": "enabled"
-			}
-		},
-		{
 			"LogName": "RSV Aguar Random Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2, 3, 4 |key=AguarOutfit}}.png",
+			"FromFile": "Assets/{{Target}}/Aguar_{{Random: 1, 2, 3, 4 |key=AguarOutfit}}.png",
 			"When": { "Aguar": "enabled" }
 		},
 		{
 			"LogName": "RSV Accessories - Aguar",
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc.png",
+			"FromFile": "Assets/{{Target}}/Aguar_acc.png",
 			"When":
 			{
 				"Aguar": "enabled",
@@ -48,7 +27,7 @@
 			"LogName": "RSV Aguar Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Aguar_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
@@ -61,7 +40,7 @@
 			"LogName": "RSV Aguar Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Aguar_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
@@ -75,7 +54,7 @@
 			"LogName": "RSV Aguar Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Aguar, Characters/Aguar",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Aguar_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",

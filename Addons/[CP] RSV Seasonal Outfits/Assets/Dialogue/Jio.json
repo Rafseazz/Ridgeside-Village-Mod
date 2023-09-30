@@ -6,10 +6,21 @@
    "Target": "Data/Festivals/fall27",
 	 "When": { "Jio": "enabled, festivals only", },
    "Entries": {
-		"Jio": "{{i18n:SpiritEve.Jio.1}}",
  	  "Jio_y2": "{{i18n:SpiritEve.Jio.2}}",
  	  "Jio_spouse": "{{i18n:SpiritEve.Jio_spouse.1}}",
  	  "Jio_spouse_y2": "{{i18n:SpiritEve.Jio_spouse.2}}",
+		},
+	},
+	{
+	 "LogName": "Jio Spirit's Eve Dialogue Change Normal Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Jio": "enabled, festivals only",
+		 "Daia": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Jio": "{{i18n:SpiritEve.Jio.1}}",
 		},
 	},
 

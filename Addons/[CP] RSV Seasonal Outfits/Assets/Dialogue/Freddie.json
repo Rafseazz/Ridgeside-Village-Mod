@@ -4,7 +4,10 @@
 	 "LogName": "Freddie Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-	 "When": { "Freddie": "enabled, festivals only", },
+	 "When": {
+		 "Freddie": "enabled, festivals only",
+		 "Lola": "enabled, festivals only",
+	 },
    "Entries": {
 		 "Freddie": "{{i18n:SpiritEve.Freddie.1}}",
 	   "Freddie_y2": "{{i18n:SpiritEve.Freddie.2}}",

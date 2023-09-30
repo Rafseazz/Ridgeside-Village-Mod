@@ -4,7 +4,7 @@
 			"LogName": "RSV Torts Seasonal Outfits",
 			"Action": "EditImage",
 			"Target": "Portraits/Torts, Characters/Torts",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/Torts_{{SeasonalRainToken}}.png",
 			"When":
 			{
 				"Query: {{Random:{{Range:1,10}}|key=DaiaMask}}|contains= 1,10": true,
@@ -15,7 +15,7 @@
 			"LogName": "RSV Torts Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Torts, Characters/Torts",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"FromFile": "Assets/{{Target}}/Torts_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
@@ -28,7 +28,7 @@
 			"LogName": "RSV Torts Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
 			"Target": "Portraits/Torts, Characters/Torts",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"FromFile": "Assets/{{Target}}/Torts_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
@@ -42,7 +42,7 @@
 			"LogName": "RSV Torts Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
 			"Target": "Portraits/Torts, Characters/Torts",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"FromFile": "Assets/{{Target}}/Torts_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",

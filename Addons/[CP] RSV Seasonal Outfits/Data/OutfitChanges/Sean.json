@@ -31,7 +31,7 @@
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"Sean": "enabled, festivals only"
+				"Sean": "enabled, festivals always"
 			},
 			"Update": "OnLocationChange",
 		},
@@ -45,8 +45,7 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"Sean": "enabled, festivals only",
-				"SeasonalSeanToken": true,
+				"Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -60,8 +59,7 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"Sean": "enabled, festivals only",
-				"SeasonalSeanToken": true,
+				"Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
 			},
 			"Update": "OnLocationChange",
 		},

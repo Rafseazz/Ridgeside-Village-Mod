@@ -1,25 +1,45 @@
 {
 "Changes": [
 	{
-	 "LogName": "Daia Spirit's Eve Dialogue Change",
+	 "LogName": "Daia Spirit's Eve Dialogue Change Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": { "Daia": "enabled, festivals only", },
    "Entries": {
 		"Daia": "{{i18n:SpiritEve.Daia.1}}",
+		},
+	},
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Jeric": "enabled, festivals only",
+	 },
+   "Entries": {
  	  "Daia_y2": "{{i18n:SpiritEve.Daia.2}}",
+		},
+	},
+	{
+	 "LogName": "Daia Spirit's Eve Spouse Dialogue",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Jeric": "enabled, festivals only",
+	 },
+   "Entries": {
  	  "Daia_spouse": "{{i18n:SpiritEve.Daia_spouse.1}}",
  	  "Daia_spouse_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
 		},
 	},
 
 	{
-	 "LogName": "Daia Spirit's Eve Dialogue Change Dating",
+	 "LogName": "Daia Spirit's Eve Dialogue Change Dating Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
    		"Relationship:Daia": "Dating",
-			"Daia": "enabled, festivals only",
+			"Jeric": "enabled, festivals only",
    },
    "Entries": {
  	  "Daia_y2": "{{i18n:SpiritEve.Daia.2_dating}}",
@@ -34,7 +54,6 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Daia": "Married",
-		"Daia": "enabled, festivals only",
    },
    "Entries": {
 	   "Daia": "{{i18n:SpiritEve.Daia_spouse.1}}",

@@ -1,12 +1,24 @@
 {
 "Changes": [
 	{
-	 "LogName": "Malaya Spirit's Eve Dialogue Change",
+	 "LogName": "Malaya Spirit's Eve Dialogue Change Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": { "Malaya": "enabled, festivals only", },
    "Entries": {
 		 "Malaya": "{{i18n:SpiritEve.Malaya.1}}",
+		},
+	},
+	{
+	 "LogName": "Malaya Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Kimpoi": "enabled, festivals only",
+		 "Malaya": "enabled, festivals only",
+		 "Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,
+	 },
+   "Entries": {
 	   "Malaya_y2": "{{i18n:SpiritEve.Malaya.2}}",
 		},
 	},
