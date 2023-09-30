@@ -22,14 +22,14 @@
 			}
 		},
 		{
-			"LogName": "RSV Accessories - Year-round",
+			"LogName": "RSV Accessories - Ezekiel",
 			"Action": "EditImage",
 			"Target": "Portraits/Ezekiel, Characters/Ezekiel",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc.png",
 			"When":
 			{
 				"Ezekiel": "enabled",
-				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR ({{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5)": true,
+				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR ({{Random:{{Range:1,10}}|key=EzekielHat}} > 5)": true,
 				"IsOutdoors": true,
 				"HasValue:{{DayEvent}}": false,
 				"Lightweight Outfits": false

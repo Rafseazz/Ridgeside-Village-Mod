@@ -4,6 +4,7 @@
 	 "LogName": "Daia Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Daia": "enabled, festivals only", },
    "Entries": {
 		"Daia": "{{i18n:SpiritEve.Daia.1}}",
  	  "Daia_y2": "{{i18n:SpiritEve.Daia.2}}",
@@ -18,6 +19,7 @@
    "Target": "Data/Festivals/fall27",
    "When": {
    		"Relationship:Daia": "Dating",
+			"Daia": "enabled, festivals only",
    },
    "Entries": {
  	  "Daia_y2": "{{i18n:SpiritEve.Daia.2_dating}}",
@@ -32,6 +34,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Daia": "Married",
+		"Daia": "enabled, festivals only",
    },
    "Entries": {
 	   "Daia": "{{i18n:SpiritEve.Daia_spouse.1}}",

@@ -47,7 +47,7 @@
 			"When":
 			{
 				"Daia": "enabled",
-				"RandomNumber |contains= 6, 9": true
+				"Query: {{Random:{{Range:1,10}}|key=DaiaMask}}|contains= 6,9": true,
 			},
 			"PatchMode": "Overlay"
 		},

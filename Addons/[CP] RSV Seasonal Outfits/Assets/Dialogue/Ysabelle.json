@@ -4,15 +4,21 @@
 	 "LogName": "Ysabelle Egg Fest Dialogue Change",
 	 "Action": "EditData",
 	 "Target": "Data/Festivals/spring13",
+	 "When": { "Ysabelle": "enabled, festivals only", },
 	 "Entries": {
 		"Ysabelle": "{{i18n:EggFest.Ysabelle}}",
 		"Ysabelle_spouse": "{{i18n:EggFest.Ysabelle_spouse}}",
 		},
 	},
+
 	{
 	 "LogName": "Ysabelle Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Ysabelle": "enabled, festivals only",
+		 "SeasonalYsabelleToken": true,
+	 },
    "Entries": {
 		"Ysabelle": "{{i18n:SpiritEve.Ysabelle.1}}",
  	  "Ysabelle_y2": "{{i18n:SpiritEve.Ysabelle.2}}",
@@ -30,6 +36,8 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Ysabelle": "Married",
+		"Ysabelle": "enabled, festivals only",
+		"SeasonalYsabelleToken": true,
    },
    "Entries": {
 	   "Ysabelle": "{{i18n:SpiritEve.Ysabelle_spouse.1}}",

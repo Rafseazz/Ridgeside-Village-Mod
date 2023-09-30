@@ -4,6 +4,7 @@
 	 "LogName": "June Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "June": "enabled, festivals only", },
    "Entries": {
 		"June": "{{i18n:SpiritEve.June.1}}",
  	  "June_y2": "{{i18n:SpiritEve.June.2}}",
@@ -20,6 +21,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:June": "Married",
+		"June": "enabled, festivals only",
    },
    "Entries": {
 	   "June": "{{i18n:SpiritEve.June_spouse.1}}",

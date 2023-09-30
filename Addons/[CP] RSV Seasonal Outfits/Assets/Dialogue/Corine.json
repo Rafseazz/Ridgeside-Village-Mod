@@ -4,6 +4,7 @@
 	 "LogName": "Corine Egg Fest Dialogue Change",
 	 "Action": "EditData",
 	 "Target": "Data/Festivals/spring13",
+	 "When": { "Corine": "enabled, festivals only", },
 	 "Entries": {
 		"Corine_spouse": "{{i18n:EggFest.Corine_spouse}}",
 		},
@@ -12,6 +13,10 @@
 	 "LogName": "Corine Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Corine": "enabled, festivals only",
+		 "SeasonalCorineToken": true,
+	 },
    "Entries": {
 		"Corine": "{{i18n:SpiritEve.Corine.1}}",
  	  "Corine_y2": "{{i18n:SpiritEve.Corine.2}}",
@@ -24,7 +29,11 @@
 	 "LogName": "Corine Spirit's Eve Dialogue Change (post 8 heart)",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-   "When": { "HasSeenEvent": 75160125 },
+   "When": {
+		 "HasSeenEvent": 75160125,
+		 "Corine": "enabled, festivals only",
+		 "SeasonalCorineToken": true,
+	 },
    "Entries": {
 	   "Corine_y2": "{{i18n:SpiritEve.Corine_spouse.2-8heart}}",
 		},
@@ -38,6 +47,8 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Corine": "Married",
+		"Corine": "enabled, festivals only",
+		"SeasonalCorineToken": true,
    },
    "Entries": {
 	   "Corine": "{{i18n:SpiritEve.Corine_spouse.1}}",

@@ -4,6 +4,7 @@
 	 "LogName": "Paula Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Paula": "enabled, festivals only", },
    "Entries": {
 		"Paula": "{{i18n:SpiritEve.Paula.1}}",
  	  "Paula_y2": "{{i18n:SpiritEve.Paula.2-single}}",
@@ -18,7 +19,8 @@
    "Target": "Data/Festivals/fall27",
 	 "When": {
 		 "HasDialogueAnswer": 75163042,
-		 "HasDialogueAnswer": 75163521
+		 "HasDialogueAnswer": 75163521,
+		 "Paula": "enabled, festivals only",
 	 },
    "Entries": {
 		 "Paula_y2": "{{i18n:SpiritEve.Paula.2-anton}}"
@@ -34,6 +36,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Paula": "Married",
+		"Paula": "enabled, festivals only",
    },
    "Entries": {
 	   "Paula": "{{i18n:SpiritEve.Paula_spouse.1}}",

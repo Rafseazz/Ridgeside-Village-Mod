@@ -20,14 +20,14 @@
 			"Section": "Mod Mechanics",
 		},
 
-		// Characters With Other Seasonals
+		// Characters With Other Seasonal Mods
 		"Alissa":
 		{
 			"AllowValues":"enabled, disabled, festivals only",
 			"Default": "enabled",
 			"Description": "Allow this mod to change Alissa's appearance. When ZoeDoll's Alissa Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and ZoeDoll's outfits.",
 			"AllowBlank": false,
-			"Section": "Characters With Other Seasonals",
+			"Section": "Characters With Other Seasonal Mods",
 		},
 		"Corine":
 		{
@@ -35,7 +35,7 @@
 			"Default": "enabled",
 			"Description": "Allow this mod to change Corine's appearance. When x3n3as's Corine Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and x3n3as's outfits.",
 			"AllowBlank": false,
-			"Section": "Characters With Other Seasonals",
+			"Section": "Characters With Other Seasonal Mods",
 		},
 		"Ian":
 		{
@@ -43,7 +43,7 @@
 			"Default": "enabled",
 			"Description": "Allow this mod to change Ian's appearance. When x3n3as's Ian Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and x3n3as's outfits.",
 			"AllowBlank": false,
-			"Section": "Characters With Other Seasonals",
+			"Section": "Characters With Other Seasonal Mods",
 		},
 		"Kiarra":
 		{
@@ -51,7 +51,15 @@
 			"Default": "enabled",
 			"Description": "Allow this mod to change Kiarra's appearance. When UndyneWolf's Kiarra Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and UndyneWolf's outfits.",
 			"AllowBlank": false,
-			"Section": "Characters With Other Seasonals",
+			"Section": "Characters With Other Seasonal Mods",
+		},
+		"Sean":
+		{
+			"AllowValues":"enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Sean's appearance. When VinillaBean's Sean Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and VinillaBean's outfits.",
+			"AllowBlank": false,
+			"Section": "Characters With Other Seasonal Mods",
 		},
 		"Ysabelle":
 		{
@@ -59,7 +67,7 @@
 			"Default": "enabled",
 			"Description": "Allow this mod to change Ysabelle's appearance. When x3n3as's Ysabelle Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and x3n3as's outfits.",
 			"AllowBlank": false,
-			"Section": "Characters With Other Seasonals",
+			"Section": "Characters With Other Seasonal Mods",
 		},
 
 		// All Other Characters
@@ -327,14 +335,6 @@
 			"AllowBlank": false,
 			"Section": "All Other Characters",
 		},
-		"Sean":
-		{
-			"AllowValues":"enabled, disabled, festivals only",
-			"Default": "enabled",
-			"Description": "Allow this mod to change Sean's appearance.",
-			"AllowBlank": false,
-			"Section": "All Other Characters",
-		},
 		"Shanice":
 		{
 			"AllowValues":"enabled, disabled, festivals only",
@@ -406,11 +406,6 @@
 	[
 	// World
 		{
-			"Name": "RandomNumber",
-			"Value": "{{Random: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}"
-		},
-
-		{
 		  	"Name": "SeasonalRainToken",
 		  	"Value": "{{season}}"
 		},
@@ -422,7 +417,7 @@
 					"Season": "Spring, Summer, Fall"
 		  	}
 		},
-
+		
 		{
 			"Name": "IsOddYear",
 			"Value": "{{Query: {{Year}} % 2 = 1}}"
@@ -456,7 +451,7 @@
 			"When":
 			{
 				"Hearts:Jio": "{{Range: 8,10}}",
-				"RandomNumber |contains= 4, 5, 6": false
+				"Query: {{Random:{{Range:1,10}}|key=JioMask}}|contains= 4,5,6": false,
 			}
 		},
 		{
@@ -474,11 +469,11 @@
 		//Alissa
 		{
 		  	"Name": "SeasonalAlissaToken",
-		  	"Value": "true"
+		  	"Value": true
 		},
 		{
 		  	"Name": "SeasonalAlissaToken",
-		  	"Value": "{{Random: true, false}}",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
 		  	"When":
 			{
 				"HasMod |contains=ZoeDoll.RSVSeasonalAlissa": true,
@@ -487,7 +482,7 @@
 		},
 		{
 		  	"Name": "SeasonalAlissaToken",
-		  	"Value": "false",
+		  	"Value": false,
 		  	"When":
 			{
 				"HasMod |contains=ZoeDoll.RSVSeasonalYsabelle": true,
@@ -498,11 +493,11 @@
 		//Corine
 		{
 		  	"Name": "SeasonalCorineToken",
-		  	"Value": "true"
+		  	"Value": true
 		},
 		{
 		  	"Name": "SeasonalCorineToken",
-		  	"Value": "{{Random: true, false}}",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
 		  	"When":
 			{
 				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
@@ -511,7 +506,7 @@
 		},
 		{
 		  	"Name": "SeasonalCorineToken",
-		  	"Value": "false",
+		  	"Value": false,
 		  	"When":
 			{
 				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
@@ -522,11 +517,11 @@
 		//Ian
 		{
 		  	"Name": "SeasonalIanToken",
-		  	"Value": "true"
+		  	"Value": true
 		},
 		{
 		  	"Name": "SeasonalIanToken",
-		  	"Value": "{{Random: true, false}}",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
 		  	"When":
 			{
 				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
@@ -535,7 +530,7 @@
 		},
 		{
 		  	"Name": "SeasonalIanToken",
-		  	"Value": "false",
+		  	"Value": false,
 		  	"When":
 			{
 				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
@@ -546,11 +541,11 @@
 		//Kiarra
 		{
 		  	"Name": "SeasonalKiarraToken",
-		  	"Value": "true"
+		  	"Value": true
 		},
 		{
 		  	"Name": "SeasonalKiarraToken",
-		  	"Value": "{{Random: true, false}}",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
 		  	"When":
 			{
 				"HasMod |contains=UndyneWolf.SeasonalKiarra": true,
@@ -559,7 +554,7 @@
 		},
 		{
 		  	"Name": "SeasonalKiarraToken",
-		  	"Value": "false",
+		  	"Value": false,
 		  	"When":
 			{
 				"HasMod |contains=UndyneWolf.SeasonalKiarra": true,
@@ -567,14 +562,38 @@
 			}
 		},
 
+		//Sean
+		{
+		  	"Name": "SeasonalSeanToken",
+		  	"Value": true,
+		},
+		{
+		  	"Name": "SeasonalSeanToken",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
+		  	"When":
+			{
+				"HasMod |contains=VinillaBean.SeanSeasonals": true,
+				"Sean": "enabled"
+			}
+		},
+		{
+		  	"Name": "SeasonalSeanToken",
+		  	"Value": false,
+		  	"When":
+			{
+				"HasMod |contains=VinillaBean.SeanSeasonals": true,
+				"Sean": "disabled, festivals only"
+			}
+		},
+
 		//Ysabelle
 		{
 		  	"Name": "SeasonalYsabelleToken",
-		  	"Value": "true",
+		  	"Value": true,
 		},
 		{
 		  	"Name": "SeasonalYsabelleToken",
-		  	"Value": "{{Random: true, false}}",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
 		  	"When":
 			{
 				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
@@ -583,7 +602,7 @@
 		},
 		{
 		  	"Name": "SeasonalYsabelleToken",
-		  	"Value": "false",
+		  	"Value": false,
 		  	"When":
 			{
 				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
@@ -595,291 +614,307 @@
 	"Changes": [
 
 /*-----------------------------------
-Outfits
+Outfit Changes
 -----------------------------------*/
 
-		{
-			"LogName": "RSV Aguar Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Aguar.json",
-			"When": { "Aguar|contains=disabled": false }
+	{
+		"LogName": "RSV Aguar Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Aguar.json",
+		"When": { "Aguar|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Alissa Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Alissa.json",
+		"When": { "Alissa|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Anton Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Anton.json",
+		"When": { "Anton|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ariah Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ariah.json",
+		"When": { "Ariah|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Bert Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Bert.json",
+		"When": { "Bert|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Blair Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Blair.json",
+		"When": { "Blair|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Bryle Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Bryle.json",
+		"When": { "Bryle|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Carmen Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Carmen.json",
+		"When": { "Carmen|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Corine Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Corine.json",
+		"When": { "Corine|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Daia Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Daia.json",
+		"When": { "Daia|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ezekiel Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ezekiel.json",
+		"When": { "Ezekiel|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Faye Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Faye.json",
+		"When": { "Faye|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Flor Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Flor.json",
+		"When": { "Flor|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Freddie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Freddie.json",
+		"When": { "Freddie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ian Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ian.json",
+		"When": { "Ian|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Irene Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Irene.json",
+		"When": { "Irene|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Jeric Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Jeric.json",
+		"When": { "Jeric|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Jio Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Jio.json",
+		"When": { "Jio|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV June Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/June.json",
+		"When": { "June|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Keahi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Keahi.json",
+		"When": { "Keahi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Keahi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Keahi.json",
+		"When": { "Keahi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kenneth Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kenneth.json",
+		"When": { "Kenneth|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kiarra Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kiarra.json",
+		"When": { "Kiarra|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kimpoi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kimpoi.json",
+		"When": { "Kimpoi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kiwi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kiwi.json",
+		"When": { "Kiwi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Lenny Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Lenny.json",
+		"When": { "Lenny|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Lola Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Lola.json",
+		"When": { "Lola|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Lorenzo Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Lorenzo.json",
+		"When": { "Lorenzo|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Louie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Louie.json",
+		"When": { "Louie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Maddie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Maddie.json",
+		"When": { "Maddie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Maive Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Maive.json",
+		"When": { "Maive|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Malaya Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Malaya.json",
+		"When": { "Malaya|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Naomi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Naomi.json",
+		"When": { "Naomi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Paula Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Paula.json",
+		"When": { "Paula|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Philip Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Philip.json",
+		"When": { "Philip|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Pika Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Pika.json",
+		"When": { "Pika|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Richard Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Richard.json",
+		"When": { "Richard|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Sean Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Sean.json",
+		"When": { "Sean|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Shanice Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Shanice.json",
+		"When": { "Shanice|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Shiro Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Shiro.json",
+		"When": { "Shiro|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Sonny Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Sonny.json",
+		"When": { "Sonny|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Torts Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Torts.json",
+		"When": { "Torts|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Trinnie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Trinnie.json",
+		"When": { "Trinnie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Undreya Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Undreya.json",
+		"When": { "Undreya|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ysabelle Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ysabelle.json",
+		"When": { "Ysabelle|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Yuuma Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Yuuma.json",
+		"When": { "Yuuma|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Zayne Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Zayne.json",
+		"When": { "Zayne|contains=disabled": false }
+	},
+
+/*-----------------------------------
+Dialogue Changes
+-----------------------------------*/
+
+	// Spirit's Eve dialogue changes
+	{
+		"LogName": "Include Ridgeside Dialogue Files",
+   	"Action": "Include",
+		"FromFile": "Assets/Dialogue/Alissa.json, Assets/Dialogue/Aguar.json, Assets/Dialogue/Bert.json, Assets/Dialogue/Corine.json, Assets/Dialogue/Ezekiel.json, Assets/Dialogue/Flor.json, Assets/Dialogue/Freddie.json, Assets/Dialogue/Ian.json, Assets/Dialogue/Jeric.json, Assets/Dialogue/Jio.json, Assets/Dialogue/Keahi.json, Assets/Dialogue/Kenneth.json, Assets/Dialogue/Kiwi.json, Assets/Dialogue/Lenny.json, Assets/Dialogue/Lola.json, Assets/Dialogue/Maddie.json, Assets/Dialogue/Olga.json, Assets/Dialogue/Philip.json, Assets/Dialogue/Pika.json, Assets/Dialogue/Richard.json, Assets/Dialogue/Shiro.json, Assets/Dialogue/Trinnie.json, Assets/Dialogue/Ysabelle.json, Assets/Dialogue/Yuuma.json, Assets/Dialogue/Daia.json, Assets/Dialogue/Naomi.json, Assets/Dialogue/Malaya.json, Assets/Dialogue/Kimpoi.json, Assets/Dialogue/Anton.json, Assets/Dialogue/Ariah.json, Assets/Dialogue/Blair.json, Assets/Dialogue/Bryle.json, Assets/Dialogue/Carmen.json, Assets/Dialogue/Faye.json, Assets/Dialogue/Irene.json, Assets/Dialogue/Kiarra.json, Assets/Dialogue/Lorenzo.json, Assets/Dialogue/Louie.json, Assets/Dialogue/Maive.json, Assets/Dialogue/Paula.json, Assets/Dialogue/Sean.json, Assets/Dialogue/Shanice.json, Assets/Dialogue/Sonny.json, Assets/Dialogue/Zayne.json, Assets/Dialogue/Torts.json, Assets/Dialogue/June.json",
+		"When": {
+			"Festival Dialogue Edits": true,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
 		},
-		{
-			"LogName": "RSV Alissa Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Alissa.json",
-			"When": { "Alissa|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Anton Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Anton.json",
-			"When": { "Anton|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Ariah Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Ariah.json",
-			"When": { "Ariah|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Bert Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Bert.json",
-			"When": { "Bert|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Blair Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Blair.json",
-			"When": { "Blair|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Bryle Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Bryle.json",
-			"When": { "Bryle|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Carmen Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Carmen.json",
-			"When": { "Carmen|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Corine Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Corine.json",
-			"When": { "Corine|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Daia Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Daia.json",
-			"When": { "Daia|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Ezekiel Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Ezekiel.json",
-			"When": { "Ezekiel|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Faye Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Faye.json",
-			"When": { "Faye|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Flor Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Flor.json",
-			"When": { "Flor|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Freddie Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Freddie.json",
-			"When": { "Freddie|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Ian Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Ian.json",
-			"When": { "Ian|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Irene Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Irene.json",
-			"When": { "Irene|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Jeric Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Jeric.json",
-			"When": { "Jeric|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Jio Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Jio.json",
-			"When": { "Jio|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV June Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/June.json",
-			"When": { "June|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Keahi Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Keahi.json",
-			"When": { "Keahi|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Keahi Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Keahi.json",
-			"When": { "Keahi|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Kenneth Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Kenneth.json",
-			"When": { "Kenneth|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Kiarra Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Kiarra.json",
-			"When": { "Kiarra|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Kimpoi Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Kimpoi.json",
-			"When": { "Kimpoi|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Kiwi Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Kiwi.json",
-			"When": { "Kiwi|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Lenny Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Lenny.json",
-			"When": { "Lenny|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Lola Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Lola.json",
-			"When": { "Lola|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Lorenzo Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Lorenzo.json",
-			"When": { "Lorenzo|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Louie Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Louie.json",
-			"When": { "Louie|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Maddie Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Maddie.json",
-			"When": { "Maddie|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Maive Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Maive.json",
-			"When": { "Maive|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Malaya Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Malaya.json",
-			"When": { "Malaya|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Naomi Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Naomi.json",
-			"When": { "Naomi|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Paula Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Paula.json",
-			"When": { "Paula|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Philip Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Philip.json",
-			"When": { "Philip|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Pika Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Pika.json",
-			"When": { "Pika|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Richard Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Richard.json",
-			"When": { "Richard|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Sean Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Sean.json",
-			"When": { "Sean|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Shanice Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Shanice.json",
-			"When": { "Shanice|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Shiro Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Shiro.json",
-			"When": { "Shiro|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Sonny Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Sonny.json",
-			"When": { "Sonny|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Torts Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Torts.json",
-			"When": { "Torts|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Trinnie Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Trinnie.json",
-			"When": { "Trinnie|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Undreya Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Undreya.json",
-			"When": { "Undreya|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Ysabelle Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Ysabelle.json",
-			"When": { "Ysabelle|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Yuuma Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Yuuma.json",
-			"When": { "Yuuma|contains=disabled": false }
-		},
-		{
-			"LogName": "RSV Zayne Outfits",
-			"Action": "Include",
-			"FromFile": "Data/OutfitChanges/Zayne.json",
-			"When": { "Zayne|contains=disabled": false }
-		},
+  },
 
 /*-----------------------------------
 Other Patches
@@ -907,18 +942,5 @@ Other Patches
 			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
 		}
 	},
-
-	// Spirit's Eve dialogue changes
-	{
-		"LogName": "Include Ridgeside Dialogue Files",
-   	"Action": "Include",
-		"FromFile": "Assets/Dialogue/Alissa.json, Assets/Dialogue/Aguar.json, Assets/Dialogue/Bert.json, Assets/Dialogue/Corine.json, Assets/Dialogue/Ezekiel.json, Assets/Dialogue/Flor.json, Assets/Dialogue/Freddie.json, Assets/Dialogue/Ian.json, Assets/Dialogue/Jeric.json, Assets/Dialogue/Jio.json, Assets/Dialogue/Keahi.json, Assets/Dialogue/Kenneth.json, Assets/Dialogue/Kiwi.json, Assets/Dialogue/Lenny.json, Assets/Dialogue/Lola.json, Assets/Dialogue/Maddie.json, Assets/Dialogue/Olga.json, Assets/Dialogue/Philip.json, Assets/Dialogue/Pika.json, Assets/Dialogue/Richard.json, Assets/Dialogue/Shiro.json, Assets/Dialogue/Trinnie.json, Assets/Dialogue/Ysabelle.json, Assets/Dialogue/Yuuma.json, Assets/Dialogue/Daia.json, Assets/Dialogue/Naomi.json, Assets/Dialogue/Malaya.json, Assets/Dialogue/Kimpoi.json, Assets/Dialogue/Anton.json, Assets/Dialogue/Ariah.json, Assets/Dialogue/Blair.json, Assets/Dialogue/Bryle.json, Assets/Dialogue/Carmen.json, Assets/Dialogue/Faye.json, Assets/Dialogue/Irene.json, Assets/Dialogue/Kiarra.json, Assets/Dialogue/Lorenzo.json, Assets/Dialogue/Louie.json, Assets/Dialogue/Maive.json, Assets/Dialogue/Paula.json, Assets/Dialogue/Sean.json, Assets/Dialogue/Shanice.json, Assets/Dialogue/Sonny.json, Assets/Dialogue/Zayne.json, Assets/Dialogue/Torts.json, Assets/Dialogue/June.json",
-		"When": {
-			"{{{{TargetWithoutPath}}": "enabled, festivals only",
-			"Festival Dialogue Edits": true,
-			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
-			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
-		},
-  },
 ]
 }

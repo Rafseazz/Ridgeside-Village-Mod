@@ -4,6 +4,7 @@
 	 "LogName": "Irene Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Irene": "enabled, festivals only", },
    "Entries": {
 		"Irene": "{{i18n:SpiritEve.Irene.1}}",
  	  "Irene_y2": "{{i18n:SpiritEve.Irene.2-nozayne}}",
@@ -16,7 +17,10 @@
 	 "LogName": "Irene Spirit's Eve Dialogue Change (Zayne present)",
 	 "Action": "EditData",
 	 "Target": "Data/Festivals/fall27",
-	 "When": { "HasSeenEvent": 75160338 },
+	 "When": {
+		 "HasSeenEvent": 75160338,
+		 "Irene": "enabled, festivals only",
+	 },
 	 "Entries": {
 		 "Irene_y2": "{{i18n:SpiritEve.Irene.2-single}}"
 	 },
@@ -28,7 +32,8 @@
 	 "Target": "Data/Festivals/fall27",
 	 "When": {
 		 "HasDialogueAnswer": 7516439,
-		 "HasDialogueAnswer": 7516325
+		 "HasDialogueAnswer": 7516325,
+		 "Irene": "enabled, festivals only",
 	 },
 	 "Entries": {
 		 "Irene_y2": "{{i18n:SpiritEve.Irene.2-zayne}}"
@@ -43,6 +48,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Irene": "Married",
+		"Irene": "enabled, festivals only",
    },
    "Entries": {
 	   "Irene": "{{i18n:SpiritEve.Irene_spouse.1}}",

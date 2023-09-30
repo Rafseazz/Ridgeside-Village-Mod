@@ -7,7 +7,8 @@
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
 			"When":
 			{
-				"Sean": "enabled"
+				"Sean": "enabled",
+				"SeasonalSeanToken": true,
 			}
 		},
 		{
@@ -44,7 +45,8 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"Sean": "enabled, festivals only"
+				"Sean": "enabled, festivals only",
+				"SeasonalSeanToken": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -58,7 +60,8 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"Sean": "enabled, festivals only"
+				"Sean": "enabled, festivals only",
+				"SeasonalSeanToken": true,
 			},
 			"Update": "OnLocationChange",
 		},

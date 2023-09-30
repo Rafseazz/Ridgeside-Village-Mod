@@ -22,17 +22,17 @@
 			}
 		},
 		{
-			"LogName": "RSV Accessories - Seasonal",
+			"LogName": "RSV Accessories - Richard",
 			"Action": "EditImage",
 			"Target": "Portraits/Richard, Characters/Richard",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
 			"When": {
 				"Richard": "enabled",
-				"Weather|contains=Rain, Storm, Snow": false,
+				"SeasonalRainToken": "rain, winter",
 				"IsOutdoors": true,
 				"HasValue:{{DayEvent}}": false,
 				"Lightweight Outfits": false,
-				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+				"Query: {{Random:{{Range:1,10}}|key=RichardHat}} > 5": true,
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"

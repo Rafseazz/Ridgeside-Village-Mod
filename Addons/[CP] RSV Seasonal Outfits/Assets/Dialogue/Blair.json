@@ -4,6 +4,7 @@
 	 "LogName": "Blair Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Blair": "enabled, festivals only", },
    "Entries": {
 		"Blair": "{{i18n:SpiritEve.Blair.1}}",
  	  "Blair_y2": "{{i18n:SpiritEve.Blair.2}}",
@@ -20,6 +21,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Blair": "Married",
+		"Blair": "enabled, festivals only",
    },
    "Entries": {
 	   "Blair": "{{i18n:SpiritEve.Blair_spouse.1}}",

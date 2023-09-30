@@ -4,6 +4,10 @@
 	 "LogName": "Kiarra Flower Dance Dialogue Change",
 	 "Action": "EditData",
 	 "Target": "Data/Festivals/spring24",
+	 "When": {
+		 "Kiarra": "enabled, festivals only",
+		 "SeasonalKiarraToken": true,
+	 },
 	 "Entries": {
 		"Kiarra": "{{i18n:FlowerDance.Kiarra}}",
 		},
@@ -13,6 +17,10 @@
 	 "LogName": "Kiarra Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Kiarra": "enabled, festivals only",
+		 "SeasonalKiarraToken": true,
+	 },
    "Entries": {
 		"Kiarra": "{{i18n:SpiritEve.Kiarra.1}}",
  	  "Kiarra_y2": "{{i18n:SpiritEve.Kiarra.2}}",
@@ -29,6 +37,8 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Kiarra": "Married",
+		"Kiarra": "enabled, festivals only",
+		"SeasonalKiarraToken": true,
    },
    "Entries": {
 	   "Kiarra": "{{i18n:SpiritEve.Kiarra_spouse.1}}",

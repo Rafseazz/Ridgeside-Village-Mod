@@ -7,7 +7,8 @@
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
 			"When":
 			{
-				"Alissa": "enabled"
+				"Alissa": "enabled",
+				"SeasonalAlissaToken": true,
 			}
 		},
 		{
@@ -30,7 +31,7 @@
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"Alissa": "enabled, festivals only"
+				"Alissa": "enabled, festivals only",
 			},
 			"Update": "OnLocationChange",
 		},
@@ -44,7 +45,8 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"Alissa": "enabled, festivals only"
+				"Alissa": "enabled, festivals only",
+				"SeasonalAlissaToken": true,
 			},
 			"Update": "OnLocationChange",
 		},
@@ -58,7 +60,8 @@
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"Alissa": "enabled, festivals only"
+				"Alissa": "enabled, festivals only",
+				"SeasonalAlissaToken": true,
 			},
 			"Update": "OnLocationChange",
 		},

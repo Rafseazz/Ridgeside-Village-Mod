@@ -4,6 +4,7 @@
 	 "LogName": "Jio Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Jio": "enabled, festivals only", },
    "Entries": {
 		"Jio": "{{i18n:SpiritEve.Jio.1}}",
  	  "Jio_y2": "{{i18n:SpiritEve.Jio.2}}",
@@ -20,6 +21,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Jio": "Married",
+		"Jio": "enabled, festivals only",
    },
    "Entries": {
 	   "Jio": "{{i18n:SpiritEve.Jio_spouse.1}}",
@@ -33,7 +35,8 @@
 	 "Target": "Data/Festivals/fall27",
 	 "When": {
 		 "HasSeenEvent": 75160125,
-	 	 "Relationship:Jio": "Married"
+	 	 "Relationship:Jio": "Married",
+		 "Jio": "enabled, festivals only",
 	 },
 	 "Entries": {
 		 "Jio_y2": "{{i18n:SpiritEve.Jio.2-corine}}",

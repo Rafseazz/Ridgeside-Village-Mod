@@ -22,17 +22,17 @@
 			}
 		},
 		{
-			"LogName": "RSV Accessories - Seasonal",
+			"LogName": "RSV Accessories - Irene",
 			"Action": "EditImage",
 			"Target": "Portraits/Irene, Characters/Irene",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_fall.png",
 			"When": {
 				"Irene": "enabled",
-				"Weather|contains=Rain, Storm, Snow": false,
+				"SeasonalRainToken": "fall",
 				"IsOutdoors": true,
 				"HasValue:{{DayEvent}}": false,
 				"Lightweight Outfits": false,
-				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+				"Query: {{Random:{{Range:1,10}}|key=IreneHat}} > 5": true,
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"

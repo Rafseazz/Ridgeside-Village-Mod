@@ -7,29 +7,8 @@
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
 			"When":
 			{
+				"Query: {{Random:{{Range:1,10}}|key=DaiaMask}}|contains= 1,10": true,
 				"Torts": "enabled"
-			}
-		},
-		{
-			"LogName": "RSV Torts Rain Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Torts, Characters/Torts",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalRainToken": "rain",
-				"Torts": "enabled"
-			}
-		},
-		{
-			"LogName": "RSV Torts Default",
-			"Action": "EditImage",
-			"Target": "Portraits/Torts, Characters/Torts",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
-			"When":
-			{
-				"Torts": "enabled",
-				"RandomNumber": "1, 10"
 			}
 		},
 		{

@@ -4,6 +4,7 @@
 	 "LogName": "Flor Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Flor": "enabled, festivals only", },
    "Entries": {
 		"Flor": "{{i18n:SpiritEve.Flor.1}}",
  	  "Flor_y2": "{{i18n:SpiritEve.Flor.2}}",
@@ -20,6 +21,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Flor": "Married",
+		"Flor": "enabled, festivals only",
    },
    "Entries": {
 	   "Flor": "{{i18n:SpiritEve.Flor_spouse.1}}",

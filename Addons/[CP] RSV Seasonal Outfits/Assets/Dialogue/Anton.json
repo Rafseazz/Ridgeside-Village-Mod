@@ -4,6 +4,7 @@
 	 "LogName": "Anton Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Anton": "enabled, festivals only", },
    "Entries": {
 		"Anton": "{{i18n:SpiritEve.Anton.1}}",
  	  "Anton_y2": "{{i18n:SpiritEve.Anton.2}}",
@@ -20,6 +21,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Anton": "Married",
+		"Anton": "enabled, festivals only",
    },
    "Entries": {
 	   "Anton": "{{i18n:SpiritEve.Anton_spouse.1}}",
@@ -35,6 +37,8 @@
    "When": {
 		 "SeasonalIanToken": false,
 		 "HasMod|contains=x3n3as.RSVSeasonalIan": true,
+		 "Anton": "enabled, festivals only",
+		 "Ian": "enabled, festivals only"
 	 },
    "Entries": {
 	   "Anton_y2": "{{i18n:SpiritEve.Anton.2-ian}}",

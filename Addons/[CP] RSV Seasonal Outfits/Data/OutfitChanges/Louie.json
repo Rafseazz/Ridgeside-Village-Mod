@@ -22,17 +22,17 @@
 			}
 		},
 		{
-			"LogName": "RSV Accessories - Seasonal",
+			"LogName": "RSV Accessories - Louie",
 			"Action": "EditImage",
 			"Target": "Portraits/Louie, Characters/Louie",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
 			"When": {
 				"Louie": "enabled",
-				"Weather|contains=Rain, Storm, Snow": false,
+				"SeasonalRainToken": "fall, winter",
 				"IsOutdoors": true,
 				"HasValue:{{DayEvent}}": false,
 				"Lightweight Outfits": false,
-				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+				"Query: {{Random:{{Range:1,10}}|key=LouieHat}} > 5": true,
 			},
 			"Update": "OnLocationChange",
 			"PatchMode": "Overlay"

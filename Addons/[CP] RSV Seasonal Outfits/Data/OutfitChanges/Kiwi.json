@@ -8,7 +8,7 @@
 			"When":
 			{
 				"Kiwi": "enabled",
-				"RandomNumber": "{{Range: 1,5}}"
+				"Query: {{Random:{{Range:1,10}}|key=KiwiOutfit}}|contains= 1,2,3,4,5": true,
 			}
 		},
 		{

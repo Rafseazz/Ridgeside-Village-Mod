@@ -4,6 +4,7 @@
 	 "LogName": "Lola Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Lola": "enabled, festivals only", },
    "Entries": {
 		 "Lola": "{{i18n:SpiritEve.Lola.1}}",
 	   "Lola_y2": "{{i18n:SpiritEve.Lola.2}}",
@@ -14,7 +15,10 @@
 	 "LogName": "Lola Spirit's Eve Dialogue Change (post 8 heart)",
 	 "Action": "EditData",
 	 "Target": "Data/Festivals/fall27",
-	 "When": { "HasSeenEvent|contains=75160093": true },
+	 "When": {
+		 "HasSeenEvent|contains=75160093": true,
+		 "Lola": "enabled, festivals only",
+	 },
 	 "Entries": {
 		 "Lola_y2": "{{i18n:SpiritEve.Lola.2-8heart}}",
 		},

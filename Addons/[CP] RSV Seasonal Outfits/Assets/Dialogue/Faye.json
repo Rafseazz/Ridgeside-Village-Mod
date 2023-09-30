@@ -6,7 +6,8 @@
    "Target": "Data/Festivals/fall27",
 	 "When": {
 		 "HasSeenEvent|contains=75160375": false,
-		 "IsOddYear": true
+		 "IsOddYear": true,
+		 "Faye": "enabled, festivals only",
 	 },
    "Entries": {
 		"Faye": "{{i18n:SpiritEve.Faye.1-nobryle}}",
@@ -19,7 +20,8 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
-		 "IsOddYear": false
+		 "IsOddYear": false,
+		 "Faye": "enabled, festivals only",
 	 },
    "Entries": {
 		"Faye": "{{i18n:SpiritEve.Faye.2}}",
@@ -33,7 +35,8 @@
 	 "Target": "Data/Festivals/fall27",
 	 "When": {
 		 "HasSeenEvent": 75160375,
-		 "IsOddYear": true
+		 "IsOddYear": true,
+		 "Faye": "enabled, festivals only",
 	 },
 	 "Entries": {
 		 "Faye": "{{i18n:SpiritEve.Faye.1-single}}",
@@ -49,7 +52,8 @@
 		 "HasSeenEvent": 75160453,
 		 "HasSeenEvent": 75160449,
 		 "HasFlag|contains=FayeBryleLoveStory": true,
-		 "IsOddYear": true
+		 "IsOddYear": true,
+		 "Faye": "enabled, festivals only",
 	 },
 	 "Entries": {
 		 "Faye": "{{i18n:SpiritEve.Faye.1-bryle}}",
@@ -65,7 +69,8 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Faye": "Married",
-		"IsOddYear": true
+		"IsOddYear": true,
+		"Faye": "enabled, festivals only",
    },
    "Entries": {
 	   "Faye": "{{i18n:SpiritEve.Faye_spouse.1}}",
@@ -78,7 +83,8 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Faye": "Married",
-		"IsOddYear": false
+		"IsOddYear": false,
+		"Faye": "enabled, festivals only",
    },
    "Entries": {
 	   "Faye": "{{i18n:SpiritEve.Faye_spouse.2}}",

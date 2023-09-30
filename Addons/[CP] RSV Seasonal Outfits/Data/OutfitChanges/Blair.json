@@ -22,12 +22,14 @@
 			}
 		},
 		{
-			"LogName": "RSV Accessories - Rain",
+			"LogName": "RSV Accessories - Blair",
 			"Action": "EditImage",
 			"Target": "Portraits/Blair, Characters/Blair",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_rain.png",
 			"When": {
 				"Blair": "enabled",
+				"SeasonalRainToken": "rain",
+				"Weather|contains=Rain, Storm, Snow": false,
 				"IsOutdoors": true,
 				"HasValue:{{DayEvent}}": false,
 				"Lightweight Outfits": false

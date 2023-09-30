@@ -4,6 +4,7 @@
 	 "LogName": "Bryle Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": { "Bryle": "enabled, festivals only", },
    "Entries": {
 		"Bryle": "{{i18n:SpiritEve.Bryle.1-single}}",
  	  "Bryle_y2": "{{i18n:SpiritEve.Bryle.2}}",
@@ -19,7 +20,8 @@
 	 "When": {
 		 "HasSeenEvent": 75160453,
 		 "HasSeenEvent": 75160449,
-		 "HasFlag |contains=FayeBryleLoveStory": true
+		 "HasFlag |contains=FayeBryleLoveStory": true,
+		 "Bryle": "enabled, festivals only",
 	 },
    "Entries": {
 		 "Bryle": "{{i18n:SpiritEve.Bryle.1-faye}}"
@@ -34,6 +36,7 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Bryle": "Married",
+		"Bryle": "enabled, festivals only",
    },
    "Entries": {
 	   "Bryle": "{{i18n:SpiritEve.Bryle_spouse.1}}",

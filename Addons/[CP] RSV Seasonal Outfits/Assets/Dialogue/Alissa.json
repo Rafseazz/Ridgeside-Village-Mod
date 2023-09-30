@@ -4,6 +4,10 @@
 	 "LogName": "Alissa Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Alissa": "enabled, festivals only",
+		 "SeasonalAlissaToken": true,
+	 },
    "Entries": {
 		"Alissa": "{{i18n:SpiritEve.Alissa.1}}",
  	  "Alissa_y2": "{{i18n:SpiritEve.Alissa.2}}",
@@ -20,6 +24,8 @@
    "When": {
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Alissa": "Married",
+		"Alissa": "enabled, festivals only",
+		"SeasonalAlissaToken": true,
    },
    "Entries": {
 	   "Alissa": "{{i18n:SpiritEve.Alissa_spouse.1}}",
