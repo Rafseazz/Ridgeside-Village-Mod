@@ -1,0 +1,82 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Jio Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Jio": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Jio Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Jio": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Jio Work Outfit Mask",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_mask.png",
+			"When":
+			{
+				"Jio": "enabled",
+				"JioMasked": true
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Jio Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"Jio": "enabled, festivals only",
+				"Relationship:Jio|contains=married": true,
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Jio Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"Jio": "enabled, festivals only",
+				"Relationship:Jio|contains=married": true,
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Jio Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio, Characters/Jio",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"Jio": "enabled, festivals only",
+				"Relationship:Jio|contains=married": true,
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

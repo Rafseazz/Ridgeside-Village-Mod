@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Sean Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Sean, Characters/Sean",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Sean": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Sean Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Sean, Characters/Sean",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Sean": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Sean Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Sean, Characters/Sean",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Sean": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Sean Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Sean, Characters/Sean",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Sean": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Sean Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Sean, Characters/Sean",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Sean": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

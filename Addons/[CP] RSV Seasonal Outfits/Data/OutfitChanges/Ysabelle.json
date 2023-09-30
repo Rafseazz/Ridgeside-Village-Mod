@@ -7,8 +7,33 @@
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
 			"When":
 			{
-				"SeasonalYsabelleToken": true
+				"SeasonalYsabelleToken": true,
+				"Ysabelle": "enabled"
 			}
+		},
+		{
+			"LogName": "RSV Ysabelle Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Ysabelle": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Ysabelle Egg Fest Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring13.png",
+			"When":
+			{
+				"DayEvent": "egg festival",
+				"LocationName": "Town, temp",
+				"Ysabelle": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
 		},
 		{
 			"LogName": "RSV Ysabelle Flower Dance Outfit",
@@ -20,6 +45,21 @@
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
 				"SeasonalYsabelleToken": true,
+				"Ysabelle": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Ysabelle Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Ysabelle": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
 		},
@@ -34,45 +74,9 @@
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
 				"SeasonalYsabelleToken": true,
+				"Ysabelle": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
-		},
-
-		// Not affected by other mod
-		{
-			"LogName": "RSV Ysabelle Egg Fest Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring13.png",
-			"When":
-			{
-				"DayEvent": "egg festival",
-				"LocationName": "Town, temp",
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Ysabelle Spirit's Eve Outfit Y1",
-			"Action": "EditImage",
-			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": true,
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Ysabelle Rain Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Ysabelle, Characters/Ysabelle",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalRainToken": "rain",
-			}
 		},
 	]
 }

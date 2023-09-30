@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Trinnie Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Trinnie, Characters/Trinnie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Trinnie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Trinnie Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Trinnie, Characters/Trinnie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Trinnie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Trinnie Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Trinnie, Characters/Trinnie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Trinnie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Trinnie Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Trinnie, Characters/Trinnie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Trinnie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Trinnie Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Trinnie, Characters/Trinnie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Trinnie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Kiwi Seasonals",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiwi, Characters/Kiwi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{season}}.png",
+			"When":
+			{
+				"Kiwi": "enabled",
+				"RandomNumber": "{{Range: 1,5}}"
+			}
+		},
+		{
+			"LogName": "RSV Kiwi Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiwi, Characters/Kiwi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Kiwi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Kiwi Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiwi, Characters/Kiwi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Kiwi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Kiwi Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Kiwi, Characters/Kiwi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Kiwi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

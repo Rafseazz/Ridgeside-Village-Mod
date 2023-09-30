@@ -1,0 +1,84 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Philip Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Philip, Characters/Philip",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Philip": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Philip Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Philip, Characters/Philip",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Philip": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Philip Work Outfit Map",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_ShiroHouse",
+			"MapProperties":
+			{
+        "UniquePortrait": "Philip",
+				"UniqueSprite": "Philip"
+			},
+			"When": { "Philip": "enabled" }
+		},
+		{
+			"LogName": "RSV Philip Work Outfit",
+			"Action": "Load",
+			"Target": "Portraits/Philip_Custom_Ridgeside_ShiroHouse, Characters/Philip_Custom_Ridgeside_ShiroHouse",
+			"FromFile": "Assets/{{TargetPathOnly}}/Philip/Philip_work.png",
+			"When": { "Philip": "enabled" }
+		},
+		{
+			"LogName": "RSV Philip Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Philip, Characters/Philip",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Philip": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Philip Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Philip, Characters/Philip",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Philip": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Philip Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Philip, Characters/Philip",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Philip": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Naomi Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Naomi, Characters/Naomi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Naomi": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Naomi Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Naomi, Characters/Naomi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Naomi": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Naomi Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Naomi, Characters/Naomi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Naomi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Naomi Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Naomi, Characters/Naomi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Naomi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Naomi Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Naomi, Characters/Naomi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Naomi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

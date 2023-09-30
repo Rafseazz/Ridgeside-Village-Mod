@@ -1,67 +1,66 @@
 {
 	"Changes": [
 		{
-			"LogName": "RSV Kiarra Seasonal Outfits",
+			"LogName": "RSV Shiro Seasonal Outfits",
 			"Action": "EditImage",
-			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"Target": "Portraits/Shiro, Characters/Shiro",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
 			"When":
 			{
-				"SeasonalKiarraToken": true
+				"Shiro": "enabled"
 			}
 		},
 		{
-			"LogName": "RSV Kiarra Flower Dance Outfit",
+			"LogName": "RSV Shiro Rain Outfit",
 			"Action": "EditImage",
-			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"Target": "Portraits/Shiro, Characters/Shiro",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Shiro": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Shiro Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Shiro, Characters/Shiro",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"SeasonalKiarraToken": true,
+				"Shiro": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
 		},
 		{
-			"LogName": "RSV Kiarra Spirit's Eve Outfit Y1",
+			"LogName": "RSV Shiro Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
-			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"Target": "Portraits/Shiro, Characters/Shiro",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"SeasonalKiarraToken": true,
+				"Shiro": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
 		},
 		{
-			"LogName": "RSV Kiarra Spirit's Eve Outfit Y2",
+			"LogName": "RSV Shiro Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
-			"Target": "Portraits/Kiarra, Characters/Kiarra",
+			"Target": "Portraits/Shiro, Characters/Shiro",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"SeasonalKiarraToken": true,
+				"Shiro": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
-		},
-
-		// Not affected by other mods
-		{
-			"LogName": "RSV Kiarra Rain Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Kiarra, Characters/Kiarra",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalRainToken": "rain",
-			}
 		},
 	]
 }

@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Kimpoi Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Kimpoi, Characters/Kimpoi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Kimpoi": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Kimpoi Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Kimpoi, Characters/Kimpoi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Kimpoi": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Kimpoi Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Kimpoi, Characters/Kimpoi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Kimpoi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Kimpoi Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Kimpoi, Characters/Kimpoi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Kimpoi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Kimpoi Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Kimpoi, Characters/Kimpoi",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Kimpoi": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

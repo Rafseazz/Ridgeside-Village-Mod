@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Maddie Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Maddie, Characters/Maddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Maddie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Maddie Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Maddie, Characters/Maddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Maddie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Maddie Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Maddie, Characters/Maddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Maddie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Maddie Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Maddie, Characters/Maddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Maddie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Maddie Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Maddie, Characters/Maddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Maddie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

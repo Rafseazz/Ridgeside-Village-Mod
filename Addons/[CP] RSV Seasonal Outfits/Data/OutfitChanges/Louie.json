@@ -1,0 +1,82 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Louie Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Louie, Characters/Louie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Louie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Louie Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Louie, Characters/Louie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Louie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Accessories - Seasonal",
+			"Action": "EditImage",
+			"Target": "Portraits/Louie, Characters/Louie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"When": {
+				"Louie": "enabled",
+				"Weather|contains=Rain, Storm, Snow": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false,
+				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Louie Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Louie, Characters/Louie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Louie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Louie Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Louie, Characters/Louie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Louie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Louie Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Louie, Characters/Louie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Louie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

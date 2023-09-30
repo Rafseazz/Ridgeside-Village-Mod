@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Yuuma Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Yuuma, Characters/Yuuma",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Yuuma": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Yuuma Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Yuuma, Characters/Yuuma",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Yuuma": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Yuuma Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Yuuma, Characters/Yuuma",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Yuuma": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Yuuma Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Yuuma, Characters/Yuuma",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Yuuma": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Yuuma Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Yuuma, Characters/Yuuma",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Yuuma": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

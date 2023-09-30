@@ -401,7 +401,7 @@
       	},
 
     //Hike Greenhouse unlock
-     	 {
+			{
 				 "LogName": "RSV: Open phantom greenhouse at night",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVTheHike",
@@ -415,6 +415,24 @@
              "HasSeenEvent: hostPlayer": 75160266,
              "HasSeenEvent: hostPlayer |contains=75160271": false
       	}
+      	},
+     	 {
+				 "LogName": "RSV: Phantom greenhouse locked door",
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVTheHike",
+				 "MapTiles": [
+                {
+                    "Position": { "X": 38, "Y": 23 },
+                    "Layer": "Buildings",
+										"SetProperties": {
+                        "Action": "LockedDoorWarp Custom_Ridgeside_RSVGreenhouse2 10 24 2400 2600"
+                    }
+                }
+            ],
+    	 	 	"When": {
+					 "HasSeenEvent: hostPlayer": 75160266,
+					 "HasSeenEvent: hostPlayer |contains=75160271": false
+				 }
       	},
       	//Permanent unlock (after finishing quest)
       	{

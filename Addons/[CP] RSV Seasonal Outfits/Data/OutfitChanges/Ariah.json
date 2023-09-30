@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Ariah Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Ariah, Characters/Ariah",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Ariah": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Ariah Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ariah, Characters/Ariah",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Ariah": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Ariah Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ariah, Characters/Ariah",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Ariah": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Ariah Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Ariah, Characters/Ariah",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Ariah": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Ariah Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Ariah, Characters/Ariah",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Ariah": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

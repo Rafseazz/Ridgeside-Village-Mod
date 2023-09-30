@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Shanice Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Shanice, Characters/Shanice",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Shanice": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Shanice Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Shanice, Characters/Shanice",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Shanice": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Shanice Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Shanice, Characters/Shanice",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Shanice": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Shanice Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Shanice, Characters/Shanice",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Shanice": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Shanice Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Shanice, Characters/Shanice",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Shanice": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

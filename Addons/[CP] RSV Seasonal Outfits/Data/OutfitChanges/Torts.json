@@ -1,0 +1,77 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Torts Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Torts": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Torts Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Torts": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Torts Default",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_default.png",
+			"When":
+			{
+				"Torts": "enabled",
+				"RandomNumber": "1, 10"
+			}
+		},
+		{
+			"LogName": "RSV Torts Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Torts": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Torts Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Torts": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Torts Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Torts": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

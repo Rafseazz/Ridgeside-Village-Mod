@@ -1,0 +1,82 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Faye Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Characters/Faye",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Faye": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Faye Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Characters/Faye",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Faye": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Accessories - Seasonal",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Characters/Faye",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"When": {
+				"Faye": "enabled",
+				"Weather|contains=Rain, Storm, Snow": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false,
+				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Faye Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Characters/Faye",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Faye": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Faye Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Characters/Faye",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Faye": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Faye Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye, Characters/Faye",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Faye": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

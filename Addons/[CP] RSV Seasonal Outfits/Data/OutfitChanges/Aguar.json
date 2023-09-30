@@ -1,0 +1,89 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Aguar Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Aguar": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Aguar Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Aguar": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Aguar Random Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{Random: 1, 2, 3, 4 |key=aguaroutfit}}.png",
+			"When": { "Aguar": "enabled" }
+		},
+		{
+			"LogName": "RSV Accessories - Year-round",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc.png",
+			"When":
+			{
+				"Aguar": "enabled",
+				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR ({{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5)": true,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Aguar Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Aguar": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Aguar Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Aguar": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Aguar Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar, Characters/Aguar",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Aguar": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

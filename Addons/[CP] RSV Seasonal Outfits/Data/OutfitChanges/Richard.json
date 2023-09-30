@@ -1,0 +1,82 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Richard Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard, Characters/Richard",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Richard": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Richard Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard, Characters/Richard",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Richard": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Accessories - Seasonal",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard, Characters/Richard",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"When": {
+				"Richard": "enabled",
+				"Weather|contains=Rain, Storm, Snow": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false,
+				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Richard Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard, Characters/Richard",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Richard": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Richard Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard, Characters/Richard",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Richard": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Richard Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard, Characters/Richard",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Richard": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

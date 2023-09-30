@@ -1,0 +1,96 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Daia Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia, Characters/Daia",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Daia": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Daia Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia, Characters/Daia",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Daia": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Daia Work Outfit Map",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_Ridge, Maps/Custom_Ridgeside_RidgeForest, Maps/Custom_Ridgeside_RSVSpiritRealm, Maps/Custom_Ridgeside_RSVNinjaHouse, Maps/Custom_Ridgeside_RidgeFalls",
+			"MapProperties":
+			{
+        "UniquePortrait": "Daia",
+				"UniqueSprite": "Daia"
+			},
+			"When": { "Daia": "enabled" }
+		},
+		{
+			"LogName": "RSV Daia Work Outfit",
+			"Action": "Load",
+			"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls, Characters/Daia_Custom_Ridgeside_Ridge, Characters/Daia_Custom_Ridgeside_RidgeForest, Characters/Daia_Custom_Ridgeside_RSVSpiritRealm, Characters/Daia_Custom_Ridgeside_RSVNinjaHouse, Characters/Daia_Custom_Ridgeside_RidgeFalls",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_ninja.png",
+			"When": { "Daia": "enabled", }
+		},
+		{
+			"LogName": "RSV Daia Work Outfit Mask",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia_Custom_Ridgeside_Ridge, Portraits/Daia_Custom_Ridgeside_RidgeForest, Portraits/Daia_Custom_Ridgeside_RSVSpiritRealm, Portraits/Daia_Custom_Ridgeside_RSVNinjaHouse, Portraits/Daia_Custom_Ridgeside_RidgeFalls, Characters/Daia_Custom_Ridgeside_Ridge, Characters/Daia_Custom_Ridgeside_RidgeForest, Characters/Daia_Custom_Ridgeside_RSVSpiritRealm, Characters/Daia_Custom_Ridgeside_RSVNinjaHouse, Characters/Daia_Custom_Ridgeside_RidgeFalls",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_mask.png",
+			"When":
+			{
+				"Daia": "enabled",
+				"RandomNumber |contains= 6, 9": true
+			},
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Daia Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia, Characters/Daia",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Daia": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Daia Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia, Characters/Daia",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Daia": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Daia Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia, Characters/Daia",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Daia": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

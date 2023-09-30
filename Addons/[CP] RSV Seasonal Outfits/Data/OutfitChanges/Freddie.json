@@ -1,0 +1,66 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Freddie Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Freddie, Characters/Freddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Freddie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Freddie Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Freddie, Characters/Freddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Freddie": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Freddie Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Freddie, Characters/Freddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Freddie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Freddie Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Freddie, Characters/Freddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Freddie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Freddie Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Freddie, Characters/Freddie",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Freddie": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

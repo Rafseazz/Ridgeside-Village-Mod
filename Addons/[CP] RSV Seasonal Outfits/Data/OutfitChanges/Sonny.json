@@ -1,0 +1,72 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Sonny Seasonals",
+			"Action": "EditImage",
+			"Target": "Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_summer.png",
+			"When":
+			{
+				"Sonny": "enabled",
+				"Season": "summer"
+			}
+		},
+		{
+			"LogName": "RSV Accessories - Seasonal",
+			"Action": "EditImage",
+			"Target": "Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"When": {
+				"Sonny": "enabled",
+				"Weather|contains=Rain, Storm, Snow": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false,
+				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Sonny Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Sonny": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Sonny Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Sonny": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Sonny Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Sonny, Characters/Sonny",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Sonny": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

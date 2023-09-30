@@ -7,7 +7,19 @@
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
 			"When":
 			{
-				"SeasonalIanToken": true
+				"SeasonalIanToken": true,
+				"Ian": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Ian Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Ian, Characters/Ian",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Ian": "enabled"
 			}
 		},
 		{
@@ -22,6 +34,21 @@
 				"SeasonalIanToken": true,
 			},
 			"Update": "OnLocationChange",
+			"Ian": "enabled, festivals only"
+		},
+		{
+			"LogName": "RSV Ian Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Ian, Characters/Ian",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Ian": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
 		},
 		{
 			"LogName": "RSV Ian Spirit's Eve Outfit Y2",
@@ -34,33 +61,9 @@
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
 				"SeasonalIanToken": true,
+				"Ian": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
-		},
-
-		// Not affected by other mod
-		{
-			"LogName": "RSV Ian Spirit's Eve Outfit Y1",
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": true,
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Ian Rain Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalRainToken": "rain",
-			}
 		},
 	]
 }

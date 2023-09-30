@@ -1,67 +1,66 @@
 {
 	"Changes": [
 		{
-			"LogName": "RSV Alissa Seasonal Outfits",
+			"LogName": "RSV Anton Seasonal Outfits",
 			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
+			"Target": "Portraits/Anton, Characters/Anton",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
 			"When":
 			{
-				"SeasonalAlissaToken": true
+				"Anton": "enabled"
 			}
 		},
 		{
-			"LogName": "RSV Alissa Flower Dance Outfit",
+			"LogName": "RSV Anton Rain Outfit",
 			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
+			"Target": "Portraits/Anton, Characters/Anton",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Anton": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Anton Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Anton, Characters/Anton",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
 			"When":
 			{
 				"DayEvent": "flower dance",
 				"LocationName": "Forest, temp",
-				"SeasonalAlissaToken": true,
+				"Anton": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
 		},
 		{
-			"LogName": "RSV Alissa Spirit's Eve Outfit Y1",
+			"LogName": "RSV Anton Spirit's Eve Outfit Y1",
 			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
+			"Target": "Portraits/Anton, Characters/Anton",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": true,
-				"SeasonalAlissaToken": true,
+				"Anton": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
 		},
 		{
-			"LogName": "RSV Alissa Spirit's Eve Outfit Y2",
+			"LogName": "RSV Anton Spirit's Eve Outfit Y2",
 			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
+			"Target": "Portraits/Anton, Characters/Anton",
 			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
 			"When":
 			{
 				"DayEvent": "spirit's eve",
 				"LocationName": "Town, temp",
 				"IsOddYear": false,
-				"SeasonalAlissaToken": true,
+				"Anton": "enabled, festivals only"
 			},
 			"Update": "OnLocationChange",
-		},
-
-		// Not affected by other mod
-		{
-			"LogName": "RSV Alissa Rain Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Alissa, Characters/Alissa",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalRainToken": "rain",
-			}
 		},
 	]
 }

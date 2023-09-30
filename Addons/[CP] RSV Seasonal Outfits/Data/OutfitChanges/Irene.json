@@ -1,0 +1,82 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Irene Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Irene": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Irene Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Irene": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Accessories - Seasonal",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"When": {
+				"Irene": "enabled",
+				"Weather|contains=Rain, Storm, Snow": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false,
+				"Query: {{Random:{{Range:1,10}}|key={{TargetWithoutPath}}Hat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Irene Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Irene": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Irene Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Irene": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Irene Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene, Characters/Irene",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Irene": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}

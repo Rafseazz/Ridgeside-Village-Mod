@@ -1,0 +1,80 @@
+{
+	"Changes": [
+		{
+			"LogName": "RSV Blair Seasonal Outfits",
+			"Action": "EditImage",
+			"Target": "Portraits/Blair, Characters/Blair",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"Blair": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Blair Rain Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Blair, Characters/Blair",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_{{SeasonalRainToken}}.png",
+			"When":
+			{
+				"SeasonalRainToken": "rain",
+				"Blair": "enabled"
+			}
+		},
+		{
+			"LogName": "RSV Accessories - Rain",
+			"Action": "EditImage",
+			"Target": "Portraits/Blair, Characters/Blair",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_acc_{{SeasonalRainToken}}.png",
+			"When": {
+				"Blair": "enabled",
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Lightweight Outfits": false
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		{
+			"LogName": "RSV Blair Flower Dance Outfit",
+			"Action": "EditImage",
+			"Target": "Portraits/Blair, Characters/Blair",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
+			"When":
+			{
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp",
+				"Blair": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Blair Spirit's Eve Outfit Y1",
+			"Action": "EditImage",
+			"Target": "Portraits/Blair, Characters/Blair",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": true,
+				"Blair": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+		{
+			"LogName": "RSV Blair Spirit's Eve Outfit Y2",
+			"Action": "EditImage",
+			"Target": "Portraits/Blair, Characters/Blair",
+			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
+			"When":
+			{
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp",
+				"IsOddYear": false,
+				"Blair": "enabled, festivals only"
+			},
+			"Update": "OnLocationChange",
+		},
+	]
+}
