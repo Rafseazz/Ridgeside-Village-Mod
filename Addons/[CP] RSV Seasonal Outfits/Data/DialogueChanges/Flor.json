@@ -5,6 +5,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "Jeric": "enabled, festivals only",
 	 },
    "Entries": {
@@ -13,7 +14,7 @@
 		},
 	},
 	{
-	 "LogName": "Flor Spirit's Eve Dialogue Change Y2",
+	 "LogName": "Flor Spirit's Eve Dialogue Changes Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "Entries": {
@@ -24,10 +25,11 @@
 
 //Free Love back-up
 	{
-	 "LogName": "Flor Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+	 "LogName": "Flor Spirit's Eve Dialogue Changes (Free Love back-up) Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		"IsOddYear": true,
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Flor": "Married",
 		"Jeric": "enabled, festivals only",
@@ -37,7 +39,7 @@
 		},
 	},
 	{
-	 "LogName": "Flor Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+	 "LogName": "Flor Spirit's Eve Dialogue Changes (Free Love back-up) Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {

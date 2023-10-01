@@ -5,6 +5,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 // Line about Carmen's costume
 		 "Carmen": "enabled, festivals only",
 	 },
@@ -34,6 +35,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		"IsOddYear": true,
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Blair": "Married",
 		"Carmen": "enabled, festivals only",

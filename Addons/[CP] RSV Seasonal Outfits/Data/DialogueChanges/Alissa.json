@@ -5,6 +5,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,
 	 },
    "Entries": {
@@ -33,6 +34,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		"IsOddYear": true,
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Alissa": "Married",
 		"Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,

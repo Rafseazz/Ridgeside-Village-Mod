@@ -72,6 +72,22 @@
         ]
     },
     {
+        //Pika disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Pika": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Pika 17 73 left",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
         //Trinnie large sprite
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
@@ -87,6 +103,22 @@
         ]
     },
     {
+        //Trinnie disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Trinnie": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Trinnie 13 64 left",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
         //Kenneth large sprite
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
@@ -98,6 +130,22 @@
            "Operation": "Append",
            "Target": ["Fields", "set-up", 5],
            "Value": "/addTemporaryActor Kenneth 48 48 10 67 0 false/animate Kenneth false true 100 3 4 7 11 12 15 16 19 20 23 24 27 28 31 32 35 36 39 40 43 44 47 48 51",
+          },
+        ]
+    },
+    {
+        //Kenneth disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Kenneth": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Kenneth 11 67 down",
+              "Delimiter": "/"
           },
         ]
     },

@@ -4,7 +4,10 @@
 	 "LogName": "Malaya Spirit's Eve Dialogue Change Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-	 "When": { "Malaya": "enabled, festivals only", },
+	 "When": {
+		 "IsOddYear": true,
+		 "Malaya": "enabled, festivals only",
+	 },
    "Entries": {
 		 "Malaya": "{{i18n:SpiritEve.Malaya.1}}",
 		},

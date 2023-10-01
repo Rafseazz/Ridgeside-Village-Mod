@@ -5,6 +5,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
 		 "Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
 	 },
@@ -19,7 +20,7 @@
    "Target": "Data/Festivals/fall27",
 	 "When": {
 		 // Line about Kenneth
-		 "Kenneth": "enabled, festival always"
+		 "Kenneth": "enabled, festivals only"
 	 },
    "Entries": {
  	  "Ian_y2": "{{i18n:SpiritEve.Ian.2}}",
@@ -33,6 +34,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		"IsOddYear": true,
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Ian": "Married",
 		"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,

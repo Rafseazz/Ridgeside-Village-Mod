@@ -4,7 +4,10 @@
 	 "LogName": "Yuuma Spirit's Eve Dialogue Change Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-	 "When": { "Yuuma": "enabled, festivals only", },
+	 "When": {
+		 "IsOddYear": true,
+		 "Yuuma": "enabled, festivals only",
+	 },
    "Entries": {
 		 "Yuuma": "{{i18n:SpiritEve.Yuuma.1}}",
 		},

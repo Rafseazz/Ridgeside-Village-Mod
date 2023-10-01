@@ -42,6 +42,22 @@
         ]
     },
     {
+        //Kenneth disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Kenneth": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Kenneth 19 66 down",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
         //Faye large sprite
         "Action": "EditData",
         "Target": "Data/Festivals/fall27",
@@ -53,6 +69,22 @@
            "Operation": "Append",
            "Target": ["Fields", "set-up", 5],
            "Value": "/addTemporaryActor Faye 32 32 15 65 1 false/animate Faye false true 250 2 3 4 5",
+          },
+        ]
+    },
+    {
+        //Faye disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Faye": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Faye 15 65 right",
+              "Delimiter": "/"
           },
         ]
     },
@@ -69,6 +101,22 @@
            "Operation": "Append",
            "Target": ["Fields", "set-up", 5],
            "Value": "/addTemporaryActor Philip 32 32 8 63 8 false/positionOffset Philip -16 0/addTemporaryActor Shiro 32 32 9 63 8 false/beginSimultaneousCommand/animate Philip false true 200 8 9 8 9/animate Shiro false true 200 8 9 8 9/endSimultaneousCommand",
+          },
+        ]
+    },
+    {
+        //Philip + Shiro disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Query: ('{{Philip}}' = 'disabled') OR ('{{Shiro}}' = 'disabled')": true,
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Philip 8 63 right/Shiro 10 63 left",
+              "Delimiter": "/"
           },
         ]
     },

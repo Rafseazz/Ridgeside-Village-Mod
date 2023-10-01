@@ -5,6 +5,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "Maddie": "enabled, festivals only",
 		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
 		 "Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
@@ -29,7 +30,7 @@
 	},
 
 	{
-	 "LogName": "Maddie Spirit's Eve Dialogue Change (Jeric married)",
+	 "LogName": "Maddie Spirit's Eve Dialogue Change (Jeric married) Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
@@ -47,6 +48,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		"IsOddYear": true,
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Maddie": "Married",
 		"Maddie": "enabled, festivals only",

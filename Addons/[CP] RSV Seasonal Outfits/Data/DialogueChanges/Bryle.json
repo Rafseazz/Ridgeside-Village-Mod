@@ -5,6 +5,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "Bryle": "enabled, festivals only",
 		 "Faye": "enabled, festivals only",
 	 },
@@ -17,7 +18,9 @@
 	 "LogName": "Bryle Spirit's Eve Dialogue Change Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-	 "When": { "Bryle": "enabled, festivals only", },
+	 "When": {
+		 "Bryle": "enabled, festivals only",
+	 },
    "Entries": {
  	  "Bryle_y2": "{{i18n:SpiritEve.Bryle.2}}",
  	  "Bryle_spouse_y2": "{{i18n:SpiritEve.Bryle_spouse.2}}",
@@ -25,10 +28,11 @@
 	},
 
 	{
-	 "LogName": "Bryle Spirit's Eve Dialogue Change (dating Faye)",
+	 "LogName": "Bryle Spirit's Eve Dialogue Change (dating Faye) Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "HasSeenEvent": 75160453,
 		 "HasSeenEvent": 75160449,
 		 "HasFlag |contains=FayeBryleLoveStory": true,
@@ -44,6 +48,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
+		"IsOddYear": true,
 		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Bryle": "Married",
 		"Bryle": "enabled, festivals only",

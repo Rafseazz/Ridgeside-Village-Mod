@@ -6,11 +6,12 @@
    "Target": "Data/Festivals/fall27",
 	 "When": { "Daia": "enabled, festivals only", },
    "Entries": {
+		"IsOddYear": true,
 		"Daia": "{{i18n:SpiritEve.Daia.1}}",
 		},
 	},
 	{
-	 "LogName": "Daia Spirit's Eve Dialogue Change Y2",
+	 "LogName": "Daia Spirit's Eve Dialogue Changes Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
@@ -18,21 +19,21 @@
 	 },
    "Entries": {
  	  "Daia_y2": "{{i18n:SpiritEve.Daia.2}}",
+		"Daia_spouse_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
 		},
 	},
 	{
-	 "LogName": "Daia Spirit's Eve Spouse Dialogue",
+	 "LogName": "Daia Spirit's Eve Spouse Dialogue Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "Jeric": "enabled, festivals only",
 	 },
    "Entries": {
  	  "Daia_spouse": "{{i18n:SpiritEve.Daia_spouse.1}}",
- 	  "Daia_spouse_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
 		},
 	},
-
 	{
 	 "LogName": "Daia Spirit's Eve Dialogue Change Dating Y2",
    "Action": "EditData",
@@ -49,7 +50,7 @@
 
 //Free Love back-up
 	{
-	 "LogName": "Daia Spirit's Eve Dialogue Change (Free Love back-up)",
+	 "LogName": "Daia Spirit's Eve Dialogue Changes (Free Love back-up) Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
@@ -59,7 +60,7 @@
    },
    "Entries": {
 	   "Daia": "{{i18n:SpiritEve.Daia_spouse.1}}",
-	   "Daia_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
+		 "Daia_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
 		},
 	},
 ]

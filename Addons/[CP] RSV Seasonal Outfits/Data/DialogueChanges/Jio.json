@@ -1,6 +1,19 @@
 {
 "Changes": [
 	{
+	 "LogName": "Jio Spirit's Eve Dialogue Change Normal Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Jio": "enabled, festivals only",
+		 "Daia": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Jio": "{{i18n:SpiritEve.Jio.1}}",
+		},
+	},
+	{
 	 "LogName": "Jio Spirit's Eve Dialogue Change",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
@@ -9,18 +22,6 @@
  	  "Jio_y2": "{{i18n:SpiritEve.Jio.2}}",
  	  "Jio_spouse": "{{i18n:SpiritEve.Jio_spouse.1}}",
  	  "Jio_spouse_y2": "{{i18n:SpiritEve.Jio_spouse.2}}",
-		},
-	},
-	{
-	 "LogName": "Jio Spirit's Eve Dialogue Change Normal Y1",
-   "Action": "EditData",
-   "Target": "Data/Festivals/fall27",
-	 "When": {
-		 "Jio": "enabled, festivals only",
-		 "Daia": "enabled, festivals only",
-	 },
-   "Entries": {
-		"Jio": "{{i18n:SpiritEve.Jio.1}}",
 		},
 	},
 
@@ -42,11 +43,12 @@
 	},
 
 	{
-	 "LogName": "Jio Spirit's Eve Dialogue Change (post Corine 8 heart)",
+	 "LogName": "Jio Spirit's Eve Dialogue Change (post Corine 8 heart) Y2",
 	 "Action": "EditData",
 	 "Target": "Data/Festivals/fall27",
 	 "When": {
-		 "HasSeenEvent": 75160125,
+		 "HasSeenEvent|contains=75160263": true,
+		 "HasSeenEvent|contains=75160125": true,
 	 	 "Relationship:Jio": "Married",
 		 "Jio": "enabled, festivals only",
 	 },

@@ -377,7 +377,7 @@
 		},
 		"Undreya":
 		{
-			"AllowValues": "enabled, disabled, festivals only",
+			"AllowValues": "enabled, disabled",
 			"Default": "enabled",
 			"Description": "Allow this mod to change Undreya's appearance.",
 			"AllowBlank": false,
@@ -875,6 +875,12 @@ Outfit Changes
 		"Action": "Include",
 		"FromFile": "Data/OutfitChanges/Naomi.json",
 		"When": { "Naomi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Olga Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Olga.json",
+		"When": { "Olga|contains=disabled": false }
 	},
 	{
 		"LogName": "RSV Paula Outfits",

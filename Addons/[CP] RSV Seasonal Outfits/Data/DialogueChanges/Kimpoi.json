@@ -4,7 +4,10 @@
 	 "LogName": "Kimpoi Spirit's Eve Dialogue Change Y1",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-	 "When": { "Kimpoi": "enabled, festivals only", },
+	 "When": {
+		 "IsOddYear": true,
+		 "Kimpoi": "enabled, festivals only",
+	 },
    "Entries": {
 		 "Kimpoi": "{{i18n:SpiritEve.Kimpoi.1}}",
 		},

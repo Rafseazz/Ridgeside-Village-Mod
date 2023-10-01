@@ -5,6 +5,7 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
 	 "When": {
+		 "IsOddYear": true,
 		 "Paula": "enabled, festivals only",
 		 "Anton": "enabled, festivals only",
 	 },
@@ -47,7 +48,7 @@
 
 //Free Love back-up
 	{
-	 "LogName": "Paula Spirit's Eve Dialogue Change (Free Love back-up)",
+	 "LogName": "Paula Spirit's Eve Dialogue Changes (Free Love back-up)",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
