@@ -1932,7 +1932,7 @@
 	{
 		"Action": "EditData",
 		"Target": "Data/Events/Custom_Ridgeside_PurpleMansion",
-		"When": { "HasDialogueAnswer: |contains=7516439": false },
+		//"When": { "HasDialogueAnswer: |contains=7516439": false },
 		"Update": "OnLocationChange",
 		"Entries": {
 			//Irene decides to go (Irene 8 heart event)
@@ -2099,6 +2099,8 @@
 		}
 	},
 
+	/*
+	// Commented out bc this version doesn't include a way to unlock Irene
 	//Alternate versions where there is no choice due to outcomes of other events (Zirene stuff)
 	{
 		"Action": "EditData",
@@ -2111,6 +2113,7 @@
 			"75160324/e 75160323/e 75160338/f Irene 2000/t 700 1900/w sunny/{{IreneFreeDaysForEvent}}": "none/29 34/farmer 29 38 0 Irene -100 -100 2/addConversationTopic RSV_Irene8Hearts/skippable/playSound doorClose/changeToTemporaryMap Custom_Ridgeside_PurpleMansion2ndFloor/warp farmer 16 25/faceDirection farmer 1/fade/viewport 16 25/viewport move 1 0 7000/move farmer 8 0 1/emote farmer 8/faceDirection farmer 2/message \"{{i18n:event-75160324.alt.01}}\"/globalFade/viewport -1000 -1000/changeLocation Custom_Ridgeside_RidgesideVillage/warp Irene 128 65/positionOffset Irene 0 -20/playMusic {{IreneMusic}}/fade/viewport 129 62/emote Irene 40/pause 1500/playSound doorClose/warp farmer 130 64/faceDirection farmer 3/emote Irene 8/faceDirection Irene 1/speak Irene \"{{i18n:event-75160324.alt.02}}\"/emote farmer 32/emote farmer 8/speak Irene \"{{i18n:event-75160324.alt.03}}\"/faceDirection Irene 2/emote Irene 56/move farmer 0 1 2/pause 800/faceDirection Irene 1/emote Irene 8/speak Irene \"{{i18n:event-75160324.alt.04}}\"/faceDirection farmer 3/emote farmer 8/move farmer -1 0 3/faceDirection Irene 2/emote Irene 32/faceDirection farmer 2/speak Irene \"{{i18n:event-75160324.alt.05}}\"/emote farmer 16/faceDirection farmer 3/faceDirection Irene 1/speak Irene \"{{i18n:event-75160324.alt.06}}\"/faceDirection Irene 2/faceDirection farmer 2/speak Irene \"{{i18n:event-75160324.alt.07}}\"/emote farmer 32/emote Irene 40/speak Irene \"{{i18n:event-75160324.alt.08}}\"/faceDirection farmer 3/emote farmer 32/faceDirection Irene 1/emote Irene 28/speak Irene \"{{i18n:event-75160324.26}}\"/faceDirection Irene 2/emote Irene 32/faceDirection Irene 1/speak Irene \"{{i18n:event-75160324.27}}\"/faceDirection farmer 3/emote farmer 32/jump Irene/speak Irene \"{{i18n:event-75160324.28}}\"/emote farmer 32/globalFade/viewport -1000 -1000/pause 800/message \"{{i18n:event-75160324.29}}\"/end",
 		}
 	},
+	*/
 	{
 		"Action": "EditData",
 		"Target": "Data/Events/Farm",

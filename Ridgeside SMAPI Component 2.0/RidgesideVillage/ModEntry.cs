@@ -89,6 +89,8 @@ namespace RidgesideVillage
 
             Foxbloom.Initialize(this);
 
+            TravelingCart.Initialize(this);
+
             Helper.ConsoleCommands.Add("LocationModData", "show ModData of given location", printLocationModData);
             Helper.ConsoleCommands.Add("remove_equipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
         }

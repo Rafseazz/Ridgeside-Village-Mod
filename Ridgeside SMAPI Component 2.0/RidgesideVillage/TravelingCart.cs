@@ -32,9 +32,7 @@ namespace RidgesideVillage
                 foreach (var pair in features.Pairs)
                 {
                     Vector2 tile = pair.Value.currentTileLocation;
-                    Grass grass = pair.Value as Grass;
-                    grass.numberOfWeeds.Value = 0;
-                    if (pair.Value as Grass is not null && (tile.X >= 48 && tile.X <= 56) && (tile.Y == 23 || tile.Y == 24))
+                    if (pair.Value is Grass grass && (tile.X >= 48 && tile.X <= 56) && (tile.Y == 23 || tile.Y == 24))
                     {
                         features.Remove(pair.Key);
                     }

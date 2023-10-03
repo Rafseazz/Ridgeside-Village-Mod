@@ -52,6 +52,29 @@
 			"PatchMode": "Overlay"
 		},
 		{
+			"LogName": "RSV Daia Ninja Outfit In Intro",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia, Characters/Daia",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_ninja.png",
+			"When":
+			{
+				"Daia": "enabled",
+				"HasSeenEvent|contains=75160254": false
+			}
+		},
+		{
+			"LogName": "RSV Daia Ninja Mask In Intro",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia, Characters/Daia",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_mask.png",
+			"PatchMode": "Overlay",
+			"When":
+			{
+				"Daia": "enabled",
+				"HasSeenEvent|contains=75160254": false
+			}
+		},
+		{
 			"LogName": "RSV Daia Flower Dance Outfit",
 			"Action": "EditImage",
 			"Target": "Portraits/Daia, Characters/Daia",

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="8" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="178">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="8" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="178">
  <properties>
   <property name="AmbientLight" value="95 95 95"/>
   <property name="Doors" value="7 13 indoor 120 17 13 indoor 120 17 19 indoor 120 7 19 indoor 120 41 13 indoor 120 41 19 indoor 120 51 13 indoor 120 51 19 indoor 120 61 13 indoor 120 61 19 indoor 120 71 13 indoor 120 71 19 indoor 120"/>
@@ -55,7 +55,7 @@
  <tileset firstgid="11193" name="RafNPCSheet" tilewidth="16" tileheight="16" tilecount="144" columns="8">
   <image source="RafNPCSheet.png" width="128" height="288"/>
  </tileset>
- <layer id="1" name="Back" width="8" height="9">
+ <layer id="1" name="Back" width="8" height="8">
   <data encoding="csv">
 4271,4271,4271,4271,4271,4271,4065,4271,
 4271,4271,4271,4271,4271,4271,4580,4271,
@@ -64,11 +64,10 @@
 4644,4513,4643,4644,7626,7627,7628,4644,
 4513,4612,4611,4612,7658,7659,7660,4612,
 4644,4644,4643,4644,4644,4644,4643,4644,
-4612,4612,4611,4612,4611,4612,4611,4612,
-4644,4644,4643,4644,4643,4644,4643,4644
+4612,4612,4611,4612,4611,4612,4611,4612
 </data>
  </layer>
- <layer id="11" name="Back2" width="8" height="9">
+ <layer id="11" name="Back2" width="8" height="8">
   <properties>
    <property name="Draw" value="Back"/>
   </properties>
@@ -80,12 +79,11 @@
 0,0,0,0,0,0,0,0,
 0,0,4327,4328,0,0,0,0,
 0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,4654,
-0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,4654
 </data>
  </layer>
  <objectgroup id="6" name="Back"/>
- <layer id="2" name="Buildings" width="8" height="9">
+ <layer id="2" name="Buildings" width="8" height="8">
   <properties>
    <property name="AmbientLight" value="255 255 255"/>
   </properties>
@@ -97,13 +95,11 @@
 0,0,0,0,0,0,0,0,
 0,0,4491,4492,0,0,0,0,
 0,0,4523,4524,0,0,0,0,
-0,0,0,0,0,0,0,0,
-4368,0,0,0,0,0,4405,0
+0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="12" name="Schedule" width="8" height="9">
+ <layer id="12" name="Schedule" width="8" height="8">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
@@ -121,10 +117,9 @@
    </properties>
   </object>
  </objectgroup>
- <layer id="3" name="Paths" width="8" height="9">
+ <layer id="3" name="Paths" width="8" height="8">
   <data encoding="csv">
 9,0,0,0,0,0,0,9,
-0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
@@ -135,7 +130,7 @@
 </data>
  </layer>
  <objectgroup id="8" name="Paths"/>
- <layer id="4" name="Front" width="8" height="9">
+ <layer id="4" name="Front" width="8" height="8">
   <data encoding="csv">
 4831,0,7360,7361,0,0,4093,4831,
 4313,5211,7392,7393,8246,8247,0,0,
@@ -144,12 +139,11 @@
 0,0,7565,7566,0,0,0,0,
 0,0,4838,7531,0,0,0,0,
 0,0,0,0,0,0,0,0,
-4336,0,0,0,0,0,4373,0,
-4201,4201,4201,4201,4201,4201,4201,4201
+4336,0,0,0,0,0,4373,0
 </data>
  </layer>
  <objectgroup id="9" name="Front"/>
- <layer id="5" name="AlwaysFront" width="8" height="9">
+ <layer id="5" name="AlwaysFront" width="8" height="8">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
@@ -158,7 +152,6 @@
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,
 0,0,0,0,0,4340,4341,4342,
-0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0
 </data>
  </layer>
