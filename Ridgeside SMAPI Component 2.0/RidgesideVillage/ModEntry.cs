@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewValley;
@@ -90,9 +91,6 @@ namespace RidgesideVillage
             Foxbloom.Initialize(this);
 
             TravelingCart.Initialize(this);
-
-            Helper.ConsoleCommands.Add("LocationModData", "show ModData of given location", printLocationModData);
-            Helper.ConsoleCommands.Add("remove_equipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
         }
 
         private void OnAssetRequested(object sender, AssetRequestedEventArgs e)
@@ -126,24 +124,6 @@ namespace RidgesideVillage
             Log.Trace("Removed all repeatable events");
         }
 
-        private void printLocationModData(string arg1, string[] arg2)
-        {
-            if (arg2.Length < 1)
-            {
-                Log.Info("Location parameter needed");
-                return;
-            }
-            GameLocation location = Game1.getLocationFromName(arg2[0]);
-            if (location != null)
-            {
-                foreach (var key in location.modData.Keys)
-                {
-                    Log.Info($"{key}: {location.modData[key]}");
-                }
-            }
-            Log.Info("Done");
-        }
-
         private void OnGameLaunched(object sender, EventArgs e)
         {
             TileActionHandler.Initialize(Helper);
@@ -164,65 +144,24 @@ namespace RidgesideVillage
             // Custom CP Token Set-up
             CustomCPTokens.RegisterTokens();
 
-            Helper.ConsoleCommands.Add("RSV_reset_pedestals", "", ResetPedestals);
-            Helper.ConsoleCommands.Add("RSV_open_portal", "", OpenPortal);
+            Helper.ConsoleCommands.Add("RSV_LocationModData", "show ModData of given location", printLocationModData);
+            Helper.ConsoleCommands.Add("RSV_RemoveEquipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
+            Helper.ConsoleCommands.Add("RSV_ResetPedestals", "", ResetPedestals);
+            Helper.ConsoleCommands.Add("RSV_OpenPortal", "", OpenPortal);
+            Helper.ConsoleCommands.Add("RSV_ToggleCaveSpawn", "", ToggleCaveSpawn);
+            Helper.ConsoleCommands.Add("RSV_ToggleLockedNPC", "", ToggleLockedNPC);
             // RSV_rivera_secret in Patches/WalletItem
+            // Quest commands in Questing/QuestController
+            // Secret santa gift test in Patches/SecretSantaGift
+            // Artifact reset in Patches/TreasureItems
 
             // Generic Mod Config Menu setup
             ConfigMenu.RegisterMenu();
         }
 
-        private void OpenPortal(string arg1, string[] arg2)
-        {
-            if (Context.IsWorldReady && this.SpiritShrine != null)
-            {
-                SpiritShrine.OpenPortal(arg1, arg2);
-            }
-        }
-
-        private void ResetPedestals(string arg1, string[] arg2)
-        {
-            if (Context.IsWorldReady && this.SpiritShrine != null)
-            {
-                SpiritShrine.ResetPedestals(arg1, arg2);
-            }
-        }
-
-        private void RemoveEquipment(string arg1, string[] arg2)
-        {
-            Game1.player.hat.Value = null;
-            Game1.player.shirt.Value = -1;
-            Game1.player.changeShirt(-1);
-            Game1.player.shirtItem.Value = null;
-            Game1.player.pants.Value = -1;
-            Game1.player.changePants(Color.White);
-            Game1.player.pantsItem.Value = null;
-            Game1.player.UpdateClothing();
-
-            try { Game1.player.boots?.Value.onUnequip(); } catch { }
-            Game1.player.boots.Value = null;
-            Game1.player.changeShoeColor(12);
-
-            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
-            Game1.player.leftRing.Value = null;
-            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
-            Game1.player.rightRing.Value = null;
-
-            /*
-            if (!Helper.ModRegistry.IsLoaded("bcmpinc.WearMoreRings"))
-                return;
-
-            int chest_id = int.Parse(Game1.player.modData["bcmpinc.WearMoreRings/chest-id"]);
-            Chest chest = (Chest)Game1.getFarm().objects[new Vector2(chest_id, -50)];
-            foreach(var item in chest.items)
-            {
-                Ring ring = (Ring)item;
-                try { ring.onUnequip(Game1.player, Game1.currentLocation); } catch {};
-            }
-            Chest new_chest = new(true);
-            Game1.getFarm().objects[new Vector2(chest_id, -50)] = new_chest;
-            */
-        }
+        /* 
+        //   SMAPI Events
+        */
 
         private void OnSaveLoaded(object sender, EventArgs ex)
         {
@@ -300,6 +239,164 @@ namespace RidgesideVillage
                 }
             }
             //Log.Trace("RSV: Done with OnEventFinished");
+        }
+
+        /* 
+        //   Console Commands
+        */
+
+        private void printLocationModData(string arg1, string[] arg2)
+        {
+            if (arg2.Length < 1)
+            {
+                Log.Info("Location parameter needed");
+                return;
+            }
+            GameLocation location = Game1.getLocationFromName(arg2[0]);
+            if (location != null)
+            {
+                foreach (var key in location.modData.Keys)
+                {
+                    Log.Info($"{key}: {location.modData[key]}");
+                }
+            }
+            Log.Info("Done");
+        }
+
+        private void RemoveEquipment(string arg1, string[] arg2)
+        {
+            Game1.player.hat.Value = null;
+            Game1.player.shirt.Value = -1;
+            Game1.player.changeShirt(-1);
+            Game1.player.shirtItem.Value = null;
+            Game1.player.pants.Value = -1;
+            Game1.player.changePants(Color.White);
+            Game1.player.pantsItem.Value = null;
+            Game1.player.UpdateClothing();
+
+            try { Game1.player.boots?.Value.onUnequip(); } catch { }
+            Game1.player.boots.Value = null;
+            Game1.player.changeShoeColor(12);
+
+            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
+            Game1.player.leftRing.Value = null;
+            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
+            Game1.player.rightRing.Value = null;
+        }
+
+        private void OpenPortal(string arg1, string[] arg2)
+        {
+            if (Context.IsWorldReady && this.SpiritShrine != null)
+            {
+                SpiritShrine.OpenPortal(arg1, arg2);
+            }
+        }
+
+        private void ResetPedestals(string arg1, string[] arg2)
+        {
+            if (Context.IsWorldReady && this.SpiritShrine != null)
+            {
+                SpiritShrine.ResetPedestals(arg1, arg2);
+            }
+        }
+
+        private void ToggleCaveSpawn(string arg1, string[] arg2)
+        {
+            if (SaveGame.loaded?.player != null || Context.IsWorldReady)
+            {
+                if (!Game1.player.IsMainPlayer)
+                {
+                    Log.Warn("Command failed.\nThis command can only be used by the host player in a multiplayer game.");
+                    return;
+                }
+                if (!Game1.player.eventsSeen.Contains(RSVConstants.E_AGUAR_8H))
+                {
+                    Log.Warn("Command failed.\nThis command can only be used after Aguar's cave has been unlocked.");
+                    return;
+                }   
+                if (Game1.player.dialogueQuestionsAnswered.Contains(RSVConstants.R_AGUAR_FLOWERS))
+                {
+                    Game1.player.dialogueQuestionsAnswered.Remove(RSVConstants.R_AGUAR_FLOWERS);
+                    Game1.player.dialogueQuestionsAnswered.Add(RSVConstants.R_AGUAR_FRUIT);
+                    Log.Info("Command succeeded.\nAguar cave spawn changed from FLOWERS to FRUIT.");
+                }
+                else if (Game1.player.dialogueQuestionsAnswered.Contains(RSVConstants.R_AGUAR_FRUIT))
+                {
+                    Game1.player.dialogueQuestionsAnswered.Remove(RSVConstants.R_AGUAR_FRUIT);
+                    Game1.player.dialogueQuestionsAnswered.Add(RSVConstants.R_AGUAR_FLOWERS);
+                    Log.Info("Command succeeded.\nAguar cave spawn changed from FRUIT to FLOWERS.");
+                }
+
+            }
+        }
+
+        private void ToggleLockedNPC(string arg1, string[] arg2)
+        {
+            if (SaveGame.loaded?.player != null || Context.IsWorldReady)
+            {
+                if (!Game1.player.IsMainPlayer)
+                {
+                    Log.Warn("Command failed.\nThis command can only be used by the host player in a multiplayer game.");
+                    return;
+                }
+                var name = arg2[0].ToLower();
+                if (!Dateables.unlock_rules.ContainsKey(name))
+                {
+                    Log.Warn("Command failed.\nNPC name not recognized. Please enter one of Anton, Bryle, Faye, Irene, Paula, or Zayne.");
+                    return;
+                }
+                var unlock_rule = Dateables.unlock_rules[name].Split('/');
+                if (!Game1.player.eventsSeen.Contains(int.Parse(unlock_rule[0])))
+                {
+                    Log.Warn("Command failed.\n8 heart event for " + name.ToUpper() + " not yet seen.");
+                    return;
+                }
+                if (unlock_rule[1] == "r")
+                {
+                    int date_id = int.Parse(unlock_rule[2]);
+                    int rival_id;
+                    switch(name)
+                    {
+                        case "irene":
+                            rival_id = date_id - 1;
+                            break;
+                        case "anton":
+                            rival_id = date_id + 2;
+                            break;
+                        default:
+                            rival_id = date_id + 1;
+                            break;
+                    }
+                    if (Game1.player.dialogueQuestionsAnswered.Contains(date_id))
+                    {
+                        Game1.player.dialogueQuestionsAnswered.Remove(date_id);
+                        Game1.player.dialogueQuestionsAnswered.Add(rival_id);
+                        Log.Info("NPC " + name.ToUpper() + " is no longer dateable.");
+                    }
+                    else
+                    {
+                        if (Game1.player.dialogueQuestionsAnswered.Contains(rival_id))
+                            Game1.player.dialogueQuestionsAnswered.Remove(rival_id);
+                        Game1.player.dialogueQuestionsAnswered.Add(date_id);
+                        Log.Info("NPC " + name.ToUpper() + " is now dateable.");
+                    }
+                }
+                else if (unlock_rule[1] == "!m")
+                {
+                    string mail_id = unlock_rule[2];
+                    if (Game1.player.mailReceived.Contains(mail_id))
+                    {
+                        Game1.player.mailReceived.Remove(mail_id);
+                        Log.Info("NPC " + name.ToUpper() + " is now dateable.");
+                    }
+                    else
+                    {
+                        Game1.player.mailReceived.Add(mail_id);
+                        Log.Info("NPC " + name.ToUpper() + " is no longer dateable.");
+                    }
+                }
+                Log.Info("(Change may not take effect until you change locations.)");
+            }
         }
     }
 }

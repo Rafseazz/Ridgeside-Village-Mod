@@ -1,0 +1,14 @@
+{
+"Changes": [
+
+		// Casks in summit shed
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVSummitShed",
+			"MapProperties": { "CanCaskHere": "t" },
+			"When": {
+				"HasMod|contains=DoctorHadley.CaskEnabledSheds,Aimon111.RedesignedShedLayout": true,
+			}
+		},
+]
+}

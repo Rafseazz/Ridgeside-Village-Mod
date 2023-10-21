@@ -47,12 +47,12 @@ namespace RidgesideVillage.Questing
 			TileActionHandler.RegisterTileAction("RSVQuestBoard", OpenQuestBoard);
 			TileActionHandler.RegisterTileAction("RSVSpecialOrderBoard", OpenSOBoard);
 
-			Helper.ConsoleCommands.Add("RSVrefresh", "", (s1, s2) => {
+			Helper.ConsoleCommands.Add("RSV_RefreshSOs", "", (s1, s2) => {
 				RSVSpecialOrderBoard.UpdateAvailableRSVSpecialOrders(force_refresh: true);
 				Log.Info("RSV Special Orders refreshed");
 			});
 
-			Helper.ConsoleCommands.Add("RSVAddQuest", "", (s1, s2) => {
+			Helper.ConsoleCommands.Add("RSV_AddQuest", "", (s1, s2) => {
                 var quest = QuestFactory.getQuestFromId(int.Parse(s2[0]));
 				if (quest != null)
 				{
@@ -66,8 +66,8 @@ namespace RidgesideVillage.Questing
 				}
 			});
 
-			Helper.ConsoleCommands.Add("RSVQuestState", "", (s1, s2) => PrintQuestState());
-			Helper.ConsoleCommands.Add("RSVCheckQuests", "", (s1,s2) => CheckQuests());
+			Helper.ConsoleCommands.Add("RSV_QuestState", "", (s1, s2) => PrintQuestState());
+			Helper.ConsoleCommands.Add("RSV_CheckQuests", "", (s1,s2) => CheckQuests());
 			Helper.Events.GameLoop.DayStarted += OnDayStarted;
 			Helper.Events.Player.Warped += OnWarped;
 			Helper.Events.Display.RenderedWorld += RenderQuestMarkersIfNeeded;

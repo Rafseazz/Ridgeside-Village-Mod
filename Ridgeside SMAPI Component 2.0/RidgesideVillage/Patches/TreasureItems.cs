@@ -37,7 +37,7 @@ namespace RidgesideVillage
             Helper.Events.Player.Warped += OnWarped;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.ReturnedToTitle += OnReturnToTitle;
-            Helper.ConsoleCommands.Add("RSV_reset_artifacts", "", (_,_) => { ResetArtifacts(); Log.Info("Reset Artifacts"); });
+            Helper.ConsoleCommands.Add("RSV_ResetArtifacts", "", (_,_) => { ResetArtifacts(); Log.Info("Reset Artifacts"); });
 
             Log.Trace($"Applying Harmony Patch from \"{nameof(TreasureItems)}\".");
             harmony.Patch(

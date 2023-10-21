@@ -22,7 +22,7 @@ namespace RidgesideVillage
         private static IModHelper Helper { get; set; }
         private static IManifest ModManifest;
 
-        private static string[] travelers = { "Bryle", "Irene", "June", "Zayne" };
+        private static string[] travelers = { "Bryle", "Irene", "June", "ayne" };
         private static Dictionary<string, string> to_be_broadcast = new Dictionary<string, string>(){
          // Important event, extra info type/extra info ID
          // e: event only, r: response ID, m: mail flag
@@ -35,15 +35,15 @@ namespace RidgesideVillage
             { "75160320", "e/" }, // Faye fashion show notice
             { "75160449", "e/" }, // Faye fashion show
         };
-        private static Dictionary<string, string> unlock_rules = new Dictionary<string, string>(){
+        public static Dictionary<string, string> unlock_rules = new Dictionary<string, string>(){
          // Character, deciding heart event ID/unlock cond type/cond ID
          // r: response, m: mail, !: does not have
-            { "Anton", "75160304/r/75163042" },
-            { "Paula", "75160352/r/75163521" },
-            { "Irene", "75160324/r/7516325" },
-            { "Zayne", "75160440/r/7516439" },
-            { "Faye", "75160449/!m/FayeBryleLoveStory" },
-            { "Bryle", "75160453/!m/FayeBryleLoveStory" },
+            { "anton", "75160304/r/75163042" },
+            { "paula", "75160352/r/75163521" },
+            { "irene", "75160324/r/7516325" },
+            { "zayne", "75160440/r/7516439" },
+            { "faye", "75160449/!m/FayeBryleLoveStory" },
+            { "bryle", "75160453/!m/FayeBryleLoveStory" },
         };
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper, IManifest manifest)
@@ -269,17 +269,9 @@ namespace RidgesideVillage
         private static void SocialPage_drawNPCSlot_Postfix(SocialPage __instance, SpriteBatch b, int i)
         {
             string name = __instance.names[i] as string;
-            if (unlock_rules.Keys.Contains(name) && !SocialPage.isDatable(name))
+            if (unlock_rules.Keys.Contains(name.ToLower()) && !SocialPage.isDatable(name))
             {
-                int event_id = int.Parse(unlock_rules[name].Split("/")[0]);
-                string id_type = unlock_rules[name].Split("/")[1];
-                var romance_id = unlock_rules[name].Split("/")[2];
-                bool unlocked = false;
-                if (id_type == "r")
-                    unlocked = Game1.player.dialogueQuestionsAnswered.Contains(int.Parse(romance_id));
-                else if (id_type == "!m")
-                    unlocked = !Game1.player.mailReceived.Contains(romance_id);
-                if (Game1.player.eventsSeen.Contains(event_id) && unlocked)
+                if (Game1.player.eventsSeen.Contains(int.Parse(unlock_rules[name.ToLower()].Split("/")[0])))
                     return;
                 int width = (IClickableMenu.borderWidth * 3 + 128 - 40 + 192) / 2;
                 string text = Game1.parseText(Helper.Translation.Get("RelationshipStatus.Locked"), Game1.smallFont, width);

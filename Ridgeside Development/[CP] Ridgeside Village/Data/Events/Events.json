@@ -2280,7 +2280,7 @@
 		"Target": "Data/Events/Farm",
 		"Entries": {
 			// June introduction
-			"94620000/t 600 2600/z spring/z summer": "continue/64 15/farmer 64 16 2 Richard 64 18 0/broadcastEvent/addConversationTopic june_arrival 1/skippable/pause 1500/speak Richard \"{{i18n:June.intro.1}}\"/pause 500/speak Richard \"{{i18n:June.intro.2}}\"/pause 300/speak Richard \"{{i18n:June.intro.3}}\"/pause 300/end"
+			"94620000/t 600 2600/z spring/z summer": "continue/64 15/farmer 64 16 2 Richard 64 18 0/broadcastEvent/addConversationTopic june_arrival 1/addConversationTopic june_arrival-long 3/skippable/pause 1500/speak Richard \"{{i18n:June.intro.1}}\"/pause 500/speak Richard \"{{i18n:June.intro.2}}\"/pause 300/speak Richard \"{{i18n:June.intro.3}}\"/pause 300/end"
 		}
 	},
 

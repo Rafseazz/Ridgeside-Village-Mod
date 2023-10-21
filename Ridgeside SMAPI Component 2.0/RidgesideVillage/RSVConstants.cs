@@ -37,6 +37,11 @@ namespace RidgesideVillage
         public const int E_ZAYNE_6H = 75160438;
         public const int E_BRYLE_INTRO = 75160375;
         public const int E_BRYLE_8H = 75160453;
+        public const int E_AGUAR_8H = 75160064;
+
+        // Response IDs
+        public const int R_AGUAR_FLOWERS = 751600641;
+        public const int R_AGUAR_FRUIT = 751600642;
 
         // Quests
         public const int Q_CURSEDGH1 = 72860001;

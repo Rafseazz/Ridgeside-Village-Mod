@@ -61,7 +61,8 @@ namespace RidgesideVillage
             if (Game1.player.eventsSeen.Contains(RSVConstants.E_WEDDINGRECEPTION))
             {
                 Game1.player.eventsSeen.Remove(RSVConstants.E_WEDDINGRECEPTION);
-                Game1.player.activeDialogueEvents.Remove(RSVConstants.M_RECEPTIONBOOKEDFLAG);
+                if (Game1.player.activeDialogueEvents.ContainsKey(RSVConstants.M_RECEPTIONBOOKEDFLAG))
+                    Game1.player.activeDialogueEvents.Remove(RSVConstants.M_RECEPTIONBOOKEDFLAG);
             }
 
             //Adds flag if player is engaged so the mail can be sent to the player

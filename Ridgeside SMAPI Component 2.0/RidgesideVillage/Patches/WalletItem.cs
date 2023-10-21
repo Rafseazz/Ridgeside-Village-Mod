@@ -31,7 +31,7 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Helper.ConsoleCommands.Add("RSV_rivera_secret", "Gives you the Rivera Family Secret item until you exit the save.", GetItemCommand);
+            Helper.ConsoleCommands.Add("RSV_RiveraSecret", "Gives you the Rivera Family Secret item until you exit the save.", GetItemCommand);
             image = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/RiveraSecret.png"));
 
             Helper.Events.GameLoop.GameLaunched += OnGameLaunched;

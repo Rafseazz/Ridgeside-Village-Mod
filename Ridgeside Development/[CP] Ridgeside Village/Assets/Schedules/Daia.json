@@ -7,9 +7,6 @@
 		"Entries": {
 			"spring": "2400 Custom_Ridgeside_RSVHiddenWarp2 1 1 2",
 					},
-		"When": {
-			"HasFlag |contains=RSV.CompleteDaiaQuest": false,
-		} 
 	},
 
 	//Antisocial schedule
@@ -22,7 +19,7 @@
 		"When": {
 			"HasFlag |contains=RSV.CompleteDaiaQuest": false,
 			"HasSeenEvent": 75160187,
-		}  
+		}
 	},
 	//Temp
 	{
@@ -34,7 +31,7 @@
 		"When": {
 			"HasFlag": "RSV.CompleteDaiaQuest",
 			"HasSeenEvent |contains=75160255": false,
-		}   
+		}
 	},
 	//Antisocial schedule to normal after meeting Belinda
 	{
@@ -47,7 +44,7 @@
 			"HasFlag": "RSV.CompleteDaiaQuest",
 			"HasSeenEvent |contains=75160255": true,
 			"HasSeenEvent |contains=75160265": false,
-		}  
+		}
 	},
 
 	//Social Schedule
@@ -70,7 +67,7 @@
 		"When": {
       		"HasFlag": "RSV.CompleteDaiaQuest",
 			"HasSeenEvent: hostPlayer": 75160263,
-		}  
+		}
 	},
 
 ]

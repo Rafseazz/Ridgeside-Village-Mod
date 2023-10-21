@@ -16,9 +16,6 @@
 			"winter_15": "610 Custom_Ridgeside_RSVNinjaHouse 8 6 2 jio_meditate/1200 Beach 44 24 2/2600 Custom_Ridgeside_RSVNinjaHouse 14 5 0",
 
 					},
-		"When": {
-			"HasFlag |contains=RSV.CompleteDaiaQuest": false,
-		}
 	},
 
 	//Temp
@@ -88,7 +85,8 @@
 			"marriage_Sun": "GOTO marriage_Mon",
 		},
 		"When": {
-			"HasSeenEvent": 75160241, "HasSeenEvent |contains=75160242": false,
+			"HasSeenEvent": 75160241,
+			"HasSeenEvent |contains=75160242": false,
 		}
 	}
 
