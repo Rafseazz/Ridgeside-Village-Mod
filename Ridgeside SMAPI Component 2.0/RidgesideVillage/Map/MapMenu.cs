@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +46,11 @@ namespace RidgesideVillage
             this.image = mapTexture;
 
             MapData = new MapData();
+            this.allClickableComponents = new List<ClickableComponent>();
+            foreach (var entry in this.MapData.Locations.Values)
+            {
+                this.allClickableComponents.Add(new ClickableComponent(entry.AreaRect, entry.Text));
+            }
 
             TopLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width), (int)(image.Height));
             MapRectangle = new Rectangle((int)TopLeft.X, (int)TopLeft.Y, (int)(image.Width), (int)(image.Height));
