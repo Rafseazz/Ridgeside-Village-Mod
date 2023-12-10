@@ -11,7 +11,7 @@
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVCliff",
-		"FromFile": "Assets/Maps/OutdoorMaps/RSVCliff.tmx",
+		"FromFile": "Assets/Maps/OutdoorMaps/Custom_Ridgeside_RSVCliff.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 108, "Height": 40 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 108, "Height": 40 },
 		"PatchMode": "ReplaceByLayer",
@@ -33,7 +33,7 @@
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheRide",
-		"FromFile": "Assets/Maps/EventMaps/RSVTheRide.tmx",
+		"FromFile": "Assets/Maps/EventMaps/Custom_Ridgeside_RSVTheRide.tmx",
 		"ToArea": { "X": 0, "Y": 0, "Width": 93, "Height": 40 },
 		"PatchMode": "ReplaceByLayer",
 		"When": { "Time": "{{Range: 0600, 1900}}" },
@@ -733,7 +733,7 @@
 				"Position": { "X": 125, "Y": 12 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 46 72"
+				"Action": "RSVTeleport Custom_Ridgeside_RidgesideVillage 46 72"
                }
             }
 		],
@@ -748,7 +748,7 @@
 				"Position": { "X": 45, "Y": 72 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 67 123"
+				"Action": "RSVTeleport Custom_Ridgeside_RidgesideVillage 67 123"
                }
             }
 		],
@@ -763,7 +763,7 @@
 				"Position": { "X": 67, "Y": 124 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RSVTheHike 60 27"
+				"Action": "RSVTeleport Custom_Ridgeside_RSVTheHike 60 27"
                }
             }
 		],
@@ -778,7 +778,7 @@
 				"Position": { "X": 60, "Y": 26 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 125 13"
+				"Action": "RSVTeleport Custom_Ridgeside_RidgesideVillage 125 13"
                }
             }
 		],
@@ -795,7 +795,7 @@
 				"Position": { "X": 57, "Y": 52 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_TortsRealm 14 38"
+				"Action": "RSVTeleport Custom_Ridgeside_TortsRealm 14 38"
                }
             }
 		],

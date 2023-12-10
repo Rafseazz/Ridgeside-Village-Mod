@@ -137,13 +137,14 @@
         {
           "Operation": "Append",
           "Target": ["Entries", "Universal_Love"],
-          "Value": "{{spacechase0.JsonAssets/ObjectId:Foxbloom}}",
+          "Value": "Rafseazz.RSVCP_Foxbloom",
           "Delimiter": " "
         }
       ]
     },
 
     // Rings hated (so that they don't show up in Lookup Anything)
+    /* TODO shekurika
     {
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
@@ -151,10 +152,10 @@
         {
           "Operation": "Append",
           "Target": ["Entries", "Universal_Hate"],
-          "Value": "{{spacechase0.JsonAssets/ObjectId:Glove of the Assassin}} {{spacechase0.JsonAssets/ObjectId:The Beautiful Serpent's Ring}} {{spacechase0.JsonAssets/ObjectId:The Fairy Doe Fox's Ring}} {{spacechase0.JsonAssets/ObjectId:The Ring of the Ridge Deities}}",
+          "Value": "Rafseazz.RSVCP_Glove_of_the_Assassin {{spacechase0.JsonAssets/ObjectId:The Beautiful Serpent's Ring}} {{spacechase0.JsonAssets/ObjectId:The Fairy Doe Fox's Ring}} {{spacechase0.JsonAssets/ObjectId:The Ring of the Ridge Deities}}",
           "Delimiter": " "
         }
       ]
-    }
+    }*/
   ]
 }

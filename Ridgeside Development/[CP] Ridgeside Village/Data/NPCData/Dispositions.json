@@ -1,199 +1,1830 @@
 {
-"Changes": [
+	"Changes": [
+		//-------------------------
+		// D I S P O S I T I O N S
+		//-------------------------
+		{
+			"LogName": "NPC Dispositions",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"Entries": {
+				//Log Cabin Hotel
+				"Richard": {
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"BirthDay": 3,
+					"FriendsAndFamily": {
+						"Ysabelle": "{{i18n:granddaughter}}"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_LogCabinHotel3rdFloor",
+							"Tile": {
+								"X": 3,
+								"Y": 12
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Richard}}",
+					"Age": "Adult",
+				},
+				"Ysabelle": {
+					"Manner": "Rude",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Richard": "{{i18n:grandfather}}"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_LogCabinHotel2ndFloor",
+							"Tile": {
+								"X": 14,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Ysabelle}}",
+					"Age": "Adult",
+					"BirthDay": 11
+				},
+				"Flor": {
+					"Manner": "Neutral",
+					"SocialAnxiety": "Shy",
+					"Optimism": "Negative",
+					"Gender": "Female",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_LogCabinHotel2ndFloor",
+							"Tile": {
+								"X": 3,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Flor}}",
+					"Age": "Adult",
+					"BirthDay": 14
+				},
+				"Philip": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_LogCabinHotel2ndFloor",
+							"Tile": {
+								"X": 13,
+								"Y": 22
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Philip}}",
+					"Age": "Adult",
+					"BirthDay": 17,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-//-------------------------
-// D I S P O S I T I O N S
-//-------------------------
+						{
+							//energy tonic
+							"ItemId": "(O)349",
+							"MinStack": 5
+						}
+					]
 
-	{
-		"LogName": "NPC Dispositions",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"Entries": {
+				},
+				//Odd Jobs
+				"Ian": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Shy",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_IanHouse",
+							"Tile": {
+								"X": 10,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Ian}}",
+					"Age": "Adult",
+					"BirthDay": 14,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//Log Cabin Hotel
-			"Richard": "adult/neutral/neutral/neutral/male/non-datable/null/Town/fall 3/{{i18n:NPC_Data.Richard}}/Custom_Ridgeside_LogCabinHotel3rdFloor 3 12/{{i18n:Name.Richard}}",
-			"Ysabelle": "adult/rude/outgoing/positive/female/datable/null/Town/spring 11/{{i18n:NPC_Data.Ysabelle}}/Custom_Ridgeside_LogCabinHotel2ndFloor 14 5/{{i18n:Name.Ysabelle}}",
-			"Flor": "adult/neutral/shy/negative/female/datable/null/Town/summer 14//Custom_Ridgeside_LogCabinHotel2ndFloor 3 5/{{i18n:Name.Flor}}",
-			"Philip": "adult/polite/outgoing/positive/male/datable/null/Town/spring 17//Custom_Ridgeside_LogCabinHotel2ndFloor 13 22/{{i18n:Name.Philip}}",
+						{
+							//cloth
+							"ItemId": "(O)428",
+							"MinStack": 5
+						},
+						{
+							//Goat Milk
+							"ItemId": "(O)436",
+							"MinStack": 10
+						}
+					]
+				},
+				"Sean": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Blair": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_IanHouse",
+							"Tile": {
+								"X": 13,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Sean}}",
+					"Age": "Adult",
+					"BirthDay": 22
+				},
+				//Electrician
+				"Kenneth": {
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_KennethHouse",
+							"Tile": {
+								"X": 16,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Kenneth}}",
+					"Age": "Adult",
+					"BirthDay": 18,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//Odd Jobs
-			"Ian": "adult/polite/shy/positive/male/datable/null/Town/fall 14//Custom_Ridgeside_IanHouse 10 5/{{i18n:Name.Ian}}",
-			"Sean": "adult/polite/outgoing/positive/male/datable/null/Town/spring 22/{{i18n:NPC_Data.Sean}}/Custom_Ridgeside_IanHouse 13 5/{{i18n:Name.Sean}}",
+						{
+							//battery
+							"ItemId": "(O)787",
+							"MinStack": 30
+						}
+					]
+				},
+				//Ridgeside Clinic
+				"Paula": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Negative",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "Anton",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Anton": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PaulaClinic",
+							"Tile": {
+								"X": 2,
+								"Y": 7
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Paula}}",
+					"Age": "Adult",
+					"BirthDay": 27
+				},
+				//RSV Office
+				"Lenny": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {
+						"Lewis": "{{i18n:brother}}"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_LennyHouse",
+							"Tile": {
+								"X": 21,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Lenny}}",
+					"Age": "Adult",
+					"BirthDay": 16
+				},
+				//Pickens Residence
+				"Maddie": {
+					"Manner": "Rude",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_MaddieHouse",
+							"Tile": {
+								"X": 20,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Maddie}}",
+					"Age": "Adult",
+					"BirthDay": 23
+				},
+				//Daniels Residence
+				"Corine": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Ezekiel": "[LocalizedText Strings\\Characters:Relative_Dad]"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_EzekielHouse",
+							"Tile": {
+								"X": 29,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Corine}}",
+					"Age": "Adult",
+					"BirthDay": 26
+				},
+				"Ezekiel": {
+					"Manner": "Rude",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Corine": "[LocalizedText Strings\\Characters:Relative_Daughter]"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_EzekielHouse",
+							"Tile": {
+								"X": 4,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Ezekiel}}",
+					"Age": "Adult",
+					"BirthDay": 12
+				},
+				//Legame Residence or 3Bros
+				"Lorenzo": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Shanice": "wife",
+						"Kiarra": "Sister",
+						"Paula": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_3Bros2ndFloor",
+							"Tile": {
+								"X": 6,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Lorenzo}}",
+					"Age": "Adult",
+					"BirthDay": 1
+				},
+				"Anton": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "Paula",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Kiarra": "sister",
+						"Lorenzo": "brother",
+						"Paula": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_3Bros2ndFloor",
+							"Tile": {
+								"X": 18,
+								"Y": 12
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Anton}}",
+					"Age": "Adult",
+					"BirthDay": 9
+				},
+				"Kiarra": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Negative",
+					"Gender": "Female",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {
+						"Anton": "{{i18n:brother}} Anton",
+						"Lorenzo": "{{i18n:oldest_brother}} Lorenzo"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_3Bros2ndFloor",
+							"Tile": {
+								"X": 21,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Kiarra}}",
+					"Age": "Adult",
+					"BirthDay": 13
+				},
+				"Shanice": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Lorenzo": "husband"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_3Bros2ndFloor",
+							"Tile": {
+								"X": 5,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Shanice}}",
+					"Age": "Adult",
+					"BirthDay": 26
+				},
+				//Blooming Hill Farm
+				"Jeric": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_JericHouse",
+							"Tile": {
+								"X": 18,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Jeric}}",
+					"Age": "Adult",
+					"BirthDay": 2
+				},
+				"Bryle": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Host 75160375",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "Faye",
+					"HomeRegion": "Other",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {
+						"Jeric": "",
+						"Faye": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 8,
+								"Y": 8
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Bryle}}",
+					"Age": "Adult",
+					"BirthDay": 1
+				},
+				//Kobayashi Residence
+				"Naomi": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Host 75160249",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Shiro": "{{i18n:eldest_son}}",
+						"Yuuma": "{{i18n:youngest_son}}"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 5,
+								"Y": 8
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Naomi}}",
+					"Age": "Adult",
+					"BirthDay": 18
+				},
+				"Shiro": {
+					"Manner": "Rude",
+					"SocialAnxiety": "Shy",
+					"Optimism": "Negative",
+					"Gender": "Male",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Naomi": "mother",
+						"Yuuma": "brother"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_ShiroHouse",
+							"Tile": {
+								"X": 10,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Shiro}}",
+					"Age": "Adult",
+					"BirthDay": 28
+				},
+				"Yuuma": {
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Naomi": "mother",
+						"Yuuma": "brother"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_ShiroHouse",
+							"Tile": {
+								"X": 14,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Yuuma}}",
+					"Age": "Child",
+					"BirthDay": 4
+				},
+				//Yojeong Residence or Tailor
+				"Faye": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "Bryle",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {
+						"Maddie": "",
+						"Jeric": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_FayeHouse",
+							"Tile": {
+								"X": 3,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Faye}}",
+					"Age": "Adult",
+					"BirthDay": 12
+				},
+				//Akina Residence
+				"Pika": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Keahi": "son"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PikaHouse",
+							"Tile": {
+								"X": 18,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Pika}}",
+					"Age": "Adult",
+					"BirthDay": 21,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//Electrician
-			"Kenneth": "adult/neutral/neutral/neutral/male/datable/null/Town/summer 18//Custom_Ridgeside_KennethHouse 16 5/{{i18n:Name.Kenneth}}",
+						{
+							//trash
+							"ItemId": "(O)168",
+							"MinStack": 1
+						},
+						{
+							//tomato
+							"ItemId": "(O)256",
+							"MinStack": 1
+						},
+						{
+							//Fried Fish a la Ridge
+							"ItemId": "(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
+							"MinStack": 1
+						}
+					]
+				},
+				"Keahi": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Pika": "dad"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PikaHouse",
+							"Tile": {
+								"X": 19,
+								"Y": 15
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Keahi}}",
+					"Age": "Child",
+					"BirthDay": 11
+				},
+				//Rivera Residence or Fishing House
+				"Carmen": {
+					"Manner": "Neutral",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Blair": "{{i18n:hija}}"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_BlairHouse",
+							"Tile": {
+								"X": 16,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Carmen}}",
+					"Age": "Adult",
+					"BirthDay": 21,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//Ridgeside Clinic
-			"Paula": "adult/polite/neutral/negative/female/non-datable/Anton/Town/fall 27/{{i18n:NPC_Data.Paula}}/Custom_Ridgeside_PaulaClinic 2 7/{{i18n:Name.Paula}}",
+						{
+							//Dressed Spinner
+							"ItemId": "(O)687",
+							"MinStack": 1
+						},
+						{
+							//Barbed Hook
+							"ItemId": "(O)691",
+							"MinStack": 1
+						},
+						{
+							//Wild Bait
+							"ItemId": "(O)774",
+							"MinStack": 50
+						}
+					]
+				},
+				"Blair": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Carmen": "mother",
+						"Sean": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_BlairHouse",
+							"Tile": {
+								"X": 5,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Blair}}",
+					"Age": "Teen",
+					"BirthDay": 5,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//RSV Office
-			"Lenny": "adult/polite/outgoing/positive/female/non-datable/null/Town/summer 16/{{i18n:NPC_Data.Lenny}}/Custom_Ridgeside_LennyHouse 21 5/{{i18n:Name.Lenny}}",
+						{
+							//Dressed Spinner
+							"ItemId": "(O)687",
+							"MinStack": 1
+						},
+						{
+							//Barbed Hook
+							"ItemId": "(O)691",
+							"MinStack": 1
+						},
+						{
+							//Wild Bait
+							"ItemId": "(O)774",
+							"MinStack": 50
+						}
+					]
+				},
+				//Bladebane Residence
+				"Freddie": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Lola": "wife"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_FreddieHouse",
+							"Tile": {
+								"X": 3,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Freddie}}",
+					"Age": "Adult",
+					"BirthDay": 18
+				},
+				"Lola": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {
+						"Freddie": "husband"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_FreddieHouse",
+							"Tile": {
+								"X": 4,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Lola}}",
+					"Age": "Adult",
+					"BirthDay": 2
+				},
+				//Amethyne Residence
+				"Maive": {
+					"Manner": "Rude",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Negative",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Ariah": "granddaughter",
+						"Louie": "grandson",
+						"Sonny": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PurpleMansion2ndFloor",
+							"Tile": {
+								"X": 24,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Maive}}",
+					"Age": "Adult",
+					"BirthDay": 14
+				},
+				"Zayne": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Host 75160338",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "Irene",
+					"HomeRegion": "Other",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Maive": "grandmother",
+						"Louie": "[LocalizedText Strings\\Characters:Relative_LittleBrother]",
+						"Ariah": "",
+						"Irene": "",
+						"Sonny": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 10,
+								"Y": 8
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Zayne}}",
+					"Age": "Adult",
+					"BirthDay": 2
+				},
+				"Ariah": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Maive": "grandmother",
+						"Louie": "",
+						"Irene": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PurpleMansion2ndFloor",
+							"Tile": {
+								"X": 3,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Ariah}}",
+					"Age": "Teen",
+					"BirthDay": 4
+				},
+				"Louie": {
+					"Manner": "Rude",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Maive": "grandmother",
+						"Sonny": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PurpleMansion2ndFloor",
+							"Tile": {
+								"X": 17,
+								"Y": 9
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Louie}}",
+					"Age": "Child",
+					"BirthDay": 16
+				},
+				"Sonny": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Maive": "",
+						"Louie": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PurpleMansion",
+							"Tile": {
+								"X": 55,
+								"Y": 44
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Sonny}}",
+					"Age": "Adult",
+					"BirthDay": 28
+				},
+				"Irene": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "Zayne",
+					"HomeRegion": "Town",
+					"BirthSeason": "winter",
+					"FriendsAndFamily": {
+						"Ariah": "",
+						"Sonny": ""
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_PurpleMansion",
+							"Tile": {
+								"X": 2,
+								"Y": 44
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Irene}}",
+					"Age": "Adult",
+					"BirthDay": 27,
+				},
+				"Althea": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Rude",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp",
+							"Tile": {
+								"X": 10,
+								"Y": 2
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Althea}}",
+					"Age": "Adult"
+				},
+				"Lorraine": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp",
+							"Tile": {
+								"X": 10,
+								"Y": 2
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Lorraine}}",
+					"Age": "Adult"
+				},
+				"Nadaline": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp",
+							"Tile": {
+								"X": 10,
+								"Y": 2
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Nadaline}}",
+					"Age": "Child"
+				},
+				"Zachary": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp",
+							"Tile": {
+								"X": 10,
+								"Y": 2
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Zachary}}",
+					"Age": "Adult"
+				},
+				//Water Research Facility
+				"Aguar": {
+					"Manner": "Rude",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Negative",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_AguarBasement",
+							"Tile": {
+								"X": 2,
+								"Y": 8
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Aguar}}",
+					"Age": "Adult",
+					"BirthDay": 25,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//Pickens Residence
-			"Maddie": "adult/rude/neutral/neutral/female/datable/null/Town/fall 23//Custom_Ridgeside_MaddieHouse 20 5/{{i18n:Name.Maddie}}",
+						{
+							//Ancient seed
+							"ItemId": "(O)114",
+							"MinStack": 1
+						}
+					]
+				},
+				//Nightingale Orchard
+				"Alissa": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Shy",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Kimpoi": "dad",
+						"Malaya": "mom",
+						"Bert": "uncle",
+						"Olga": "aunt",
+						"Trinnie": "{{i18n:cousin_trinnie}}"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_AlissaHouse",
+							"Tile": {
+								"X": 11,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Alissa}}",
+					"Age": "Teen",
+					"BirthDay": 5,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//Daniels Residence
-			"Corine": "adult/polite/outgoing/positive/female/datable/null/Town/fall 26/{{i18n:NPC_Data.Corine}}/Custom_Ridgeside_EzekielHouse 29 5/{{i18n:Name.Corine}}",
-			"Ezekiel": "adult/rude/outgoing/positive/male/not-datable/null/Town/spring 12/{{i18n:NPC_Data.Ezekiel}}/Custom_Ridgeside_EzekielHouse 4 5/{{i18n:Name.Ezekiel}}",
+						{
+							//peach sapling
+							"ItemId": "(O)631",
+							"MinStack": 3
+						}
+					]
+				},
+				"Malaya": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Host 75160251",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {
+						"Kimpoi": "husband",
+						"Alissa": "daughter",
+						"Trinnie": "niece"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 6,
+								"Y": 8
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Malaya}}",
+					"Age": "Adult",
+					"BirthDay": 27
+				},
+				"Kimpoi": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Host 75160251",
+					"Manner": "Polite",
+					"SocialAnxiety": "Shy",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"Malaya": "wife",
+						"Alissa": "daughter",
+						"Trinnie": "niece",
+						"Olga": "sister"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 7,
+								"Y": 8
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Kimpoi}}",
+					"Age": "Adult",
+					"BirthDay": 5
+				},
+				"Trinnie": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Negative",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Malaya": "aunt",
+						"Kimpoi": "uncle",
+						"Bert": "dad",
+						"Olga": "mom",
+						"Alissa": "sister"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_BertHouse2ndFloor",
+							"Tile": {
+								"X": 18,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Trinnie}}",
+					"Age": "Child",
+					"BirthDay": 16,
+					"WinterStarParticipant" : true,
+					"WinterStarGifts": [
 
-			//Legame Residence or 3Bros
-			"Lorenzo": "adult/polite/neutral/positive/male/non-datable/null/Town/fall 1/{{i18n:NPC_Data.Lorenzo}}/Custom_Ridgeside_3Bros2ndFloor 6 5/{{i18n:Name.Lorenzo}}",
-			"Anton": "adult/polite/neutral/neutral/male/non-datable/Paula/Town/spring 9/{{i18n:NPC_Data.Anton}}/Custom_Ridgeside_3Bros2ndFloor 18 12/{{i18n:Name.Anton}}",
-			"Kiarra": "adult/polite/outgoing/negative/female/datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
-			"Shanice": "adult/polite/neutral/neutral/female/non-datable/null/Town/winter 26/{{i18n:NPC_Data.Shanice}}/Custom_Ridgeside_3Bros2ndFloor 5 5/{{i18n:Name.Shanice}}",
-
-			//Blooming Hill Farm
-			"Jeric": "adult/polite/neutral/neutral/male/datable/null/Town/winter 2//Custom_Ridgeside_JericHouse 18 5/{{i18n:Name.Jeric}}",
-			"Bryle": "adult/polite/outgoing/neutral/male/non-datable/Faye/Other/summer 1/{{i18n:NPC_Data.Bryle}}/Custom_Ridgeside_RSVHiddenWarp2 8 8/{{i18n:Name.Bryle}}",
-
-			//Kobayashi Residence
-			"Naomi": "adult/neutral/neutral/neutral/female/non-datable/null/Other/spring 18/{{i18n:NPC_Data.Naomi}}/Custom_Ridgeside_RSVHiddenWarp2 5 8/{{i18n:Name.Naomi}}",
-			"Shiro": "adult/rude/shy/negative/male/datable/null/Town/winter 28/{{i18n:NPC_Data.Shiro}}/Custom_Ridgeside_ShiroHouse 10 5/{{i18n:Name.Shiro}}",
-			"Yuuma": "child/neutral/neutral/neutral/male/non-datable/null/Town/fall 4/{{i18n:NPC_Data.Yuuma}}/Custom_Ridgeside_ShiroHouse 14 5/{{i18n:Name.Yuuma}}",
-
-			//Yojeong Residence or Tailor
-			"Faye": "adult/polite/outgoing/positive/female/non-datable/Bryle/Town/summer 12/{{i18n:NPC_Data.Faye}}/Custom_Ridgeside_FayeHouse 3 5/{{i18n:Name.Faye}}",
-
-			//Akina Residence
-			"Pika": "adult/polite/outgoing/neutral/male/non-datable/null/Town/winter 21/{{i18n:NPC_Data.Pika}}/Custom_Ridgeside_PikaHouse 18 5/{{i18n:Name.Pika}}",
-			"Keahi": "child/polite/outgoing/positive/male/non-datable/null/Town/winter 11/{{i18n:NPC_Data.Keahi}}/Custom_Ridgeside_PikaHouse 19 15/{{i18n:Name.Keahi}}",
-
-			//Rivera Residence or Fishing House
-			"Carmen": "adult/neutral/outgoing/positive/female/non-datable/null/Town/fall 21/{{i18n:NPC_Data.Carmen}}/Custom_Ridgeside_BlairHouse 16 5/{{i18n:Name.Carmen}}",
-			"Blair": "teen/polite/outgoing/positive/female/datable/null/Town/winter 5/{{i18n:NPC_Data.Blair}}/Custom_Ridgeside_BlairHouse 5 5/{{i18n:Name.Blair}}",
-
-			//Bladebane Residence
-			"Freddie": "adult/polite/outgoing/positive/male/non-datable/null/Town/winter 18/{{i18n:NPC_Data.Freddie}}/Custom_Ridgeside_FreddieHouse 3 5/{{i18n:Name.Freddie}}",
-			"Lola": "adult/polite/neutral/neutral/female/non-datable/null/Town/summer 2/{{i18n:NPC_Data.Lola}}/Custom_Ridgeside_FreddieHouse 4 5/{{i18n:Name.Lola}}",
-
-			//Amethyne Residence
-			"Maive": "adult/rude/neutral/negative/female/non-datable/null/Town/spring 14/{{i18n:NPC_Data.Maive}}/Custom_Ridgeside_PurpleMansion2ndFloor 24 5/{{i18n:Name.Maive}}",
-			"Zayne": "adult/polite/outgoing/positive/male/non-datable/Irene/Other/fall 2/{{i18n:NPC_Data.Zayne}}/Custom_Ridgeside_RSVHiddenWarp2 10 8/{{i18n:Name.Zayne}}",
-			"Ariah": "teen/polite/neutral/positive/female/non-datable/null/Town/fall 4/{{i18n:NPC_Data.Ariah}}/Custom_Ridgeside_PurpleMansion2ndFloor 3 5/{{i18n:Name.Ariah}}",
-			"Louie": "child/rude/outgoing/positive/male/non-datable/null/Town/winter 16/{{i18n:NPC_Data.Louie}}/Custom_Ridgeside_PurpleMansion2ndFloor 17 9/{{i18n:Name.Louie}}",
-			"Sonny": "adult/polite/neutral/neutral/male/non-datable/null/Town/spring 28/{{i18n:NPC_Data.Sonny}}/Custom_Ridgeside_PurpleMansion 55 44/{{i18n:Name.Sonny}}",
-			"Irene": "adult/polite/neutral/positive/female/non-datable/Zayne/Town/winter 27/{{i18n:NPC_Data.Irene}}/Custom_Ridgeside_PurpleMansion 2 44/{{i18n:Name.Irene}}",
-			"Althea": "adult/rude/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/{{i18n:Name.Althea}}",
-			"Lorraine": "adult/polite/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/{{i18n:Name.Lorraine}}",
-			"Nadaline": "child/polite/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/{{i18n:Name.Nadaline}}",
-			"Zachary": "adult/polite/neutral/neutral/male/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/{{i18n:Name.Zachary}}",
-
-			//Water Research Facility
-			"Aguar": "adult/rude/neutral/negative/male/not-datable/null/Town/summer 25//Custom_Ridgeside_AguarBasement 2 8/{{i18n:Name.Aguar}}",
-
-			//Nightingale Orchard
-			"Alissa": "teen/polite/shy/neutral/female/datable/null/Town/spring 5/{{i18n:NPC_Data.Alissa}}/Custom_Ridgeside_AlissaHouse 11 5/{{i18n:Name.Alissa}}",
-			"Malaya": "adult/polite/outgoing/positive/female/non-datable/null/Other/summer 27/{{i18n:NPC_Data.Malaya}}/Custom_Ridgeside_RSVHiddenWarp2 6 8/{{i18n:Name.Malaya}}",
-			"Kimpoi": "adult/polite/shy/positive/male/non-datable/null/Other/fall 5/{{i18n:NPC_Data.Kimpoi}}/Custom_Ridgeside_RSVHiddenWarp2 7 8/{{i18n:Name.Kimpoi}}",
-			"Trinnie": "child/polite/outgoing/negative/female/non-datable/null/Town/spring 16/{{i18n:NPC_Data.Trinnie}}/Custom_Ridgeside_BertHouse2ndFloor 18 5/{{i18n:Name.Trinnie}}",
-			"Olga": "adult/polite/neutral/positive/female/non-datable/null/Town/summer 9/{{i18n:NPC_Data.Olga}}/Custom_Ridgeside_BertHouse2ndFloor 3 5/{{i18n:Name.Olga}}",
-			"Bert": "adult/neutral/neutral/neutral/male/non-datable/null/Town/spring 28/{{i18n:NPC_Data.Bert}}/Custom_Ridgeside_BertHouse2ndFloor 2 5/{{i18n:Name.Bert}}",
-
-			//Deities
-			"Belinda": "adult/neutral/outgoing/positive/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp2 6 6/{{i18n:Name.Belinda}}",
-			"Raeriyala": "adult/polite/outgoing/positive/female/non-datable/null/Other/null/{{i18n:NPC_Data.Raeriyala}}/Custom_Ridgeside_RSVHiddenWarp2 9 8/{{i18n:Name.Raeriyala}}",
-
-			//Lost Princess Story Arc
-			"Undreya": "child/neutral/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVAbandonedHouse 5 5/{{i18n:Name.Undreya}}",
-			"Sari": "adult/polite/outgoing/positive/female/non-datable/null/Other/null/{{i18n:NPC_Data.Sari}}/Custom_Ridgeside_RSVHiddenWarp2 5 7/{{i18n:Name.Sari}}",
-			"Pipo": "child/polite/outgoing/positive/male/non-datable/null/Other/null/{{i18n:NPC_Data.Pipo}}/Custom_Ridgeside_RSVHiddenWarp2 6 7/{{i18n:Name.Pipo}}",
-			"Acorn": "child/polite/outgoing/positive/male/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp2 7 7/{{i18n:Name.Acorn}}",
-
-			//The Lady with the Red Tail Cult Members
-			"Helen": "adult/neutral/neutral/neutral/female/non-datable/null/Other/null/{{i18n:NPC_Data.Helen}}/Custom_Ridgeside_RSVHiddenWarp2 5 5/{{i18n:Name.Helen}}",
-			"Daia": "adult/neutral/outgoing/positive/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp2 5 6/{{i18n:Name.Daia}}",
-			"Jio": "adult/neutral/neutral/neutral/male/non-datable/null/Other/null//Custom_Ridgeside_RSVNinjaHouse 14 5/{{i18n:Name.Jio}}",
-			"Bliss": "child/rude/neutral/negative/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp2 7 6/{{i18n:Name.Bliss}}",
-			"Kiwi": "child/rude/outgoing/negative/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 1/{{i18n:Name.Kiwi}}",
-			"TreehouseGirl": "child/polite/neutral/neutral/female/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/???",
-			"RelicSpirit": "child/polite/neutral/neutral/male/non-datable/null/Other/null//Custom_Ridgeside_RSVHiddenWarp 10 2/???",
-
-			//Torts
-			"Torts": "child/neutral/neutral/neutral/male/non-datable/null/Other/spring 1//Custom_Ridgeside_RidgesideVillage 57 53/{{i18n:Name.Torts}}",
-
-			//June
-			"June": "adult/neutral/neutral/neutral/male/datable/null/Town/fall 12/ PregnancyRole make/Custom_Ridgeside_RSVHiddenWarp2 1 5/{{i18n:Name.June}}"
+						{
+							//sunflower
+							"ItemId": "(O)421",
+							"MinStack": 10
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Aurorean_Iris",
+							"MinStack": 10
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Forest_Amancay",
+							"MinStack": 10
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Highland_Butterwort",
+							"MinStack": 10
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Lava_lilly",
+							"MinStack": 10
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Mountain_Hokkaido",
+							"MinStack": 10
+						},
+					]
+				},
+				"Olga": {
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "summer",
+					"FriendsAndFamily": {
+						"Kimpoi": "brother",
+						"Bert": "husband",
+						"Trinnie": "daughter",
+						"Alissa": "niece"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_BertHouse2ndFloor",
+							"Tile": {
+								"X": 3,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Olga}}",
+					"Age": "Adult",
+					"BirthDay": 9
+				},
+				"Bert": {
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {
+						"Olga": "wife",
+						"Trinnie": "daughter",
+						"Alissa": "{{i18n:niece_alissa}}"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_BertHouse2ndFloor",
+							"Tile": {
+								"X": 2,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Bert}}",
+					"Age": "Adult",
+					"BirthDay": 28
+				},
+				//Deities
+				"Belinda": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 6,
+								"Y": 6
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Belinda}}",
+					"Age": "Adult"
+				},
+				"Raeriyala": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 9,
+								"Y": 8
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Raeriyala}}",
+					"Age": "Adult"
+				},
+				//Lost Princess Story Arc
+				"Undreya": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVAbandonedHouse",
+							"Tile": {
+								"X": 5,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Undreya}}",
+					"Age": "Child"
+				},
+				"Sari": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {
+						"Pipo": "son"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 5,
+								"Y": 7
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Sari}}",
+					"Age": "Adult"
+				},
+				"Pipo": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {
+						"Sari": "mom"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 6,
+								"Y": 7
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Pipo}}",
+					"Age": "Child"
+				},
+				"Acorn": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 7,
+								"Y": 7
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Acorn}}",
+					"Age": "Child"
+				},
+				//The Lady with the Red Tail Cult Members
+				"Helen": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {
+						"Ezekiel": "husband",
+						"Corine": "daughter"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 5,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Helen}}",
+					"Age": "Adult"
+				},
+				"Daia": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Host 75160263",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 5,
+								"Y": 6
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Daia}}",
+					"Age": "Adult"
+				},
+				"Jio": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Host 75160263",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVNinjaHouse",
+							"Tile": {
+								"X": 14,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Jio}}",
+					"Age": "Adult"
+				},
+				"Bliss": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Rude",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Negative",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 7,
+								"Y": 6
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Bliss}}",
+					"Age": "Child"
+				},
+				"Kiwi": {
+					"CanSocialize" : "PLAYER_HAS_SEEN_EVENT Current 75160188",
+					"Manner": "Rude",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Negative",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp",
+							"Tile": {
+								"X": 10,
+								"Y": 1
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Kiwi}}",
+					"Age": "Child"
+				},
+				"TreehouseGirl": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Female",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp",
+							"Tile": {
+								"X": 10,
+								"Y": 2
+							}
+						}
+					],
+					"DisplayName": "???",
+					"Age": "Child"
+				},
+				"RelicSpirit": {
+					"CanSocialize" : "FALSE",
+					"Manner": "Polite",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp",
+							"Tile": {
+								"X": 10,
+								"Y": 2
+							}
+						}
+					],
+					"DisplayName": "???",
+					"Age": "Child"
+				},
+				//Torts
+				"Torts": {
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": false,
+					"LoveInterest": "null",
+					"HomeRegion": "Other",
+					"BirthSeason": "spring",
+					"FriendsAndFamily": {},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RidgesideVillage",
+							"Tile": {
+								"X": 57,
+								"Y": 53
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.Torts}}",
+					"Age": "Child",
+					"BirthDay": 1
+				},
+				//June
+				"June": {
+					"CanSocialize":"PLAYER_HAS_SEEN_EVENT Host 94620000",
+					"Manner": "Neutral",
+					"SocialAnxiety": "Neutral",
+					"Optimism": "Neutral",
+					"Gender": "Male",
+					"CanBeRomanced": true,
+					"LoveInterest": "null",
+					"HomeRegion": "Town",
+					"BirthSeason": "fall",
+					"FriendsAndFamily": {
+						"": "PregnancyRole"
+					},
+					"Home": [
+						{
+							"Id": "Default",
+							"Location": "Custom_Ridgeside_RSVHiddenWarp2",
+							"Tile": {
+								"X": 1,
+								"Y": 5
+							}
+						}
+					],
+					"DisplayName": "{{i18n:Name.June}}",
+					"Age": "Adult",
+					"BirthDay": 12
+				}
+			},
 		},
-	},
-
-	{
-		"LogName": "Kiarra Disposition Change",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"When": { "HasDialogueAnswer": 751603262 },
-		"Update": "OnLocationChange, OnTimeChange",
-		"Entries": {
-			"Kiarra": "adult/polite/outgoing/negative/female/non-datable/null/Town/summer 13/{{i18n:NPC_Data.Kiarra}}/Custom_Ridgeside_3Bros2ndFloor 21 5/{{i18n:Name.Kiarra}}",
+		{
+			"LogName": "Kiarra Disposition Change",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [
+				"Kiarra"
+			],
+			"When": {
+				"HasDialogueAnswer": "751603262"
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+			"Entries": {
+				"CanBeRomanced": false
+			}
+		},
+		{
+			"LogName": "Anton Disposition Change",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [
+				"Anton"
+			],
+			"When": {
+				"HasSeenEvent": "75160304",
+				"HasDialogueAnswer": "75163042"
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+			"Entries": {
+				"CanBeRomanced": true
+			}
+		},
+		{
+			"LogName": "Paula Disposition Change",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [
+				"Paula"
+			],
+			"When": {
+				"HasSeenEvent": "75160352",
+				"HasDialogueAnswer": "75163521"
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+			"Entries": {
+				"CanBeRomanced": true
+			}
+		},
+		{
+			"LogName": "Irene Disposition Change",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [
+				"Irene"
+			],
+			"When": {
+				"HasSeenEvent": "75160324",
+				"HasDialogueAnswer": "7516325"
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+			"Entries": {
+				"CanBeRomanced": true,
+			}
+		},
+		{
+			"LogName": "Zayne Disposition Change",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [
+				"Zayne"
+			],
+			"When": {
+				"HasSeenEvent": "75160440",
+				"HasDialogueAnswer": "7516439"
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+			"Entries": {
+				"CanBeRomanced": true
+			}
+		},
+		{
+			"LogName": "Faye Disposition Change",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [
+				"Faye"
+			],
+			"When": {
+				"HasSeenEvent": "75160449",
+				"HasFlag |contains=FayeBryleLoveStory": false
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+			"Entries": {
+				"CanBeRomanced": true
+			}
+		},
+		{
+			"LogName": "Bryle Disposition Change",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"TargetField": [
+				"Bryle"
+			],
+			"When": {
+				"HasSeenEvent": 75160453,
+				"HasFlag |contains=FayeBryleLoveStory": false
+			},
+			"Update": "OnLocationChange, OnTimeChange",
+			"Entries": {
+				"CanBeRomanced": true,
+			}
 		}
-	},
-
-	{
-		"LogName": "Anton Disposition Change",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"When": { "HasSeenEvent": 75160304, "HasDialogueAnswer": 75163042 },
-		"Update": "OnLocationChange, OnTimeChange",
-		"Entries": {
-			"Anton": "adult/polite/neutral/neutral/male/datable/Paula/Town/spring 9/{{i18n:NPC_Data.Anton}}/Custom_Ridgeside_3Bros2ndFloor 18 12/{{i18n:Name.Anton}}",
-		}
-	},
-
-	{
-		"LogName": "Paula Disposition Change",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"When": { "HasSeenEvent": 75160352, "HasDialogueAnswer": 75163521 },
-		"Update": "OnLocationChange, OnTimeChange",
-		"Entries": {
-			"Paula": "adult/polite/neutral/negative/female/datable/Anton/Town/fall 27/{{i18n:NPC_Data.Paula}}/Custom_Ridgeside_PaulaClinic 2 7/{{i18n:Name.Paula}}",
-		}
-	},
-
-	{
-		"LogName": "Irene Disposition Change",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"When": { "HasSeenEvent": 75160324, "HasDialogueAnswer": 7516325 },
-		"Update": "OnLocationChange, OnTimeChange",
-		"Entries": {
-			"Irene": "adult/polite/neutral/positive/female/datable/Zayne/Other/winter 27/{{i18n:NPC_Data.Irene}}/Custom_Ridgeside_PurpleMansion 2 44/{{i18n:Name.Irene}}",
-		}
-	},
-
-	{
-		"LogName": "Zayne Disposition Change",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"When": { "HasSeenEvent": 75160440, "HasDialogueAnswer": 7516439 },
-		"Update": "OnLocationChange, OnTimeChange",
-		"Entries": {
-			"Zayne": "adult/polite/outgoing/positive/male/datable/Irene/Town/fall 2/{{i18n:NPC_Data.Zayne}}/Custom_Ridgeside_RSVHiddenWarp2 10 8/{{i18n:Name.Zayne}}",
-		}
-	},
-
-	{
-		"LogName": "Faye Disposition Change",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"When": { "HasSeenEvent": 75160449, "HasFlag |contains=FayeBryleLoveStory": false },
-		"Update": "OnLocationChange, OnTimeChange",
-		"Entries": {
-			"Faye": "adult/polite/outgoing/positive/female/datable/Bryle/Town/summer 12/{{i18n:NPC_Data.Faye}}/Custom_Ridgeside_FayeHouse 3 5/{{i18n:Name.Faye}}",
-		}
-	},
-
-	{
-		"LogName": "Bryle Disposition Change",
-		"Action": "EditData",
-		"Target": "Data/NPCDispositions",
-		"When": { "HasSeenEvent": 75160453, "HasFlag |contains=FayeBryleLoveStory": false },
-		"Update": "OnLocationChange, OnTimeChange",
-		"Entries": {
-			"Bryle": "adult/polite/outgoing/neutral/male/datable/Faye/Other/summer 1/{{i18n:NPC_Data.Bryle}}/Custom_Ridgeside_RSVHiddenWarp2 8 8/{{i18n:Name.Bryle}}",
-		}
-	},
-
-
-]
+	]
 }
