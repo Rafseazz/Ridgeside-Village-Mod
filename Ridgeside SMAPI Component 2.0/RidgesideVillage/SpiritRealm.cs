@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework;
 using StardewValley.Menus;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI.Utilities;
+using StardewValley.SpecialOrders;
 
 namespace RidgesideVillage
 {
@@ -27,20 +28,24 @@ namespace RidgesideVillage
             Monitor = ModInstance.Monitor;
             FogTexture = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/SpiritRealmFog.png"));
 
-            TileActionHandler.RegisterTileAction("RSVWarp", RSVWarp);
-            TileActionHandler.RegisterTileAction("RSVCorruptedFire", CleanseCorruptedFire);
+            GameLocation.RegisterTileAction("RSVTeleport", RSVWarp);
+            GameLocation.RegisterTileAction("RSVCorruptedFire", CleanseCorruptedFire);
             Helper.Events.Player.Warped += OnWarped;
         }
 
-        private static void CleanseCorruptedFire(string arg1, Vector2 arg2)
+
+        private static bool CleanseCorruptedFire(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
-            var location = Game1.getLocationFromName(RSVConstants.L_SPIRITREALM);
-            int Xcoord = (int)arg2.X;
-            int Ycoord = (int)arg2.Y;
+            if (!location.Equals(Game1.getLocationFromName(RSVConstants.L_SPIRITREALM)))
+            {
+                return false;
+            }
+            int Xcoord = point.X;
+            int Ycoord = point.Y;
 
             string key = $"cleansed {Xcoord} {Ycoord}";
             if (location.modData.ContainsKey(key)){
-                return;
+                return true;
             }
             location.modData[key] = "t";
             Game1.playSound("shadowpeep");
@@ -70,6 +75,7 @@ namespace RidgesideVillage
             multiplayer.broadcastSprites(location, extinguishSprite);
 
             checkForCorruptedFireEvent();
+            return true;
         }
 
         static void removeCorruptedFireTiles()
@@ -129,11 +135,11 @@ namespace RidgesideVillage
 
             if(counter >= 5)
             {
-                var events = location.GetLocationEvents();
+                location.TryGetLocationEvents(out var assetName, out var events);
                 string eventScript = null;
                 foreach(var key in events.Keys)
                 {
-                    if (key.StartsWith(RSVConstants.E_CLEANSED.ToString()))
+                    if (key.StartsWith(RSVConstants.E_CLEANSED))
                     {
                         eventScript = events[key];
                     }
@@ -144,7 +150,7 @@ namespace RidgesideVillage
                     {
                         return;
                     }
-                    UtilFunctions.StartEvent(new Event(eventScript, RSVConstants.E_CLEANSED), RSVConstants.L_SPIRITREALM, 10, 10);
+                    UtilFunctions.StartEvent(new Event(eventScript, assetName, RSVConstants.E_CLEANSED), RSVConstants.L_SPIRITREALM, 10, 10);
                 }
                 else
                 {
@@ -203,17 +209,16 @@ namespace RidgesideVillage
             }
         }
 
-        internal static void RSVWarp(string tileActionString, Vector2 position)
+        internal static bool RSVWarp(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
-            var split = tileActionString.Split(' ');
-            if (split.Length != 4)
+            if (arg2.Length != 4)
             {
-                Log.Error($"Error in TileAction {tileActionString} on tile {position} in {Game1.currentLocation.Name}");
-                return;
+                Log.Error($"Error in TileAction {arg2} on tile {point} in {Game1.currentLocation.Name}");
+                return false;
             }
-            if (!(int.TryParse(split[2], out int xCoord) && int.TryParse(split[3], out int yCoord))){
-                Log.Error($"Error in TileAction {tileActionString} on tile {position} in {Game1.currentLocation.Name}. Couldnt parse coordinates.");
-                return;
+            if (!(int.TryParse(arg2[2], out int xCoord) && int.TryParse(arg2[3], out int yCoord))){
+                Log.Error($"Error in TileAction {arg2} on tile {point} in {Game1.currentLocation.Name}. Couldnt parse coordinates.");
+                return false;
             }
 
 
@@ -230,7 +235,7 @@ namespace RidgesideVillage
             Game1.player.temporarilyInvincible = true;
             Game1.player.temporaryInvincibilityTimer = -2000;
             Game1.player.freezePause = 1000;
-            if (split[1].Equals(Game1.currentLocation.Name))
+            if (arg2[1].Equals(Game1.currentLocation.Name))
             {
                 Game1.delayedActions.Add(new DelayedAction(1000, delegate
                     { WarpFarmerOnSameMap(xCoord, yCoord); }));
@@ -238,7 +243,7 @@ namespace RidgesideVillage
             else
             {
                 Game1.flashAlpha = 1f;
-                DelayedAction.fadeAfterDelay(delegate { WarpFarmerToDifferentMap(split[1], xCoord, yCoord); }, 1000);
+                DelayedAction.fadeAfterDelay(delegate { WarpFarmerToDifferentMap(arg2[1], xCoord, yCoord); }, 1000);
             }
 
             //draw stuff
@@ -252,7 +257,7 @@ namespace RidgesideVillage
 
             var multiplayer = Helper.Reflection.GetField<Multiplayer>(typeof(Game1), "multiplayer").GetValue();
             multiplayer.broadcastSprites(who.currentLocation, warpEffect);
-
+            return true;
         }
 
         static void WarpFarmerToDifferentMap(string LocationName, int X, int Y)
@@ -272,7 +277,6 @@ namespace RidgesideVillage
             Game1.player.temporaryInvincibilityTimer = 0;
             Game1.displayFarmer = true;
         }
-
     }
 }
 

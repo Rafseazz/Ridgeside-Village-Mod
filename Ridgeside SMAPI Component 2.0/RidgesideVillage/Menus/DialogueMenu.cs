@@ -16,7 +16,7 @@ namespace RidgesideVillage
     {
         private List<Action> ResponseActions;
 
-        internal DialogueBoxWithActions(string dialogue, List<Response> responses, List<Action> Actions) : base(dialogue, responses)
+        internal DialogueBoxWithActions(string dialogue, Response[] responses, List<Action> Actions) : base(dialogue, responses)
         {
             this.ResponseActions = Actions;
         }

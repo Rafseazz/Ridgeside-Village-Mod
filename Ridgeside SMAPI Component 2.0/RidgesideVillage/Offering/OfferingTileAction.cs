@@ -24,22 +24,16 @@ namespace RidgesideVillage.Offering
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
 
-            TileActionHandler.RegisterTileAction("RSVOffering", DoOffering);
+            GameLocation.RegisterTileAction("RSVOffering", DoOffering);
 
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
         }
 
-        private static void OnDayStarted(object sender, DayStartedEventArgs e)
+        private static bool DoOffering(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
-            Data = new OfferingData();
-            PerformedOfferingToday = false;
-        }
-
-        static void DoOffering(string tileActionString, Vector2 position)
-        {
-            if(PerformedOfferingToday || Game1.player.CurrentItem == null)
+            if (PerformedOfferingToday || Game1.player.CurrentItem == null)
             {
-                return;
+                return false;
             }
             var responses = new List<Response>
                     {
@@ -55,7 +49,14 @@ namespace RidgesideVillage.Offering
                         delegate { }
                     };
 
-            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Offer.Question", new { itemName = Game1.player.CurrentItem.DisplayName }), responses, responseActions);
+            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("Offer.Question", new { itemName = Game1.player.CurrentItem.DisplayName }), responses.ToArray(), responseActions);
+            return true;
+        }
+
+        private static void OnDayStarted(object sender, DayStartedEventArgs e)
+        {
+            Data = new OfferingData();
+            PerformedOfferingToday = false;
         }
 
         static void performOffering()
@@ -75,9 +76,12 @@ namespace RidgesideVillage.Offering
                 //do standard thing or so?
                 return;
             }
-            var Events = Game1.currentLocation.GetLocationEvents();
-
-            if (Events.TryGetValue(Offer.ScriptKey, out string EventScript))
+            bool found = Game1.currentLocation.TryGetLocationEvents(out String assetName, out Dictionary<String, String> events);
+            if(!found)
+            {
+                return;
+            }
+            if (events.TryGetValue(Offer.ScriptKey, out string EventScript))
             {
                 PerformedOfferingToday = true;
                 Game1.delayedActions.Add(new DelayedAction(1500, delegate {
@@ -100,7 +104,7 @@ namespace RidgesideVillage.Offering
             {
                 return Offer;
             }
-            foreach (var tag in item.GetContextTagList())
+            foreach (var tag in item.GetContextTags())
             {
                 if (data.lookup.TryGetValue(tag, out Offer))
                 {
@@ -122,7 +126,7 @@ namespace RidgesideVillage.Offering
                 Game1.delayedActions.Add(new DelayedAction(500, () => {
                     Chunk thrownItemChunk = thrownItem.Chunks[0];
                     Vector2 chunkTile = thrownItemChunk.position.Value / 64f;
-                    location.sinkDebris(thrownItem, chunkTile, thrownItem.Chunks[0].position);
+                    location.sinkDebris(thrownItem, chunkTile, thrownItem.Chunks[0].position.Value);
                     location.debris.Remove(thrownItem);
                 }));
             }                           

@@ -56,29 +56,18 @@ namespace RidgesideVillage
             );
         }
 
-        private static int GetRingId(string obj)
-        {
-            return ExternalAPIs.JA.GetObjectId(obj);
-        }
+
 
         private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
         {
-            if (StealthRingId == -1)
-            {
-                StealthRingId = GetRingId(STEALTHRING);
-            }
-            if ((__instance is Monster) && HasRingEquipped(StealthRingId))
+            if ((__instance is Monster) && HasRingEquipped(STEALTHRING))
             {
                 threshold = Math.Max(threshold / 2, 2);
             }
         }
         private static bool Ghost_Prefix(Ghost __instance)
         {
-            if (StealthRingId == -1)
-            {
-                StealthRingId = GetRingId(STEALTHRING);
-            }
-            if (HasRingEquipped(StealthRingId) &&
+            if (HasRingEquipped(STEALTHRING) &&
                 ((__instance.Position.X - Game1.viewport.X > Game1.viewport.Width) ||
                 (__instance.Position.Y - Game1.viewport.Y > Game1.viewport.Height)))
             {
@@ -93,11 +82,7 @@ namespace RidgesideVillage
         {
             if (((__instance.Name == RAERING) && (ring.Name == BELRING)) || ((__instance.Name == BELRING) && (ring.Name == RAERING)))
             {
-                if (BothRingId == -1)
-                {
-                    BothRingId = GetRingId(BOTHRING);
-                }
-                Ring both_ring = new(BothRingId);
+                Ring both_ring = new(BOTHRING);
                 __result = both_ring;
                 return false;
             }
@@ -134,7 +119,7 @@ namespace RidgesideVillage
 
         /// <summary>Get whether the player has any ring with the given ID equipped.</summary>
         /// <param name="id">The ring ID to match.</param>
-        public static bool HasRingEquipped(int id)
+        public static bool HasRingEquipped(string id)
         {
             var rings = UtilFunctions.GetAllRings(Game1.player);
             foreach(var ring in rings)

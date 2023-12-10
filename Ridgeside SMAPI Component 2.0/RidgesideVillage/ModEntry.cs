@@ -29,10 +29,10 @@ namespace RidgesideVillage
             ModMonitor = Monitor;
             Helper = helper;
 
-            if (!new InstallationChecker().checkInstallation(helper))
-            {
-                return;
-            }
+            //if (!new InstallationChecker().checkInstallation(helper))
+            //{
+            //    return;
+            //}
 
             ConfigMenu = new ConfigMenu(this);
             CustomCPTokens = new CustomCPTokens(this);
@@ -41,7 +41,6 @@ namespace RidgesideVillage
             helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
             SpaceEvents.OnEventFinished += OnEventFinished;
-            //SpaceEvents.OnItemEaten += OnItemEaten;
 
             helper.Events.Content.AssetRequested += OnAssetRequested;
 
@@ -59,8 +58,6 @@ namespace RidgesideVillage
             Patcher.PerformPatching();
 
             HotelMenu.Initialize(this);
-
-            Minecarts.Initialize(this);
 
             SpiritRealm.Initialize(this);
 
@@ -106,15 +103,15 @@ namespace RidgesideVillage
         private void forgetRepeatableEvents()
         {
             string path = PathUtilities.NormalizePath("assets/RepeatableEvents.json");
-            var data = Helper.ModContent.Load<Dictionary<string, List<int>>>(path);
-            if (data.TryGetValue("RepeatEvents", out List<int> repeatableEvents))
+            var data = Helper.ModContent.Load<Dictionary<string, List<string>>>(path);
+            if (data.TryGetValue("RepeatEvents", out List<string> repeatableEvents))
             {
                 foreach (var entry in repeatableEvents)
                 {
                     Game1.player.eventsSeen.Remove(entry);
                 }
             }
-            if (data.TryGetValue("RepeatResponses", out List<int> repeatableResponses))
+            if (data.TryGetValue("RepeatResponses", out List<string> repeatableResponses))
             {
                 foreach (var entry in repeatableResponses)
                 {
@@ -126,10 +123,9 @@ namespace RidgesideVillage
 
         private void OnGameLaunched(object sender, EventArgs e)
         {
-            TileActionHandler.Initialize(Helper);
             ImageMenu.Setup(Helper);
             MapMenu.Setup(Helper);
-            TrashCans.Setup(Helper);
+            //TrashCans.Setup(Helper);
             RSVWorldMap.Setup(Helper);
             ExternalAPIs.Initialize(Helper);
 
@@ -220,7 +216,7 @@ namespace RidgesideVillage
                                 foreach (Vector2 position in new List<Vector2>(i.objects.Keys))
                                 {
                                     // Since it's already set to 10 PM
-                                    if (i.objects[position].minutesElapsed(150, i))
+                                    if (i.objects[position].minutesElapsed(150))
                                     {
                                         i.objects.Remove(position);
                                     }
@@ -266,21 +262,21 @@ namespace RidgesideVillage
         private void RemoveEquipment(string arg1, string[] arg2)
         {
             Game1.player.hat.Value = null;
-            Game1.player.shirt.Value = -1;
-            Game1.player.changeShirt(-1);
+            Game1.player.shirt.Value = "-1";
+            Game1.player.changeShirt("-1");
             Game1.player.shirtItem.Value = null;
-            Game1.player.pants.Value = -1;
-            Game1.player.changePants(Color.White);
+            Game1.player.pants.Value = "-1";
+            //Game1.player.changePants(Color.White);
             Game1.player.pantsItem.Value = null;
             Game1.player.UpdateClothing();
 
-            try { Game1.player.boots?.Value.onUnequip(); } catch { }
+            try { Game1.player.boots?.Value.onUnequip(Game1.player); } catch { }
             Game1.player.boots.Value = null;
-            Game1.player.changeShoeColor(12);
+            Game1.player.changeShoeColor("12");
 
-            try { Game1.player.leftRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
+            try { Game1.player.leftRing?.Value.onUnequip(Game1.player); } catch { }
             Game1.player.leftRing.Value = null;
-            try { Game1.player.rightRing?.Value.onUnequip(Game1.player, Game1.currentLocation); } catch { }
+            try { Game1.player.rightRing?.Value.onUnequip(Game1.player); } catch { }
             Game1.player.rightRing.Value = null;
         }
 
@@ -346,7 +342,7 @@ namespace RidgesideVillage
                     return;
                 }
                 var unlock_rule = Dateables.unlock_rules[name].Split('/');
-                if (!Game1.player.eventsSeen.Contains(int.Parse(unlock_rule[0])))
+                if (!Game1.player.eventsSeen.Contains(unlock_rule[0]))
                 {
                     Log.Warn("Command failed.\n8 heart event for " + name.ToUpper() + " not yet seen.");
                     return;
@@ -367,17 +363,17 @@ namespace RidgesideVillage
                             rival_id = date_id + 1;
                             break;
                     }
-                    if (Game1.player.dialogueQuestionsAnswered.Contains(date_id))
+                    if (Game1.player.dialogueQuestionsAnswered.Contains(date_id.ToString()))
                     {
-                        Game1.player.dialogueQuestionsAnswered.Remove(date_id);
-                        Game1.player.dialogueQuestionsAnswered.Add(rival_id);
+                        Game1.player.dialogueQuestionsAnswered.Remove(date_id.ToString());
+                        Game1.player.dialogueQuestionsAnswered.Add(rival_id.ToString());
                         Log.Info("NPC " + name.ToUpper() + " is no longer dateable.");
                     }
                     else
                     {
-                        if (Game1.player.dialogueQuestionsAnswered.Contains(rival_id))
-                            Game1.player.dialogueQuestionsAnswered.Remove(rival_id);
-                        Game1.player.dialogueQuestionsAnswered.Add(date_id);
+                        if (Game1.player.dialogueQuestionsAnswered.Contains(rival_id.ToString()))
+                            Game1.player.dialogueQuestionsAnswered.Remove(rival_id.ToString());
+                        Game1.player.dialogueQuestionsAnswered.Add(date_id.ToString());
                         Log.Info("NPC " + name.ToUpper() + " is now dateable.");
                     }
                 }

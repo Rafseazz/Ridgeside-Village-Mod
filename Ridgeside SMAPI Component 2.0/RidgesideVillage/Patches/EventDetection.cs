@@ -97,20 +97,21 @@ namespace RidgesideVillage
         }
         private static void MapPage_Constructor_Postfix(MapPage __instance)
         {
-            __instance.points.Add(RSVButton);
-            ClickableComponent DesertArea = __instance.points.Where(x => x.myID == 1001).ElementAtOrDefault(0);
-            if(DesertArea != null)
-            {
-                DesertArea.leftNeighborID = 25555;
-                DesertArea.downNeighborID = 25555;
-            }
+            //was for controller support
+            //__instance.points.Add(RSVButton);
+            //ClickableComponent DesertArea = __instance.points.Where(x => x.myID == 1001).ElementAtOrDefault(0);
+            //if(DesertArea != null)
+            //{
+            //    DesertArea.leftNeighborID = 25555;
+            //    DesertArea.downNeighborID = 25555;
+            //}
 
-            ClickableComponent SecretWoodsArea = __instance.points.Where(x => x.myID == 1030).ElementAtOrDefault(0);
-            if(SecretWoodsArea != null)
-            {
-                SecretWoodsArea.leftNeighborID = 25555;
-                SecretWoodsArea.upNeighborID = 25555;
-            }
+            //ClickableComponent SecretWoodsArea = __instance.points.Where(x => x.myID == 1030).ElementAtOrDefault(0);
+            //if(SecretWoodsArea != null)
+            //{
+            //    SecretWoodsArea.leftNeighborID = 25555;
+            //    SecretWoodsArea.upNeighborID = 25555;
+            //}
         }
 
         private static void OnWindowResized(object sender, WindowResizedEventArgs e)

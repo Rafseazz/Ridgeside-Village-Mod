@@ -79,7 +79,7 @@ namespace RidgesideVillage
             Farmer currentPlayer = Game1.player;
             foreach (string key in to_be_broadcast.Keys)
             {
-                int eventID = int.Parse(key);
+                string eventID = key;
                 string[] info = to_be_broadcast[key].Split('/');
                 // For all entries, make sure all players have seen the event in the first bucket if anyone has
                 if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
@@ -102,7 +102,7 @@ namespace RidgesideVillage
 
                 // For each listing with a second item in the list, use that as condition and make sure it's universally met or unmet
                 var id_type = info[0];
-                int responseID;
+                string responseID;
                 string mailID;
                 bool decision_made;
                 switch (id_type)
@@ -113,7 +113,7 @@ namespace RidgesideVillage
                     case "r":
                         if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
                         {
-                            responseID = int.Parse(info[1]);
+                            responseID = info[1];
                             decision_made = sync_direction < 0 ? Game1.player.dialogueQuestionsAnswered.Contains(responseID) : Game1.MasterPlayer.dialogueQuestionsAnswered.Contains(responseID);
                             if (decision_made)
                             {
@@ -127,7 +127,7 @@ namespace RidgesideVillage
                         }
                         else if (sync_direction > 0 && Game1.MasterPlayer.eventsSeen.Contains(eventID))
                         {
-                            responseID = int.Parse(info[1]);
+                            responseID = info[1];
                             decision_made = sync_direction < 0 ? Game1.player.dialogueQuestionsAnswered.Contains(responseID) : Game1.MasterPlayer.dialogueQuestionsAnswered.Contains(responseID);
                             if (!currentPlayer.dialogueQuestionsAnswered.Contains(responseID) && decision_made)
                             {
@@ -178,11 +178,11 @@ namespace RidgesideVillage
             switch (e.Type)
             {
                 case "EventSeen":
-                    Game1.player.eventsSeen.Add(int.Parse(message));
+                    Game1.player.eventsSeen.Add(message);
                     Log.Trace($"RSV: Marked event {message} as seen.");
                     break;
                 case "QuestionAnswered":
-                    Game1.player.dialogueQuestionsAnswered.Add(int.Parse(message));
+                    Game1.player.dialogueQuestionsAnswered.Add(message);
                     Log.Trace($"RSV: Marked response {message} as chosen.");
                     break;
                 case "MailReceived":
@@ -212,7 +212,7 @@ namespace RidgesideVillage
             }
 
             //Teleport Bryle
-            if (Game1.CurrentEvent.id == 75160460)
+            if (Game1.CurrentEvent.id.Equals("75160460"))
             {
                 NPC bryle = Game1.getCharacterFromName("Bryle");
                 if (bryle is not null && Game1.player.friendshipData.TryGetValue("Bryle", out var f1)
@@ -249,17 +249,17 @@ namespace RidgesideVillage
 
         private static bool NPC_engagementResponse_Prefix(NPC __instance)
         {
-            if ((__instance.Name == "Shiro") && !Game1.MasterPlayer.eventsSeen.Contains(75160249))
+            if ((__instance.Name == "Shiro") && !Game1.MasterPlayer.eventsSeen.Contains("75160249"))
             {
                 __instance.CurrentDialogue.Clear();
-                __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Shiro.RejectProposal"), __instance));
+                __instance.CurrentDialogue.Push(new Dialogue(__instance, Helper.Translation.Get("Shiro.RejectProposal")));
                 Game1.drawDialogue(__instance);
                 return false;
             }
-            else if ((__instance.Name == "Kiarra") && Game1.MasterPlayer.eventsSeen.Contains(502261))
+            else if ((__instance.Name == "Kiarra") && Game1.MasterPlayer.eventsSeen.Contains("502261"))
             {
                 __instance.CurrentDialogue.Clear();
-                __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Kiarra.RejectProposal"), __instance));
+                __instance.CurrentDialogue.Push(new Dialogue(__instance, Helper.Translation.Get("Kiarra.RejectProposal")));
                 Game1.drawDialogue(__instance);
                 return false;
             }
@@ -268,18 +268,18 @@ namespace RidgesideVillage
 
         private static void SocialPage_drawNPCSlot_Postfix(SocialPage __instance, SpriteBatch b, int i)
         {
-            string name = __instance.names[i] as string;
-            if (unlock_rules.Keys.Contains(name.ToLower()) && !SocialPage.isDatable(name))
-            {
-                if (Game1.player.eventsSeen.Contains(int.Parse(unlock_rules[name.ToLower()].Split("/")[0])))
-                    return;
-                int width = (IClickableMenu.borderWidth * 3 + 128 - 40 + 192) / 2;
-                string text = Game1.parseText(Helper.Translation.Get("RelationshipStatus.Locked"), Game1.smallFont, width);
-                Vector2 textSize = Game1.smallFont.MeasureString(text);
-                var sprites = Helper.Reflection.GetField<List<ClickableTextureComponent>>(__instance, "sprites").GetValue();
-                float lineHeight = Game1.smallFont.MeasureString("W").Y;
-                b.DrawString(Game1.smallFont, text, new Vector2((__instance.xPositionOnScreen + 192 + 8) - textSize.X / 2f, sprites[i].bounds.Bottom - (textSize.Y - lineHeight)), Game1.textColor);
-            }
+            //string name = __instance.names[i] as string;
+            //if (unlock_rules.Keys.Contains(name.ToLower()) && !SocialPage.isDatable(name))
+            //{
+            //    if (Game1.player.eventsSeen.Contains(unlock_rules[name.ToLower()].Split("/")[0]))
+            //        return;
+            //    int width = (IClickableMenu.borderWidth * 3 + 128 - 40 + 192) / 2;
+            //    string text = Game1.parseText(Helper.Translation.Get("RelationshipStatus.Locked"), Game1.smallFont, width);
+            //    Vector2 textSize = Game1.smallFont.MeasureString(text);
+            //    var sprites = Helper.Reflection.GetField<List<ClickableTextureComponent>>(__instance, "sprites").GetValue();
+            //    float lineHeight = Game1.smallFont.MeasureString("W").Y;
+            //    b.DrawString(Game1.smallFont, text, new Vector2((__instance.xPositionOnScreen + 192 + 8) - textSize.X / 2f, sprites[i].bounds.Bottom - (textSize.Y - lineHeight)), Game1.textColor);
+            //}
         }
     }
 }

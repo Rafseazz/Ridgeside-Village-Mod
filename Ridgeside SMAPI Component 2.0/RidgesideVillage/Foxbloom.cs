@@ -52,8 +52,7 @@ namespace RidgesideVillage
             Vector2 spawn_spot = spawn_spots.ElementAt(random.Next(0, 7));
             try
             {
-                int FOXBLOOMID = ExternalAPIs.JA.GetObjectId("Foxbloom");
-                UtilFunctions.SpawnForage(FOXBLOOMID, e.NewLocation, spawn_spot, true);
+                UtilFunctions.SpawnForage(RSVConstants.IFOXBLOOM, e.NewLocation, spawn_spot, true);
                 Log.Trace("RSV: Foxbloom spawned as forage.");
                 spawned_today = true;
                 e.NewLocation.modData["RSV_foxbloomSpawned"] = "true";

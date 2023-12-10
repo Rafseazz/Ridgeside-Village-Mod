@@ -27,24 +27,17 @@ namespace RidgesideVillage
         internal static void Setup(IModHelper Helper)
         {
             ImageMenu.Helper = Helper;
-            TileActionHandler.RegisterTileAction("ShowImage", Open);
+            GameLocation.RegisterTileAction("ShowImage", Open);
         }
 
-        internal static void Open(string tileAction, Vector2 position)
+        internal static bool Open(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
             //parse string
             //has form "ShowImage "path/to/file" scale [i18nkey]"
 
-            var quoteSplit = tileAction.Split('"');
-            if (quoteSplit.Length < 3)
-            {
-                Log.Debug($"Error in {tileAction}. (Perhaps you missed a \"?");
-                return;
-            }
+            string path = arg2[1];
 
-            string path = quoteSplit[1];
-
-            var split = quoteSplit[2].Trim().Split(' ');
+            var split = arg2[2].Trim().Split(' ');
 
             float scale = 1f;
 
@@ -66,7 +59,7 @@ namespace RidgesideVillage
                     Game1.activeClickableMenu = new DialogueBox(text);
                     Game1.afterDialogues = delegate
                     {
-                        ImageMenu.Open(tileActionShortened, position);
+                        ImageMenu.Open(location, tileActionShortened.Split(' '), farmer, point);
                     };
                 }
                 else
@@ -80,7 +73,7 @@ namespace RidgesideVillage
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * scale), (int)(image.Height * scale));
                 Game1.activeClickableMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image);
             }
-            
+            return true;
         }
 
 

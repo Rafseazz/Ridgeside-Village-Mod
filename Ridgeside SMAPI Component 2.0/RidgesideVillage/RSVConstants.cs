@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,48 +10,48 @@ namespace RidgesideVillage
     internal static class RSVConstants
     {
         // Events
-        public const int E_LENNYGH = 75160089;
-        public const int E_NINJAQUESTS = 75160187;
-        public const int E_LENNYCARTS = 75160190;
-        public const int E_TOWNBOARD = 75160207;
-        public const int E_WEDDINGRECEPTION = 75160245;
-        public const int E_BIRTHDAY = 75160247;
-        public const int E_ANNIVERSARY = 75160248;
-        public const int E_MEETDAIA = 75160254;
-        public const int E_MEETBELINDA = 75160255;
-        public const int E_PREUNSEAL = 75160257;
-        public const int E_BLISSVISIT = 75160258;
-        public const int E_RAEUNSEAL = 75160259;
-        public const int E_OPENPORTAL = 75160256;
-        public const int E_CLEANSED = 75160263;
-        public const int E_NINJABOARD = 75160264;
-        public const int E_BLISSGH1 = 75160266;
-        public const int E_SPIRITGH1 = 75160267;
-        public const int E_BLISSGH2 = 75160268;
-        public const int E_SPIRITGH2 = 75160269;
-        public const int E_LORENZO1H = 75160333;
-        public const int E_GRANDMA = 75160383;
-        public const int E_SUMMITUNLOCK = 75160387;
-        public const int E_BUSSTOP_INTRO = 75160186;
-        public const int E_ZAYNE_INTRO = 75160338;
-        public const int E_ZAYNE_2H = 75160436;
-        public const int E_ZAYNE_6H = 75160438;
-        public const int E_BRYLE_INTRO = 75160375;
-        public const int E_BRYLE_8H = 75160453;
-        public const int E_AGUAR_8H = 75160064;
+        public const string E_LENNYGH = "75160089";
+        public const string E_NINJAQUESTS = "75160187";
+        public const string E_LENNYCARTS = "75160190";
+        public const string E_TOWNBOARD = "75160207";
+        public const string E_WEDDINGRECEPTION = "75160245";
+        public const string E_BIRTHDAY = "75160247";
+        public const string E_ANNIVERSARY = "75160248";
+        public const string E_MEETDAIA = "75160254";
+        public const string E_MEETBELINDA = "75160255";
+        public const string E_PREUNSEAL = "75160257";
+        public const string E_BLISSVISIT = "75160258";
+        public const string E_RAEUNSEAL = "75160259";
+        public const string E_OPENPORTAL = "75160256";
+        public const string E_CLEANSED = "75160263";
+        public const string E_NINJABOARD = "75160264";
+        public const string E_BLISSGH1 = "75160266";
+        public const string E_SPIRITGH1 = "75160267";
+        public const string E_BLISSGH2 = "75160268";
+        public const string E_SPIRITGH2 = "75160269";
+        public const string E_LORENZO1H = "75160333";
+        public const string E_GRANDMA = "75160383";
+        public const string E_SUMMITUNLOCK = "75160387";
+        public const string E_BUSSTOP_INTRO = "75160186";
+        public const string E_ZAYNE_INTRO = "75160338";
+        public const string E_ZAYNE_2H = "75160436";
+        public const string E_ZAYNE_6H = "75160438";
+        public const string E_BRYLE_INTRO = "75160375";
+        public const string E_BRYLE_8H = "75160453";
+        public const string E_AGUAR_8H = "75160064";
 
         // Response IDs
-        public const int R_AGUAR_FLOWERS = 751600641;
-        public const int R_AGUAR_FRUIT = 751600642;
+        public const string R_AGUAR_FLOWERS = "751600641";
+        public const string R_AGUAR_FRUIT = "751600642";
 
         // Quests
-        public const int Q_CURSEDGH1 = 72860001;
-        public const int Q_NINJANOTE = 72860002;
-        public const int Q_OPENPORTAL = 72860003;
-        public const int Q_CURSEDGH2 = 72860004;
-        public const int Q_PREPCOMPLETE = 72860005;
-        public const int Q_PREUNSEAL = 72860006;
-        public const int Q_RAEUNSEAL = 72860007;
+        public const string Q_CURSEDGH1 = "72860001";
+        public const string Q_NINJANOTE = "72860002";
+        public const string Q_OPENPORTAL = "72860003";
+        public const string Q_CURSEDGH2 = "72860004";
+        public const string Q_PREPCOMPLETE = "72860005";
+        public const string Q_PREUNSEAL = "72860006";
+        public const string Q_RAEUNSEAL = "72860007";
 
         // Special Orders
         public const string SO_FIXMINECART = "RSV.UntimedSpecialOrder.FixMinecart";
@@ -147,6 +148,23 @@ namespace RidgesideVillage
             //SpecialOrder Types
         public const string Z_VILLAGESPECIALORDER = "RSVTownSO";
         public const string Z_NINJASPECIALORDER = "RSVNinjaSO";
+
+            //Items
+        public const string ISAPPHIRE = "SapphireID";
+
+
+        public const string ITOTEM = "Rafseazz.RSVCP_Warp_Totem__Ridgeside";
+        public const string IFOXBLOOM = "Rafseazz.RSVCP_Foxbloom";
+        public const string IMUSICBOX = "Rafseazz.RSVCP_Ancient_Music_Box";
+        public const string IELVENCOMB = "Rafseazz.RSVCP_Elven_Comb";
+        public const string IEVERFROSTSTONE = "Rafseazz.RSVCP_Everfrost_Stone";
+        public const string IMOOSESTATUE = "Rafseazz.RSVCP_Moose_Statue";
+        public const string IOPALHALO = "Rafseazz.RSVCP_Opal_Halo";
+        public const string ICANDELABRUM = "Rafseazz.RSVCP_Pale_Candelabrum";
+        public const string IRELICFOXMASK = "Rafseazz.RSVCP_Relic_Fox_Mask";
+        public const string ISAPPHIREPEARL = "Rafseazz.RSVCP_Sapphire_Pearl";
+        public const string IFOXTAILCHARM = "Rafseazz.RSVCP_Old_Lucky_Foxtail_Charm";
+        public const string IHEROSTATUE = "Rafseazz.RSVCP_Village_Hero_Sculpture";
 
     }
 }

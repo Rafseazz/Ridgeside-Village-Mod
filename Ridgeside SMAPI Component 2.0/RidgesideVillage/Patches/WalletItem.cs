@@ -19,7 +19,7 @@ namespace RidgesideVillage
     //https://github.com/spacechase0/StardewValleyMods/tree/develop/MoonMisadventures
     internal static class WalletItem
     {
-        const int UNLOCKEVENT = 75160380;
+        const string UNLOCKEVENT = "75160380";
 
         private static IModHelper Helper { get; set; }
         public static Texture2D image;
@@ -59,7 +59,7 @@ namespace RidgesideVillage
             {
                 return;
             }
-            if (!__instance.GetContextTagList().Contains("rsv_fish"))
+            if (!__instance.GetContextTags().Contains("rsv_fish"))
             {
                 return;
             }
@@ -119,7 +119,7 @@ namespace RidgesideVillage
 
         private static void OnEventFinished(object sender, EventArgs e)
         {
-            if (Game1.CurrentEvent.id == UNLOCKEVENT)
+            if (Game1.CurrentEvent.id.Equals(UNLOCKEVENT))
             {
                 Game1.player.team.get_hasRiveraSecret().Value = true;
             }

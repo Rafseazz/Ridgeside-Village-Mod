@@ -10,9 +10,8 @@ namespace RidgesideVillage
     internal class ExternalAPIs
     {
         public static IContentPatcherApi CP;
-        public static IJsonAssetsApi JA;
+        //public static IJsonAssetsApi JA;
         public static ISpaceCoreApi SC;
-        public static IShopTileFrameworkAPI STFAPI;
 
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
@@ -28,23 +27,12 @@ namespace RidgesideVillage
                 return;
             }
 
-            JA = Helper.ModRegistry.GetApi<IJsonAssetsApi>("spacechase0.JsonAssets");
-            if(JA == null)
-            {
-                Log.Warn("Json Assets API not found. This could lead to issues.");
-            }
-
             SC = Helper.ModRegistry.GetApi<ISpaceCoreApi>("spacechase0.SpaceCore");
             if (SC == null)
             {
                 Log.Warn("SpaceCore API not found. This could lead to issues.");
             }
 
-            STFAPI = Helper.ModRegistry.GetApi<IShopTileFrameworkAPI>("Cherry.ShopTileFramework");
-            if (STFAPI == null)
-            {
-                Log.Warn("Shop Tile Framework API not found. This could lead to issues.");
-            }
         }
     }
 }

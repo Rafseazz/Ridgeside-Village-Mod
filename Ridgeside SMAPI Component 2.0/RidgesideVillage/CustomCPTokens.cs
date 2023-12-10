@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StardewValley;
+using StardewValley.Network;
 
 namespace RidgesideVillage
     {
@@ -112,7 +113,7 @@ namespace RidgesideVillage
             });
 
             cp.RegisterToken(this.ModManifest, "FoxbloomDay", () => {
-                int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                int? randomseed = (int?)Game1.stats?.DaysPlayed;
                 if (randomseed is not null)
                 {   //Seed the random with a seed that only changes every 28 days
                     Random random = new Random((int)Game1.uniqueIDForThisGame + ((randomseed.Value - 1) / 28));
@@ -122,7 +123,7 @@ namespace RidgesideVillage
                 return null; //return null for an unready token.
             });
 
-            cp.RegisterToken(this.ModManifest, "ShirtNameFromId", new ShirtName());
+            //cp.RegisterToken(this.ModManifest, "ShirtNameFromId", new ShirtName());
 
             cp.RegisterToken(this.ModManifest, "FoxbloomSpawned", new FoxbloomSpawned());
 
@@ -163,10 +164,10 @@ namespace RidgesideVillage
             {
                 if (Game1.MasterPlayer is not null && Context.IsWorldReady)
                 {
-                    int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                    int? randomseed = (int?)Game1.stats?.DaysPlayed;
                     if (randomseed is not null)
                     {   //Seed the random with a seed that changes weekly
-                        Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_ZAYNE_INTRO + ((randomseed.Value - 1) / 7));
+                        Random random = new Random((int)Game1.uniqueIDForThisGame + int.Parse(RSVConstants.E_ZAYNE_INTRO) + ((randomseed.Value - 1) / 7));
                         List<string> visits = GetFestivalDaysAndBday("Zayne");
                         //Log.Debug("RSV: Festival days and birthday for Zayne are " + visits.ToString());
                         if (!visits.Contains("Sunday") && Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_6H))
@@ -197,10 +198,10 @@ namespace RidgesideVillage
             cp.RegisterToken(this.ModManifest, "BryleWeeklyVisitDays", () => {
                 if (Game1.MasterPlayer is not null && Context.IsWorldReady)
                 {
-                    int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                    int? randomseed = (int?)Game1.stats?.DaysPlayed;
                     if (randomseed is not null)
                     {   //Seed the random with a seed that changes weekly
-                        Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_BRYLE_INTRO + ((randomseed.Value - 1) / 7));
+                        Random random = new Random((int)Game1.uniqueIDForThisGame + int.Parse(RSVConstants.E_BRYLE_INTRO) + ((randomseed.Value - 1) / 7));
                         List<string> visits = GetFestivalDaysAndBday("Bryle");
                         if (!visits.Contains("Wednesday") && Game1.dayOfMonth < 8 && Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_8H))
                         {
@@ -366,12 +367,12 @@ namespace RidgesideVillage
                 //Log.Trace("RSV: Not Ridge Forest OR Foxbloom already spawned today.");
                 return false;
             }
-            if (Game1.dayOfMonth != FoxbloomDay || UtilFunctions.GetWeather(here) % 2 != 0)
+            if (Game1.dayOfMonth != FoxbloomDay || !here.GetWeather().Equals(Game1.weather_sunny))
             {
                 Log.Trace($"RSV: Today ({Game1.dayOfMonth}) not Foxbloom Day ({FoxbloomDay}) OR weather not clear.");
                 return false;
             }
-            if (!Game1.player.hasItemInInventoryNamed("Relic Fox Mask"))
+            if (!Game1.player.Items.ContainsId("IRELICFOXMASK"))
             {
                 Log.Trace("RSV: Player does not have Relic Fox Mask in inventory.");
                 return false;

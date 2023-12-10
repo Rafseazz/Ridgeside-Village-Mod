@@ -28,18 +28,18 @@ namespace RidgesideVillage
 		public int imgWidth;
 		public int imgHeight;
 #nullable enable
-		public Dictionary<int, int>? itemsRequired;
+		public Dictionary<string, int>? itemsRequired;
 #nullable disable
 
 		public void getItemsRequired()
         {
-			itemsRequired = new Dictionary<int, int>();
+			itemsRequired = new Dictionary<string, int>();
 			string[] recipeSplit = materials.Split(' ');
 			for (int j = 0; j < recipeSplit.Length; j += 2)
 			{
 				if (!recipeSplit[j].Equals(""))
 				{
-					itemsRequired.Add(Convert.ToInt32(recipeSplit[j]), Convert.ToInt32(recipeSplit[j + 1]));
+					itemsRequired.Add(recipeSplit[j], Convert.ToInt32(recipeSplit[j + 1]));
 				}
 			}
 		}
@@ -50,14 +50,14 @@ namespace RidgesideVillage
 			{
 				return false;
 			}
-			foreach (KeyValuePair<int, int> kvp in itemsRequired)
+			foreach (KeyValuePair<string, int> kvp in itemsRequired)
 			{
-				if (!Game1.player.hasItemInInventory(kvp.Key, kvp.Value))
+				if (!Game1.player.Items.ContainsId(kvp.Key, kvp.Value))
 				{
 					return false;
 				}
 			}
-			if (Game1.player.Money < price)
+            if (Game1.player.Money < price)
 			{
 				return false;
 			}
@@ -66,9 +66,9 @@ namespace RidgesideVillage
 
 		public void consumeResources()
 		{
-			foreach (KeyValuePair<int, int> kvp in itemsRequired)
+			foreach (KeyValuePair<string, int> kvp in itemsRequired)
 			{
-				Game1.player.consumeObject(kvp.Key, kvp.Value);
+				Game1.player.Items.ReduceId(kvp.Key, kvp.Value);
 			}
 			Game1.player.Money -= price;
 		}
@@ -181,7 +181,7 @@ namespace RidgesideVillage
 			{
 				NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
 				worker.CurrentDialogue.Clear();
-				worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.AllRenovated"), worker));
+				worker.CurrentDialogue.Push(new Dialogue(worker,Helper.Translation.Get("IanShop.AllRenovated")));
 				Game1.drawDialogue(worker);
 				return;
             }
@@ -259,7 +259,7 @@ namespace RidgesideVillage
 				price = blueprintData.price;
 				ingredients.Clear();
 				blueprintData.getItemsRequired();
-				foreach (KeyValuePair<int, int> v in blueprintData.itemsRequired)
+				foreach (KeyValuePair<string, int> v in blueprintData.itemsRequired)
 				{
 					ingredients.Add(new StardewValley.Object(v.Key, v.Value));
 				}
@@ -348,7 +348,7 @@ namespace RidgesideVillage
 					}
 					else
 					{
-						Game1.addHUDMessage(new HUDMessage(Game1.content.LoadString("Strings\\UI:Carpenter_CantBuild"), Color.Red, 3500f));
+						Game1.addHUDMessage(new HUDMessage(Game1.content.LoadString("Strings\\UI:Carpenter_CantBuild"), 3500f));
 					}
 					Game1.player.team.buildLock.ReleaseLock();
 				});
@@ -399,11 +399,11 @@ namespace RidgesideVillage
 			worker.CurrentDialogue.Clear();
 			if (blueprints[currentBlueprint].buildDuration <= 0)
 			{
-				worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Instant", new { project = buildingName }), worker));
+				worker.CurrentDialogue.Push(new Dialogue(worker, Helper.Translation.Get("IanShop.Instant", new { project = buildingName })));
 			}
             else
             {
-				worker.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("IanShop.Construction", new { project = buildingName }), worker));
+				worker.CurrentDialogue.Push(new Dialogue(worker, Helper.Translation.Get("IanShop.Construction", new { project = buildingName })));
 			}
 			Game1.drawDialogue(worker);
 		}
@@ -460,7 +460,7 @@ namespace RidgesideVillage
 				{
 					ingredientsPosition.Y += 68f;
 					i.drawInMenu(b, ingredientsPosition, 1f);
-					bool hasItem = (!(i is StardewValley.Object) || Game1.player.hasItemInInventory((i as StardewValley.Object).ParentSheetIndex, i.Stack)) ? true : false;
+					bool hasItem = (!(i is StardewValley.Object) || Game1.player.Items.ContainsId(i.ItemId, i.Stack)) ? true : false;
 					Utility.drawTextWithShadow(b, i.DisplayName, Game1.dialogueFont, new Vector2(ingredientsPosition.X + 64f + 16f, ingredientsPosition.Y + 20f), hasItem ? Game1.textColor : Color.Red, 1f, -1f, -1, -1, 0.25f);
 				}
 				backButton.draw(b, blueprintKeys.Length > 1 ? Color.White : (Color.Gray * 0.8f), 0.88f);

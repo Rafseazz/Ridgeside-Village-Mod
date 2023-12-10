@@ -31,11 +31,11 @@ namespace RidgesideVillage
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.Player.Warped += OnWarped;
 
-            TileActionHandler.RegisterTileAction("HotelCounter", HandleHotelCounterMenu);
-            TileActionHandler.RegisterTileAction("EventHallCounter", HandleEventHallMenu);
-            TileActionHandler.RegisterTileAction("RatesCounter", HandleRatesMenu);
-            TileActionHandler.RegisterTileAction("RSVHistoryScroll", HandleHistoryScroll);
-            TileActionHandler.RegisterTileAction("BlissBook", HandleBlissBook);
+            GameLocation.RegisterTileAction("HotelCounter", HandleHotelCounterMenu);
+            GameLocation.RegisterTileAction("EventHallCounter", HandleEventHallMenu);
+            GameLocation.RegisterTileAction("RatesCounter", HandleRatesMenu);
+            GameLocation.RegisterTileAction("RSVHistoryScroll", HandleHistoryScroll);
+            GameLocation.RegisterTileAction("BlissBook", HandleBlissBook);
         }
 
         //Informs player where there room is upon entering the 2nd floor
@@ -82,7 +82,7 @@ namespace RidgesideVillage
 
             //If it's after wedding day and the player didn't attend their booked Wedding Reception
             if (!(Game1.player.eventsSeen.Contains(RSVConstants.E_WEDDINGRECEPTION))
-                && !Game1.weddingToday && Game1.player.activeDialogueEvents[RSVConstants.M_RECEPTIONBOOKEDFLAG] <= 0 && Game1.player.isMarried())
+                && !Game1.weddingToday && Game1.player.activeDialogueEvents.ContainsKey(RSVConstants.M_RECEPTIONBOOKEDFLAG) &&Game1.player.activeDialogueEvents[RSVConstants.M_RECEPTIONBOOKEDFLAG] <= 0 && Game1.player.isMarriedOrRoommates())
             {
                 Game1.player.eventsSeen.Remove(RSVConstants.E_WEDDINGRECEPTION);
                 Game1.player.activeDialogueEvents.Remove(RSVConstants.M_RECEPTIONBOOKEDFLAG);
@@ -140,19 +140,21 @@ namespace RidgesideVillage
 
         }
 
-        private static void HandleRatesMenu(string tileActionString = "")
+        private static bool HandleRatesMenu(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
             Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("LogCabinHotel.Rates.Expanded"));
+            return true;
         }
 
-        private static void HandleHistoryScroll(string tileActionString = "")
+        private static bool HandleHistoryScroll(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
             Game1.activeClickableMenu = new LetterViewerMenu(Helper.Translation.Get("LogCabinHotel.HistoryScroll"));
+            return true;
         }
 
-        private static void HandleBlissBook(string tileActionString, Vector2 position)
+        private static bool HandleBlissBook(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
-            var responses = new List<Response>
+            var responses = new Response[]
             {
                 new Response("Aniv1st", Helper.Translation.Get("Aniv.1st")),
                 new Response("Aniv2nd", Helper.Translation.Get("Aniv.2nd")),
@@ -185,27 +187,30 @@ namespace RidgesideVillage
                 delegate{}
             };
             Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("BlissBook.Title"), responses, responseActions);
+            return true;
         }
 
-        private static void HandleEventHallMenu(string tileActionString, Vector2 position)
+        private static bool HandleEventHallMenu(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
-            HandleEventHallMenu(tileActionString);
+            HandleEventHallMenu();
+            return true;
         }
-        private static void HandleHotelCounterMenu(string tileActionString, Vector2 position)
+        private static bool HandleHotelCounterMenu(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
-            HandleHotelCounterMenu(tileActionString);
+            HandleHotelCounterMenu(arg2);
+            return true;
         }
 
         private static void HandleRatesMenu(string tileActionString, Vector2 position)
         {
-            HandleRatesMenu(tileActionString);
+            HandleRatesMenu(tileActionString, position);
         }
 
         private static void HandleHistoryScroll(string tileActionString, Vector2 position)
         {
-            HandleHistoryScroll(tileActionString);
+            HandleHistoryScroll(tileActionString, position);
         }
-        private static void HandleHotelCounterMenu(string tileActionString = "")
+        private static void HandleHotelCounterMenu(string[] tileActionString)
         {
             if (Game1.player.mailReceived.Contains(REWARDLETTER))
             {
@@ -213,7 +218,7 @@ namespace RidgesideVillage
             }
             else if (Game1.player.Money >= ROOMPRICE && !Game1.player.mailReceived.Contains(RSVConstants.M_ROOMBOOKEDFLAG))
             {
-                var responses = new List<Response>
+                var responses = new Response[]
                     {
                         new Response("yes", Helper.Translation.Get("HotelCounter.Booking.Yes")),
                         new Response("no", Helper.Translation.Get("HotelCounter.Booking.No"))
@@ -246,7 +251,7 @@ namespace RidgesideVillage
             }
         }
 
-        private static void HandleEventHallMenu(string tileActionString = "")
+        private static void HandleEventHallMenu()
         {
             //If player doesn't have enough money to book an event
             if (Game1.player.Money < 1500)
@@ -288,7 +293,7 @@ namespace RidgesideVillage
                     responseActions.Add(receptionAction);
                 }
 
-                if(Game1.player.isMarried())
+                if(Game1.player.isMarriedOrRoommates())
                 {
                     Response anvresponse = new Response("anvParty", Helper.Translation.Get("EventHallCounter.Anv.Title"));
                     responses.Add(anvresponse);
@@ -302,13 +307,13 @@ namespace RidgesideVillage
 
                 responses.Add(new Response("no", Helper.Translation.Get("HotelCounter.Booking.No")));
                 responseActions.Add(delegate { });
-                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), responses, responseActions);
+                Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Question"), responses.ToArray(), responseActions);
             }
         }
 
         private static void HandleReceptionEventMenu()
         {
-            var responses = new List<Response>
+            var responses = new Response[]
                     {
                         new Response("yes", Helper.Translation.Get("EventHallCounter.Booking.WR.Yes")),
                         new Response("no", Helper.Translation.Get("EventHallCounter.Booking.No"))
@@ -330,7 +335,7 @@ namespace RidgesideVillage
         private static void HandleBirthdayEventMenu()
         {
             //Do you want to throw party for 2k?
-            var responses = new List<Response>
+            var responses = new Response[]
                     {
                         new Response("yes", Helper.Translation.Get("EventHallCounter.Booking.Bday.Yes")),
                         new Response("no", Helper.Translation.Get("EventHallCounter.Booking.No"))
@@ -378,7 +383,7 @@ namespace RidgesideVillage
                 HandleBirthdayEventMenu();
             });
 
-            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Bday.List"), responses, responseActions);
+            Game1.activeClickableMenu = new DialogueBoxWithActions(Helper.Translation.Get("EventHallCounter.Booking.Bday.List"), responses.ToArray(), responseActions);
         }
 
         private static HashSet<Tuple<string, string>> NPCBirthdaysInNextNDays(int n)
@@ -421,7 +426,7 @@ namespace RidgesideVillage
 
         private static void HandleAnniversaryMenu()
         {
-            var responses = new List<Response>
+            var responses = new Response[]
             {
                 new Response("yes", Helper.Translation.Get("EventHallCounter.Anv.Yes")),
                 new Response("no", Helper.Translation.Get("EventHallCounter.Booking.No"))

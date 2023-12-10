@@ -25,10 +25,11 @@ namespace RidgesideVillage
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
 
-            TileActionHandler.RegisterTileAction("PaulaCounter", OpenPaulaMenu);
+            GameLocation.RegisterTileAction("PaulaCounter", OpenPaulaMenu);
         }
 
-        private static void OpenPaulaMenu(string tileActionString, Vector2 position)
+        private static bool OpenPaulaMenu(GameLocation location, string[] arg2, Farmer farmer, Point point)
+
         {
             bool isSomeoneHere = UtilFunctions.IsSomeoneHere(14, 12, 3, 2);
             if (isSomeoneHere && (Game1.player.health < (Game1.player.maxHealth * 0.8) || Game1.player.stamina < (Game1.player.MaxStamina * 0.8)))
@@ -43,10 +44,11 @@ namespace RidgesideVillage
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("Clinic.Healthy"));
             }
+            return true;
         }
         private static void ClinicChoices()
         {
-            var responses = new List<Response>
+            var responses = new Response[]
             {
                 new Response("healthcheckup", Helper.Translation.Get("Clinic.Health") + $" : {cost}$"),
                 new Response("staminacheckup", Helper.Translation.Get("Clinic.Stamina") + $" : {cost}$"),
@@ -73,8 +75,8 @@ namespace RidgesideVillage
             if(Game1.player.health < (Game1.player.maxHealth * 0.8) && Game1.player.Money >= cost)
             {
                 var location = Game1.getLocationFromName(RSVConstants.L_CLINIC);
-                
-                var events = location.GetLocationEvents();
+
+                location.TryGetLocationEvents(out var assetName, out var events);
                 
                 string eventString = events["healthCheckup"].Replace("{cost}", cost.ToString());
 
@@ -100,8 +102,8 @@ namespace RidgesideVillage
             {
                 var location = Game1.getLocationFromName(RSVConstants.L_CLINIC);
 
-                var events = location.GetLocationEvents();///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end";
-               
+                location.TryGetLocationEvents(out var assetName, out var events);///fade/message \"{{i18n: 87620002.3}}\"/warp farmer 8 21/pause 600/fade unfade/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/fade unfade/pause 1000/speak Paula \"All done!\"/pause 500/end";
+
                 string eventString = events["staminaCheckup"].Replace("{cost}", cost.ToString());
 
                 UtilFunctions.StartEvent(new Event(eventString), RSVConstants.L_CLINIC, 16, 15);

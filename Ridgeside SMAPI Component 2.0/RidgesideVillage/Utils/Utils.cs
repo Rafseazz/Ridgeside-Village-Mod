@@ -106,54 +106,20 @@ namespace RidgesideVillage
         public static StringComparer GetCurrentLanguageComparer(bool ignoreCase = false)
             => StringComparer.Create(Game1.content.CurrentCulture, ignoreCase);
 
-        public static IEnumerable<NPC> GetBirthdayNPCs(SDate day)
-        {
-            foreach (NPC npc in Utility.getAllCharacters())
-            {
-                if (npc.isBirthday(day.Season, day.Day))
-                {
-                    yield return npc;
-                }
-            }
-        }
-
         /// <summary>Generates a object from an index and places it on the specified map and tile.</summary>
         /// <param name="index">The parent sheet index (a.k.a. object ID) of the object type to spawn.</param>
         /// <param name="location">The GameLocation where the forage should be spawned.</param>
         /// <param name="tile">The x/y coordinates of the tile where the forage should be spawned.</param>
         /// <param name="destroyOvernight">Whether the object should be destroyed overnight.</param>
-        public static bool SpawnForage(int index, GameLocation location, Vector2 tile, bool destroyOvernight)
+        public static bool SpawnForage(string id, GameLocation location, Vector2 tile, bool destroyOvernight)
         {
             StardewValley.Object forageObj;
-            forageObj = new StardewValley.Object(tile, index, null, false, true, false, true); //generate the object (use the constructor that allows pickup)
+            forageObj = new StardewValley.Object(RSVConstants.IFOXBLOOM, 1); //generate the object (use the constructor that allows pickup)
             if (destroyOvernight)
                 forageObj.destroyOvernight = true;
 
             Log.Verbose($"Spawning forage object for RSV. Type: {forageObj.DisplayName}. Location: {tile.X}, {tile.Y} ({location.Name}).");
             return location.dropObject(forageObj, tile * 64f, Game1.viewport, true, null); //attempt to place the object and return success/failure
-        }
-
-        public static int GetWeather(GameLocation location)
-        {
-            // special case: day events override weather in the valley
-            if (!(location is IslandLocation))
-            {
-                if (Utility.isFestivalDay(Game1.dayOfMonth, Game1.currentSeason) || (SaveGame.loaded?.weddingToday ?? Game1.weddingToday))
-                    return Game1.weather_sunny;
-            }
-
-            // get from weather data
-            LocationWeather model = Game1.netWorldState.Value.GetWeatherForLocation(location.GetLocationContext());
-            if (model != null)
-            {
-                if (model.isSnowing.Value)
-                    return Game1.weather_snow;
-                if (model.isRaining.Value)
-                    return model.isLightning.Value ? Game1.weather_lightning : Game1.weather_rain;
-                if (model.isDebrisWeather.Value)
-                    return Game1.weather_debris;
-            }
-            return Game1.weather_sunny;
         }
 
         public static bool IsSomeoneHere(int x, int y, int w, int h)
@@ -169,7 +135,7 @@ namespace RidgesideVillage
             return isSomeoneHere;
         }
 
-        public static void TryAddQuest(int id)
+        public static void TryAddQuest(string id)
         {
             foreach (Farmer farmer in Game1.getAllFarmers())
             {
@@ -177,7 +143,7 @@ namespace RidgesideVillage
             }
         }
 
-        public static void TryRemoveQuest(int id)
+        public static void TryRemoveQuest(string id)
         {
             if (!Game1.player.hasQuest(id))
                 return;
@@ -190,7 +156,7 @@ namespace RidgesideVillage
 
         }
 
-        public static void TryCompleteQuest(int id)
+        public static void TryCompleteQuest(string id)
         {
             if (!Game1.player.hasQuest(id))
                 return;

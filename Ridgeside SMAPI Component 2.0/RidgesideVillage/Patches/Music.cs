@@ -73,7 +73,7 @@ namespace RidgesideVillage
         {
             NPC June = Game1.getCharacterFromName("June");
             if (!June.currentLocation.Name.Equals(RSVConstants.L_HOTEL)) return false;
-            Vector2 pos = June.getTileLocation();
+            Vector2 pos = June.Tile;
             if ((pos.X == 13) && (pos.Y == 14)) return true;
             return false;
         }

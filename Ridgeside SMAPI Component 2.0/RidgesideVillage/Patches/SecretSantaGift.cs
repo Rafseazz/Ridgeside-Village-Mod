@@ -51,7 +51,7 @@ namespace RidgesideVillage
             try
             {
                 Log.Trace($"Choosing gift from {who.Name}");
-                Random r = new Random((int)Game1.uniqueIDForThisGame / 2 + Game1.year + Game1.dayOfMonth + Utility.getSeasonNumber(Game1.currentSeason) + who.getTileX());
+                Random r = new Random((int)Game1.uniqueIDForThisGame / 2 + Game1.year + Game1.dayOfMonth + Utility.getSeasonNumber(Game1.currentSeason) + (int)who.TilePoint.X);
 
                 var data = Helper.GameContent.Load<Dictionary<string, Dictionary<string, ItemEntry>>>(AssetPath);
                 if (data.TryGetValue(who.Name, out Dictionary<string, ItemEntry> possibleGifts) && possibleGifts.Count > 0)

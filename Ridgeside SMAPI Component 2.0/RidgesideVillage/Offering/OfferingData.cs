@@ -85,27 +85,27 @@ namespace RidgesideVillage.Offering
                             }
                             else if (crop.isWildSeedCrop())
                             {
-                                int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
+                                String forage = crop.getRandomWildCropForSeason(Game1.season);
                                 var Farm = Game1.getFarm();
 
                                 //check if an object is already there
-                                if (!Farm.objects.ContainsKey(dirt.currentTileLocation))
+                                if (!Farm.objects.ContainsKey(dirt.Tile))
                                 {
-                                    Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                                    Game1.getFarm().objects.Add(dirt.Tile, new StardewValley.Object(forage, 1)
                                     {
                                         IsSpawnedObject = true,
                                         CanBeGrabbed = true
                                     });
-                                    Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                                    Log.Verbose($"RSV: Forage crop fully grown at {dirt.Tile.X}, {dirt.Tile.Y}.");
                                     crop = null;
-                                    dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+                                    dirt.destroyCrop(false);
 
                                 }
                             }
                             else
                             {
                                 crop.growCompletely();
-                                Log.Verbose($"RSV: Regular crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                                Log.Verbose($"RSV: Regular crop fully grown at {dirt.Tile.X}, {dirt.Tile.Y}.");
                             }
 
                             n++;
@@ -118,6 +118,8 @@ namespace RidgesideVillage.Offering
 
         private void ApplyBuff()
         {
+            return;
+            /*
             int index = -1;
             switch (this.BuffType.ToLower())
             {
@@ -211,6 +213,7 @@ namespace RidgesideVillage.Offering
 
                 }
             }
+            */
         }
     }
 }
