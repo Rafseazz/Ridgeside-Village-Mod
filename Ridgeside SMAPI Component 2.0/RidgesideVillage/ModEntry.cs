@@ -73,8 +73,6 @@ namespace RidgesideVillage
 
             Loan.Initialize(this);
 
-            //SummitHouse.Initialize(this);
-
             WarpTotem.Initialize(this);
 
             PaulaClinic.Initialize(this);
