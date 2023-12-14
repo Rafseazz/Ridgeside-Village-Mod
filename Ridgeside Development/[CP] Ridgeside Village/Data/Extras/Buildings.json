@@ -6,15 +6,6 @@
       "Target": "Buildings/RSV Obelisk",
       "FromFile": "Assets/LooseSprites/RSVObelisk.png"
     },
-    /*
-    {
-      "LogName": "RSV Blueprints",
-      "Action": "EditData",
-      "Target": "Data/Blueprints",
-      "Entries": {
-        "RSV Obelisk": "{{spacechase0.JsonAssets/ObjectId:Spiritual Essence}} 200 337 10/3/2/-1/-1/-2/-1/null/{{i18n:Blueprint.Name.RSVObelisk}}/{{i18n:Blueprint.Description.RSVObelisk}}/Buildings/none/48/128/-1/null/Farm/500000/true",
-      }
-    },*/
     {
       "LogName": "Add Obelisk",
       "Action": "EditData",
@@ -23,7 +14,7 @@
         "RSV_Obelisk": {
           "Name": "{{i18n:Blueprint.Name.RSVObelisk}}",
           "Description": "{{i18n:Blueprint.Description.RSVObelisk}}",
-          "Texture": "Buildings\\RSV OBelisk",
+          "Texture": "Buildings\\RSV Obelisk",
           "Builder": "Wizard",
           "BuildCost": 500000,
           "BuildMaterials": [

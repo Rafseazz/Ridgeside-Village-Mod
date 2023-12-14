@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StardewValley;
 using StardewValley.Network;
+using StardewValley.GameData.Shirts;
 
 namespace RidgesideVillage
     {
@@ -123,7 +124,7 @@ namespace RidgesideVillage
                 return null; //return null for an unready token.
             });
 
-            //cp.RegisterToken(this.ModManifest, "ShirtNameFromId", new ShirtName());
+            cp.RegisterToken(this.ModManifest, "ShirtNameFromId", new ShirtName());
 
             cp.RegisterToken(this.ModManifest, "FoxbloomSpawned", new FoxbloomSpawned());
 
@@ -232,7 +233,7 @@ namespace RidgesideVillage
             ** Fields
             *********/
             /// <summary>The name of the shirt at the given ID as of the last context update.</summary>
-            private IDictionary<int, string> clothes;
+            private IDictionary<string, ShirtData> clothes;
 
             /*********
             ** Public methods
@@ -261,7 +262,7 @@ namespace RidgesideVillage
             public bool UpdateContext()
             {
                 var old_clothes = clothes;
-                clothes = Helper.GameContent.Load<IDictionary<int, string>>(PathUtilities.NormalizeAssetName("Data/ClothingInformation"));
+                clothes = Helper.GameContent.Load<IDictionary<string, ShirtData>>(PathUtilities.NormalizeAssetName("Data/Shirts"));
                 /*
                 if (clothes.Equals(old_clothes))
                     Log.Debug("RSV: not updating context for ShirtName");
@@ -281,20 +282,12 @@ namespace RidgesideVillage
             /// <param name="input">The input arguments, if applicable.</param>
             public IEnumerable<string> GetValues(string input)
             {
-                if (string.IsNullOrWhiteSpace(input))
-                    yield break;
-
-                string names = "";
-                foreach(string data in clothes.Values)
+                var shirtData = ItemRegistry.GetData("(S)" + input);
+                if (!shirtData.IsErrorItem)
                 {
-                    names += data.Split('/')[1] + " ";
+                    yield return shirtData.DisplayName;
                 }
-                //Log.Debug($"RSV: {names}");
-                int id = int.Parse(input);
-                string name = clothes.FirstOrDefault(x => x.Key == id).Value.Split('/')[1];
-                //Log.Debug($"RSV: key for {input} = {name}");
-
-                yield return name;
+                yield return "";
             }
         }
 

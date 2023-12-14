@@ -98,30 +98,6 @@ namespace RidgesideVillage
 			Log.Trace($"RSV: Added {house.furniture.Count} pieces of furniture");
 		}
 
-		/*
-		 * Can be removed
-		[EventPriority(EventPriority.Low)] // run after Content Patcher
-		private static void Specialized_LoadStageChanged(object sender, LoadStageChangedEventArgs args)
-		{
-			
-			if (args.NewStage is LoadStage.CreatedInitialLocations or LoadStage.SaveAddedLocations)
-			{
-				for (int i = 0; i < Game1.locations.Count; i++)
-				{
-					GameLocation location = Game1.locations[i];
-					if ((location.Name == RSVConstants.L_SUMMITHOUSE || location.Name == RSVConstants.L_SUMMITSHED) && location is not DecoratableLocation)
-					{
-						Log.Trace($"RSV: Found {location.Name}");
-						Game1.locations.RemoveAt(i);
-						Game1.locations.Insert(i, new DecoratableLocation(location.mapPath.Value, location.Name));
-						Log.Trace($"RSV: Made {location.Name} decoratable ({location.mapPath.Value})");
-						
-						break;
-					}
-				}
-			}
-		}*/
-
 		private static void GameLoop_GameLaunched(object sender, GameLaunchedEventArgs e)
 		{
 			LoadEMPValues();
