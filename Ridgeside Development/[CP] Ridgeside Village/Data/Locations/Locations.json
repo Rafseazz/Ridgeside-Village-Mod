@@ -1,6 +1,18 @@
 {
     "Changes": [
         {
+            "LogName": "Add Custom LocationContexts",
+            "Action": "EditData",
+            "Target": "Data/LocationContexts",
+            "Entries": {
+                "RSV_SpiritRealm" : {
+                    "Name": "RSV_SpiritRealm",
+                    "AllowRainTotem": false,
+                    "SeasonOverride": "summer",
+                }
+            }
+        },
+        {
             "LogName": "Load Dynamic Maps",
             "Action": "Load",
             "Target": "Maps/Custom_Ridgeside_RSVHiddenWarp, Maps/Custom_Ridgeside_RSVHiddenWarp2",

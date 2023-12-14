@@ -129,12 +129,6 @@ namespace RidgesideVillage
 
             Config = Helper.ReadConfig<ModConfig>();
 
-            if (!Helper.ModRegistry.IsLoaded("spacechase0.JsonAssets"))
-            {
-                Log.Error("JSON Assets is not loaded! This mod *requires* JSON Assets!");
-                return;
-            }
-
             // Custom CP Token Set-up
             CustomCPTokens.RegisterTokens();
 
