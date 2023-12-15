@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="93" height="80" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="2238">
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="93" height="80" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="2238">
  <properties>
   <property name="Arch" value="111 .01 113 .009"/>
+  <property name="BuildConditions" value="PLAYER_HAS_SEEN_EVENT Host 75160263"/>
+  <property name="CanBuildHere" value="T"/>
   <property name="Debris" value="8 .01 3"/>
   <property name="EnableGrassSpread" value="T"/>
   <property name="ForceAllowTreePlanting" value="T"/>
   <property name="IsFarm" value="T"/>
   <property name="Outdoors" value="T"/>
   <property name="SpawnRandomGrassOnNewYear" value="T"/>
-  <property name="CanBuildHere" value="T"/>
-  <property name="BuildConditions" value="PLAYER_HAS_SEEN_EVENT Host 75160263"/>
-  
  </properties>
  <tileset firstgid="1" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet" width="400" height="1264"/>
@@ -2629,7 +2628,7 @@
   </object>
   <object id="2232" name="TileData" x="1232" y="752" width="16" height="16">
    <properties>
-    <property name="Action" value="Message &quot;rsv.brokencart&quot;"/>
+    <property name="Action" value="MinecartTransport RSV_Minecarts"/>
    </properties>
   </object>
   <object id="2234" name="TileData" x="1248" y="544" width="16" height="16">
@@ -2644,7 +2643,7 @@
   </object>
   <object id="2237" name="TileData" x="352" y="640" width="16" height="16">
    <properties>
-    <property name="Action" value="Message &quot;rsv.brokencart&quot;"/>
+    <property name="Action" value="MinecartTransport RSV_Minecarts"/>
    </properties>
   </object>
  </objectgroup>

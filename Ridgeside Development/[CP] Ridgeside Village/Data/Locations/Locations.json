@@ -55,6 +55,12 @@
             "Target": "Maps/Custom_Ridgeside_MysticFalls1, Maps/Custom_Ridgeside_MysticFalls2, Maps/Custom_Ridgeside_MysticFalls3, Maps/Custom_Ridgeside_RidgePond, Maps/Custom_Ridgeside_RSVSpiritRealm",
             "FromFile": "Assets/Maps/QuestMaps/{{targetWithoutPath}}.tmx"
         },
+	{
+            "LogName": "Load Spouse Maps",
+            "Action": "Load",
+            "Target": "Maps/RidgesideSpouseRooms, Maps/RSVSpousePatios",
+            "FromFile": "Assets/Maps/SpouseRooms/{{TargetWithoutPath}}.tmx"
+        },
 
         {
             "LogName": "Add Custom Locations Data",

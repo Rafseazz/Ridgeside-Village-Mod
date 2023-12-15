@@ -1,0 +1,58 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Minecarts",
+            "TargetField": [ "Destinations" ],
+            "Entries": {
+                "RSV_CableCar": {
+                    "Location": "Custom_Ridgeside_RSVCableCar",
+                    "Tile": { "X": 25, "Y": 18 },
+                    "Direction": "down",
+                    "DisplayName": "{{i18n:Minecart.CableCar}}",
+                    "Network": "RSV_Minecarts"
+                },
+                "RSV_Heaps": {
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": { "X": 69, "Y": 16 },
+                    "Direction": "down",
+                    "DisplayName": "{{i18n:Minecart.Heaps}}",
+                    "Network": "RSV_Minecarts"
+                },
+                "RSV_Nightingale": {
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": { "X": 16, "Y": 82 },
+                    "Direction": "down",
+                    "DisplayName": "{{i18n:Minecart.Nightingale}}",
+                    "Network": "RSV_Minecarts"
+                },
+                "RSV_Greenhouse": {
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": { "X": 109, "Y": 85 },
+                    "Direction": "down",
+                    "DisplayName": "{{i18n:Minecart.Greenhouse}}",
+                    "Network": "RSV_Minecarts"
+                },
+                "RSV_EastSummit": {
+                    "Location": "Custom_Ridgeside_SummitFarm",
+                    "Tile": { "X": 77, "Y": 48 },
+                    "Direction": "down",
+                    "DisplayName": "{{i18n:Minecart.EastSummit}}",
+                    "Network": "RSV_Minecarts",
+                    "Condition": "PLAYER_VISITED_LOCATION Any Custom_Ridgeside_SummitFarm"
+                },
+                "RSV_WestSummit": {
+                    "Location": "Custom_Ridgeside_SummitFarm",
+                    "Tile": { "X": 22, "Y": 41 },
+                    "Direction": "down",
+                    "DisplayName": "{{i18n:Minecart.WestSummit}}",
+                    "Network": "RSV_Minecarts",
+                    "Condition": "PLAYER_VISITED_LOCATION Any Custom_Ridgeside_SummitFarm"
+                }
+            },
+            "When": {
+                "HasFlag": "RSV.FixedMinecart"
+            }
+        }
+    ]
+}
