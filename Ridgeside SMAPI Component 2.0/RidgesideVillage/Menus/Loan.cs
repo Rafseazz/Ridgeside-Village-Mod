@@ -8,8 +8,6 @@ using StardewValley;
 using StardewModdingAPI.Events;
 using Microsoft.Xna.Framework;
 using StardewValley.Menus;
-using SpaceCore.Events;
-using StardewModdingAPI.Utilities;
 
 namespace RidgesideVillage
 {
