@@ -5,10 +5,31 @@
             "Action": "EditData",
             "Target": "Data/LocationContexts",
             "Entries": {
-                "RSV_SpiritRealm" : {
+                "RSV_SpiritRealm": {
                     "Name": "RSV_SpiritRealm",
                     "AllowRainTotem": false,
                     "SeasonOverride": "summer",
+                    "ReviveLocations": [
+                        {
+                            "Location": "Custom_Ridgeside_RidgeFalls",
+                            "Position": {
+                                "X": 15,
+                                "Y": 5
+                            }
+                        }
+                    ]
+                },
+                "RSV_Forest": {
+                    "Name": "RSV_Forest",
+                    "ReviveLocations": [
+                        {
+                            "Location": "Custom_Ridgeside_PaulaClinic",
+                            "Position": {
+                                "X": 18,
+                                "Y": 5
+                            }
+                        }
+                    ]
                 }
             }
         },
@@ -24,13 +45,12 @@
             "Target": "Maps/Custom_Ridgeside_AguarCave, Maps/Custom_Ridgeside_AguarCaveFixed, Maps/Custom_Ridgeside_AguarCaveFixed_alt, Maps/Custom_Ridgeside_AmethyneCorp, Maps/Custom_Ridgeside_AmethyneJewelry, Maps/Custom_Ridgeside_AmethyneMine, Maps/Custom_Ridgeside_EzekielPic, Maps/Custom_Ridgeside_KiarraPick, Maps/Custom_Ridgeside_LogCabinEventHall_Ballroom, Maps/Custom_Ridgeside_LogCabinEventHall_Birthday, Maps/Custom_Ridgeside_LogCabinEventHall_NightParty, Maps/Custom_Ridgeside_LogCabinEventHall_WeddingReception, Maps/Custom_Ridgeside_LogCabinEventHall_WeddingReception_Temp, Maps/Custom_Ridgeside_LolaShed, Maps/Custom_Ridgeside_OldRSVKids, Maps/Custom_Ridgeside_PrincessVilleDate, Maps/Custom_Ridgeside_PurpleMansion_Ball, Maps/Custom_Ridgeside_RidgesideVillage_CookOff, Maps/Custom_Ridgeside_RidgesideVillage_Event, Maps/Custom_Ridgeside_RidgesideVillage_Fashion, Maps/Custom_Ridgeside_Ridge_KennethDate_OFF, Maps/Custom_Ridgeside_Ridge_KennethDate_ON, Maps/Custom_Ridgeside_RSVAbandonedHouse, Maps/Custom_Ridgeside_RSVAbandonedHouse_Sched,  Maps/Custom_Ridgeside_RSVCliff_AlissaDate, Maps/Custom_Ridgeside_RSVCliff_FayeDate, Maps/Custom_Ridgeside_RSVCorineDate, Maps/Custom_Ridgeside_RSVEvacuationCenter, Maps/Custom_Ridgeside_RSVGreenhouse1, Maps/Custom_Ridgeside_RSVGreenhouse2, Maps/Custom_Ridgeside_RSVSkyGazing, Maps/Custom_Ridgeside_RSVTheRide, Maps/Custom_Ridgeside_RSVTheRide_static, Maps/Custom_Ridgeside_RSVWestCliff, Maps/Custom_Ridgeside_TortsRealm, Maps/Custom_Ridgeside_WeddingReceptionPic, Maps/Custom_Ridgeside_ZuzuCableCarView",
             "FromFile": "Assets/Maps/EventMaps/{{targetWithoutPath}}.tmx"
         },
-		{
-
+        {
             "LogName": "Load Event Maps",
             "Action": "Load",
-			"Target": "Maps/Custom_Ridgeside_JuneNPC_ResortDate",
-			"FromFile": "Assets/Maps/EventMaps/Custom_Ridgeside_Island_S-June.tmx"
-		},
+            "Target": "Maps/Custom_Ridgeside_JuneNPC_ResortDate",
+            "FromFile": "Assets/Maps/EventMaps/Custom_Ridgeside_Island_S-June.tmx"
+        },
         {
             "LogName": "Load Festival Maps",
             "Action": "Load",
@@ -55,20 +75,19 @@
             "Target": "Maps/Custom_Ridgeside_MysticFalls1, Maps/Custom_Ridgeside_MysticFalls2, Maps/Custom_Ridgeside_MysticFalls3, Maps/Custom_Ridgeside_RidgePond, Maps/Custom_Ridgeside_RSVSpiritRealm",
             "FromFile": "Assets/Maps/QuestMaps/{{targetWithoutPath}}.tmx"
         },
-	{
+        {
             "LogName": "Load Spouse Maps",
             "Action": "Load",
             "Target": "Maps/RidgesideSpouseRooms, Maps/RSVSpousePatios",
             "FromFile": "Assets/Maps/SpouseRooms/{{TargetWithoutPath}}.tmx"
         },
-
         {
             "LogName": "Add Custom Locations Data",
             "Action": "EditData",
             "Target": "Data/Locations",
             "Entries": {
                 "Custom_Ridgeside_RSVCliff_AlissaDate": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVCliff_AlissaDate}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -83,7 +102,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVCliff_FayeDate": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVCliff_FayeDate}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -98,7 +117,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVCorineDate": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVCorineDate}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -113,7 +132,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RidgesideVillage_Event": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RidgesideVillage_Event}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -128,7 +147,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RidgesideVillage_CookOff": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RidgesideVillage_CookOff}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -143,7 +162,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RidgesideVillage_Fashion": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RidgesideVillage_Fashion}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -158,7 +177,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_Ridge_KennethDate_OFF": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_Ridge_KennethDate_OFF}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -173,7 +192,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVEvacuationCenter": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVEvacuationCenter}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -188,7 +207,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_Ridge_KennethDate_ON": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_Ridge_KennethDate_ON}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -203,7 +222,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_PurpleMansion_Ball": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_PurpleMansion_Ball}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -218,7 +237,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AmethyneCorp": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AmethyneCorp}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -233,7 +252,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AmethyneJewelry": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AmethyneJewelry}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -248,7 +267,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AmethyneMine": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AmethyneMine}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -263,7 +282,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AguarCave": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AguarCave}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -279,10 +298,9 @@
                     "Fish": [],
                     "Forage": [],
                 },
-				/*
+                /*
                 "Custom_Ridgeside_AguarCaveTemporary": {
-                    "DisplayName": null,
-                    "DefaultArrivalTile": null,
+"DisplayName": "{{i18n: Custom_Ridgeside_AguarCaveTemporary}}",                    "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
                         "MapPath": "Maps/Custom_Ridgeside_AguarCaveTemporary",
@@ -298,7 +316,7 @@
                     "Forage": [],
                 },*/
                 "Custom_Ridgeside_EzekielPic": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_EzekielPic}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -315,7 +333,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LolaShed": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LolaShed}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -332,7 +350,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_TortsRealm": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_TortsRealm}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -347,7 +365,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVAbandonedHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVAbandonedHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -364,7 +382,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_JuneNPC_ResortDate": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_JuneNPC_ResortDate}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -372,14 +390,16 @@
                         "Type": null,
                         "AlwaysActive": false
                     },
-                    "FormerLocationNames": ["Custom_JuneNPC_ResortDate"],
+                    "FormerLocationNames": [
+                        "Custom_JuneNPC_ResortDate"
+                    ],
                     "ArtifactSpots": [],
                     "FishAreas": {},
                     "Fish": [],
                     "Forage": [],
                 },
                 "Custom_Ridgeside_PrincessVilleDate": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_PrincessVilleDate}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -396,7 +416,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVWestCliff": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVWestCliff}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -411,7 +431,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVGreenhouse1": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVGreenhouse1}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -428,7 +448,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVGreenhouse2": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVGreenhouse2}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -445,7 +465,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVTheRide": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVTheRide}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -462,7 +482,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVTheRide_static": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVTheRide_static}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -477,7 +497,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinEventHall_WeddingReception": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinEventHall_WeddingReception}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -492,7 +512,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinEventHall_WeddingReception_Temp": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinEventHall_WeddingReception_Temp}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -507,7 +527,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinEventHall_Ballroom": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinEventHall_Ballroom}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -522,7 +542,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinEventHall_Birthday": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinEventHall_Birthday}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -537,7 +557,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinEventHall_NightParty": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinEventHall_NightParty}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -552,7 +572,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_EmberNight": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_EmberNight}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -569,7 +589,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVGathering": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVGathering}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -586,7 +606,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AguarBasement": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AguarBasement}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -603,7 +623,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AguarLab": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AguarLab}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -620,7 +640,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AlissaHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AlissaHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -637,7 +657,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_AlissaShed": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_AlissaShed}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -654,7 +674,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_BertHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_BertHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -671,7 +691,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_BertHouse2ndFloor": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_BertHouse2ndFloor}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -688,7 +708,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_EzekielHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_EzekielHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -705,7 +725,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_FreddieHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_FreddieHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -722,7 +742,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_IanHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_IanHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -739,7 +759,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_JericHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_JericHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -756,7 +776,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_KennethHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_KennethHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -773,7 +793,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LennyHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LennyHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -790,7 +810,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinHotel2ndFloor": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinHotel2ndFloor}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -807,7 +827,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinHotel3rdFloor": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinHotel3rdFloor}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -824,7 +844,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinHotelLobby": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinHotelLobby}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -841,7 +861,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_MaddieHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_MaddieHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -858,7 +878,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_PikaHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_PikaHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -875,7 +895,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVNinjaHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVNinjaHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -892,7 +912,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_ShiroHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_ShiroHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -909,7 +929,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_LogCabinEventHall": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_LogCabinEventHall}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -924,7 +944,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_BlairHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_BlairHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -939,7 +959,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_FayeHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_FayeHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -954,7 +974,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_PurpleMansion": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_PurpleMansion}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -969,7 +989,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_PurpleMansion2ndFloor": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_PurpleMansion2ndFloor}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -984,7 +1004,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_3Bros": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_3Bros}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -999,7 +1019,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_3Bros2ndFloor": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_3Bros2ndFloor}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1014,7 +1034,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVSewers": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVSewers}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1029,7 +1049,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_PaulaClinic": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_PaulaClinic}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1044,7 +1064,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVSummitHouse": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVSummitHouse}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1059,7 +1079,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVSummitHouseNew": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVSummitHouseNew}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1074,7 +1094,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVSummitShed": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVSummitShed}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1089,7 +1109,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_MysticFalls1": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_MysticFalls1}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1106,7 +1126,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_MysticFalls2": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_MysticFalls2}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1123,7 +1143,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_MysticFalls3": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_MysticFalls3}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1140,7 +1160,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVSpiritRealm": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVSpiritRealm}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1155,7 +1175,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RidgePond": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RidgePond}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1170,7 +1190,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_Ridge": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_Ridge}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1187,7 +1207,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RidgeFalls": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RidgeFalls}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1204,7 +1224,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RidgeForest": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RidgeForest}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1219,7 +1239,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RidgesideVillage": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RidgesideVillage}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1236,7 +1256,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVCableCar": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVCableCar}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1253,7 +1273,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVCliff": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVCliff}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1270,7 +1290,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVTheHike": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVTheHike}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1287,7 +1307,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_SummitFarm": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_SummitFarm}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1302,7 +1322,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVRoad": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVRoad}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1316,9 +1336,8 @@
                     "Fish": [],
                     "Forage": [],
                 },
-
                 "Custom_Ridgeside_RSVHiddenWarp": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVHiddenWarp}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1335,7 +1354,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVHiddenWarp2": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVHiddenWarp2}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1352,7 +1371,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_WeddingReceptionPic": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_WeddingReceptionPic}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1367,7 +1386,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_KiarraPick": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_KiarraPick}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1382,7 +1401,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_OldRSVKids": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_OldRSVKids}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1397,7 +1416,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_RSVSkyGazing": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_RSVSkyGazing}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1412,7 +1431,7 @@
                     "Forage": [],
                 },
                 "Custom_Ridgeside_ZuzuCableCarView": {
-                    "DisplayName": null,
+                    "DisplayName": "{{i18n: Custom_Ridgeside_ZuzuCableCarView}}",
                     "DefaultArrivalTile": null,
                     "ExcludeFromNpcPathfinding": false,
                     "CreateOnLoad": {
@@ -1426,270 +1445,6 @@
                     "Fish": [],
                     "Forage": [],
                 },
-                "Farm_Pathoschild.SmallBeachFarm": {
-                    "DisplayName": "[LocalizedText Strings\\UI:Pathoschild_SmallBeachFarm_Name]",
-                    "DefaultArrivalTile": null,
-                    "ExcludeFromNpcPathfinding": false,
-                    "CreateOnLoad": null,
-                    "FormerLocationNames": [],
-                    "ArtifactSpots": [],
-                    "FishAreas": {
-                        "River": {
-                            "DisplayName": "[LocalizedText Strings\\UI:Pathoschild_SmallBeachFarm_FishArea_River]",
-                            "Position": {
-                                "X": 0,
-                                "Y": 0,
-                                "Width": 255,
-                                "Height": 23
-                            },
-                            "CrabPotFishTypes": [
-                                "freshwater"
-                            ],
-                            "CrabPotJunkChance": 0.2
-                        },
-                        "Estuary": {
-                            "DisplayName": "[LocalizedText Strings\\UI:Pathoschild_SmallBeachFarm_FishArea_Estuary]",
-                            "Position": {
-                                "X": 11,
-                                "Y": 23,
-                                "Width": 9,
-                                "Height": 7
-                            },
-                            "CrabPotFishTypes": [
-                                "freshwater",
-                                "ocean"
-                            ],
-                            "CrabPotJunkChance": 0.2
-                        },
-                        "Ocean": {
-                            "DisplayName": "[LocalizedText Strings\\UI:Pathoschild_SmallBeachFarm_FishArea_Ocean]",
-                            "Position": null,
-                            "CrabPotFishTypes": [
-                                "ocean"
-                            ],
-                            "CrabPotJunkChance": 0.2
-                        }
-                    },
-                    "Fish": [
-                        {
-                            "Chance": 0.3,
-                            "Season": null,
-                            "FishAreaId": "River",
-                            "BobberPosition": null,
-                            "PlayerPosition": null,
-                            "MinFishingLevel": 0,
-                            "MinDistanceFromShore": 0,
-                            "MaxDistanceFromShore": -1,
-                            "ApplyDailyLuck": false,
-                            "CuriosityLureBuff": -1.0,
-                            "CatchLimit": -1,
-                            "IsBossFish": false,
-                            "SetFlagOnCatch": null,
-                            "RequireMagicBait": false,
-                            "Precedence": -2,
-                            "IgnoreFishDataRequirements": false,
-                            "CanBeInherited": true,
-                            "ChanceModifiers": null,
-                            "ChanceModifierMode": "Stack",
-                            "Condition": null,
-                            "Id": "River_Forest",
-                            "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
-                            "RandomItemId": null,
-                            "MinStack": -1,
-                            "MaxStack": -1,
-                            "Quality": -1,
-                            "ObjectInternalName": null,
-                            "ObjectDisplayName": null,
-                            "ToolUpgradeLevel": -1,
-                            "IsRecipe": false,
-                            "StackModifiers": null,
-                            "StackModifierMode": "Stack",
-                            "QualityModifiers": null,
-                            "QualityModifierMode": "Stack"
-                        },
-                        {
-                            "Chance": 1.0,
-                            "Season": null,
-                            "FishAreaId": "River",
-                            "BobberPosition": null,
-                            "PlayerPosition": null,
-                            "MinFishingLevel": 0,
-                            "MinDistanceFromShore": 0,
-                            "MaxDistanceFromShore": -1,
-                            "ApplyDailyLuck": false,
-                            "CuriosityLureBuff": -1.0,
-                            "CatchLimit": -1,
-                            "IsBossFish": false,
-                            "SetFlagOnCatch": null,
-                            "RequireMagicBait": false,
-                            "Precedence": -1,
-                            "IgnoreFishDataRequirements": false,
-                            "CanBeInherited": true,
-                            "ChanceModifiers": null,
-                            "ChanceModifierMode": "Stack",
-                            "Condition": null,
-                            "Id": "River_Town",
-                            "ItemId": "LOCATION_FISH Town BOBBER_X BOBBER_Y WATER_DEPTH",
-                            "RandomItemId": null,
-                            "MinStack": -1,
-                            "MaxStack": -1,
-                            "Quality": -1,
-                            "ObjectInternalName": null,
-                            "ObjectDisplayName": null,
-                            "ToolUpgradeLevel": -1,
-                            "IsRecipe": false,
-                            "StackModifiers": null,
-                            "StackModifierMode": "Stack",
-                            "QualityModifiers": null,
-                            "QualityModifierMode": "Stack"
-                        },
-                        {
-                            "Chance": 0.5,
-                            "Season": null,
-                            "FishAreaId": "Estuary",
-                            "BobberPosition": null,
-                            "PlayerPosition": null,
-                            "MinFishingLevel": 0,
-                            "MinDistanceFromShore": 0,
-                            "MaxDistanceFromShore": -1,
-                            "ApplyDailyLuck": false,
-                            "CuriosityLureBuff": -1.0,
-                            "CatchLimit": -1,
-                            "IsBossFish": false,
-                            "SetFlagOnCatch": null,
-                            "RequireMagicBait": false,
-                            "Precedence": -3,
-                            "IgnoreFishDataRequirements": false,
-                            "CanBeInherited": true,
-                            "ChanceModifiers": null,
-                            "ChanceModifierMode": "Stack",
-                            "Condition": null,
-                            "Id": "Estuary_Beach",
-                            "ItemId": "LOCATION_FISH Beach BOBBER_X BOBBER_Y WATER_DEPTH",
-                            "RandomItemId": null,
-                            "MinStack": -1,
-                            "MaxStack": -1,
-                            "Quality": -1,
-                            "ObjectInternalName": null,
-                            "ObjectDisplayName": null,
-                            "ToolUpgradeLevel": -1,
-                            "IsRecipe": false,
-                            "StackModifiers": null,
-                            "StackModifierMode": "Stack",
-                            "QualityModifiers": null,
-                            "QualityModifierMode": "Stack"
-                        },
-                        {
-                            "Chance": 0.3,
-                            "Season": null,
-                            "FishAreaId": null,
-                            "BobberPosition": null,
-                            "PlayerPosition": null,
-                            "MinFishingLevel": 0,
-                            "MinDistanceFromShore": 0,
-                            "MaxDistanceFromShore": -1,
-                            "ApplyDailyLuck": false,
-                            "CuriosityLureBuff": -1.0,
-                            "CatchLimit": -1,
-                            "IsBossFish": false,
-                            "SetFlagOnCatch": null,
-                            "RequireMagicBait": false,
-                            "Precedence": -2,
-                            "IgnoreFishDataRequirements": false,
-                            "CanBeInherited": true,
-                            "ChanceModifiers": null,
-                            "ChanceModifierMode": "Stack",
-                            "Condition": null,
-                            "Id": "Estuary_Forest",
-                            "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
-                            "RandomItemId": null,
-                            "MinStack": -1,
-                            "MaxStack": -1,
-                            "Quality": -1,
-                            "ObjectInternalName": null,
-                            "ObjectDisplayName": null,
-                            "ToolUpgradeLevel": -1,
-                            "IsRecipe": false,
-                            "StackModifiers": null,
-                            "StackModifierMode": "Stack",
-                            "QualityModifiers": null,
-                            "QualityModifierMode": "Stack"
-                        },
-                        {
-                            "Chance": 1.0,
-                            "Season": null,
-                            "FishAreaId": null,
-                            "BobberPosition": null,
-                            "PlayerPosition": null,
-                            "MinFishingLevel": 0,
-                            "MinDistanceFromShore": 0,
-                            "MaxDistanceFromShore": -1,
-                            "ApplyDailyLuck": false,
-                            "CuriosityLureBuff": -1.0,
-                            "CatchLimit": -1,
-                            "IsBossFish": false,
-                            "SetFlagOnCatch": null,
-                            "RequireMagicBait": false,
-                            "Precedence": -1,
-                            "IgnoreFishDataRequirements": false,
-                            "CanBeInherited": true,
-                            "ChanceModifiers": null,
-                            "ChanceModifierMode": "Stack",
-                            "Condition": null,
-                            "Id": "Estuary_Town",
-                            "ItemId": "LOCATION_FISH Town BOBBER_X BOBBER_Y WATER_DEPTH",
-                            "RandomItemId": null,
-                            "MinStack": -1,
-                            "MaxStack": -1,
-                            "Quality": -1,
-                            "ObjectInternalName": null,
-                            "ObjectDisplayName": null,
-                            "ToolUpgradeLevel": -1,
-                            "IsRecipe": false,
-                            "StackModifiers": null,
-                            "StackModifierMode": "Stack",
-                            "QualityModifiers": null,
-                            "QualityModifierMode": "Stack"
-                        },
-                        {
-                            "Chance": 1.0,
-                            "Season": null,
-                            "FishAreaId": null,
-                            "BobberPosition": null,
-                            "PlayerPosition": null,
-                            "MinFishingLevel": 0,
-                            "MinDistanceFromShore": 0,
-                            "MaxDistanceFromShore": -1,
-                            "ApplyDailyLuck": false,
-                            "CuriosityLureBuff": -1.0,
-                            "CatchLimit": -1,
-                            "IsBossFish": false,
-                            "SetFlagOnCatch": null,
-                            "RequireMagicBait": false,
-                            "Precedence": 0,
-                            "IgnoreFishDataRequirements": false,
-                            "CanBeInherited": true,
-                            "ChanceModifiers": null,
-                            "ChanceModifierMode": "Stack",
-                            "Condition": null,
-                            "Id": "Default",
-                            "ItemId": "LOCATION_FISH Beach BOBBER_X BOBBER_Y WATER_DEPTH",
-                            "RandomItemId": null,
-                            "MinStack": -1,
-                            "MaxStack": -1,
-                            "Quality": -1,
-                            "ObjectInternalName": null,
-                            "ObjectDisplayName": null,
-                            "ToolUpgradeLevel": -1,
-                            "IsRecipe": false,
-                            "StackModifiers": null,
-                            "StackModifierMode": "Stack",
-                            "QualityModifiers": null,
-                            "QualityModifierMode": "Stack"
-                        }
-                    ],
-                    "Forage": [],
-                }
             }
         }
     ]

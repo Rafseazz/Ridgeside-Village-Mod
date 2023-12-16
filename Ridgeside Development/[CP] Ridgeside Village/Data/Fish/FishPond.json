@@ -1,672 +1,832 @@
 {
-"Changes": [
-	
-//Fishpond                    
-
-	{
-	//Bladetail Sturgeon
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Bladetail Sturgeon": {
-		"RequiredTags": [ "item_bladetail_sturgeon" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
+	"Changes": [
+		//Fishpond
 		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.40,				//Chance to produce item
-		"ItemID": 445,				//Item ID
-		"MinQuantity": 2,			//Min #
-		"MaxQuantity": 4,			//Max #
-		},
-		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
-		},
-		{
-		"RequiredPopulation": 3,
-		"Chance": 0.20,
-		"ItemID": 441,
-		"MinQuantity": 0,
-		"MaxQuantity": 1
-		},
-		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "591 2" ],			//What fish want to advance (ID amount)
-		"4": [ "196 2" ],
-		"8": [ "227 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Caped Tree Frog
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Caped Tree Frog": {
-		"RequiredTags": [ "item_caped_tree_frog" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.10,				//Chance to produce item
-		"ItemID": 349,				//Item ID
-		"MinQuantity": 0,			//Min #
-		"MaxQuantity": 1,			//Max #
+			//Bladetail Sturgeon
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Bladetail Sturgeon": {
+					"RequiredTags": [
+						"item_bladetail_sturgeon"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.40, //Chance to produce item
+							"ItemID": 445, //Item ID
+							"MinQuantity": 2, //Min #
+							"MaxQuantity": 4, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.20,
+							"ItemID": 441,
+							"MinQuantity": 0,
+							"MaxQuantity": 1
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"591 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"196 2"
+						],
+						"8": [
+							"227 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
+			//Caped Tree Frog
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Caped Tree Frog": {
+					"RequiredTags": [
+						"item_caped_tree_frog"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.10, //Chance to produce item
+							"ItemID": 349, //Item ID
+							"MinQuantity": 0, //Min #
+							"MaxQuantity": 1, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.50,
+							"ItemID": 60,
+							"MinQuantity": 0,
+							"MaxQuantity": 2
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"264 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"86 2"
+						],
+						"8": [
+							"219 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 3,
-		"Chance": 0.50,
-		"ItemID": 60,
-		"MinQuantity": 0,
-		"MaxQuantity": 2
+			//Cardia Septal Jellyfish
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Cardia Septal Jellyfish": {
+					"RequiredTags": [
+						"item_cardia_septal_jellyfish"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.10, //Chance to produce item
+							"ItemID": 577, //Item ID
+							"MinQuantity": 1, //Min #
+							"MaxQuantity": 4, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.10,
+							"ItemID": 456,
+							"MinQuantity": 0,
+							"MaxQuantity": 1
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"420 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"414 2"
+						],
+						"8": [
+							"610 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "264 2" ],			//What fish want to advance (ID amount)
-		"4": [ "86 2" ],
-		"8": [ "219 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Cardia Septal Jellyfish
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Cardia Septal Jellyfish": {
-		"RequiredTags": [ "item_cardia_septal_jellyfish" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.10,				//Chance to produce item
-		"ItemID": 577,				//Item ID
-		"MinQuantity": 1,			//Min #
-		"MaxQuantity": 4,			//Max #
-		},
-		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
-		},
-		{
-		"RequiredPopulation": 3,
-		"Chance": 0.10,
-		"ItemID": 456,
-		"MinQuantity": 0,
-		"MaxQuantity": 1
-		},
-		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "420 2" ],			//What fish want to advance (ID amount)
-		"4": [ "414 2" ],
-		"8": [ "610 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Crimson Spiked Clam
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Crimson Spiked Clam": {
-		"RequiredTags": [ "item_crimson_spiked_clam" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.10,				//Chance to produce item
-		"ItemID": 64,				//Item ID
-		"MinQuantity": 2,			//Min #
-		"MaxQuantity": 5,			//Max #
+			//Crimson Spiked Clam
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Crimson Spiked Clam": {
+					"RequiredTags": [
+						"item_crimson_spiked_clam"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.10, //Chance to produce item
+							"ItemID": 64, //Item ID
+							"MinQuantity": 2, //Min #
+							"MaxQuantity": 5, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 797,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.10,
+							"ItemID": 64,
+							"MinQuantity": 0,
+							"MaxQuantity": 2
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 537,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"233 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"268 2"
+						],
+						"8": [
+							"253 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 797,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
+			//Fairytale Lionfish
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Fairytale Lionfish": {
+					"RequiredTags": [
+						"item_fairytale_lionfish"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.02, //Chance to produce item
+							"ItemID": 74, //Item ID
+							"MinQuantity": 0, //Min #
+							"MaxQuantity": 1, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.50,
+							"ItemID": 445,
+							"MinQuantity": 0,
+							"MaxQuantity": 2
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"393 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"586 2"
+						],
+						"8": [
+							"611 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 3,
-		"Chance": 0.10,
-		"ItemID": 64,
-		"MinQuantity": 0,
-		"MaxQuantity": 2
+			//Fixer Eel
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Fixer Eel": {
+					"RequiredTags": [
+						"item_fixer_eel"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.40, //Chance to produce item
+							"ItemID": 787, //Item ID
+							"MinQuantity": 3, //Min #
+							"MaxQuantity": 4, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.50,
+							"ItemID": 336,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"400 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"338 2"
+						],
+						"8": [
+							"206 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 537,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "233 2" ],			//What fish want to advance (ID amount)
-		"4": [ "268 2" ],
-		"8": [ "253 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Fairytale Lionfish
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Fairytale Lionfish": {
-		"RequiredTags": [ "item_fairytale_lionfish" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.02,				//Chance to produce item
-		"ItemID": 74,				//Item ID
-		"MinQuantity": 0,			//Min #
-		"MaxQuantity": 1,			//Max #
-		},
-		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
-		},
-		{
-		"RequiredPopulation": 3,
-		"Chance": 0.50,
-		"ItemID": 445,
-		"MinQuantity": 0,
-		"MaxQuantity": 2
-		},
-		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "393 2" ],			//What fish want to advance (ID amount)
-		"4": [ "586 2" ],
-		"8": [ "611 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Fixer Eel
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Fixer Eel": {
-		"RequiredTags": [ "item_fixer_eel" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.40,				//Chance to produce item
-		"ItemID": 787,				//Item ID
-		"MinQuantity": 3,			//Min #
-		"MaxQuantity": 4,			//Max #
+			//Golden Rose Fin
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Golden Rose Fin": {
+					"RequiredTags": [
+						"item_golden_rose_fin"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.02, //Chance to produce item
+							"ItemID": 373, //Item ID
+							"MinQuantity": 1, //Min #
+							"MaxQuantity": 1, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.30,
+							"ItemID": 428,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"636 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"72 2"
+						],
+						"8": [
+							"228 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
+			//Harvester Trout
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Harvester Trout": {
+					"RequiredTags": [
+						"item_harvester_trout"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.06, //Chance to produce item
+							"ItemID": 114, //Item ID
+							"MinQuantity": 5, //Min #
+							"MaxQuantity": 6, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.50,
+							"ItemID": 770,
+							"MinQuantity": 5,
+							"MaxQuantity": 6
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"637 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"444 2"
+						],
+						"8": [
+							"224 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 3,
-		"Chance": 0.50,
-		"ItemID": 336,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
+			//Lullaby Carp
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Lullaby Carp": {
+					"RequiredTags": [
+						"item_lullaby_carp"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.40, //Chance to produce item
+							"ItemID": 445, //Item ID
+							"MinQuantity": 2, //Min #
+							"MaxQuantity": 4, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 812,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.08,
+							"ItemID": 221,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"276 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"60 2"
+						],
+						"8": [
+							"211 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "400 2" ],			//What fish want to advance (ID amount)
-		"4": [ "338 2" ],
-		"8": [ "206 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Golden Rose Fin
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Golden Rose Fin": {
-		"RequiredTags": [ "item_golden_rose_fin" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.02,				//Chance to produce item
-		"ItemID": 373,				//Item ID
-		"MinQuantity": 1,			//Min #
-		"MaxQuantity": 1,			//Max #
-		},
-		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
-		},
-		{
-		"RequiredPopulation": 3,
-		"Chance": 0.30,
-		"ItemID": 428,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		},
-		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "636 2" ],			//What fish want to advance (ID amount)
-		"4": [ "72 2" ],
-		"8": [ "228 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Harvester Trout
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Harvester Trout": {
-		"RequiredTags": [ "item_harvester_trout" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.06,				//Chance to produce item
-		"ItemID": 114,				//Item ID
-		"MinQuantity": 5,			//Min #
-		"MaxQuantity": 6,			//Max #
+			//Pebble Back Crab
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Pebble Back Crab": {
+					"RequiredTags": [
+						"item_pebble_back_crab"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 10, //# of fish
+							"Chance": 0.10, //Chance to produce item
+							"ItemID": 386, //Item ID
+							"MinQuantity": 0, //Min #
+							"MaxQuantity": 2, //Max #
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.45,
+							"ItemID": 72,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.50,
+							"ItemID": 749,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.70,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 2
+						}
+					],
+					"PopulationGates": {
+						"2": [
+							"233 2"
+						], //What fish want to advance (ID amount)
+						"4": [
+							"272 2"
+						],
+						"8": [
+							"213 2"
+						],
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
+			//Ridgeside Bass
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Ridgeside Bass": {
+					"RequiredTags": [
+						"item_ridgeside_bass"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.9,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+					],
+					"PopulationGates": {
+						"4": [
+							"309 3",
+							"310 3",
+							"311 3",
+							"684 10"
+						],
+						"6": [
+							"384 3",
+							"724",
+							"770 5"
+						],
+						"8": [
+							"70 2",
+							"340",
+							"716",
+							"722"
+						]
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 3,
-		"Chance": 0.50,
-		"ItemID": 770,
-		"MinQuantity": 5,
-		"MaxQuantity": 6
+			//Ridge Bluegill
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Ridge Bluegill": {
+					"RequiredTags": [
+						"item_ridge_bluegill"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.9,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+						{
+							"RequiredPopulation": 6,
+							"Chance": 0.9,
+							"ItemID": 258,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+					],
+					"PopulationGates": {
+						"4": [
+							"309 3",
+							"310 3",
+							"311 3",
+							"684 10"
+						],
+						"6": [
+							"597 3"
+						],
+						"8": [
+							"70 2",
+							"340",
+							"716",
+							"722"
+						]
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "637 2" ],			//What fish want to advance (ID amount)
-		"4": [ "444 2" ],
-		"8": [ "224 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Lullaby Carp
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Lullaby Carp": {
-		"RequiredTags": [ "item_lullaby_carp" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.40,				//Chance to produce item
-		"ItemID": 445,				//Item ID
-		"MinQuantity": 2,			//Min #
-		"MaxQuantity": 4,			//Max #
-		},
-		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 812,
-		"MinQuantity": 2,
-		"MaxQuantity": 4
-		},
-		{
-		"RequiredPopulation": 3,
-		"Chance": 0.08,
-		"ItemID": 221,
-		"MinQuantity": 1,
-		"MaxQuantity": 1
+			//Cutthroat Trout
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Cutthroat Trout": {
+					"RequiredTags": [
+						"item_cutthroat_trout"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.9,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+					],
+					"PopulationGates": {
+						"4": [
+							"309 3",
+							"310 3",
+							"311 3",
+							"684 10"
+						],
+						"6": [
+							"384 3",
+							"724",
+							"770 5"
+						],
+						"8": [
+							"109",
+							"716",
+							"722"
+						]
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "276 2" ],			//What fish want to advance (ID amount)
-		"4": [ "60 2" ],
-		"8": [ "211 2" ],
+			//Skulpin Fish
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Skulpin Fish": {
+					"RequiredTags": [
+						"item_skulpin_fish"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.9,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+						{
+							"RequiredPopulation": 3,
+							"Chance": 0.9,
+							"ItemID": 709,
+							"MinQuantity": 0,
+							"MaxQuantity": 1
+						},
+					],
+					"PopulationGates": {
+						"4": [
+							"309 3",
+							"310 3",
+							"311 3",
+							"684 10"
+						],
+						"6": [
+							"384 3",
+							"724",
+							"770 5"
+						],
+						"8": [
+							"254",
+							"340",
+							"716",
+							"722"
+						]
+					},
+				},
+			},
 		},
-		},
-		},
-	},
-	{
-	//Pebble Back Crab
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Pebble Back Crab": {
-		"RequiredTags": [ "item_pebble_back_crab" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
 		{
-		"RequiredPopulation": 10,	//# of fish
-		"Chance": 0.10,				//Chance to produce item
-		"ItemID": 386,				//Item ID
-		"MinQuantity": 0,			//Min #
-		"MaxQuantity": 2,			//Max #
+			//Mountain Redbelly Dace
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Mountain Redbelly Dace": {
+					"RequiredTags": [
+						"item_mountain_redbelly_dace"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.9,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+						{
+							"RequiredPopulation": 5,
+							"Chance": 0.9,
+							"ItemID": 420,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+					],
+					"PopulationGates": {
+						"4": [
+							"309 6",
+							"310 6",
+							"311 6",
+							"684 20"
+						],
+						"6": [
+							"384 3",
+							"724",
+							"770 5"
+						],
+						"8": [
+							"70 4",
+							"340",
+							"716",
+							"722"
+						]
+					},
+				},
+			},
 		},
 		{
-		"RequiredPopulation": 6,
-		"Chance": 0.45,
-		"ItemID": 72,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
+			//Mountain Whitefish
+			"Action": "EditData",
+			"Target": "Data/FishPondData",
+			"Entries": {
+				"Mountain Whitefish": {
+					"RequiredTags": [
+						"item_mountain_whitefish"
+					],
+					"Precedence": 0,
+					"SpawnTime": -1,
+					"ProducedItems": [
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.9,
+							"ItemID": 812,
+							"MinQuantity": 1,
+							"MaxQuantity": 1
+						},
+						{
+							"RequiredPopulation": 0,
+							"Chance": 0.9,
+							"ItemID": 157,
+							"MinQuantity": 2,
+							"MaxQuantity": 4
+						},
+					],
+					"PopulationGates": {
+						"4": [
+							"309 6",
+							"310 6",
+							"311 6",
+							"684 20"
+						],
+						"6": [
+							"384 3",
+							"724",
+							"770 5"
+						],
+						"8": [
+							"70 4",
+							"340",
+							"716",
+							"722"
+						]
+					},
+				},
+			},
 		},
-		{
-		"RequiredPopulation": 3,
-		"Chance": 0.50,
-		"ItemID": 749,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		},
-		{
-		"RequiredPopulation": 0,
-		"Chance": 0.70,
-		"ItemID": 812,
-		"MinQuantity": 1,
-		"MaxQuantity": 2
-		}
-		],
-		"PopulationGates": {
-		"2": [ "233 2" ],			//What fish want to advance (ID amount)
-		"4": [ "272 2" ],
-		"8": [ "213 2" ],
-		},
-		},
-		},
-	},
-	{
-	//Ridgeside Bass
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Ridgeside Bass": {
-		"RequiredTags": [ "item_ridgeside_bass" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-        "RequiredPopulation": 0,
-        "Chance": 0.9,
-        "ItemID": 812,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-		],
-		"PopulationGates": {
-		"4": [ "309 3", "310 3", "311 3", "684 10" ],
-      	"6": [ "384 3", "724", "770 5" ],
-      	"8": [ "70 2", "340", "716", "722" ]
-		},
-		},
-		},
-	},
-	{
-	//Ridge Bluegill
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Ridge Bluegill": {
-		"RequiredTags": [ "item_ridge_bluegill" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-        "RequiredPopulation": 0,
-        "Chance": 0.9,
-        "ItemID": 812,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-      	{
-        "RequiredPopulation": 6,
-        "Chance": 0.9,
-        "ItemID": 258,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-		],
-		"PopulationGates": {
-		"4": [ "309 3", "310 3", "311 3", "684 10" ],
-      	"6": [ "597 3" ],
-      	"8": [ "70 2", "340", "716", "722" ]
-		},
-		},
-		},
-	},
-	{
-	//Cutthroat Trout
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Cutthroat Trout": {
-		"RequiredTags": [ "item_cutthroat_trout" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-        "RequiredPopulation": 0,
-        "Chance": 0.9,
-        "ItemID": 812,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-		],
-		"PopulationGates": {
-		"4": [ "309 3", "310 3", "311 3", "684 10" ],
-      	"6": [ "384 3", "724", "770 5" ],
-      	"8": [ "109", "716", "722" ]
-		},
-		},
-		},
-	},
-	{
-	//Skulpin Fish
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Skulpin Fish": {
-		"RequiredTags": [ "item_skulpin_fish" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-        "RequiredPopulation": 0,
-        "Chance": 0.9,
-        "ItemID": 812,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-      	{
-        "RequiredPopulation": 3,
-        "Chance": 0.9,
-        "ItemID": 709,
-        "MinQuantity": 0,
-        "MaxQuantity": 1
-      	},
-		],
-		"PopulationGates": {
-		"4": [ "309 3", "310 3", "311 3", "684 10" ],
-      	"6": [ "384 3", "724", "770 5" ],
-      	"8": [ "254", "340", "716", "722" ]
-		},
-		},
-		},
-	},
-	{
-	//Mountain Redbelly Dace
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Mountain Redbelly Dace": {
-		"RequiredTags": [ "item_mountain_redbelly_dace" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-        "RequiredPopulation": 0,
-        "Chance": 0.9,
-        "ItemID": 812,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-      	{
-        "RequiredPopulation": 5,
-        "Chance": 0.9,
-        "ItemID": 420,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-		],
-		"PopulationGates": {
-		"4": [ "309 6", "310 6", "311 6", "684 20" ],
-      	"6": [ "384 3", "724", "770 5" ],
-      	"8": [ "70 4", "340", "716", "722" ]
-		},
-		},
-		},
-	},
-	{
-	//Mountain Whitefish
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"Entries": { 
-		"Mountain Whitefish": {
-		"RequiredTags": [ "item_mountain_whitefish" ],
-		"SpawnTime": -1,
-		"ProducedItems": [
-		{
-        "RequiredPopulation": 0,
-        "Chance": 0.9,
-        "ItemID": 812,
-        "MinQuantity": 1,
-        "MaxQuantity": 1
-      	},
-      	{
-        "RequiredPopulation": 0,
-        "Chance": 0.9,
-        "ItemID": 157,
-        "MinQuantity": 2,
-        "MaxQuantity": 4
-      	},
-		],
-		"PopulationGates": {
-		"4": [ "309 6", "310 6", "311 6", "684 20" ],
-      	"6": [ "384 3", "724", "770 5" ],
-      	"8": [ "70 4", "340", "716", "722" ]
-		},
-		},
-		},
-	},
-
-	{
-		"Action": "EditData",
-		"Target": "Data/FishPondData",
-		"MoveEntries": [
-			{ "ID": "item_bladetail_sturgeon", "ToPosition": "Top" },
-			{ "ID": "item_caped_tree_frog", "AfterID": "item_bladetail_sturgeon" },
-			{ "ID": "item_cardia_septal_jellyfish", "AfterID": "item_caped_tree_frog" },
-			{ "ID": "item_crimson_spiked_clam", "AfterID": "item_cardia_septal_jellyfish" },
-			{ "ID": "item_fairytale_lionfish", "AfterID": "item_crimson_spiked_clam" },
-			{ "ID": "item_fixer_eel", "AfterID": "item_fairytale_lionfish" },
-			{ "ID": "item_golden_rose_fin", "AfterID": "item_fixer_eel" },
-			{ "ID": "item_harvester_trout", "AfterID": "item_golden_rose_fin" },
-			{ "ID": "item_lullaby_carp", "AfterID": "item_harvester_trout" },
-			{ "ID": "item_pebble_back_crab", "AfterID": "item_lullaby_carp" },
-			{ "ID": "item_ridgeside_bass", "AfterID": "item_pebble_back_crab" },
-
-			{ "ID": "item_ridge_bluegill", "AfterID": "item_ridgeside_bass" },
-			{ "ID": "item_cutthroat_trout", "AfterID": "item_ridge_bluegill" },
-			{ "ID": "item_skulpin_fish", "AfterID": "item_cutthroat_trout" },
-			{ "ID": "item_mountain_redbelly_dace", "AfterID": "item_skulpin_fish" },
-			{ "ID": "item_mountain_whitefish", "AfterID": "item_mountain_redbelly_dace" },
-		]
-	},
-
-
-	
-]
+	]
 }

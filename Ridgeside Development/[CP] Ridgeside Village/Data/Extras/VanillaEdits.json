@@ -2,27 +2,6 @@
     "Changes":
     [
       {
-        "LogName": "Player wakes up in Ridge Falls instead of Harvey's when dying in Spirit Realm - Event Change",
-        "Action": "EditData",
-        "Target": "Data/Events/Hospital",
-        "When": { "LocationName": "Custom_Ridgeside_RSVSpiritRealm" },
-        "Update": "OnLocationChange",
-        "Entries": {
-          "PlayerKilled": "none/-100 -100/farmer 39 21 2 Raeriyala 39 17 2/changeLocation Custom_Ridgeside_RidgeFalls/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.SpiritRealm.1}}\"/pause 1000/message \"{{i18n:PlayerKilled.SpiritRealm.2}}\"/playMusic woodsTheme/fade/viewport 39 19/pause 1000/showFrame 0/pause 200/emote Raeriyala 16/pause 300/faceDirection farmer 0/speak Raeriyala \"{{i18n:PlayerKilled.SpiritRealm.3}}\"/pause 1000/emote farmer 28/minedeath/end position 39 21"
-        },
-      },
-
-      {
-        "LogName": "Player goes to Paula's Clinic instead of Harvey's when dying in Ridge Forest - Event Change",
-        "Action": "EditData",
-        "Target": "Data/Events/Hospital",
-        "When": { "LocationName": "Custom_Ridgeside_RidgeForest" },
-        "Update": "OnLocationChange",
-        "Entries": {
-          "PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...{0}?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
-        },
-      },
-      {
         "LogName": "Player goes to Paula's Clinic instead of Harvey's when dying in Ridge Forest - String Change",
         "Action": "EditData",
     		"Target": "strings/StringsFromCSFiles",

@@ -892,33 +892,6 @@
 		"PatchMode": "Replace",
 		"When": { "HasFlag: hostPlayer": "RSV.SummitOreArea" }
 	},
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_SummitFarm",
-		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_Shed.tmx",
-		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 11 },
-		"ToArea": { "X": 9, "Y": 29, "Width": 13, "Height": 11 },
-		"PatchMode": "Replace",
-		"When": { "HasFlag: hostPlayer": "RSV.ShedAdded" }
-	},
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_SummitFarm",
-		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_ShedStairs.tmx",
-		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 6 },
-		"ToArea": { "X": 9, "Y": 43, "Width": 1, "Height": 6 },
-		"PatchMode": "Replace",
-		"When": { "HasConversationTopic: hostPlayer": "RSV.ShedCT" }
-	},
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_SummitFarm",
-		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_ShedStairs.tmx",
-		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 6 },
-		"ToArea": { "X": 9, "Y": 43, "Width": 1, "Height": 6 },
-		"PatchMode": "Replace",
-		"When": { "HasFlag: hostPlayer": "RSV.ShedAdded" }
-	},
 
 //Paula Clean Room
 	{
