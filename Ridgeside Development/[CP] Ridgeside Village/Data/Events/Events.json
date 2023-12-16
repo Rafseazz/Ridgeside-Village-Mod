@@ -46,7 +46,7 @@
 		"Target": "Data/Events/Farm",
 		"Entries": {
 		//Yuuma notifying the farmer about Lenny's request of minecart fixing
-			"75160189/H/w sunny/j {{Query: {{Rafseazz.RidgesideVillage/RSVInstallDay}} + 20}}/e 75160086/f Yuuma 1/t 600 1900": "continue/64 15/farmer 64 16 2 Yuuma 64 18 0/broadcastEvent/addConversationTopic RSV_MinecraftFix1/skippable/pause 1000/emote farmer 8/speak Yuuma \"{{i18n:event-75160189.01}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.02}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.03}}\"/end",
+			"75160189/H/w sunny/j {{Query: {{Rafseazz.RidgesideVillage/RSVInstallDay}} + 20}}/e 75160086/f Yuuma 1/t 600 1900/n ccBoilerRoom": "continue/64 15/farmer 64 16 2 Yuuma 64 18 0/broadcastEvent/addConversationTopic RSV_MinecraftFix1/skippable/pause 1000/emote farmer 8/speak Yuuma \"{{i18n:event-75160189.01}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.02}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.03}}\"/end",
 		},
 	},
 	{
@@ -1135,6 +1135,8 @@
 			"oldluckyfoxtailOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.OldFox.1}} [Rafseazz.RSVCP_Old_Lucky_Foxtail_Charm]\"/pause 500/end",
 
 			"prismaticOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.Prismatic}}\"/pause 500/end",
+			//player killed in spiritRealm
+			"PlayerKilled": "none/-100 -100/farmer 39 21 2 Raeriyala 39 17 2/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.SpiritRealm.1}}\"/pause 1000/message \"{{i18n:PlayerKilled.SpiritRealm.2}}\"/playMusic woodsTheme/fade/viewport 39 19/pause 1000/showFrame 0/pause 200/emote Raeriyala 16/pause 300/faceDirection farmer 0/speak Raeriyala \"{{i18n:PlayerKilled.SpiritRealm.3}}\"/pause 1000/emote farmer 28/minedeath/end position 39 21"
 		}
 	},
 
@@ -1686,6 +1688,8 @@
 			"PaulaStays": "addConversationTopic RSV_Anton8HeartsPaula/move farmer 0 1 2/move farmer 1 0 2/move farmer 0 10 2 true/faceDirection Paula 1/faceDirection Anton 1/pause 1000/addConversationTopic AntonLikesPaula 3/emote Anton 40/speak Anton \"{{i18n:event-75160304.PaulaStays.01}}\"/pause 500/stopMusic/faceDirection Anton 3/emote Paula 40/speak Anton \"{{i18n:event-75160304.PaulaStays.02}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.03}}\"/emote Anton 40/pause 1000/speak Anton \"{{i18n:event-75160304.PaulaStays.04}}\"/showFrame Paula 22/positionOffset Paula 5 0/pause 200/positionOffset Paula 5 0/pause 200/positionOffset Paula 5 0/pause 200/playMusic {{AntonPaulaMusic}}/emote Anton 8/speak Anton \"{{i18n:event-75160304.PaulaStays.05}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.06}}\"/faceDirection Anton 3/emote Anton 40/speak Anton \"{{i18n:event-75160304.PaulaStays.07}}\"/message \"{{i18n:event-75160304.PaulaStays.08}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.09}}\"/showFrame Anton 43/message \"{{i18n:event-75160304.PaulaStays.10}}\"/emote Paula 16/speak Anton \"{{i18n:event-75160304.PaulaStays.11}}\"/warp Paula 18 5/faceDirection Paula 1/faceDirection Anton 3/emote Paula 32/speak Paula \"{{i18n:event-75160304.PaulaStays.12}}\"/speak Anton \"{{i18n:event-75160304.PaulaStays.13}}\"/jump Paula/speak Paula \"{{i18n:event-75160304.PaulaStays.14}}\"/emote Anton 32 true/emote Paula 32/speak Paula \"{{i18n:event-75160304.PaulaStays.15}}\"/speak Anton \"{{i18n:event-75160304.PaulaStays.16}}\"/pause 800/emote Paula 60 true/emote Anton 60/playSound doorClose/warp farmer 19 13/move farmer 0 -5 0 true/faceDirection Paula 3/faceDirection Anton 1/pause 1000/emote farmer 40/speak Anton \"{{i18n:event-75160304.PaulaStays.17}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.18}}\"/faceDirection Anton 3/emote Anton 28/speak Anton \"{{i18n:event-75160304.PaulaStays.19}}\"/emote Paula 16/faceDirection Paula 1/emote Paula 28/speak Paula \"{{i18n:event-75160304.PaulaStays.20}}\"/speak Anton \"{{i18n:event-75160304.PaulaStays.21}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.22}}\"/showFrame Paula 23/pause 800/speak Paula \"{{i18n:event-75160304.PaulaStays.23}}\"/emote Anton 56/emote Paula 56/speak Anton \"{{i18n:event-75160304.PaulaStays.24}}\"/emote Paula 32/speak Paula \"{{i18n:event-75160304.PaulaStays.25}}\"/emote Anton 16/speak Anton \"{{i18n:event-75160304.PaulaStays.26}}\"/emote farmer 32/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160304.PaulaStays.27}}\"/end",
 
 			"AntonPlatonic": "addConversationTopic RSV_Anton8HeartsPlatonic/emote Anton 40/speak Anton \"{{i18n:event-75160304.AntonPlatonic.01}}\"/playSound doorClose/faceDirection farmer 2/emote Anton 16 true/pause 500/faceDirection farmer 1/speak Anton \"{{i18n:event-75160304.AntonPlatonic.02}}\"/emote farmer 32/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160304.AntonPlatonic.03}}\"/end",
+			//player killed in RidgeForest
+			"PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...@?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
 		}
 	},
 
