@@ -46,7 +46,7 @@
 		"Target": "Data/Events/Farm",
 		"Entries": {
 		//Yuuma notifying the farmer about Lenny's request of minecart fixing
-			"75160189/H/w sunny/j {{Query: {{Rafseazz.RidgesideVillage/RSVInstallDay}} + 20}}/e 75160086/f Yuuma 1/t 600 1900/n ccBoilerRoom": "continue/64 15/farmer 64 16 2 Yuuma 64 18 0/broadcastEvent/addConversationTopic RSV_MinecraftFix1/skippable/pause 1000/emote farmer 8/speak Yuuma \"{{i18n:event-75160189.01}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.02}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.03}}\"/end",
+			"75160189/H/w sunny/j {{Query: {{Rafseazz.RidgesideVillage/RSVInstallDay}} + 20}}/e 75160086/f Yuuma 1/t 600 1900": "continue/64 15/farmer 64 16 2 Yuuma 64 18 0/broadcastEvent/addConversationTopic RSV_MinecraftFix1/skippable/pause 1000/emote farmer 8/speak Yuuma \"{{i18n:event-75160189.01}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.02}}\"/emote farmer 32/speak Yuuma \"{{i18n:event-75160189.03}}\"/end",
 		},
 	},
 	{
@@ -1096,7 +1096,6 @@
 		"Entries": {
 			"healthCheckup": "continue/11 13/farmer 16 15 0 Paula 16 13 2/skippable/pause 1000/money -{cost}/globalFade .01/viewport -1000 -1000/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear .01 true/viewport 11 13/pause 1000/speak Paula \"{{i18n:event-75160253.healthCheckup.01}}\"/emote farmer 32/pause 500/end",
 			"staminaCheckup": "continue/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/money -{cost}/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear .01 true/viewport 11 13/pause 1000/speak Paula \"{{i18n:event-75160253.staminaCheckup.01}}\"/emote farmer 32/pause 500/end",
-			"PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...@?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
 		}
 	},
 
@@ -1136,8 +1135,6 @@
 			"oldluckyfoxtailOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.OldFox.1}} [Rafseazz.RSVCP_Old_Lucky_Foxtail_Charm]\"/pause 500/end",
 
 			"prismaticOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.Prismatic}}\"/pause 500/end",
-
-			"PlayerKilled": "none/-100 -100/farmer 39 21 2 Raeriyala 39 17 2/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.SpiritRealm.1}}\"/pause 1000/message \"{{i18n:PlayerKilled.SpiritRealm.2}}\"/playMusic woodsTheme/fade/viewport 39 19/pause 1000/showFrame 0/pause 200/emote Raeriyala 16/pause 300/faceDirection farmer 0/speak Raeriyala \"{{i18n:PlayerKilled.SpiritRealm.3}}\"/pause 1000/emote farmer 28/minedeath/end position 39 21"
 		}
 	},
 
@@ -2551,6 +2548,34 @@
 
 			"JuneGoesAlone": "speak June \"{{i18n:event-94621001.22}}\"/move June 8 0 1 true/pause 500/faceDirection farmer 1/globalFade/viewport -1000 -1000/end dialogue June \"{{i18n:event-94621001.23}}\"",
 		},
+	},
+	
+	{
+		"LogName": "June Mail Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			//June Returns (Platonic)
+				"7286-junearrive/SawEvent 94620000/!Spouse June/Season summer/DayOfMonth 27/x JuneNPC.PlatonicArrival": "null",
+				
+			//June Leaves (Platonic)
+				"7286-juneleave/SawEvent 94620000/Friendship June 1/!Spouse June/!Dating June/Season winter/DayOfMonth 28/x JuneNPC.PlatonicDeparture": "null",
+				
+			//June Arrives (Romance)
+				"7286-junedatearrive/SawEvent 94620000/Dating June/!Spouse June/Season summer/DayOfMonth 28/x JuneNPC.RomanticArrival": "null",
+				
+			//June Leaves (Romance)
+				"7286-junedateleave/SawEvent 94620000/Dating June/!Spouse June/Season winter/DayOfMonth 28/x JuneNPC.RomanticDeparture": "null",
+				
+			//June Writes (Romance)
+				"7286-junesummer/SawEvent 94620000/Dating June/!Spouse June/Season spring/DayOfMonth 28/x JuneNPC.RomanticArrival": "null",
+			
+			//Reset flags for June letters
+				"7286-juneflags/Season spring/DayOfMonth 3/!Year 1": "none/-100 -100/farmer -1000 -1000 0/eventSeen 7286-junearrive false/eventSeen 7286-juneleave false/eventSeen 7286-junedatearrive false/eventSeen 7286-junedateleave false/eventSeen 7286-junesummer false/eventSeen 7286-junereset false/pause 50/end",
+			
+			//Reset the reset button (cycle)
+				"7286-junereset/Season spring/DayOfMonth 4/!Year 1": "none/-100 -100/farmer -1000 -1000 0/eventSeen 7286-juneflags false/pause 50/end",
+		}
 	},
 
 ]
