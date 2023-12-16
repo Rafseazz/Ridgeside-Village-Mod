@@ -830,12 +830,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "SkillLevel combat 3/r 0.75",
-            "SkillLevel foraging 3/r 0.75"
+          "GameStateQueries": [
+            "PLAYER_COMBAT_LEVEL Current 3, PLAYER_FORAGING_LEVEL Current 3, RANDOM 0.75"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -1139,12 +1138,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "SkillLevel combat 5/r 0.75",
-            "SkillLevel foraging 5/r 0.75"
+          "GameStateQueries": [
+            "PLAYER_COMBAT_LEVEL Current 5, PLAYER_FORAGING_LEVEL Current 5, RANDOM 0.75"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -1424,11 +1422,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "SkillLevel combat 10/SkillLevel foraging 10/r 0.75"
+          "GameStateQueries": [
+            "PLAYER_COMBAT_LEVEL Current 10, PLAYER_FORAGING_LEVEL Current 10, RANDOM 0.75"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -2028,11 +2026,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "q 751600642/!q 751600641/r 0.67"
+          "GameStateQueries": [
+            "RANDOM 0.67"
           ],
+          "CPConditions": {
+            "HasDialogueAnswer": "751600642",
+            "HasDialogueAnswer|contains=751600641": "false"
+          },
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 14
@@ -2132,10 +2133,11 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "q 751600641/!q 751600642/r 0.67"
-          ],
+          "CPConditions": {
+            "HasDialogueAnswer": "751600641",
+            "HasDialogueAnswer|contains=751600642": "false"
+          },
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 14
@@ -2209,11 +2211,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hl OddJobsNotice"
+          "GameStateQueries": [
+            "!PLAYER_HAS_READ_LETTER Host OddJobsNotice"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 0
@@ -2287,11 +2289,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hn OddJobsNotice/Hl RSV.HasGoldClock/u 1"
+          "GameStateQueries": [
+            "PLAYER_HAS_READ_LETTER Host OddJobsNotice, PLAYER_HAS_READ_LETTER Host RSV.HasGoldClock"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 0
@@ -2373,11 +2375,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hn OddJobsNotice"
+          "GameStateQueries": [
+            "PLAYER_HAS_READ_LETTER Host OddJobsNotice"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -2440,11 +2442,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!e 75160377"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160377"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 0
@@ -2502,11 +2504,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hl OddJobsNotice"
+          "GameStateQueries": [
+            "!PLAYER_HAS_READ_LETTER Host OddJobsNotice"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 0
@@ -2661,11 +2663,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hn RSV.SummitOreArea/r 0.67"
+          "GameStateQueries": [
+            "PLAYER_HAS_READ_LETTER Host RSV.SummitOreArea, RANDOM 0.67"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 14
@@ -2777,11 +2779,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Pale Candelabrum"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Pale_Candelabrum"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -2830,11 +2832,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Everfrost Stone"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Everfrost_Stone"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3067,11 +3069,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Ancient Music Box"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Ancient_Music_Box"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3304,13 +3306,13 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Ancient_Music_Box"
+          ],
           "CPConditions": {
             "SkillLevel:Combat": "8, 9, 10"
           },
-          "EPUPreconditions": [
-            "!HasItem Ancient Music Box"
-          ],
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3573,11 +3575,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Village Hero Sculpture"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Village_Hero_Sculpture"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
@@ -3635,11 +3637,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Ancient Music Box"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Ancient_Music_Box"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3684,11 +3686,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Pale Candelabrum"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Pale_Candelabrum"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3973,11 +3975,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -4026,11 +4028,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -4084,11 +4086,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -4170,11 +4172,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
@@ -4232,11 +4234,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "GameStateQueries": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1

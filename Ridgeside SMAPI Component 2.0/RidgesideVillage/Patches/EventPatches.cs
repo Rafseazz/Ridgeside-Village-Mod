@@ -32,9 +32,9 @@ namespace RidgesideVillage
         private static void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
 
-            Event.RegisterCustomCommand("RSVShowImage", command_RSVShowImage);
-            Event.RegisterCustomCommand("RSVStopShowImage", command_RSVStopShowImage);
-            Event.RegisterCustomPrecondition("rsvRidingHorse", precondition_RSVRidingHorse);
+            Event.RegisterCommand("RSVShowImage", command_RSVShowImage);
+            Event.RegisterCommand("RSVStopShowImage", command_RSVStopShowImage);
+            Event.RegisterPrecondition("rsvRidingHorse", precondition_RSVRidingHorse);
         }
 
         private static bool precondition_RSVRidingHorse(GameLocation location, string eventId, string[] args)

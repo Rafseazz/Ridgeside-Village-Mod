@@ -837,7 +837,7 @@
 
 		//Locations
 		{
-			"LogName": "Include all the Events",
+			"LogName": "Include all the Locations",
 			"Action": "Include",
 			"FromFile": "Data/Locations/Locations.json",
 		},
@@ -849,6 +849,11 @@
 			"LogName": "Include all the Events",
 			"Action": "Include",
 			"FromFile": "Data/Events/EventDialogue.json, Data/Events/EventExtras.json, Data/Events/Events.json",
+		},
+		{
+			"LogName": "Include all Mail",
+			"Action": "Include",
+			"FromFile": "Data/Mail/Mail.json",
 		},
 		//Include Festival Data
 		/*

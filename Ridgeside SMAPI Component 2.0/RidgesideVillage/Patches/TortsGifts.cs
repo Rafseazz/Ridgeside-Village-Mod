@@ -29,7 +29,7 @@ namespace RidgesideVillage
 
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickPersonalFarmEvent)),
-                transpiler: new HarmonyMethod(typeof(BabyEventPatch).GetMethod("Transpiler"))
+                transpiler: new HarmonyMethod(typeof(BabyEventPatch).GetMethod(nameof(BabyEventPatch.Transpiler)))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickFarmEvent)),

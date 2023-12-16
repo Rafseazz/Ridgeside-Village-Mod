@@ -1096,7 +1096,6 @@
 		"Entries": {
 			"healthCheckup": "continue/11 13/farmer 16 15 0 Paula 16 13 2/skippable/pause 1000/money -{cost}/globalFade .01/viewport -1000 -1000/pause 1000/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear .01 true/viewport 11 13/pause 1000/speak Paula \"{{i18n:event-75160253.healthCheckup.01}}\"/emote farmer 32/pause 500/end",
 			"staminaCheckup": "continue/-1000 -1000/farmer 16 15 0 Paula 16 13 2/skippable/money -{cost}/pause 2000/playSound pickUpItem/pause 1500/playSound axe/pause 200/playSound healSound/pause 1500/globalFadeToClear .01 true/viewport 11 13/pause 1000/speak Paula \"{{i18n:event-75160253.staminaCheckup.01}}\"/emote farmer 32/pause 500/end",
-			"PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...@?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
 		}
 	},
 
@@ -1136,7 +1135,7 @@
 			"oldluckyfoxtailOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.OldFox.1}} [Rafseazz.RSVCP_Old_Lucky_Foxtail_Charm]\"/pause 500/end",
 
 			"prismaticOffering": "continue/39 18/farmer 39 20 0 Raeriyala 39 17 2/pause 50/playSound healSound/screenFlash 1/pause 800/speak Raeriyala \"{{i18n:Offering.Prismatic}}\"/pause 500/end",
-
+			//player killed in spiritRealm
 			"PlayerKilled": "none/-100 -100/farmer 39 21 2 Raeriyala 39 17 2/pause 1500/showFrame 5/message \"{{i18n:PlayerKilled.SpiritRealm.1}}\"/pause 1000/message \"{{i18n:PlayerKilled.SpiritRealm.2}}\"/playMusic woodsTheme/fade/viewport 39 19/pause 1000/showFrame 0/pause 200/emote Raeriyala 16/pause 300/faceDirection farmer 0/speak Raeriyala \"{{i18n:PlayerKilled.SpiritRealm.3}}\"/pause 1000/emote farmer 28/minedeath/end position 39 21"
 		}
 	},
@@ -1689,6 +1688,8 @@
 			"PaulaStays": "addConversationTopic RSV_Anton8HeartsPaula/move farmer 0 1 2/move farmer 1 0 2/move farmer 0 10 2 true/faceDirection Paula 1/faceDirection Anton 1/pause 1000/addConversationTopic AntonLikesPaula 3/emote Anton 40/speak Anton \"{{i18n:event-75160304.PaulaStays.01}}\"/pause 500/stopMusic/faceDirection Anton 3/emote Paula 40/speak Anton \"{{i18n:event-75160304.PaulaStays.02}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.03}}\"/emote Anton 40/pause 1000/speak Anton \"{{i18n:event-75160304.PaulaStays.04}}\"/showFrame Paula 22/positionOffset Paula 5 0/pause 200/positionOffset Paula 5 0/pause 200/positionOffset Paula 5 0/pause 200/playMusic {{AntonPaulaMusic}}/emote Anton 8/speak Anton \"{{i18n:event-75160304.PaulaStays.05}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.06}}\"/faceDirection Anton 3/emote Anton 40/speak Anton \"{{i18n:event-75160304.PaulaStays.07}}\"/message \"{{i18n:event-75160304.PaulaStays.08}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.09}}\"/showFrame Anton 43/message \"{{i18n:event-75160304.PaulaStays.10}}\"/emote Paula 16/speak Anton \"{{i18n:event-75160304.PaulaStays.11}}\"/warp Paula 18 5/faceDirection Paula 1/faceDirection Anton 3/emote Paula 32/speak Paula \"{{i18n:event-75160304.PaulaStays.12}}\"/speak Anton \"{{i18n:event-75160304.PaulaStays.13}}\"/jump Paula/speak Paula \"{{i18n:event-75160304.PaulaStays.14}}\"/emote Anton 32 true/emote Paula 32/speak Paula \"{{i18n:event-75160304.PaulaStays.15}}\"/speak Anton \"{{i18n:event-75160304.PaulaStays.16}}\"/pause 800/emote Paula 60 true/emote Anton 60/playSound doorClose/warp farmer 19 13/move farmer 0 -5 0 true/faceDirection Paula 3/faceDirection Anton 1/pause 1000/emote farmer 40/speak Anton \"{{i18n:event-75160304.PaulaStays.17}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.18}}\"/faceDirection Anton 3/emote Anton 28/speak Anton \"{{i18n:event-75160304.PaulaStays.19}}\"/emote Paula 16/faceDirection Paula 1/emote Paula 28/speak Paula \"{{i18n:event-75160304.PaulaStays.20}}\"/speak Anton \"{{i18n:event-75160304.PaulaStays.21}}\"/speak Paula \"{{i18n:event-75160304.PaulaStays.22}}\"/showFrame Paula 23/pause 800/speak Paula \"{{i18n:event-75160304.PaulaStays.23}}\"/emote Anton 56/emote Paula 56/speak Anton \"{{i18n:event-75160304.PaulaStays.24}}\"/emote Paula 32/speak Paula \"{{i18n:event-75160304.PaulaStays.25}}\"/emote Anton 16/speak Anton \"{{i18n:event-75160304.PaulaStays.26}}\"/emote farmer 32/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160304.PaulaStays.27}}\"/end",
 
 			"AntonPlatonic": "addConversationTopic RSV_Anton8HeartsPlatonic/emote Anton 40/speak Anton \"{{i18n:event-75160304.AntonPlatonic.01}}\"/playSound doorClose/faceDirection farmer 2/emote Anton 16 true/pause 500/faceDirection farmer 1/speak Anton \"{{i18n:event-75160304.AntonPlatonic.02}}\"/emote farmer 32/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160304.AntonPlatonic.03}}\"/end",
+			//player killed in RidgeForest
+			"PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...@?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
 		}
 	},
 
@@ -2551,6 +2552,34 @@
 
 			"JuneGoesAlone": "speak June \"{{i18n:event-94621001.22}}\"/move June 8 0 1 true/pause 500/faceDirection farmer 1/globalFade/viewport -1000 -1000/end dialogue June \"{{i18n:event-94621001.23}}\"",
 		},
+	},
+	
+	{
+		"LogName": "June Mail Events",
+		"Action": "EditData",
+		"Target": "Data/Events/Farm",
+		"Entries": {
+			//June Returns (Platonic)
+				"7286-junearrive/SawEvent 94620000/!Spouse June/Season summer/DayOfMonth 27/x JuneNPC.PlatonicArrival": "null",
+				
+			//June Leaves (Platonic)
+				"7286-juneleave/SawEvent 94620000/Friendship June 1/!Spouse June/!Dating June/Season winter/DayOfMonth 28/x JuneNPC.PlatonicDeparture": "null",
+				
+			//June Arrives (Romance)
+				"7286-junedatearrive/SawEvent 94620000/Dating June/!Spouse June/Season summer/DayOfMonth 28/x JuneNPC.RomanticArrival": "null",
+				
+			//June Leaves (Romance)
+				"7286-junedateleave/SawEvent 94620000/Dating June/!Spouse June/Season winter/DayOfMonth 28/x JuneNPC.RomanticDeparture": "null",
+				
+			//June Writes (Romance)
+				"7286-junesummer/SawEvent 94620000/Dating June/!Spouse June/Season spring/DayOfMonth 28/x JuneNPC.RomanticArrival": "null",
+			
+			//Reset flags for June letters
+				"7286-juneflags/Season spring/DayOfMonth 3/!Year 1": "none/-100 -100/farmer -1000 -1000 0/eventSeen 7286-junearrive false/eventSeen 7286-juneleave false/eventSeen 7286-junedatearrive false/eventSeen 7286-junedateleave false/eventSeen 7286-junesummer false/eventSeen 7286-junereset false/pause 50/end",
+			
+			//Reset the reset button (cycle)
+				"7286-junereset/Season spring/DayOfMonth 4/!Year 1": "none/-100 -100/farmer -1000 -1000 0/eventSeen 7286-juneflags false/pause 50/end",
+		}
 	},
 
 ]
