@@ -8,7 +8,11 @@
 			"FromFile": "Assets/LooseSprites/PikaShop.png"
 		},
 
-		//Apply shop tiles
+	//=======================
+	//Apply shop tiles
+	//=======================
+
+		//Jeric's Shop
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_JericHouse",
@@ -17,39 +21,42 @@
 					"Position": { "X": 1, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 700 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop none 600 2400"
 					}
 				},
 				{
 					"Position": { "X": 2, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 700 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop none 600 2400"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 700 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop none 600 2400"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 13 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 700 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop none 600 2400"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 12 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 700 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop none 600 2400"
 					}
 				},
 			],
 		},
+
+		//Pika's Resto
+		//Opening
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
@@ -70,10 +77,11 @@
 				},
 			],
 			"When": {
-				"Weather": "Sun, Wind"
+				"Weather": "Sun, Wind",
 			},
-			"Update": "OnLocationChange, OnTimeChange"	
+			"Update": "OnLocationChange"	
 		},
+		//Closing
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
@@ -99,6 +107,8 @@
 			"Update": "OnLocationChange, OnTimeChange"	
 		},
 
+		//Pika's Recipes
+		//Opening
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
@@ -119,10 +129,12 @@
 				},
 			],
 			"When": {
-				"Weather": "Sun, Wind"
+				"Weather": "Sun, Wind",
+				"Time": "{{Range: 0930, 2300}}"
 			},
-			"Update": "OnLocationChange, OnTimeChange"	
+			"Update": "OnLocationChange"	
 		},
+		//Closing
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
@@ -145,11 +157,12 @@
 			"When": {
 				"Weather": "Rain, Storm, Snow"
 			},
-			"Update": "OnLocationChange, OnTimeChange"	
+			"Update": "OnLocationChange"	
 		},
 
-
-		//Shops
+	//=======================
+	//Shop Data
+	//=======================
 		{
 			"Action": "EditData",
 			"Target": "Data/Shops",
@@ -181,7 +194,10 @@
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric 2000"
 						},		
 					],
-					"SalableItemTags": "category_fertilizer, category_seeds",
+					"SalableItemTags": [
+						"category_fertilizer",
+						"category_seeds"
+					],
 
 					"Items": [
 
@@ -191,15 +207,37 @@
 								"(O)474",
 								"(O)476",
 								"(O)472",
-								"(O)474",
+								"(O)473",
 							],
-							"MaxItems": 4,
-							"AvailableStock": 6,
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
+							"Condition": "SEASON spring",
+						},
+						{
+							"RandomItemId": [
+								"(O)474",
+								"(O)476",
+								"(O)472",
+								"(O)473",
+							],
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
+							"Condition": "SEASON spring",
+						},
+						{
+							"RandomItemId": [
+								"(O)474",
+								"(O)476",
+								"(O)472",
+								"(O)473",
+							],
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
 							"Condition": "SEASON spring",
 						},
 						{
 							"ItemId": "(O)745",
-							"AvailableStock": 6,
+							"AvailableStock": 9,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric 2000, SEASON spring"
 						},
 
@@ -212,13 +250,37 @@
 								"(O)485",
 								"(O)480"
 							],
-							"MaxItems": 5,
-							"AvailableStock": 6,
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
+							"Condition": "SEASON summer",
+						},
+						{
+							"RandomItemId": [
+								"(O)487",
+								"(O)482",
+								"(O)479",
+								"(O)485",
+								"(O)480"
+							],
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
+							"Condition": "SEASON summer",
+						},
+						{
+							"RandomItemId": [
+								"(O)487",
+								"(O)482",
+								"(O)479",
+								"(O)485",
+								"(O)480"
+							],
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
 							"Condition": "SEASON summer",
 						},
 						{
 							"ItemId": "(O)485",
-							"AvailableStock": 6,
+							"AvailableStock": 9,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric 2000, SEASON summer"
 						},
 
@@ -230,15 +292,37 @@
 								"(O)488",
 								"(O)490",
 							],
-							"MaxItems": 4,
-							"AvailableStock": 6,
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
+							"Condition": "SEASON fall",
+						},
+						{
+							"RandomItemId": [
+								"(O)492",
+								"(O)491",
+								"(O)488",
+								"(O)490",
+							],
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
+							"Condition": "SEASON fall",
+						},
+						{
+							"RandomItemId": [
+								"(O)492",
+								"(O)491",
+								"(O)488",
+								"(O)490",
+							],
+							"AvailableStock": 9,
+							"AvoidRepeat": true,
 							"Condition": "SEASON fall",
 						},
 
 						//Winter
 						{
 							"ItemId": "(O)770",
-							"AvailableStock": 6,
+							"AvailableStock": 9,
 							"Condition": "SEASON winter"
 						},
 					],
@@ -271,7 +355,14 @@
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika 2000"
 						},		
 					],
-					"SalableItemTags": "category_cooking, category_ingredients, category_artisan_goods, category_syrup, category_vegetable, category_fruits",
+					"SalableItemTags": [
+						"category_cooking",
+						"category_ingredients",
+						"category_artisan_goods",
+						"category_syrup", 
+						"category_vegetable", 
+						"category_fruits"
+					],
 
 					"Items": [
 						//Seasonal Dishes
@@ -314,7 +405,107 @@
 						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
 								"(O)Rafseazz.RSVCP_Zesty_Tuna",
 							],
-							"MaxItems": 6,
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(O)Rafseazz.RSVCP_Arugula_Roll",
+								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
+						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
+								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
+								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
+						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
+								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
+						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
+								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
+								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
+						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
+								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
+						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
+								"(O)Rafseazz.RSVCP_Zesty_Tuna",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(O)Rafseazz.RSVCP_Arugula_Roll",
+								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
+						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
+								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
+								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
+						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
+								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
+						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
+								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
+								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
+						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
+								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
+						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
+								"(O)Rafseazz.RSVCP_Zesty_Tuna",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(O)Rafseazz.RSVCP_Arugula_Roll",
+								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
+						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
+								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
+								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
+						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
+								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
+						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
+								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
+								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
+						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
+								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
+						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
+								"(O)Rafseazz.RSVCP_Zesty_Tuna",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(O)Rafseazz.RSVCP_Arugula_Roll",
+								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
+						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
+								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
+								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
+						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
+								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
+						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
+								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
+								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
+						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
+								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
+						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
+								"(O)Rafseazz.RSVCP_Zesty_Tuna",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(O)Rafseazz.RSVCP_Arugula_Roll",
+								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
+						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
+								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
+								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
+						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
+								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
+						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
+								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
+								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
+						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
+								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
+						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
+								"(O)Rafseazz.RSVCP_Zesty_Tuna",
+							],
+							"AvoidRepeat": true,
 							"AvailableStock": 1,
 						},
 						{
@@ -333,7 +524,26 @@
 								"(O)606",
 								"(O)218",
 							],
-							"MaxItems": 2,
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(O)207",
+								"(O)611",
+								"(O)648",
+								"(O)240",
+								"(O)213",
+								"(O)204",
+								"(O)195",
+								"(O)215",
+								"(O)236",
+								"(O)196",
+								"(O)224",
+								"(O)606",
+								"(O)218",
+							],
+							"AvoidRepeat": true,
 							"AvailableStock": 1,
 						},
 					]
@@ -365,7 +575,6 @@
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Pika 2000"
 						},		
 					],
-					"SalableItemTags": "category_cooking, category_ingredients, category_artisan_goods, category_syrup, category_vegetable, category_fruits",
 
 					"Items": [
 						//Unlockable Recipes
