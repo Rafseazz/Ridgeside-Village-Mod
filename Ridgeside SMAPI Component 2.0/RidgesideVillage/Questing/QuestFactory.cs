@@ -125,7 +125,7 @@ namespace RidgesideVillage.Questing
 						break;
 					}
 			}
-			string chosenFish = possibleFish[Game1.random.Next(possibleFish.Length)];
+			string chosenFish = "Rafseazz.RSVCP_" + possibleFish[Game1.random.Next(possibleFish.Length)];
 			quest.ItemId.Value = chosenFish;
 			if(!ItemRegistry.Exists(chosenFish))
             {
