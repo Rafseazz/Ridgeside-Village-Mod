@@ -160,6 +160,35 @@
 			"Update": "OnLocationChange"	
 		},
 
+		//Lola's Shop
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_LolaShed",
+			"MapTiles": [
+				{
+					"Position": { "X": 15, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVLolaShop none 600 2600"
+					}
+				},
+				{
+					"Position": { "X": 15, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVLolaShop none 600 2600"
+					}
+				},
+				{
+					"Position": { "X": 16, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVLolaShop none 600 2600"
+					}
+				},
+			],
+		},
+
 	//=======================
 	//Shop Data
 	//=======================
@@ -706,6 +735,11 @@
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lola 2000"
 						},		
 					],
+					"SalableItemTags": [
+						"category_monster_loot",
+						"category_ring",
+						"category_weapon",
+					],
 
 					"Items": [
 						{
@@ -782,6 +816,8 @@
 						},
 					]
 				},
+
+				//Mystic Falls
 			}
 		}
 	]
