@@ -29,7 +29,7 @@ namespace RidgesideVillage
             }
 
             Farm farm = Game1.getFarm();
-            if(farm.modData.ContainsKey(""))
+            if(farm.modData.ContainsKey(RSV_MIGRATED))
             {
                 return;
             }
