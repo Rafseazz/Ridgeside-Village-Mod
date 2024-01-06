@@ -21,35 +21,35 @@
 					"Position": { "X": 1, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 600 2400"
+						"Action": "OpenShop RSVJericShop down 600 2400 2 13 1 1"
 					}
 				},
 				{
 					"Position": { "X": 2, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 600 2400"
+						"Action": "OpenShop RSVJericShop down 600 2400 2 13 1 1"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 600 2400"
+						"Action": "OpenShop RSVJericShop none 600 2400 2 13 1 1"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 13 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 600 2400"
+						"Action": "OpenShop RSVJericShop right 600 2400 2 13 1 1"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 12 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 600 2400"
+						"Action": "OpenShop RSVJericShop right 600 2400 2 13 1 1"
 					}
 				},
 			],
@@ -682,7 +682,106 @@
 					]
 				},
 
-				//
+				//Lola's Shop
+				"RSVLolaShop": {
+					"Owners": [
+						{
+							"Name": "Lola",
+							"Dialogues": [
+								{
+									"Id": "RSVLolaShop_Default",
+									"Dialogue": "{{i18n:RSVLolaShop}}"
+								}
+							],
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 10
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 8,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lola 2000"
+						},		
+					],
+
+					"Items": [
+						{
+							"RandomItemId": [
+								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
+								"(w)Rafseazz.RSVCP_Celestine_Sword",
+								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
+								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
+								"(w)Rafseazz.RSVCP_Reaper_Bane",
+								"(w)Rafseazz.RSVCP_Runic_Greatsword",
+								"(w)9",
+								"(w)50",
+								"(w)5",
+								"(w)8",
+								"(w)7",
+								"(w)28",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
+								"(w)Rafseazz.RSVCP_Celestine_Sword",
+								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
+								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
+								"(w)Rafseazz.RSVCP_Reaper_Bane",
+								"(w)Rafseazz.RSVCP_Runic_Greatsword",
+								"(w)9",
+								"(w)50",
+								"(w)5",
+								"(w)8",
+								"(w)7",
+								"(w)28",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
+								"(w)Rafseazz.RSVCP_Celestine_Sword",
+								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
+								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
+								"(w)Rafseazz.RSVCP_Reaper_Bane",
+								"(w)Rafseazz.RSVCP_Runic_Greatsword",
+								"(w)9",
+								"(w)50",
+								"(w)5",
+								"(w)8",
+								"(w)7",
+								"(w)28",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+						{
+							"RandomItemId": [
+								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
+								"(w)Rafseazz.RSVCP_Celestine_Sword",
+								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
+								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
+								"(w)Rafseazz.RSVCP_Reaper_Bane",
+								"(w)Rafseazz.RSVCP_Runic_Greatsword",
+								"(w)9",
+								"(w)50",
+								"(w)5",
+								"(w)8",
+								"(w)7",
+								"(w)28",
+							],
+							"AvoidRepeat": true,
+							"AvailableStock": 1,
+						},
+					]
+				},
 			}
 		}
 	]
