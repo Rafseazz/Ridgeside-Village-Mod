@@ -69,7 +69,7 @@ internal class ChooseKQuery
         int idx = args.Length - 1;
         int final = idx - count;
 
-        Random random = context.Random ?? Utility.CreateDaySaveRandom(Utility.GetDeterministicHashCode("choose_k"));
+        Random random = context.Random ?? Utility.CreateDaySaveRandom(Game1.hash.GetDeterministicHashCode("choose_k"));
 
         while (idx > final)
         {
