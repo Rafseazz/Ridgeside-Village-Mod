@@ -746,29 +746,12 @@
 		//Aguar and farmer fix cave (Aguar 8 hearts)
 			"75160064/H/f Aguar 2000/t 600 1000/e 75160063/w sunny/c 1": "WizardSong/64 15/farmer 64 16 2 Aguar 64 18 0/broadcastEvent/addConversationTopic RSV_Aguar8Hearts/pause 1000/speak Aguar \"{{i18n:event-75160064.01}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.02}}\"/globalFade/viewport -1000 -1000/changeToTemporaryMap Custom_Ridgeside_AguarCave false/warp farmer 9 26/warp Aguar 10 24/pause 1000/faceDirection farmer 0/faceDirection Aguar 0/playMusic Cavern/fade/viewport 9 20/pause 1000/speak Aguar \"{{i18n:event-75160064.03}}\"/faceDirection Aguar 2/emote farmer 8/pause 500/speak Aguar \"{{i18n:event-75160064.04}}\"/emote farmer 56/pause 500/faceDirection Aguar 0/speak Aguar \"{{i18n:event-75160064.05}}\"/pause 1000/animate Aguar false true 100 20 20 21 21 22 22 23 23/pause 2000/speak Aguar \"{{i18n:event-75160064.06}}\"/stopAnimation Aguar 16/pause 500/playSound wand/glow 0 0 255 true/pause 1000/screenFlash .8/emote farmer 16/pause 1000/screenFlash .8/pause 1000/screenFlash .8/changeToTemporaryMap Custom_Ridgeside_AguarCaveTemporary false/stopGlowing/emote farmer 16/pause 500/faceDirection Aguar 2/speak Aguar \"{{i18n:event-75160064.07}}\"/faceDirection Aguar 0/emote Aguar 40/pause 1000/faceDirection Aguar 2/pause 300/speak Aguar \"{{i18n:event-75160064.08}}\"/speak Aguar \"$q 751600640 null#{{i18n:event-75160064.AguarQuestion}}#$r 751600641 0 aguar2_1#{{i18n:event-75160064.09}}#$r 751600642 0 aguar2_2#{{i18n:event-75160064.10}}\"/fork 751600642 AguarFruit/move farmer 0 -6 3/faceDirection Aguar 0/move farmer -1 0 3/showFrame farmer 58/pause 500/playSound hoeHit/pause 1000/playSound seeds/pause 1000/move farmer 1 0 3/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.AguarFork1}}\"/faceDirection farmer 2/move Aguar -1 0 0/move Aguar 0 -3 0/speak Aguar \"{{i18n:event-75160064.12}}\"/emote farmer 56/pause 500/speak Aguar \"{{i18n:event-75160064.13}}\"/emote farmer 16/pause 500/speak Aguar \"{{i18n:event-75160064.14}}\"/emote farmer 32/pause 500/speak Aguar \"{{i18n:event-75160064.15}}\"/message \"{{i18n:event-75160064.16}}\"/emote farmer 20/pause 500/move Aguar 0 5 1 true/move farmer 0 4 1 true/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160064.17}}\"/pause 1000/end dialogue Aguar \"{{i18n:event-75160064.18}}\"",
 
-		//Alissa sends letter to farmer (Alissa 6 hearts part 1)
-			"75160117/e 75160115/f Alissa 1500/x AlissaLetter": "null",
-
-		//Alissa sends letter to farmer about performance (Alissa 8 hearts part 1)
-			"75160119/e 75160118/f Alissa 2000/x AlissaPerform": "null",
-
 		//Corine visits farmer (Corine 10 hearts part 1)
 			"75160126/f Corine 2500/D Corine/t 600 1000/w sunny/e 75160125/d Mon Tue Wed Fri Sat Sun": "{{CorineMusic}}/64 15/farmer 64 16 2 Corine 64 18 0/skippable/pause 500/emote Corine 20/pause 500/emote farmer 16/pause 500/speak Corine \"{{i18n:event-75160126.01}}\"/emote farmer 32/pause 500/speak Corine \"{{i18n:event-75160126.02}}\"/emote farmer 8/pause 500/speak Corine \"{{i18n:event-75160126.03}}\"/emote farmer 28/pause 500/emote Corine 20/pause 500/move Corine 0 -1 0/message \"{{i18n:event-75160126.04}}\"/move Corine 0 1 0/speak Corine \"{{i18n:event-75160126.05}}\"/playSound shadowpeep/showFrame Corine 24/pause 500/warp Corine -100 -100/emote farmer 16/pause 2000/end dialogue Corine \"{{i18n:event-75160126.06}}\"",
-
-		//Flor sends letter (Flor 8 hearts part 1)
-			"75160131/e 75160130/f Flor 2000/x FlorLetter": "null",
-
-		//Maddie sends letter (Maddie 9 hearts part 1)
-			"75160137/e 75160136/f Maddie 2249/x MaddieLetter": "null",
-
-		//Maddie sends letter 2 (Maddie 10 hearts part 1)
-			"75160139/e 75160138/f Maddie 2500/D Maddie/x MaddieDate/z winter": "null",
 
 		//Jeric visits farmer (Jeric 2 hearts)
 			"75160151/f Jeric 500/t 600 1200/w sunny": "playful/64 15/farmer 64 16 2 Jeric 64 18 0/addConversationTopic RSV_Jeric2Hearts/skippable/pause 1000/emote Jeric 32/emote farmer 8/speak Jeric \"{{i18n:event-75160151.01}}\"/emote farmer 8/speak Jeric \"{{i18n:event-75160151.02}}\"/emote farmer 32/pause 500/emote Jeric 40/faceDirection Jeric 2/speak Jeric \"{{i18n:event-75160151.03}}\"/emote farmer 16/pause 500/emote Jeric 56/faceDirection Jeric 0/speak Jeric \"{{i18n:event-75160151.04}}\"/emote farmer 16/emote Jeric 56/speak Jeric \"{{i18n:event-75160151.05}}\"/emote farmer 40/pause 500/emote farmer 8/emote Jeric 28/speak Jeric \"{{i18n:event-75160151.06}}\"/emote farmer 28/pause 2000/globalFade/viewport -1000 -1000/message \"{{i18n:event-75160151.07}}\"/end dialogue Jeric \"{{i18n:event-75160151.08}}\"",
 
-		//Jeric sends letter (Jeric 10 hearts part 1)
-			"75160155/e 75160154/f Jeric 2500/D Jeric/x JericLetter": "null",
 
 		//Kenneth surprise (Kenneth 10 hearts)
 			"75160161/e 75160160/f Kenneth 2500/D Kenneth/w sunny/t 600 1000": "{{KennethMusic}}/64 14/farmer 64 16 2 RSVSurprise 64 18 0/addConversationTopic RSV_Kenneth10Hearts/pause 1000/emote farmer 8/pause 1000/playSound robotSoundEffects/pause 500/emote farmer 16/message \"{{i18n:event-75160161.01}}\"/emote farmer 8/pause 1000/globalFade/viewport -1000 -1000/end warpOut",
@@ -776,20 +759,8 @@
 		//Philip visits to apologize (Philip 4 hearts extra)
 			"75160164/e 75160163/t 600 1200": "{{PhilipMusic}}/64 15/farmer 64 16 2 Philip 64 18 0/skippable/pause 1000/emote Philip 28/speak Philip \"{{i18n:event-75160164.01}}\"/emote farmer 32/emote Philip 56/speak Philip \"{{i18n:event-75160164.02}}\"/emote farmer 56/pause 500/end dialogue Philip \"{{i18n:event-75160164.03}}\"",
 
-		//Unlocking Greenhouse1 (Letter)
-			"75160173/H/n RSV.FixedGreenhouse/x GH1Letter": "null",
-
 		//Bliss fetches farmer for unseal
 		"75160258/H/n RSV.CompleteRedCrystal/n RSV.CompleteOrangeCrystal/n RSV.CompleteYellowCrystal/n RSV.CompleteGreenCrystal/n RSV.CompleteBlueCrystal/n RSV.CompletePurpleCrystal/n RSV.CompleteGrayCrystal": "continue/64 15/farmer 64 16 2 Bliss 64 18 0/broadcastEvent/skippable/pause 800/emote farmer 8/speak Bliss \"{{i18n:event-75160258.01}}\"/emote farmer 32/speak Bliss \"{{i18n:event-75160258.02}}\"/showFrame Bliss 19/playSound shadowpeep/pause 800/warp Bliss -100 -100/pause 500/end",
-
-		//Daia sends a letter (Daia 10 heart part 1)
-			"75160206/e 75160205/f Daia 2500/x DaiaDate": "null",
-
-		//Sean sends a letter (Sean 8 heart part 1)
-			"75160379/e 75160355/f Sean 2000/x SeanLetter": "null",
-
-		//Maive sends a letter (Maive 8 heart part 1)
-			"75160395/e 75160339/f Maive 2000/x MaiveInviteLetter": "null",
 		}
 	},
 
@@ -863,25 +834,6 @@
 		},
 	},
 
-	{
-		"Action": "EditData",
-		"Target": "Data/Events/Farm",
-		"Entries": {
-		//Ridgeside Gathering Invitation (Letter)
-			"75160183/x GatheringInvitation": "null",
-		},
-		"When": { "Season": "Fall", "Day": 19 },
-	},
-	{
-		"Action": "EditData",
-		"Target": "Data/Events/Farm",
-		"Entries": {
-		//Ember of Resolutions invitaion (Letter)
-			"75160184/x EmberNightInvitation": "null",
-		},
-		"When": { "Season": "Winter", "Day": 27 },
-	},
-
 	//Conditional events
 	{
 		"LogName": "LogCabinHotel2ndFloor Events",
@@ -933,18 +885,6 @@
 	/*-----------------------------------------
 	2.0 Events!!
 	-----------------------------------------*/
-
-	{
-		"LogName": "Wedding Reception Mail",
-		"Action": "EditData",
-		"Target": "Data/Events/Farm",
-		"Entries": {
-		//Log Cabin Hotel sending letter the moment you're proposed (Letter)
-			"75160246/x WedReceptionMail": "null",
-		},
-		"When": {"HasFlag": "RSV.IsEngagedFlag", "Year |contains=1": false}
-	},
-
 	{
 		"LogName": "Wedding Reception - Female",
 		"Action": "EditData",
@@ -1605,14 +1545,6 @@
 
 	{
 		"Action": "EditData",
-		"Target": "Data/Events/Custom_Ridgeside_SummitFarm",
-		"Entries": {
-			"75160387/H/e 75160263/x OddJobsNotice": "null"
-		}
-	},
-
-	{
-		"Action": "EditData",
 		"Target": "Data/Events/Beach",
 		"Entries": {
 			//Blair and farmer go fishing in the beach (Blair 6 heart event)
@@ -2037,15 +1969,6 @@
 			"75160438/e 75160437/t 2000 2400/f Zayne 1500/w sunny": "nightTime/111 71/farmer 113 66 2 Zayne 111 71 3/skippable/addConversationTopic RSV_Zayne6Hearts/emote Zayne 40 true/move farmer 0 3 2/emote farmer 8/emote Zayne 8/faceDirection Zayne 1/pause 800/speak Zayne \"{{i18n:event-75160438.01}}\"/emote farmer 32/speak Zayne \"{{i18n:event-75160438.02}}\"/question fork0 \"{{i18n:event-75160438.03}}#{{i18n:event-75160438.04}}#{{i18n:event-75160438.05}}#\"/fork AskZayne/emote farmer 56/speak Zayne \"{{i18n:event-75160438.06}}\"/faceDirection Zayne 3/move farmer 0 2 2/end",
 
 			"AskZayne": "addMailReceived RSVZayneTalkedTo/emote farmer 8/speak Zayne \"{{i18n:event-75160438.AskZayne.01}}\"/faceDirection Zayne 2/emote Zayne 40/faceDirection Zayne 1/speak Zayne \"{{i18n:event-75160438.AskZayne.02}}\"/emote farmer 8 true/faceDirection Zayne 3/move farmer -2 0 2/speak Zayne \"{{i18n:event-75160438.AskZayne.03}}\"/message \"{{i18n:event-75160438.AskZayne.04}}\"/emote Zayne 28/speak Zayne \"{{i18n:event-75160438.AskZayne.05}}\"/faceDirection Zayne 0/pause 800/speak Zayne \"{{i18n:event-75160438.AskZayne.06}}\"/faceDirection Zayne 3/emote Zayne 40/speak Zayne \"{{i18n:event-75160438.AskZayne.07}}\"/emote farmer 8/faceDirection Zayne 0/speak Zayne \"{{i18n:event-75160438.AskZayne.08}}\"/faceDirection Zayne 0/emote Zayne 40/speak Zayne \"{{i18n:event-75160438.AskZayne.09}}\"/faceDirection Zayne 3/emote Zayne 28/speak Zayne \"{{i18n:event-75160438.AskZayne.10}}\"/faceDirection Zayne 0/speak Zayne \"{{i18n:event-75160438.AskZayne.11}}\"/quickQuestion #{{i18n:event-75160438.AskZayne.12}}#{{i18n:event-75160438.AskZayne.13}}#{{i18n:event-75160438.AskZayne.14}}#{{i18n:event-75160438.AskZayne.15}}#(break)speak Zayne \"{{i18n:event-75160438.AskZayne.16}}\"(break)speak Zayne \"{{i18n:event-75160438.AskZayne.17}}\"(break)speak Zayne \"{{i18n:event-75160438.AskZayne.18}}\"(break)speak Zayne \"{{i18n:event-75160438.AskZayne.19}}\"(break)/emote Zayne 40/speak Zayne \"{{i18n:event-75160438.AskZayne.20}}\"/faceDirection Zayne 3/emote Zayne 40/faceDirection Zayne 0/speak Zayne \"{{i18n:event-75160438.AskZayne.21}}\"/emote farmer 56/emote Zayne 32/speak Zayne \"{{i18n:event-75160438.AskZayne.22}}\"/emote farmer 32/faceDirection Zayne 3/emote Zayne 40/emote Zayne 32/speak Zayne \"{{i18n:event-75160438.AskZayne.23}}\"/end dialogue Zayne \"{{i18n:event-75160438.AskZayne.24}}\"",
-		}
-	},
-
-	{
-		"Action": "EditData",
-		"Target": "Data/Events/Farm",
-		"Entries": {
-			//Zayne sends letter to farmer (Zayne 8 hearts part 1) REQUIRES seeing Maive's 8 heart event //Yes the letter says to visit the Mansion between 8PM to 2AM, the Mansion will be open on those times after seeing this letter
-			"75160439/e 75160438/e 75160340/f Zayne 2000/x ZayneLetter": "null",
 		}
 	},
 
@@ -2553,34 +2476,5 @@
 			"JuneGoesAlone": "speak June \"{{i18n:event-94621001.22}}\"/move June 8 0 1 true/pause 500/faceDirection farmer 1/globalFade/viewport -1000 -1000/end dialogue June \"{{i18n:event-94621001.23}}\"",
 		},
 	},
-	
-	{
-		"LogName": "June Mail Events",
-		"Action": "EditData",
-		"Target": "Data/Events/Farm",
-		"Entries": {
-			//June Returns (Platonic)
-				"7286-junearrive/SawEvent 94620000/!Spouse June/Season summer/DayOfMonth 27/x JuneNPC.PlatonicArrival": "null",
-				
-			//June Leaves (Platonic)
-				"7286-juneleave/SawEvent 94620000/Friendship June 1/!Spouse June/!Dating June/Season winter/DayOfMonth 28/x JuneNPC.PlatonicDeparture": "null",
-				
-			//June Arrives (Romance)
-				"7286-junedatearrive/SawEvent 94620000/Dating June/!Spouse June/Season summer/DayOfMonth 28/x JuneNPC.RomanticArrival": "null",
-				
-			//June Leaves (Romance)
-				"7286-junedateleave/SawEvent 94620000/Dating June/!Spouse June/Season winter/DayOfMonth 28/x JuneNPC.RomanticDeparture": "null",
-				
-			//June Writes (Romance)
-				"7286-junesummer/SawEvent 94620000/Dating June/!Spouse June/Season spring/DayOfMonth 28/x JuneNPC.RomanticArrival": "null",
-			
-			//Reset flags for June letters
-				"7286-juneflags/Season spring/DayOfMonth 3/!Year 1": "none/-100 -100/farmer -1000 -1000 0/eventSeen 7286-junearrive false/eventSeen 7286-juneleave false/eventSeen 7286-junedatearrive false/eventSeen 7286-junedateleave false/eventSeen 7286-junesummer false/eventSeen 7286-junereset false/pause 50/end",
-			
-			//Reset the reset button (cycle)
-				"7286-junereset/Season spring/DayOfMonth 4/!Year 1": "none/-100 -100/farmer -1000 -1000 0/eventSeen 7286-juneflags false/pause 50/end",
-		}
-	},
-
 ]
 }

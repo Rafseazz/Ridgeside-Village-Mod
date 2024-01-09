@@ -110,7 +110,7 @@ namespace RidgesideVillage
         {
             if (__instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE.Split("New")[0]) // Old Summit House
             {
-                if (Game1.isDarkOut())
+                if (Game1.isDarkOut(__instance))
                 {
                     Game1.ambientLight = new Color(180, 180, 0, 255);
                 }
