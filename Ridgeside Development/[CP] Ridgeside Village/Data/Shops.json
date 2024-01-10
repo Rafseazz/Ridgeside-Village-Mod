@@ -65,14 +65,14 @@
 					"Position": { "X": 98, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaShop down 930 2300"
+						"Action": "OpenShop RSVPikaShop down 600 2600 98 38 2 1"
 					}
 				},
 				{
 					"Position": { "X": 99, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaShop down 930 2300"
+						"Action": "OpenShop RSVPikaShop down 600 2600 98 38 2 1"
 					}
 				},
 			],
@@ -403,7 +403,7 @@
 				"RSVPikaShop": {
 					"Owners": [
 						{
-							"Name": "AnyOrNone",
+							"Name": "Any",
 							"Portrait": "LooseSprites/PikaShop",
 							"Dialogues": [
 								{
@@ -459,161 +459,11 @@
 
 						//Dishes
 						{
-							"RandomItemId": [
-								"(O)Rafseazz.RSVCP_Arugula_Roll",
-								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
-						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
-								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
-								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
-						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
-								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
-						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
-								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
-								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
-						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
-								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
-						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
-								"(O)Rafseazz.RSVCP_Zesty_Tuna",
-							],
-							"AvoidRepeat": true,
+							"ItemId": "rsv_choose_k 4 (O)Rafseazz.RSVCP_Arugula_Roll (O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice (O)Rafseazz.RSVCP_Cherry_Berry_Shakey (O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge (O)Rafseazz.RSVCP_Fried_Mountain_Greens (O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice (O)Rafseazz.RSVCP_Highland_Ice_Cream (O)Rafseazz.RSVCP_Honey_Ginger_Whitefish (O)Rafseazz.RSVCP_Honey_Glazed_Salad (O)Rafseazz.RSVCP_Ridge_Fruity_Plate (O)Rafseazz.RSVCP_Ridgeside_Shaketini (O)Rafseazz.RSVCP_Snow_Bowl_Surprise (O)Rafseazz.RSVCP_Snowball_Slurpee (O)Rafseazz.RSVCP_Zesty_Tuna",
 							"AvailableStock": 1,
 						},
 						{
-							"RandomItemId": [
-								"(O)Rafseazz.RSVCP_Arugula_Roll",
-								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
-						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
-								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
-								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
-						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
-								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
-						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
-								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
-								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
-						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
-								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
-						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
-								"(O)Rafseazz.RSVCP_Zesty_Tuna",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(O)Rafseazz.RSVCP_Arugula_Roll",
-								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
-						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
-								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
-								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
-						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
-								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
-						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
-								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
-								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
-						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
-								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
-						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
-								"(O)Rafseazz.RSVCP_Zesty_Tuna",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(O)Rafseazz.RSVCP_Arugula_Roll",
-								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
-						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
-								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
-								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
-						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
-								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
-						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
-								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
-								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
-						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
-								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
-						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
-								"(O)Rafseazz.RSVCP_Zesty_Tuna",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(O)Rafseazz.RSVCP_Arugula_Roll",
-								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
-						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
-								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
-								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
-						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
-								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
-						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
-								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
-								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
-						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
-								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
-						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
-								"(O)Rafseazz.RSVCP_Zesty_Tuna",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(O)Rafseazz.RSVCP_Arugula_Roll",
-								"(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice", 
-						        "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
-								"(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
-								"(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
-						        "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
-								"(O)Rafseazz.RSVCP_Highland_Ice_Cream",
-						        "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
-								"(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
-								"(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
-						        "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
-								"(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
-						        "(O)Rafseazz.RSVCP_Snowball_Slurpee",
-								"(O)Rafseazz.RSVCP_Zesty_Tuna",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(O)207",
-								"(O)611",
-								"(O)648",
-								"(O)240",
-								"(O)213",
-								"(O)204",
-								"(O)195",
-								"(O)215",
-								"(O)236",
-								"(O)196",
-								"(O)224",
-								"(O)606",
-								"(O)218",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(O)207",
-								"(O)611",
-								"(O)648",
-								"(O)240",
-								"(O)213",
-								"(O)204",
-								"(O)195",
-								"(O)215",
-								"(O)236",
-								"(O)196",
-								"(O)224",
-								"(O)606",
-								"(O)218",
-							],
-							"AvoidRepeat": true,
+							"ItemId": "rsv_choose_k 2 (O)207 (O)611 (O)648 (O)240 (O)213 (O)204 (O)195 (O)215 (O)236 (O)196 (O)224 (O)606 (O)218",
 							"AvailableStock": 1,
 						},
 					]
@@ -783,76 +633,9 @@
 					],
 
 					"Items": [
+						//Weapons
 						{
-							"RandomItemId": [
-								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
-								"(w)Rafseazz.RSVCP_Celestine_Sword",
-								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
-								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
-								"(w)Rafseazz.RSVCP_Reaper_Bane",
-								"(w)Rafseazz.RSVCP_Runic_Greatsword",
-								"(w)9",
-								"(w)50",
-								"(w)5",
-								"(w)8",
-								"(w)7",
-								"(w)28",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
-								"(w)Rafseazz.RSVCP_Celestine_Sword",
-								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
-								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
-								"(w)Rafseazz.RSVCP_Reaper_Bane",
-								"(w)Rafseazz.RSVCP_Runic_Greatsword",
-								"(w)9",
-								"(w)50",
-								"(w)5",
-								"(w)8",
-								"(w)7",
-								"(w)28",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
-								"(w)Rafseazz.RSVCP_Celestine_Sword",
-								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
-								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
-								"(w)Rafseazz.RSVCP_Reaper_Bane",
-								"(w)Rafseazz.RSVCP_Runic_Greatsword",
-								"(w)9",
-								"(w)50",
-								"(w)5",
-								"(w)8",
-								"(w)7",
-								"(w)28",
-							],
-							"AvoidRepeat": true,
-							"AvailableStock": 1,
-						},
-						{
-							"RandomItemId": [
-								"(w)Rafseazz.RSVCP_Blade_of_Rubies",
-								"(w)Rafseazz.RSVCP_Celestine_Sword",
-								"(w)Rafseazz.RSVCP_Frost_Queen_s_Blade",
-								"(w)Rafseazz.RSVCP_Pearlskin_Blade",
-								"(w)Rafseazz.RSVCP_Reaper_Bane",
-								"(w)Rafseazz.RSVCP_Runic_Greatsword",
-								"(w)9",
-								"(w)50",
-								"(w)5",
-								"(w)8",
-								"(w)7",
-								"(w)28",
-							],
-							"AvoidRepeat": true,
+							"ItemId": "rsv_choose_k 4 (w)Rafseazz.RSVCP_Blade_of_Rubies (w)Rafseazz.RSVCP_Blade_of_Rubies (w)Rafseazz.RSVCP_Frost_Queen_s_Blade (w)Rafseazz.RSVCP_Pearlskin_Blade (w)Rafseazz.RSVCP_Reaper_Bane (w)Rafseazz.RSVCP_Runic_Greatsword (w)9 (w)50 (w)5 (w)8 (w)7 (w)28",
 							"AvailableStock": 1,
 						},
 					]
@@ -1334,6 +1117,45 @@
 						},
 					]
 				},
+
+				//Pika and Gus Festival Shop
+				"RSVFestPika": {
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Dialogues": [
+								{
+									"Id": "RSVFestPika_Default",
+									"Dialogue": "{{i18n:RSVFestPika}}"
+								}
+							],
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.8
+						},
+					],
+					"SalableItemTags": [
+						"category_cooking",
+						"category_ingredients",
+						"category_artisan_goods",
+						"category_syrup", 
+						"category_vegetable", 
+						"category_fruits"
+					],
+
+					"Items": [
+						//Dishes
+						{
+							"ItemId": "rsv_choose_k 20 (O)Rafseazz.RSVCP_Arugula_Roll (O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice (O)Rafseazz.RSVCP_Cherry_Berry_Shakey (O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge (O)Rafseazz.RSVCP_Fried_Mountain_Greens (O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice (O)Rafseazz.RSVCP_Highland_Ice_Cream (O)Rafseazz.RSVCP_Honey_Ginger_Whitefish (O)Rafseazz.RSVCP_Honey_Glazed_Salad (O)Rafseazz.RSVCP_Ridge_Fruity_Plate (O)Rafseazz.RSVCP_Ridgeside_Shaketini (O)Rafseazz.RSVCP_Snow_Bowl_Surprise (O)Rafseazz.RSVCP_Snowball_Slurpee (O)Rafseazz.RSVCP_Zesty_Tuna (O)207 (O)611 (O)648 (O)240 (O)213 (O)204 (O)195 (O)215 (O)236 (O)196 (O)224 (O)606 (O)218",
+							"AvailableStock": 3,
+						},
+					]
+				},
+
+				//
 			}
 		}
 	]
