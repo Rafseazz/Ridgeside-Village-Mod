@@ -1155,7 +1155,64 @@
 					]
 				},
 
-				//
+				//RSV Gathering - Girls
+				"RSVFestGirls": {
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Dialogue": [
+								{
+									"Id": "RSVFestGirls_Default",
+									"Dialogue": "{{i18n:RSVFestGirls}}"
+								}
+							]
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.8
+						},
+					],
+					"Items": [
+						{
+							"ItemId": "rsv_choose_k 8 (O)633 (O)631 (O)630 (O)835 (O)69 (O)524 (O)523 (O)74 (O)839 (O)861 (O)533 (O)279 (O)919 (O)454 (O)698 (O)464 (O)347",
+							"AvailableStock": 1,
+						},
+					]
+				},
+
+				//RSV Gathering - Boys
+				"RSVFestBoys": {
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Dialogue": [
+								{
+									"Id": "RSVFestBoys_Default",
+									"Dialogue": "{{i18n:RSVFestBoys}}"
+								}
+							]
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.8
+						},
+					],
+					"Items": [
+						{
+							"ItemId": "rsv_choose_k 8 (O)787 (O)629 (O)628 (O)349 (O)621 (O)130 (O)486 (O)346 (O)351 (O)441 (O)463 (O)522 (O)525 (O)645 (O)107 (O)918 (O)74",
+							"AvailableStock": 1,
+						},
+					]
+				},
+
+				//Jio shop
+				"RSVJioShop": {
+					
+				},
 			}
 		}
 	]
