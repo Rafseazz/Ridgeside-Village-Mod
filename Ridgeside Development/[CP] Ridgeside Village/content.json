@@ -853,7 +853,7 @@
 		{
 			"LogName": "Include all Mail",
 			"Action": "Include",
-			"FromFile": "Data/Mail/Mail.json",
+			"FromFile": "Data/Mail/Mail.json, Data/Mail/ActionTriggers.json",
 		},
 		//Include Festival Data
 		/*
@@ -993,6 +993,13 @@
 			"LogName": "Include Music",
 			"Action": "Include",
 			"FromFile": "Data/Music.json",
+		},
+
+		//Include Shops
+		{
+			"LogName": "Include Shops",
+			"Action": "Include",
+			"FromFile": "Data/Shops.json",
 		},
 	],
 }

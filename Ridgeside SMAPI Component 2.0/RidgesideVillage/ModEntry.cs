@@ -8,6 +8,7 @@ using StardewValley.Objects;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using SpaceCore.Events;
+using AtraCore.Framework.ItemResolvers;
 
 namespace RidgesideVillage
 {
@@ -88,6 +89,7 @@ namespace RidgesideVillage
             Foxbloom.Initialize(this);
 
             TravelingCart.Initialize(this);
+            ChooseKQuery.Initialize(this);
         }
 
         private void OnAssetRequested(object sender, AssetRequestedEventArgs e)

@@ -50,25 +50,6 @@ namespace RidgesideVillage
                   postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_Constructor_Postfix))
                 );
             }
-            if (Helper.ModRegistry.IsLoaded("Bouhm.NPCMapLocations"))
-            {
-                try
-                {
-                    Type ModMapPageClass = Type.GetType("NPCMapLocations.Framework.Menus.ModMapPage, NPCMapLocations");
-                    harmony.Patch(
-                        original: AccessTools.Method(ModMapPageClass, "draw", new Type[] { typeof(SpriteBatch) }),
-                        postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_draw_Postfix))
-                    );
-                }
-                catch (Exception e)
-                {
-                    Log.Info("Failed patching NPC Map Locations. RSV Button will probably be invisible on the map");
-                    Log.Info(e.StackTrace);
-                    Log.Info(e.Message);
-                }
-            }
-           
-
 
             Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen(1200, 720);
             ButtonArea = new Rectangle((int)topLeft.X, (int)topLeft.Y + 180, 144, 104);

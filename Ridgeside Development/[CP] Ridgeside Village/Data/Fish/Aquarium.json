@@ -6,55 +6,32 @@
 		"Action": "EditData",
 		"Target": "Data/AquariumFish",
 		"Entries": {
-			"Rafseazz.RSVCP_Bladetail_Sturgeon": "129/fish",
-			"Rafseazz.RSVCP_Caped_Tree_Frog": "130/crawl",
-			"Rafseazz.RSVCP_Cardia_Septal_Jellyfish": "131/float",
-			"Rafseazz.RSVCP_Crimson_Spiked_Clam": "132/static",
-			"Rafseazz.RSVCP_Fairytale_Lionfish": "133/fish",
-			"Rafseazz.RSVCP_Fixer_Eel": "134/fish",
-			"Rafseazz.RSVCP_Golden_Rose_Fin": "135/fish",
-			"Rafseazz.RSVCP_Harvester_Trout": "136/fish",
-			"Rafseazz.RSVCP_Lullaby_Carp": "137/fish",
-			"Rafseazz.RSVCP_Pebble_Back_Crab": "138/crawl",
-
-			"Rafseazz.RSVCP_Ridgeside_Bass": "139/fish",
-
-			"Rafseazz.RSVCP_Ridge_Bluegill": "800/fish",
-			"Rafseazz.RSVCP_Cutthroat_Trout": "801/fish",
-			"Rafseazz.RSVCP_Deep_Ridge_Angler": "802/fish",
-			"Rafseazz.RSVCP_Mountain_Redbelly_Dace": "803/fish",
-			"Rafseazz.RSVCP_Mountain_Whitefish": "804/fish",
-			"Rafseazz.RSVCP_Skulpin_Fish": "805/fish",
-			"Rafseazz.RSVCP_Waterfall_Snakehead": "806/fish",
-			"Rafseazz.RSVCP_Sockeye_Salmon": "807/fish",
+			"Rafseazz.RSVCP_Bladetail_Sturgeon": "0/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Caped_Tree_Frog": "1/crawl/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Cardia_Septal_Jellyfish": "2/float/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Crimson_Spiked_Clam": "3/static/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Fairytale_Lionfish": "4/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Fixer_Eel": "5/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Golden_Rose_Fin": "6/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Harvester_Trout": "7/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Lullaby_Carp": "8/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Pebble_Back_Crab": "9/crawl/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Ridgeside_Bass": "10/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Ridge_Bluegill": "11/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Cutthroat_Trout": "12/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Deep_Ridge_Angler": "13/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Mountain_Redbelly_Dace": "14/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Mountain_Whitefish": "15/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Skulpin_Fish": "16/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Waterfall_Snakehead": "17/fish/////LooseSprites\\RSVAquariumFish",
+			"Rafseazz.RSVCP_Sockeye_Salmon": "18/fish/////LooseSprites\\RSVAquariumFish",
 		},
 	},
 
 	{
-		"Action": "EditImage",
-		"Target": "LooseSprites/AquariumFish",
+		"Action": "Load",
+		"Target": "LooseSprites/RSVAquariumFish",
 		"FromFile": "assets/LooseSprites/RSVFishesAquarium.png",
-		"ToArea": {
-				"X": 216,
-				"Y": 288,
-				"Width": 264,
-				"Height": 48
-			}
-
 	},
-
-	{
-		"Action": "EditImage",
-		"Target": "LooseSprites/AquariumFish",
-		"FromFile": "assets/LooseSprites/RSVFishesAquarium2.png",
-		"ToArea": {
-				"X": 0,
-				"Y": 1920,
-				"Width": 192,
-				"Height": 48
-			}
-
-	},
-
 ]
 }

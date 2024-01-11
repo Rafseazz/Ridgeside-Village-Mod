@@ -4,6 +4,7 @@
       "LogName": "Edit Trash Can Data",
       "Action": "EditData",
       "Target": "Data/GarbageCans",
+      "TargetField": ["GarbageCans"],
       "Entries": {
         "Rafseazz.RSVCP_BloomingHillFarm": {
           "Items": [
@@ -46,7 +47,7 @@
               "Condition": "RANDOM 0.1 @addDailyLuck",
               "RandomItemId": [
                 "(O)72",
-              ]
+              ],
             }
           ],
         },

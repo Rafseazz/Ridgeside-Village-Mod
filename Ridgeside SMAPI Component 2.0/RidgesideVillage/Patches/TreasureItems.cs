@@ -254,7 +254,7 @@ namespace RidgesideVillage
         }
 
         //if player pulled sapphire, add flag. not done in getFish() cus mod compatibility
-        private static void FishingRod_PullFishFromWater_PostFix(ref FishingRod __instance, string  fishId, int fishSize, int fishQuality, int fishDifficulty, bool treasureCaught, bool wasPerfect, bool fromFishPond, bool caughtDouble)
+        private static void FishingRod_PullFishFromWater_PostFix(ref FishingRod __instance, string  fishId, int fishSize, int fishQuality, int fishDifficulty, bool treasureCaught, bool wasPerfect, bool fromFishPond)
         {
             if (fishId.Equals(RSVConstants.ISAPPHIRE))
             {
