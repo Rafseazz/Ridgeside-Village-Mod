@@ -73,7 +73,6 @@
 			"ToArea": { "X": 33, "Y": 0, "Width": 12, "Height": 6 },
 			"PatchMode": "Replace",
 			"When": {
-				"Rafseazz.RidgesideVillage/EnableBetterBusStop": false,
 				"HasMod: |contains=DaisyNiko.SVR2": false,
 				"HasMod: |contains=DaisyNiko.SVR3": false,
 			}
@@ -82,8 +81,8 @@
 			"Action": "EditMap",
 			"Target": "Maps/BusStop",
 			"FromFile": "Assets/Maps/MapPatches/RSVBusStopNew.tmx",
-			"FromArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
-			"ToArea": { "X": 31, "Y": 0, "Width": 14, "Height": 23 },
+			"FromArea": { "X": 21, "Y": 6, "Width": 10, "Height": 17 },
+			"ToArea": { "X": 31, "Y": 6, "Width": 10, "Height": 17 },
 			"PatchMode": "Replace",
 			"When": {
 				"Rafseazz.RidgesideVillage/EnableBetterBusStop": true,
