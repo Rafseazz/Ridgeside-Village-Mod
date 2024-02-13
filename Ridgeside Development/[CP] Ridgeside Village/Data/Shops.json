@@ -1211,8 +1211,464 @@
 
 				//Jio shop
 				"RSVJioShop": {
-					
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Dialogue": [
+								{
+									"Id": "RSVJioShop_Default",
+									"Dialogue": "{{i18n:RSVJioShop}}"
+								}
+							]
+						}
+					],
+					"Items": [
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Mistbloom_Syrup",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Mountain_Mistbloom",
+							"TradeItemAmount": 5
+						},
+						{
+							"ItemId": "(H)Rafseazz.RSVCP_Occult_Red_Scarf",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 50
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Occult_Dusk_Top",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 50
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Occult_Leather_Jacket",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 50
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Warp_Totem__Ridgeside",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 30
+						},
+						{
+							"ObjectDisplayName": "The Beautiful Serpent's Ring",
+							"Condition": "PLAYER_HAS_MAIL Current MythFlowerLetter",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 250
+						},
+						{
+							"ObjectDisplayName": "The Fairy Doe Fox's Ring",
+							"Condition": "PLAYER_HAS_MAIL Current MythFlowerLetter",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 250
+						},
+						{
+							"ItemId": "(W)Rafseazz.RSVCP_Mountain_Mistblade",
+							"Condition": "PLAYER_HAS_MAIL Current SlayViperialLetter, WEATHER Here Rain",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 500
+						},
+						{
+							"ItemId": "(W)Rafseazz.RSVCP_Mountain_Mistblade",
+							"Condition": "PLAYER_HAS_MAIL Current SlayViperialLetter, WEATHER Here Storm",
+							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
+							"TradeItemAmount": 500
+						},
+					]
 				},
+
+				//MalayaShop
+				"RSVMalayaShop": {
+					"Owners": [
+						{
+							"Name": "Malaya",
+							"Dialogue": [
+								{
+									"Id": "RSVMalayaShop_Default",
+									"Dialogue": "{{i18n:RSVMalayaShop}}"
+								},
+							],
+							"ClosedMessage": "{{i18n:RSVMalayaShop.close}}"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.7
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 0.6,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya 2000"
+						},		
+					],
+					"SalableItemTags": [
+						"category_cooking",
+						"category_ingredients",
+						"category_artisan_goods",
+						"category_syrup", 
+						"category_vegetable", 
+						"category_fruits"
+					],
+					"Items": [
+						{
+							"ItemId": "rsv_choose_k 1 (O)Rafseazz.RSVCP_Apricot_Juice (O)Rafseazz.RSVCP_Clementine_Juice (O)Rafseazz.RSVCP_Wild_Apple_Juice",
+						},
+						{
+							"ItemId": "rsv_choose_k 7 (O)Rafseazz.RSVCP_Clementine_Cake (O)Rafseazz.RSVCP_Crunchy_Bagel (O)Rafseazz.RSVCP_Fluffy_Apple_Crumble (O)Rafseazz.RSVCP_Forage_Souffle (O)Rafseazz.RSVCP_Forest_Halva (O)Rafseazz.RSVCP_Ginger_Rangpur_Meringue (O)Rafseazz.RSVCP_Highland_Blueberry_Pie (O)Rafseazz.RSVCP_Highland_Revani (O)Rafseazz.RSVCP_Holiday_Ice (O)Rafseazz.RSVCP_Jumpy_Coffee_Cake (O)Rafseazz.RSVCP_Kedi_Delight (O)Rafseazz.RSVCP_Kek_s_Style_Shortcake (O)Rafseazz.RSVCP_Kek_s_Small_Dream (O)Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich (O)Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut (O)Rafseazz.RSVCP_Pumpkin_Darling_Slice (O)Rafseazz.RSVCP_Ridge_Apple_Cake (O)Rafseazz.RSVCP_Ridge_Mosaic_Cake (O)Rafseazz.RSVCP_Strawberry_Lover_Pie (O)Rafseazz.RSVCP_Sweet_Cranberry_Cheesecake (O)Rafseazz.RSVCP_Tropic_Mango_Cake",
+							"AvailableStock": 3,
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Hundred_Flavor_Doughnut",
+							"AvailableStock": 1,
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Matcha_Latte",
+							"Condition": "PLAYER_HAS_MAIL Current OlgaSOLetter",
+							"AvailableStock": 3,
+						}
+					]
+				},
+
+				//Malaya's Recipe Shop
+				"RSVMalayaRecipes": {
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Dialogues": [
+								{
+									"Id": "RSVMalayaRecipes_Default",
+									"Dialogue": "{{i18n:RSVMalayaRecipes}}"
+								}
+							],
+							"ClosedMessage": "{{i18n:RSVMalayaRecipes.close}}"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.6
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 0.5,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Malaya 2000"
+						},		
+					],
+
+					"Items": [
+						//Recipes
+						{
+							"Id": "Rafseazz.RSVCP_Apricot_Juice (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Apricot_Juice",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Clementine_Juice (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Clementine_Juice",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Wild_Apple_Juice (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Wild_Apple_Juice",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Ginger_Rangpur_Meringue (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Ginger_Rangpur_Meringue",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Hundred_Flavor_Doughnut (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Hundred_Flavor_Doughnut",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Kedi_Delight (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Kedi_Delight",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Kek_s_Style_Shortcake (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Kek_s_Style_Shortcake",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Kek_s_Small_Dream (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Kek_s_Small_Dream",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich",
+							"IsRecipe": true,
+						},
+						{
+							"Id": "Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut (Recipe)",
+							"ItemId": "(O)Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut",
+							"IsRecipe": true,
+						},
+					]
+				},
+
+				//Kimpoi's Shop
+				"RSVKimpoiShop": {
+					"Owners": [
+						{
+							"Name": "Kimpoi",
+							"Dialogues": [
+								{
+									"Id": "RSVKimpoiShop_Default",
+									"Dialogue": "{{i18n:RSVKimpoiShop}}"
+								}
+							],
+							"ClosedMessage": "{{i18n:RSVKimpoiShop.close}}"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 2.5
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 0.5,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Kimpoi 2000"
+						},		
+					],
+
+					"SalableItemTags": [
+						"category_fertilizer",
+						"category_seeds"
+					],
+
+					"Items": [
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Cherry_Pluot_Sapling",
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Highland_Jostaberry_Sapling",
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Mountain_Plumcot_Sapling",
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Northern_Limequat_Sapling",
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Paradise_Rangpur_Sapling",
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit_Sapling",
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Desert_Tangelo_Sapling",
+							"Condition": "YEAR 2"
+						},
+						{
+							"ItemId": "(O)Rafseazz.RSVCP_Ember_Blood_Lime_Sapling",
+							"Condition": "YEAR 2"
+						},
+						{
+							"ItemId": "(O)805",
+							"Price": 150,
+							"Condition": "YEAR 2"
+						},
+					]
+				},
+
+				//Heaps
+				"RSVHeapsStore": {
+					"Owners": [
+						{
+							"Name": "Lorenzo",
+							"Dialogues": [
+								{
+									"Id": "RSVHeapsStore_Default",
+									"Dialogue": "{{i18n:RSVHeapsStore}}"
+								}
+							],
+							"ClosedMessage": "{{i18n:RSVHeapsStore.close}}"
+						}
+					],
+					"PriceModifiers": [
+						{
+							"Modification": "Multiply",
+							"Amount": 0.8
+						},
+						{
+							"Modification": "Multiply",
+							"Amount": 0.6,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},		
+					],
+
+					"SalableItemTags": [
+						"category_fish",
+						"category_egg",
+						"category_milk",
+						"category_cooking",
+						"category_crafting",
+						"category_big_craftable",
+						"category_building_resources",
+						"category_metal_resources",
+						"category_sell_at_pierres",
+						"category_sell_at_pierres_and_marnies",
+						"category_fertilizer",
+						"category_junk",
+						"category_bait",
+						"category_tackle",
+						"category_sell_at_fish_shop",
+						"category_furniture",
+						"category_ingredients",
+						"category_artisan_goods",
+						"category_syrup",
+						"category_monster_loot",
+						"category_equipment",
+						"category_seeds",
+						"category_vegetable",
+						"category_fruits",
+						"category_flowers",
+						"category_greens",
+						"category_hat",
+						"category_ring",
+						"category_weapon",
+					],
+
+					"Items": [
+
+						//Randomizing Sales
+						{
+							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
+							"Price": 300,
+							"AvailableStock": 1,
+						},
+						{
+							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
+							"Price": 500,
+							"AvailableStock": 1,
+						},
+						{
+							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
+							"Price": 700,
+							"AvailableStock": 1,
+						},
+
+						//Shanice event unlockables
+						{
+							"ItemId": "(O)599",
+							"Price": 500,
+							"AvailableStock": 3,
+							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163581"
+						},
+						{
+							"ItemId": "(O)286",
+							"Price": 250,
+							"AvailableStock": 12,
+							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163582"
+						},
+						{
+							"ItemId": "(O)465",
+							"Price": 50,
+							"AvailableStock": 9,
+							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163583"
+						},
+
+						//Regular Items
+						{
+							"ItemId": "(O)297"
+						},
+						{
+							"ItemId": "(O)245"
+						},
+						{
+							"ItemId": "(O)246"
+						},
+						{
+							"ItemId": "(O)423"
+						},
+						{
+							"ItemId": "(O)247"
+						},
+						{
+							"ItemId": "(O)419"
+						},
+						{
+							"ItemId": "(O)369",
+							"Price": 250,
+							"Condition": "YEAR 1 2"
+						},
+
+						//Lorenzo not yet bffs
+						{
+							"ItemId": "(O)368",
+							"Price": 80,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						{
+							"ItemId": "(O)370",
+							"Price": 80,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						{
+							"ItemId": "(O)371",
+							"Price": 160,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						{
+							"ItemId": "(O)465",
+							"Price": 80,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						{
+							"ItemId": "(O)466",
+							"Price": 160,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
+						},
+						{
+							"ItemId": "(O)369",
+							"Price": 100,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999, YEAR 2"
+						},
+
+						//Lorenzo now bffs
+						{
+							"ItemId": "(O)368",
+							"Price": 60,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						{
+							"ItemId": "(O)370",
+							"Price": 60,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						{
+							"ItemId": "(O)371",
+							"Price": 120,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						{
+							"ItemId": "(O)465",
+							"Price": 60,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						{
+							"ItemId": "(O)466",
+							"Price": 120,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
+						},
+						{
+							"ItemId": "(O)369",
+							"Price": 80,
+							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000, YEAR 2"
+						},
+
+						//*Add grapes of ferngill compat here//
+					]
+				},
+
+				//Faye's Shop
+
+
+				//Egg Festival Keahi and Trinnie
 			}
 		}
 	]
