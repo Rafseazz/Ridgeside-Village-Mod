@@ -1666,9 +1666,160 @@
 				},
 
 				//Faye's Shop
+				"RSVFayeShop": {
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Dialogues": [
+								{
+									"Id": "RSVFayeShop_Default",
+									"Dialogue": "{{i18n:RSVFayeShop}}"
+								}
+							],
+						}
+					],
 
+					"Items": [
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Juninja_Shirt",
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Flora_Golda_Shirt_M",
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Flora_Golda_Shirt_F",
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Pika_Impersonation_Shirt_M",
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Pika_Impersonation_Shirt_F",
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Village_Color_Shirt_M",
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Village_Color_Shirt_F",
+						},
+
+						//Special Order Unlockables
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Cof-Faye_Jacket_M",
+							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeJacket"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Cof-Faye_Jacket_F",
+							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeJacket"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Cray-Faye_Abstract_Shirt_M",
+							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeMisc"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Cray-Faye_Abstract_Shirt_F",
+							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeMisc"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Faye-rytale_Pastel_M",
+							"Condition": "PLAYER_HAS_MAIL Any RSV.FayePastel"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Faye-rytale_Pastel_F",
+							"Condition": "PLAYER_HAS_MAIL Any RSV.FayePastel"
+						},
+
+						//After 8 heart event
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Dragon_Sweetie_Top_M",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Dragon_Sweetie_Top_F",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Fab_Dusk_Suit",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Fairy_Cutie_Top_M",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Fairy_Cutie_Top_F",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Golden_Mane_Top_M",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Golden_Mane_Top_F",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Phoenix_Confidence_Jacket",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Winter_Royalty_Top_M",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+						{
+							"ItemId": "(S)Rafseazz.RSVCP_Winter_Royalty_Top_F",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
+						},
+					]
+				},
 
 				//Egg Festival Keahi and Trinnie
+				"RSVEggFestKeahiTrinnie": {
+					"Owners": [
+						{
+							"Name": "AnyOrNone",
+							"Dialogues": [
+								{
+									"Id": "RSVEggFestKeahiTrinnie_Default",
+									"Dialogue": "{{i18n:RSVEggFestKeahiTrinnie}}"
+								}
+							],
+						}
+					],
+
+					"Items": [
+						{
+							"ItemId": "(O)176",
+							"AvailableStock": 5,
+							"Price": 50,
+						},
+						{
+							"ItemId": "(O)180",
+							"AvailableStock": 5,
+							"Price": 50,
+						},
+						{
+							"ItemId": "(O)194",
+							"AvailableStock": 5,
+						},
+						{
+							"ItemId": "(O)195",
+							"AvailableStock": 5,
+						},
+						{
+							"RandomItemId": [
+								"(O)107",
+								"(O)174",
+								"(O)182",
+								"(O)289",
+								"(O)305",
+								"(O)442"
+							],
+							"AvailableStock": 1,
+							"Price": 100,
+							"Condition": "RANDOM 0.1 @addDailyLuck",
+						},
+					]
+				},
 			}
 		}
 	]
