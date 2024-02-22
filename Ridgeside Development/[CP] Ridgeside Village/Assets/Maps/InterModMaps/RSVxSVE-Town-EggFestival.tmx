@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="52" height="54" tilewidth="16" tileheight="16" infinite="0" nextlayerid="31" nextobjectid="28">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="52" height="54" tilewidth="16" tileheight="16" infinite="0" nextlayerid="31" nextobjectid="29">
  <tileset firstgid="1" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
   <image source="spring_outdoorsTileSheet" width="400" height="1264"/>
   <tile id="150">
@@ -2992,14 +2992,7 @@
  <objectgroup id="10" name="Buildings">
   <object id="19" name="TileData" x="608" y="384" width="16" height="16">
    <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVEggFestKeahiTrinnie"/>
-   </properties>
-  </object>
-  <object id="20" name="TileData" x="624" y="384" width="16" height="16">
-   <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVEggFestKeahiTrinnie"/>
+    <property name="Action" value="OpenShop RSVEggFestKeahiTrinnie"/>
    </properties>
   </object>
   <object id="23" name="TileData" x="208" y="480" width="16" height="16">
@@ -3025,6 +3018,11 @@
   <object id="27" name="TileData" x="320" y="832" width="16" height="16">
    <properties>
     <property name="Action" value="Shop shop"/>
+   </properties>
+  </object>
+  <object id="28" name="TileData" x="624" y="384" width="16" height="16">
+   <properties>
+    <property name="Action" value="OpenShop RSVEggFestKeahiTrinnie"/>
    </properties>
   </object>
  </objectgroup>
