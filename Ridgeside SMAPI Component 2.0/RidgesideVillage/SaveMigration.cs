@@ -51,7 +51,7 @@ namespace RidgesideVillage
                     }
                     else if (item.Category == -100)
                     {
-                        String genderedID = alternativeID + (Game1.player.GetGender() == NPC.male ? " M" : " F");
+                        String genderedID = alternativeID + (Game1.player.Gender == Gender.Male ? " M" : " F");
                         if (lookup.TryGetValue(genderedID, out String newID3))
                         {
                             Item newItem = ItemRegistry.Create(newID3, item.Stack, item.Quality);

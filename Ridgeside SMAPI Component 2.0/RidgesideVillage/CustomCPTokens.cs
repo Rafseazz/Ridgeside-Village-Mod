@@ -41,10 +41,10 @@ namespace RidgesideVillage
                         string gender;
                         switch (Spouse.Gender)
                         {
-                            case 0:
+                            case Gender.Male:
                                 gender = "male";
                                 break;
-                            case 1:
+                            case Gender.Female:
                                 gender = "female";
                                 break;
                             default:
@@ -69,10 +69,10 @@ namespace RidgesideVillage
                         string gender;
                         switch (Spouse.Gender)
                         {
-                            case 0:
+                            case Gender.Male:
                                 gender = "male";
                                 break;
-                            case 1:
+                            case Gender.Female:
                                 gender = "female";
                                 break;
                             default:
