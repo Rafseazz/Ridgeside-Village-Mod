@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="170" height="150" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="2335">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="170" height="150" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="2338">
  <properties>
   <property name="Outdoors" type="bool" value="true"/>
  </properties>
@@ -6002,16 +6002,14 @@
     <property name="Action" value="Message &quot;rsv.47&quot;"/>
    </properties>
   </object>
-  <object id="2285" name="TileData" x="1568" y="624" width="16" height="16">
-   <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVFestPika"/>
-   </properties>
-  </object>
   <object id="2286" name="TileData" x="1584" y="624" width="16" height="16">
    <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVFestPika"/>
+    <property name="Action" value="OpenShop RSVFestPika"/>
+   </properties>
+  </object>
+  <object id="2335" name="TileData" x="1568" y="624" width="16" height="16">
+   <properties>
+    <property name="Action" value="OpenShop RSVFestPika"/>
    </properties>
   </object>
   <object id="2294" name="TileData" x="1392" y="576" width="16" height="16">
@@ -6186,26 +6184,22 @@
   </object>
   <object id="2331" name="TileData" x="1744" y="736" width="16" height="16">
    <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVFestGirls"/>
-   </properties>
-  </object>
-  <object id="2332" name="TileData" x="1760" y="736" width="16" height="16">
-   <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVFestGirls"/>
+    <property name="Action" value="OpenShop RSVFestGirls"/>
    </properties>
   </object>
   <object id="2333" name="TileData" x="1904" y="736" width="16" height="16">
    <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVFestBoys"/>
+    <property name="Action" value="OpenShop RSVFestBoys"/>
    </properties>
   </object>
-  <object id="2334" name="TileData" x="1920" y="736" width="16" height="16">
+  <object id="2336" name="TileData" x="1760" y="736" width="16" height="16">
    <properties>
-    <property name="Action" value=""/>
-    <property name="Shop" value="RSVFestBoys"/>
+    <property name="Action" value="OpenShop RSVFestGirls"/>
+   </properties>
+  </object>
+  <object id="2337" name="TileData" x="1920" y="736" width="16" height="16">
+   <properties>
+    <property name="Action" value="OpenShop RSVFestBoys"/>
    </properties>
   </object>
  </objectgroup>
