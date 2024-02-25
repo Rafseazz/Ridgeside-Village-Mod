@@ -21,35 +21,35 @@
 					"Position": { "X": 1, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop down 600 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop"
 					}
 				},
 				{
 					"Position": { "X": 2, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop down 600 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop none 600 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 13 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop right 600 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 12 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop right 600 2400 2 13 1 1"
+						"Action": "OpenShop RSVJericShop"
 					}
 				},
 			],
@@ -65,14 +65,14 @@
 					"Position": { "X": 98, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaShop down 600 2600 98 38 2 1"
+						"Action": "OpenShop RSVPikaShop down 930 2300"
 					}
 				},
 				{
 					"Position": { "X": 99, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaShop down 600 2600 98 38 2 1"
+						"Action": "OpenShop RSVPikaShop down 930 2300"
 					}
 				},
 			],
@@ -117,14 +117,14 @@
 					"Position": { "X": 90, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaRecipes down 930 2300"
+						"Action": "OpenShop RSVPikaRecipes none 930 2300"
 					}
 				},
 				{
 					"Position": { "X": 91, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaRecipes down 930 2300"
+						"Action": "OpenShop RSVPikaRecipes none 930 2300"
 					}
 				},
 			],
@@ -198,7 +198,7 @@
 					"Position": { "X": 15, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVMysticFalls1 none 600 2600"
+						"Action": "OpenShop RSVMysticFalls1"
 					}
 				},
 			],
@@ -211,7 +211,7 @@
 					"Position": { "X": 15, "Y": 11 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVMysticFalls2 none 600 2600"
+						"Action": "OpenShop RSVMysticFalls2"
 					}
 				},
 			],
@@ -224,7 +224,115 @@
 					"Position": { "X": 15, "Y": 9 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVMysticFalls3 none 600 2600"
+						"Action": "OpenShop RSVMysticFalls3"
+					}
+				},
+			],
+		},
+
+		//Malaya shop
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+			"MapTiles": [
+				{
+					"Position": { "X": 39, "Y": 14 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVMalayaShop"
+					}
+				},
+				{
+					"Position": { "X": 40, "Y": 14 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVMalayaShop"
+					}
+				},
+			],
+			"When": { 
+				"HasFlag: hostPlayer |contains=RSV.UnlockHotelExpansion": true,
+			},
+			"Update": "OnLocationChange"
+		},
+
+		//Malaya recipe shop
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+			"MapTiles": [
+				{
+					"Position": { "X": 44, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVMalayaRecipes"
+					}
+				},
+			],
+			"When": { 
+				"HasFlag: hostPlayer |contains=RSV.UnlockHotelExpansion": true,
+			},
+			"Update": "OnLocationChange"
+		},
+
+		//Kimpoi shop
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_AlissaShed",
+			"MapTiles": [
+				{
+					"Position": { "X": 9, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVKimpoiShop"
+					}
+				},
+				{
+					"Position": { "X": 10, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVKimpoiShop"
+					}
+				},
+			],
+			"When": { 
+				"HasFlag: hostPlayer |contains=RSV.UnlockOrchardShop": true,
+			},
+			"Update": "OnLocationChange"
+		},
+
+		//Lorenzo / Heaps shop
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_3Bros",
+			"MapTiles": [
+				{
+					"Position": { "X": 7, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVHeapsStore"
+					}
+				},
+				{
+					"Position": { "X": 8, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVHeapsStore"
+					}
+				},
+			],
+		},
+
+		//Faye shop
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_FayeHouse",
+			"MapTiles": [
+				{
+					"Position": { "X": 8, "Y": 16 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "OpenShop RSVFayeShop"
 					}
 				},
 			],
@@ -243,7 +351,7 @@
 				"RSVJericShop": {
 					"Owners": [
 						{
-							"Name": "Jeric",
+							"Name": "AnyOrNone",
 							"Dialogues": [
 								{
 									"Id": "RSVJericShop_Default",
@@ -403,7 +511,7 @@
 				"RSVPikaShop": {
 					"Owners": [
 						{
-							"Name": "Any",
+							"Name": "AnyOrNone",
 							"Portrait": "LooseSprites/PikaShop",
 							"Dialogues": [
 								{
@@ -601,7 +709,7 @@
 				"RSVLolaShop": {
 					"Owners": [
 						{
-							"Name": "Lola",
+							"Name": "AnyOrNone",
 							"Dialogues": [
 								{
 									"Id": "RSVLolaShop_Default",
@@ -1274,7 +1382,7 @@
 				"RSVMalayaShop": {
 					"Owners": [
 						{
-							"Name": "Malaya",
+							"Name": "AnyOrNone",
 							"Dialogue": [
 								{
 									"Id": "RSVMalayaShop_Default",
@@ -1408,7 +1516,7 @@
 				"RSVKimpoiShop": {
 					"Owners": [
 						{
-							"Name": "Kimpoi",
+							"Name": "AnyOrNone",
 							"Dialogues": [
 								{
 									"Id": "RSVKimpoiShop_Default",
@@ -1474,7 +1582,7 @@
 				"RSVHeapsStore": {
 					"Owners": [
 						{
-							"Name": "Lorenzo",
+							"Name": "AnyOrNone",
 							"Dialogues": [
 								{
 									"Id": "RSVHeapsStore_Default",
@@ -1532,19 +1640,25 @@
 
 						//Randomizing Sales
 						{
+							"Id": "Random_Heaps_Item_1",
 							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
 							"Price": 300,
 							"AvailableStock": 1,
+							"AvoidRepeat": true,
 						},
 						{
+							"Id": "Random_Heaps_Item_2",
 							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
 							"Price": 500,
 							"AvailableStock": 1,
+							"AvoidRepeat": true,
 						},
 						{
+							"Id": "Random_Heaps_Item_3",
 							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
 							"Price": 700,
 							"AvailableStock": 1,
+							"AvoidRepeat": true,
 						},
 
 						//Shanice event unlockables
@@ -1552,43 +1666,53 @@
 							"ItemId": "(O)599",
 							"Price": 500,
 							"AvailableStock": 3,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163581"
 						},
 						{
 							"ItemId": "(O)286",
 							"Price": 250,
 							"AvailableStock": 12,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163582"
 						},
 						{
 							"ItemId": "(O)465",
 							"Price": 50,
 							"AvailableStock": 9,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163583"
 						},
 
 						//Regular Items
 						{
-							"ItemId": "(O)297"
+							"ItemId": "(O)297",
+							"AvoidRepeat": true,
 						},
 						{
-							"ItemId": "(O)245"
+							"ItemId": "(O)245",
+							"AvoidRepeat": true,
 						},
 						{
-							"ItemId": "(O)246"
+							"ItemId": "(O)246",
+							"AvoidRepeat": true,
 						},
 						{
-							"ItemId": "(O)423"
+							"ItemId": "(O)423",
+							"AvoidRepeat": true,
 						},
 						{
-							"ItemId": "(O)247"
+							"ItemId": "(O)247",
+							"AvoidRepeat": true,
 						},
 						{
-							"ItemId": "(O)419"
+							"ItemId": "(O)419",
+							"AvoidRepeat": true,
 						},
 						{
 							"ItemId": "(O)369",
 							"Price": 250,
+							"AvoidRepeat": true,
 							"Condition": "YEAR 1 2"
 						},
 
@@ -1596,31 +1720,37 @@
 						{
 							"ItemId": "(O)368",
 							"Price": 80,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
 							"ItemId": "(O)370",
 							"Price": 80,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
 							"ItemId": "(O)371",
 							"Price": 160,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
 							"ItemId": "(O)465",
 							"Price": 80,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
 							"ItemId": "(O)466",
 							"Price": 160,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
 							"ItemId": "(O)369",
 							"Price": 100,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999, YEAR 2"
 						},
 
@@ -1628,31 +1758,37 @@
 						{
 							"ItemId": "(O)368",
 							"Price": 60,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
 							"ItemId": "(O)370",
 							"Price": 60,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
 							"ItemId": "(O)371",
 							"Price": 120,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
 							"ItemId": "(O)465",
 							"Price": 60,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
 							"ItemId": "(O)466",
 							"Price": 120,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
 							"ItemId": "(O)369",
 							"Price": 80,
+							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000, YEAR 2"
 						},
 
