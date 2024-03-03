@@ -35,7 +35,7 @@ namespace RidgesideVillage
             //parse string
             //has form "ShowImage "path/to/file" scale [i18nkey]"
 
-            string path = arg2[1];
+            string path = arg2[1].Replace("\"", "");
 
             var split = arg2[2].Trim().Split(' ');
 

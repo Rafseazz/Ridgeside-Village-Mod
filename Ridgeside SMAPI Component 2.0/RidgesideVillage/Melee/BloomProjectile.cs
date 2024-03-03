@@ -50,6 +50,7 @@ namespace RidgesideVillage
             base.yVelocity.Value = yVelocity;
             base.position.Value = startingPosition;
         }
+
         public override void updatePosition(GameTime time)
         {
             var newPos = base.position.Value + new Vector2(xVelocity.Value, yVelocity.Value);
@@ -60,18 +61,21 @@ namespace RidgesideVillage
         {
             location.playSound("leafrustle");
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithTerrainFeature(TerrainFeature t, Vector2 tileLocation, GameLocation location)
         {
             location.playSound("leafrustle");
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithOther(GameLocation location)
         {
             location.playSound("leafrustle");
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithMonster(NPC n, GameLocation location)
