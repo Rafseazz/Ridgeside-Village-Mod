@@ -21,35 +21,35 @@
 					"Position": { "X": 1, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop"
+						"Action": "OpenShop RSVJericShop none 600 2600 1 12 2 2"
 					}
 				},
 				{
 					"Position": { "X": 2, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop"
+						"Action": "OpenShop RSVJericShop none 600 2600 1 12 2 2"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop"
+						"Action": "OpenShop RSVJericShop none 600 2600 1 12 2 2"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 13 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop"
+						"Action": "OpenShop RSVJericShop none 600 2600 1 12 2 2"
 					}
 				},
 				{
 					"Position": { "X": 3, "Y": 12 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVJericShop"
+						"Action": "OpenShop RSVJericShop none 600 2600 1 12 2 2"
 					}
 				},
 			],
@@ -76,35 +76,6 @@
 					}
 				},
 			],
-			"When": {
-				"Weather": "Sun, Wind",
-			},
-			"Update": "OnLocationChange"	
-		},
-		//Closing
-		{
-			"Action": "EditMap",
-			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
-			"MapTiles": [
-				{
-					"Position": { "X": 98, "Y": 39 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "Message \"rsv.close\""
-					}
-				},
-				{
-					"Position": { "X": 99, "Y": 39 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "Message \"rsv.close\""
-					}
-				},
-			],
-			"When": {
-				"Weather": "Rain, Storm, Snow"
-			},
-			"Update": "OnLocationChange, OnTimeChange"	
 		},
 
 		//Pika's Recipes
@@ -117,47 +88,17 @@
 					"Position": { "X": 90, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaRecipes none 930 2300"
+						"Action": "OpenShop RSVPikaRecipes down 600 2600 90 37 10 2"
 					}
 				},
 				{
 					"Position": { "X": 91, "Y": 39 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVPikaRecipes none 930 2300"
+						"Action": "OpenShop RSVPikaRecipes down 600 2600 90 37 10 2"
 					}
 				},
-			],
-			"When": {
-				"Weather": "Sun, Wind",
-				"Time": "{{Range: 0930, 2300}}"
-			},
-			"Update": "OnLocationChange"	
-		},
-		//Closing
-		{
-			"Action": "EditMap",
-			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
-			"MapTiles": [
-				{
-					"Position": { "X": 90, "Y": 39 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "Message \"rsv.close\""
-					}
-				},
-				{
-					"Position": { "X": 91, "Y": 39 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "Message \"rsv.close\""
-					}
-				},
-			],
-			"When": {
-				"Weather": "Rain, Storm, Snow"
-			},
-			"Update": "OnLocationChange"	
+			],	
 		},
 
 		//Lola's Shop
@@ -239,14 +180,14 @@
 					"Position": { "X": 39, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVMalayaShop"
+						"Action": "OpenShop RSVMalayaShop down 600 2600 39 12 6 2"
 					}
 				},
 				{
 					"Position": { "X": 40, "Y": 14 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVMalayaShop"
+						"Action": "OpenShop RSVMalayaShop down 600 2600 39 12 6 2"
 					}
 				},
 			],
@@ -284,14 +225,14 @@
 					"Position": { "X": 9, "Y": 6 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVKimpoiShop"
+						"Action": "OpenShop RSVKimpoiShop down 600 2600 8 4 3 2"
 					}
 				},
 				{
 					"Position": { "X": 10, "Y": 6 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVKimpoiShop"
+						"Action": "OpenShop RSVKimpoiShop down 600 2600 8 4 3 2"
 					}
 				},
 			],
@@ -310,14 +251,14 @@
 					"Position": { "X": 7, "Y": 8 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVHeapsStore"
+						"Action": "OpenShop RSVHeapsStore down 600 2600 6 6 5 3"
 					}
 				},
 				{
 					"Position": { "X": 8, "Y": 8 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "OpenShop RSVHeapsStore"
+						"Action": "OpenShop RSVHeapsStore down 600 2600 6 6 5 3"
 					}
 				},
 			],
@@ -351,13 +292,16 @@
 				"RSVJericShop": {
 					"Owners": [
 						{
-							"Name": "AnyOrNone",
+							"Name": "Any",
 							"Dialogues": [
 								{
 									"Id": "RSVJericShop_Default",
 									"Dialogue": "{{i18n:RSVJericShop}}"
 								}
 							],
+						},
+						{
+							"Name": "None",
 							"ClosedMessage": "{{i18n:RSVJericShop.close}}"
 						}
 					],
@@ -511,7 +455,7 @@
 				"RSVPikaShop": {
 					"Owners": [
 						{
-							"Name": "AnyOrNone",
+							"Name": "Any",
 							"Portrait": "LooseSprites/PikaShop",
 							"Dialogues": [
 								{
@@ -519,6 +463,9 @@
 									"Dialogue": "{{i18n:RSVPikaShop}}"
 								}
 							],
+						},
+						{
+							"Name": "None",
 							"ClosedMessage": "{{i18n:RSVPikaShop.close}}"
 						}
 					],
@@ -581,7 +528,7 @@
 				"RSVPikaRecipes": {
 					"Owners": [
 						{
-							"Name": "AnyOrNone",
+							"Name": "Any",
 							"Portrait": "LooseSprites/PikaShop",
 							"Dialogues": [
 								{
@@ -589,6 +536,9 @@
 									"Dialogue": "{{i18n:RSVPikaRecipes}}"
 								}
 							],
+						},
+						{
+							"Name": "None",
 							"ClosedMessage": "{{i18n:RSVPikaRecipes.close}}"
 						}
 					],
@@ -1382,13 +1332,16 @@
 				"RSVMalayaShop": {
 					"Owners": [
 						{
-							"Name": "AnyOrNone",
+							"Name": "Any",
 							"Dialogue": [
 								{
 									"Id": "RSVMalayaShop_Default",
 									"Dialogue": "{{i18n:RSVMalayaShop}}"
 								},
 							],
+						},
+						{
+							"Name": "None",
 							"ClosedMessage": "{{i18n:RSVMalayaShop.close}}"
 						}
 					],
@@ -1442,8 +1395,11 @@
 									"Dialogue": "{{i18n:RSVMalayaRecipes}}"
 								}
 							],
+						},
+						/*{
+							"Name": "None",
 							"ClosedMessage": "{{i18n:RSVMalayaRecipes.close}}"
-						}
+						}*/
 					],
 					"PriceModifiers": [
 						{
@@ -1516,13 +1472,16 @@
 				"RSVKimpoiShop": {
 					"Owners": [
 						{
-							"Name": "AnyOrNone",
+							"Name": "Any",
 							"Dialogues": [
 								{
 									"Id": "RSVKimpoiShop_Default",
 									"Dialogue": "{{i18n:RSVKimpoiShop}}"
 								}
 							],
+						},
+						{
+							"Name": "None",
 							"ClosedMessage": "{{i18n:RSVKimpoiShop.close}}"
 						}
 					],
@@ -1582,13 +1541,16 @@
 				"RSVHeapsStore": {
 					"Owners": [
 						{
-							"Name": "AnyOrNone",
+							"Name": "Any",
 							"Dialogues": [
 								{
 									"Id": "RSVHeapsStore_Default",
 									"Dialogue": "{{i18n:RSVHeapsStore}}"
 								}
 							],
+						},
+						{
+							"Name": "None",
 							"ClosedMessage": "{{i18n:RSVHeapsStore.close}}"
 						}
 					],
