@@ -3,18 +3,20 @@
 
 	//Expanded festivals VANILLA
 	{
-		"Action": "Load",
+		"Action": "EditMap",
 		"Target": "Maps/Forest-FlowerFestival",
 		"FromFile": "Assets/Maps/FestivalMaps/FlowerFestival-Patch.tmx",
+		"PatchMode": "Replace",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
 		"Target": "Maps/Town-EggFestival",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVEggFestival.tmx",
+		"PatchMode": "Replace",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -22,9 +24,10 @@
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
 		"Target": "Maps/Beach-Luau",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVLuau.tmx",
+		"PatchMode": "Replace",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -32,9 +35,10 @@
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
 		"Target": "Maps/Town-Fair",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVSDVFair.tmx",
+		"PatchMode": "Replace",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -42,9 +46,10 @@
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
 		"Target": "Maps/Town-Halloween",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVHalloween.tmx",
+		"PatchMode": "Replace",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -52,9 +57,10 @@
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
 		"Target": "Maps/Town-Christmas",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVChristmas.tmx",
+		"PatchMode": "Replace",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
