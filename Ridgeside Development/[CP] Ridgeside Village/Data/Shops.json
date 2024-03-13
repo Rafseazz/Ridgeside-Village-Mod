@@ -325,6 +325,7 @@
 
 						//Spring
 						{
+							"Id": "{{ModId}}.JericItem1",
 							"RandomItemId": [
 								"(O)474",
 								"(O)476",
@@ -336,6 +337,7 @@
 							"Condition": "SEASON spring",
 						},
 						{
+							"Id": "{{ModId}}.JericItem2",
 							"RandomItemId": [
 								"(O)474",
 								"(O)476",
@@ -347,6 +349,7 @@
 							"Condition": "SEASON spring",
 						},
 						{
+							"Id": "{{ModId}}.JericItem3",
 							"RandomItemId": [
 								"(O)474",
 								"(O)476",
@@ -358,6 +361,7 @@
 							"Condition": "SEASON spring",
 						},
 						{
+							"Id": "{{ModId}}.JericItem4",
 							"ItemId": "(O)745",
 							"AvailableStock": 9,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric 2000, SEASON spring"
@@ -365,6 +369,7 @@
 
 						//Summer
 						{
+							"Id": "{{ModId}}.JericItem5",
 							"RandomItemId": [
 								"(O)487",
 								"(O)482",
@@ -377,6 +382,7 @@
 							"Condition": "SEASON summer",
 						},
 						{
+							"Id": "{{ModId}}.JericItem6",
 							"RandomItemId": [
 								"(O)487",
 								"(O)482",
@@ -389,6 +395,7 @@
 							"Condition": "SEASON summer",
 						},
 						{
+							"Id": "{{ModId}}.JericItem7",
 							"RandomItemId": [
 								"(O)487",
 								"(O)482",
@@ -401,6 +408,7 @@
 							"Condition": "SEASON summer",
 						},
 						{
+							"Id": "{{ModId}}.JericItem8",
 							"ItemId": "(O)485",
 							"AvailableStock": 9,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric 2000, SEASON summer"
@@ -408,6 +416,7 @@
 
 						//Fall
 						{
+							"Id": "{{ModId}}.JericItem9",
 							"RandomItemId": [
 								"(O)492",
 								"(O)491",
@@ -419,6 +428,7 @@
 							"Condition": "SEASON fall",
 						},
 						{
+							"Id": "{{ModId}}.JericItem10",
 							"RandomItemId": [
 								"(O)492",
 								"(O)491",
@@ -430,6 +440,7 @@
 							"Condition": "SEASON fall",
 						},
 						{
+							"Id": "{{ModId}}.JericItem11",
 							"RandomItemId": [
 								"(O)492",
 								"(O)491",
@@ -443,6 +454,7 @@
 
 						//Winter
 						{
+							"Id": "{{ModId}}.JericItem12",
 							"ItemId": "(O)770",
 							"AvailableStock": 9,
 							"Condition": "SEASON winter"
@@ -492,21 +504,25 @@
 					"Items": [
 						//Seasonal Dishes
 						{
+							"Id": "{{ModId}}.PikaItem1",
 							"ItemId": "(O)Rafseazz.RSVCP_Springtime_Primetime",
 							"AvailableStock": 1,
 							"Condition": "SEASON spring, PLAYER_HAS_MAIL Current RSV.PikaSpring"
 						},
 						{
+							"Id": "{{ModId}}.PikaItem2",
 							"ItemId": "(O)Rafseazz.RSVCP_Summer_Mountain_Blessing",
 							"AvailableStock": 1,
 							"Condition": "SEASON summer, PLAYER_HAS_MAIL Current RSV.PikaSummer"
 						},
 						{
+							"Id": "{{ModId}}.PikaItem3",
 							"ItemId": "(O)Rafseazz.RSVCP_Autumnal_Serenity",
 							"AvailableStock": 1,
 							"Condition": "SEASON fall, PLAYER_HAS_MAIL Current RSV.PikaFall"
 						},
 						{
+							"Id": "{{ModId}}.PikaItem4",
 							"ItemId": "(O)Rafseazz.RSVCP_Winter_Night_Feast",
 							"AvailableStock": 1,
 							"Condition": "SEASON winter, PLAYER_HAS_MAIL Current RSV.PikaWinter"
@@ -514,10 +530,12 @@
 
 						//Dishes
 						{
+							"Id": "{{ModId}}.PikaRandomDish1",
 							"ItemId": "rsv_choose_k 4 (O)Rafseazz.RSVCP_Arugula_Roll (O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice (O)Rafseazz.RSVCP_Cherry_Berry_Shakey (O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge (O)Rafseazz.RSVCP_Fried_Mountain_Greens (O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice (O)Rafseazz.RSVCP_Highland_Ice_Cream (O)Rafseazz.RSVCP_Honey_Ginger_Whitefish (O)Rafseazz.RSVCP_Honey_Glazed_Salad (O)Rafseazz.RSVCP_Ridge_Fruity_Plate (O)Rafseazz.RSVCP_Ridgeside_Shaketini (O)Rafseazz.RSVCP_Snow_Bowl_Surprise (O)Rafseazz.RSVCP_Snowball_Slurpee (O)Rafseazz.RSVCP_Zesty_Tuna",
 							"AvailableStock": 1,
 						},
 						{
+							"Id": "{{ModId}}.PikaRandomDish2",
 							"ItemId": "rsv_choose_k 2 (O)207 (O)611 (O)648 (O)240 (O)213 (O)204 (O)195 (O)215 (O)236 (O)196 (O)224 (O)606 (O)218",
 							"AvailableStock": 1,
 						},
@@ -557,25 +575,25 @@
 					"Items": [
 						//Unlockable Recipes
 						{
-							"Id": "Rafseazz.RSVCP_Springtime_Primetime (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Springtime_Primetime (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Springtime_Primetime",
 							"IsRecipe": true,
 							"Condition": "PLAYER_HAS_MAIL Current RSV.PikaSpring"
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Summer_Mountain_Blessing (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Summer_Mountain_Blessing (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Summer_Mountain_Blessing",
 							"IsRecipe": true,
 							"Condition": "PLAYER_HAS_MAIL Current RSV.PikaSummer"
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Autumnal_Serenity (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Autumnal_Serenity (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Autumnal_Serenity",
 							"IsRecipe": true,
 							"Condition": "PLAYER_HAS_MAIL Current RSV.PikaFall"
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Winter_Night_Feast (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Winter_Night_Feast (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Winter_Night_Feast",
 							"IsRecipe": true,
 							"Condition": "PLAYER_HAS_MAIL Current RSV.PikaWinter"
@@ -583,72 +601,72 @@
 
 						//Recipes
 						{
-							"Id": "Rafseazz.RSVCP_Arugula_Roll (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Arugula_Roll (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Arugula_Roll",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Autumn_Dew_Drop_Juice (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Cherry_Berry_Shakey (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Cherry_Berry_Shakey (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Cherry_Berry_Shakey",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Fried_Fish_a_la_Ridge (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Fried_Fish_a_la_Ridge (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Fried_Mountain_Greens (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Fried_Mountain_Greens (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Fried_Mountain_Greens",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Ginger_Arugula_Fried_Rice (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Highland_Ice_Cream (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Highland_Ice_Cream (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Highland_Ice_Cream",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Honey_Ginger_Whitefish (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Honey_Ginger_Whitefish (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Honey_Ginger_Whitefish",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Honey_Glazed_Salad (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Honey_Glazed_Salad (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Honey_Glazed_Salad",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Ridge_Fruity_Plate (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Ridge_Fruity_Plate (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Ridge_Fruity_Plate",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Ridgeside_Shaketini (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Ridgeside_Shaketini (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Ridgeside_Shaketini",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Snow_Bowl_Surprise (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Snow_Bowl_Surprise (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Snow_Bowl_Surprise",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Snowball_Slurpee (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Snowball_Slurpee (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Snowball_Slurpee",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Zesty_Tuna (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Zesty_Tuna (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Zesty_Tuna",
 							"IsRecipe": true,
 						},
@@ -688,6 +706,7 @@
 					"Items": [
 						//Weapons
 						{
+							"Id": "{{ModId}}.LolaRandomWeapon1",
 							"ItemId": "rsv_choose_k 4 (w)Rafseazz.RSVCP_Blade_of_Rubies (w)Rafseazz.RSVCP_Blade_of_Rubies (w)Rafseazz.RSVCP_Frost_Queen_s_Blade (w)Rafseazz.RSVCP_Pearlskin_Blade (w)Rafseazz.RSVCP_Reaper_Bane (w)Rafseazz.RSVCP_Runic_Greatsword (w)9 (w)50 (w)5 (w)8 (w)7 (w)28",
 							"AvailableStock": 1,
 						},
@@ -712,6 +731,7 @@
 
 						//Non-dateable NPCs
 						{
+							"Id": "{{ModId}}.FriendFallsItem1",
 							"ItemId": "(w)Rafseazz.RSVCP_Cutlasset",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160336, PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2500",
 
@@ -720,6 +740,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem2",
 							"ItemId": "(w)Rafseazz.RSVCP_Dagger_Lily",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160308, PLAYER_FRIENDSHIP_POINTS Current Ariah 2500",
 
@@ -728,6 +749,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem3",
 							"ItemId": "(w)Rafseazz.RSVCP_Father_s_Sorrow",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160073, PLAYER_FRIENDSHIP_POINTS Current Ezekiel 2500",
 
@@ -736,6 +758,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem4",
 							"ItemId": "(w)Rafseazz.RSVCP_Fox_Claw",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160364, PLAYER_FRIENDSHIP_POINTS Current Sonny 2500",
 
@@ -744,6 +767,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem5",
 							"ItemId": "(w)Rafseazz.RSVCP_Golden_Key_Blade",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160105, PLAYER_FRIENDSHIP_POINTS Current Richard 2500",
 
@@ -752,6 +776,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem6",
 							"ItemId": "(w)Rafseazz.RSVCP_Gourmet_Cooking_Knife",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160101, PLAYER_FRIENDSHIP_POINTS Current Pika 2500",
 
@@ -760,6 +785,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem7",
 							"ItemId": "(w)Rafseazz.RSVCP_Pale_Wings",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160360, PLAYER_FRIENDSHIP_POINTS Current Shanice 2500",
 
@@ -768,6 +794,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem8",
 							"ItemId": "(w)Rafseazz.RSVCP_Prideful",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160374, PLAYER_FRIENDSHIP_POINTS Current Louie 2500",
 
@@ -776,6 +803,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem9",
 							"ItemId": "(w)Rafseazz.RSVCP_Princess_of_Green",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160109, PLAYER_FRIENDSHIP_POINTS Current Trinnie 2500",
 
@@ -784,6 +812,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem10",
 							"ItemId": "(w)Rafseazz.RSVCP_River_Harpoon",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160316, PLAYER_FRIENDSHIP_POINTS Current Carmen 2500",
 
@@ -792,6 +821,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem11",
 							"ItemId": "(w)Rafseazz.RSVCP_Safeguard_s_Edge",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160348, PLAYER_FRIENDSHIP_POINTS Current Naomi 2500",
 
@@ -800,6 +830,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem12",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Green_Gambler",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160068, PLAYER_FRIENDSHIP_POINTS Current Bert 2500",
 
@@ -807,6 +838,7 @@
 							"TradeItemAmount": 50
 						},
 						{
+							"Id": "{{ModId}}.FriendFallsItem13",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Green_Gambler",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160069, PLAYER_FRIENDSHIP_POINTS Current Bert 2500",
 
@@ -815,6 +847,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem14",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Madame",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160340, PLAYER_FRIENDSHIP_POINTS Current Maive 2500",
 
@@ -823,6 +856,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem15",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Prankster",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160085, PLAYER_FRIENDSHIP_POINTS Current Keahi 2500",
 
@@ -831,6 +865,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem16",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Silent_One",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160113, PLAYER_FRIENDSHIP_POINTS Current Yuuma 2500",
 
@@ -839,6 +874,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem17",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Wild_Whip",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160089, PLAYER_FRIENDSHIP_POINTS Current Lenny 2500",
 
@@ -847,6 +883,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem18",
 							"ItemId": "(w)Rafseazz.RSVCP_Tough_Love",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160097, PLAYER_FRIENDSHIP_POINTS Current Olga 2500",
 
@@ -856,6 +893,7 @@
 
 						//Dateables turned Non-dateables
 						{
+							"Id": "{{ModId}}.FriendFallsItem19",
 							"ItemId": "(w)Rafseazz.RSVCP_Amethyst_Lance",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160440, PLAYER_FRIENDSHIP_POINTS Current Zayne 2500, PLAYER_HAS_DIALOGUE_ANSWER Current 7516440",
 
@@ -864,6 +902,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem20",
 							"ItemId": "(w)Rafseazz.RSVCP_Ark_Blade",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160304, PLAYER_FRIENDSHIP_POINTS Current Anton 2500, PLAYER_HAS_DIALOGUE_ANSWER Current 75163044",
 
@@ -872,6 +911,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem21",
 							"ItemId": "(w)Rafseazz.RSVCP_Fairy_Needle",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160449, PLAYER_FRIENDSHIP_POINTS Current Faye 2500, PLAYER_HAS_MAIL Current FayeBryleLoveStory Any",
 
@@ -880,6 +920,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem22",
 							"ItemId": "(w)Rafseazz.RSVCP_Guardian_Greatsword",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160453, PLAYER_FRIENDSHIP_POINTS Current Bryle 2500, PLAYER_HAS_MAIL Current FayeBryleLoveStory Any",
 
@@ -888,6 +929,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem23",
 							"ItemId": "(w)Rafseazz.RSVCP_Lovesick",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160324, PLAYER_FRIENDSHIP_POINTS Current Irene 2500, PLAYER_HAS_DIALOGUE_ANSWER Current 7516324",
 
@@ -896,6 +938,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.FriendFallsItem24",
 							"ItemId": "(w)Rafseazz.RSVCP_Military_Saber",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160352, PLAYER_FRIENDSHIP_POINTS Current Paula 2500, PLAYER_HAS_DIALOGUE_ANSWER Current 75163522",
 
@@ -921,6 +964,7 @@
 
 					"Items": [
 						{
+							"Id": "{{ModId}}.LoveFallsItem1",
 							"ItemId": "(w)Rafseazz.RSVCP_Amethyst_Lance",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160441, PLAYER_FRIENDSHIP_POINTS Current Zayne 2500",
 
@@ -929,6 +973,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem2",
 							"ItemId": "(w)Rafseazz.RSVCP_Ark_Blade",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160392, PLAYER_FRIENDSHIP_POINTS Current Anton 2500",
 
@@ -937,6 +982,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem3",
 							"ItemId": "(w)Rafseazz.RSVCP_Fairy_Needle",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160454, PLAYER_FRIENDSHIP_POINTS Current Faye 2500",
 
@@ -945,6 +991,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem4",
 							"ItemId": "(w)Rafseazz.RSVCP_Guardian_Greatsword",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160455, PLAYER_FRIENDSHIP_POINTS Current Bryle 2500",
 
@@ -953,6 +1000,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem5",
 							"ItemId": "(w)Rafseazz.RSVCP_Lovesick",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160432, PLAYER_FRIENDSHIP_POINTS Current Irene 2500",
 
@@ -961,6 +1009,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem6",
 							"ItemId": "(w)Rafseazz.RSVCP_Military_Saber",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160390, PLAYER_FRIENDSHIP_POINTS Current Paula 2500",
 
@@ -969,6 +1018,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem7",
 							"ItemId": "(w)Rafseazz.RSVCP_Battery_Powered_Battle_Hammer",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160161, PLAYER_FRIENDSHIP_POINTS Current Kenneth 2500",
 
@@ -977,6 +1027,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem8",
 							"ItemId": "(w)Rafseazz.RSVCP_Battle_Dancer_s_Fan",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160145, PLAYER_FRIENDSHIP_POINTS Current Ysabelle 2500",
 
@@ -985,6 +1036,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem9",
 							"ItemId": "(w)Rafseazz.RSVCP_Bronze_Lance",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160368, PLAYER_FRIENDSHIP_POINTS Current Sean 2500",
 
@@ -993,6 +1045,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem10",
 							"ItemId": "(w)Rafseazz.RSVCP_Death_s_Daughter",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160388, PLAYER_FRIENDSHIP_POINTS Current Blair 2500",
 
@@ -1001,6 +1054,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem11",
 							"ItemId": "(w)Rafseazz.RSVCP_Free_Lance",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160365, PLAYER_FRIENDSHIP_POINTS Current Kiarra 2500",
 
@@ -1009,6 +1063,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem12",
 							"ItemId": "(w)Rafseazz.RSVCP_Heartbreaker",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160139, PLAYER_FRIENDSHIP_POINTS Current Maddie 2500",
 
@@ -1017,6 +1072,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem13",
 							"ItemId": "(w)Rafseazz.RSVCP_Icreon",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160127, PLAYER_FRIENDSHIP_POINTS Current Corine 2500",
 
@@ -1025,6 +1081,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem14",
 							"ItemId": "(w)Rafseazz.RSVCP_Laborforce",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160150, PLAYER_FRIENDSHIP_POINTS Current Ian 2500",
 
@@ -1033,6 +1090,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem15",
 							"ItemId": "(w)Rafseazz.RSVCP_Observer_s_Hatchet",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160133, PLAYER_FRIENDSHIP_POINTS Current Flor 2500",
 
@@ -1041,6 +1099,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem16",
 							"ItemId": "(w)Rafseazz.RSVCP_Sword_of_Idols",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160167, PLAYER_FRIENDSHIP_POINTS Current Philip 2500",
 
@@ -1049,6 +1108,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem17",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Lucky_Penny",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160155, PLAYER_FRIENDSHIP_POINTS Current Jeric 2500",
 
@@ -1057,6 +1117,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem18",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Singing_Dagger",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160121, PLAYER_FRIENDSHIP_POINTS Current Alissa 2500",
 
@@ -1065,6 +1126,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem19",
 							"ItemId": "(w)Rafseazz.RSVCP_The_Unbroken",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160172, PLAYER_FRIENDSHIP_POINTS Current Shiro 2500",
 
@@ -1073,6 +1135,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.LoveFallsItem20",
 							"ItemId": "(w)Rafseazz.RSVCP_Treble_Cleaver",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 94620010, PLAYER_FRIENDSHIP_POINTS Current June 2500",
 
@@ -1098,6 +1161,7 @@
 
 					"Items": [
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem1",
 							"ItemId": "(w)Rafseazz.RSVCP_Bladebane",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160077, PLAYER_FRIENDSHIP_POINTS Current Freddie 2500",
 
@@ -1106,6 +1170,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem2",
 							"ItemId": "(w)Rafseazz.RSVCP_Bubble_Club",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160064, PLAYER_FRIENDSHIP_POINTS Current Aguar 2500",
 
@@ -1114,6 +1179,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem3",
 							"ItemId": "(w)Rafseazz.RSVCP_Cute_but_Deadly_Knife",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160180, PLAYER_FRIENDSHIP_POINTS Current Kiwi 2500",
 
@@ -1122,6 +1188,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem4",
 							"ItemId": "(w)Rafseazz.RSVCP_Daggerkin",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160093, PLAYER_FRIENDSHIP_POINTS Current Lola 2500",
 
@@ -1130,6 +1197,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem5",
 							"ItemId": "(w)Rafseazz.RSVCP_Dusked_Kunai",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160208, PLAYER_FRIENDSHIP_POINTS Current Daia 2500",
 
@@ -1138,6 +1206,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem6",
 							"ItemId": "(w)Rafseazz.RSVCP_Prismarine_Mallet",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160332, PLAYER_FRIENDSHIP_POINTS Current Kimpoi 2500",
 
@@ -1146,6 +1215,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem7",
 							"ItemId": "(w)Rafseazz.RSVCP_Occult_Blade",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160200, PLAYER_FRIENDSHIP_POINTS Current Jio 2500",
 
@@ -1154,6 +1224,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem8",
 							"ItemId": "(w)Rafseazz.RSVCP_Ridgeback_Hardshell",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160286, PLAYER_FRIENDSHIP_POINTS Current Torts 2500",
 
@@ -1162,6 +1233,7 @@
 						},
 
 						{
+							"Id": "{{ModId}}.SacrificeFallsItem9",
 							"ItemId": "(w)Rafseazz.RSVCP_Tide_Bringer",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160344, PLAYER_FRIENDSHIP_POINTS Current Malaya 2500",
 
@@ -1203,6 +1275,7 @@
 					"Items": [
 						//Dishes
 						{
+							"Id": "{{ModId}}.PikaFestRandomDish",
 							"ItemId": "rsv_choose_k 20 (O)Rafseazz.RSVCP_Arugula_Roll (O)Rafseazz.RSVCP_Autumn_Dew_Drop_Juice (O)Rafseazz.RSVCP_Cherry_Berry_Shakey (O)Rafseazz.RSVCP_Fried_Fish_a_la_Ridge (O)Rafseazz.RSVCP_Fried_Mountain_Greens (O)Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice (O)Rafseazz.RSVCP_Highland_Ice_Cream (O)Rafseazz.RSVCP_Honey_Ginger_Whitefish (O)Rafseazz.RSVCP_Honey_Glazed_Salad (O)Rafseazz.RSVCP_Ridge_Fruity_Plate (O)Rafseazz.RSVCP_Ridgeside_Shaketini (O)Rafseazz.RSVCP_Snow_Bowl_Surprise (O)Rafseazz.RSVCP_Snowball_Slurpee (O)Rafseazz.RSVCP_Zesty_Tuna (O)207 (O)611 (O)648 (O)240 (O)213 (O)204 (O)195 (O)215 (O)236 (O)196 (O)224 (O)606 (O)218",
 							"AvailableStock": 3,
 						},
@@ -1230,6 +1303,7 @@
 					],
 					"Items": [
 						{
+							"Id": "{{ModId}}.RSVGirlsStall",
 							"ItemId": "rsv_choose_k 8 (O)633 (O)631 (O)630 (O)835 (O)69 (O)524 (O)523 (O)74 (O)839 (O)861 (O)533 (O)279 (O)919 (O)454 (O)698 (O)464 (O)347",
 							"AvailableStock": 1,
 						},
@@ -1240,6 +1314,7 @@
 				"RSVFestBoys": {
 					"Owners": [
 						{
+							"Id": "{{ModId}}.RSVBoysStall",
 							"Name": "None",
 							"Dialogue": [
 								{
@@ -1278,49 +1353,58 @@
 					],
 					"Items": [
 						{
+							"Id": "{{ModId}}.CultShopItem1",
 							"ItemId": "(O)Rafseazz.RSVCP_Mistbloom_Syrup",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Mountain_Mistbloom",
 							"TradeItemAmount": 5
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem2",
 							"ItemId": "(H)Rafseazz.RSVCP_Occult_Red_Scarf",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
 							"TradeItemAmount": 50
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem3",
 							"ItemId": "(S)Rafseazz.RSVCP_Occult_Dusk_Top",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
 							"TradeItemAmount": 50
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem4",
 							"ItemId": "(S)Rafseazz.RSVCP_Occult_Leather_Jacket",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
 							"TradeItemAmount": 50
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem5",
 							"ItemId": "(O)Rafseazz.RSVCP_Warp_Totem__Ridgeside",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
 							"TradeItemAmount": 30
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem6",
 							"ObjectDisplayName": "The Beautiful Serpent's Ring",
 							"Condition": "PLAYER_HAS_MAIL Current MythFlowerLetter",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
 							"TradeItemAmount": 250
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem7",
 							"ObjectDisplayName": "The Fairy Doe Fox's Ring",
 							"Condition": "PLAYER_HAS_MAIL Current MythFlowerLetter",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
 							"TradeItemAmount": 250
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem8",
 							"ItemId": "(W)Rafseazz.RSVCP_Mountain_Mistblade",
 							"Condition": "PLAYER_HAS_MAIL Current SlayViperialLetter, WEATHER Here Rain",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
 							"TradeItemAmount": 500
 						},
 						{
+							"Id": "{{ModId}}.CultShopItem9",
 							"ItemId": "(W)Rafseazz.RSVCP_Mountain_Mistblade",
 							"Condition": "PLAYER_HAS_MAIL Current SlayViperialLetter, WEATHER Here Storm",
 							"TradeItemId": "(O)Rafseazz.RSVCP_Spiritual_Essence",
@@ -1367,17 +1451,21 @@
 					],
 					"Items": [
 						{
+							"Id": "{{ModId}}.MalayaShopItem1",
 							"ItemId": "rsv_choose_k 1 (O)Rafseazz.RSVCP_Apricot_Juice (O)Rafseazz.RSVCP_Clementine_Juice (O)Rafseazz.RSVCP_Wild_Apple_Juice",
 						},
 						{
+							"Id": "{{ModId}}.MalayaShopItem2",
 							"ItemId": "rsv_choose_k 7 (O)Rafseazz.RSVCP_Clementine_Cake (O)Rafseazz.RSVCP_Crunchy_Bagel (O)Rafseazz.RSVCP_Fluffy_Apple_Crumble (O)Rafseazz.RSVCP_Forage_Souffle (O)Rafseazz.RSVCP_Forest_Halva (O)Rafseazz.RSVCP_Ginger_Rangpur_Meringue (O)Rafseazz.RSVCP_Highland_Blueberry_Pie (O)Rafseazz.RSVCP_Highland_Revani (O)Rafseazz.RSVCP_Holiday_Ice (O)Rafseazz.RSVCP_Jumpy_Coffee_Cake (O)Rafseazz.RSVCP_Kedi_Delight (O)Rafseazz.RSVCP_Kek_s_Style_Shortcake (O)Rafseazz.RSVCP_Kek_s_Small_Dream (O)Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich (O)Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut (O)Rafseazz.RSVCP_Pumpkin_Darling_Slice (O)Rafseazz.RSVCP_Ridge_Apple_Cake (O)Rafseazz.RSVCP_Ridge_Mosaic_Cake (O)Rafseazz.RSVCP_Strawberry_Lover_Pie (O)Rafseazz.RSVCP_Sweet_Cranberry_Cheesecake (O)Rafseazz.RSVCP_Tropic_Mango_Cake",
 							"AvailableStock": 3,
 						},
 						{
+							"Id": "{{ModId}}.MalayaShopItem3",
 							"ItemId": "(O)Rafseazz.RSVCP_Hundred_Flavor_Doughnut",
 							"AvailableStock": 1,
 						},
 						{
+							"Id": "{{ModId}}.MalayaShopItem4",
 							"ItemId": "(O)Rafseazz.RSVCP_Matcha_Latte",
 							"Condition": "PLAYER_HAS_MAIL Current OlgaSOLetter",
 							"AvailableStock": 3,
@@ -1417,52 +1505,52 @@
 					"Items": [
 						//Recipes
 						{
-							"Id": "Rafseazz.RSVCP_Apricot_Juice (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Apricot_Juice (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Apricot_Juice",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Clementine_Juice (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Clementine_Juice (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Clementine_Juice",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Wild_Apple_Juice (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Wild_Apple_Juice (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Wild_Apple_Juice",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Ginger_Rangpur_Meringue (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Ginger_Rangpur_Meringue (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Ginger_Rangpur_Meringue",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Hundred_Flavor_Doughnut (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Hundred_Flavor_Doughnut (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Hundred_Flavor_Doughnut",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Kedi_Delight (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Kedi_Delight (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Kedi_Delight",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Kek_s_Style_Shortcake (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Kek_s_Style_Shortcake (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Kek_s_Style_Shortcake",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Kek_s_Small_Dream (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Kek_s_Small_Dream (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Kek_s_Small_Dream",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Pillowsoft_Cheezy_Sandwich (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich",
 							"IsRecipe": true,
 						},
 						{
-							"Id": "Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut (Recipe)",
+							"Id": "{{ModId}}.RSVCP_Pink_Frosted_Sprinkled_Doughnut (Recipe)",
 							"ItemId": "(O)Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut",
 							"IsRecipe": true,
 						},
@@ -1505,32 +1593,41 @@
 
 					"Items": [
 						{
+							"Id": "{{ModId}}.KimpoiShopItem1",
 							"ItemId": "(O)Rafseazz.RSVCP_Cherry_Pluot_Sapling",
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem2",
 							"ItemId": "(O)Rafseazz.RSVCP_Highland_Jostaberry_Sapling",
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem3",
 							"ItemId": "(O)Rafseazz.RSVCP_Mountain_Plumcot_Sapling",
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem4",
 							"ItemId": "(O)Rafseazz.RSVCP_Northern_Limequat_Sapling",
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem5",
 							"ItemId": "(O)Rafseazz.RSVCP_Paradise_Rangpur_Sapling",
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem6",
 							"ItemId": "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit_Sapling",
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem7",
 							"ItemId": "(O)Rafseazz.RSVCP_Desert_Tangelo_Sapling",
 							"Condition": "YEAR 2"
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem8",
 							"ItemId": "(O)Rafseazz.RSVCP_Ember_Blood_Lime_Sapling",
 							"Condition": "YEAR 2"
 						},
 						{
+							"Id": "{{ModId}}.KimpoiShopItem9",
 							"ItemId": "(O)805",
 							"Price": 150,
 							"Condition": "YEAR 2"
@@ -1603,21 +1700,21 @@
 
 						//Randomizing Sales
 						{
-							"Id": "Random_Heaps_Item_1",
+							"Id": "{{ModId}}.Random_Heaps_Item_1",
 							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
 							"Price": 300,
 							"AvailableStock": 1,
 							"AvoidRepeat": true,
 						},
 						{
-							"Id": "Random_Heaps_Item_2",
+							"Id": "{{ModId}}.Random_Heaps_Item_2",
 							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
 							"Price": 500,
 							"AvailableStock": 1,
 							"AvoidRepeat": true,
 						},
 						{
-							"Id": "Random_Heaps_Item_3",
+							"Id": "{{ModId}}.Random_Heaps_Item_3",
 							"ItemId": "rsv_choose_k 1 (O)347 (O)107 (O)349 (O)351 (O)337 (O)430 (O)517 (O)521 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)599 (O)621 (O)632 (O)630 (O)628 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286 (O)286",
 							"Price": 700,
 							"AvailableStock": 1,
@@ -1626,6 +1723,7 @@
 
 						//Shanice event unlockables
 						{
+							"Id": "{{ModId}}.HeapsUnlockItem1",
 							"ItemId": "(O)599",
 							"Price": 500,
 							"AvailableStock": 3,
@@ -1633,6 +1731,7 @@
 							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163581"
 						},
 						{
+							"Id": "{{ModId}}.HeapsUnlockItem2",
 							"ItemId": "(O)286",
 							"Price": 250,
 							"AvailableStock": 12,
@@ -1640,6 +1739,7 @@
 							"Condition": "PLAYER_HAS_DIALOGUE_ANSWER Any 75163582"
 						},
 						{
+							"Id": "{{ModId}}.HeapsUnlockItem3",
 							"ItemId": "(O)465",
 							"Price": 50,
 							"AvailableStock": 9,
@@ -1649,30 +1749,37 @@
 
 						//Regular Items
 						{
+							"Id": "{{ModId}}.HeapsItem1",
 							"ItemId": "(O)297",
 							"AvoidRepeat": true,
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem2",
 							"ItemId": "(O)245",
 							"AvoidRepeat": true,
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem3",
 							"ItemId": "(O)246",
 							"AvoidRepeat": true,
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem4",
 							"ItemId": "(O)423",
 							"AvoidRepeat": true,
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem5",
 							"ItemId": "(O)247",
 							"AvoidRepeat": true,
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem6",
 							"ItemId": "(O)419",
 							"AvoidRepeat": true,
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem7",
 							"ItemId": "(O)369",
 							"Price": 250,
 							"AvoidRepeat": true,
@@ -1681,36 +1788,42 @@
 
 						//Lorenzo not yet bffs
 						{
+							"Id": "{{ModId}}.HeapsItem8",
 							"ItemId": "(O)368",
 							"Price": 80,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem9",
 							"ItemId": "(O)370",
 							"Price": 80,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem10",
 							"ItemId": "(O)371",
 							"Price": 160,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem11",
 							"ItemId": "(O)465",
 							"Price": 80,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem12",
 							"ItemId": "(O)466",
 							"Price": 160,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 0 1999"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem13",
 							"ItemId": "(O)369",
 							"Price": 100,
 							"AvoidRepeat": true,
@@ -1719,36 +1832,42 @@
 
 						//Lorenzo now bffs
 						{
+							"Id": "{{ModId}}.HeapsItem14",
 							"ItemId": "(O)368",
 							"Price": 60,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem15",
 							"ItemId": "(O)370",
 							"Price": 60,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem16",
 							"ItemId": "(O)371",
 							"Price": 120,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem17",
 							"ItemId": "(O)465",
 							"Price": 60,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem18",
 							"ItemId": "(O)466",
 							"Price": 120,
 							"AvoidRepeat": true,
 							"Condition": "PLAYER_FRIENDSHIP_POINTS Current Lorenzo 2000"
 						},
 						{
+							"Id": "{{ModId}}.HeapsItem19",
 							"ItemId": "(O)369",
 							"Price": 80,
 							"AvoidRepeat": true,
@@ -1775,91 +1894,114 @@
 
 					"Items": [
 						{
+							"Id": "{{ModId}}.FayeShopItem1",
 							"ItemId": "(S)Rafseazz.RSVCP_Juninja_Shirt",
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem2",
 							"ItemId": "(S)Rafseazz.RSVCP_Flora_Golda_Shirt_M",
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem3",
 							"ItemId": "(S)Rafseazz.RSVCP_Flora_Golda_Shirt_F",
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem4",
 							"ItemId": "(S)Rafseazz.RSVCP_Pika_Impersonation_Shirt_M",
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem5",
 							"ItemId": "(S)Rafseazz.RSVCP_Pika_Impersonation_Shirt_F",
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem6",
 							"ItemId": "(S)Rafseazz.RSVCP_Village_Color_Shirt_M",
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem7",
 							"ItemId": "(S)Rafseazz.RSVCP_Village_Color_Shirt_F",
 						},
 
 						//Special Order Unlockables
 						{
+							"Id": "{{ModId}}.FayeShopItem8",
 							"ItemId": "(S)Rafseazz.RSVCP_Cof-Faye_Jacket_M",
 							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeJacket"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem9",
 							"ItemId": "(S)Rafseazz.RSVCP_Cof-Faye_Jacket_F",
 							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeJacket"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem10",
 							"ItemId": "(S)Rafseazz.RSVCP_Cray-Faye_Abstract_Shirt_M",
 							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeMisc"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem11",
 							"ItemId": "(S)Rafseazz.RSVCP_Cray-Faye_Abstract_Shirt_F",
 							"Condition": "PLAYER_HAS_MAIL Any RSV.FayeMisc"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem12",
 							"ItemId": "(S)Rafseazz.RSVCP_Faye-rytale_Pastel_M",
 							"Condition": "PLAYER_HAS_MAIL Any RSV.FayePastel"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem13",
 							"ItemId": "(S)Rafseazz.RSVCP_Faye-rytale_Pastel_F",
 							"Condition": "PLAYER_HAS_MAIL Any RSV.FayePastel"
 						},
 
 						//After 8 heart event
 						{
+							"Id": "{{ModId}}.FayeShopItem14",
 							"ItemId": "(S)Rafseazz.RSVCP_Dragon_Sweetie_Top_M",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem15",
 							"ItemId": "(S)Rafseazz.RSVCP_Dragon_Sweetie_Top_F",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem16",
 							"ItemId": "(S)Rafseazz.RSVCP_Fab_Dusk_Suit",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem17",
 							"ItemId": "(S)Rafseazz.RSVCP_Fairy_Cutie_Top_M",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem18",
 							"ItemId": "(S)Rafseazz.RSVCP_Fairy_Cutie_Top_F",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem19",
 							"ItemId": "(S)Rafseazz.RSVCP_Golden_Mane_Top_M",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem20",
 							"ItemId": "(S)Rafseazz.RSVCP_Golden_Mane_Top_F",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem21",
 							"ItemId": "(S)Rafseazz.RSVCP_Phoenix_Confidence_Jacket",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem22",
 							"ItemId": "(S)Rafseazz.RSVCP_Winter_Royalty_Top_M",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
 						{
+							"Id": "{{ModId}}.FayeShopItem23",
 							"ItemId": "(S)Rafseazz.RSVCP_Winter_Royalty_Top_F",
 							"Condition": "PLAYER_HAS_SEEN_EVENT Any 75160449"
 						},
@@ -1882,24 +2024,29 @@
 
 					"Items": [
 						{
+							"Id": "{{ModId}}.KidEggShopItem1",
 							"ItemId": "(O)176",
 							"AvailableStock": 5,
 							"Price": 50,
 						},
 						{
+							"Id": "{{ModId}}.KidEggShopItem2",
 							"ItemId": "(O)180",
 							"AvailableStock": 5,
 							"Price": 50,
 						},
 						{
+							"Id": "{{ModId}}.KidEggShopItem3",
 							"ItemId": "(O)194",
 							"AvailableStock": 5,
 						},
 						{
+							"Id": "{{ModId}}.KidEggShopItem4",
 							"ItemId": "(O)195",
 							"AvailableStock": 5,
 						},
 						{
+							"Id": "{{ModId}}.KidEggShopItem5",
 							"RandomItemId": [
 								"(O)107",
 								"(O)174",
