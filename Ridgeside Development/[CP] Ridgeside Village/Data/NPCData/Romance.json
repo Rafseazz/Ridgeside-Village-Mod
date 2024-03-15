@@ -217,11 +217,9 @@
 	"Action": "EditData",
 	"Target": "Characters/Dialogue/Alissa, Characters/Dialogue/Corine, Characters/Dialogue/Flor, Characters/Dialogue/Ian, Characters/Dialogue/Jeric, Characters/Dialogue/Kenneth, Characters/Dialogue/Maddie, Characters/Dialogue/Philip, Characters/Dialogue/Shiro, Characters/Dialogue/Ysabelle, Characters/Dialogue/Jio, Characters/Dialogue/Daia, Characters/Dialogue/Kiarra, Characters/Dialogue/Sean, Characters/Dialogue/Blair, Characters/Dialogue/Paula, Characters/Dialogue/Anton, Characters/Dialogue/Irene, Characters/Dialogue/Zayne, Characters/Dialogue/Faye, Characters/Dialogue/Bryle",
 	"Entries": {
-		"give_flowersA": "{{i18n:Romance.give.flowersA.{{TargetWithoutPath}}}}",
-		"give_flowersB": "{{i18n:Romance.give.flowersB.{{TargetWithoutPath}}}}",
-		"stardrop_gift": "{{i18n:Romance.stardrop.gift.{{TargetWithoutPath}}}}",
-		"rejectNPCA": "{{i18n:Romance.rejectNPCA.{{TargetWithoutPath}}}}",
-		"rejectNPCB": "{{i18n:Romance.rejectNPCB.{{TargetWithoutPath}}}}"
+		"AcceptBouquet": "{{i18n:Romance.give.flowers{{Random:A,B}}.{{TargetWithoutPath}}}}",
+		"SpouseStardrop": "{{i18n:Romance.stardrop.gift.{{TargetWithoutPath}}}}",
+		"RejectBouquet": "{{i18n:Romance.rejectNPC{{Random:A,B}}.{{TargetWithoutPath}}}}",
 	},
 },
 

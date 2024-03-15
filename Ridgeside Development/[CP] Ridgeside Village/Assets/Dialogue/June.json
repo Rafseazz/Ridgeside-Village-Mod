@@ -161,11 +161,10 @@
     "winter_Sat10": "{{i18n:June.winter_Sat10}}",
     "winter_Sun10": "{{i18n:June.winter_Sun10}}",
 
-    // Unique dating responses for MissCoriel's mod
-    "give_flowersA": "{{i18n:June.give_flowersA}}",
-    "give_flowersB": "{{i18n:June.give_flowersB}}",
-    "give_pendant": "{{i18n:June.give_pendant}}",
-    "stardrop_gift": "{{i18n:June.stardrop_gift}}",
+    // Unique dating responses
+    "AcceptBouquet": "{{i18n:June.give_flowers{{Random:A,B}}}}",
+    //"give_pendant": "{{i18n:June.give_pendant}}", //Patched below instead to Strings/StringsFromCSFiles for vanilla way
+    "SpouseStardrop": "{{i18n:June.stardrop_gift}}",
 
     // Rejection dialogue (is all of these even necessary?)
     "danceRejection": "{{i18n:June.danceRejection}}",
@@ -238,7 +237,14 @@
     "MovieInvite_Spouse_June": "{{i18n:June.MovieInvitation}}",
     }
   },
-
+{
+  "LogName": "June Pendant Dialogue",
+  "Action": "EditData",
+  "Target": "Strings/StringsFromCSFiles",
+  "Entries": {
+    "June_Engaged": "{{i18n:June.give_pendant}}"
+  }
+},
 {
   "LogName": "June SDV Fair Dialogue",
   "Action": "EditData",
