@@ -16,11 +16,18 @@
                 "Delimiter": "/"
             },
 
-            //Animations
+            //Animations (y1)
             {
                 "Operation": "Append",
-                "Target": ["Fields", "set-up", 4],
-                "Value": "/animate Pika true true 200 16 16 16 16 17 17 17 17 16 16 16 16 17 17 17 17 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 17 17 17 17/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Ian true 150 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27",
+                "Target": ["Fields", "set-up", 6],
+                "Value": "/animate Pika true true 200 16 16 16 16 17 17 17 17 16 16 16 16 17 17 17 17 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 17 17 17 17/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Ian false true 150 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27",
+            },
+
+            //Animations (y2)
+            {
+                "Operation": "Append",
+                "Target": ["Fields", "set-up_y2", 6],
+                "Value": "/animate Pika true true 200 16 16 16 16 17 17 17 17 16 16 16 16 17 17 17 17 16 17 18 19 19 19 19 19 19 19 19 19 19 19 19 19 18 17 16 16 16 16 17 17 17 17/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Ian false true 150 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 25 26 27 24 24 24 24 24 24 24 24 24 25 26 27 25 26 27 25 26 27",
             }
         ]
     },
@@ -48,7 +55,7 @@
         "Target": "Data/Festivals/winter25",
         "When": {
             "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
-			"HasSeenEvent: anyPlayer|contains=75160188": true,
+            "HasSeenEvent: anyPlayer|contains=75160188": true,
             "Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
         },
         "TextOperations": [

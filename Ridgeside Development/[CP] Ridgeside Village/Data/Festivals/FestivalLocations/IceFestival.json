@@ -22,10 +22,17 @@
                 "Delimiter": "/"
             },
 
-            //Animations
+            //Animations (y1)
             {
                 "Operation": "Append",
                 "Target": ["Fields", "set-up", 5],
+                "Value": "/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Blair false true 130 24 24 24 24 24 24 24 25 25 25/animate Aguar false true 500 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 18 19 19 19 19 19 19 19 18/animate Torts false true 200 16 17",
+            },
+
+             //Animations (y2)
+            {
+                "Operation": "Append",
+                "Target": ["Fields", "set-up_y2", 5],
                 "Value": "/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Blair false true 130 24 24 24 24 24 24 24 25 25 25/animate Aguar false true 500 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 18 19 19 19 19 19 19 19 18/animate Torts false true 200 16 17",
             }
         ]
