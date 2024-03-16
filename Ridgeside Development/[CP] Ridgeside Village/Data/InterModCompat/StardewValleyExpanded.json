@@ -422,7 +422,7 @@
 	*********/
 		{
 			"Action": "EditMap",
-			"Target": "Maps/Town-EggFestival",
+			"Target": "Maps/Town-EggFestival, Maps/Town-EggFestival2",
 			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-EggFestival.tmx",
 			"FromArea": {
 				"X": 0,
@@ -452,28 +452,71 @@
 				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
 			},
 			"Entries": {
-				"mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 27 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:event-mainEvent.01}}\"/pause 100/jump Jas/jump Vincent/jump Keahi/jump Trinnie/pause 1000/speak Lewis \"{{i18n:event-mainEvent.02}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/faceDirection Blair 1 true/faceDirection Sean 2 true/faceDirection Keahi 3 true/faceDirection Trinnie 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 true/faceDirection Trinnie 0 true/faceDirection Keahi 0 true/faceDirection Blair 0 true/faceDirection Sean 3/pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lenny 3/emote Lewis 28 true/emote Lenny 56/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:event-mainEvent.03}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:event-mainEvent.04}}\"/advancedMove Sophia false 0 -13 -12 0 0 20 16 0 0 16 -18 0 0 4 4 0 0 -12 8 0 4 5000/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -7 3 0/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -15 -9 0 9 0 0 18/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -20 -6 0 0 3/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 19 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 21 9 0 0 4 -20 0 20 0 -20 0/advancedMove Leo false 0 -10 -1 0 0 -3 -6 0 0 -2 -3 0 0 -3 -1 0 0 20 -5 0 0 -10 -2 0/advancedMove Keahi false 0 18 3 0 0 -2 3 0 0 3 -11 0 0 8 3 0 0 -3 -9 0 0 -5 20 0/advancedMove Lenny false -1 0 0 -1 -2 0 0 2 1 0 0 9 -13 0 0 -4 -9 0 10 0 -10 0 10 0 -10 0/advancedMove Trinnie false 0 3 -3 0 0 6 7 0 0 12 9 0 -11 0 0 8 -6 0 0 -6 6 0 0 8 13 0 0 -6 0 7 0 -7 0 7/advancedMove Kiarra false 8 0 -3 0 0 4 7 0 0 5 11 0 0 -7 26 0 0 -4 2 0 0 -4 -1 0 0 -1 -10 0 0 -11 -18 0/advancedMove Blair false 0 -6 3 0 -9 0 7 0 0 -8 -15 0 0 3 -1 0 0 5 6 0 0 -2 3 0 0 17 3 0 0 21 11 0/advancedMove Sean false 3 0 0 1 0 -2 2 0 0 14 12 0 0 -1 -13 0 0 8 2 0 0 -1 -2 0 0 -6 -9 0 0 6 3 0 0 -11 1 0 -13 0 0 -3/playSound whistle/jump Keahi/jump Blair/playMusic tickTock/playerControl eggHunt",
-				"afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:event-afterEggHunt.01}}\"/faceDirection Lenny 3/speak Lenny \"{{i18n:event-afterEggHunt.02}}\"/faceDirection Lewis 1/emote Lewis 12/speak Lewis \"{{i18n:event-afterEggHunt.03}}\"/emote Lenny 56 true/emote Lewis 28/faceDirection Lewis 2/pause 800/playMusic none/speak Lewis \"{{i18n:event-afterEggHunt.04}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:event-afterEggHunt.05}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:event-afterEggHunt.06}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end"
+				"mainEvent": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warpFarmers 27 69 0 25 68 1 27 70 0 33 68 3 33 70 3 30 71 0 29 72 0 27 72 0 left 34 70 3/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true unfreeze/pause 2000/speak Lewis \"{{i18n:event-mainEvent.01}}\"/pause 100/jump Jas/jump Vincent/jump Keahi/jump Trinnie/pause 1000/speak Lewis \"{{i18n:event-mainEvent.02}}\"/pause 100/faceDirection Vincent 3 true/faceDirection Jas 1 true/faceDirection Blair 1 true/faceDirection Sean 2 true/faceDirection Keahi 3 true/faceDirection Trinnie 1 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0 true/faceDirection Trinnie 0 true/faceDirection Keahi 0 true/faceDirection Blair 0 true/faceDirection Sean 3/pause 800/faceDirection Lewis 3/faceDirection Lewis 2/faceDirection Lewis 1/faceDirection Lenny 3/emote Lewis 28 true/emote Lenny 56/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:event-mainEvent.03}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:event-mainEvent.04}}\"/advancedMove Sophia false 0 -13 -12 0 0 20 16 0 0 16 -18 0 0 4 4 0 0 -12 8 0 4 5000/advancedMove Maru false -2 0 0 6 -9 0 0 -2 -9 0 0 -1 2 0 0 -12 6 0 0 -7 3 0/advancedMove Abigail false 0 21 -20 0 0 3 7 0 0 -15 -9 0 9 0 0 18/advancedMove Jas false 0 12 8 0 0 10 3 0 0 4 14 0 0 -20 -6 0 0 3/advancedMove Sam false 4 0 0 -4 2 0 0 -4 12 0 0 -6 19 0 0 20 0 -20 0 20/advancedMove Vincent false 0 3 24 0 0 21 9 0 0 4 -20 0 20 0 -20 0/advancedMove Leo false 0 -10 -1 0 0 -3 -6 0 0 -2 -3 0 0 -3 -1 0 0 20 -5 0 0 -10 -2 0/advancedMove Keahi false 0 18 3 0 0 -2 3 0 0 3 -11 0 0 8 3 0 0 -3 -9 0 0 -5 20 0/advancedMove Lenny false -1 0 0 -1 -2 0 0 2 1 0 0 9 -13 0 0 -4 -9 0 10 0 -10 0 10 0 -10 0/advancedMove Trinnie false 0 3 -3 0 0 6 7 0 0 12 9 0 -11 0 0 8 -6 0 0 -6 6 0 0 8 13 0 0 -6 0 7 0 -7 0 7/advancedMove Kiarra false 8 0 -3 0 0 4 7 0 0 5 11 0 0 -7 26 0 0 -4 2 0 0 -4 -1 0 0 -1 -10 0 0 -11 -18 0/advancedMove Blair false 0 -6 3 0 -9 0 7 0 0 -8 -15 0 0 3 -1 0 0 5 6 0 0 -2 3 0 0 17 3 0 0 21 11 0/advancedMove Sean false 3 0 0 1 0 -2 2 0 0 14 12 0 0 -1 -13 0 0 8 2 0 0 -1 -2 0 0 -6 -9 0 0 6 3 0 0 -11 1 0 -13 0 0 -3/playSound whistle/jump Keahi/jump Blair/playMusic tickTock/playerControl eggHunt",
+
+				"afterEggHunt": "pause 100/playSound whistle/waitForOtherPlayers endContest/pause 1000/globalFade/viewport -1000 -1000/playMusic event1/loadActors MainEvent/warp farmer1 27 69 /warp farmer2 26 67/warp farmer3 32 67/warp farmer4 28 71/faceDirection farmer1 0/faceDirection farmer2 1/faceDirection farmer3 3/faceDirection farmer4 0/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 70 true/warp Sean 32 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/viewport 27 67 true/pause 2000/speak Lewis \"{{i18n:event-afterEggHunt.01}}\"/faceDirection Lenny 3/speak Lenny \"{{i18n:event-afterEggHunt.02}}\"/faceDirection Lewis 1/emote Lewis 12/speak Lewis \"{{i18n:event-afterEggHunt.03}}\"/emote Lenny 56 true/emote Lewis 28/faceDirection Lewis 2/pause 800/playMusic none/speak Lewis \"{{i18n:event-afterEggHunt.04}}\"/playMusic none/pause 3000/cutscene eggHuntWinner/null/playMusic event1/pause 500/fork AbbyWin/move Lewis 0 1 2/speak Lewis \"{{i18n:event-afterEggHunt.05}}\"/awardFestivalPrize/null/move Lewis 0 -1 0/speak Lewis \"{{i18n:event-afterEggHunt.06}}\"/pause 600/viewport move 1 0 5000/pause 2000/globalFade/viewport -1000 -1000/waitForOtherPlayers festivalEnd/end",
+
+				"mainEvent_y2": "pause 500/playMusic none/pause 500/globalFade/viewport -1000 -1000/loadActors MainEvent/warpFarmers 29 70 0 26 68 1 27 70 0 33 68 3 33 70 3 30 71 0 29 72 0 27 72 0 left 34 70 3/warp Keahi 29 71 true/warp Trinnie 27 71 true/warp Lenny 30 66 true/warp Blair 31 71 true/warp Sean 33 69 true/warp Kiarra 26 71/faceDirection Keahi 0 true/faceDirection Trinnie 0 true/faceDirection Lenny 2 true/faceDirection Blair 0 true/faceDirection Sean 3 true/faceDirection Kiarra 0/pause 1000/positionOffset Demetrius 5 -10/positionOffset Jodi 5 -8/positionOffset Marnie -12 10/positionOffset Shane -6 -6/viewport 29 69 true unfreeze/pause 2000/speak Lewis \"{{i18n:RSVDialogueEggFest1}}\"/pause 100/jump Jas/jump Vincent/pause 1000/speak Lewis \"{{i18n:RSVDialogueEggFest2}}\"/pause 100/faceDirection Vincent 1 true/faceDirection Jas 3 true/pause 1000/faceDirection Vincent 0 true/faceDirection Jas 0/pause 800/faceDirection Lewis 3/pause 100/faceDirection Lewis 2/pause 125/faceDirection Lewis 1/pause 100/faceDirection Lewis 2/pause 800/speak Lewis \"{{i18n:RSVDialogueEggFest3}}\"/pause 1000/waitForOtherPlayers startContest/jump Lewis/pause 1000/speak Lewis \"{{i18n:RSVDialogueEggFest4}}\"/advancedMove Sophia false -1 0 0 -13 -11 0 0 6 -6 0 0 15 12 0 0 -1 19 0 0 -5 16 0 0 26/advancedMove Abigail false 0 5 -12 0 0 13 -6 0 0 4 31 0 0 10 -12 0 0 19 21 0 0 31/advancedMove Sam false 0 11 26 0 0 -9 -5 0 0 -19 17 0 0 20/advancedMove Jas false 3 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -13 0/advancedMove Vincent false 4 0 0 2 20 0 0 28 12 0 0 -7 3 0 0 -20 -10 0 0 -9 -12 0/advancedMove Maru false 5 0 0 -7 11 0 0 2 19 0 0 8 -13 0 0 24 -15 0 0 -5 -2 0 0 10 6 0 0 -3/advancedMove Leo false 0 9 2 0 0 13 11 0 0 4 27 0 0 -3 4 0 0 -23/advancedMove Haley true 3 7000 2 5000/advancedMove Gus true 1 5500 0 -2 4 400 1 7000 2 400 0 2 2 400 1 1000/advancedMove Keahi false 0 18 3 0 0 -2 3 0 0 3 -11 0 0 8 3 0 0 -3 -9 0 0 -5 20 0/advancedMove Lenny false -1 0 0 -1 -2 0 0 2 1 0 0 9 -13 0 0 -4 -9 0 10 0 -10 0 10 0 -10 0/advancedMove Trinnie false 0 3 -3 0 0 6 7 0 0 12 9 0 -11 0 0 8 -6 0 0 -6 6 0 0 8 13 0 0 -6 0 7 0 -7 0 7/advancedMove Kiarra false 8 0 -3 0 0 4 7 0 0 5 11 0 0 -7 26 0 0 -4 2 0 0 -4 -1 0 0 -1 -10 0 0 -11 -18 0/advancedMove Blair false 0 -7 3 0 -9 0 7 0 0 -8 -15 0 0 3 -1 0 0 5 6 0 0 -2 3 0 0 17 3 0 0 21 11 0/advancedMove Sean false 3 0 0 1 0 -2 2 0 0 14 12 0 0 -1 -13 0 0 8 2 0 0 -1 -2 0 0 -6 -9 0 0 6 3 0 0 -11 1 0 -13 0 0 -3/playSound whistle/jump Keahi/jump Blair/playMusic tickTock/playerControl eggHunt",
 			}
 		},
+		{
+        //Pierre adjust
+        "Action": "EditData",
+        "Target": "Data/Festivals/spring13",
+        "When": {
+            "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+        },
+        "TextOperations": [
+	            {
+	             "Operation": "Append",
+	             "Target": ["Fields", "set-up_y2", 5],
+	             "Value": "/advancedMove Pierre false 0 -1 2 1000",
+	            },
+	        ]
+    	},
 		/*********
 	** Flower Festival
 	*********/
+		//patch 1
 		{
 			"Action": "EditMap",
-			"Target": "Maps/Forest-FlowerFestival",
-			"FromFile": "Assets/Maps/InterModMaps/FlowerFestival-Patch_SVE.tmx",
+			"Target": "Maps/Forest-FlowerFestival, Maps/Forest-FlowerFestival2",
+			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-FlowerFestival.tmx",
 			"FromArea": {
 				"X": 25,
-				"Y": 8,
-				"Width": 25,
-				"Height": 37
+				"Y": 9,
+				"Width": 24,
+				"Height": 13
 			},
 			"ToArea": {
 				"X": 25,
-				"Y": 8,
-				"Width": 25,
-				"Height": 37
+				"Y": 9,
+				"Width": 24,
+				"Height": 13
+			},
+			"When": {
+				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
+			},
+			"PatchMode": "ReplaceByLayer",
+		},
+		//patch 2
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Forest-FlowerFestival, Maps/Forest-FlowerFestival2",
+			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-FlowerFestival.tmx",
+			"FromArea": {
+				"X": 30,
+				"Y": 22,
+				"Width": 17,
+				"Height": 10
+			},
+			"ToArea": {
+				"X": 30,
+				"Y": 22,
+				"Width": 17,
+				"Height": 10
 			},
 			"When": {
 				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
@@ -486,7 +529,7 @@
 	*********/
 		{
 			"Action": "EditMap",
-			"Target": "Maps/Beach-Luau",
+			"Target": "Maps/Beach-Luau, Maps/Beach-Luau2",
 			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Beach-Luau.tmx",
 			"FromArea": {
 				"X": 0,
@@ -1024,7 +1067,7 @@
 	*********/
 		{
 			"Action": "EditMap",
-			"Target": "Maps/Town-Christmas",
+			"Target": "Maps/Town-Christmas, Maps/Town-Christmas2",
 			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Christmas.tmx",
 			"FromArea": {
 				"X": 0,
@@ -1070,6 +1113,8 @@
 			},
 			"PatchMode": "ReplaceByLayer",
 		},
+		
+		
 		//RSV Festivals
 		//Gathering Dialogue
 		{
