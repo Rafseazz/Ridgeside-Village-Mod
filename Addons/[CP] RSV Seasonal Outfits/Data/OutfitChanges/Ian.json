@@ -74,47 +74,5 @@
                 },
             }
         },
-		
-		{
-			"LogName": "RSV Ian Flower Dance Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_spring24.png",
-			"When":
-			{
-				"DayEvent": "flower dance",
-				"LocationName": "Forest, temp",
-				"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Ian Spirit's Eve Outfit Y1",
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-1.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": true,
-				"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Ian Spirit's Eve Outfit Y2",
-			"Action": "EditImage",
-			"Target": "Portraits/Ian, Characters/Ian",
-			"FromFile": "Assets/{{Target}}/{{TargetWithoutPath}}_fall27-2.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": false,
-				"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
-			},
-			"Update": "OnLocationChange",
-		},
 	]
 }
