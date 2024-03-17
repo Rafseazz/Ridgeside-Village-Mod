@@ -845,6 +845,7 @@
 		/*********
 	** Spirit's Eve
 	*********/
+		//Odd years 1-5-9-13-etc
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Town-Halloween",
@@ -864,15 +865,41 @@
 			"When": {
 				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
 				"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
-				"IsOddYear": true,
+				"Year": "1, 5, 9, 13, 17, 21, 25,  29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99",
 				"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 			},
 			"PatchMode": "ReplaceByLayer",
 		},
+		//Even years
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween2",
+			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Halloween2.tmx",
+			"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 39,
+				"Height": 16
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 66,
+				"Width": 39,
+				"Height": 16
+			},
+			"When": {
+				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
+				"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+				"IsOddYear": false,
+				"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+			},
+			"PatchMode": "ReplaceByLayer",
+		},
+		//Odd years 3-7-11-15-etc
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Town-Halloween",
-			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Halloween2.tmx",
+			"FromFile": "Assets/Maps/InterModMaps/RSVxSVE-Town-Halloween3.tmx",
 			"FromArea": {
 				"X": 0,
 				"Y": 0,
@@ -888,7 +915,7 @@
 			"When": {
 				"HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true,
 				"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
-				"IsOddYear": false,
+				"Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97",
 				"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 			},
 			"PatchMode": "ReplaceByLayer",
