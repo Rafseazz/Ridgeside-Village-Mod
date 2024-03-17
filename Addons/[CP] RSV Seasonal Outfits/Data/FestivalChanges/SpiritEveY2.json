@@ -37,7 +37,23 @@
           {
            "Operation": "Append",
            "Target": ["Fields", "set-up_y2", 5],
-           "Value": "/addTemporaryActor Kenneth 16 48 25 75 down false/animate Kenneth false true 1000 4 4 4",
+           "Value": "/addTemporaryActor Kenneth_fall27-2 16 48 25 75 down false/animate Kenneth_fall27-2 false true 1000 4 4 4",
+          },
+        ]
+    },
+	{
+        //Invisible Kenneth
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Kenneth": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Kenneth 25 75 down",
+              "Delimiter": "/"
           },
         ]
     },
@@ -68,7 +84,23 @@
           {
            "Operation": "Append",
            "Target": ["Fields", "set-up_y2", 5],
-           "Value": "/addTemporaryActor Faye 32 32 18 71 down false/animate Faye false true 250 2 3 4 5",
+           "Value": "/addTemporaryActor Faye_fall27-2 32 32 18 71 down false/animate Faye_fall27-2 false true 250 2 3 4 5",
+          },
+        ]
+    },
+	{
+        //Invisible Faye
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Faye": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Faye 18 71 down",
+              "Delimiter": "/"
           },
         ]
     },
@@ -100,7 +132,30 @@
           {
            "Operation": "Append",
            "Target": ["Fields", "set-up_y2", 5],
-           "Value": "/addTemporaryActor Philip 32 32 16 74 right false/positionOffset Philip -16 0/addTemporaryActor Shiro 32 32 18 74 left false/beginSimultaneousCommand/animate Philip false true 200 8 9 8 9/animate Shiro false true 200 8 9 8 9/endSimultaneousCommand",
+           "Value": "/addTemporaryActor Philip_fall27-2 32 32 16 74 right false/positionOffset Philip_fall27-2 -16 0/addTemporaryActor Shiro_fall27-2 32 32 18 74 left false/beginSimultaneousCommand/animate Philip_fall27-2 false true 200 8 9 8 9/animate Shiro_fall27-2 false true 200 8 9 8 9/endSimultaneousCommand",
+          },
+        ]
+    },
+	{
+        //Invisible Philip and Shiro
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Shiro": "enabled, festivals only",
+			"Philip": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Shiro 18 74 down",
+              "Delimiter": "/"
+          },
+		  {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Philip 16 74 down",
+              "Delimiter": "/"
           },
         ]
     },
@@ -166,8 +221,26 @@
             {
              "Operation": "Append",
              "Target": ["Fields", "set-up_y2", 5],
-             "Value": "/addTemporaryActor Zayne 32 32 8 69 down/positionOffset Zayne -24 0/animate Zayne false true 1000 2 2 2",
+             "Value": "/addTemporaryActor Zayne_fall27-2 32 32 8 69 down/positionOffset Zayne -24 0/animate Zayne_fall27-2 false true 1000 2 2 2",
             },
+        ]
+    },
+	
+	{
+        //Invisible Zayne
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Zayne": "enabled, festivals only",
+			"HasSeenEvent": 75160338
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Zayne 8 69 down",
+              "Delimiter": "/"
+          },
         ]
     },
 
