@@ -588,7 +588,7 @@
 						},
 						{
 							"Id": "{{ModId}}.MaddieLab1",
-							"Condition": "LOCATION_NAME Here Custom_Ridgeside_AguarLab", //Maddie will wear the outfit if in the lab, no matter what happens.
+							"Condition": "LOCATION_NAME Target Custom_Ridgeside_AguarLab", //Maddie will wear the outfit if in the lab, no matter what happens.
 							"Portrait": "Portraits/Maddie_Lab",
 							"Sprite": "Characters/Maddie_Lab",
 							"IsIslandAttire": false,
@@ -606,7 +606,7 @@
 						},
 						{
 							"Id": "{{ModId}}.MaddieLab3",
-							"Condition": "TIME 1400 1800, LOCATION_NAME Here Custom_Ridgeside_RidgesideVillage, PLAYER_NPC_RELATIONSHIP Any Maddie Married, !SEASON_DAY spring 26 winter 16, !IS_EVENT",
+							"Condition": "TIME 1400 1800, LOCATION_NAME Target Custom_Ridgeside_RidgesideVillage, PLAYER_NPC_RELATIONSHIP Any Maddie Married, !SEASON_DAY spring 26 winter 16, !IS_EVENT",
 							"Portrait": "Portraits/Maddie_Lab",
 							"Sprite": "Characters/Maddie_Lab",
 							"IsIslandAttire": false,
@@ -679,7 +679,7 @@
 						},
 						{
 							"Id": "{{ModId}}.CorineNinjaSchedule",
-							"Condition": "PLAYER_HAS_SEEN_EVENT Host 75160125, DAY_OF_WEEK Thursday, !LOCATION_NAME Here Custom_Ridgeside_EzekielHouse",
+							"Condition": "PLAYER_HAS_SEEN_EVENT Host 75160125, DAY_OF_WEEK Thursday, !LOCATION_NAME Target Custom_Ridgeside_EzekielHouse",
 							"Portrait": "Portraits/Corine_Ninja",
 							"Sprite": "Characters/Corine_Ninja",
 							"IsIslandAttire": false,
@@ -1833,7 +1833,7 @@
 						},
 						{
 							"Id": "{{ModId}}.IreneChef",
-							"Condition": "LOCATION_NAME Here Custom_Ridgeside_PurpleMansion, !PLAYER_HAS_SEEN_EVENT Current 75160431",
+							"Condition": "LOCATION_NAME Target Custom_Ridgeside_PurpleMansion, !PLAYER_HAS_SEEN_EVENT Current 75160431",
 							"Portrait": "Portraits/Irene_Chef",
 							"Sprite": "Characters/Irene_Chef",
 							"IsIslandAttire": false,
@@ -2603,7 +2603,7 @@
 						},
 						{
 							"Id": "{{ModId}}.JioUnmaskedMarried",
-							"Condition": "PLAYER_NPC_RELATIONSHIP Current Jio Married, LOCATION_NAME Here FarmHouse",
+							"Condition": "PLAYER_NPC_RELATIONSHIP Current Jio Married, LOCATION_NAME Target FarmHouse",
 							"Portrait": "Portraits/Jio_Unmask",
 							"IsIslandAttire": true,
 							"Precedence": -100,
