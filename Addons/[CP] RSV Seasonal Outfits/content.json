@@ -1,5 +1,5 @@
 {
-	"Format": "1.29.0",
+	"Format": "2.0",
 	"ConfigSchema":
 	{
 		// Mod Mechanics
@@ -8,14 +8,6 @@
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Description": "Replaces characters' Spirit's Eve dialogue from the main mod with dialogue that references their costumes. (Requires RSV's Expanded Festival Maps.)",
-			"AllowBlank": false,
-			"Section": "Mod Mechanics",
-		},
-		"Lightweight Outfits":
-		{
-			"AllowValues": "true, false",
-			"Default": "false",
-			"Description": "Removes location-based changes for better performance.",
 			"AllowBlank": false,
 			"Section": "Mod Mechanics",
 		},
@@ -57,7 +49,7 @@
 		{
 			"AllowValues": "enabled, disabled, festivals always",
 			"Default": "enabled",
-			"Description": "Allow this mod to change Sean's appearance. When VinillaBean's Sean Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and VinillaBean's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
+			"Description": "Allow this mod to change Sean's appearance. When Vinilla's Sean Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and Vinilla's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
 			"AllowBlank": false,
 			"Section": "Characters With Other Seasonal Mods",
 		},
@@ -406,18 +398,17 @@
 	[
 	// World
 		{
-		  	"Name": "SeasonalRainToken",
-		  	"Value": "{{season}}"
-		},
-		{
-		  	"Name": "SeasonalRainToken",
-		  	"Value": "rain",
-		  	"When": {
-					"Weather |contains=Rain, Storm": true,
-					"Season": "Spring, Summer, Fall"
-		  	}
-		},
-
+			"Name": "SeasonalRainToken",
+			"Value": "{{season}}"
+  		},
+  		{
+			"Name": "SeasonalRainToken",
+			"Value": "rain",
+			"When": {
+			  	"Weather |contains=Rain, Storm": true,
+			  	"Season": "Spring, Summer, Fall"
+			}
+  		},
 		{
 			"Name": "IsOddYear",
 			"Value": "{{Query: {{Year}} % 2 = 1}}"
@@ -605,39 +596,6 @@
 			}
 		},
 
-		//Sean
-		{
-		  	"Name": "SeasonalSeanToken",
-		  	"Value": true,
-		},
-		{
-		  	"Name": "SeasonalSeanToken",
-		  	"Value": "{{Query:{{Random: true, false}}}}",
-		  	"When":
-			{
-				"HasMod |contains=VinillaBean.SeanSeasonals": true,
-				"Sean": "enabled"
-			}
-		},
-		{
-		  	"Name": "SeasonalSeanToken",
-		  	"Value": false,
-		  	"When":
-			{
-				"HasValue:{{DayEvent}}": false,
-				"Sean": "disabled, festivals always"
-			}
-		},
-		{
-		  	"Name": "SeasonalSeanToken",
-		  	"Value": true,
-		  	"When":
-			{
-				"HasValue:{{DayEvent}}": true,
-				"Sean": "festivals always"
-			}
-		},
-
 		//Ysabelle
 		{
 		  	"Name": "SeasonalYsabelleToken",
@@ -791,12 +749,6 @@ Outfit Changes
 		"Action": "Include",
 		"FromFile": "Data/OutfitChanges/June.json",
 		"When": { "June|contains=disabled": false }
-	},
-	{
-		"LogName": "RSV Keahi Outfits",
-		"Action": "Include",
-		"FromFile": "Data/OutfitChanges/Keahi.json",
-		"When": { "Keahi|contains=disabled": false }
 	},
 	{
 		"LogName": "RSV Keahi Outfits",

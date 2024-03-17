@@ -1,66 +1,78 @@
 {
-	"Changes": [
-		{
-			"LogName": "RSV Trinnie Seasonal Outfits",
-			"Action": "EditImage",
-			"Target": "Portraits/Trinnie, Characters/Trinnie",
-			"FromFile": "Assets/{{Target}}/Trinnie_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"Trinnie": "enabled"
-			}
-		},
-		{
-			"LogName": "RSV Trinnie Rain Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Trinnie, Characters/Trinnie",
-			"FromFile": "Assets/{{Target}}/Trinnie_{{SeasonalRainToken}}.png",
-			"When":
-			{
-				"SeasonalRainToken": "rain",
-				"Trinnie": "enabled"
-			}
-		},
-		{
-			"LogName": "RSV Trinnie Flower Dance Outfit",
-			"Action": "EditImage",
-			"Target": "Portraits/Trinnie, Characters/Trinnie",
-			"FromFile": "Assets/{{Target}}/Trinnie_spring24.png",
-			"When":
-			{
-				"DayEvent": "flower dance",
-				"LocationName": "Forest, temp",
-				"Trinnie": "enabled, festivals only"
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Trinnie Spirit's Eve Outfit Y1",
-			"Action": "EditImage",
-			"Target": "Portraits/Trinnie, Characters/Trinnie",
-			"FromFile": "Assets/{{Target}}/Trinnie_fall27-1.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": true,
-				"Trinnie": "enabled, festivals only"
-			},
-			"Update": "OnLocationChange",
-		},
-		{
-			"LogName": "RSV Trinnie Spirit's Eve Outfit Y2",
-			"Action": "EditImage",
-			"Target": "Portraits/Trinnie, Characters/Trinnie",
-			"FromFile": "Assets/{{Target}}/Trinnie_fall27-2.png",
-			"When":
-			{
-				"DayEvent": "spirit's eve",
-				"LocationName": "Town, temp",
-				"IsOddYear": false,
-				"Trinnie": "enabled, festivals only"
-			},
-			"Update": "OnLocationChange",
-		},
-	]
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Trinnie Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Trinnie_spring, Portraits/Trinnie_summer, Portraits/Trinnie_fall, Portraits/Trinnie_winter, Portraits/Trinnie_spring24, Portraits/Trinnie_fall27-1, Portraits/Trinnie_fall27-2, Characters/Trinnie_spring, Characters/Trinnie_summer, Characters/Trinnie_fall, Characters/Trinnie_winter, Characters/Trinnie_spring24, Characters/Trinnie_fall27-1, Characters/Trinnie_fall27-2, Portraits/Trinnie_rain, Characters/Trinnie_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Trinnie/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Trinnie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Trinnie", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.TrinnieSpring": {
+                    "Id": "{{ModId}}.TrinnieSpring",
+                    "Portrait": "Portraits/Trinnie_spring",
+                    "Sprite": "Characters/Trinnie_spring",
+                    "Condition": "{{Trinnie|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.TrinnieSummer": {
+                    "Id": "{{ModId}}.TrinnieSummer",
+                    "Portrait": "Portraits/Trinnie_summer",
+                    "Sprite": "Characters/Trinnie_summer",
+                    "Condition": "{{Trinnie|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.TrinnieFall": {
+                    "Id": "{{ModId}}.TrinnieFall",
+                    "Portrait": "Portraits/Trinnie_fall",
+                    "Sprite": "Characters/Trinnie_fall",
+                    "Condition": "{{Trinnie|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.TrinnieWinter": {
+                    "Id": "{{ModId}}.TrinnieWinter",
+                    "Portrait": "Portraits/Trinnie_winter",
+                    "Sprite": "Characters/Trinnie_winter",
+                    "Condition": "{{Trinnie|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.TrinnieRain": {
+                    "Id": "{{ModId}}.TrinnieRain",
+                    "Portrait": "Portraits/Trinnie_rain",
+                    "Sprite": "Characters/Trinnie_rain",
+                    "Condition": "{{Trinnie|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Trinnie.FlowerDance": {
+                    "Id": "{{ModId}}.Trinnie.FlowerDance",
+                    "Portrait": "Portraits/Trinnie_spring24",
+                    "Sprite": "Characters/Trinnie_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Trinnie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Trinnie.SpiritsEve1": {
+                    "Id": "{{ModId}}.Trinnie.SpiritsEve1",
+                    "Portrait": "Portraits/Trinnie_fall27-1",
+                    "Sprite": "Characters/Trinnie_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Trinnie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Trinnie.SpiritsEve2": {
+                    "Id": "{{ModId}}.Trinnie.SpiritsEve2",
+                    "Portrait": "Portraits/Trinnie_fall27-2",
+                    "Sprite": "Characters/Trinnie_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Trinnie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
 }
