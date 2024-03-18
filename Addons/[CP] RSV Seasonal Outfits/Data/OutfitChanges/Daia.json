@@ -105,15 +105,15 @@
                     "Portrait": "Portraits/Daia_ninja",
                     "Sprite": "Characters/Daia_ninja",
                     "Condition": "{{Daia|contains= enabled}}, IS_EVENT 75160254",
-                    "Precedence": -100
+                    "Precedence": -150
                 },
 				
 				"{{ModId}}.DaiaWork": {
                     "Id": "{{ModId}}.DaiaWork",
                     "Portrait": "Portraits/Daia_ninja",
                     "Sprite": "Characters/Daia_ninja",
-                    "Condition": "{{Daia|contains= enabled}}, ANY \"LOCATION_NAME Target Custom_Ridgeside_Ridge, LOCATION_NAME Target Custom_Ridgeside_RidgeForest, LOCATION_NAME Target Custom_Ridgeside_RSVSpiritRealm, LOCATION_NAME Target Custom_Ridgeside_RSVNinjaHouse, LOCATION_NAME Target Custom_Ridgeside_RidgeFalls\"",
-                    "Precedence": -100
+                    "Condition": "{{Daia|contains= enabled}}, LOCATION_NAME Target Custom_Ridgeside_Ridge Custom_Ridgeside_RidgeForest Custom_Ridgeside_RSVSpiritRealm Custom_Ridgeside_RSVNinjaHouse Custom_Ridgeside_RidgeFalls\"",
+                    "Precedence": -150
                 },
 				
             }

@@ -68,7 +68,7 @@
                 "{{ModId}}.Philip.SpiritsEve2": {
                     "Id": "{{ModId}}.Philip.SpiritsEve2",
                     "Portrait": "Portraits/Philip_fall27-2",
-                    "Sprite": "Characters/Philip_fall27-2",
+                    "Sprite": "Characters/RSVSeasonalBlank",
                     "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Philip|contains= enabled, festivals only}}",
                     "Precedence": -200
                 },
@@ -79,7 +79,7 @@
                     "Portrait": "Portraits/Philip_work",
                     "Sprite": "Characters/Philip_work",
                     "Condition": "{{Philip|contains= enabled}}, LOCATION_NAME Target Custom_Ridgeside_ShiroHouse",
-                    "Precedence": -120
+                    "Precedence": -150
                 },
             }
         },
