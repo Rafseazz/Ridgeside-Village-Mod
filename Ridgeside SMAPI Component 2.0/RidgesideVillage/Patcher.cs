@@ -26,7 +26,6 @@ namespace RidgesideVillage
             EventPatches.ApplyPatch(harmony, Helper);
             Projectiles.ApplyPatch(harmony, Helper);
             Rings.ApplyPatch(harmony, Helper);
-            SecretSantaGift.ApplyPatch(harmony, Helper);
             SODialogue.ApplyPatch(harmony, Helper);
             SummitFarm.ApplyPatch(harmony, Helper);
             SwimPatch.ApplyPatch(harmony, Helper);
