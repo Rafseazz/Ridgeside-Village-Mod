@@ -100,8 +100,7 @@ namespace RidgesideVillage.Questing
 			{
 				case "spring":
 					{
-						possibleFish = new string[] { "Rafseazz.RSVCP_Cutthroat_Trout", "Rafseazz.RSVCP_Ridgeside_Bass",
-							"Ridge Bluegill", "Caped Tree Frog", "Pebble Back Crab", "Harvester Trout", "Mountain Redbelly Dace", "Mountain Whitefish" };
+						possibleFish = new string[] { "Rafseazz.RSVCP_Cutthroat_Trout", "Rafseazz.RSVCP_Ridgeside_Bass", "Rafseazz.RSVCP_Ridge_Bluegill", "Rafseazz.RSVCP_Caped_Tree_Frog", "Rafseazz.RSVCP_Pebble_Back_Crab", "Rafseazz.RSVCP_Harvester_Trout", "Rafseazz.RSVCP_Mountain_Redbelly_Dace", "Rafseazz.RSVCP_Mountain_Whitefish" };
 						quest.ItemId.Value = possibleFish[Game1.random.Next(possibleFish.Length)];
 						break;
 					}
