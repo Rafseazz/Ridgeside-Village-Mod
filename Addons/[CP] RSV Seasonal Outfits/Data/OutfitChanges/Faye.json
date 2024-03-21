@@ -8,10 +8,26 @@
         },
 			
         {
-			"LogName": "RSV Seasonal Accessories - Faye",
+			"LogName": "RSV Seasonal Accessories - Faye, Summer",
 			"Action": "EditImage",
-			"Target": "Portraits/Faye_summer, Portraits/Faye_winter, Characters/Faye_summer, Characters/Faye_winter",
-			"FromFile": "Assets/{{TargetPathOnly}}/Faye/Faye_acc_{{season}}.png",
+			"Target": "Portraits/Faye_summer, Characters/Faye_summer",
+			"FromFile": "Assets/{{TargetPathOnly}}/Faye/Faye_acc_summer.png",
+			"When": {
+				"Faye": "enabled",
+                "Weather|contains = Rain, Storm": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Query: {{Random:{{Range:1,10}}|key=FayeHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Faye, Winter",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye_winter, Characters/Faye_winter",
+			"FromFile": "Assets/{{TargetPathOnly}}/Faye/Faye_acc_winter.png",
 			"When": {
 				"Faye": "enabled",
                 "Weather|contains = Rain, Storm": false,
