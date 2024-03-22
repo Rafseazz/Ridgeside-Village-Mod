@@ -150,9 +150,6 @@ namespace RidgesideVillage
         public const string Z_NINJASPECIALORDER = "RSVNinjaSO";
 
             //Items
-        public const string ISAPPHIRE = "SapphireID";
-
-
         public const string ITOTEM = "Rafseazz.RSVCP_Warp_Totem__Ridgeside";
         public const string IFOXBLOOM = "Rafseazz.RSVCP_Foxbloom";
         public const string IMUSICBOX = "Rafseazz.RSVCP_Ancient_Music_Box";

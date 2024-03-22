@@ -140,9 +140,9 @@ namespace RidgesideVillage
             if (!Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL))
                 return;
 
-            if ((int)bobberTile.X == 60 && (int)bobberTile.Y == 55 && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_SAPPHIRE))
+            if ((int)bobberTile.X == 60 && (int)bobberTile.Y == 54 && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_SAPPHIRE))
             {
-                __result = new StardewValley.Object(RSVConstants.ISAPPHIRE, 1);
+                __result = new StardewValley.Object(RSVConstants.ISAPPHIREPEARL, 1);
             }
         }
 
@@ -256,7 +256,7 @@ namespace RidgesideVillage
         //if player pulled sapphire, add flag. not done in getFish() cus mod compatibility
         private static void FishingRod_PullFishFromWater_PostFix(ref FishingRod __instance, string  fishId, int fishSize, int fishQuality, int fishDifficulty, bool treasureCaught, bool wasPerfect, bool fromFishPond)
         {
-            if (fishId.Equals(RSVConstants.ISAPPHIRE))
+            if (fishId.Equals(RSVConstants.ISAPPHIREPEARL))
             {
                 Game1.player.mailReceived.Add(RSVConstants.M_SAPPHIRE);
             }
