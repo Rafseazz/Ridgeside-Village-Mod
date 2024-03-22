@@ -346,14 +346,15 @@
                     "Position": { "X": 38, "Y": 23 },
                     "Layer": "Buildings",
 										"SetProperties": {
-                        "Action": "LockedDoorWarp Custom_Ridgeside_RSVGreenhouse2 10 24 2400 2600"
+                        "Action": "LockedDoorWarp 10 24 Custom_Ridgeside_RSVGreenhouse2 2400 2600"
                     }
                 }
             ],
     	 	 	"When": {
 					 "HasSeenEvent: hostPlayer": 75160266,
 					 "HasSeenEvent: hostPlayer |contains=75160271": false
-				 }
+				 },
+         "Update": "OnTimeChange, OnLocationChange",
       	},
       	//Permanent unlock (after finishing quest)
       	{
