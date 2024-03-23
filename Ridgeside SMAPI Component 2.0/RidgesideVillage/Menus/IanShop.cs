@@ -378,13 +378,13 @@ namespace RidgesideVillage
             else if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_MINECARTSFIXED))
             {
                 worker.CurrentDialogue.Clear();
-                worker.CurrentDialogue.Push(new Dialogue(worker, Helper.Translation.Get("IanShop.BrokenCarts")));
+                worker.CurrentDialogue.Push(new Dialogue(worker,"", Helper.Translation.Get("IanShop.BrokenCarts")));
                 Game1.drawDialogue(worker);
             }
             else if (Game1.MasterPlayer.activeDialogueEvents.TryGetValue(RSVConstants.CT_ACTIVECONSTRUCTION, out int value) && value > 0)
             {
                 worker.CurrentDialogue.Clear();
-                worker.CurrentDialogue.Push(new Dialogue(worker, Helper.Translation.Get("IanShop.AlreadyBuilding")));
+                worker.CurrentDialogue.Push(new Dialogue(worker,"", Helper.Translation.Get("IanShop.AlreadyBuilding")));
                 Game1.drawDialogue(worker);
             }
             else

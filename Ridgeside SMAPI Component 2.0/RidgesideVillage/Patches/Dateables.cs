@@ -252,14 +252,14 @@ namespace RidgesideVillage
             if ((__instance.Name == "Shiro") && !Game1.MasterPlayer.eventsSeen.Contains("75160249"))
             {
                 __instance.CurrentDialogue.Clear();
-                __instance.CurrentDialogue.Push(new Dialogue(__instance, Helper.Translation.Get("Shiro.RejectProposal")));
+                __instance.CurrentDialogue.Push(new Dialogue(__instance, "",Helper.Translation.Get("Shiro.RejectProposal")));
                 Game1.drawDialogue(__instance);
                 return false;
             }
             else if ((__instance.Name == "Kiarra") && Game1.MasterPlayer.eventsSeen.Contains("502261"))
             {
                 __instance.CurrentDialogue.Clear();
-                __instance.CurrentDialogue.Push(new Dialogue(__instance, Helper.Translation.Get("Kiarra.RejectProposal")));
+                __instance.CurrentDialogue.Push(new Dialogue(__instance, "",Helper.Translation.Get("Kiarra.RejectProposal")));
                 Game1.drawDialogue(__instance);
                 return false;
             }

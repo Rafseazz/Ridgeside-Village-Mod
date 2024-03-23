@@ -93,7 +93,7 @@ namespace RidgesideVillage
             gifter.friendshipData["Torts"].GiftsThisWeek++;
             gifter.friendshipData["Torts"].LastGiftDate = new WorldDate(Game1.Date);
             giftee.CurrentDialogue.Clear();
-            giftee.CurrentDialogue.Push(new Dialogue(giftee, null, "..."));
+            giftee.CurrentDialogue.Push(new Dialogue(giftee, "", "..."));
             Game1.drawDialogue(giftee);
         }
 

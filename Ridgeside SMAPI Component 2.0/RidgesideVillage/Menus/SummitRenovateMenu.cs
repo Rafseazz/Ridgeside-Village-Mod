@@ -172,16 +172,12 @@ namespace RidgesideVillage
 				{
 					valid_blueprints.Add(OREAREA, all_blueprints[OREAREA]);
 				}
-				if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_SHEDADDED))
-				{
-					valid_blueprints.Add(SHED, all_blueprints[SHED]);
-				}
 			}
 			if (valid_blueprints.Count == 0)
 			{
 				NPC worker = Game1.isRaining ? Game1.getCharacterFromName("Ian") : Game1.getCharacterFromName("Sean");
 				worker.CurrentDialogue.Clear();
-				worker.CurrentDialogue.Push(new Dialogue(worker,Helper.Translation.Get("IanShop.AllRenovated")));
+				worker.CurrentDialogue.Push(new Dialogue(worker, "",Helper.Translation.Get("IanShop.AllRenovated")));
 				Game1.drawDialogue(worker);
 				return;
             }
@@ -399,11 +395,11 @@ namespace RidgesideVillage
 			worker.CurrentDialogue.Clear();
 			if (blueprints[currentBlueprint].buildDuration <= 0)
 			{
-				worker.CurrentDialogue.Push(new Dialogue(worker, Helper.Translation.Get("IanShop.Instant", new { project = buildingName })));
+				worker.CurrentDialogue.Push(new Dialogue(worker,"", Helper.Translation.Get("IanShop.Instant", new { project = buildingName })));
 			}
             else
             {
-				worker.CurrentDialogue.Push(new Dialogue(worker, Helper.Translation.Get("IanShop.Construction", new { project = buildingName })));
+				worker.CurrentDialogue.Push(new Dialogue(worker, "",Helper.Translation.Get("IanShop.Construction", new { project = buildingName })));
 			}
 			Game1.drawDialogue(worker);
 		}
