@@ -140,7 +140,7 @@ namespace RidgesideVillage
             if (!Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL))
                 return;
 
-            if ((int)bobberTile.X == 60 && (int)bobberTile.Y == 55 && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_SAPPHIRE))
+            if ((int)bobberTile.X == 60 && ((int)bobberTile.Y == 55 || (int)bobberTile.Y == 54) && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_SAPPHIRE))
             {
                 __result = new StardewValley.Object(RSVConstants.ISAPPHIREPEARL, 1);
             }
