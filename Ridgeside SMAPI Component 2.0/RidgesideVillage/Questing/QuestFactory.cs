@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using StardewModdingAPI;
-using StardewValley;
+﻿using StardewValley;
 using StardewValley.Quests;
-
-using SObject = StardewValley.Object;
+using System;
+using System.Collections.Generic;
 namespace RidgesideVillage.Questing
 {
 
-	static internal class QuestFactory
+    static internal class QuestFactory
 	{
 		static internal Quest GetDailyQuest()
 		{
@@ -121,11 +114,11 @@ namespace RidgesideVillage.Questing
 					}
 				default:
 					{
-						possibleFish = new string[] { "(O)132" };
+						possibleFish = new string[] { "132" };
 						break;
 					}
 			}
-			string chosenFish = possibleFish[Game1.random.Next(possibleFish.Length)];
+			string chosenFish = "(O)"+possibleFish[Game1.random.Next(possibleFish.Length)];
 			quest.ItemId.Value = chosenFish;
 			if(!ItemRegistry.Exists(chosenFish))
             {

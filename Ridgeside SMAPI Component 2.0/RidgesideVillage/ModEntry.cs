@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using AtraCore.Framework.ItemResolvers;
 using Microsoft.Xna.Framework;
+using SpaceCore.Events;
 using StardewModdingAPI;
-using StardewValley;
-using StardewValley.Objects;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
-using SpaceCore.Events;
-using AtraCore.Framework.ItemResolvers;
+using StardewValley;
+using System;
+using System.Collections.Generic;
 
 namespace RidgesideVillage
 {
@@ -100,6 +98,12 @@ namespace RidgesideVillage
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             forgetRepeatableEvents();
+            removeNullSpecialOrders();
+        }
+
+        private void removeNullSpecialOrders()
+        {
+            Game1.player.team.availableSpecialOrders.RemoveWhere(specialOrder => specialOrder is null);
         }
 
         private void forgetRepeatableEvents()
