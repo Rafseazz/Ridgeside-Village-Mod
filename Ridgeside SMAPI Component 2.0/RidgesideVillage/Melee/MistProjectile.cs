@@ -58,21 +58,25 @@ namespace RidgesideVillage
         public override void behaviorOnCollisionWithPlayer(GameLocation location, Farmer player)
         {
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithTerrainFeature(TerrainFeature t, Vector2 tileLocation, GameLocation location)
         {
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithOther(GameLocation location)
         {
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithMonster(NPC n, GameLocation location)
         {
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         private void explosionAnimation(GameLocation location)
