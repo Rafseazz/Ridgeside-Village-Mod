@@ -35,6 +35,7 @@ namespace RidgesideVillage
         List<Dependency> missing_dependencies = new List<Dependency>();
         List<Dependency> outdated_dependencies = new List<Dependency>();
         List<Dependency> missing_parents = new List<Dependency>();
+        private List<string> outdatedRSVComponents = new();
 
         public bool checkInstallation(IModHelper Helper)
         {
@@ -89,10 +90,20 @@ namespace RidgesideVillage
             if (hasAllDependencies && !helper.ModRegistry.IsLoaded("Rafseazz.RSVCP"))
                 isInstalledCorrectly = false;
 
-            if (!isInstalledCorrectly || !hasAllDependencies)
+            if (!isInstalledCorrectly || !hasAllDependencies || outdatedRSVComponents.Count != 0)
                 helper.Events.GameLoop.GameLaunched += OnGameLaunched;
 
-            return isInstalledCorrectly && hasAllDependencies;
+            string[] oldMods = new[] { "Rafseazz.RSVJA", "Rafseazz.RSVSAAT", "Rafseazz.RSVSTF", "Rafseazz.RSVMFM" };
+
+            foreach (var mod in oldMods)
+            {
+                if (helper.ModRegistry.IsLoaded(mod))
+                {
+                    outdatedRSVComponents.Add(mod);
+                }
+            }
+
+            return isInstalledCorrectly && hasAllDependencies && outdatedRSVComponents.Count == 0;
         }
 
         public bool TheseModsLoaded(string mods)
@@ -163,6 +174,15 @@ namespace RidgesideVillage
                     else
                         Log.Error(BULLET + helper.Translation.Get("mod.info", new { modName = dependency.name, author = dependency.author}));
                         Log.Error(INDENT + dependency.url);
+                }
+            }
+
+            if (this.outdatedRSVComponents.Any())
+            {
+                Log.Error("");
+                foreach(var modComponent in outdatedRSVComponents)
+                {
+                    Log.Error($"The oudated RSV component {modComponent} is still installed. Remove it and restart the game.");
                 }
             }
             if (!isInstalledCorrectly)

@@ -30,10 +30,10 @@ namespace RidgesideVillage
             ModMonitor = Monitor;
             Helper = helper;
 
-            //if (!new InstallationChecker().checkInstallation(helper))
-            //{
-            //    return;
-            //}
+            if (!new InstallationChecker().checkInstallation(helper))
+            {
+                return;
+            }
 
             new SaveMigration(helper);
 

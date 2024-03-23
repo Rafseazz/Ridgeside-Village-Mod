@@ -134,7 +134,7 @@ namespace RidgesideVillage
 			if (!here.Objects.TryGetValue(FridgeChestPosition, out StardewValley.Object o) || o is not Chest chest)
 			{
 				Log.Trace("RSV: No fridge found. Creating new chest to be Summit House fridge.");
-				chest = new Chest(playerChest: true, tileLocation: FridgeChestPosition);
+				chest = new Chest("216",  FridgeChestPosition, 217, 2);
 				chest.fridge.Value = true;
 				chest.name = Helper.Translation.Get("RSV.Fridge");
 				here.Objects[FridgeChestPosition] = chest;
