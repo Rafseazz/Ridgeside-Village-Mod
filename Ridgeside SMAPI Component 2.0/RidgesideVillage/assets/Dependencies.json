@@ -60,23 +60,18 @@
 		"parents": "Content Patcher"
 	},
 
-	/*********************************
-	** Required mods without parents
-	** (or a really low SMAPI minimum)
-	**********************************/
+	/***************************************
+	** Optional mods (with minimum versions)
+	***************************************/
 
 	// Mail Framework Mod (MFM)
 	"MFM": {
 		"uniqueID": "DIGUS.MailFrameworkMod",
 		"author": "Digus",
 		"name": "Mail Framework Mod",
-		"required": true,
+		"required": false,
 		"url": "https://www.nexusmods.com/stardewvalley/mods/1536"
 	},
-
-	/***************************************
-	** Optional mods (with minimum versions)
-	***************************************/
 
 	// Event Limiter (EL)
 	"EL": {
