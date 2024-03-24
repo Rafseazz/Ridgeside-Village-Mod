@@ -4,6 +4,8 @@ using StardewModdingAPI.Utilities;
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using StardewValley;
+using StardewValley.Menus;
 
 
 namespace RidgesideVillage
@@ -90,9 +92,6 @@ namespace RidgesideVillage
             if (hasAllDependencies && !helper.ModRegistry.IsLoaded("Rafseazz.RSVCP"))
                 isInstalledCorrectly = false;
 
-            if (!isInstalledCorrectly || !hasAllDependencies || outdatedRSVComponents.Count != 0)
-                helper.Events.GameLoop.GameLaunched += OnGameLaunched;
-
             string[] oldMods = new[] { "Rafseazz.RSVJA", "Rafseazz.RSVSAAT", "Rafseazz.RSVSTF", "Rafseazz.RSVMFM" };
 
             foreach (var mod in oldMods)
@@ -101,6 +100,11 @@ namespace RidgesideVillage
                 {
                     outdatedRSVComponents.Add(mod);
                 }
+            }
+
+            if (!isInstalledCorrectly || !hasAllDependencies || outdatedRSVComponents.Count != 0)
+            {
+                helper.Events.GameLoop.GameLaunched += OnGameLaunched;
             }
 
             return isInstalledCorrectly && hasAllDependencies && outdatedRSVComponents.Count == 0;
@@ -202,8 +206,10 @@ namespace RidgesideVillage
             {
                 Log.Error(BOLDLINE);
             }
-        }
 
+            Game1.activeClickableMenu =
+                new DialogueBox(helper.Translation.Get("ErrorMessage"));
+        }
         
     }
 
