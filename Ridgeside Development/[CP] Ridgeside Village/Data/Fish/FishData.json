@@ -28,8 +28,8 @@
 				"Rafseazz.RSVCP_Golden_Rose_Fin": "Golden Rose Fin/69/mixed/8/16/700 1900/spring/both/683 .4/1/.2/.3/0",
 				"Rafseazz.RSVCP_Lullaby_Carp": "Lullaby Carp/69/dart/9/17/1500 2600/spring/both/683 .4/1/.2/.3/0",
 				//Legendary
-				"Rafseazz.RSVCP_Deep_Ridge_Angler": "Deep Ridge Angler/100/mixed/11/30/600 2600/spring/both/685 .35/3/.4/.2/0",
-				"Rafseazz.RSVCP_Waterfall_Snakehead": "Waterfall Snakehead/100/mixed/11/30/600 2600/spring/both/685 .35/3/.4/.2/0",
+				"Rafseazz.RSVCP_Deep_Ridge_Angler": "Deep Ridge Angler/100/mixed/11/30/1200 2600/spring/both/685 .35/3/.4/.2/0",
+				"Rafseazz.RSVCP_Waterfall_Snakehead": "Waterfall Snakehead/100/mixed/11/30/2000 2600/spring/both/685 .35/3/.4/.2/0",
 				"Rafseazz.RSVCP_Sockeye_Salmon": "Sockeye Salmon/100/mixed/11/30/600 2600/spring/both/685 .35/3/.4/.2/0",
 			},
 		},
@@ -62,8 +62,8 @@
 				"Rafseazz.RSVCP_Golden_Rose_Fin": "Golden Rose Fin/69/mixed/12/24/700 1900/spring/both/683 .4/1/.2/.3/0",
 				"Rafseazz.RSVCP_Lullaby_Carp": "Lullaby Carp/69/dart/14/26/1500 2600/spring/both/683 .4/1/.2/.3/0",
 				//Legendary
-				"Rafseazz.RSVCP_Deep_Ridge_Angler": "Deep Ridge Angler/100/mixed/17/45/600 2600/spring/both/685 .35/3/.4/.2/0",
-				"Rafseazz.RSVCP_Waterfall_Snakehead": "Waterfall Snakehead/100/mixed/17/45/600 2600/spring/both/685 .35/3/.4/.2/0",
+				"Rafseazz.RSVCP_Deep_Ridge_Angler": "Deep Ridge Angler/100/mixed/17/45/1200 2600/spring/both/685 .35/3/.4/.2/0",
+				"Rafseazz.RSVCP_Waterfall_Snakehead": "Waterfall Snakehead/100/mixed/17/45/2000 2600/spring/both/685 .35/3/.4/.2/0",
 				"Rafseazz.RSVCP_Sockeye_Salmon": "Sockeye Salmon/100/mixed/17/45/600 2600/spring/both/685 .35/3/.4/.2/0",
 			},
 		},
@@ -79,8 +79,11 @@
 							"Condition": "SEASON fall, WEATHER Here Rain",
 							"CatchLimit": 1,
 							"Precedence": -200,
+							"Chance": 0.1,
+							"CuriosityLureBuff": 0.1,
+							"IgnoreFishDataRequirements": true,
 							"IsBossFish": true,
-							"MinFishingLevel": 7,
+							"MinFishingLevel": 10,
 							"BobberPosition": {
 								"X": 71,
 								"Y": 93,
@@ -142,11 +145,14 @@
 					"Fish": [
 						{
 							"ItemId": "Rafseazz.RSVCP_Deep_Ridge_Angler",
-							"Condition": "SEASON winter, TIME 1200",
+							"Condition": "SEASON winter",
 							"CatchLimit": 1,
 							"Precedence": -200,
+							"Chance": 0.1,
+							"CuriosityLureBuff": 0.1,
+							"IgnoreFishDataRequirements": true,
 							"IsBossFish": true,
-							"MinFishingLevel": 7,
+							"MinFishingLevel": 10,
 							"BobberPosition": {
 								"X": 67,
 								"Y": 30,
@@ -219,11 +225,14 @@
 					"Fish": [
 						{
 							"ItemId": "Rafseazz.RSVCP_Waterfall_Snakehead",
-							"Condition": "SEASON spring summer, TIME 2000",
+							"Condition": "SEASON spring summer",
 							"CatchLimit": 1,
 							"Precedence": -200,
+							"Chance": 0.1,
+							"CuriosityLureBuff": 0.1,
+							"IgnoreFishDataRequirements": true,
 							"IsBossFish": true,
-							"MinFishingLevel": 7,
+							"MinFishingLevel": 10,
 							"BobberPosition": {
 								"X": 53,
 								"Y": 11,
