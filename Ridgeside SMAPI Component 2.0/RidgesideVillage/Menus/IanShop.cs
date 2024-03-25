@@ -207,7 +207,7 @@ namespace RidgesideVillage
                 }
             };
 
-            if (Game1.MasterPlayer.eventsSeen.Contains(RSVConstants.E_SUMMITUNLOCK))
+            if (Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_ODDJOBNOTICE))
             {
                 responses.Insert(3, new Response("renovate", Helper.Translation.Get("IanShop.SummitFarm")));
                 responseActions.Insert(3, delegate { RenovateOptions(); });

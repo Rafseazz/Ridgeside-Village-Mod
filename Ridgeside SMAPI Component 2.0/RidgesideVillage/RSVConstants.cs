@@ -20,6 +20,7 @@ namespace RidgesideVillage
         public const string E_MEETDAIA = "75160254";
         public const string E_MEETBELINDA = "75160255";
         public const string E_PREUNSEAL = "75160257";
+
         public const string E_BLISSVISIT = "75160258";
         public const string E_RAEUNSEAL = "75160259";
         public const string E_OPENPORTAL = "75160256";
@@ -31,7 +32,8 @@ namespace RidgesideVillage
         public const string E_SPIRITGH2 = "75160269";
         public const string E_LORENZO1H = "75160333";
         public const string E_GRANDMA = "75160383";
-        public const string E_SUMMITUNLOCK = "75160387";
+        //outdated, its the letter OddJobsNotice
+        //public const string E_SUMMITUNLOCK = "75160387";
         public const string E_BUSSTOP_INTRO = "75160186";
         public const string E_ZAYNE_INTRO = "75160338";
         public const string E_ZAYNE_2H = "75160436";
@@ -79,6 +81,7 @@ namespace RidgesideVillage
         public const string M_ANNIVERSARYBOOKEDFLAG = "RSV.ReservedAnv";
         public const string M_ANNIVERSARYTODAY = "RSV.AnvToday";
         public const string M_CRYSTALS = "CrystalsFlagOngoing";
+        public const string M_ODDJOBNOTICE = "OddJobsNotice";
             //relic items
         public const string M_MOOSE = "RSV.MooseStatue";
         public const string M_FOXMASK = "RSV.FoxMask";
