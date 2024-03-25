@@ -13,7 +13,7 @@ namespace RidgesideVillage
     internal class SaveMigration
     {
         Dictionary<String, String> lookup;
-        private const String RSV_MIGRATED = "RSV_Migrated";
+        private const String RSV_MIGRATED = "RSV_Migrated_2";
         public SaveMigration(IModHelper helper) {
           
         lookup = helper.ModContent.Load<Dictionary<String, String>>("assets/migration.json");
@@ -36,6 +36,10 @@ namespace RidgesideVillage
 
             Utility.ForEachItem((item, remove, replaceWith) =>
             {
+                if (item.Name is null)
+                {
+                    return false;
+                }
                 if (lookup.TryGetValue(item.Name, out String newID))
                 {
                     Item newItem = ItemRegistry.Create(newID, item.Stack, item.Quality);
