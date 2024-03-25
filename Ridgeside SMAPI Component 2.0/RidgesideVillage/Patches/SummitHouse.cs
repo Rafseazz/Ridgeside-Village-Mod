@@ -1,28 +1,18 @@
-﻿using StardewModdingAPI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-using StardewValley;
-using StardewValley.Objects;
-using StardewModdingAPI.Events;
-using StardewModdingAPI.Enums;
+﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
-using StardewValley.Menus;
+using StardewModdingAPI;
+using StardewModdingAPI.Events;
+using StardewValley;
 using StardewValley.Locations;
-using StardewModdingAPI.Utilities;
-using xTile.Tiles;
-using HarmonyLib;
+using StardewValley.Objects;
 using SObject = StardewValley.Object;
 
 namespace RidgesideVillage
 {
-	//Stuff to make the Summit House behave like the player's farmhouse
-	//The kitchen section is very heavily inspired by blueberry's Community Kitchen code, which can be found here:
-	//https://github.com/b-b-blueberry/CustomCommunityCentre/blob/master/CommunityKitchen/Core/Kitchen.cs
-	internal static class SummitHouse
+    //Stuff to make the Summit House behave like the player's farmhouse
+    //The kitchen section is very heavily inspired by blueberry's Community Kitchen code, which can be found here:
+    //https://github.com/b-b-blueberry/CustomCommunityCentre/blob/master/CommunityKitchen/Core/Kitchen.cs
+    internal static class SummitHouse
 	{
 		static IModHelper Helper;
 
@@ -45,6 +35,22 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(SObject), nameof(SObject.placementAction)),
                 prefix: new HarmonyMethod(typeof(SummitHouse), nameof(placementAction_Prefix))
             );
+			//Patch to allow placement of Beds
+            harmony.Patch(
+                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.CanPlaceThisFurnitureHere)),
+                postfix: new HarmonyMethod(typeof(SummitHouse), nameof(CanPlaceThisFurnitureHere))
+            );
+        }
+
+        private static void CanPlaceThisFurnitureHere(GameLocation __instance, Furniture furniture, ref bool __result)
+        {
+            if (!__result && __instance.Name.Equals(RSVConstants.L_SUMMITHOUSE))
+            {
+                if (furniture is BedFurniture)
+                {
+                    __result = true;
+                }
+            }
         }
 
         private static bool placementAction_Prefix(SObject __instance, GameLocation location, int x, int y, Farmer who, ref bool __result)
