@@ -44,11 +44,13 @@ internal class ChooseKQuery
             yield break;
         }
 
+        var candidates = new ArraySegment<string>(args, 1, args.Length - 1);
+
         HashSet<string>? prev = avoidRepeat ? new() : null;
 
         if (args.Length - 1 <= count)
         {
-            foreach (string candidate in new ArraySegment<string>(args, 1, args.Length - 1))
+            foreach (string candidate in candidates)
             {
                 if (avoidItemIds?.Contains(candidate) == true || prev?.Add(candidate) == true)
                 {
@@ -66,7 +68,7 @@ internal class ChooseKQuery
             }
         }
 
-        int idx = args.Length - 1;
+        int idx = candidates.Count - 1;
         int final = idx - count;
 
         Random random = context.Random ?? Utility.CreateDaySaveRandom(Game1.hash.GetDeterministicHashCode("choose_k"));
@@ -74,7 +76,7 @@ internal class ChooseKQuery
         while (idx > final)
         {
             int j = random.Next(idx + 1);
-            string candidate = args[j];
+            string candidate = candidates[j];
 
             if (avoidItemIds?.Contains(candidate) != true && prev?.Add(candidate) != true)
             {
@@ -90,7 +92,7 @@ internal class ChooseKQuery
 
             if (j != idx)
             {
-                (args[j], args[idx]) = (args[idx], args[j]);
+                (candidates[j], candidates[idx]) = (candidates[idx], candidates[j]);
             }
 
             idx--;
