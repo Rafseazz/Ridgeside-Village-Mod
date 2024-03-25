@@ -58,10 +58,6 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(FishingRod), nameof(FishingRod.pullFishFromWater)),
                 postfix: new HarmonyMethod(typeof(TreasureItems), nameof(FishingRod_PullFishFromWater_PostFix))
             );
-            harmony.Patch(
-                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
-                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(GameLocation_GetFish_Postifx))
-            );
 
         }
 
@@ -132,18 +128,6 @@ namespace RidgesideVillage
                 FoxStatueCounter.Value = 0;
                 Helper.Events.GameLoop.TimeChanged -= OnTimeChanged;
                 OnFoxStatueMap = false;
-            }
-        }
-
-        private static void GameLocation_GetFish_Postifx(GameLocation __instance, ref Item __result, float millisecondsAfterNibble, string bait, int waterDepth, Farmer who, double baitPotency, Vector2 bobberTile, string locationName)
-        {
-            if (!Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL))
-                return;
-
-            if ((int)bobberTile.X == 60 && ((int)bobberTile.Y == 55 || (int)bobberTile.Y == 54) && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_SAPPHIRE))
-            {
-                __result = new StardewValley.Object(RSVConstants.ISAPPHIREPEARL, 1);
-                Game1.player.mailReceived.Add(RSVConstants.M_SAPPHIRE);
             }
         }
 

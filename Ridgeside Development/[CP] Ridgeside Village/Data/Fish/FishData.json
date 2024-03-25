@@ -92,6 +92,19 @@
 							},
 						},
 						{
+							"ItemId": "Rafseazz.RSVCP_Sapphire_Pearl",
+							"Condition": "!PLAYER_HAS_MAIL Current RSV.Sapphire, PLAYER_HAS_SEEN_EVENT Current 75160259",
+							"SetFlagOnCatch": "RSV.Sapphire",
+							"Precedence": -1000,
+							"Chance": 1,
+							"BobberPosition": {
+								"X": 60,
+								"Y": 54,
+								"Width": 1,
+								"Height": 2
+							},
+						},
+						{
 							"ItemId": "Rafseazz.RSVCP_Harvester_Trout",
 							"Condition": "SEASON spring fall winter"
 						},
