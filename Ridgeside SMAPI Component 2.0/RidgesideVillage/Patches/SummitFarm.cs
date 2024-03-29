@@ -92,7 +92,8 @@ namespace RidgesideVillage
         {
             try
             {
-                if (__instance != null && __instance.Name.Equals(RSVConstants.L_SUMMITFARM) && Game1.getFarm().isBuildingConstructed("Gold Clock"))
+                if (__instance != null && __instance.Name.Equals(RSVConstants.L_SUMMITFARM) &&
+                    (Game1.getFarm().isBuildingConstructed("Gold Clock")|| __instance.isBuildingConstructed("Gold Clock")))
                 {
                     return false;
                 }
