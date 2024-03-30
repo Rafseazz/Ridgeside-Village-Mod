@@ -59,8 +59,6 @@ namespace RidgesideVillage
                 topLeft.Y = Math.Min(topLeft.Y, Game1.viewport.Height - image.Height*scale - 510);
                 topLeft.Y = Math.Max(topLeft.Y, 0);
                 EventPatches.currImageMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image, false);
-                @event.CurrentCommand++;
-
 
                 EventPatches.Helper.Events.Display.RenderedHud += DrawImageMenu;
 
@@ -101,7 +99,7 @@ namespace RidgesideVillage
                 EventPatches.Helper.Events.Display.RenderedHud -= DrawImageMenu;
                 EventPatches.currImageMenu = null;
 
-                //@event.CurrentCommand++;
+                @event.CurrentCommand++;
             }
             catch
             {
