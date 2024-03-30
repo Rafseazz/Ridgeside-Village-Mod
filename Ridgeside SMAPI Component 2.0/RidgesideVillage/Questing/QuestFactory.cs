@@ -2,18 +2,22 @@
 using StardewValley.Quests;
 using System;
 using System.Collections.Generic;
+using StardewValley.Minigames;
+
 namespace RidgesideVillage.Questing
 {
 
     static internal class QuestFactory
 	{
 		static internal Quest GetDailyQuest()
-		{
-			if (Game1.random.NextDouble() < 0.2)
+        {
+            double roll = Game1.random.NextDouble();
+			Log.Trace($"RSV questfactory rolled {roll}");
+			if (roll < 0.2)
 			{
 				return null;
 			}
-			if (Game1.random.NextDouble() > 0.2)
+			if (roll < 0.84)
 			{
 				return GetRandomHandCraftedQuest();
             }
