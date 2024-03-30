@@ -1,18 +1,14 @@
-﻿using StardewModdingAPI;
-using StardewModdingAPI.Events;
-using System;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Collections.Generic;
-using System.Reflection;
-using HarmonyLib;
-using StardewValley;
-using StardewValley.Menus;
+﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Netcode;
-using StardewValley.Network;
 using SpaceCore.Events;
+using StardewModdingAPI;
+using StardewModdingAPI.Events;
+using StardewValley;
+using StardewValley.Menus;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RidgesideVillage
 {
@@ -268,18 +264,18 @@ namespace RidgesideVillage
 
         private static void SocialPage_drawNPCSlot_Postfix(SocialPage __instance, SpriteBatch b, int i)
         {
-            //string name = __instance.names[i] as string;
-            //if (unlock_rules.Keys.Contains(name.ToLower()) && !SocialPage.isDatable(name))
-            //{
-            //    if (Game1.player.eventsSeen.Contains(unlock_rules[name.ToLower()].Split("/")[0]))
-            //        return;
-            //    int width = (IClickableMenu.borderWidth * 3 + 128 - 40 + 192) / 2;
-            //    string text = Game1.parseText(Helper.Translation.Get("RelationshipStatus.Locked"), Game1.smallFont, width);
-            //    Vector2 textSize = Game1.smallFont.MeasureString(text);
-            //    var sprites = Helper.Reflection.GetField<List<ClickableTextureComponent>>(__instance, "sprites").GetValue();
-            //    float lineHeight = Game1.smallFont.MeasureString("W").Y;
-            //    b.DrawString(Game1.smallFont, text, new Vector2((__instance.xPositionOnScreen + 192 + 8) - textSize.X / 2f, sprites[i].bounds.Bottom - (textSize.Y - lineHeight)), Game1.textColor);
-            //}
+            var socialEntry = __instance.SocialEntries[i];
+            if (unlock_rules.Keys.Contains(socialEntry.InternalName.ToLower()) && !socialEntry.IsDatable)
+            {
+                if (Game1.player.eventsSeen.Contains(unlock_rules[socialEntry.InternalName.ToLower()].Split("/")[0]))
+                    return;
+                int width = (IClickableMenu.borderWidth * 3 + 128 - 40 + 192) / 2;
+                string text = Game1.parseText(Helper.Translation.Get("RelationshipStatus.Locked"), Game1.smallFont, width);
+                Vector2 textSize = Game1.smallFont.MeasureString(text);
+                var sprites = Helper.Reflection.GetField<List<ClickableTextureComponent>>(__instance, "sprites").GetValue();
+                float lineHeight = Game1.smallFont.MeasureString("W").Y;
+                b.DrawString(Game1.smallFont, text, new Vector2((__instance.xPositionOnScreen + 192 + 8) - textSize.X / 2f, sprites[i].bounds.Bottom - (textSize.Y - lineHeight)), Game1.textColor);
+            }
         }
     }
 }
