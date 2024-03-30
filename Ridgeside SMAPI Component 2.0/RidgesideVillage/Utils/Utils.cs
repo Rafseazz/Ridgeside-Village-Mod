@@ -119,6 +119,10 @@ namespace RidgesideVillage
                 forageObj.destroyOvernight = true;
 
             Log.Verbose($"Spawning forage object for RSV. Type: {forageObj.DisplayName}. Location: {tile.X}, {tile.Y} ({location.Name}).");
+            if (location.Objects.ContainsKey(tile * 64f))
+            {
+                location.Objects.Remove(tile * 64f);
+            }
             return location.dropObject(forageObj, tile * 64f, Game1.viewport, true, null); //attempt to place the object and return success/failure
         }
 
