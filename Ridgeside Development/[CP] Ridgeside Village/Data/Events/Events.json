@@ -1608,7 +1608,7 @@
 
 			"AntonPlatonic": "addConversationTopic RSV_Anton8HeartsPlatonic/emote Anton 40/speak Anton \"{{i18n:event-75160304.AntonPlatonic.01}}\"/playSound doorClose/faceDirection farmer 2/emote Anton 16 true/pause 500/faceDirection farmer 1/speak Anton \"{{i18n:event-75160304.AntonPlatonic.02}}\"/emote farmer 32/globalFade/viewport -1000 -1000/pause 1000/message \"{{i18n:event-75160304.AntonPlatonic.03}}\"/end",
 			//player killed in RidgeForest
-			"PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...@?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
+			"PlayerKilled": "none/-100 -100/farmer 18 5 2 Paula 17 5 1/changeLocation Custom_Ridgeside_PaulaClinic/pause 1500/showFrame 5/message \" ...{{PlayerName}}?\"/pause 1000/message \"{{i18n:PlayerKilled.RidgeForest.1}}\"/fade/viewport 18 8/pause 1000/speak Paula \"{{i18n:PlayerKilled.RidgeForest.2}}\"/showFrame 0/pause 1000/emote farmer 28/hospitaldeath/end position 18 5"
 		}
 	},
 
