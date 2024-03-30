@@ -51,6 +51,36 @@
                 "Wild Apple Juice": "Rafseazz.RSVCP_Ridge_Wild_Apple 2/9999 9999/Rafseazz.RSVCP_Wild_Apple_Juice 1/null/",
                 "Winter Night Feast": "Rafseazz.RSVCP_Cardia_Septal_Jellyfish 1 Rafseazz.RSVCP_Mountain_Whitefish 1 Rafseazz.RSVCP_Sierra_Wintergreen 1 Rafseazz.RSVCP_Frost_Clump_Berry 1/9999 9999/Rafseazz.RSVCP_Winter_Night_Feast 1/null/",
                 "Zesty Tuna": "130 1 Rafseazz.RSVCP_Ridgeside_Clementine 1 Rafseazz.RSVCP_Ridge_Cherry 1 Rafseazz.RSVCP_Mountain_Chico 1 Rafseazz.RSVCP_Autumn_Drop_Berry 1/9999 9999/Rafseazz.RSVCP_Zesty_Tuna 1/null/"
+            },
+        },
+        {
+            "LogName": "Recipes Data",
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": {
+                "Warp Totem: Ridgeside": "709 2 Rafseazz.RSVCP_Mountain_Mistbloom 1 Rafseazz.RSVCP_Spiritual_Essence 10/what is this for?/Rafseazz.RSVCP_Warp_Totem__Ridgeside 1/false//{{i18n:objects.warp-totem-ridgeside.name}}",
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "{{ModId}}_MatchaRecipe": {
+                    "Id": "{{ModId}}_MatchaRecipe",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_MAIL Current OlgaSOLetter Received, !PLAYER_HAS_COOKING_RECIPE Current Matcha Latte",
+                    "Actions": [
+                        "MarkCookingRecipeKnown Current \"Matcha Latte\""
+                    ]
+                },
+                "{{ModId}}_TotemRecipe": {
+                    "Id": "{{ModId}}_TotemRecipe",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_MAIL Current AguarSOLetter Received, !PLAYER_HAS_CRAFTING_RECIPE Current Warp Totem: Ridgeside",
+                    "Actions": [
+                        "MarkCraftingRecipeKnown Current \"Warp Totem: Ridgeside\""
+                    ]
+                }
             }
         }
     ]
