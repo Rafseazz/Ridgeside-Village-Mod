@@ -360,12 +360,12 @@ namespace RidgesideVillage
                 //Log.Trace("RSV: Not Ridge Forest OR Foxbloom already spawned today.");
                 return false;
             }
-            if (Game1.dayOfMonth != FoxbloomDay || !here.GetWeather().Equals(Game1.weather_sunny))
+            if (Game1.dayOfMonth != FoxbloomDay || here.GetWeather().IsRaining)
             {
                 Log.Trace($"RSV: Today ({Game1.dayOfMonth}) not Foxbloom Day ({FoxbloomDay}) OR weather not clear.");
                 return false;
             }
-            if (!Game1.player.Items.ContainsId("IRELICFOXMASK"))
+            if (!Game1.player.Items.ContainsId(RSVConstants.IRELICFOXMASK))
             {
                 Log.Trace("RSV: Player does not have Relic Fox Mask in inventory.");
                 return false;
