@@ -64,8 +64,7 @@ namespace RidgesideVillage.Questing
 			var candidates = new List<string>();
 			foreach(var key in quests.Keys)
             {
-				int keyNr = int.Parse(key);
-				if (keyNr >= 72861000 && keyNr <= 72862000)
+				if (int.TryParse(key, out int keyNr) && keyNr >= 72861000 && keyNr <= 72862000)
                 {
                     if (!Game1.player.hasQuest(key))
 					{
