@@ -560,6 +560,30 @@
 		},
 		"Update": "OnLocationChange"
 	},
+		{
+			"LogName": "Corrupt Spirit Realm Music",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+			"MapProperties": {
+				"Music": "spirits_eve"
+				},
+			"When": {
+			"HasSeenEvent: hostPlayer |contains=75160263": false,
+			},
+			"Update": "OnLocationChange"
+		},
+		{
+			"LogName": "Cleanse Spirit Realm Music",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+			"MapProperties": {
+				"Music": "AweAmbience"
+				},
+			"When": {
+			"HasSeenEvent: hostPlayer |contains=75160263": true,
+			},
+			"Update": "OnLocationChange"
+		},
 
 //Corrupt Flames
 	{
