@@ -832,12 +832,12 @@
 	*********/
 		//Include Dependency Data
 		/*
-		Loads cp code for Custom Companions
+		Loads cp code for Custom Companions, Farm Type Manager, Questframework, AntisocialNPCs, and Custom NPC Exclusions.
 	*/
 
 	{
 		"Action": "Include",
-		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/QuestFramework.json",
+		"FromFile": "Data/DependencyData/CustomCompanions.json, Data/DependencyData/FarmTypeManager.json, Data/DependencyData/QuestFramework.json, Data/DependencyData/CustomNPCExclusions.json",
 	},
 
 
@@ -895,7 +895,7 @@
 		{
 			"LogName": "Include Dynamic Changes",
 			"Action": "Include",
-			"FromFile": "Data/DynamicChanges/MapChanges.json, Data/DynamicChanges/MusicChanges.json, Data/DynamicChanges/PortraitChanges.json, Data/DynamicChanges/SpriteChanges.json"
+			"FromFile": "Data/DynamicChanges/ExclusionChanges.json, Data/DynamicChanges/MapChanges.json, Data/DynamicChanges/MusicChanges.json, Data/DynamicChanges/PortraitChanges.json, Data/DynamicChanges/SpriteChanges.json"
 		},
 		//Include Intermod Compatibility Files
 		/*
