@@ -12,7 +12,7 @@
         "warp-section.mountain",
         "warp-section.beach",
         "warp-section.desert",
-		"Ridgeside Village",
+        "Ridgeside Village",
         "Ridgeside Surroundings"
     ],
 
@@ -82,7 +82,7 @@
             {
                 "DisplayText": "warp.sewer",
                 "Location": "Sewer",
-                "Tile": "3, 48"
+                "Tile": "16, 21"
             }
         ],
         "warp-section.forest": [
@@ -105,6 +105,11 @@
                 "DisplayText": "warp.wizard-tower",
                 "Location": "Forest",
                 "Tile": "5, 27"
+            },
+            {
+                "DisplayText": "warp.mastery-cave",
+                "Location": "MasteryCave",
+                "Tile": "7, 10"
             }
         ],
         "warp-section.mountain": [
@@ -119,9 +124,19 @@
                 "Tile": "10, 57"
             },
             {
+                "DisplayText": "warp.mutant-bug-lair",
+                "Location": "Bugland",
+                "Tile": "14, 52"
+            },
+            {
                 "DisplayText": "warp.quarry",
                 "Location": "Mountain",
                 "Tile": "127, 12"
+            },
+            {
+                "DisplayText": "warp.witch-swamp",
+                "Location": "WitchSwamp",
+                "Tile": "20, 23"
             }
         ],
         "warp-section.beach": [
@@ -184,7 +199,7 @@
             }
         ],
 
-		"Ridgeside Village": [
+        "Ridgeside Village": [
             {
                 "DisplayText": "Log Cabin Hotel",
                 "Location": "Custom_Ridgeside_RidgesideVillage",
@@ -210,12 +225,12 @@
                 "Location": "Custom_Ridgeside_RidgesideVillage",
                 "Tile": "19, 101"
             },
-			{
+            {
                 "DisplayText": "Water Research Facility",
                 "Location": "Custom_Ridgeside_RidgesideVillage",
                 "Tile": "98, 111"
             },
-			{
+            {
                 "DisplayText": "Lola's Shed",
                 "Location": "Custom_Ridgeside_RidgesideVillage",
                 "Tile": "7, 50"
@@ -230,7 +245,22 @@
                 "Location": "Custom_Ridgeside_RidgesideVillage",
                 "Tile": "96, 75"
             },
-			
+            {
+                "DisplayText": "Heaps",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "76, 19"
+            },
+                        {
+                "DisplayText": "Odd Jobs",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "133, 23"
+            },
+            {
+                "DisplayText": "Lenny's Office",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "114, 39"
+            },
+            
         ],
 
         "Ridgeside Surroundings": [
@@ -279,6 +309,54 @@
                 "Location": "Custom_Ridgeside_SummitFarm",
                 "Tile": "18, 47"
             },
-        ]
+        ],
+
+        "Other Ridgeside Locations": [
+            {
+                "DisplayText": "Kobayashi Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "130, 45"
+            },
+            {
+                "DisplayText": "Pickens Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "89, 28"
+            },
+            {
+                "DisplayText": "Daniels Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "83, 19"
+            },
+            {
+                "DisplayText": "Akina Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "75, 59"
+            },
+            {
+                "DisplayText": "Ahn Yojeong Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "105, 63"
+            },
+            {
+                "DisplayText": "Amethyne Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "129, 71"
+            },
+            {
+                "DisplayText": "Liden Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "76, 115"
+            },
+            {
+                "DisplayText": "Bladebane Residence",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "14, 63"
+            },
+            {
+                "DisplayText": "Tort's Pond",
+                "Location": "Custom_Ridgeside_RidgesideVillage",
+                "Tile": "57, 53"
+            },
+        ],
     }
 }
