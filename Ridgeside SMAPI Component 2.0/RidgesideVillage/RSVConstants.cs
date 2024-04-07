@@ -152,6 +152,9 @@ namespace RidgesideVillage
         public const string Z_VILLAGESPECIALORDER = "RSVTownSO";
         public const string Z_NINJASPECIALORDER = "RSVNinjaSO";
 
+        //Powers
+        public const string P_RIVERASECRET = "Rafseazz.RSVCP_RiveraSecret";
+
             //Items
         public const string ITOTEM = "Rafseazz.RSVCP_Warp_Totem__Ridgeside";
         public const string IFOXBLOOM = "Rafseazz.RSVCP_Foxbloom";
