@@ -567,7 +567,10 @@
           680,
           413,
           273,
-          681,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
           815,
           399,
           591,
@@ -580,7 +583,10 @@
           680,
           413,
           273,
-          681,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
           815,
           421,
           593,
@@ -593,7 +599,10 @@
           680,
           413,
           273,
-          681,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
           815,
           281,
           421,
@@ -606,7 +615,10 @@
           680,
           413,
           273,
-          681,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
           815,
           440,
           444,
@@ -1231,7 +1243,10 @@
             "name": "Immunity Band"
           },
           891,
-          "Warp Totem: Ridgeside"
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
         ],
         "SummerItemIndex": [
           74,
@@ -1252,7 +1267,10 @@
             "name": "Immunity Band"
           },
           891,
-          "Warp Totem: Ridgeside"
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
         ],
         "FallItemIndex": [
           74,
@@ -1273,7 +1291,10 @@
             "name": "Immunity Band"
           },
           891,
-          "Warp Totem: Ridgeside"
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
         ],
         "WinterItemIndex": [
           74,
@@ -1294,7 +1315,10 @@
             "name": "Immunity Band"
           },
           891,
-          "Warp Totem: Ridgeside"
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
         ],
         "UniqueAreaID": "RSV RidgeForest God-Tier Treasures",
         "MapName": "Custom_Ridgeside_RidgeForest",
@@ -2386,7 +2410,7 @@
           "WeatherToday": [],
           "WeatherTomorrow": [],
           "GameStateQueries": [
-            "PLAYER_HAS_MAIL Host OddJobsNotice, PLAYER_HAS_MAIL Host RSV.HasGoldClock"
+            "PLAYER_HAS_MAIL Host OddJobsNotice, !PLAYER_HAS_MAIL Host RSV.HasGoldClock"
           ],
           "CPConditions": {},
           "EPUPreconditions": [],

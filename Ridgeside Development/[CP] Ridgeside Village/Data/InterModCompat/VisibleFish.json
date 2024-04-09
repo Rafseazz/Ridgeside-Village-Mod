@@ -1,0 +1,40 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Mods/shekurika.VisibleFish/LocationData",
+      "Entries": {
+        "Custom_Ridgeside_RidgesideVillage": {
+          "Spawns": {
+            "Rafseazz.RSVCP_Sockeye_Salmon": {
+              "Condition": "SEASON fall, WEATHER Here Rain, !PLAYER_HAS_CAUGHT_FISH Current Rafseazz.RSVCP_Sockeye_Salmon",
+              "X": 72,
+              "Y": 94,
+              "QualifiedItemId": "(O)Rafseazz.RSVCP_Sockeye_Salmon"
+            }
+          }
+        },
+        "Custom_Ridgeside_RidgeForest": {
+          "Spawns": {
+            "Rafseazz.RSVCP_Deep_Ridge_Angler": {
+              "Condition": "SEASON Winter, !PLAYER_HAS_CAUGHT_FISH Current RRafseazz.RSVCP_Deep_Ridge_Angler",
+              "X": 69,
+              "Y": 33,
+              "QualifiedItemId": "(O)Rafseazz.RSVCP_Deep_Ridge_Angler"
+            }
+          }
+        },
+        "Custom_Ridgeside_RidgeFalls": {
+          "Spawns": {
+            "Rafseazz.RSVCP_Waterfall_Snakehead": {
+              "Condition": "SEASON spring summer, !PLAYER_HAS_CAUGHT_FISH Current Rafseazz.RSVCP_Waterfall_Snakehead",
+              "X": 54,
+              "Y": 13,
+              "QualifiedItemId": "(O)Rafseazz.RSVCP_Waterfall_Snakehead"
+            }
+          }
+        },
+      }
+    }
+  ]
+}
