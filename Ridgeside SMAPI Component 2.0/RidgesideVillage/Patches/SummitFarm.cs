@@ -28,25 +28,7 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.spawnWeedsAndStones)),
                 prefix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_SpawnWeedsAndStones_Prefix))
             );
-            /*
-            harmony.Patch(
-               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.loadLights)),
-               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
-           );
-            harmony.Patch(
-               original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.setUpLocationSpecificFlair)),
-               prefix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_NoAmbientLight_Prefix))
-           );
-            */
 
-            //harmony.Patch(
-            //    original: AccessTools.Method(typeof(GameLocation), "resetSharedState"),
-            //    postfix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_SetUpKitchen_Postfix))
-            //);
-            //harmony.Patch(
-            //    original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.loadMap)),
-            //    postfix: new HarmonyMethod(typeof(SummitFarm), nameof(SummitHouse_SetUpKitchen_Postfix))
-            //);
             harmony.Patch(
                 original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.draw)),
                 postfix: new HarmonyMethod(typeof(SummitFarm), nameof(GameLocation_draw_Postfix))
@@ -58,7 +40,7 @@ namespace RidgesideVillage
 
         private static void OnDayEnded(object sender, DayEndingEventArgs e)
         {
-            if (Game1.getFarm().isBuildingConstructed("Gold Clock") && !Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_GOLDCLOCK))
+            if (!Game1.MasterPlayer.mailReceived.Contains(RSVConstants.M_GOLDCLOCK) && Game1.getFarm().isBuildingConstructed("Gold Clock"))
             {
                 Game1.MasterPlayer.mailReceived.Add(RSVConstants.M_GOLDCLOCK);
             }
@@ -107,24 +89,6 @@ namespace RidgesideVillage
             }
         }
 
-        private static bool SummitHouse_NoAmbientLight_Prefix(ref GameLocation __instance)
-        {
-            if (__instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE.Split("New")[0]) // Old Summit House
-            {
-                if (Game1.isDarkOut(__instance))
-                {
-                    Game1.ambientLight = new Color(180, 180, 0, 255);
-                }
-                return false;
-            }
-            return true;
-        }
-
-        //private static void SummitHouse_SetUpKitchen_Postfix(ref GameLocation __instance)
-        //{
-        //    if (__instance.NameOrUniqueName == RSVConstants.L_SUMMITHOUSE && __instance.modData.ContainsKey("renovated"))
-        //        SummitHouse.SetUpKitchen(__instance);
-        //}
 
         private static void GameLocation_draw_Postfix(ref GameLocation __instance, ref SpriteBatch b)
         {
