@@ -6,7 +6,8 @@
 			"Action": "EditData",
 			"Target": "Data/FishPondData",
 			"Entries": {
-				"Bladetail Sturgeon": {
+				"{{ModId}}_BladetailSturgeon": {
+					"Id": "{{ModId}}_BladetailSturgeon",
 					"RequiredTags": [
 						"item_bladetail_sturgeon"
 					],
@@ -16,52 +17,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.40, //Chance to produce item
-							"ItemID": 445, //Item ID
+							"ItemID": "(O)445", //Item ID
 							"MinQuantity": 2, //Min #
 							"MaxQuantity": 4, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.20,
-							"ItemID": 441,
+							"ItemID": "(O)441",
 							"MinQuantity": 0,
 							"MaxQuantity": 1
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"591 2"
+							"(O)591 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"196 2"
+							"(O)196 2"
 						],
 						"8": [
-							"227 2"
+							"(O)227 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Caped Tree Frog
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Caped Tree Frog": {
+				"{{ModId}}_CapedTreeFrog": {
+					"Id": "{{ModId}}_CapedTreeFrog",
 					"RequiredTags": [
 						"item_caped_tree_frog"
 					],
@@ -71,52 +66,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.10, //Chance to produce item
-							"ItemID": 349, //Item ID
+							"ItemID": "(O)349", //Item ID
 							"MinQuantity": 0, //Min #
 							"MaxQuantity": 1, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.50,
-							"ItemID": 60,
+							"ItemID": "(O)60",
 							"MinQuantity": 0,
 							"MaxQuantity": 2
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"264 2"
+							"(O)264 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"86 2"
+							"(O)86 2"
 						],
 						"8": [
-							"219 2"
+							"(O)219 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Cardia Septal Jellyfish
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Cardia Septal Jellyfish": {
+				"{{ModId}}_CardiaSeptalJellyfish": {
+					"Id": "{{ModId}}_CardiaSeptalJellyfish",
 					"RequiredTags": [
 						"item_cardia_septal_jellyfish"
 					],
@@ -126,52 +115,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.10, //Chance to produce item
-							"ItemID": 577, //Item ID
+							"ItemID": "(O)577", //Item ID
 							"MinQuantity": 1, //Min #
 							"MaxQuantity": 4, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.10,
-							"ItemID": 456,
+							"ItemID": "(O)456",
 							"MinQuantity": 0,
 							"MaxQuantity": 1
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"420 2"
+							"(O)420 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"414 2"
+							"(O)414 2"
 						],
 						"8": [
-							"610 2"
+							"(O)610 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Crimson Spiked Clam
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Crimson Spiked Clam": {
+				"{{ModId}}_CrimsonSpikedClam": {
+					"Id": "{{ModId}}_CrimsonSpikedClam",
 					"RequiredTags": [
 						"item_crimson_spiked_clam"
 					],
@@ -181,52 +164,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.10, //Chance to produce item
-							"ItemID": 64, //Item ID
+							"ItemID": "(O)64", //Item ID
 							"MinQuantity": 2, //Min #
 							"MaxQuantity": 5, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 797,
+							"ItemID": "(O)797",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.10,
-							"ItemID": 64,
+							"ItemID": "(O)64",
 							"MinQuantity": 0,
 							"MaxQuantity": 2
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 537,
+							"ItemID": "(O)537",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"233 2"
+							"(O)233 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"268 2"
+							"(O)268 2"
 						],
 						"8": [
-							"253 2"
+							"(O)253 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Fairytale Lionfish
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Fairytale Lionfish": {
+				"{{ModId}}_FairytaleLionfish": {
+					"Id": "{{ModId}}_FairytaleLionfish",
 					"RequiredTags": [
 						"item_fairytale_lionfish"
 					],
@@ -236,52 +213,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.02, //Chance to produce item
-							"ItemID": 74, //Item ID
+							"ItemID": "(O)74", //Item ID
 							"MinQuantity": 0, //Min #
 							"MaxQuantity": 1, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.50,
-							"ItemID": 445,
+							"ItemID": "(O)445",
 							"MinQuantity": 0,
 							"MaxQuantity": 2
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"393 2"
+							"(O)393 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"586 2"
+							"(O)586 2"
 						],
 						"8": [
-							"611 2"
+							"(O)611 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Fixer Eel
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Fixer Eel": {
+				"{{ModId}}_FixerEel": {
+					"Id": "{{ModId}}_FixerEel",
 					"RequiredTags": [
 						"item_fixer_eel"
 					],
@@ -291,52 +262,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.40, //Chance to produce item
-							"ItemID": 787, //Item ID
+							"ItemID": "(O)787", //Item ID
 							"MinQuantity": 3, //Min #
 							"MaxQuantity": 4, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.50,
-							"ItemID": 336,
+							"ItemID": "(O)336",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"400 2"
+							"(O)400 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"338 2"
+							"(O)338 2"
 						],
 						"8": [
-							"206 2"
+							"(O)206 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Golden Rose Fin
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Golden Rose Fin": {
+				"{{ModId}}_GoldenRoseFin": {
+					"Id": "{{ModId}}_GoldenRoseFin",
 					"RequiredTags": [
 						"item_golden_rose_fin"
 					],
@@ -346,52 +311,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.02, //Chance to produce item
-							"ItemID": 373, //Item ID
+							"ItemID": "(O)373", //Item ID
 							"MinQuantity": 1, //Min #
 							"MaxQuantity": 1, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.30,
-							"ItemID": 428,
+							"ItemID": "(O)428",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"636 2"
+							"(O)636 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"72 2"
+							"(O)72 2"
 						],
 						"8": [
-							"228 2"
+							"(O)228 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Harvester Trout
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Harvester Trout": {
+				"{{ModId}}_HarvesterTrout": {
+					"Id": "{{ModId}}_HarvesterTrout",
 					"RequiredTags": [
 						"item_harvester_trout"
 					],
@@ -401,52 +360,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.06, //Chance to produce item
-							"ItemID": 114, //Item ID
+							"ItemID": "(O)114", //Item ID
 							"MinQuantity": 5, //Min #
 							"MaxQuantity": 6, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.50,
-							"ItemID": 770,
+							"ItemID": "(O)770",
 							"MinQuantity": 5,
 							"MaxQuantity": 6
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"637 2"
+							"(O)637 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"444 2"
+							"(O)444 2"
 						],
 						"8": [
-							"224 2"
+							"(O)224 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Lullaby Carp
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Lullaby Carp": {
+				"{{ModId}}_LullabyCarp": {
+					"Id": "{{ModId}}_LullabyCarp",
 					"RequiredTags": [
 						"item_lullaby_carp"
 					],
@@ -456,52 +409,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.40, //Chance to produce item
-							"ItemID": 445, //Item ID
+							"ItemID": "(O)445", //Item ID
 							"MinQuantity": 2, //Min #
 							"MaxQuantity": 4, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.08,
-							"ItemID": 221,
+							"ItemID": "(O)221",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"276 2"
+							"(O)276 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"60 2"
+							"(O)60 2"
 						],
 						"8": [
-							"211 2"
+							"(O)211 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Pebble Back Crab
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Pebble Back Crab": {
+				"{{ModId}}_PebbleBackCrab": {
+					"Id": "{{ModId}}_PebbleBackCrab",
 					"RequiredTags": [
 						"item_pebble_back_crab"
 					],
@@ -511,52 +458,46 @@
 						{
 							"RequiredPopulation": 10, //# of fish
 							"Chance": 0.10, //Chance to produce item
-							"ItemID": 386, //Item ID
+							"ItemID": "(O)386", //Item ID
 							"MinQuantity": 0, //Min #
 							"MaxQuantity": 2, //Max #
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.45,
-							"ItemID": 72,
+							"ItemID": "(O)72",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.50,
-							"ItemID": 749,
+							"ItemID": "(O)749",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.70,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 2
 						}
 					],
 					"PopulationGates": {
 						"2": [
-							"233 2"
+							"(O)233 2"
 						], //What fish want to advance (ID amount)
 						"4": [
-							"272 2"
+							"(O)272 2"
 						],
 						"8": [
-							"213 2"
+							"(O)213 2"
 						],
 					},
 				},
-			},
-		},
-		{
-			//Ridgeside Bass
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Ridgeside Bass": {
+				"{{ModId}}_RidgesideBass": {
+					"Id": "{{ModId}}_RidgesideBass",
 					"RequiredTags": [
 						"item_ridgeside_bass"
 					],
@@ -566,39 +507,33 @@
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.9,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 					],
 					"PopulationGates": {
 						"4": [
-							"309 3",
-							"310 3",
-							"311 3",
-							"684 10"
+							"(O)309 3",
+							"(O)310 3",
+							"(O)311 3",
+							"(O)684 10"
 						],
 						"6": [
-							"384 3",
-							"724",
-							"770 5"
+							"(O)384 3",
+							"(O)724",
+							"(O)770 5"
 						],
 						"8": [
-							"70 2",
-							"340",
-							"716",
-							"722"
+							"(O)70 2",
+							"(O)340",
+							"(O)716",
+							"(O)722"
 						]
 					},
 				},
-			},
-		},
-		{
-			//Ridge Bluegill
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Ridge Bluegill": {
+				"{{ModId}}_RidgeBluegill": {
+					"Id": "{{ModId}}_RidgeBluegill",
 					"RequiredTags": [
 						"item_ridge_bluegill"
 					],
@@ -608,44 +543,38 @@
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.9,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 						{
 							"RequiredPopulation": 6,
 							"Chance": 0.9,
-							"ItemID": 258,
+							"ItemID": "(O)258",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 					],
 					"PopulationGates": {
 						"4": [
-							"309 3",
-							"310 3",
-							"311 3",
-							"684 10"
+							"(O)309 3",
+							"(O)310 3",
+							"(O)311 3",
+							"(O)684 10"
 						],
 						"6": [
-							"597 3"
+							"(O)597 3"
 						],
 						"8": [
-							"70 2",
-							"340",
-							"716",
-							"722"
+							"(O)70 2",
+							"(O)340",
+							"(O)716",
+							"(O)722"
 						]
 					},
 				},
-			},
-		},
-		{
-			//Cutthroat Trout
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Cutthroat Trout": {
+				"{{ModId}}_CutthroatTrout": {
+					"Id": "{{ModId}}_CutthroatTrout",
 					"RequiredTags": [
 						"item_cutthroat_trout"
 					],
@@ -655,38 +584,32 @@
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.9,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 					],
 					"PopulationGates": {
 						"4": [
-							"309 3",
-							"310 3",
-							"311 3",
-							"684 10"
+							"(O)309 3",
+							"(O)310 3",
+							"(O)311 3",
+							"(O)684 10"
 						],
 						"6": [
-							"384 3",
-							"724",
-							"770 5"
+							"(O)384 3",
+							"(O)724",
+							"(O)770 5"
 						],
 						"8": [
-							"109",
-							"716",
-							"722"
+							"(O)109",
+							"(O)716",
+							"(O)722"
 						]
 					},
 				},
-			},
-		},
-		{
-			//Skulpin Fish
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Skulpin Fish": {
+				"{{ModId}}_SkulpinFish": {
+					"Id": "{{ModId}}_SkulpinFish",
 					"RequiredTags": [
 						"item_skulpin_fish"
 					],
@@ -696,46 +619,40 @@
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.9,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 						{
 							"RequiredPopulation": 3,
 							"Chance": 0.9,
-							"ItemID": 709,
+							"ItemID": "(O)709",
 							"MinQuantity": 0,
 							"MaxQuantity": 1
 						},
 					],
 					"PopulationGates": {
 						"4": [
-							"309 3",
-							"310 3",
-							"311 3",
-							"684 10"
+							"(O)309 3",
+							"(O)310 3",
+							"(O)311 3",
+							"(O)684 10"
 						],
 						"6": [
-							"384 3",
-							"724",
-							"770 5"
+							"(O)384 3",
+							"(O)724",
+							"(O)770 5"
 						],
 						"8": [
-							"254",
-							"340",
-							"716",
-							"722"
+							"(O)254",
+							"(O)340",
+							"(O)716",
+							"(O)722"
 						]
 					},
 				},
-			},
-		},
-		{
-			//Mountain Redbelly Dace
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Mountain Redbelly Dace": {
+				"{{ModId}}_MountainRedbellyDace": {
+					"Id": "{{ModId}}_MountainRedbellyDace",
 					"RequiredTags": [
 						"item_mountain_redbelly_dace"
 					],
@@ -745,46 +662,40 @@
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.9,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 						{
 							"RequiredPopulation": 5,
 							"Chance": 0.9,
-							"ItemID": 420,
+							"ItemID": "(O)420",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 					],
 					"PopulationGates": {
 						"4": [
-							"309 6",
-							"310 6",
-							"311 6",
-							"684 20"
+							"(O)309 6",
+							"(O)310 6",
+							"(O)311 6",
+							"(O)684 20"
 						],
 						"6": [
-							"384 3",
-							"724",
-							"770 5"
+							"(O)384 3",
+							"(O)724",
+							"(O)770 5"
 						],
 						"8": [
-							"70 4",
-							"340",
-							"716",
-							"722"
+							"(O)70 4",
+							"(O)340",
+							"(O)716",
+							"(O)722"
 						]
 					},
 				},
-			},
-		},
-		{
-			//Mountain Whitefish
-			"Action": "EditData",
-			"Target": "Data/FishPondData",
-			"Entries": {
-				"Mountain Whitefish": {
+				"{{ModId}}_MountainWhitefish": {
+					"Id": "{{ModId}}_MountainWhitefish",
 					"RequiredTags": [
 						"item_mountain_whitefish"
 					],
@@ -794,35 +705,35 @@
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.9,
-							"ItemID": 812,
+							"ItemID": "(O)812",
 							"MinQuantity": 1,
 							"MaxQuantity": 1
 						},
 						{
 							"RequiredPopulation": 0,
 							"Chance": 0.9,
-							"ItemID": 157,
+							"ItemID": "(O)157",
 							"MinQuantity": 2,
 							"MaxQuantity": 4
 						},
 					],
 					"PopulationGates": {
 						"4": [
-							"309 6",
-							"310 6",
-							"311 6",
-							"684 20"
+							"(O)309 6",
+							"(O)310 6",
+							"(O)311 6",
+							"(O)684 20"
 						],
 						"6": [
-							"384 3",
-							"724",
-							"770 5"
+							"(O)384 3",
+							"(O)724",
+							"(O)770 5"
 						],
 						"8": [
-							"70 4",
-							"340",
-							"716",
-							"722"
+							"(O)70 4",
+							"(O)340",
+							"(O)716",
+							"(O)722"
 						]
 					},
 				},
