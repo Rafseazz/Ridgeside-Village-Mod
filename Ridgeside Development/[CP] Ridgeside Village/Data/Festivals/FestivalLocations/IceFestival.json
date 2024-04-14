@@ -2,11 +2,12 @@
 
 "Changes": [
 
+//Odd Years ----------------------------------------------------------------
     {
         //The squad
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
-        "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true },
+        "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "IsOddYear": true },
         "TextOperations": [
             {
                 "Operation": "Append",
@@ -43,7 +44,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
         "When": {
-            "HasSeenEvent": 75160249, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
+            "HasSeenEvent": 75160249, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "IsOddYear": true
         },
         "TextOperations": [
             {
@@ -67,7 +68,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
         "When": {
-            "HasSeenEvent": 75160254, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
+            "HasSeenEvent": 75160254, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "IsOddYear": true
         },
         "TextOperations": [
             {
@@ -91,7 +92,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
         "When": {
-            "HasSeenEvent": 75160440, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false
+            "HasSeenEvent": 75160440, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "IsOddYear": true
         },
         "TextOperations": [
             {
@@ -115,7 +116,7 @@
         "Action": "EditData",
         "Target": "Data/Festivals/winter8",
         "When": {
-            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "Query: {{RandomNumber}} <= 4": true,
+            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "Query: {{RandomNumber}} <= 4": true, "IsOddYear": true
         },
         "TextOperations": [
             {
@@ -143,6 +144,7 @@
                 "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
                 "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
                 "HasSeenEvent: anyPlayer|contains=75160188": true,
+                "IsOddYear": true
             },
         "TextOperations": [
             {
@@ -160,6 +162,169 @@
             },
         ]
     },
+//End of Odd Years ----------------------------------------------------------------
+
+//Even Years ----------------------------------------------------------------
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "IsOddYear": false },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 59 27 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 51 30 right/Freddie 80 33 left/Ian 84 30 left/Jeric 58 46 right/Keahi 55 30 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 57 27 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 52 26 down/Trinnie 53 30 right/Ysabelle 63 20 right/Yuuma 53 26 down/Kimpoi 57 44 down/Malaya 58 44 down/Sonny 60 14 down/Louie 54 31 up/Maive 61 14 down/Ariah 59 15 right/Lorenzo 59 28 left/Shanice 57 28 right/Anton 71 11 down/Kiarra 72 14 up/Paula 72 12 down/Carmen 73 50 down/Blair 73 13 left/Sean 70 12 right/Faye 92 27 left/Irene 82 28 down/Torts 53 27 0/June 53 34 1",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Main-Event_additionalCharacters"],
+                "Value": "Aguar 94 37 left/Alissa 58 45 right/Bert 59 27 left/Corine 64 19 down/Ezekiel 65 22 down/Flor 51 30 right/Freddie 80 33 left/Ian 84 30 left/Jeric 58 46 right/Keahi 55 30 left/Kenneth 78 44 right/Lenny 69 42 up/Lola 80 34 left/Maddie 64 21 up/Olga 57 27 right/Philip 78 23 down/Pika 63 50 up/Richard 62 49 right/Shiro 52 26 down/Trinnie 53 30 right/Ysabelle 63 20 right/Yuuma 53 26 down/Kimpoi 57 44 down/Malaya 58 44 down/Sonny 60 14 down/Louie 54 31 up/Maive 61 14 down/Ariah 59 15 right/Lorenzo 59 28 left/Shanice 57 28 right/Anton 71 11 down/Kiarra 72 14 up/Paula 72 12 down/Carmen 73 50 down/Blair 73 13 left/Sean 70 12 right/Faye 92 27 left/Irene 82 28 down/Torts 53 27 0/June 53 34 1",
+                "Delimiter": "/"
+            },
+
+            //Animations (y1)
+            {
+                "Operation": "Append",
+                "Target": ["Fields", "set-up", 5],
+                "Value": "/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Blair false true 130 24 24 24 24 24 24 24 25 25 25/animate Aguar false true 500 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 18 19 19 19 19 19 19 19 18/animate Torts false true 200 16 17",
+            },
+
+             //Animations (y2)
+            {
+                "Operation": "Append",
+                "Target": ["Fields", "set-up_y2", 5],
+                "Value": "/animate Keahi false true 100 20 20 20 23 23 23 20 20 20 23 23 23 21 22 21 23/animate Trinnie false true 100 16 16 16 4 4 4 16 16 16 4 4 4 16 16 16 4 4 4 16 17 18 19 18 17 16 4 4 4/animate Kiwi false true 100 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16/animate Blair false true 130 24 24 24 24 24 24 24 25 25 25/animate Aguar false true 500 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 18 19 19 19 19 19 19 19 18/animate Torts false true 200 16 17",
+            }
+        ]
+    },
+
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": {
+            "HasSeenEvent": 75160249, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "IsOddYear": false
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 54 26 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Main-Event_additionalCharacters"],
+                "Value": "Naomi 54 26 down",
+                "Delimiter": "/"
+            }
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": {
+            "HasSeenEvent": 75160254, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "IsOddYear": false
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 89 19 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Main-Event_additionalCharacters"],
+                "Value": "Daia 89 19 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": {
+            "HasSeenEvent": 75160440, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "IsOddYear": false
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 62 14 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Main-Event_additionalCharacters"],
+                "Value": "Zayne 62 14 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Bryle Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": {
+            "HasSeenEvent": 75160375, "Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true, "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false, "Query: {{RandomNumber}} <= 4": true, "IsOddYear": false
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Bryle 92 31 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Main-Event_additionalCharacters"],
+                "Value": "Bryle 92 31 left",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Jio and Kiwi
+                "LogName": "Jio and Kiwi at Ice Festival",
+        "Action": "EditData",
+        "Target": "Data/Festivals/winter8",
+        "When": {
+                "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false,
+                "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
+                "HasSeenEvent: anyPlayer|contains=75160188": true,
+                "IsOddYear": false
+            },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 91 19 down/Kiwi 90 19 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Main-Event_additionalCharacters"],
+                "Value": "Jio 91 19 down/Kiwi 90 19 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+//End of Even Years ----------------------------------------------------------------
 
 ]
 }
