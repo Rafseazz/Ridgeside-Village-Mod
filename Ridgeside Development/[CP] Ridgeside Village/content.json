@@ -1026,5 +1026,15 @@
 			"Action": "Include",
 			"FromFile": "Data/Shops.json",
 		},
+
+		//Include Winter Outfits if RSV Seasonals isn't installed
+		{
+			"LogName": "Include Winter Outfits",
+			"Action": "Include",
+			"FromFile": "Data/WinterOutfits.json",
+			"When": {
+				"HasMod |contains=Rafseazz.RSVSeasonalOutfits": false,
+			}
+		},
 	],
 }
