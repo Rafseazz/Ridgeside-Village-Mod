@@ -39,8 +39,7 @@ namespace RidgesideVillage.Questing
 			foreach (var key in quests.Keys)
 			{
 				// is ninjaquest and not completed yet
-				int keyNr = int.Parse(key);
-				if (keyNr >= 72860500 && keyNr <= 72860999 && !QuestController.FinishedQuests.Value.Contains(key))
+				if (int.TryParse(key, out var keyNr) &&  keyNr >= 72860500 && keyNr <= 72860999 && !QuestController.FinishedQuests.Value.Contains(key))
 				{
 					if (!Game1.player.hasQuest(key))
 					{
