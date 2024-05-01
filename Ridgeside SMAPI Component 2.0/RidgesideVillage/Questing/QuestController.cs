@@ -244,10 +244,11 @@ namespace RidgesideVillage.Questing
                 }
 				dailyQuestData.Value = new QuestData(townQuest, ninjaQuest);
 			}
-            catch
+            catch (Exception exp)
             {
 				dailyQuestData.Value = new QuestData(null, null);
 				Log.Warn("Failed parsing new quests.");
+				Log.Warn(exp.Message + exp.StackTrace);
 			}
 		}
 
