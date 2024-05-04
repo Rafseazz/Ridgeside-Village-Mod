@@ -34,7 +34,6 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
-		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Sean": "Married",
 		"Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
    },

@@ -35,7 +35,6 @@
    "Target": "Data/Festivals/fall27",
    "When": {
 		"IsOddYear": true,
-		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Alissa": "Married",
 		"Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,
    },
@@ -47,8 +46,7 @@
 	 "LogName": "Alissa Spirit's Eve Dialogue Change (Free Love back-up) Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-   "When": {
-		"HasMod": "aedenthorn.FreeLove",
+   "When": {	
    	"Relationship:Alissa": "Married",
 		"Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,
 		"Kimpoi": "enabled, festivals only",

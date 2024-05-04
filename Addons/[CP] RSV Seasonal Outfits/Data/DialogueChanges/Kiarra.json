@@ -34,7 +34,6 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
-		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Kiarra": "Married",
 		"Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
    },
