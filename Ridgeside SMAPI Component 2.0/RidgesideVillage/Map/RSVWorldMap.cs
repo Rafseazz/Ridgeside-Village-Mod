@@ -40,6 +40,10 @@ namespace RidgesideVillage
 
         private static void OnMenuChanged(object sender, MenuChangedEventArgs e)
         {
+            if(!ModEntry.Config.ShowRSVCustomMap)
+            {
+                return;
+            }
             if(e.NewMenu is GameMenu gameMenu)
             {
                 if(gameMenu.currentTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside"))

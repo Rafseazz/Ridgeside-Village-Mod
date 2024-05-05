@@ -81,7 +81,7 @@ namespace RidgesideVillage
             try
             {
                 //only draw on vanilla or RSV maps
-                ShouldDraw = !Game1.currentLocation.Name.Contains('_') || Game1.currentLocation.Name.StartsWith("Custom_Ridgeside");
+                ShouldDraw = ModEntry.Config.ShowRSVCustomMap && (!Game1.currentLocation.Name.Contains('_') || Game1.currentLocation.Name.StartsWith("Custom_Ridgeside"));
                 if (whichTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside") && Constants.TargetPlatform != GamePlatform.Android)
                 {
                     RSVWorldMap.Open(Game1.activeClickableMenu);
@@ -114,7 +114,11 @@ namespace RidgesideVillage
 
 
         internal static bool MapPage_receiveLeftClick_Prefix(int x, int y, bool playSound) {
-            if(ButtonArea.Contains(x, y))
+            if (!ShouldDraw)
+            {
+                return true;
+            }
+            if (ButtonArea.Contains(x, y))
             {
                 RSVWorldMap.Open(Game1.activeClickableMenu);
                 return false;
