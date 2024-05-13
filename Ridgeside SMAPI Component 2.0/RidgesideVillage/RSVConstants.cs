@@ -13,6 +13,7 @@ namespace RidgesideVillage
         public const int E_NINJAQUESTS = 75160187;
         public const int E_LENNYCARTS = 75160190;
         public const int E_TOWNBOARD = 75160207;
+        public const int E_MEETNAOMI = 75160249;
         public const int E_WEDDINGRECEPTION = 75160245;
         public const int E_BIRTHDAY = 75160247;
         public const int E_ANNIVERSARY = 75160248;
@@ -38,6 +39,7 @@ namespace RidgesideVillage
         public const int E_BRYLE_INTRO = 75160375;
         public const int E_BRYLE_8H = 75160453;
         public const int E_AGUAR_8H = 75160064;
+        public const int E_BRYLELEAVE = 75160460;
 
         // Response IDs
         public const int R_AGUAR_FLOWERS = 751600641;

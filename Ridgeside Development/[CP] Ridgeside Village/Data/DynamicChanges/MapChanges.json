@@ -410,10 +410,10 @@
          "ToArea": { "X": 35, "Y": 14, "Width": 7, "Height": 10 },
          "PatchMode": "Overlay",
          "Update": "OnTimeChange, OnLocationChange",
-    	 "When": {
+				 "When": {
              "Time": "{{Range: 2400, 2600}}",
              "HasSeenEvent: hostPlayer": 75160266,
-             "HasSeenEvent: hostPlayer |contains=75160271": false
+             "HasFlag: hostPlayer |contains=RSV.HauntedGHFix": true,
       	}
       	},
      	 {
@@ -425,13 +425,13 @@
                     "Position": { "X": 38, "Y": 23 },
                     "Layer": "Buildings",
 										"SetProperties": {
-                        "Action": "LockedDoorWarp Custom_Ridgeside_RSVGreenhouse2 10 24 2400 2600"
+                        "Action": "LockedDoorWarp Custom_Ridgeside_RSVGreenhouse2 10 23 2400 2600"
                     }
                 }
             ],
     	 	 	"When": {
 					 "HasSeenEvent: hostPlayer": 75160266,
-					 "HasSeenEvent: hostPlayer |contains=75160271": false
+					 "HasFlag: hostPlayer |contains=RSV.HauntedGHFix": false,
 				 }
       	},
       	//Permanent unlock (after finishing quest)
@@ -444,11 +444,28 @@
          "ToArea": { "X": 35, "Y": 14, "Width": 7, "Height": 10 },
          "PatchMode": "Overlay",
          "Update": "OnLocationChange",
-    	 "When": {
+				 "When": {
              //"HasSeenEvent: hostPlayer": 75160271,
 						 "HasFlag: hostPlayer |contains=RSV.HauntedGHFix": true,
       	}
       	},
+				{
+ 				 "LogName": "RSV: Phantom greenhouse unlocked door",
+          "Action": "EditMap",
+          "Target": "Maps/Custom_Ridgeside_RSVTheHike",
+ 				 "MapTiles": [
+                 {
+                     "Position": { "X": 38, "Y": 23 },
+                     "Layer": "Buildings",
+ 										"SetProperties": {
+                         "Action": "LockedDoorWarp Custom_Ridgeside_RSVGreenhouse2 10 23 600 2600"
+                     }
+                 }
+             ],
+     	 	 	"When": {
+						"HasFlag: hostPlayer |contains=RSV.HauntedGHFix": true,
+ 				 }
+       	},
 
 //Hotel Room
 	{

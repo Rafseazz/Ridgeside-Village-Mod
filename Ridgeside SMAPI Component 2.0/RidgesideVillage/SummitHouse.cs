@@ -18,7 +18,7 @@ using xTile.Tiles;
 namespace RidgesideVillage
 {
 	//Stuff to make the Summit House behave like the player's farmhouse
-	//The kitchen section is very heavily inspired by blueberry's Community Kitchen code, which can be found here:
+	//The kitchen section is very heavily based on blueberry's Community Kitchen code, which can be found here:
 	//https://github.com/b-b-blueberry/CustomCommunityCentre/blob/master/CommunityKitchen/Core/Kitchen.cs
 	internal static class SummitHouse
 	{
