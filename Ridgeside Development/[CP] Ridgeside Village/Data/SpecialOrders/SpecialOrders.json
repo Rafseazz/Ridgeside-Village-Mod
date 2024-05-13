@@ -907,11 +907,11 @@
                 "Name": "Greeting",
                 "Values": [
                   {
-                    "RequiredTags": "!RSV.LolaHelped",
+                    "RequiredTags": "!LolaSOLetter",
                     "Value": "[RSV.SpecialOrder.LolaRings_Greeting0]"
                   },
                   {
-                    "RequiredTags": "RSV.LolaHelped",
+                    "RequiredTags": "LolaSOLetter",
                     "Value": "[RSV.SpecialOrder.LolaRings_Greeting1]"
                   }
                 ]
@@ -973,8 +973,8 @@
                {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.LolaHelped",
-                     "NoLetter": "true",
+                     "MailReceived": "LolaSOLetter",
+                     "NoLetter": "false",
                   }
                },
             ]
@@ -1147,8 +1147,8 @@
                {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.EzekielHelped",
-                     "NoLetter": "true",
+                     "MailReceived": "EzekielSOLetter",
+                     "NoLetter": "false",
                   }
                },
             ]
@@ -1208,8 +1208,8 @@
                {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.AguarHelped",
-                     "NoLetter": "true",
+                     "MailReceived": "AguarSOLetter",
+                     "NoLetter": "false",
                   }
                },
             ]
@@ -1269,11 +1269,11 @@
                 "Name": "Greeting",
                 "Values": [
                   {
-                    "RequiredTags": "!RSV.OlgaHelped",
+                    "RequiredTags": "!OlgaSOLetter",
                     "Value": "[RSV.SpecialOrder.MorningDrinks_Greeting0]"
                   },
                   {
-                    "RequiredTags": "RSV.OlgaHelped",
+                    "RequiredTags": "OlgaSOLetter",
                     "Value": "[RSV.SpecialOrder.MorningDrinks_Greeting1]"
                   }
                 ]
@@ -1313,8 +1313,8 @@
                {
                   "Type": "Mail",
                   "Data": {
-                     "MailReceived": "RSV.OlgaHelped",
-                     "NoLetter": "true",
+                     "MailReceived": "OlgaSOLetter",
+                     "NoLetter": "false",
                   }
                },
             ]

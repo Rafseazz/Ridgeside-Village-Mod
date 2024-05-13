@@ -70,7 +70,8 @@ namespace RidgesideVillage
         private void OnRenderingWorld(object sender, RenderingWorldEventArgs e)
         {
             SpriteBatch spriteBatch = e.SpriteBatch;
-            Rectangle viewPort = Game1.viewport.ToXna();
+            var viewport = Game1.viewport;
+            Rectangle viewPort = new Rectangle(viewport.X, viewport.Y, viewport.Width, viewport.Height);
             Vector2 origin = new Vector2(-viewPort.Center.X / 8, -viewPort.Center.Y / 8) * Game1.options.zoomLevel;
             float scale = 4f;
             spriteBatch.Draw(skyTexture, Vector2.Zero, null, Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 0.8f);

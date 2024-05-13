@@ -20,9 +20,7 @@ namespace RidgesideVillage
     {
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
-
-        //activated often in getFish, so we cache it
-        private static int CachedSapphireID;
+        
         //activate tracker for fox statue
         private static bool OnFoxStatueMap;
         //count consecutive 10min intervals where player was close to statue
@@ -33,7 +31,7 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            //Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             Helper.Events.Player.Warped += OnWarped;
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.ReturnedToTitle += OnReturnToTitle;
@@ -59,10 +57,6 @@ namespace RidgesideVillage
             harmony.Patch(
                 original: AccessTools.Method(typeof(FishingRod), nameof(FishingRod.pullFishFromWater)),
                 postfix: new HarmonyMethod(typeof(TreasureItems), nameof(FishingRod_PullFishFromWater_PostFix))
-            );
-            harmony.Patch(
-                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.getFish)),
-                postfix: new HarmonyMethod(typeof(TreasureItems), nameof(GameLocation_GetFish_Postifx))
             );
 
         }
@@ -117,7 +111,7 @@ namespace RidgesideVillage
             if (!Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL))
                 return;
 
-            int distance = Math.Abs(Game1.player.getTileX() - 18) + Math.Abs(Game1.player.getTileY() - 10);
+            int distance = (int) (Math.Abs(Game1.player.Tile.X - 18) + Math.Abs(Game1.player.Tile.Y - 10));
             if(distance < 3)
             {
                 FoxStatueCounter.Value += 1;
@@ -129,27 +123,11 @@ namespace RidgesideVillage
 
             if(FoxStatueCounter.Value >= 12)
             {
-                SpawnJAItemAsDebris("Relic Fox Mask", 18, 10, Game1.getLocationFromName(RSVConstants.L_RIDGE));
+                SpawnJAItemAsDebris(RSVConstants.IRELICFOXMASK, 18, 10, Game1.getLocationFromName(RSVConstants.L_RIDGE));
                 Game1.player.mailReceived.Add(RSVConstants.M_FOXMASK);
                 FoxStatueCounter.Value = 0;
                 Helper.Events.GameLoop.TimeChanged -= OnTimeChanged;
                 OnFoxStatueMap = false;
-            }
-        }
-
-        private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
-        {
-            CachedSapphireID = ExternalAPIs.JA.GetObjectId("Sapphire Pearl");
-        }
-
-        private static void GameLocation_GetFish_Postifx(GameLocation __instance, float millisecondsAfterNibble, int bait, int waterDepth, Farmer who, double baitPotency, Vector2 bobberTile, string locationName, ref StardewValley.Object __result)
-        {
-            if (!Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL))
-                return;
-
-            if ((int)bobberTile.X == 60 && (int)bobberTile.Y == 55 && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_SAPPHIRE))
-            {
-                __result = new StardewValley.Object(CachedSapphireID, 1);
             }
         }
 
@@ -164,13 +142,13 @@ namespace RidgesideVillage
                 int tileY = y / 64;
                 if(tileX == 14 && tileY == 3 && Game1.currentLocation.Name.Equals(RSVConstants.L_HOTEL3) && !Game1.player.mailReceived.Contains(RSVConstants.M_MUSICBOX))
                 {
-                    SpawnJAItemAsDebris("Ancient Music Box", tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.IMUSICBOX, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_MUSICBOX);
                 }
                 else if(tileX == 5 && tileY == 3 && Game1.currentLocation.Name.Equals(RSVConstants.L_ALISSASHED) && !Game1.player.mailReceived.Contains(RSVConstants.M_EVERFROST))
                 {
                     Game1.player.mailReceived.Add(RSVConstants.M_EVERFROST);
-                    SpawnJAItemAsDebris("Everfrost Stone", tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.IEVERFROSTSTONE, tileX, tileY, Game1.currentLocation);
                 }
             }
             catch (Exception e)
@@ -190,18 +168,18 @@ namespace RidgesideVillage
                 int tileY = y / 64;
                 if (tileX == 80 && tileY == 22 && Game1.currentLocation.Name.Equals(RSVConstants.L_CLIFF) && !Game1.player.mailReceived.Contains(RSVConstants.M_MOOSE))
                 {
-                    SpawnJAItemAsDebris("Moose Statue", tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.IMOOSESTATUE, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_MOOSE);
 
                 }
                 else if (tileX == 63 && tileY == 40 && Game1.currentLocation.Name.Equals(RSVConstants.L_HIKE) && !Game1.player.mailReceived.Contains(RSVConstants.M_ELVENCOMB))
                 {
-                    SpawnJAItemAsDebris("Elven Comb", tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.IELVENCOMB, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_ELVENCOMB);
                 }
                 else if (tileX == 23 && tileY == 6 && Game1.currentLocation.Name.Equals(RSVConstants.L_CABLECAR) && !Game1.player.mailReceived.Contains(RSVConstants.M_OPALHALO))
                 {
-                    SpawnJAItemAsDebris("Opal Halo", tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.IOPALHALO, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_OPALHALO);
                 }
             }
@@ -222,7 +200,7 @@ namespace RidgesideVillage
                 int tileY = y / 64;
                 if (tileX == 11 && tileY == 7 && Game1.currentLocation.Name.Equals(RSVConstants.L_HAUNTEDGH) && !Game1.player.mailReceived.Contains(RSVConstants.M_CANDELABRUM))
                 {
-                    SpawnJAItemAsDebris("Pale Candelabrum", tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.ICANDELABRUM, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_CANDELABRUM);
                 }
             }
@@ -249,7 +227,7 @@ namespace RidgesideVillage
 
                 if (tileX == 145 && tileY == 69 && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_HEROSTATUE))
                 {
-                    SpawnJAItemAsDebris("Village Hero Sculpture", tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.IHEROSTATUE, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_HEROSTATUE);
                 }
                 
@@ -261,18 +239,17 @@ namespace RidgesideVillage
         }
 
         //if player pulled sapphire, add flag. not done in getFish() cus mod compatibility
-        private static void FishingRod_PullFishFromWater_PostFix(ref FishingRod __instance, int whichFish, int fishSize, int fishQuality, int fishDifficulty, bool treasureCaught, bool wasPerfect, bool fromFishPond, bool caughtDouble, string itemCategory)
+        private static void FishingRod_PullFishFromWater_PostFix(ref FishingRod __instance, string  fishId, int fishSize, int fishQuality, int fishDifficulty, bool treasureCaught, bool wasPerfect, bool fromFishPond)
         {
-            if (whichFish == CachedSapphireID)
+            if (fishId.Equals(RSVConstants.ISAPPHIREPEARL))
             {
                 Game1.player.mailReceived.Add(RSVConstants.M_SAPPHIRE);
             }
         }
 
-        internal static void SpawnJAItemAsDebris(string itemName, int tileX, int tileY, GameLocation location)
+        internal static void SpawnJAItemAsDebris(string itemID, int tileX, int tileY, GameLocation location)
         {
-            int itemID = ExternalAPIs.JA.GetObjectId(itemName);
-            if (itemID > 0)
+            if (itemID != null)
             {
                 Game1.createObjectDebris(itemID, tileX, tileY, location: location);
             }

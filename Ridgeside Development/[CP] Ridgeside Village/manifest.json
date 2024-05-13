@@ -12,7 +12,7 @@
 	/*********
 	** Current Version
 	*********/
-	"Version": "2.5.3",
+	"Version": "2.5.11",
 
 	/*********
 	** Content Pack Description
@@ -40,7 +40,7 @@
 	/*********
 	** Minimum Version for SMAPI
 	*********/
-	"MinimumApiVersion": "3.14.1",
+	"MinimumApiVersion": "4.0.0-alpha",
 
 	/*********
 	** Dependencies - Required mods and optional mods
@@ -55,7 +55,7 @@
 			*********/
       {
         "UniqueID": "Rafseazz.RSVCC",
-        "IsRequired": true,
+        "IsRequired": false,
       },
 
       /*********
@@ -63,40 +63,9 @@
       *********/
       {
         "UniqueID": "Rafseazz.RSVFTM",
-        "IsRequired": true,
-      },
-
-      /*********
-      ** JSON Assets
-      *********/
-      {
-        "UniqueID": "Rafseazz.RSVJA",
-        "IsRequired": true,
-      },
-
-      /*********
-      ** Mail Framework Mod
-      *********/
-      {
-        "UniqueID": "Rafseazz.RSVMFM",
-        "IsRequired": true,
-      },
-
-      /*********
-      ** Quest Framework
-      *********/
-      {
-        "UniqueID": "Rafseazz.RSVQF",
         "IsRequired": false,
       },
 
-      /*********
-      ** Shop Tile Framework
-      *********/
-      {
-        "UniqueID": "Rafseazz.RSVSTF",
-        "IsRequired": true,
-      },
 
 			/*********
 			** SMAPI Component
@@ -105,33 +74,13 @@
 				"UniqueID": "Rafseazz.RidgesideVillage",
 				"IsRequired": true,
   		},
-
-			/*********
-			** Stardew Audio API and Toolkit
-			*********/
-			{
-				"UniqueID": "Rafseazz.RSVSAAT",
-				"IsRequired": true,
-			},
-
-		/*********
-		** Required Mods
-		*********/
-			/*********
-			** Anti Social NPCs
-			*********/
-  		{
-				"UniqueID": "SuperAardvark.AntiSocial",
-				"IsRequired": true,
-  		},
-
 			/*********
 			** Custom Companions (CC)
 			*********/
   		{
     		"UniqueID": "PeacefulEnd.CustomCompanions",
     		"IsRequired": true,
-				"MinimumVersion": "2.3.0"
+				"MinimumVersion": "4.0.0"
     	},
 
 			/*********
@@ -139,7 +88,7 @@
 			*********/
 			{
 				"UniqueID": "Esca.CustomNPCExclusions",
-				"IsRequired": true,
+				"IsRequired": false,
 	  	},
 
 			/*********
@@ -155,48 +104,33 @@
 			*********/
   		{
 				"UniqueID": "Cherry.ExpandedPreconditionsUtility",
-				"IsRequired": true,
+				"IsRequired": false,
   		},
 
-			/*********
-			** ExtraMapLayers
-			*********/
-  		{
-    		"UniqueID": "aedenthorn.ExtraMapLayers",
-    		"IsRequired": true,
-  		},
 
 			/*********
 			** Farm Type Manager (FTM)
 			*********/
-  		{
+/*   		{
 				"UniqueID": "Esca.FarmTypeManager",
 				"IsRequired": true,
-  		},
-
-			/*********
-			** JSON Assets (JA)
-			*********/
-  		{
-    		 "UniqueID": "spacechase0.JsonAssets",
-    		 "IsRequired": true,
-  		},
+  		}, */
 
 			/*********
 			** Mail Framework Mod (MFM)
 			*********/
-  		{
+/*   		{
 				"UniqueID": "DIGUS.MailFrameworkMod",
     		"IsRequired": true,
-  		},
+  		}, */
 
 			/*********
 			** Quest Framework (QF)
 			*********/
-  		{
+/*   		{
     		"UniqueID": "PurrplingCat.QuestFramework",
     		"IsRequired": false,
-  		},
+  		}, */
 
 			/*********
 			** SpaceCore
@@ -204,16 +138,16 @@
   		{
 				"UniqueID": "spacechase0.SpaceCore",
     		"IsRequired": true,
-				"MinimumVersion": "1.8.0"
+				"MinimumVersion": "1.19.0"
   		},
 
 			/*********
 			** Stardew Audio API and Toolkit (SAAT)
 			*********/
-  		{
+/*   		{
     		"UniqueID": "ZeroMeters.SAAT.Mod",
     		"IsRequired": true,
-  		},
+  		}, */
 
 		/*********
 		** Optional Mods & Intermod Compatibility

@@ -96,6 +96,9 @@
 	"danceRejection": "{{i18n:Sean.Dialogue.danceRejection}}",
 	"divorced": "{{i18n:Sean.Dialogue.divorced}}",
 	"MovieInvitation": "{{i18n:Sean.Dialogue.MovieInvitation}}",
+
+	"AcceptGift_(O)StardropTea": "{{i18n:AcceptStardropTea.Sean}}",
+	"GreenRain": "{{i18n:GreenRain.Sean}}",
 		},
 	},
 
@@ -120,40 +123,6 @@
 	"Sun8": "{{i18n:Sean.Dialogue.Sun8.dating}}",
 		},
 	},
-
-	// Pregnany dialogue patches
-	{
-      "LogName": "Sean Spouse Pregnancy Dialogue Replacement 1",
-      "Action": "EditData",
-      "Target": "Strings/Events",
-      "Entries":
-      {
-          "HaveBabyQuestion": "{{i18n:Sean.HaveBabyQuestion}}",
-          "BirthMessage_PlayerMother": "{{i18n:Sean.BirthMessage_PlayerMother}}",
-      },
-      "When":
-      {
-          "Relationship:Sean": "Married",
-          "HasMod |contains= kdau.PregnancyRole": false,
-          "HasMod |contains= Rubecula.ParrotParents": false,
-      },
-  },
-
-  {
-      "LogName": "Sean Spouse Pregnancy Dialogue Replacement 2",
-      "Action": "EditData",
-      "Target": "Strings/StringsFromCSFiles",
-      "Entries":
-      {
-          "NPC.cs.4448": "{{i18n:Sean.Strings.4448}}",
-      },
-      "When":
-      {
-          "Relationship:Sean": "Married",
-          "HasMod |contains= kdau.PregnancyRole": false,
-          "HasMod |contains= Rubecula.ParrotParents": false,
-      },
-  },
 
 	//Summit House upgrade dialogue
 	{

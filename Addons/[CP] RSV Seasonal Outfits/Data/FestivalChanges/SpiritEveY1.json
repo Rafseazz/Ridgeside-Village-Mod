@@ -67,7 +67,23 @@
           {
            "Operation": "Append",
            "Target": ["Fields", "set-up", 5],
-           "Value": "/addTemporaryActor Pika 32 32 17 73 3/animate Pika false true 1000 6 6 6",
+           "Value": "/addTemporaryActor Pika_fall27-1 32 32 17 73 down/animate Pika_fall27-1 false true 1000 6 6 6",
+          },
+        ]
+    },
+	{
+        //Invisible Pika
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Pika": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Pika 17 73 down",
+              "Delimiter": "/"
           },
         ]
     },
@@ -98,7 +114,23 @@
           {
            "Operation": "Append",
            "Target": ["Fields", "set-up", 5],
-           "Value": "/addTemporaryActor Trinnie 32 32 9 64 0 false/animate Trinnie false true 100 8 8 8 3 3 3 8 8 8 3 3 3 8 8 8 3 3 3 8 9 10 11 10 9 8 3 3 3",
+           "Value": "/addTemporaryActor Trinnie_fall27-1 32 32 9 64 down false/animate Trinnie_fall27-1 false true 100 8 8 8 3 3 3 8 8 8 3 3 3 8 8 8 3 3 3 8 9 10 11 10 9 8 3 3 3",
+          },
+        ]
+    },
+	{
+        //Invisible Trinnie
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Trinnie": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Trinnie 9 64 down",
+              "Delimiter": "/"
           },
         ]
     },
@@ -129,7 +161,23 @@
           {
            "Operation": "Append",
            "Target": ["Fields", "set-up", 5],
-           "Value": "/addTemporaryActor Kenneth 48 48 10 67 0 false/animate Kenneth false true 100 3 4 7 11 12 15 16 19 20 23 24 27 28 31 32 35 36 39 40 43 44 47 48 51",
+           "Value": "/addTemporaryActor Kenneth_fall27-1 48 48 10 67 down false/animate Kenneth_fall27-1 false true 100 3 4 7 11 12 15 16 19 20 23 24 27 28 31 32 35 36 39 40 43 44 47 48 51",
+          },
+        ]
+    },
+	{
+        //Invisible Kenneth
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Kenneth": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Kenneth 11 67 down",
+              "Delimiter": "/"
           },
         ]
     },

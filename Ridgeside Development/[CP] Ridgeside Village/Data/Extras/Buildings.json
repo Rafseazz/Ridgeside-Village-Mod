@@ -6,26 +6,46 @@
       "Target": "Buildings/RSV Obelisk",
       "FromFile": "Assets/LooseSprites/RSVObelisk.png"
     },
-	  {
-      "LogName": "RSV Blueprints",
+    {
+      "LogName": "Add Obelisk",
       "Action": "EditData",
-      "Target": "Data/Blueprints",
+      "Target": "Data/Buildings",
       "Entries": {
-        "RSV Obelisk": "{{spacechase0.JsonAssets/ObjectId:Spiritual Essence}} 200 337 10/3/2/-1/-1/-2/-1/null/{{i18n:Blueprint.Name.RSVObelisk}}/{{i18n:Blueprint.Description.RSVObelisk}}/Buildings/none/48/128/-1/null/Farm/500000/true",
+        "RSV_Obelisk": {
+          "Name": "{{i18n:Blueprint.Name.RSVObelisk}}",
+          "Description": "{{i18n:Blueprint.Description.RSVObelisk}}",
+          "Texture": "Buildings\\RSV Obelisk",
+          "Builder": "Wizard",
+          "BuildCost": 500000,
+          "BuildMaterials": [
+            {
+              "ItemId": "Rafseazz.RSVCP_Spiritual_Essence",
+              "Amount": 200
+            },
+            {
+              "ItemId": "(O)337",
+              "Amount": 10
+            }
+          ],
+          "MagicalConstruction": "True",
+          "Size": {
+            "X": 3,
+            "Y": 2
+          },
+          "DefaultAction": "ObeliskWarp Custom_Ridgeside_Ridge 18 10 false",
+        }
       }
     },
-
     {
       "LogName": "Load placeholders to prevent LookUpInfo bugs",
       "Action": "Load",
-      "Target": "Maps/Climate Control, Maps/Ore Area, Maps/Sprinkler System, Maps/Summit House Upgrade, Maps/Summit Shed",
+      "Target": "Maps/Climate Control, Maps/Ore Area, Maps/Sprinkler System, Maps/Summit House Upgrade",
       "FromFile": "Assets/Maps/Placeholder.tmx"
     },
-
     {
-    "Action": "Load",
-    "Target": "Buildings/Climate Control, Buildings/Ore Area, Buildings/Sprinkler System, Buildings/Summit House Upgrade, Buildings/Summit Shed",
-    "FromFile": "Assets/LooseSprites/Placeholder.png"
+      "Action": "Load",
+      "Target": "Buildings/Climate Control, Buildings/Ore Area, Buildings/Sprinkler System, Buildings/Summit House Upgrade, Buildings/Summit Shed",
+      "FromFile": "Assets/LooseSprites/Placeholder.png"
     }
   ]
 }

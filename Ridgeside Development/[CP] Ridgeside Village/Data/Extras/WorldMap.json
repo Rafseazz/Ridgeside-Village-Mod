@@ -1,0 +1,673 @@
+{
+    "Changes": [
+        {
+            "LogName": "Load Village Map",
+            "Action": "Load",
+            "Target": "LooseSprites/RSVWorldMap_unscaled",
+            "FromFile": "Assets/LooseSprites/RSVWorldMap_unscaled.png"
+        },
+        {
+            "LogName": "Add World Map",
+            "Action": "EditData",
+            "Target": "Data/WorldMap",
+            "Entries": {
+                "Rafseazz.RSVCP_RidgesideVillage": {
+                    "BaseTexture": [
+                        {
+                            "Id": "RSV_Base_Texture",
+                            "Texture": "LooseSprites/RSVWorldMap_unscaled"
+                        }
+                    ],
+                    "MapAreas": [
+                        {
+                            "Id": "Custom_Ridgeside_RSVCliff",
+                            "PixelArea": {
+                                "X": 149,
+                                "Y": 45,
+                                "Width": 54,
+                                "Height": 25
+                            },
+                            "ScrollText": "{{i18n:RSVCliff.Name}}",
+                            "WorldPositions": [
+                                {
+                                    "Id": "Custom_Ridgeside_RSVCliff",
+                                    "LocationName": "Custom_Ridgeside_RSVCliff"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_KennethHouse",
+                                    "LocationName": "Custom_Ridgeside_KennethHouse",
+                                    "MapPixelArea": {
+                                        "X": 170,
+                                        "Y": 60,
+                                        "Width": 4,
+                                        "Height": 6
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_KennethHouse.Name}}"
+                                }
+                            ],
+                            "Tooltips": [
+                                {
+                                    "Id": "Electrician",
+                                    "Text": "{{i18n:RSV.Map.Text.Electrician}}",
+                                    "PixelArea": {
+                                        "X": 169,
+                                        "Y": 60,
+                                        "Width": 6,
+                                        "Height": 7
+                                    },
+                                },                                {
+                                    "Id": "CableCar",
+                                    "Text": "{{i18n:RSV.Map.Text.CableCar}}",
+                                    "PixelArea": {
+                                        "X": 164,
+                                        "Y": 50,
+                                        "Width": 9,
+                                        "Height": 8
+                                    },
+                                },
+                            ]
+                        },
+                        {
+                            "Id": "Custom_Ridgeside_RidgesideVillage",
+                            "PixelArea": {
+                                "X": 0,
+                                "Y": 32,
+                                "Width": 144,
+                                "Height": 127
+                            },
+                            "ScrollText": "{{i18n:Custom_Ridgeside_RidgesideVillage.Name}}",
+                            "WorldPositions": [
+                                {
+                                    "Id": "Custom_Ridgeside_RidgesideVillage",
+                                    "LocationName": "Custom_Ridgeside_RidgesideVillage"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_LolaShed",
+                                    "LocationName": "Custom_Ridgeside_LolaShed",
+                                    "MapPixelArea": {
+                                        "X": 3,
+                                        "Y": 65,
+                                        "Width": 7,
+                                        "Height": 8
+                                    },
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_JericHouse",
+                                    "LocationName": "Custom_Ridgeside_JericHouse",
+                                    "MapPixelArea": {
+                                        "X": 15,
+                                        "Y": 43,
+                                        "Width": 9,
+                                        "Height": 8
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_JericHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_3Bros",
+                                    "LocationNames": [
+                                        "Custom_Ridgeside_3Bros",
+                                        "Custom_Ridgeside_3Bros2ndFloor"
+                                    ],
+                                    "MapPixelArea": {
+                                        "X": 62,
+                                        "Y": 36,
+                                        "Width": 6,
+                                        "Height": 12
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_3Bros.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_EzekielHouse",
+                                    "LocationName": "Custom_Ridgeside_EzekielHouse",
+                                    "MapPixelArea": {
+                                        "X": 69,
+                                        "Y": 39,
+                                        "Width": 9,
+                                        "Height": 8
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_EzekielHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_MaddieHouse",
+                                    "LocationName": "Custom_Ridgeside_MaddieHouse",
+                                    "MapPixelArea": {
+                                        "X": 74,
+                                        "Y": 48,
+                                        "Width": 9,
+                                        "Height": 8
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_MaddieHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_LogCabinHotelLobby",
+                                    "LocationNames": [
+                                        "Custom_Ridgeside_LogCabinHotelLobby",
+                                        "Custom_Ridgeside_LogCabinHotel2ndFloor",
+                                        "Custom_Ridgeside_LogCabinHotel3rdFloor",
+                                        "Custom_Ridgeside_LogCabinEventHall"
+                                    ],
+                                    "MapPixelArea": {
+                                        "X": 90,
+                                        "Y": 41,
+                                        "Width": 16,
+                                        "Height": 12
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_LogCabinHotelLobby.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_IanHouse",
+                                    "LocationName": "Custom_Ridgeside_IanHouse",
+                                    "MapPixelArea": {
+                                        "X": 109,
+                                        "Y": 44,
+                                        "Width": 7,
+                                        "Height": 7
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_IanHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_PaulaClinic",
+                                    "LocationName": "Custom_Ridgeside_PaulaClinic",
+                                    "MapPixelArea": {
+                                        "X": 107,
+                                        "Y": 56,
+                                        "Width": 13,
+                                        "Height": 7
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_PaulaClinic.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_ShiroHouse",
+                                    "LocationName": "Custom_Ridgeside_ShiroHouse",
+                                    "MapPixelArea": {
+                                        "X": 108,
+                                        "Y": 66,
+                                        "Width": 6,
+                                        "Height": 6
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_ShiroHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_PurpleMansion",
+                                    "LocationNames": [
+                                        "Custom_Ridgeside_PurpleMansion",
+                                        "Custom_Ridgeside_PurpleMansion2ndFloor"
+                                    ],
+                                    "MapPixelArea": {
+                                        "X": 104,
+                                        "Y": 80,
+                                        "Width": 13,
+                                        "Height": 15
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_PurpleMansion.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_LennyHouse",
+                                    "LocationName": "Custom_Ridgeside_LennyHouse",
+                                    "MapPixelArea": {
+                                        "X": 90,
+                                        "Y": 60,
+                                        "Width": 13,
+                                        "Height": 8
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_LennyHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_FayeHouse",
+                                    "LocationName": "Custom_Ridgeside_FayeHouse",
+                                    "MapPixelArea": {
+                                        "X": 84,
+                                        "Y": 78,
+                                        "Width": 5,
+                                        "Height": 6
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_FayeHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_RSVGreenhouse1",
+                                    "LocationName": "Custom_Ridgeside_RSVGreenhouse1",
+                                    "MapPixelArea": {
+                                        "X": 76,
+                                        "Y": 89,
+                                        "Width": 11,
+                                        "Height": 7
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_RSVGreenhouse1.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_PikaHouse",
+                                    "LocationName": "Custom_Ridgeside_PikaHouse",
+                                    "MapPixelArea": {
+                                        "X": 61,
+                                        "Y": 79,
+                                        "Width": 6,
+                                        "Height": 5
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_PikaHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_BlairHouse",
+                                    "LocationName": "Custom_Ridgeside_BlairHouse",
+                                    "MapPixelArea": {
+                                        "X": 60,
+                                        "Y": 89,
+                                        "Width": 8,
+                                        "Height": 7
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_BlairHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_FreddieHouse",
+                                    "LocationName": "Custom_Ridgeside_FreddieHouse",
+                                    "MapPixelArea": {
+                                        "X": 9,
+                                        "Y": 80,
+                                        "Width": 6,
+                                        "Height": 6
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_FreddieHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_AlissaShed",
+                                    "LocationName": "Custom_Ridgeside_AlissaShed",
+                                    "MapPixelArea": {
+                                        "X": 13,
+                                        "Y": 106,
+                                        "Width": 5,
+                                        "Height": 9
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_AlissaShed.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_AlissaHouse",
+                                    "LocationName": "Custom_Ridgeside_AlissaHouse",
+                                    "MapPixelArea": {
+                                        "X": 18,
+                                        "Y": 106,
+                                        "Width": 8,
+                                        "Height": 5
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_AlissaHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_BertHouse",
+                                    "LocationNames": [
+                                        "Custom_Ridgeside_BertHouse",
+                                        "Custom_Ridgeside_BertHouse2ndFloor"
+                                    ],
+                                    "MapPixelArea": {
+                                        "X": 58,
+                                        "Y": 124,
+                                        "Width": 10,
+                                        "Height": 5
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_BertHouse.Name}}"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_AguarLab",
+                                    "LocationNames": [
+                                        "Custom_Ridgeside_AguarLab",
+                                        "Custom_Ridgeside_AguarBasement"
+                                    ],
+                                    "MapPixelArea": {
+                                        "X": 81,
+                                        "Y": 118,
+                                        "Width": 13,
+                                        "Height": 7
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_AguarLab.Name}}"
+                                },
+                            ],
+                            "Tooltips": [
+                                {
+                                    "Id": "BloomingHillFarm",
+                                    "Text": "{{i18n:RSV.Map.Text.BloomingHillFarm}}",
+                                    "PixelArea": {
+                                        "X": 14,
+                                        "Y": 43,
+                                        "Width": 21,
+                                        "Height": 14
+                                    },
+                                },
+                                {
+                                    "Id": "BloomingHillFarmChickenCoop",
+                                    "Text": "{{i18n:RSV.Map.Text.JericChickens}}",
+                                    "PixelArea": {
+                                        "X": 17,
+                                        "Y": 60,
+                                        "Width": 22,
+                                        "Height": 10
+                                    },
+                                },
+                                {
+                                    "Id": "Heaps",
+                                    "Text": "{{i18n:RSV.Map.Text.Heaps}}",
+                                    "PixelArea": {
+                                        "X": 62,
+                                        "Y": 36,
+                                        "Width": 6,
+                                        "Height": 14
+                                    },
+                                },
+                                {
+                                    "Id": "Daniels",
+                                    "Text": "{{i18n:RSV.Map.Text.Daniels}}",
+                                    "PixelArea": {
+                                        "X": 69,
+                                        "Y": 38,
+                                        "Width": 9,
+                                        "Height": 10
+                                    },
+                                },
+                                {
+                                    "Id": "Pickens",
+                                    "Text": "{{i18n:RSV.Map.Text.Pickens}}",
+                                    "PixelArea": {
+                                        "X": 74,
+                                        "Y": 47,
+                                        "Width": 10,
+                                        "Height": 9
+                                    },
+                                },
+                                {
+                                    "Id": "LogCabinHotel",
+                                    "Text": "{{i18n:RSV.Map.Text.LogCabinHotel.firstYear}}",
+                                    "PixelArea": {
+                                        "X": 90,
+                                        "Y": 38,
+                                        "Width": 16,
+                                        "Height": 16
+                                    },
+                                },
+                                {
+                                    "Id": "OddJobs",
+                                    "Text": "{{i18n:RSV.Map.Text.OddJobs}}",
+                                    "PixelArea": {
+                                        "X": 108,
+                                        "Y": 41,
+                                        "Width": 9,
+                                        "Height": 11
+                                    },
+                                },
+                                {
+                                    "Id": "Clinic",
+                                    "Text": "{{i18n:RSV.Map.Text.Clinic}}",
+                                    "PixelArea": {
+                                        "X": 106,
+                                        "Y": 54,
+                                        "Width": 15,
+                                        "Height": 10
+                                    },
+                                },
+                                {
+                                    "Id": "Kobayashi",
+                                    "Text": "{{i18n:RSV.Map.Text.Kobayashi}}",
+                                    "PixelArea": {
+                                        "X": 107,
+                                        "Y": 64,
+                                        "Width": 8,
+                                        "Height": 9
+                                    },
+                                },
+                                {
+                                    "Id": "VillageOffice",
+                                    "Text": "{{i18n:RSV.Map.Text.VillageOffice}}",
+                                    "PixelArea": {
+                                        "X": 89,
+                                        "Y": 57,
+                                        "Width": 15,
+                                        "Height": 13
+                                    },
+                                },
+                                {
+                                    "Id": "Amethyne",
+                                    "Text": "{{i18n:RSV.Map.Text.Amethyne}}",
+                                    "PixelArea": {
+                                        "X": 103,
+                                        "Y": 78,
+                                        "Width": 15,
+                                        "Height": 18
+                                    },
+                                },
+                                {
+                                    "Id": "Yojeong",
+                                    "Text": "{{i18n:RSV.Map.Text.Yojeong}}",
+                                    "PixelArea": {
+                                        "X": 83,
+                                        "Y": 75,
+                                        "Width": 7,
+                                        "Height": 10
+                                    },
+                                },
+                                {
+                                    "Id": "CommunityGreenhouse",
+                                    "Text": "{{i18n:RSV.Map.Text.CommunityGreenhouse}}",
+                                    "PixelArea": {
+                                        "X": 75,
+                                        "Y": 86,
+                                        "Width": 13,
+                                        "Height": 11
+                                    },
+                                },
+                                {
+                                    "Id": "Rivera",
+                                    "Text": "{{i18n:RSV.Map.Text.Rivera}}",
+                                    "PixelArea": {
+                                        "X": 59,
+                                        "Y": 86,
+                                        "Width": 11,
+                                        "Height": 10
+                                    },
+                                },
+                                {
+                                    "Id": "Akina",
+                                    "Text": "{{i18n:RSV.Map.Text.Akina}}",
+                                    "PixelArea": {
+                                        "X": 60,
+                                        "Y": 77,
+                                        "Width": 8,
+                                        "Height": 8
+                                    },
+                                },
+                                {
+                                    "Id": "WaterResearch",
+                                    "Text": "{{i18n:RSV.Map.Text.WaterResearch}}",
+                                    "PixelArea": {
+                                        "X": 80,
+                                        "Y": 115,
+                                        "Width": 40,
+                                        "Height": 17
+                                    },
+                                },
+                                {
+                                    "Id": "Lidens",
+                                    "Text": "{{i18n:RSV.Map.Text.Lidens}}",
+                                    "PixelArea": {
+                                        "X": 57,
+                                        "Y": 121,
+                                        "Width": 12,
+                                        "Height": 11
+                                    },
+                                },
+                                {
+                                    "Id": "Nightingale",
+                                    "Text": "{{i18n:RSV.Map.Text.Nightingale}}",
+                                    "PixelArea": {
+                                        "X": 9,
+                                        "Y": 103,
+                                        "Width": 31,
+                                        "Height": 18
+                                    },
+                                },
+                                {
+                                    "Id": "Bladebane",
+                                    "Text": "{{i18n:RSV.Map.Text.Bladebane}}",
+                                    "PixelArea": {
+                                        "X": 8,
+                                        "Y": 78,
+                                        "Width": 8,
+                                        "Height": 9
+                                    },
+                                },
+                                {
+                                    "Id": "LolaShed",
+                                    "Text": "{{i18n:RSV.Map.Text.LolaShed}}",
+                                    "PixelArea": {
+                                        "X": 2,
+                                        "Y": 65,
+                                        "Width": 9,
+                                        "Height": 9
+                                    },
+                                },
+                                {
+                                    "Id": "Pikas",
+                                    "Text": "{{i18n:RSV.Map.Text.Pikas}}",
+                                    "PixelArea": {
+                                        "X": 72,
+                                        "Y": 58,
+                                        "Width": 13,
+                                        "Height": 10
+                                    },
+                                },
+                                {
+                                    "Id": "Starbound",
+                                    "Text": "{{i18n:RSV.Map.Text.Starbound}}",
+                                    "PixelArea": {
+                                        "X": 54,
+                                        "Y": 54,
+                                        "Width": 17,
+                                        "Height": 14
+                                    },
+                                },
+                                {
+                                    "Id": "BloomingHillFarm",
+                                    "Text": "{{i18n:RSV.Map.Text.BloomingHillFarm}}",
+                                    "PixelArea": {
+                                        "X": 14,
+                                        "Y": 43,
+                                        "Width": 21,
+                                        "Height": 14
+                                    },
+                                },
+                            ]
+                        },
+                        {
+                            "Id": "Custom_Ridgeside_RidgeFalls",
+                            "PixelArea": {
+                                "X": 3,
+                                "Y": 2,
+                                "Width": 49,
+                                "Height": 37
+                            },
+                            "ScrollText": "{{i18n:Custom_Ridgeside_RidgeFalls.Name}}",
+                            "WorldPositions": [
+                                {
+                                    "Id": "Custom_Ridgeside_RidgeFalls",
+                                    "LocationName": "Custom_Ridgeside_RidgeFalls"
+                                }
+                            ],
+                            "Tooltips": [
+                                {
+                                    "Id": "RidgeFalls",
+                                    "Text": "{{i18n:RSV.Map.Text.RidgeFalls}}",
+                                    "PixelArea": {
+                                        "X": 14,
+                                        "Y": 1,
+                                        "Width": 25,
+                                        "Height": 23
+                                    },
+                                },
+                            ]
+                        },
+                        {
+                            "Id": "Custom_Ridgeside_Ridge",
+                            "PixelArea": {
+                                "X": 67,
+                                "Y": 10,
+                                "Width": 34,
+                                "Height": 21
+                            },
+                            "ScrollText": "{{i18n:Custom_Ridgeside_Ridge.Name}}",
+                            "WorldPositions": [
+                                {
+                                    "Id": "Custom_Ridgeside_Ridge",
+                                    "LocationName": "Custom_Ridgeside_Ridge"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_RSVNinjaHouse",
+                                    "LocationName": "Custom_Ridgeside_RSVNinjaHouse",
+                                    "MapPixelArea": {
+                                        "X": 91,
+                                        "Y": 11,
+                                        "Width": 5,
+                                        "Height": 7
+                                    },
+                                    "ScrollText": "{{i18n:NinjaHouse.Name}}"
+                                }
+                            ],
+                            "Tooltips": [
+                                {
+                                    "Id": "NinjaHouse",
+                                    "Text": "{{i18n:RSV.Map.Text.NinjaHouse}}",
+                                    "PixelArea": {
+                                        "X": 89,
+                                        "Y": 10,
+                                        "Width": 9,
+                                        "Height": 10
+                                    },
+                                },
+                                {
+                                    "Id": "Ridge",
+                                    "Text": "{{i18n:RSV.Map.Text.Ridge}}"
+                                },
+                            ]
+                        },
+                        {
+                            "Id": "Custom_Ridgeside_RSVTheHike",
+                            "PixelArea": {
+                                "X": 141,
+                                "Y": 79,
+                                "Width": 37,
+                                "Height": 43
+                            },
+                            "ScrollText": "{{i18n:Custom_Ridgeside_RSVTheHike.Name}}",
+                            "WorldPositions": [
+                                {
+                                    "Id": "Custom_Ridgeside_RSVTheHike",
+                                    "LocationName": "Custom_Ridgeside_RSVTheHike"
+                                },
+                                {
+                                    "Id": "Custom_Ridgeside_RSVAbandonedHouse",
+                                    "LocationName": "Custom_Ridgeside_RSVAbandonedHouse",
+                                    "MapPixelArea": {
+                                        "X": 165,
+                                        "Y": 95,
+                                        "Width": 5,
+                                        "Height": 6
+                                    },
+                                    "ScrollText": "{{i18n:Custom_Ridgeside_RSVAbandonedHouse.Name}}"
+                                }
+                            ],
+                            "Tooltips": [
+                                {
+                                    "Id": "AbandonedHouse",
+                                    "Text": "{{i18n:RSV.Map.Text.AbandonedHouse}}",
+                                    "PixelArea": {
+                                        "X": 164,
+                                        "Y": 94,
+                                        "Width": 7,
+                                        "Height": 8
+                                    },
+                                },
+                                {
+                                    "Id": "Hike",
+                                    "Text": "{{i18n:RSV.Map.Text.Hike}}"
+                                },
+                            ]
+                        },
+                    ]
+                }
+            }
+        },
+    ]
+}

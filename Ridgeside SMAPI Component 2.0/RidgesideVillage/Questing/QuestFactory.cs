@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using StardewModdingAPI;
-using StardewValley;
+﻿using StardewValley;
 using StardewValley.Quests;
+using System;
+using System.Collections.Generic;
+using StardewValley.Minigames;
 
-using SObject = StardewValley.Object;
 namespace RidgesideVillage.Questing
 {
 
-	static internal class QuestFactory
+    static internal class QuestFactory
 	{
 		static internal Quest GetDailyQuest()
-		{
-			if (Game1.random.NextDouble() < 0.2)
+        {
+            double roll = Game1.random.NextDouble();
+			Log.Trace($"RSV questfactory rolled {roll}");
+			if (roll < 0.2)
 			{
 				return null;
 			}
-			if (Game1.random.NextDouble() > 0.2)
+			if (roll < 0.84)
 			{
 				return GetRandomHandCraftedQuest();
             }
@@ -37,12 +34,12 @@ namespace RidgesideVillage.Questing
             {
 				return null;
             }
-			var quests = ModEntry.Helper.GameContent.Load<Dictionary<int, string>>(StardewModdingAPI.Utilities.PathUtilities.NormalizeAssetName("data/quests"));
-			var candidates = new List<int>();
+			var quests = ModEntry.Helper.GameContent.Load<Dictionary<string, string>>(StardewModdingAPI.Utilities.PathUtilities.NormalizeAssetName("data/quests"));
+			var candidates = new List<string>();
 			foreach (var key in quests.Keys)
 			{
 				// is ninjaquest and not completed yet
-				if (key >= 72860500 && key <= 72860999 && !QuestController.FinishedQuests.Value.Contains(key))
+				if (int.TryParse(key, out var keyNr) &&  keyNr >= 72860500 && keyNr <= 72860999 && !QuestController.FinishedQuests.Value.Contains(key))
 				{
 					if (!Game1.player.hasQuest(key))
 					{
@@ -62,11 +59,11 @@ namespace RidgesideVillage.Questing
 
 		static internal Quest GetRandomHandCraftedQuest()
         {
-			var quests = ModEntry.Helper.GameContent.Load<Dictionary<int, string>>(StardewModdingAPI.Utilities.PathUtilities.NormalizeAssetName("data/quests"));
-			var candidates = new List<int>();
+			var quests = ModEntry.Helper.GameContent.Load<Dictionary<string, string>>(StardewModdingAPI.Utilities.PathUtilities.NormalizeAssetName("data/quests"));
+			var candidates = new List<string>();
 			foreach(var key in quests.Keys)
             {
-				if (key >= 72861000 && key <= 72862000)
+				if (int.TryParse(key, out int keyNr) && keyNr >= 72861000 && keyNr <= 72862000)
                 {
                     if (!Game1.player.hasQuest(key))
 					{
@@ -98,60 +95,58 @@ namespace RidgesideVillage.Questing
 			{
 				case "spring":
 					{
-						possibleFish = new string[] { "Cutthroat Trout", "Ridgeside Bass", "Ridge Bluegill", "Caped Tree Frog", "Pebble Back Crab", "Harvester Trout", "Mountain Redbelly Dace", "Mountain Whitefish" };
-						int[] possiblefish2 = new int[8] { 129, 131, 136, 137, 142, 143, 145, 147 };
-						quest.whichFish.Value = possiblefish2[Game1.random.Next(possiblefish2.Length)];
+						possibleFish = new string[] { "Rafseazz.RSVCP_Cutthroat_Trout", "Rafseazz.RSVCP_Ridgeside_Bass", "Rafseazz.RSVCP_Ridge_Bluegill", "Rafseazz.RSVCP_Caped_Tree_Frog", "Rafseazz.RSVCP_Pebble_Back_Crab", "Rafseazz.RSVCP_Harvester_Trout", "Rafseazz.RSVCP_Mountain_Redbelly_Dace", "Rafseazz.RSVCP_Mountain_Whitefish" };
+						quest.ItemId.Value = possibleFish[Game1.random.Next(possibleFish.Length)];
 						break;
 					}
 				case "summer":
 					{
-						possibleFish = new string[] { "Cutthroat Trout", "Ridgeside Bass", "Caped Tree Frog", "Pebble Back Crab", "Skulpin Fish", "Mountain Redbelly Dace", "Mountain Whitefish" };
+						possibleFish = new string[] { "Rafseazz.RSVCP_Cutthroat_Trout", "Rafseazz.RSVCP_Ridgeside_Bass", "Rafseazz.RSVCP_Caped_Tree_Frog", "Rafseazz.RSVCP_Pebble_Back_Crab", "Rafseazz.RSVCP_Skulpin_Fish", "Rafseazz.RSVCP_Mountain_Redbelly_Dace", "Rafseazz.RSVCP_Mountain_Whitefish" };
 						break;
 					}
 				case "fall":
 					{
-						possibleFish = new string[] { "Cutthroat Trout", "Ridgeside Bass", "Ridge Bluegill", "Caped Tree Frog", "Pebble Back Crab", "Skulpin Fish", "Harvester Trout", "Mountain Redbelly Dace", "Mountain Whitefish" };
+						possibleFish = new string[] { "Rafseazz.RSVCP_Cutthroat_Trout", "Rafseazz.RSVCP_Ridgeside_Bass", "Rafseazz.RSVCP_Ridge_Bluegill", "Rafseazz.RSVCP_Caped_Tree_Frog", "Rafseazz.RSVCP_Pebble_Back_Crab", "Rafseazz.RSVCP_Skulpin_Fish", "Rafseazz.RSVCP_Harvester_Trout", "Rafseazz.RSVCP_Mountain_Redbelly_Dace", "Rafseazz.RSVCP_Mountain_Whitefish" };
 						break;
 					}
 				case "winter":
 					{
-						possibleFish = new string[] { "Ridgeside Bass", "Ridge Bluegill", "Skulpin Fish", "Harvester Trout", "Mountain Redbelly Dace", "Mountain Whitefish" };
+						possibleFish = new string[] { "Rafseazz.RSVCP_Ridgeside_Bass", "Rafseazz.RSVCP_Ridge_Bluegill", "Rafseazz.RSVCP_Skulpin_Fish", "Rafseazz.RSVCP_Harvester_Trout", "Rafseazz.RSVCP_Mountain_Redbelly_Dace", "Rafseazz.RSVCP_Mountain_Whitefish" };
 						break;
 					}
 				default:
 					{
-						possibleFish = new string[] { "Bream" };
+						possibleFish = new string[] { "132" };
 						break;
 					}
 			}
-			string chosenFish = possibleFish[Game1.random.Next(possibleFish.Length)];
-			quest.whichFish.Value = ExternalAPIs.JA.GetObjectId(chosenFish);
-			if(quest.whichFish.Value == -1)
+			string chosenFish = "(O)"+possibleFish[Game1.random.Next(possibleFish.Length)];
+			quest.ItemId.Value = chosenFish;
+			if(!ItemRegistry.Exists(chosenFish))
             {
-				quest.whichFish.Value = 132; //Bream as fallback
+				quest.ItemId.Value = "(O)132"; //Bream as fallback
 
 			}
-
-			quest.fish.Value = new SObject(Vector2.Zero, quest.whichFish.Value, 1);
-			quest.numberToFish.Value = (int)Math.Ceiling(200.0 / (double)Math.Max(1, quest.fish.Value.Price)) + Game1.player.FishingLevel / 5;
-			quest.reward.Value = (int)(quest.numberToFish.Value + 1.5) * quest.fish.Value.Price;
+			Item fishItem = ItemRegistry.Create(chosenFish);
+			quest.numberToFish.Value = (int)Math.Ceiling(200.0 / (double)Math.Max(1, fishItem.salePrice())) + Game1.player.FishingLevel / 5;
+			quest.reward.Value = (int)(quest.numberToFish.Value + 1.5) * fishItem.salePrice();
 			quest.target.Value = "Carmen";
 			quest.parts.Clear();
 			//have to patch the CSFiles for this... ugh
 			//its in the CP part, data/Quests/StringsForQuests
-			quest.parts.Add(new DescriptionElement("Strings\\StringsFromCSFiles:Carmen.FishingQuest.Description", quest.fish.Value, quest.numberToFish.Value)); //actual quest text
+			quest.parts.Add(new DescriptionElement("Strings\\StringsFromCSFiles:Carmen.FishingQuest.Description", fishItem.DisplayName, quest.numberToFish.Value)); //actual quest text
 			quest.dialogueparts.Clear();
-			quest.dialogueparts.Add(new DescriptionElement("Strings\\StringsFromCSFiles:Carmen.FishingQuest.HandInDialogue", quest.fish.Value));
-			quest.objective.Value = new DescriptionElement("Strings\\StringsFromCSFiles:FishingQuest.cs.13244", 0, quest.numberToFish.Value, quest.fish.Value); // progress
+			quest.dialogueparts.Add(new DescriptionElement("Strings\\StringsFromCSFiles:Carmen.FishingQuest.HandInDialogue", fishItem.DisplayName));
+			quest.objective.Value = new DescriptionElement("Strings\\StringsFromCSFiles:FishingQuest.cs.13244", 0, quest.numberToFish.Value, fishItem.DisplayName); // progress
 
 			quest.parts.Add(new DescriptionElement("Strings\\StringsFromCSFiles:FishingQuest.cs.13274", quest.reward.Value)); // reward
 			quest.parts.Add("Strings\\StringsFromCSFiles:FishingQuest.cs.13275"); //keep fish note
 			quest.daysLeft.Value = 7;
-			quest.id.Value = 80000000;
+			quest.id.Value = "80000000";
 			return quest;
 
 		}
-		static internal Quest getQuestFromId(int id)
+		static internal Quest getQuestFromId(string id)
 		{
 			Log.Trace($"Trying to load quest {id}");
 			Quest quest = null;
@@ -161,7 +156,7 @@ namespace RidgesideVillage.Questing
 
 				if (quest is SlayMonsterQuest monsterQuest)
 				{
-					Dictionary<int, string> questData = Game1.temporaryContent.Load<Dictionary<int, string>>("Data\\Quests");
+					Dictionary<string, string> questData = Game1.temporaryContent.Load<Dictionary<string, string>>("Data\\Quests");
 
 					if (questData != null && questData.ContainsKey(id))
 					{

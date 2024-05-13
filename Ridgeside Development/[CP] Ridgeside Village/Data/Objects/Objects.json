@@ -1,0 +1,2994 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Objects Tilesheet",
+      "Action": "Load",
+      "Target": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+      "FromFile": "Assets/Objects/Objects.png"
+    },
+    {
+      "LogName": "Objects Data",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "Rafseazz.RSVCP_Ancient_Music_Box": {
+          "Name": "Ancient Music Box",
+          "DisplayName": "{{i18n:objects.ancient-music-box.name}}",
+          "Description": "{{i18n:objects.ancient-music-box.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "0",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_gold",
+          ],
+        },
+        "Rafseazz.RSVCP_Apricot_Juice": {
+          "Name": "Apricot Juice",
+          "DisplayName": "{{i18n:objects.apricot-juice.name}}",
+          "Description": "{{i18n:objects.apricot-juice.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 30,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "1",
+          "Edibility": 15,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_light_yellow",
+          ],
+        },
+        "Rafseazz.RSVCP_Arugula_Roll": {
+          "Name": "Arugula Roll",
+          "DisplayName": "{{i18n:objects.arugula-roll.name}}",
+          "Description": "{{i18n:objects.arugula-roll.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 400,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "2",
+          "Edibility": 60,
+          "ContextTags": [
+            "color_green",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 2,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 3,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Aurorean_Iris": {
+          "Name": "Aurorean Iris",
+          "DisplayName": "{{i18n:objects.aurorean-iris.name}}",
+          "Description": "{{i18n:objects.aurorean-iris.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 50,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "3",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_purple",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice": {
+          "Name": "Autumn Dew Drop Juice",
+          "DisplayName": "{{i18n:objects.autumn-dew-drop-juice.name}}",
+          "Description": "{{i18n:objects.autumn-dew-drop-juice.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 200,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "4",
+          "Edibility": 51,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_dark_purple",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 420,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 2,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Autumn_Drop_Berry": {
+          "Name": "Autumn Drop Berry",
+          "DisplayName": "{{i18n:objects.autumn-drop-berry.name}}",
+          "Description": "{{i18n:objects.autumn-drop-berry.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 55,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "5",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_dark_red",
+          ],
+        },
+        "Rafseazz.RSVCP_Autumnal_Serenity": {
+          "Name": "Autumnal Serenity",
+          "DisplayName": "{{i18n:objects.autumnal-serenity.name}}",
+          "Description": "{{i18n:objects.autumnal-serenity.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "6",
+          "Edibility": 60,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 600,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 2,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 2,
+                "MaxStamina": 80,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Bladetail_Sturgeon": {
+          "Name": "Bladetail Sturgeon",
+          "DisplayName": "{{i18n:objects.bladetail-sturgeon.name}}",
+          "Description": "{{i18n:objects.bladetail-sturgeon.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 125,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "7",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_green",
+            "fish_bladetail_sturgeon",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Caped_Tree_Frog": {
+          "Name": "Caped Tree Frog",
+          "DisplayName": "{{i18n:objects.caped-tree-frog.name}}",
+          "Description": "{{i18n:objects.caped-tree-frog.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 65,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "8",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_green",
+            "fish_caped_tree_frog",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Cardia_Septal_Jellyfish": {
+          "Name": "Cardia Septal Jellyfish",
+          "DisplayName": "{{i18n:objects.cardia-septal-jellyfish.name}}",
+          "Description": "{{i18n:objects.cardia-septal-jellyfish.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 165,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "9",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_purple",
+            "fish_cardia_septal_jellyfish",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Cherry_Berry_Shakey": {
+          "Name": "Cherry Berry Shakey",
+          "DisplayName": "{{i18n:objects.cherry-berry-shakey.name}}",
+          "Description": "{{i18n:objects.cherry-berry-shakey.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 200,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "10",
+          "Edibility": 51,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_red",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 420,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 2,
+                "Defense": 0,
+                "Attack": 1
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Cherry_Pluot": {
+          "Name": "Cherry Pluot",
+          "DisplayName": "{{i18n:objects.cherry-pluot.name}}",
+          "Description": "{{i18n:objects.cherry-pluot.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 150,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "11",
+          "Edibility": 18,
+          "ContextTags": [
+            "color_red",
+          ],
+        },
+        "Rafseazz.RSVCP_Clementine_Cake": {
+          "Name": "Clementine Cake",
+          "DisplayName": "{{i18n:objects.clementine-cake.name}}",
+          "Description": "{{i18n:objects.clementine-cake.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 370,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "12",
+          "Edibility": 50,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 3,
+                "MaxStamina": 40,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Clementine_Juice": {
+          "Name": "Clementine Juice",
+          "DisplayName": "{{i18n:objects.clementine-juice.name}}",
+          "Description": "{{i18n:objects.clementine-juice.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 30,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "13",
+          "Edibility": 10,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_orange",
+          ],
+        },
+        "Rafseazz.RSVCP_Crimson_Spiked_Clam": {
+          "Name": "Crimson Spiked Clam",
+          "DisplayName": "{{i18n:objects.crimson-spiked-clam.name}}",
+          "Description": "{{i18n:objects.crimson-spiked-clam.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 180,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "14",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_red",
+            "fish_crimson_spiked_clam",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Crunchy_Bagel": {
+          "Name": "Crunchy Bagel",
+          "DisplayName": "{{i18n:objects.crunchy-bagel.name}}",
+          "Description": "{{i18n:objects.crunchy-bagel.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 80,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "15",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Cutthroat_Trout": {
+          "Name": "Cutthroat Trout",
+          "DisplayName": "{{i18n:objects.cutthroat-trout.name}}",
+          "Description": "{{i18n:objects.cutthroat-trout.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 35,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "16",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_dark_yellow",
+            "fish_cutthroat_trout",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Deep_Ridge_Angler": {
+          "Name": "Deep Ridge Angler",
+          "DisplayName": "{{i18n:objects.deep-ridge-angler.name}}",
+          "Description": "{{i18n:objects.deep-ridge-angler.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 2500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "17",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_light_blue",
+            "fish_deep_ridge_angler",
+            "fish_legendary",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Desert_Tangelo": {
+          "Name": "Desert Tangelo",
+          "DisplayName": "{{i18n:objects.desert-tangelo.name}}",
+          "Description": "{{i18n:objects.desert-tangelo.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 165,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "18",
+          "Edibility": 22,
+          "ContextTags": [
+            "color_orange",
+          ],
+        },
+        "Rafseazz.RSVCP_Elven_Comb": {
+          "Name": "Elven Comb",
+          "DisplayName": "{{i18n:objects.elven-comb.name}}",
+          "Description": "{{i18n:objects.elven-comb.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "19",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_green",
+          ],
+        },
+        "Rafseazz.RSVCP_Ember_Blood_Lime": {
+          "Name": "Ember Blood Lime",
+          "DisplayName": "{{i18n:objects.ember-blood-lime.name}}",
+          "Description": "{{i18n:objects.ember-blood-lime.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 155,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "20",
+          "Edibility": 17,
+          "ContextTags": [
+            "color_dark_red",
+          ],
+        },
+        "Rafseazz.RSVCP_Entombed_Ring": {
+          "Name": "Entombed Ring",
+          "DisplayName": "{{i18n:objects.entombed-ring.name}}",
+          "Description": "{{i18n:objects.entombed-ring.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 200,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "21",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_pink",
+          ],
+        },
+        "Rafseazz.RSVCP_Everfrost_Stone": {
+          "Name": "Everfrost Stone",
+          "DisplayName": "{{i18n:objects.everfrost-stone.name}}",
+          "Description": "{{i18n:objects.everfrost-stone.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "22",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_white",
+          ],
+        },
+        "Rafseazz.RSVCP_Fairytale_Lionfish": {
+          "Name": "Fairytale Lionfish",
+          "DisplayName": "{{i18n:objects.fairytale-lionfish.name}}",
+          "Description": "{{i18n:objects.fairytale-lionfish.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 145,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "23",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_blue",
+            "fish_fairytale_lionfish",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Fixer_Eel": {
+          "Name": "Fixer Eel",
+          "DisplayName": "{{i18n:objects.fixer-eel.name}}",
+          "Description": "{{i18n:objects.fixer-eel.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 120,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "24",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_yellow",
+            "fish_fixer_eel",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Fluffy_Apple_Crumble": {
+          "Name": "Fluffy Apple Crumble",
+          "DisplayName": "{{i18n:objects.fluffy-apple-crumble.name}}",
+          "Description": "{{i18n:objects.fluffy-apple-crumble.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 420,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "25",
+          "Edibility": 55,
+          "ContextTags": [
+            "color_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 64,
+                "Speed": 2,
+                "Defense": 2,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Forage_Souffle": {
+          "Name": "Forage Souffle",
+          "DisplayName": "{{i18n:objects.forage-souffle.name}}",
+          "Description": "{{i18n:objects.forage-souffle.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 140,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "26",
+          "Edibility": 25,
+          "ContextTags": [
+            "color_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 2,
+                "MaxStamina": 0,
+                "MagneticRadius": 1,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Forest_Amancay": {
+          "Name": "Forest Amancay",
+          "DisplayName": "{{i18n:objects.forest-amancay.name}}",
+          "Description": "{{i18n:objects.forest-amancay.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "27",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_yellow",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 32,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Forest_Halva": {
+          "Name": "Forest Halva",
+          "DisplayName": "{{i18n:objects.forest-halva.name}}",
+          "Description": "{{i18n:objects.forest-halva.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 120,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "28",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_prismatic",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 30,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Foxbloom": {
+          "Name": "Foxbloom",
+          "DisplayName": "{{i18n:objects.foxbloom.name}}",
+          "Description": "{{i18n:objects.foxbloom.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 10000,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "29",
+          "Edibility": 100,
+          "ContextTags": [
+            "color_red",
+          ],
+        },
+        "Rafseazz.RSVCP_Freddie_s_Sword": {
+          "Name": "Freddie's Sword",
+          "DisplayName": "{{i18n:objects.freddies-sword.name}}",
+          "Description": "{{i18n:objects.freddies-sword.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 0,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "30",
+          "Edibility": -300,
+          "ContextTags": [
+            "rsv_quest_item3",
+          ],
+        },
+        "Rafseazz.RSVCP_Fried_Fish_a_la_Ridge": {
+          "Name": "Fried Fish a la Ridge",
+          "DisplayName": "{{i18n:objects.fried-fish-a-la-ridge.name}}",
+          "Description": "{{i18n:objects.fried-fish-a-la-ridge.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 430,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "31",
+          "Edibility": 60,
+          "ContextTags": [
+            "color_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 5,
+                "MiningLevel": 0,
+                "LuckLevel": 2,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Fried_Mountain_Greens": {
+          "Name": "Fried Mountain Greens",
+          "DisplayName": "{{i18n:objects.fried-mountain-greens.name}}",
+          "Description": "{{i18n:objects.fried-mountain-greens.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 240,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "32",
+          "Edibility": 60,
+          "ContextTags": [
+            "color_light_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 3,
+                "MaxStamina": 0,
+                "MagneticRadius": 32,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Frost_Clump_Berry": {
+          "Name": "Frost Clump Berry",
+          "DisplayName": "{{i18n:objects.frost-clump-berry.name}}",
+          "Description": "{{i18n:objects.frost-clump-berry.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 30,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "33",
+          "Edibility": 15,
+          "ContextTags": [
+            "color_white",
+          ],
+        },
+        "Rafseazz.RSVCP_Ginger_Arugula_Fried_Rice": {
+          "Name": "Ginger Arugula Fried Rice",
+          "DisplayName": "{{i18n:objects.ginger-arugula-fried-rice.name}}",
+          "Description": "{{i18n:objects.ginger-arugula-fried-rice.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 400,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "34",
+          "Edibility": 50,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 2,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "ContextTags": [
+            "ginger_item",
+            "color_light_brown"
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ginger_Rangpur_Meringue": {
+          "Name": "Ginger Rangpur Meringue",
+          "DisplayName": "{{i18n:objects.ginger-rangpur-meringue.name}}",
+          "Description": "{{i18n:objects.ginger-rangpur-meringue.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 400,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "35",
+          "Edibility": 50,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 2,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "ContextTags": [
+            "ginger_item",
+            "color_orange"
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Glove_of_the_Assassin": {
+          "Name": "Glove of the Assassin",
+          "DisplayName": "{{i18n:objects.glove-of-the-assassin.name}}",
+          "Description": "{{i18n:objects.glove-of-the-assassin.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 15000,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "36",
+          "Edibility": -300,
+        },
+        "Rafseazz.RSVCP_Golden_Rose_Fin": {
+          "Name": "Golden Rose Fin",
+          "DisplayName": "{{i18n:objects.golden-rose-fin.name}}",
+          "Description": "{{i18n:objects.golden-rose-fin.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 110,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "37",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_yellow",
+            "fish_golden_rose_fin",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Golden_Skull_Coral": {
+          "Name": "Golden Skull Coral",
+          "DisplayName": "{{i18n:objects.golden-skull-coral.name}}",
+          "Description": "{{i18n:objects.golden-skull-coral.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 200,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "38",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_gold",
+          ],
+        },
+        "Rafseazz.RSVCP_Harvester_Trout": {
+          "Name": "Harvester Trout",
+          "DisplayName": "{{i18n:objects.harvester-trout.name}}",
+          "Description": "{{i18n:objects.harvester-trout.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 80,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "39",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_red",
+            "fish_harvester_trout",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Highland_Blueberry_Pie": {
+          "Name": "Highland Blueberry Pie",
+          "DisplayName": "{{i18n:objects.highland-blueberry-pie.name}}",
+          "Description": "{{i18n:objects.highland-blueberry-pie.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 230,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "40",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_blue",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 64,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Highland_Butterwort": {
+          "Name": "Highland Butterwort",
+          "DisplayName": "{{i18n:objects.highland-butterwort.name}}",
+          "Description": "{{i18n:objects.highland-butterwort.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "41",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_purple",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Highland_Chard": {
+          "Name": "Highland Chard",
+          "DisplayName": "{{i18n:objects.highland-chard.name}}",
+          "Description": "{{i18n:objects.highland-chard.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 70,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "42",
+          "Edibility": 20,
+          "ContextTags": [
+            "color_green",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Highland_Ice_Cream": {
+          "Name": "Highland Ice Cream",
+          "DisplayName": "{{i18n:objects.highland-ice-cream.name}}",
+          "Description": "{{i18n:objects.highland-ice-cream.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 100,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "43",
+          "Edibility": 51,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_light_yellow",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 420,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Highland_Jostaberry": {
+          "Name": "Highland Jostaberry",
+          "DisplayName": "{{i18n:objects.highland-jostaberry.name}}",
+          "Description": "{{i18n:objects.highland-jostaberry.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 170,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "44",
+          "Edibility": 14,
+          "ContextTags": [
+            "color_dark_pink",
+          ],
+        },
+        "Rafseazz.RSVCP_Highland_Revani": {
+          "Name": "Highland Revani",
+          "DisplayName": "{{i18n:objects.highland-revani.name}}",
+          "Description": "{{i18n:objects.highland-revani.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 400,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "45",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_light_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Holiday_Ice": {
+          "Name": "Holiday Ice",
+          "DisplayName": "{{i18n:objects.holiday-ice.name}}",
+          "Description": "{{i18n:objects.holiday-ice.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 230,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "46",
+          "Edibility": 25,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 2,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Hollowed_Bear": {
+          "Name": "Hollowed Bear",
+          "DisplayName": "{{i18n:objects.hollowed-bear.name}}",
+          "Description": "{{i18n:objects.hollowed-bear.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 200,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "47",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_brown",
+          ],
+        },
+        "Rafseazz.RSVCP_Honey_Ginger_Whitefish": {
+          "Name": "Honey Ginger Whitefish",
+          "DisplayName": "{{i18n:objects.honey-ginger-whitefish.name}}",
+          "Description": "{{i18n:objects.honey-ginger-whitefish.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 400,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "48",
+          "Edibility": 50,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 2,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "ContextTags": [
+            "ginger_item",
+            "color_orange"
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Honey_Glazed_Salad": {
+          "Name": "Honey Glazed Salad",
+          "DisplayName": "{{i18n:objects.honey-glazed-salad.name}}",
+          "Description": "{{i18n:objects.honey-glazed-salad.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "49",
+          "Edibility": 60,
+          "ContextTags": [
+            "color_gray",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 2,
+                "MaxStamina": 40,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Hundred_Flavor_Doughnut": {
+          "Name": "Hundred Flavor Doughnut",
+          "DisplayName": "{{i18n:objects.hundred-flavor-doughnut.name}}",
+          "Description": "{{i18n:objects.hundred-flavor-doughnut.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "50",
+          "Edibility": 30,
+          "ContextTags": [
+            "color_cyan",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 1,
+                "MiningLevel": 1,
+                "LuckLevel": 1,
+                "ForagingLevel": 1,
+                "MaxStamina": 30,
+                "MagneticRadius": 32,
+                "Speed": 1,
+                "Defense": 1,
+                "Attack": 1
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Inked_Fossil": {
+          "Name": "Inked Fossil",
+          "DisplayName": "{{i18n:objects.inked-fossil.name}}",
+          "Description": "{{i18n:objects.inked-fossil.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 200,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "51",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_gray",
+          ],
+        },
+        "Rafseazz.RSVCP_Jumpy_Coffee_Cake": {
+          "Name": "Jumpy Coffee Cake",
+          "DisplayName": "{{i18n:objects.jumpy-coffee-cake.name}}",
+          "Description": "{{i18n:objects.jumpy-coffee-cake.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 230,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "52",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 2,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Kedi_Delight": {
+          "Name": "Kedi Delight",
+          "DisplayName": "{{i18n:objects.kedi-delight.name}}",
+          "Description": "{{i18n:objects.kedi-delight.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 420,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "53",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_prismatic",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 32,
+                "Speed": 1,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Kek_s_Small_Dream": {
+          "Name": "Kek's Small Dream",
+          "DisplayName": "{{i18n:objects.keks-small-dream.name}}",
+          "Description": "{{i18n:objects.keks-small-dream.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 210,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "54",
+          "Edibility": 30,
+          "ContextTags": [
+            "color_light_pink",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 1
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Kek_s_Style_Shortcake": {
+          "Name": "Kek's Style Shortcake",
+          "DisplayName": "{{i18n:objects.keks-style-shortcake.name}}",
+          "Description": "{{i18n:objects.keks-style-shortcake.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 410,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "55",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_red",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 2,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 32,
+                "Speed": 1,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Lava_Lily": {
+          "Name": "Lava Lily",
+          "DisplayName": "{{i18n:objects.lava-lily.name}}",
+          "Description": "{{i18n:objects.lava-lily.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 50,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "56",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_orange",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Lover_s_Sorrow": {
+          "Name": "Lover's Sorrow",
+          "DisplayName": "{{i18n:objects.lovers-sorrow.name}}",
+          "Description": "{{i18n:objects.lovers-sorrow.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 1,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "57",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_purple",
+          ],
+        },
+        "Rafseazz.RSVCP_Lullaby_Carp": {
+          "Name": "Lullaby Carp",
+          "DisplayName": "{{i18n:objects.lullaby-carp.name}}",
+          "Description": "{{i18n:objects.lullaby-carp.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 105,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "58",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_green",
+            "fish_lullaby_carp",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Matcha_Latte": {
+          "Name": "Matcha Latte",
+          "DisplayName": "{{i18n:objects.matcha-latte.name}}",
+          "Description": "{{i18n:objects.matcha-latte.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 20,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "59",
+          "Edibility": 15,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 1000,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 2,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Mistbloom_Syrup": {
+          "Name": "Mistbloom Syrup",
+          "DisplayName": "{{i18n:objects.mistbloom-syrup.name}}",
+          "Description": "{{i18n:objects.mistbloom-syrup.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 260,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "60",
+          "Edibility": 10,
+          "IsDrink": true,
+          "ContextTags": [
+            "ginger_item",
+            "color_light_blue"
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Moose_Statue": {
+          "Name": "Moose Statue",
+          "DisplayName": "{{i18n:objects.moose-statue.name}}",
+          "Description": "{{i18n:objects.moose-statue.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "61",
+          "Edibility": -300,
+        },
+        "Rafseazz.RSVCP_Mountain_Arugula": {
+          "Name": "Mountain Arugula",
+          "DisplayName": "{{i18n:objects.mountain-arugula.name}}",
+          "Description": "{{i18n:objects.mountain-arugula.description}}",
+          "Type": "Basic",
+          "Category": -75,
+          "Price": 60,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "62",
+          "Edibility": 15,
+          "ContextTags": [
+            "color_green",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Mountain_Chico": {
+          "Name": "Mountain Chico",
+          "DisplayName": "{{i18n:objects.mountain-chico.name}}",
+          "Description": "{{i18n:objects.mountain-chico.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 70,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "63",
+          "Edibility": 15,
+          "ContextTags": [
+            "color_brown",
+          ],
+        },
+        "Rafseazz.RSVCP_Mountain_Hokkaido": {
+          "Name": "Mountain Hokkaido",
+          "DisplayName": "{{i18n:objects.mountain-hokkaido.name}}",
+          "Description": "{{i18n:objects.mountain-hokkaido.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 60,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "64",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_blue",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 30,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Mountain_Mistbloom": {
+          "Name": "Mountain Mistbloom",
+          "DisplayName": "{{i18n:objects.mountain-mistbloom.name}}",
+          "Description": "{{i18n:objects.mountain-mistbloom.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 50,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "65",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_light_purple",
+          ],
+        },
+        "Rafseazz.RSVCP_Mountain_Plumcot": {
+          "Name": "Mountain Plumcot",
+          "DisplayName": "{{i18n:objects.mountain-plumcot.name}}",
+          "Description": "{{i18n:objects.mountain-plumcot.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 130,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "66",
+          "Edibility": 15,
+          "ContextTags": [
+            "color_pink",
+          ],
+        },
+        "Rafseazz.RSVCP_Mountain_Redbelly_Dace": {
+          "Name": "Mountain Redbelly Dace",
+          "DisplayName": "{{i18n:objects.mountain-redbelly-dace.name}}",
+          "Description": "{{i18n:objects.mountain-redbelly-dace.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 45,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "67",
+          "Edibility": 20,
+          "ContextTags": [
+            "color_dark_yellow",
+            "fish_mountain_redbelly_dace",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Mountain_Whitefish": {
+          "Name": "Mountain Whitefish",
+          "DisplayName": "{{i18n:objects.mountain-whitefish.name}}",
+          "Description": "{{i18n:objects.mountain-whitefish.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 75,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "68",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_white",
+            "fish_mountain_whitefish",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Nightblack_Diamond": {
+          "Name": "Nightblack Diamond",
+          "DisplayName": "{{i18n:objects.nightblack-diamond.name}}",
+          "Description": "{{i18n:objects.nightblack-diamond.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "69",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_black",
+          ],
+        },
+        "Rafseazz.RSVCP_Northern_Limequat": {
+          "Name": "Northern Limequat",
+          "DisplayName": "{{i18n:objects.northern-limequat.name}}",
+          "Description": "{{i18n:objects.northern-limequat.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 190,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "70",
+          "Edibility": 14,
+          "ContextTags": [
+            "color_light_green",
+          ],
+        },
+        "Rafseazz.RSVCP_Old_Lucky_Foxtail_Charm": {
+          "Name": "Old Lucky Foxtail Charm",
+          "DisplayName": "{{i18n:objects.old-lucky-foxtail-charm.name}}",
+          "Description": "{{i18n:objects.old-lucky-foxtail-charm.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 1,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "71",
+          "Edibility": -300,
+        },
+        "Rafseazz.RSVCP_Opal_Halo": {
+          "Name": "Opal Halo",
+          "DisplayName": "{{i18n:objects.opal-halo.name}}",
+          "Description": "{{i18n:objects.opal-halo.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "72",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_light_blue",
+          ],
+        },
+        "Rafseazz.RSVCP_Pale_Candelabrum": {
+          "Name": "Pale Candelabrum",
+          "DisplayName": "{{i18n:objects.pale-candelabrum.name}}",
+          "Description": "{{i18n:objects.pale-candelabrum.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "73",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_dark_yellow",
+          ],
+        },
+        "Rafseazz.RSVCP_Paradise_Rangpur": {
+          "Name": "Paradise Rangpur",
+          "DisplayName": "{{i18n:objects.paradise-rangpur.name}}",
+          "Description": "{{i18n:objects.paradise-rangpur.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 120,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "74",
+          "Edibility": 16,
+          "ContextTags": [
+            "color_light_orange",
+          ],
+        },
+        "Rafseazz.RSVCP_Pebble_Back_Crab": {
+          "Name": "Pebble Back Crab",
+          "DisplayName": "{{i18n:objects.pebble-back-crab.name}}",
+          "Description": "{{i18n:objects.pebble-back-crab.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 90,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "75",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_gray",
+            "fish_pebble_back_crab",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich": {
+          "Name": "Pillowsoft Cheezy Sandwich",
+          "DisplayName": "{{i18n:objects.pillowsoft-cheezy-sandwich.name}}",
+          "Description": "{{i18n:objects.pillowsoft-cheezy-sandwich.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "76",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_yellow",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 2,
+                "MaxStamina": 30,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut": {
+          "Name": "Pink Frosted Sprinkled Doughnut",
+          "DisplayName": "{{i18n:objects.pink-frosted-sprinkled-doughnut.name}}",
+          "Description": "{{i18n:objects.pink-frosted-sprinkled-doughnut.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "77",
+          "Edibility": 30,
+          "ContextTags": [
+            "color_pink",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 1,
+                "LuckLevel": 1,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 1
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Pumpkin_Darling_Slice": {
+          "Name": "Pumpkin Darling Slice",
+          "DisplayName": "{{i18n:objects.pumpkin-darling-slice.name}}",
+          "Description": "{{i18n:objects.pumpkin-darling-slice.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 350,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "78",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_orange",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 2,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Relic_Fox_Mask": {
+          "Name": "Relic Fox Mask",
+          "DisplayName": "{{i18n:objects.relic-fox-mask.name}}",
+          "Description": "{{i18n:objects.relic-fox-mask.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "79",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_red",
+          ],
+        },
+        "Rafseazz.RSVCP_Richard_s_Glasses": {
+          "Name": "Richard's Glasses",
+          "DisplayName": "{{i18n:objects.richards-glasses.name}}",
+          "Description": "{{i18n:objects.richards-glasses.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 0,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "80",
+          "Edibility": -300,
+          "ContextTags": [
+            "rsv_quest_item1",
+          ],
+        },
+        "Rafseazz.RSVCP_Ridge_Apple_Cake": {
+          "Name": "Ridge Apple Cake",
+          "DisplayName": "{{i18n:objects.ridge-apple-cake.name}}",
+          "Description": "{{i18n:objects.ridge-apple-cake.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 410,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "81",
+          "Edibility": 55,
+          "ContextTags": [
+            "color_red",
+            "color_apple"
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 2,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 3,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ridge_Azorean_Flower": {
+          "Name": "Ridge Azorean Flower",
+          "DisplayName": "{{i18n:objects.ridge-azorean-flower.name}}",
+          "Description": "{{i18n:objects.ridge-azorean-flower.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 50,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "82",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_light_pink",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ridge_Bluegill": {
+          "Name": "Ridge Bluegill",
+          "DisplayName": "{{i18n:objects.ridge-bluegill.name}}",
+          "Description": "{{i18n:objects.ridge-bluegill.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "83",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_blue",
+            "fish_ridge_bluegill",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Ridge_Cherry": {
+          "Name": "Ridge Cherry",
+          "DisplayName": "{{i18n:objects.ridge-cherry.name}}",
+          "Description": "{{i18n:objects.ridge-cherry.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 50,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "84",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_red",
+          ],
+        },
+        "Rafseazz.RSVCP_Ridge_Fruity_Plate": {
+          "Name": "Ridge Fruity Plate",
+          "DisplayName": "{{i18n:objects.ridge-fruity-plate.name}}",
+          "Description": "{{i18n:objects.ridge-fruity-plate.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 370,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "85",
+          "Edibility": 60,
+          "ContextTags": [
+            "color_red",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 64,
+                "Speed": 1,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ridge_Mosaic_Cake": {
+          "Name": "Ridge Mosaic Cake",
+          "DisplayName": "{{i18n:objects.ridge-mosaic-cake.name}}",
+          "Description": "{{i18n:objects.ridge-mosaic-cake.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 150,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "86",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ridge_Wild_Apple": {
+          "Name": "Ridge Wild Apple",
+          "DisplayName": "{{i18n:objects.ridge-wild-apple.name}}",
+          "Description": "{{i18n:objects.ridge-wild-apple.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "87",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_red",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ridgeside_Bass": {
+          "Name": "Ridgeside Bass",
+          "DisplayName": "{{i18n:objects.ridgeside-bass.name}}",
+          "Description": "{{i18n:objects.ridgeside-bass.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 30,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "88",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_brown",
+            "fish_ridgeside_bass",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Ridgeside_Clementine": {
+          "Name": "Ridgeside Clementine",
+          "DisplayName": "{{i18n:objects.ridgeside-clementine.name}}",
+          "Description": "{{i18n:objects.ridgeside-clementine.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 50,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "89",
+          "Edibility": 14,
+          "ContextTags": [
+            "color_orange",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 1,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ridgeside_Monkshood": {
+          "Name": "Ridgeside Monkshood",
+          "DisplayName": "{{i18n:objects.ridgeside-monkshood.name}}",
+          "Description": "{{i18n:objects.ridgeside-monkshood.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "90",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_purple",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 1,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Ridgeside_Shaketini": {
+          "Name": "Ridgeside Shaketini",
+          "DisplayName": "{{i18n:objects.ridgeside-shaketini.name}}",
+          "Description": "{{i18n:objects.ridgeside-shaketini.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "91",
+          "Edibility": 51,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_orange",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 420,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 1,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Sapphire_Pearl": {
+          "Name": "Sapphire Pearl",
+          "DisplayName": "{{i18n:objects.sapphire-pearl.name}}",
+          "Description": "{{i18n:objects.sapphire-pearl.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "92",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_blue",
+          ],
+        },
+        "Rafseazz.RSVCP_Shell_Bracelet": {
+          "Name": "Shell Bracelet",
+          "DisplayName": "{{i18n:objects.shell-bracelet.name}}",
+          "Description": "{{i18n:objects.shell-bracelet.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 100,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "93",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_light_blue",
+          ],
+        },
+        "Rafseazz.RSVCP_Sierra_Wintergreen": {
+          "Name": "Sierra Wintergreen",
+          "DisplayName": "{{i18n:objects.sierra-wintergreen.name}}",
+          "Description": "{{i18n:objects.sierra-wintergreen.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "94",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_red",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 1,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Silver_Fish_Bones": {
+          "Name": "Silver Fish Bones",
+          "DisplayName": "{{i18n:objects.silver-fish-bones.name}}",
+          "Description": "{{i18n:objects.silver-fish-bones.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 200,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "95",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_iron",
+          ],
+        },
+        "Rafseazz.RSVCP_Skulpin_Fish": {
+          "Name": "Skulpin Fish",
+          "DisplayName": "{{i18n:objects.skulpin-fish.name}}",
+          "Description": "{{i18n:objects.skulpin-fish.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "96",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_brown",
+            "fish_skulpin_fish",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Snow_Bowl_Surprise": {
+          "Name": "Snow Bowl Surprise",
+          "DisplayName": "{{i18n:objects.snow-bowl-surprise.name}}",
+          "Description": "{{i18n:objects.snow-bowl-surprise.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "97",
+          "Edibility": 60,
+          "ContextTags": [
+            "color_light_blue",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 40,
+                "MagneticRadius": 64,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Snowball_Slurpee": {
+          "Name": "Snowball Slurpee",
+          "DisplayName": "{{i18n:objects.snowball-slurpee.name}}",
+          "Description": "{{i18n:objects.snowball-slurpee.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 230,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "98",
+          "Edibility": 51,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_light_blue",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 420,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 1,
+                "Defense": 1,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Sockeye_Salmon": {
+          "Name": "Sockeye Salmon",
+          "DisplayName": "{{i18n:objects.sockeye-salmon.name}}",
+          "Description": "{{i18n:objects.sockeye-salmon.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 1800,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "99",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_dark_red",
+            "fish_sockeye_salmon",
+            "fish_legendary",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Spiritual_Essence": {
+          "Name": "Spiritual Essence",
+          "DisplayName": "{{i18n:objects.spiritual-essence.name}}",
+          "Description": "{{i18n:objects.spiritual-essence.description}}",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 75,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "100",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_light_blue",
+          ],
+        },
+        "Rafseazz.RSVCP_Springtime_Primetime": {
+          "Name": "Springtime Primetime",
+          "DisplayName": "{{i18n:objects.springtime-primetime.name}}",
+          "Description": "{{i18n:objects.springtime-primetime.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "101",
+          "Edibility": 60,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 600,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 64,
+                "Speed": 2,
+                "Defense": 2,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Strawberry_Lover_Pie": {
+          "Name": "Strawberry Lover Pie",
+          "DisplayName": "{{i18n:objects.strawberry-lover-pie.name}}",
+          "Description": "{{i18n:objects.strawberry-lover-pie.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 230,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "102",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_red",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 64,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Summer_Mountain_Blessing": {
+          "Name": "Summer Mountain Blessing",
+          "DisplayName": "{{i18n:objects.summer-mountain-blessing.name}}",
+          "Description": "{{i18n:objects.summer-mountain-blessing.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "103",
+          "Edibility": 60,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 600,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 2,
+                "MiningLevel": 0,
+                "LuckLevel": 2,
+                "ForagingLevel": 0,
+                "MaxStamina": 80,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Summit_Iced_Tea": {
+          "Name": "Summit Iced Tea",
+          "DisplayName": "{{i18n:objects.summit-iced-tea.name}}",
+          "Description": "{{i18n:objects.summit-iced-tea.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 20,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "104",
+          "Edibility": 15,
+          "IsDrink": true,
+        },
+        "Rafseazz.RSVCP_Summit_Snowbell": {
+          "Name": "Summit Snowbell",
+          "DisplayName": "{{i18n:objects.summit-snowbell.name}}",
+          "Description": "{{i18n:objects.summit-snowbell.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "105",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_light_purple",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 1,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Sweet_Cranberry_Cheesecake": {
+          "Name": "Sweet Cranberry Cheesecake",
+          "DisplayName": "{{i18n:objects.sweet-cranberry-cheesecake.name}}",
+          "Description": "{{i18n:objects.sweet-cranberry-cheesecake.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 440,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "106",
+          "Edibility": 40,
+          "ContextTags": [
+            "color_red",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 1,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 2
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Tropi_Ugli_Fruit": {
+          "Name": "Tropi Ugli Fruit",
+          "DisplayName": "{{i18n:objects.tropi-ugli-fruit.name}}",
+          "Description": "{{i18n:objects.tropi-ugli-fruit.description}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Price": 170,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "107",
+          "Edibility": 23,
+          "ContextTags": [
+            "color_yellow",
+          ],
+        },
+        "Rafseazz.RSVCP_Tropic_Mango_Cake": {
+          "Name": "Tropic Mango Cake",
+          "DisplayName": "{{i18n:objects.tropic-mango-cake.name}}",
+          "Description": "{{i18n:objects.tropic-mango-cake.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 380,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "108",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_yellow",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 1,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 32,
+                "Speed": 1,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Village_Hero_Sculpture": {
+          "Name": "Village Hero Sculpture",
+          "DisplayName": "{{i18n:objects.village-hero-sculpture.name}}",
+          "Description": "{{i18n:objects.village-hero-sculpture.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "109",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_brown",
+          ],
+        },
+        "Rafseazz.RSVCP_Violet_Devil_s_Claw": {
+          "Name": "Violet Devil's Claw",
+          "DisplayName": "{{i18n:objects.violet-devils-claw.name}}",
+          "Description": "{{i18n:objects.violet-devils-claw.description}}",
+          "Type": "Basic",
+          "Category": -80,
+          "Price": 50,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "110",
+          "Edibility": 5,
+          "ContextTags": [
+            "color_purple",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 200,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 0,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 0,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 1
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Warp_Totem__Ridgeside": {
+          "Name": "Warp Totem: Ridgeside",
+          "DisplayName": "{{i18n:objects.warp-totem-ridgeside.name}}",
+          "Description": "{{i18n:objects.warp-totem-ridgeside.description}}",
+          "Type": "Basic",
+          "Category": -8,
+          "Price": 20,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "111",
+          "Edibility": -300,
+		   "ContextTags": [
+            "not_placeable",
+            "totem_item"
+          ]
+        },
+        "Rafseazz.RSVCP_Waterfall_Snakehead": {
+          "Name": "Waterfall Snakehead",
+          "DisplayName": "{{i18n:objects.waterfall-snakehead.name}}",
+          "Description": "{{i18n:objects.waterfall-snakehead.description}}",
+          "Type": "Fish",
+          "Category": -4,
+          "Price": 2100,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "112",
+          "Edibility": 10,
+          "ContextTags": [
+            "color_green",
+            "fish_waterfall_snakehead",
+            "fish_legendary",
+            "rsv_fish"
+          ],
+        },
+        "Rafseazz.RSVCP_Wild_Apple_Juice": {
+          "Name": "Wild Apple Juice",
+          "DisplayName": "{{i18n:objects.wild-apple-juice.name}}",
+          "Description": "{{i18n:objects.wild-apple-juice.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 40,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "113",
+          "Edibility": 25,
+          "IsDrink": true,
+          "ContextTags": [
+            "color_red",
+          ],
+        },
+        "Rafseazz.RSVCP_Winter_Night_Feast": {
+          "Name": "Winter Night Feast",
+          "DisplayName": "{{i18n:objects.winter-night-feast.name}}",
+          "Description": "{{i18n:objects.winter-night-feast.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 500,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "114",
+          "Edibility": 60,
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 600,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 0,
+                "MiningLevel": 2,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 30,
+                "MagneticRadius": 32,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 2
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        "Rafseazz.RSVCP_Yellow_Wood_Sculpture": {
+          "Name": "Yellow Wood Sculpture",
+          "DisplayName": "{{i18n:objects.yellow-wood-sculpture.name}}",
+          "Description": "{{i18n:objects.yellow-wood-sculpture.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 100,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "115",
+          "Edibility": -300,
+          "ContextTags": [
+            "color_yellow",
+          ],
+        },
+        "Rafseazz.RSVCP_Yuuma_s_Ring": {
+          "Name": "Yuuma's Ring",
+          "DisplayName": "{{i18n:objects.yuumas-ring.name}}",
+          "Description": "{{i18n:objects.yuumas-ring.description}}",
+          "Type": "Basic",
+          "Category": 0,
+          "Price": 0,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "116",
+          "Edibility": -300,
+          "ContextTags": [
+            "rsv_quest_item2",
+          ],
+        },
+        "Rafseazz.RSVCP_Zesty_Tuna": {
+          "Name": "Zesty Tuna",
+          "DisplayName": "{{i18n:objects.zesty-tuna.name}}",
+          "Description": "{{i18n:objects.zesty-tuna.description}}",
+          "Type": "Basic",
+          "Category": -7,
+          "Price": 560,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "117",
+          "Edibility": 60,
+          "ContextTags": [
+            "color_light_brown",
+          ],
+          "Buffs": [
+            {
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0,
+                "FishingLevel": 4,
+                "MiningLevel": 1,
+                "LuckLevel": 0,
+                "ForagingLevel": 0,
+                "MaxStamina": 30,
+                "MagneticRadius": 0,
+                "Speed": 0,
+                "Defense": 0,
+                "Attack": 0
+              }
+            }
+          ],
+          "CustomFields": {}
+        },
+        //Deity Rings
+        "Rafseazz.RSVCP_The_Beautiful_Serpent_s_Ring": {
+          "Name": "The Beautiful Serpent's Ring",
+          "DisplayName": "{{i18n:objects.the-beautiful-serpents-ring.name}}",
+          "Description": "{{i18n:objects.the-beautiful-serpents-ring.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 15000,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "118",
+          "Edibility": -300,
+        },
+        "Rafseazz.RSVCP_The_Fairy_Doe_Fox_s_Ring": {
+          "Name": "The Fairy Doe Fox's Ring",
+          "DisplayName": "{{i18n:objects.the-fairy-doe-foxs-ring.name}}",
+          "Description": "{{i18n:objects.the-fairy-doe-foxs-ring.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 15000,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "119",
+          "Edibility": -300,
+        },
+        "Rafseazz.RSVCP_The_Ring_of_the_Ridge_Deities": {
+          "Name": "The Ring of the Ridge Deities",
+          "DisplayName": "{{i18n:objects.the-ring-of-the-ridge-deities.name}}",
+          "Description": "{{i18n:objects.the-ring-of-the-ridge-deities.description}}",
+          "Type": "Ring",
+          "Category": -96,
+          "Price": 15000,
+          "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\Objects",
+          "SpriteIndex": "120",
+          "Edibility": -300,
+        },
+      }
+    }
+  ]
+}

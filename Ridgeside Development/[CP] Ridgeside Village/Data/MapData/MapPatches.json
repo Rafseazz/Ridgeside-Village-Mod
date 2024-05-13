@@ -3,18 +3,34 @@
 
 	//Expanded festivals VANILLA
 	{
-		"Action": "Load",
+		"Action": "EditMap",
 		"Target": "Maps/Forest-FlowerFestival",
-		"FromFile": "Assets/Maps/FestivalMaps/FlowerFestival-Patch.tmx",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVFlowerFestival.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
+		"Target": "Maps/Forest-FlowerFestival2",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVFlowerFestival2.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
+		"When": {
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true
+		},
+	},
+
+	{
+		"Action": "EditMap",
 		"Target": "Maps/Town-EggFestival",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVEggFestival.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -22,9 +38,24 @@
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
+		"Target": "Maps/Town-EggFestival2",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVEggFestival2.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
+		"When": {
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+		},
+	},
+
+	{
+		"Action": "EditMap",
 		"Target": "Maps/Beach-Luau",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVLuau.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -32,9 +63,24 @@
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
+		"Target": "Maps/Beach-Luau2",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVLuau2.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
+		"When": {
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+		},
+	},
+
+	{
+		"Action": "EditMap",
 		"Target": "Maps/Town-Fair",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVSDVFair.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -42,9 +88,24 @@
 		},
 	},
 	{
-		"Action": "Load",
+		"Action": "EditMap",
+		"Target": "Maps/Town-Fair2",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVSDVFair2.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
+		"When": {
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+		},
+	},
+
+	{
+		"Action": "EditMap",
 		"Target": "Maps/Town-Halloween",
 		"FromFile": "Assets/Maps/FestivalMaps/RSVHalloween.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
@@ -52,15 +113,43 @@
 		},
 	},
 	{
-		"Action": "Load",
-		"Target": "Maps/Town-Christmas",
-		"FromFile": "Assets/Maps/FestivalMaps/RSVChristmas.tmx",
+		"Action": "EditMap",
+		"Target": "Maps/Town-Halloween2",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVHalloween2.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
 		"When": {
 			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
 			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
 			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
 		},
 	},
+
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town-Christmas",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVChristmas.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
+		"When": {
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+		},
+	},
+	{
+		"Action": "EditMap",
+		"Target": "Maps/Town-Christmas2",
+		"FromFile": "Assets/Maps/FestivalMaps/RSVChristmas2.tmx",
+		"PatchMode": "Replace",
+		"Priority": "Early - 10",
+		"When": {
+			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true
+		},
+	},
+
 
 		/*********
 		** Add Map Merges
@@ -70,10 +159,9 @@
 			"Target": "Maps/BusStop",
 			"FromFile": "Assets/Maps/MapPatches/RSVBusStop.tmx",
 			"FromArea": { "X": 23, "Y": 0, "Width": 12, "Height": 6 },
-			"ToArea": { "X": 23, "Y": 0, "Width": 12, "Height": 6 },
+			"ToArea": { "X": 33, "Y": 0, "Width": 12, "Height": 6 },
 			"PatchMode": "Replace",
 			"When": {
-				"Rafseazz.RidgesideVillage/EnableBetterBusStop": false,
 				"HasMod: |contains=DaisyNiko.SVR2": false,
 				"HasMod: |contains=DaisyNiko.SVR3": false,
 			}
@@ -82,8 +170,8 @@
 			"Action": "EditMap",
 			"Target": "Maps/BusStop",
 			"FromFile": "Assets/Maps/MapPatches/RSVBusStopNew.tmx",
-			"FromArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
-			"ToArea": { "X": 21, "Y": 0, "Width": 14, "Height": 23 },
+			"FromArea": { "X": 21, "Y": 6, "Width": 10, "Height": 17 },
+			"ToArea": { "X": 31, "Y": 6, "Width": 10, "Height": 17 },
 			"PatchMode": "Replace",
 			"When": {
 				"Rafseazz.RidgesideVillage/EnableBetterBusStop": true,

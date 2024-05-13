@@ -14,10 +14,26 @@
          "Delimiter": "/"
 		},
 
-   //MainEevent
+   //MainEvent
 		{
          "Operation": "Append",
          "Target": ["Entries", "MainEvent_additionalCharacters"],
+         "Value": "Aguar 30 43 right/Alissa 44 46 left/Bert 44 44 left/Corine 35 47 right/Ezekiel 36 48 up/Flor 48 43 left/Freddie 48 49 left/Ian 35 43 right/Jeric 30 48 right/Keahi 42 50 up/Kenneth 45 42 left/Lenny 39 45 down/Lola 48 50 left/Maddie 30 44 right/Olga 44 45 left/Philip 49 45 left/Pika 41 50 up/Richard 44 52 up/Shiro 46 52 up/Trinnie 43 45 left/Ysabelle 43 52 up/Yuuma 47 51 left/Kimpoi 45 48 left/Malaya 44 47 left/Sonny 35 49 up/Maive 34 48 right/Irene 38 51 up/Faye 37 51 up/Ariah 32 48 right/Louie 33 47 right/Lorenzo 49 47 left/Shanice 49 48 left/Anton 41 54 up/Kiarra 43 54 up/Paula 42 54 up/Carmen 32 43 right/Blair 34 42 right/Sean 34 41 right/Torts 48 51 2/June 30 47 1",
+         "Delimiter": "/"
+		},
+		
+	//SetUp Year 2
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+         "Value": "Aguar 27 30 right/Alissa 36 32 up/Bert 42 28 down/Corine 29 47 right/Ezekiel 26 38 down/Flor 39 53 down/Freddie 32 36 right/Ian 53 35 right/Jeric 49 47 down/Keahi 32 41 left/Kenneth 45 28 down/Lenny 44 46 left/Lola 34 34 down/Maddie 49 49 up/Olga 34 44 down/Philip 32 32 up/Pika 38 30 left/Richard 51 39 right/Shiro 43 32 up/Trinnie 31 42 up/Ysabelle 31 47 left/Yuuma 42 33 down/Kimpoi 27 44 left/Malaya 27 45 left/Sonny 54 41 left/Maive 53 40 left/Irene 40 31 right/Faye 51 33 up/Ariah 36 53 down/Louie 32 39 down/Lorenzo 25 47 up/Shanice 26 47 up/Anton 49 53 left/Kiarra 47 52 right/Paula 49 52 left/Carmen 27 39 left/Blair 52 46 right/Sean 54 46 left/Torts 41 33 2/June 50 34 3",
+         "Delimiter": "/"
+		},
+
+   //MainEvent Year 2
+		{
+         "Operation": "Append",
+         "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
          "Value": "Aguar 30 43 right/Alissa 44 46 left/Bert 44 44 left/Corine 35 47 right/Ezekiel 36 48 up/Flor 48 43 left/Freddie 48 49 left/Ian 35 43 right/Jeric 30 48 right/Keahi 42 50 up/Kenneth 45 42 left/Lenny 39 45 down/Lola 48 50 left/Maddie 30 44 right/Olga 44 45 left/Philip 49 45 left/Pika 41 50 up/Richard 44 52 up/Shiro 46 52 up/Trinnie 43 45 left/Ysabelle 43 52 up/Yuuma 47 51 left/Kimpoi 45 48 left/Malaya 44 47 left/Sonny 35 49 up/Maive 34 48 right/Irene 38 51 up/Faye 37 51 up/Ariah 32 48 right/Louie 33 47 right/Lorenzo 49 47 left/Shanice 49 48 left/Anton 41 54 up/Kiarra 43 54 up/Paula 42 54 up/Carmen 32 43 right/Blair 34 42 right/Sean 34 41 right/Torts 48 51 2/June 30 47 1",
          "Delimiter": "/"
 		},
@@ -45,7 +61,21 @@
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
                 "Value": "Naomi 47 52 up",
                 "Delimiter": "/"
-            }
+            },
+			
+			{
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                "Value": "Naomi 51 40 right",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+                "Value": "Naomi 47 52 up",
+                "Delimiter": "/"
+            },
         ]
     },
 
@@ -68,6 +98,20 @@
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Jio 52 16 down/Kiwi 51 16 down",
+                "Delimiter": "/"
+            },
+			
+			{
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                "Value": "Jio 52 16 down/Kiwi 51 16 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
                 "Value": "Jio 52 16 down/Kiwi 51 16 down",
                 "Delimiter": "/"
             },
@@ -95,6 +139,20 @@
                 "Value": "Daia 47 40 left",
                 "Delimiter": "/"
             },
+			
+			{
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                "Value": "Daia 52 28 left",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+                "Value": "Daia 47 40 left",
+                "Delimiter": "/"
+            },
         ]
     },
 
@@ -116,6 +174,20 @@
             {
                 "Operation": "Append",
                 "Target": ["Entries", "MainEvent_additionalCharacters"],
+                "Value": "Zayne 33 48 right",
+                "Delimiter": "/"
+            },
+			
+			{
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                "Value": "Zayne 52 42 up",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
                 "Value": "Zayne 33 48 right",
                 "Delimiter": "/"
             },
@@ -143,6 +215,20 @@
                 "Value": "Bryle 29 49 right",
                 "Delimiter": "/"
             },
+			
+			{
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                "Value": "Bryle 50 47 down",
+                "Delimiter": "/"
+            },
+
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+                "Value": "Bryle 29 49 right",
+                "Delimiter": "/"
+            },
         ]
     },
 
@@ -163,6 +249,19 @@
         {
           "Operation": "Append",
           "Target": ["Entries", "MainEvent_additionalCharacters"],
+          "Value": "Leo 54 45 3",
+          "Delimiter": "/"
+        },
+		
+		{
+          "Operation": "Append",
+          "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+          "Value": "Leo 41 25 2",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
           "Value": "Leo 54 45 3",
           "Delimiter": "/"
         },

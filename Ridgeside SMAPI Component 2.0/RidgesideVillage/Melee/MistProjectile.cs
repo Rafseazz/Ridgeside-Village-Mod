@@ -51,39 +51,39 @@ namespace RidgesideVillage
         }
         public override void updatePosition(GameTime time)
         {
-            base.position.X += xVelocity;
-            base.position.Y += yVelocity;
+            var newPos = base.position.Value + new Vector2(xVelocity.Value, yVelocity.Value);
+            base.position.Value = newPos;
         }
 
         public override void behaviorOnCollisionWithPlayer(GameLocation location, Farmer player)
         {
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithTerrainFeature(TerrainFeature t, Vector2 tileLocation, GameLocation location)
         {
             this.explosionAnimation(location);
-        }
-
-        public override void behaviorOnCollisionWithMineWall(int tileX, int tileY)
-        {
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithOther(GameLocation location)
         {
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         public override void behaviorOnCollisionWithMonster(NPC n, GameLocation location)
         {
             this.explosionAnimation(location);
+            base.piercesLeft.Value--;
         }
 
         private void explosionAnimation(GameLocation location)
         {
             Multiplayer multiplayer = Helper.Reflection.GetField<Multiplayer>(typeof(Game1), "multiplayer").GetValue();
 
-            multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("TileSheets\\Animations", new Rectangle(192, 320, 64, 64), 60, 5, 1, base.position, flicker: false, flipped: false));
+            multiplayer.broadcastSprites(location, new TemporaryAnimatedSprite("TileSheets\\Animations", new Rectangle(192, 320, 64, 64), 60, 5, 1, base.position.Value, flicker: false, flipped: false));
             base.destroyMe = true;
         }
 
@@ -94,7 +94,7 @@ namespace RidgesideVillage
         public override void draw(SpriteBatch b)
         {
             float current_scale = 4f * this.localScale;
-            b.Draw(sprite, Game1.GlobalToLocal(Game1.viewport, this.position + new Vector2(0f, 0f - this.height.Value) + new Vector2(32f, 32f)), new Rectangle(0, 0, 16, 16), this.color.Value, this.rotation, new Vector2(8f, 8f), current_scale, SpriteEffects.None, (this.position.Y + 96f) / 10000f);
+            b.Draw(sprite, Game1.GlobalToLocal(Game1.viewport, this.position.Value + new Vector2(0f, 0f - this.height.Value) + new Vector2(32f, 32f)), new Rectangle(0, 0, 16, 16), this.color.Value, this.rotation, new Vector2(8f, 8f), current_scale, SpriteEffects.None, (this.position.Y + 96f) / 10000f);
         }
     }
 }

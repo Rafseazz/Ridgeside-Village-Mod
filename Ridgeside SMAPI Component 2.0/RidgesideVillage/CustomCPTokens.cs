@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StardewValley;
+using StardewValley.Network;
+using StardewValley.GameData.Shirts;
 
 namespace RidgesideVillage
     {
@@ -39,10 +41,10 @@ namespace RidgesideVillage
                         string gender;
                         switch (Spouse.Gender)
                         {
-                            case 0:
+                            case Gender.Male:
                                 gender = "male";
                                 break;
-                            case 1:
+                            case Gender.Female:
                                 gender = "female";
                                 break;
                             default:
@@ -67,10 +69,10 @@ namespace RidgesideVillage
                         string gender;
                         switch (Spouse.Gender)
                         {
-                            case 0:
+                            case Gender.Male:
                                 gender = "male";
                                 break;
-                            case 1:
+                            case Gender.Female:
                                 gender = "female";
                                 break;
                             default:
@@ -112,7 +114,7 @@ namespace RidgesideVillage
             });
 
             cp.RegisterToken(this.ModManifest, "FoxbloomDay", () => {
-                int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                int? randomseed = (int?)Game1.stats?.DaysPlayed;
                 if (randomseed is not null)
                 {   //Seed the random with a seed that only changes every 28 days
                     Random random = new Random((int)Game1.uniqueIDForThisGame + ((randomseed.Value - 1) / 28));
@@ -163,10 +165,10 @@ namespace RidgesideVillage
             {
                 if (Game1.MasterPlayer is not null && Context.IsWorldReady)
                 {
-                    int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                    int? randomseed = (int?)Game1.stats?.DaysPlayed;
                     if (randomseed is not null)
                     {   //Seed the random with a seed that changes weekly
-                        Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_ZAYNE_INTRO + ((randomseed.Value - 1) / 7));
+                        Random random = new Random((int)Game1.uniqueIDForThisGame + int.Parse(RSVConstants.E_ZAYNE_INTRO) + ((randomseed.Value - 1) / 7));
                         List<string> visits = GetFestivalDaysAndBday("Zayne");
                         //Log.Debug("RSV: Festival days and birthday for Zayne are " + visits.ToString());
                         if (!visits.Contains("Sunday") && Game1.player.eventsSeen.Contains(RSVConstants.E_ZAYNE_6H))
@@ -197,10 +199,10 @@ namespace RidgesideVillage
             cp.RegisterToken(this.ModManifest, "BryleWeeklyVisitDays", () => {
                 if (Game1.MasterPlayer is not null && Context.IsWorldReady)
                 {
-                    int? randomseed = (int?)(Game1.stats?.daysPlayed ?? SaveGame.loaded?.stats?.daysPlayed);
+                    int? randomseed = (int?)Game1.stats?.DaysPlayed;
                     if (randomseed is not null)
                     {   //Seed the random with a seed that changes weekly
-                        Random random = new Random((int)Game1.uniqueIDForThisGame + RSVConstants.E_BRYLE_INTRO + ((randomseed.Value - 1) / 7));
+                        Random random = new Random((int)Game1.uniqueIDForThisGame + int.Parse(RSVConstants.E_BRYLE_INTRO) + ((randomseed.Value - 1) / 7));
                         List<string> visits = GetFestivalDaysAndBday("Bryle");
                         if (!visits.Contains("Wednesday") && Game1.dayOfMonth < 8 && Game1.player.eventsSeen.Contains(RSVConstants.E_BRYLE_8H))
                         {
@@ -231,7 +233,7 @@ namespace RidgesideVillage
             ** Fields
             *********/
             /// <summary>The name of the shirt at the given ID as of the last context update.</summary>
-            private IDictionary<int, string> clothes;
+            private IDictionary<string, ShirtData> clothes;
 
             /*********
             ** Public methods
@@ -260,7 +262,7 @@ namespace RidgesideVillage
             public bool UpdateContext()
             {
                 var old_clothes = clothes;
-                clothes = Helper.GameContent.Load<IDictionary<int, string>>(PathUtilities.NormalizeAssetName("Data/ClothingInformation"));
+                clothes = Helper.GameContent.Load<IDictionary<string, ShirtData>>(PathUtilities.NormalizeAssetName("Data/Shirts"));
                 /*
                 if (clothes.Equals(old_clothes))
                     Log.Debug("RSV: not updating context for ShirtName");
@@ -280,20 +282,12 @@ namespace RidgesideVillage
             /// <param name="input">The input arguments, if applicable.</param>
             public IEnumerable<string> GetValues(string input)
             {
-                if (string.IsNullOrWhiteSpace(input))
-                    yield break;
-
-                string names = "";
-                foreach(string data in clothes.Values)
+                var shirtData = ItemRegistry.GetData("(S)" + input);
+                if (!shirtData.IsErrorItem)
                 {
-                    names += data.Split('/')[1] + " ";
+                    yield return shirtData.DisplayName;
                 }
-                //Log.Debug($"RSV: {names}");
-                int id = int.Parse(input);
-                string name = clothes.FirstOrDefault(x => x.Key == id).Value.Split('/')[1];
-                //Log.Debug($"RSV: key for {input} = {name}");
-
-                yield return name;
+                yield return "";
             }
         }
 
@@ -366,12 +360,12 @@ namespace RidgesideVillage
                 //Log.Trace("RSV: Not Ridge Forest OR Foxbloom already spawned today.");
                 return false;
             }
-            if (Game1.dayOfMonth != FoxbloomDay || UtilFunctions.GetWeather(here) % 2 != 0)
+            if (Game1.dayOfMonth != FoxbloomDay || here.GetWeather().IsRaining)
             {
                 Log.Trace($"RSV: Today ({Game1.dayOfMonth}) not Foxbloom Day ({FoxbloomDay}) OR weather not clear.");
                 return false;
             }
-            if (!Game1.player.hasItemInInventoryNamed("Relic Fox Mask"))
+            if (!Game1.player.Items.ContainsId(RSVConstants.IRELICFOXMASK))
             {
                 Log.Trace("RSV: Player does not have Relic Fox Mask in inventory.");
                 return false;

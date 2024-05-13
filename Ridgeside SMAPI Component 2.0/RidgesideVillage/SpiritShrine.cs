@@ -120,9 +120,9 @@ namespace RidgesideVillage
                     }
                     StartedOpeningEvent = true;
                     Helper.Events.GameLoop.OneSecondUpdateTicked -= OnOneSecondUpdateTicked;
-                    var Events = location.GetLocationEvents();
+                    location.TryGetLocationEvents(out var assetName, out var events);
                     
-                    var PortalEvent = new Event(Events[$"{RSVConstants.E_OPENPORTAL}/H/n InexistentMailFlag"], eventID: RSVConstants.E_OPENPORTAL);
+                    var PortalEvent = new Event(events[$"{RSVConstants.E_OPENPORTAL}/H/n InexistentMailFlag"], assetName, RSVConstants.E_OPENPORTAL);
                     // Moved add special order command to UntimedSO
                     UtilFunctions.StartEvent(PortalEvent, RSVConstants.L_FALLS, 15, 43);
                 }
@@ -147,10 +147,13 @@ namespace RidgesideVillage
                     location.Objects.Remove(pedestal.tilePosition);
                 }else if(existing_object == null)
                 {
+                    var pedestalObject = new ItemPedestal(pedestal.tilePosition,
+                                       new SObject(pedestal.RequiredItemName, 1),
+                                       false, Color.White);
+                    pedestalObject.Fragility = SObject.fragility_Indestructable;
+
                     location.Objects.Add(pedestal.tilePosition,
-                                   new ItemPedestal(pedestal.tilePosition,
-                                       new SObject(ExternalAPIs.JA.GetObjectId(pedestal.RequiredItemName), 1),
-                                       false, Color.White));
+                                  pedestalObject);
                 }
             }
             try
@@ -158,7 +161,7 @@ namespace RidgesideVillage
                 foreach (var pedestal in PedestalTemplates)
                 {
                     ItemPedestal itemPedestal = (ItemPedestal)location.Objects[pedestal.tilePosition];
-                    itemPedestal.requiredItem.Value = new SObject(ExternalAPIs.JA.GetObjectId(pedestal.RequiredItemName), 1);
+                    itemPedestal.requiredItem.Value = new SObject(pedestal.RequiredItemName, 1);
                     itemPedestal.lockOnSuccess.Value = false;
                     itemPedestal.UpdateItemMatch();
 

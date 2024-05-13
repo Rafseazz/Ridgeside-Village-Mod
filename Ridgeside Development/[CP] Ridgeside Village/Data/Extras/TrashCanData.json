@@ -1,79 +1,175 @@
 {
   "Changes": [
-    
-    {
-      "LogName": "Load Trash Can Data",
-      "Action": "Load",
-      "Target": "RSV/TrashCanData",
-      "FromFile": "Data/LoadData/EmptyJson.json"
-    },
     {
       "LogName": "Edit Trash Can Data",
       "Action": "EditData",
-      "Target": "RSV/TrashCanData",
+      "Target": "Data/GarbageCans",
+      "TargetField": ["GarbageCans"],
       "Entries": {
-		//Format is "weight itemID amount/weight itemID amount"
-		//itemID -1 for nothing
-    /*
-      Math:
-      Item Weight/Summation of all Weight = Probability Chance of item.
-    */
-		"-1" : "65 -1 0/10 72 2/30 770 5",
-
-    //Blooming Hill Farm
-		"1" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 476 1/2 480 1/2 770 1/2 429 1",
-
-    //Heaps Convenience Store
-    "2" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 246 1/2 247 1",
-
-    //Daniels Residence
-    "3" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1",
-
-    //Pickens Residence
-    "4" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1",
-
-    //Log Cabin Hotel
-    "5" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/1 72 1",
-
-    //Odd Jobs
-    "6" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 206 1/2 709 1",
-
-    //Ridgeside Clinic
-    "7" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/1 349 1",
-
-    //Kobayashi Residence
-    "8" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1",
-
-    //Amethyne Mansion
-    "9" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/1 428 1/1 440 1/1 424 1",
-
-    //Yojeong Residence
-    "10" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 421 1",
-
-    //Akina Residence
-    "11" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 20 1",
-
-    //Rivera Residence
-    "12" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/1 130 1",
-
-    //Bladebane Residence
-    "13" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1",
-
-    //Nigtingale Orchard
-    "14" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/1 628 1",
-
-    //Lidens Residence
-    "15" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 336 1",
-
-    //Water Research Facility
-    "16" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1",
-
-    //Electrician's House
-    "17" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 787 1",
-
-    //Road Trashcan
-    "18" : "65 -1 0/2 309 1/2 66 1/2 216 1/2 132 1/2 171 1/2 170 1/2 78 1/2 86 1/2 403 1/2 153 1/2 167 1/2 136 1/2 310 1/2 311 1/2 80 1/2 420 1/2 152 1/2 172 1/2 68 1/35 168 1/2 787 1/2 228 1",
+        "Rafseazz.RSVCP_BloomingHillFarm": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)476",
+                "(O)480",
+                "(O)770",
+                "(O)429",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Heaps": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)246",
+                "(O)247",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Daniels": {
+          "Items": [],
+        },
+        "Rafseazz.RSVCP_Pickens": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": []
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Hotel": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)72",
+              ],
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_OddJobs": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)206",
+                "(O)709",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Clinic": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)349",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Kobayashi": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": []
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Amethyne": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)428",
+                "(O)440",
+                "(O)424",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Yojeong": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)421",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Akina": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)20",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Rivera": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)130",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_BladeBane": {
+          "Items": [],
+        },
+        "Rafseazz.RSVCP_Nightingale": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)628",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Lidens": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)336",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_WaterResearch": {
+          "Items": [],
+        },
+        "Rafseazz.RSVCP_Electricians": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)787",
+              ]
+            }
+          ],
+        },
+        "Rafseazz.RSVCP_Road": {
+          "Items": [
+            {
+              "Condition": "RANDOM 0.1 @addDailyLuck",
+              "RandomItemId": [
+                "(O)787",
+                "(O)228"
+              ]
+            }
+          ],
+        },
       }
-    },
+    }
   ]
 }

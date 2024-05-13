@@ -21,13 +21,12 @@ namespace RidgesideVillage
     {
         private static IModHelper Helper { get; set; }
 
-        const string STEALTHRING = "Glove of the Assassin";
+        const string STEALTHRING = "Rafseazz.RSVCP_Glove_of_the_Assassin";
         public static int StealthRingId = -1;
 
-        const string RAERING = "The Fairy Doe Fox's Ring";
-        const string BELRING = "The Beautiful Serpent's Ring";
-        const string BOTHRING = "The Ring of the Ridge Deities";
-        public static int BothRingId = -1;
+        const string RAERING = "The_Fairy_Doe_Fox_s_Ring";
+        const string BELRING = "The_Beautiful_Serpent_s_Ring";
+        const string BOTHRING = "The_Ring_of_the_Ridge_Deities";
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -56,29 +55,18 @@ namespace RidgesideVillage
             );
         }
 
-        private static int GetRingId(string obj)
-        {
-            return ExternalAPIs.JA.GetObjectId(obj);
-        }
+
 
         private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
         {
-            if (StealthRingId == -1)
-            {
-                StealthRingId = GetRingId(STEALTHRING);
-            }
-            if ((__instance is Monster) && HasRingEquipped(StealthRingId))
+            if ((__instance is Monster) && HasRingEquipped(STEALTHRING))
             {
                 threshold = Math.Max(threshold / 2, 2);
             }
         }
         private static bool Ghost_Prefix(Ghost __instance)
         {
-            if (StealthRingId == -1)
-            {
-                StealthRingId = GetRingId(STEALTHRING);
-            }
-            if (HasRingEquipped(StealthRingId) &&
+            if (HasRingEquipped(STEALTHRING) &&
                 ((__instance.Position.X - Game1.viewport.X > Game1.viewport.Width) ||
                 (__instance.Position.Y - Game1.viewport.Y > Game1.viewport.Height)))
             {
@@ -91,13 +79,9 @@ namespace RidgesideVillage
 
         private static bool Combine_Prefix(ref Ring __instance, Ring ring, ref Item __result)
         {
-            if (((__instance.Name == RAERING) && (ring.Name == BELRING)) || ((__instance.Name == BELRING) && (ring.Name == RAERING)))
+            if (((__instance.ItemId == RAERING) && (ring.ItemId == BELRING)) || ((__instance.ItemId == BELRING) && (ring.ItemId == RAERING)))
             {
-                if (BothRingId == -1)
-                {
-                    BothRingId = GetRingId(BOTHRING);
-                }
-                Ring both_ring = new(BothRingId);
+                Ring both_ring = new(BOTHRING);
                 __result = both_ring;
                 return false;
             }
@@ -134,7 +118,7 @@ namespace RidgesideVillage
 
         /// <summary>Get whether the player has any ring with the given ID equipped.</summary>
         /// <param name="id">The ring ID to match.</param>
-        public static bool HasRingEquipped(int id)
+        public static bool HasRingEquipped(string id)
         {
             var rings = UtilFunctions.GetAllRings(Game1.player);
             foreach(var ring in rings)

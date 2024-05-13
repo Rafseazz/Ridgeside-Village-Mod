@@ -1,0 +1,1465 @@
+{
+    "Changes": [
+        {
+            "LogName": "Add Custom LocationContexts",
+            "Action": "EditData",
+            "Target": "Data/LocationContexts",
+            "Entries": {
+                "RSV_SpiritRealm": {
+                    "Name": "RSV_SpiritRealm",
+                    "AllowRainTotem": false,
+                    "SeasonOverride": "summer",
+                    "ReviveLocations": [
+                        {
+                            "Location": "Custom_Ridgeside_RidgeFalls",
+                            "Position": {
+                                "X": 15,
+                                "Y": 5
+                            }
+                        }
+                    ]
+                },
+                "RSV_Forest": {
+                    "Name": "RSV_Forest",
+					"CopyWeatherFromLocation": "Default",
+                    "ReviveLocations": [
+                        {
+                            "Location": "Custom_Ridgeside_PaulaClinic",
+                            "Position": {
+                                "X": 18,
+                                "Y": 5
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "LogName": "Load Dynamic Maps",
+            "Action": "Load",
+            "Target": "Maps/Custom_Ridgeside_RSVHiddenWarp, Maps/Custom_Ridgeside_RSVHiddenWarp2",
+            "FromFile": "Assets/Maps/DynamicMaps/{{targetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Load Event Maps",
+            "Action": "Load",
+            "Target": "Maps/Custom_Ridgeside_AguarCave, Maps/Custom_Ridgeside_AmethyneCorp, Maps/Custom_Ridgeside_AmethyneJewelry, Maps/Custom_Ridgeside_AmethyneMine, Maps/Custom_Ridgeside_EzekielPic, Maps/Custom_Ridgeside_KiarraPick, Maps/Custom_Ridgeside_LogCabinEventHall_Ballroom, Maps/Custom_Ridgeside_LogCabinEventHall_Birthday, Maps/Custom_Ridgeside_LogCabinEventHall_NightParty, Maps/Custom_Ridgeside_LogCabinEventHall_WeddingReception, Maps/Custom_Ridgeside_LogCabinEventHall_WeddingReception_Temp, Maps/Custom_Ridgeside_LolaShed, Maps/Custom_Ridgeside_OldRSVKids, Maps/Custom_Ridgeside_PrincessVilleDate, Maps/Custom_Ridgeside_PurpleMansion_Ball, Maps/Custom_Ridgeside_RidgesideVillage_CookOff, Maps/Custom_Ridgeside_RidgesideVillage_Event, Maps/Custom_Ridgeside_RidgesideVillage_Fashion, Maps/Custom_Ridgeside_Ridge_KennethDate_OFF, Maps/Custom_Ridgeside_Ridge_KennethDate_ON, Maps/Custom_Ridgeside_RSVAbandonedHouse, Maps/RSVAbandonedHouse_Sched,  Maps/Custom_Ridgeside_RSVCliff_AlissaDate, Maps/Custom_Ridgeside_RSVCliff_FayeDate, Maps/Custom_Ridgeside_RSVCorineDate, Maps/Custom_Ridgeside_RSVEvacuationCenter, Maps/Custom_Ridgeside_RSVGreenhouse1, Maps/Custom_Ridgeside_RSVGreenhouse2, Maps/Custom_Ridgeside_RSVSkyGazing, Maps/Custom_Ridgeside_RSVTheRide, Maps/Custom_Ridgeside_RSVTheRide_static, Maps/Custom_Ridgeside_RSVWestCliff, Maps/Custom_Ridgeside_TortsRealm, Maps/Custom_Ridgeside_WeddingReceptionPic, Maps/Custom_Ridgeside_ZuzuCableCarView,  Maps/Custom_Ridgeside_AguarCaveFixed_alt,  Maps/Custom_Ridgeside_AguarCaveFixed",
+            "FromFile": "Assets/Maps/EventMaps/{{targetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Load Event Maps",
+            "Action": "Load",
+            "Target": "Maps/Custom_Ridgeside_JuneNPC_ResortDate",
+            "FromFile": "Assets/Maps/EventMaps/Custom_Ridgeside_Island_S-June.tmx"
+        },
+        {
+            "LogName": "Load Festival Maps",
+            "Action": "Load",
+            "Target": "Maps/Custom_Ridgeside_EmberNight, Maps/Custom_Ridgeside_RSVGathering",
+            "FromFile": "Assets/Maps/FestivalMaps/{{targetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Load Indoor Maps",
+            "Action": "Load",
+            "Target": "Maps/Custom_Ridgeside_3Bros, Maps/Custom_Ridgeside_3Bros2ndFloor, Maps/Custom_Ridgeside_AguarBasement, Maps/Custom_Ridgeside_AguarLab, Maps/Custom_Ridgeside_AlissaHouse, Maps/Custom_Ridgeside_AlissaShed, Maps/Custom_Ridgeside_BertHouse, Maps/Custom_Ridgeside_BertHouse2ndFloor, Maps/Custom_Ridgeside_BlairHouse, Maps/Custom_Ridgeside_EzekielHouse, Maps/Custom_Ridgeside_FayeHouse, Maps/Custom_Ridgeside_FreddieHouse, Maps/Custom_Ridgeside_IanHouse, Maps/Custom_Ridgeside_JericHouse, Maps/Custom_Ridgeside_KennethHouse, Maps/Custom_Ridgeside_LennyHouse, Maps/Custom_Ridgeside_LogCabinEventHall, Maps/Custom_Ridgeside_LogCabinHotel2ndFloor, Maps/Custom_Ridgeside_LogCabinHotel3rdFloor, Maps/Custom_Ridgeside_LogCabinHotelLobby, Maps/Custom_Ridgeside_MaddieHouse, Maps/Custom_Ridgeside_PaulaClinic, Maps/Custom_Ridgeside_PikaHouse, Maps/Custom_Ridgeside_PurpleMansion, Maps/Custom_Ridgeside_PurpleMansion2ndFloor, Maps/Custom_Ridgeside_RSVJioShop, Maps/Custom_Ridgeside_RSVNinjaHouse, Maps/Custom_Ridgeside_RSVSewers, Maps/Custom_Ridgeside_RSVSummitShed, Maps/Custom_Ridgeside_RSVSummitHouse, Maps/Custom_Ridgeside_RSVSummitHouseNew, Maps/Custom_Ridgeside_ShiroHouse",
+            "FromFile": "Assets/Maps/IndoorMaps/{{targetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Load Outdoor Maps",
+            "Action": "Load",
+            "Target": "Maps/Custom_Ridgeside_Ridge, Maps/Custom_Ridgeside_RidgeFalls, Maps/Custom_Ridgeside_RidgeForest, Maps/Custom_Ridgeside_RidgesideVillage, Maps/Custom_Ridgeside_RSVCableCar, Maps/Custom_Ridgeside_RSVCliff, Maps/Custom_Ridgeside_RSVRoad, Maps/Custom_Ridgeside_RSVTheHike, Maps/Custom_Ridgeside_SummitFarm",
+            "FromFile": "Assets/Maps/OutdoorMaps/{{targetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Load Quest Maps",
+            "Action": "Load",
+            "Target": "Maps/Custom_Ridgeside_MysticFalls1, Maps/Custom_Ridgeside_MysticFalls2, Maps/Custom_Ridgeside_MysticFalls3, Maps/Custom_Ridgeside_RidgePond, Maps/Custom_Ridgeside_RSVSpiritRealm",
+            "FromFile": "Assets/Maps/QuestMaps/{{targetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Load Spouse Maps",
+            "Action": "Load",
+            "Target": "Maps/RidgesideSpouseRooms, Maps/RSVSpousePatios",
+            "FromFile": "Assets/Maps/SpouseRooms/{{TargetWithoutPath}}.tmx"
+        },
+        {
+            "LogName": "Add Custom Locations Data",
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "Custom_Ridgeside_RSVCliff_AlissaDate": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVCliff_AlissaDate.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVCliff_AlissaDate",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVCliff_FayeDate": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVCliff_FayeDate.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVCliff_FayeDate",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVCorineDate": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVCorineDate.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVCorineDate",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RidgesideVillage_Event": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RidgesideVillage_Event.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RidgesideVillage_Event",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RidgesideVillage_CookOff": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RidgesideVillage_CookOff.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RidgesideVillage_CookOff",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RidgesideVillage_Fashion": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RidgesideVillage_Fashion.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RidgesideVillage_Fashion",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_Ridge_KennethDate_OFF": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_Ridge_KennethDate_OFF.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_Ridge_KennethDate_OFF",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVEvacuationCenter": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVEvacuationCenter.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVEvacuationCenter",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_Ridge_KennethDate_ON": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_Ridge_KennethDate_ON.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_Ridge_KennethDate_ON",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_PurpleMansion_Ball": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_PurpleMansion_Ball.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_PurpleMansion_Ball",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AmethyneCorp": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AmethyneCorp.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AmethyneCorp",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AmethyneJewelry": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AmethyneJewelry.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AmethyneJewelry",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AmethyneMine": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AmethyneMine.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AmethyneMine",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AguarCave": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AguarCave.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AguarCave",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "AguarCave"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_EzekielPic": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_EzekielPic.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_EzekielPic",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "EzekielPic"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LolaShed": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LolaShed.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LolaShed",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "LolaShed"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_TortsRealm": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_TortsRealm.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_TortsRealm",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVAbandonedHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVAbandonedHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVAbandonedHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVAbandonedHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_JuneNPC_ResortDate": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_JuneNPC_ResortDate.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_JuneNPC_ResortDate",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "Custom_JuneNPC_ResortDate"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_PrincessVilleDate": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_PrincessVilleDate.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_PrincessVilleDate",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "PrincessVilleDate"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVWestCliff": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVWestCliff.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVWestCliff",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVGreenhouse1": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVGreenhouse1.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVGreenhouse1",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVGreenhouse1"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVGreenhouse2": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVGreenhouse2.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVGreenhouse2",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVGreenhouse2"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVTheRide": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVTheRide.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVTheRide",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVTheRide"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVTheRide_static": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVTheRide_static.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVTheRide_static",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinEventHall_WeddingReception": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinEventHall_WeddingReception.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinEventHall_WeddingReception",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinEventHall_WeddingReception_Temp": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinEventHall_WeddingReception_Temp.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinEventHall_WeddingReception_Temp",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinEventHall_Ballroom": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinEventHall_Ballroom.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinEventHall_Ballroom",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinEventHall_Birthday": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinEventHall_Birthday.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinEventHall_Birthday",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinEventHall_NightParty": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinEventHall_NightParty.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinEventHall_NightParty",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_EmberNight": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_EmberNight.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_EmberNight",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "EmberNight"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVGathering": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVGathering.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVGathering",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVGathering"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AguarBasement": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AguarBasement.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AguarBasement",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "AguarBasement"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AguarLab": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AguarLab.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AguarLab",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "AguarLab"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AlissaHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AlissaHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AlissaHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "AlissaHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AlissaShed": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AlissaShed.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AlissaShed",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "AlissaShed"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_BertHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_BertHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_BertHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "BertHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_BertHouse2ndFloor": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_BertHouse2ndFloor.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_BertHouse2ndFloor",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "BertHouse2ndFloor"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_EzekielHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_EzekielHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_EzekielHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "EzekielHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_FreddieHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_FreddieHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_FreddieHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "FreddieHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_IanHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_IanHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_IanHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "IanHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_JericHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_JericHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_JericHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "JericHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_KennethHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_KennethHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_KennethHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "KennethHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LennyHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LennyHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LennyHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "LennyHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinHotel2ndFloor": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinHotel2ndFloor.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "LogCabinHotel2ndFloor"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinHotel3rdFloor": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinHotel3rdFloor.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinHotel3rdFloor",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "LogCabinHotel3rdFloor"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinHotelLobby": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinHotelLobby.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinHotelLobby",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "LogCabinHotelLobby"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_MaddieHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_MaddieHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_MaddieHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "MaddieHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_PikaHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_PikaHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_PikaHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "PikaHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVNinjaHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVNinjaHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVNinjaHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVNinjaHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_ShiroHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_ShiroHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_ShiroHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "ShiroHouse"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_LogCabinEventHall": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_LogCabinEventHall.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_LogCabinEventHall",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_BlairHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_BlairHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_BlairHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_FayeHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_FayeHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_FayeHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_PurpleMansion": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_PurpleMansion.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_PurpleMansion",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_PurpleMansion2ndFloor": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_PurpleMansion2ndFloor.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_PurpleMansion2ndFloor",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_3Bros": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_3Bros.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_3Bros",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_3Bros2ndFloor": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_3Bros2ndFloor.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_3Bros2ndFloor",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVSewers": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVSewers.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVSewers",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_PaulaClinic": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_PaulaClinic.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_PaulaClinic",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVSummitHouse": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVSummitHouse.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVSummitHouse",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVSummitHouseNew": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVSummitHouseNew.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVSummitHouseNew",
+                        "Type": "StardewValley.Locations.DecoratableLocation",
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVSummitShed": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVSummitShed.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVSummitShed",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_MysticFalls1": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_MysticFalls1.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_MysticFalls1",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "MysticFalls1"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_MysticFalls2": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_MysticFalls2.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_MysticFalls2",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "MysticFalls2"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_MysticFalls3": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_MysticFalls3.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_MysticFalls3",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "MysticFalls3"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVSpiritRealm": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVSpiritRealm.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RidgePond": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RidgePond.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RidgePond",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_Ridge": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_Ridge.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_Ridge",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "Ridge"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RidgeFalls": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RidgeFalls.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RidgeFalls",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RidgeFalls"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RidgeForest": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RidgeForest.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RidgeForest",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RidgesideVillage": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RidgesideVillage.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RidgesideVillage",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RidgesideVillage"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVCableCar": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVCableCar.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVCableCar",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVCableCar"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVCliff": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVCliff.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVCliff",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVCliff"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVTheHike": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVTheHike.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVTheHike",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVTheHike"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_SummitFarm": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_SummitFarm.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_SummitFarm",
+                        "Type": null,
+                        "AlwaysActive": true
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVRoad": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVRoad.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVRoad",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVHiddenWarp": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVHiddenWarp.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVHiddenWarp",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVHiddenWarp"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVHiddenWarp2": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVHiddenWarp2.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVHiddenWarp2",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [
+                        "RSVHiddenWarp2"
+                    ],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_WeddingReceptionPic": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_WeddingReceptionPic.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_WeddingReceptionPic",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_KiarraPick": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_KiarraPick.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_KiarraPick",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_OldRSVKids": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_OldRSVKids.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_OldRSVKids",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_RSVSkyGazing": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_RSVSkyGazing.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_RSVSkyGazing",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_ZuzuCableCarView": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_ZuzuCableCarView.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_ZuzuCableCarView",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AguarCaveFixed": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AguarCaveFixed.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AguarCaveFixed",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+                "Custom_Ridgeside_AguarCaveFixed_alt": {
+                    "DisplayName": "{{i18n:Custom_Ridgeside_AguarCaveFixed_alt.Name}}",
+                    "DefaultArrivalTile": null,
+                    "ExcludeFromNpcPathfinding": false,
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/Custom_Ridgeside_AguarCaveFixed_alt",
+                        "Type": null,
+                        "AlwaysActive": false
+                    },
+                    "FormerLocationNames": [],
+                    "ArtifactSpots": [],
+                    "FishAreas": {},
+                    "Fish": [],
+                    "Forage": [],
+                },
+            }
+        }
+    ]
+}

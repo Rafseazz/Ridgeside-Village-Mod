@@ -8,6 +8,7 @@
 			"spring": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
 			"Wed": "610 Custom_Ridgeside_Ridge 9 27 2/a1000 Custom_Ridgeside_PaulaClinic 16 13 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
 			"rain": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_LogCabinHotelLobby 18 15 0/2100 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
+			"GreenRain": "0 Custom_Ridgeside_PaulaClinic 16 13 2",
 
 			// Fri - Three appts (10:30-12:00, 12:30-2:00, 2:30-4:00)
 			"spring_5": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1030 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1200 Custom_Ridgeside_PaulaClinic 15 5 0/1230 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1400 Custom_Ridgeside_PaulaClinic 15 5 0/1430 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1610 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2130 Custom_Ridgeside_PaulaClinic 2 7 2 paula_sleep",
@@ -32,13 +33,13 @@
 			"winter_26": "GOTO spring_12", // Anton, Kiarra
 
 			//Marriage Schedule
-			"marriage_Mon": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1600 Custom_Ridgeside_RidgesideVillage 88 48 2/2000 BusStop -1 23 3",
+			"marriage_Mon": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1600 Custom_Ridgeside_RidgesideVillage 88 48 2/2000 bed",
 			"marriage_Wed": "GOTO marriage_Mon",
 
 			// Fri - Three appts (10:30-12:00, 12:30-2:00, 2:30-4:00)
-			"marriage_spring_5": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1030 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1200 Custom_Ridgeside_PaulaClinic 15 5 0/1230 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1400 Custom_Ridgeside_PaulaClinic 15 5 0/1430 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1610 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2000 BusStop -1 23 3",
+			"marriage_spring_5": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1030 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1200 Custom_Ridgeside_PaulaClinic 15 5 0/1230 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1400 Custom_Ridgeside_PaulaClinic 15 5 0/1430 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1610 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2000 bed",
 			// Fri - Two appts (12:00-1:30, 2:00-3:30)
-			"marriage_spring_12": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1030 Custom_Ridgeside_PaulaClinic 15 5 0/a1200 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1330 Custom_Ridgeside_PaulaClinic 15 5 0/1400 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1530 Custom_Ridgeside_PaulaClinic 15 5 0/1610 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2000 BusStop -1 23 3",
+			"marriage_spring_12": "a800 Custom_Ridgeside_PaulaClinic 16 13 2/1030 Custom_Ridgeside_PaulaClinic 15 5 0/a1200 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1330 Custom_Ridgeside_PaulaClinic 15 5 0/1400 Custom_Ridgeside_PaulaClinic 16 5 1 \"Strings\\schedules\\Paula:checkup\"/1530 Custom_Ridgeside_PaulaClinic 15 5 0/1610 Custom_Ridgeside_PaulaClinic 16 13 2/1700 Custom_Ridgeside_RidgesideVillage 88 48 2/2000 bed",
 
 			// spring_5 - Amethynes
 			// spring_12 - Aguar, Jeric

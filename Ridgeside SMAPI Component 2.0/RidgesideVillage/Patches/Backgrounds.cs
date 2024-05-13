@@ -71,9 +71,9 @@ namespace RidgesideVillage
         public static void GameLocation_resetLocalState_postfix(ref GameLocation __instance)
         {
             if (__instance.NameOrUniqueName == RSVConstants.L_TORTSREALM)
-                Game1.background = new TortsBackground();
+                Game1.background = new TortsBackground(__instance);
             else if (__instance.NameOrUniqueName == RSVConstants.L_CABLECARBG)
-                Game1.background = new CableCarBackground();
+                Game1.background = new CableCarBackground(__instance);
         }
 
         public static void GameLocation_cleanUpBeforePlayerExit_postfix(ref GameLocation __instance)

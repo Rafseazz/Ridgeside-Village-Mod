@@ -1,0 +1,27 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Power images",
+      "Action": "Load",
+      "Target": "LooseSprites/RiveraSecret",
+      "FromFile": "Assets/LooseSprites/RiveraSecret.png"
+    },
+    {
+      "LogName": "Add Powers",
+      "Action": "EditData",
+      "Target": "Data/Powers",
+      "Entries": {
+        "Rafseazz.RSVCP_RiveraSecret": {
+          "DisplayName": "{{i18n: RSV.RiveraSecret.name}}",
+          "Description": "{{i18n:RSV.RiveraSecret.description}}",
+          "TexturePath": "LooseSprites\\RiveraSecret",
+          "TexturePosition": {
+            "X": 0,
+            "Y": 0
+          },
+          "UnlockedCondition": "PLAYER_HAS_SEEN_EVENT Current 75160380"
+        }
+      }
+    }
+  ]
+}

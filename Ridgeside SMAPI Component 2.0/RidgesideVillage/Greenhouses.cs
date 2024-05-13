@@ -18,7 +18,7 @@ namespace RidgesideVillage
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
 
-            TileActionHandler.RegisterTileAction("ShipmentRSV", ShipmentBin);
+            GameLocation.RegisterTileAction("ShipmentRSV", ShipmentBin);
             Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
         }
 
@@ -43,7 +43,7 @@ namespace RidgesideVillage
             }
         }
 
-        private static void ShipmentBin(string tileActionString, Vector2 position)
+        private static bool ShipmentBin(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
             MethodInfo method = typeof(Farm).GetMethod("shipItem");
             ItemGrabMenu itemGrabMenu = new ItemGrabMenu((List<Item>)null, true, false, new InventoryMenu.highlightThisItem(Utility.highlightShippableObjects), (ItemGrabMenu.behaviorOnItemSelect)Delegate.CreateDelegate(typeof(ItemGrabMenu.behaviorOnItemSelect), (object)Game1.getFarm(), method), "", (ItemGrabMenu.behaviorOnItemSelect)null, true, true, false, true, false, 0, (Item)null, -1, (object)null);
@@ -54,6 +54,7 @@ namespace RidgesideVillage
             itemGrabMenu.setDestroyItemOnClick((uint)num2 > 0U);
             itemGrabMenu.initializeShippingBin();
             Game1.activeClickableMenu = (IClickableMenu)itemGrabMenu;
+            return true;
         }
 
         

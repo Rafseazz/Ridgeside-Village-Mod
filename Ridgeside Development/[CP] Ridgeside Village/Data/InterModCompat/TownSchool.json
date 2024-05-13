@@ -1,9 +1,9 @@
 {
 "Changes": [
-	
+
 	/*********
 	** Town School
-	*********/	
+	*********/
 	//Flor Town School Schedule Change
 	{
 		"LogName": "Flor Town School Schedule",
@@ -13,10 +13,10 @@
 			"Tue": "610 School 19 41 2/720 School 2 21 2 flor_read/1400 Town 89 100 3/1600 Custom_Ridgeside_LogCabinHotel2ndFloor 2 9 1/2200 Custom_Ridgeside_LogCabinHotel2ndFloor 3 5 0 flor_sleep",
 			"Wed": "GOTO Tue",
 			"Fri": "GOTO Tue",
-			
-	
+
+
 			//Marriage Schedule
-			"marriage_Tue": "610 School 19 41 2/720 School 2 21 2 flor_read/1400 Town 89 100 3/1800 BusStop -1 23 3",
+			"marriage_Tue": "610 School 19 41 2/720 School 2 21 2 flor_read/1400 Town 89 100 3/1800 bed",
 			"marriage_Wed": "GOTO marriage_Tue",
 			"marriage_Fri": "GOTO marriage_Tue",
 
@@ -59,7 +59,7 @@
 
 		},
 		"When": { "HasMod: |contains=EduAnttunes.TownSchool.CP": true, "HasSeenEvent: hostPlayer |contains=7777002": true },
-	},	
+	},
 
 ]
 }

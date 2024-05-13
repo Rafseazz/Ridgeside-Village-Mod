@@ -9,6 +9,7 @@ using StardewModdingAPI.Events;
 using Microsoft.Xna.Framework;
 using StardewValley.Menus;
 using SpaceCore.Events;
+using StardewValley.SpecialOrders;
 
 namespace RidgesideVillage
 {
@@ -21,7 +22,6 @@ namespace RidgesideVillage
             Helper = ModInstance.Helper;
             Monitor = ModInstance.Monitor;
 
-            //Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.OneSecondUpdateTicked += OnUpdate;
             SpaceEvents.OnEventFinished += OnEventFinished;
         }
@@ -30,7 +30,7 @@ namespace RidgesideVillage
         {
 
             //Specific code to give message to player upon finishing crystals quest
-            if (Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_RedCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_OrangeCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_YellowCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_GreenCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_BlueCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_PurpleCRYSTAL) && Game1.player.team.completedSpecialOrders.ContainsKey(RSVConstants.SO_GrayCRYSTAL) && Game1.player.mailReceived.Contains(RSVConstants.M_CRYSTALS))
+            if (Game1.player.team.completedSpecialOrders.Contains(RSVConstants.SO_RedCRYSTAL) && Game1.player.team.completedSpecialOrders.Contains(RSVConstants.SO_OrangeCRYSTAL) && Game1.player.team.completedSpecialOrders.Contains(RSVConstants.SO_YellowCRYSTAL) && Game1.player.team.completedSpecialOrders.Contains(RSVConstants.SO_GreenCRYSTAL) && Game1.player.team.completedSpecialOrders.Contains(RSVConstants.SO_BlueCRYSTAL) && Game1.player.team.completedSpecialOrders.Contains(RSVConstants.SO_PurpleCRYSTAL) && Game1.player.team.completedSpecialOrders.Contains(RSVConstants.SO_GrayCRYSTAL) && Game1.player.mailReceived.Contains(RSVConstants.M_CRYSTALS))
             {
                 Game1.player.mailReceived.Remove(RSVConstants.M_CRYSTALS);
                 Game1.playSound("healSound");
