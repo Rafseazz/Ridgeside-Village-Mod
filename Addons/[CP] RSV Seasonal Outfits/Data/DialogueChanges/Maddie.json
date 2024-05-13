@@ -49,7 +49,6 @@
    "Target": "Data/Festivals/fall27",
    "When": {
 		"IsOddYear": true,
-		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Maddie": "Married",
 		"Maddie": "enabled, festivals only",
 		"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
@@ -64,7 +63,6 @@
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
    "When": {
-		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Maddie": "Married",
 		"Jeric": "enabled, festivals only",
    },
