@@ -35,7 +35,6 @@
    "Target": "Data/Festivals/fall27",
    "When": {
 		"IsOddYear": true,
-		"HasMod": "aedenthorn.FreeLove",
    	"Relationship:Ian": "Married",
 		"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
 		"Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
@@ -48,8 +47,7 @@
 	 "LogName": "Ian Spirit's Eve Dialogue Change (Free Love back-up) Y2",
    "Action": "EditData",
    "Target": "Data/Festivals/fall27",
-   "When": {
-		"HasMod": "aedenthorn.FreeLove",
+   "When": {	
    	"Relationship:Ian": "Married",
 		"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
    },
