@@ -52,9 +52,9 @@ namespace RidgesideVillage
             CableCarBackground.Initialize(this);
             SummitRenovateMenu.Initialize(this);
 
-            BloomProjectile.Initialize(this);
-            MistProjectile.Initialize(this);
-            Mistblade.Initialize(this);
+            //BloomProjectile.Initialize(this);
+            //MistProjectile.Initialize(this);
+            //Mistblade.Initialize(this);
 
             Patcher = new Patcher(this);
             Patcher.PerformPatching();
