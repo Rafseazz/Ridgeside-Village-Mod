@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
-using StardewModdingAPI;
 using StardewModdingAPI.Utilities;
 using Netcode;
 
@@ -26,29 +25,10 @@ namespace RidgesideVillage
 
     }
 
-    // For multiplayer messages
-    internal class BroadcastMsg
-    {
-        public string type;
-        public string action;
-        public string id;
-    }
-
     internal static class UtilFunctions
     {
-        internal static void sendBroadcastMsg(IModHelper helper, string type, string action, string id)
-        {
-            helper.Multiplayer.SendMessage(
-                        message: $"{{ type: \"{type}\", action: \"{action}\", id: \"{id}\" }}",
-                        messageType: "RSV_BroadcastMsg",
-                        modIDs: new[] { "Rafseazz.RidgesideVillage" },
-                        playerIDs: null);
-            Log.Trace($"RSV: Message sent to {action} {type} {id} to all players.");
-        }
-
         //3 hours of trying and tears :c
-        internal static void StartEvent(StardewValley.Event EventObj, string locationName, int x, int y)
-        {
+        internal static void StartEvent(StardewValley.Event EventObj, string locationName, int x, int y){
             if (Game1.currentLocation.Name.Equals(locationName))
             {
                 Game1.delayedActions.Add(new DelayedAction(500, delegate

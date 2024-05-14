@@ -44,7 +44,6 @@ namespace RidgesideVillage
             SpaceEvents.OnEventFinished += OnEventFinished;
 
             helper.Events.Content.AssetRequested += OnAssetRequested;
-            helper.Events.Multiplayer.ModMessageReceived += HandleBroadcastMsg;
 
             BgUtils.Initialize(this);
 
@@ -238,66 +237,6 @@ namespace RidgesideVillage
             //Log.Trace("RSV: Done with OnEventFinished");
         }
 
-        // RSV util function used for manual syncing in multiplayer games
-        private void HandleBroadcastMsg(object sender, ModMessageReceivedEventArgs e)
-        {
-            if (e.FromModID != ModManifest.UniqueID)
-                return;
-            BroadcastMsg msg = e.ReadAs<BroadcastMsg>();
-            Log.Trace($"RSV: {Game1.player.Name} received message from {e.FromPlayerID} to {msg.action} {msg.type} {msg.id}.");
-            Action<string> action = null;
-            switch (msg.type)
-            {
-                case "event":
-                    if (msg.type == "add")
-                    {
-                        action = (string str) => { Game1.player.eventsSeen.Add(int.Parse(str)); };
-                    }
-                    else if (msg.type == "remove")
-                    {
-                        action = (string str) =>
-                        {
-                            if (Game1.player.eventsSeen.Contains(int.Parse(str)))
-                                Game1.player.eventsSeen.Remove(int.Parse(str));
-                        };
-                    }
-                    break;
-                case "response":
-                    if (msg.type == "add")
-                    {
-                        action = (string str) => { Game1.player.dialogueQuestionsAnswered.Add(int.Parse(str)); };
-                    }
-                    else if (msg.type == "remove")
-                    {
-                        action = (string str) =>
-                        {
-                            if (Game1.player.dialogueQuestionsAnswered.Contains(int.Parse(str)))
-                                Game1.player.dialogueQuestionsAnswered.Remove(int.Parse(str));
-                        };
-                    }
-                    break;
-                case "mail":
-                    if (msg.type == "add")
-                    {
-                        action = (string str) => { Game1.player.mailReceived.Add(str); };
-                    }
-                    else if (msg.type == "remove")
-                    {
-                        action = (string str) =>
-                        {
-                            if (Game1.player.mailReceived.Contains(str))
-                                Game1.player.mailReceived.Remove(str);
-                        };
-                    }
-                    break;
-                default:
-                    Log.Trace($"RSV: BroadcastMsg type {msg.type} unrecognized.");
-                    return;
-            }
-            action(msg.id);
-            Log.Trace($"RSV: Successfully executed message to {msg.action} {msg.type} {msg.id}.");
-        }
-
         /* 
         //   Console Commands
         */
@@ -444,13 +383,11 @@ namespace RidgesideVillage
                     if (Game1.player.mailReceived.Contains(mail_id))
                     {
                         Game1.player.mailReceived.Remove(mail_id);
-                        UtilFunctions.sendBroadcastMsg(Helper, "mail", "remove", mail_id);
                         Log.Info("NPC " + name.ToUpper() + " is now dateable.");
                     }
                     else
                     {
                         Game1.player.mailReceived.Add(mail_id);
-                        UtilFunctions.sendBroadcastMsg(Helper, "mail", "add", mail_id);
                         Log.Info("NPC " + name.ToUpper() + " is no longer dateable.");
                     }
                 }

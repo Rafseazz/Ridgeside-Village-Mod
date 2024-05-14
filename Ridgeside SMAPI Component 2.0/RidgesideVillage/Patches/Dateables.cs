@@ -18,7 +18,7 @@ namespace RidgesideVillage
         private static IModHelper Helper { get; set; }
         private static IManifest ModManifest;
 
-        private static string[] travelers = { "Bryle", "Irene", "June", "Zayne" };
+        private static string[] travelers = { "Bryle", "Irene", "June", "ayne" };
         private static Dictionary<string, string> to_be_broadcast = new Dictionary<string, string>(){
          // Important event, extra info type/extra info ID
          // e: event only, r: response ID, m: mail flag
@@ -42,9 +42,10 @@ namespace RidgesideVillage
             { "bryle", "75160453/!m/FayeBryleLoveStory" },
         };
 
-        internal static void ApplyPatch(Harmony harmony, IModHelper helper)
+        internal static void ApplyPatch(Harmony harmony, IModHelper helper, IManifest manifest)
         {
             Helper = helper;
+            ModManifest = manifest;
 
             Log.Trace($"Applying Harmony Patch \"{nameof(Dateables)}.");
             harmony.Patch(
@@ -56,14 +57,15 @@ namespace RidgesideVillage
                 postfix: new HarmonyMethod(typeof(Dateables), nameof(SocialPage_drawNPCSlot_Postfix))
             );
 
-            Helper.Events.GameLoop.DayStarted += WarpIrene_OnDayStarted;
-            Helper.Events.GameLoop.DayEnding += TalkToTravelers_OnDayEnding;
-            Helper.Events.GameLoop.SaveLoaded += SyncMulti_OnSaveLoaded;
-            SpaceEvents.OnEventFinished += WarpBryle_OnEventFinished;
+            Helper.Events.Multiplayer.ModMessageReceived += OnMessageReceived;
+            Helper.Events.GameLoop.DayStarted += OnDayStarted;
+            Helper.Events.GameLoop.DayEnding += OnDayEnding;
+            Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
+            SpaceEvents.OnEventFinished += OnEventFinished;
         }
 
         // sync_direction
-        // Negative means this player is any player who has seen a relevant event and we want to send a broadcast message
+        // Negative means this player is any player who has seen a relevant event and we want the others to be in sync
         // Positive means this player is a farmhand and we want them to be in sync with the host if they've seen a relevant event
         private static void CheckUnlockables(int sync_direction)
         {
@@ -78,7 +80,12 @@ namespace RidgesideVillage
                 // For all entries, make sure all players have seen the event in the first bucket if anyone has
                 if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
                 {
-                    UtilFunctions.sendBroadcastMsg(Helper, "event", "add", eventID.ToString());
+                    Helper.Multiplayer.SendMessage(
+                                message: $"{eventID}",
+                                messageType: "EventSeen",
+                                modIDs: new[] { ModManifest.UniqueID },
+                                playerIDs: null);
+                    Log.Trace($"RSV: EventSeen message for {eventID} sent to all players.");
                 }
                 else if (sync_direction > 0 && Game1.MasterPlayer.eventsSeen.Contains(eventID))
                 {
@@ -106,7 +113,12 @@ namespace RidgesideVillage
                             decision_made = sync_direction < 0 ? Game1.player.dialogueQuestionsAnswered.Contains(responseID) : Game1.MasterPlayer.dialogueQuestionsAnswered.Contains(responseID);
                             if (decision_made)
                             {
-                                UtilFunctions.sendBroadcastMsg(Helper, "response", "add", responseID.ToString());
+                                Helper.Multiplayer.SendMessage(
+                                message: $"{responseID}",
+                                messageType: "QuestionAnswered",
+                                modIDs: new[] { ModManifest.UniqueID },
+                                playerIDs: null);
+                                Log.Trace($"RSV: QuestionAnswered message for {responseID} sent to all players.");
                             }
                         }
                         else if (sync_direction > 0 && Game1.MasterPlayer.eventsSeen.Contains(eventID))
@@ -128,7 +140,12 @@ namespace RidgesideVillage
                             decision_made = sync_direction < 0 ? Game1.player.mailReceived.Contains(mailID) : Game1.MasterPlayer.mailReceived.Contains(mailID);
                             if (decision_made)
                             {
-                                UtilFunctions.sendBroadcastMsg(Helper, "mail", "add", mailID);
+                                Helper.Multiplayer.SendMessage(
+                                message: $"{mailID}",
+                                messageType: "MailReceived",
+                                modIDs: new[] { ModManifest.UniqueID },
+                                playerIDs: null);
+                                Log.Trace($"RSV: MailReceived message for {mailID} sent to all players.");
                             }
                         }
                         else if (sync_direction > 0 && Game1.MasterPlayer.eventsSeen.Contains(eventID))
@@ -182,7 +199,7 @@ namespace RidgesideVillage
             }
         }
 
-        private static void WarpBryle_OnEventFinished(object sender, EventArgs e)
+        private static void OnEventFinished(object sender, EventArgs e)
         {
             if (Game1.IsMultiplayer)
             {
@@ -202,14 +219,14 @@ namespace RidgesideVillage
             }
         }
 
-        private static void TalkToTravelers_OnDayEnding(object sender, DayEndingEventArgs e)
+        private static void OnDayEnding(object sender, DayEndingEventArgs e)
         {
             foreach(string name in travelers)
                 if (Game1.player.friendshipData.ContainsKey(name) && Game1.getCharacterFromName(name).currentLocation.Name.Contains("HiddenWarp"))
                     Game1.player.friendshipData[name].TalkedToToday = true;
         }
 
-        private static void WarpIrene_OnDayStarted(object sender, DayStartedEventArgs e)
+        private static void OnDayStarted(object sender, DayStartedEventArgs e)
         {
             NPC irene = Game1.getCharacterFromName("Irene");
             if (irene is not null && Game1.player.friendshipData.TryGetValue("Irene", out var friendship)
