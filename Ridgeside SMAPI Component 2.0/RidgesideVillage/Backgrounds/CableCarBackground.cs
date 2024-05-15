@@ -27,14 +27,14 @@ namespace RidgesideVillage
             Monitor = ModInstance.Monitor;
         }
 
-        public CableCarBackground()
-        : base(new Color(0, 0, 0), false)
+        public CableCarBackground(GameLocation location)
+        : base(location, new Color(0, 0, 0), false)
         {
             Log.Trace($"RSV: Creating Cable Car bg");
-            Game1.player.eventsSeen.Add(75160060);
-            Game1.player.eventsSeen.Add(75160404);
-            Game1.player.eventsSeen.Add(75160175);
-            Game1.player.eventsSeen.Add(75160176);
+            Game1.player.eventsSeen.Add("75160060");
+            Game1.player.eventsSeen.Add("75160404");
+            Game1.player.eventsSeen.Add("75160175");
+            Game1.player.eventsSeen.Add("75160176");
             bg = Helper.ModContent.Load<Texture2D>(PathUtilities.NormalizePath("assets/CableCarBg.png"));
             speed = new Vector2(0.5f, 0.315f);
             offset = new Vector2(bg.Width, bg.Height) * -2;
@@ -45,7 +45,7 @@ namespace RidgesideVillage
             Event current = Game1.CurrentEvent;
             if (current == null)
                 return;
-            if (current.id != 94621001)
+            if (!current.id.Equals(94621001))
                 return;
             //Log.Trace($"RSV: Current command: " + current.currentCommand);
             if (current.CurrentCommand > 75)

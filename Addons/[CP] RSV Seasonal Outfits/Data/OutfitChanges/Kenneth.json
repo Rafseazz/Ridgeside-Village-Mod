@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Kenneth Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Kenneth_spring, Portraits/Kenneth_summer, Portraits/Kenneth_fall, Portraits/Kenneth_winter, Portraits/Kenneth_spring24, Portraits/Kenneth_fall27-1, Portraits/Kenneth_fall27-2, Characters/Kenneth_spring, Characters/Kenneth_summer, Characters/Kenneth_fall, Characters/Kenneth_winter, Characters/Kenneth_spring24, Characters/Kenneth_fall27-1, Characters/Kenneth_fall27-2, Portraits/Kenneth_rain, Characters/Kenneth_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Kenneth/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Kenneth",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Kenneth", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.KennethSpring": {
+                    "Id": "{{ModId}}.KennethSpring",
+                    "Portrait": "Portraits/Kenneth_spring",
+                    "Sprite": "Characters/Kenneth_spring",
+                    "Condition": "{{Kenneth|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KennethSummer": {
+                    "Id": "{{ModId}}.KennethSummer",
+                    "Portrait": "Portraits/Kenneth_summer",
+                    "Sprite": "Characters/Kenneth_summer",
+                    "Condition": "{{Kenneth|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KennethFall": {
+                    "Id": "{{ModId}}.KennethFall",
+                    "Portrait": "Portraits/Kenneth_fall",
+                    "Sprite": "Characters/Kenneth_fall",
+                    "Condition": "{{Kenneth|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KennethWinter": {
+                    "Id": "{{ModId}}.KennethWinter",
+                    "Portrait": "Portraits/Kenneth_winter",
+                    "Sprite": "Characters/Kenneth_winter",
+                    "Condition": "{{Kenneth|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.KennethRain": {
+                    "Id": "{{ModId}}.KennethRain",
+                    "Portrait": "Portraits/Kenneth_rain",
+                    "Sprite": "Characters/Kenneth_rain",
+                    "Condition": "{{Kenneth|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Kenneth.FlowerDance": {
+                    "Id": "{{ModId}}.Kenneth.FlowerDance",
+                    "Portrait": "Portraits/Kenneth_spring24",
+                    "Sprite": "Characters/Kenneth_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Kenneth|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Kenneth.SpiritsEve1": {
+                    "Id": "{{ModId}}.Kenneth.SpiritsEve1",
+                    "Portrait": "Portraits/Kenneth_fall27-1",
+                    "Sprite": "Characters/RSVSeasonalBlank",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Kenneth|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Kenneth.SpiritsEve2": {
+                    "Id": "{{ModId}}.Kenneth.SpiritsEve2",
+                    "Portrait": "Portraits/Kenneth_fall27-2",
+                    "Sprite": "Characters/RSVSeasonalBlank",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Kenneth|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

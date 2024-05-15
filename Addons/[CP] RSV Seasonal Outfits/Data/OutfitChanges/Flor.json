@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Flor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Flor_spring, Portraits/Flor_summer, Portraits/Flor_fall, Portraits/Flor_winter, Portraits/Flor_spring24, Portraits/Flor_fall27-1, Portraits/Flor_fall27-2, Characters/Flor_spring, Characters/Flor_summer, Characters/Flor_fall, Characters/Flor_winter, Characters/Flor_spring24, Characters/Flor_fall27-1, Characters/Flor_fall27-2, Portraits/Flor_rain, Characters/Flor_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Flor/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Flor",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Flor", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.FlorSpring": {
+                    "Id": "{{ModId}}.FlorSpring",
+                    "Portrait": "Portraits/Flor_spring",
+                    "Sprite": "Characters/Flor_spring",
+                    "Condition": "{{Flor|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FlorSummer": {
+                    "Id": "{{ModId}}.FlorSummer",
+                    "Portrait": "Portraits/Flor_summer",
+                    "Sprite": "Characters/Flor_summer",
+                    "Condition": "{{Flor|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FlorFall": {
+                    "Id": "{{ModId}}.FlorFall",
+                    "Portrait": "Portraits/Flor_fall",
+                    "Sprite": "Characters/Flor_fall",
+                    "Condition": "{{Flor|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FlorWinter": {
+                    "Id": "{{ModId}}.FlorWinter",
+                    "Portrait": "Portraits/Flor_winter",
+                    "Sprite": "Characters/Flor_winter",
+                    "Condition": "{{Flor|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.FlorRain": {
+                    "Id": "{{ModId}}.FlorRain",
+                    "Portrait": "Portraits/Flor_rain",
+                    "Sprite": "Characters/Flor_rain",
+                    "Condition": "{{Flor|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Flor.FlowerDance": {
+                    "Id": "{{ModId}}.Flor.FlowerDance",
+                    "Portrait": "Portraits/Flor_spring24",
+                    "Sprite": "Characters/Flor_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Flor|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Flor.SpiritsEve1": {
+                    "Id": "{{ModId}}.Flor.SpiritsEve1",
+                    "Portrait": "Portraits/Flor_fall27-1",
+                    "Sprite": "Characters/Flor_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Flor|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Flor.SpiritsEve2": {
+                    "Id": "{{ModId}}.Flor.SpiritsEve2",
+                    "Portrait": "Portraits/Flor_fall27-2",
+                    "Sprite": "Characters/Flor_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Flor|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

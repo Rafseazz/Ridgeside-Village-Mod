@@ -1,0 +1,64 @@
+{
+"Changes": [
+	{
+	 "LogName": "Shiro Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": true,
+		"Shiro": "enabled, festivals only",
+		"Philip": "enabled, festivals only",
+   },
+   "Entries": {
+		"Shiro": "{{i18n:SpiritEve.Shiro.1}}",
+ 	  "Shiro_spouse": "{{i18n:SpiritEve.Shiro_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Shiro Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+		"Shiro": "enabled, festivals only",
+		"Philip": "enabled, festivals only",
+   },
+   "Entries": {
+		"Shiro": "{{i18n:SpiritEve.Shiro.2}}",
+ 	  "Shiro_spouse": "{{i18n:SpiritEve.Shiro_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Shiro Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Shiro": "Married",
+		"IsOddYear": true,
+		"Shiro": "enabled, festivals only",
+		"Philip": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Shiro": "{{i18n:SpiritEve.Shiro_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Shiro Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Shiro": "Married",
+		"IsOddYear": false,
+		"Shiro": "enabled, festivals only",
+		"Philip": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Shiro": "{{i18n:SpiritEve.Shiro_spouse.2}}",
+		},
+	},
+]
+}

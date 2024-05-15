@@ -1,0 +1,110 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Faye Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Faye_spring, Portraits/Faye_summer, Portraits/Faye_fall, Portraits/Faye_winter, Portraits/Faye_spring24, Portraits/Faye_fall27-1, Portraits/Faye_fall27-2, Characters/Faye_spring, Characters/Faye_summer, Characters/Faye_fall, Characters/Faye_winter, Characters/Faye_spring24, Characters/Faye_fall27-1, Characters/Faye_fall27-2, Portraits/Faye_rain, Characters/Faye_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Faye/{{TargetWithoutPath}}.png"
+        },
+			
+        {
+			"LogName": "RSV Seasonal Accessories - Faye, Summer",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye_summer, Characters/Faye_summer",
+			"FromFile": "Assets/{{TargetPathOnly}}/Faye/Faye_acc_summer.png",
+			"When": {
+				"Faye": "enabled",
+                "Weather|contains = Rain, Storm": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Query: {{Random:{{Range:1,10}}|key=FayeHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Faye, Winter",
+			"Action": "EditImage",
+			"Target": "Portraits/Faye_winter, Characters/Faye_winter",
+			"FromFile": "Assets/{{TargetPathOnly}}/Faye/Faye_acc_winter.png",
+			"When": {
+				"Faye": "enabled",
+                "Weather|contains = Rain, Storm": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Query: {{Random:{{Range:1,10}}|key=FayeHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Faye",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Faye", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.FayeSpring": {
+                    "Id": "{{ModId}}.FayeSpring",
+                    "Portrait": "Portraits/Faye_spring",
+                    "Sprite": "Characters/Faye_spring",
+                    "Condition": "{{Faye|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FayeSummer": {
+                    "Id": "{{ModId}}.FayeSummer",
+                    "Portrait": "Portraits/Faye_summer",
+                    "Sprite": "Characters/Faye_summer",
+                    "Condition": "{{Faye|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FayeFall": {
+                    "Id": "{{ModId}}.FayeFall",
+                    "Portrait": "Portraits/Faye_fall",
+                    "Sprite": "Characters/Faye_fall",
+                    "Condition": "{{Faye|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FayeWinter": {
+                    "Id": "{{ModId}}.FayeWinter",
+                    "Portrait": "Portraits/Faye_winter",
+                    "Sprite": "Characters/Faye_winter",
+                    "Condition": "{{Faye|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.FayeRain": {
+                    "Id": "{{ModId}}.FayeRain",
+                    "Portrait": "Portraits/Faye_rain",
+                    "Sprite": "Characters/Faye_rain",
+                    "Condition": "{{Faye|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Faye.FlowerDance": {
+                    "Id": "{{ModId}}.Faye.FlowerDance",
+                    "Portrait": "Portraits/Faye_spring24",
+                    "Sprite": "Characters/Faye_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Faye|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Faye.SpiritsEve1": {
+                    "Id": "{{ModId}}.Faye.SpiritsEve1",
+                    "Portrait": "Portraits/Faye_fall27-1",
+                    "Sprite": "Characters/Faye_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Faye|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Faye.SpiritsEve2": {
+                    "Id": "{{ModId}}.Faye.SpiritsEve2",
+                    "Portrait": "Portraits/Faye_fall27-2",
+                    "Sprite": "Characters/RSVSeasonalBlank",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Faye|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

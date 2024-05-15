@@ -1,0 +1,21 @@
+
+{
+    "Changes": [
+
+        {
+            "LogName": "Load Hats Tilesheet",
+            "Action": "Load",
+            "Target": "RSV/Objects/Hats",
+            "FromFile": "Assets/Objects/Hats.png"
+        },
+
+        {
+            "LogName": "Hats Data",
+            "Action": "EditData",
+            "Target": "Data/Hats",
+            "Entries": {
+                "Rafseazz.RSVCP_Occult_Red_Scarf": "Occult Red Scarf/{{i18n:hats.occult-red-scarf.description}}/true/false//{{i18n:hats.occult-red-scarf.name}}/0/RSV\\Objects\\Hats"
+            }
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Malaya Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Malaya_spring, Portraits/Malaya_summer, Portraits/Malaya_fall, Portraits/Malaya_winter, Portraits/Malaya_spring24, Portraits/Malaya_fall27-1, Portraits/Malaya_fall27-2, Characters/Malaya_spring, Characters/Malaya_summer, Characters/Malaya_fall, Characters/Malaya_winter, Characters/Malaya_spring24, Characters/Malaya_fall27-1, Characters/Malaya_fall27-2, Portraits/Malaya_rain, Characters/Malaya_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Malaya/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Malaya",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Malaya", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.MalayaSpring": {
+                    "Id": "{{ModId}}.MalayaSpring",
+                    "Portrait": "Portraits/Malaya_spring",
+                    "Sprite": "Characters/Malaya_spring",
+                    "Condition": "{{Malaya|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MalayaSummer": {
+                    "Id": "{{ModId}}.MalayaSummer",
+                    "Portrait": "Portraits/Malaya_summer",
+                    "Sprite": "Characters/Malaya_summer",
+                    "Condition": "{{Malaya|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MalayaFall": {
+                    "Id": "{{ModId}}.MalayaFall",
+                    "Portrait": "Portraits/Malaya_fall",
+                    "Sprite": "Characters/Malaya_fall",
+                    "Condition": "{{Malaya|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MalayaWinter": {
+                    "Id": "{{ModId}}.MalayaWinter",
+                    "Portrait": "Portraits/Malaya_winter",
+                    "Sprite": "Characters/Malaya_winter",
+                    "Condition": "{{Malaya|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.MalayaRain": {
+                    "Id": "{{ModId}}.MalayaRain",
+                    "Portrait": "Portraits/Malaya_rain",
+                    "Sprite": "Characters/Malaya_rain",
+                    "Condition": "{{Malaya|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Malaya.FlowerDance": {
+                    "Id": "{{ModId}}.Malaya.FlowerDance",
+                    "Portrait": "Portraits/Malaya_spring24",
+                    "Sprite": "Characters/Malaya_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Malaya|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Malaya.SpiritsEve1": {
+                    "Id": "{{ModId}}.Malaya.SpiritsEve1",
+                    "Portrait": "Portraits/Malaya_fall27-1",
+                    "Sprite": "Characters/Malaya_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Malaya|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Malaya.SpiritsEve2": {
+                    "Id": "{{ModId}}.Malaya.SpiritsEve2",
+                    "Portrait": "Portraits/Malaya_fall27-2",
+                    "Sprite": "Characters/Malaya_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Malaya|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

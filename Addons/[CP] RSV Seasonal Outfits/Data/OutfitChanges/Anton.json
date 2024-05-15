@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Anton Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Anton_spring, Portraits/Anton_summer, Portraits/Anton_fall, Portraits/Anton_winter, Portraits/Anton_spring24, Portraits/Anton_fall27-1, Portraits/Anton_fall27-2, Characters/Anton_spring, Characters/Anton_summer, Characters/Anton_fall, Characters/Anton_winter, Characters/Anton_spring24, Characters/Anton_fall27-1, Characters/Anton_fall27-2, Portraits/Anton_rain, Characters/Anton_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Anton/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Anton",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Anton", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.AntonSpring": {
+                    "Id": "{{ModId}}.AntonSpring",
+                    "Portrait": "Portraits/Anton_spring",
+                    "Sprite": "Characters/Anton_spring",
+                    "Condition": "{{Anton|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AntonSummer": {
+                    "Id": "{{ModId}}.AntonSummer",
+                    "Portrait": "Portraits/Anton_summer",
+                    "Sprite": "Characters/Anton_summer",
+                    "Condition": "{{Anton|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AntonFall": {
+                    "Id": "{{ModId}}.AntonFall",
+                    "Portrait": "Portraits/Anton_fall",
+                    "Sprite": "Characters/Anton_fall",
+                    "Condition": "{{Anton|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AntonWinter": {
+                    "Id": "{{ModId}}.AntonWinter",
+                    "Portrait": "Portraits/Anton_winter",
+                    "Sprite": "Characters/Anton_winter",
+                    "Condition": "{{Anton|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.AntonRain": {
+                    "Id": "{{ModId}}.AntonRain",
+                    "Portrait": "Portraits/Anton_rain",
+                    "Sprite": "Characters/Anton_rain",
+                    "Condition": "{{Anton|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Anton.FlowerDance": {
+                    "Id": "{{ModId}}.Anton.FlowerDance",
+                    "Portrait": "Portraits/Anton_spring24",
+                    "Sprite": "Characters/Anton_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Anton|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Anton.SpiritsEve1": {
+                    "Id": "{{ModId}}.Anton.SpiritsEve1",
+                    "Portrait": "Portraits/Anton_fall27-1",
+                    "Sprite": "Characters/Anton_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Anton|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Anton.SpiritsEve2": {
+                    "Id": "{{ModId}}.Anton.SpiritsEve2",
+                    "Portrait": "Portraits/Anton_fall27-2",
+                    "Sprite": "Characters/Anton_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Anton|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

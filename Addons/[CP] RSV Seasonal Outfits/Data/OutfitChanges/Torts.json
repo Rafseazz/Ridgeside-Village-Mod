@@ -1,0 +1,47 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Torts Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Torts_fall27-1, Portraits/Torts_fall27-2, Characters/Torts_fall27-1, Characters/Torts_fall27-2",
+            "FromFile": "Assets/{{TargetPathOnly}}/Torts/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Torts",
+			"Action": "EditImage",
+			"Target": "Portraits/Torts, Characters/Torts",
+			"FromFile": "Assets/{{Target}}/Torts_{{season}}.png",
+			"When": {
+				"Torts": "enabled",
+				"Query: {{Random:{{Range:1,10}}|key=TortsHat}} > 5": true
+			},
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Torts",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Torts", "Appearance" ],
+            "Entries": {
+                
+                //Festivals
+                "{{ModId}}.Torts.SpiritsEve1": {
+                    "Id": "{{ModId}}.Torts.SpiritsEve1",
+                    "Portrait": "Portraits/Torts_fall27-1",
+                    "Sprite": "Characters/Torts_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Torts|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Torts.SpiritsEve2": {
+                    "Id": "{{ModId}}.Torts.SpiritsEve2",
+                    "Portrait": "Portraits/Torts_fall27-2",
+                    "Sprite": "Characters/Torts_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Torts|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+        
+    ]
+}

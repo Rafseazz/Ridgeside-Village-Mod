@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Keahi Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Keahi_spring, Portraits/Keahi_summer, Portraits/Keahi_fall, Portraits/Keahi_winter, Portraits/Keahi_spring24, Portraits/Keahi_fall27-1, Portraits/Keahi_fall27-2, Characters/Keahi_spring, Characters/Keahi_summer, Characters/Keahi_fall, Characters/Keahi_winter, Characters/Keahi_spring24, Characters/Keahi_fall27-1, Characters/Keahi_fall27-2, Portraits/Keahi_rain, Characters/Keahi_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Keahi/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Keahi",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Keahi", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.KeahiSpring": {
+                    "Id": "{{ModId}}.KeahiSpring",
+                    "Portrait": "Portraits/Keahi_spring",
+                    "Sprite": "Characters/Keahi_spring",
+                    "Condition": "{{Keahi|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KeahiSummer": {
+                    "Id": "{{ModId}}.KeahiSummer",
+                    "Portrait": "Portraits/Keahi_summer",
+                    "Sprite": "Characters/Keahi_summer",
+                    "Condition": "{{Keahi|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KeahiFall": {
+                    "Id": "{{ModId}}.KeahiFall",
+                    "Portrait": "Portraits/Keahi_fall",
+                    "Sprite": "Characters/Keahi_fall",
+                    "Condition": "{{Keahi|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KeahiWinter": {
+                    "Id": "{{ModId}}.KeahiWinter",
+                    "Portrait": "Portraits/Keahi_winter",
+                    "Sprite": "Characters/Keahi_winter",
+                    "Condition": "{{Keahi|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.KeahiRain": {
+                    "Id": "{{ModId}}.KeahiRain",
+                    "Portrait": "Portraits/Keahi_rain",
+                    "Sprite": "Characters/Keahi_rain",
+                    "Condition": "{{Keahi|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Keahi.FlowerDance": {
+                    "Id": "{{ModId}}.Keahi.FlowerDance",
+                    "Portrait": "Portraits/Keahi_spring24",
+                    "Sprite": "Characters/Keahi_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Keahi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Keahi.SpiritsEve1": {
+                    "Id": "{{ModId}}.Keahi.SpiritsEve1",
+                    "Portrait": "Portraits/Keahi_fall27-1",
+                    "Sprite": "Characters/Keahi_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Keahi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Keahi.SpiritsEve2": {
+                    "Id": "{{ModId}}.Keahi.SpiritsEve2",
+                    "Portrait": "Portraits/Keahi_fall27-2",
+                    "Sprite": "Characters/Keahi_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Keahi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

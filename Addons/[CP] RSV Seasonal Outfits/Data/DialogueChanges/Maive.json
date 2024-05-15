@@ -1,0 +1,28 @@
+{
+"Changes": [
+	{
+	 "LogName": "Maive Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Maive": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Maive": "{{i18n:SpiritEve.Maive.1}}",
+		},
+	},
+	{
+	 "LogName": "Maive Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Maive": "enabled, festivals only",
+		 "Sonny": "enabled, festivals only",
+	 },
+   "Entries": {
+	   "Maive_y2": "{{i18n:SpiritEve.Maive.2}}",
+		},
+	},
+]
+}

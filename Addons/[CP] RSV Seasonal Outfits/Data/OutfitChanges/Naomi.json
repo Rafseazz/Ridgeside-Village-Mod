@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Naomi Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Naomi_spring, Portraits/Naomi_summer, Portraits/Naomi_fall, Portraits/Naomi_winter, Portraits/Naomi_spring24, Portraits/Naomi_fall27-1, Portraits/Naomi_fall27-2, Characters/Naomi_spring, Characters/Naomi_summer, Characters/Naomi_fall, Characters/Naomi_winter, Characters/Naomi_spring24, Characters/Naomi_fall27-1, Characters/Naomi_fall27-2, Portraits/Naomi_rain, Characters/Naomi_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Naomi/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Naomi",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Naomi", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.NaomiSpring": {
+                    "Id": "{{ModId}}.NaomiSpring",
+                    "Portrait": "Portraits/Naomi_spring",
+                    "Sprite": "Characters/Naomi_spring",
+                    "Condition": "{{Naomi|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.NaomiSummer": {
+                    "Id": "{{ModId}}.NaomiSummer",
+                    "Portrait": "Portraits/Naomi_summer",
+                    "Sprite": "Characters/Naomi_summer",
+                    "Condition": "{{Naomi|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.NaomiFall": {
+                    "Id": "{{ModId}}.NaomiFall",
+                    "Portrait": "Portraits/Naomi_fall",
+                    "Sprite": "Characters/Naomi_fall",
+                    "Condition": "{{Naomi|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.NaomiWinter": {
+                    "Id": "{{ModId}}.NaomiWinter",
+                    "Portrait": "Portraits/Naomi_winter",
+                    "Sprite": "Characters/Naomi_winter",
+                    "Condition": "{{Naomi|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.NaomiRain": {
+                    "Id": "{{ModId}}.NaomiRain",
+                    "Portrait": "Portraits/Naomi_rain",
+                    "Sprite": "Characters/Naomi_rain",
+                    "Condition": "{{Naomi|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Naomi.FlowerDance": {
+                    "Id": "{{ModId}}.Naomi.FlowerDance",
+                    "Portrait": "Portraits/Naomi_spring24",
+                    "Sprite": "Characters/Naomi_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Naomi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Naomi.SpiritsEve1": {
+                    "Id": "{{ModId}}.Naomi.SpiritsEve1",
+                    "Portrait": "Portraits/Naomi_fall27-1",
+                    "Sprite": "Characters/Naomi_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Naomi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Naomi.SpiritsEve2": {
+                    "Id": "{{ModId}}.Naomi.SpiritsEve2",
+                    "Portrait": "Portraits/Naomi_fall27-2",
+                    "Sprite": "Characters/Naomi_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Naomi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

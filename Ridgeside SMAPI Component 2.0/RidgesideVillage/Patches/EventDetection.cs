@@ -14,8 +14,6 @@ using StardewModdingAPI.Utilities;
 
 namespace RidgesideVillage
 {
-    //Corrects the location name in the "X has begun in Y" message
-    //Obsolet in SDV 1.5.5, will be removed
     internal static class EventDetection
     {
         private static IMonitor Monitor { get; set; }
@@ -25,6 +23,7 @@ namespace RidgesideVillage
         private static ClickableComponent RSVButton { get; set; }
 
         private static Texture2D RSVIcon;
+        private static bool ShouldDraw { get; set; }
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
@@ -43,32 +42,6 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(MapPage), nameof(MapPage.receiveLeftClick)),
                 prefix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_receiveLeftClick_Prefix))
             );
-            if (Constants.TargetPlatform != GamePlatform.Android)
-            {
-                harmony.Patch(
-                  original: AccessTools.Constructor(typeof(MapPage), new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) }),
-                  postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_Constructor_Postfix))
-                );
-            }
-            if (Helper.ModRegistry.IsLoaded("Bouhm.NPCMapLocations"))
-            {
-                try
-                {
-                    Type ModMapPageClass = Type.GetType("NPCMapLocations.Framework.Menus.ModMapPage, NPCMapLocations");
-                    harmony.Patch(
-                        original: AccessTools.Method(ModMapPageClass, "draw", new Type[] { typeof(SpriteBatch) }),
-                        postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_draw_Postfix))
-                    );
-                }
-                catch (Exception e)
-                {
-                    Log.Info("Failed patching NPC Map Locations. RSV Button will probably be invisible on the map");
-                    Log.Info(e.StackTrace);
-                    Log.Info(e.Message);
-                }
-            }
-           
-
 
             Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen(1200, 720);
             ButtonArea = new Rectangle((int)topLeft.X, (int)topLeft.Y + 180, 144, 104);
@@ -95,23 +68,6 @@ namespace RidgesideVillage
                Log.Debug("RSV: Failed to get RSVIcon on SaveLoaded event");
             }
         }
-        private static void MapPage_Constructor_Postfix(MapPage __instance)
-        {
-            __instance.points.Add(RSVButton);
-            ClickableComponent DesertArea = __instance.points.Where(x => x.myID == 1001).ElementAtOrDefault(0);
-            if(DesertArea != null)
-            {
-                DesertArea.leftNeighborID = 25555;
-                DesertArea.downNeighborID = 25555;
-            }
-
-            ClickableComponent SecretWoodsArea = __instance.points.Where(x => x.myID == 1030).ElementAtOrDefault(0);
-            if(SecretWoodsArea != null)
-            {
-                SecretWoodsArea.leftNeighborID = 25555;
-                SecretWoodsArea.upNeighborID = 25555;
-            }
-        }
 
         private static void OnWindowResized(object sender, WindowResizedEventArgs e)
         {
@@ -124,6 +80,8 @@ namespace RidgesideVillage
         {
             try
             {
+                //only draw on vanilla or RSV maps
+                ShouldDraw = !Game1.currentLocation.Name.Contains('_') || Game1.currentLocation.Name.StartsWith("Custom_Ridgeside");
                 if (whichTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside") && Constants.TargetPlatform != GamePlatform.Android)
                 {
                     RSVWorldMap.Open(Game1.activeClickableMenu);
@@ -136,6 +94,10 @@ namespace RidgesideVillage
         }
 
         internal static void MapPage_draw_Postfix(ref MapPage __instance, SpriteBatch b) {
+            if (!ShouldDraw)
+            {
+                return;
+            }
             Game1.drawDialogueBox(ButtonArea.X - 92 + 60, ButtonArea.Y - 16 - 80, 250 - 42, 232, false, true);
             if (RSVIcon is null)
             {

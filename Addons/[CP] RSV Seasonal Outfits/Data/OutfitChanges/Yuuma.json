@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Yuuma Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Yuuma_spring, Portraits/Yuuma_summer, Portraits/Yuuma_fall, Portraits/Yuuma_winter, Portraits/Yuuma_spring24, Portraits/Yuuma_fall27-1, Portraits/Yuuma_fall27-2, Characters/Yuuma_spring, Characters/Yuuma_summer, Characters/Yuuma_fall, Characters/Yuuma_winter, Characters/Yuuma_spring24, Characters/Yuuma_fall27-1, Characters/Yuuma_fall27-2, Portraits/Yuuma_rain, Characters/Yuuma_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Yuuma/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Yuuma",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Yuuma", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.YuumaSpring": {
+                    "Id": "{{ModId}}.YuumaSpring",
+                    "Portrait": "Portraits/Yuuma_spring",
+                    "Sprite": "Characters/Yuuma_spring",
+                    "Condition": "{{Yuuma|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.YuumaSummer": {
+                    "Id": "{{ModId}}.YuumaSummer",
+                    "Portrait": "Portraits/Yuuma_summer",
+                    "Sprite": "Characters/Yuuma_summer",
+                    "Condition": "{{Yuuma|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.YuumaFall": {
+                    "Id": "{{ModId}}.YuumaFall",
+                    "Portrait": "Portraits/Yuuma_fall",
+                    "Sprite": "Characters/Yuuma_fall",
+                    "Condition": "{{Yuuma|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.YuumaWinter": {
+                    "Id": "{{ModId}}.YuumaWinter",
+                    "Portrait": "Portraits/Yuuma_winter",
+                    "Sprite": "Characters/Yuuma_winter",
+                    "Condition": "{{Yuuma|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.YuumaRain": {
+                    "Id": "{{ModId}}.YuumaRain",
+                    "Portrait": "Portraits/Yuuma_rain",
+                    "Sprite": "Characters/Yuuma_rain",
+                    "Condition": "{{Yuuma|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Yuuma.FlowerDance": {
+                    "Id": "{{ModId}}.Yuuma.FlowerDance",
+                    "Portrait": "Portraits/Yuuma_spring24",
+                    "Sprite": "Characters/Yuuma_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Yuuma|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Yuuma.SpiritsEve1": {
+                    "Id": "{{ModId}}.Yuuma.SpiritsEve1",
+                    "Portrait": "Portraits/Yuuma_fall27-1",
+                    "Sprite": "Characters/Yuuma_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Yuuma|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Yuuma.SpiritsEve2": {
+                    "Id": "{{ModId}}.Yuuma.SpiritsEve2",
+                    "Portrait": "Portraits/Yuuma_fall27-2",
+                    "Sprite": "Characters/Yuuma_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Yuuma|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

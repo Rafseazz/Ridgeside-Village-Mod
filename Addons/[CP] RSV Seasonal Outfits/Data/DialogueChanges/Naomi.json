@@ -1,0 +1,28 @@
+{
+"Changes": [
+	{
+	 "LogName": "Naomi Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Naomi": "enabled, festivals only",
+		 "Yuuma": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Naomi": "{{i18n:SpiritEve.Naomi.1}}",
+		},
+	},
+	{
+	 "LogName": "Naomi Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Naomi": "enabled, festivals only",
+	 },
+   "Entries": {
+	   "Naomi_y2": "{{i18n:SpiritEve.Naomi.2}}",
+		},
+	},
+]
+}

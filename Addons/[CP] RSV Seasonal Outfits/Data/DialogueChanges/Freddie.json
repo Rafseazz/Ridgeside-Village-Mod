@@ -1,0 +1,30 @@
+{
+"Changes": [
+	{
+	 "LogName": "Freddie Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Freddie": "enabled, festivals only",
+		 "Lola": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Freddie": "{{i18n:SpiritEve.Freddie.1}}",
+	   "Freddie_y2": "{{i18n:SpiritEve.Freddie.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Freddie Spirit's Eve Dialogue Change (post 8 heart)",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasSeenEvent|contains=75160077": true,
+		 "Freddie": "enabled, festivals only",
+	 },
+	 "Entries": {
+		 "Freddie_y2": "{{i18n:SpiritEve.Freddie.2-8heart}}",
+		},
+	},
+]
+}

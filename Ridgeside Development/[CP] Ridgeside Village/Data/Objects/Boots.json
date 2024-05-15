@@ -1,0 +1,22 @@
+
+{
+    "Changes": [
+
+        {
+            "LogName": "Load Boots Tilesheet",
+            "Action": "Load",
+            "Target": "RSV/Objects/Boots",
+            "FromFile": "Assets/Objects/Boots.png"
+        },
+
+        {
+            "LogName": "Boots Data",
+            "Action": "EditData",
+            "Target": "Data/Boots",
+            "Entries": {
+                "Rafseazz.RSVCP_FRA_Combat_Boots": "FRA Combat Boots/{{i18n:boots.fra-combat-boots.description}}/500/7/7/11/{{i18n:boots.fra-combat-boots.name}}//0/RSV\\Objects\\Boots"
+
+            }
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+"Changes": [
+	{
+	 "LogName": "Paula Spirit's Eve Dialogue Change Normal Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Paula": "enabled, festivals only",
+		 "Anton": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Paula": "{{i18n:SpiritEve.Paula.1}}",
+		},
+	},
+	{
+	 "LogName": "Paula Spirit's Eve Dialogue Changes Spouse",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": { "Paula": "enabled, festivals only", },
+   "Entries": {
+ 	  "Paula_spouse": "{{i18n:SpiritEve.Paula_spouse.1}}",
+		"Paula_spouse_y2": "{{i18n:SpiritEve.Paula_spouse.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Paula Spirit's Eve Dialogue Change Normal Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+		"Paula_y2": "{{i18n:SpiritEve.Paula.2-single}}",
+		},
+	},
+	{
+	 "LogName": "Paula Spirit's Eve Dialogue Change (dating Anton) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasDialogueAnswer": 75163042,
+		 "HasDialogueAnswer": 75163521,
+	 },
+   "Entries": {
+		 "Paula_y2": "{{i18n:SpiritEve.Paula.2-anton}}"
+	 },
+	},
+
+
+//Free Love back-up
+	{
+	 "LogName": "Paula Spirit's Eve Dialogue Changes (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Paula": "Married",
+		"Paula": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Paula": "{{i18n:SpiritEve.Paula_spouse.1}}",
+	   "Paula_y2": "{{i18n:SpiritEve.Paula_spouse.2}}",
+		},
+	},
+]
+}

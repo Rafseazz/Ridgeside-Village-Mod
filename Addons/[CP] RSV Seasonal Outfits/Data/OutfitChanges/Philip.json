@@ -1,0 +1,87 @@
+{
+	"Changes": [
+		{
+            "LogName": "RSV Load Seasonals - Philip Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Philip_spring, Portraits/Philip_summer, Portraits/Philip_fall, Portraits/Philip_winter, Portraits/Philip_spring24, Portraits/Philip_fall27-1, Portraits/Philip_fall27-2, Characters/Philip_spring, Characters/Philip_summer, Characters/Philip_fall, Characters/Philip_winter, Characters/Philip_spring24, Characters/Philip_fall27-1, Characters/Philip_fall27-2, Portraits/Philip_rain, Characters/Philip_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Philip/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Philip",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Philip", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.PhilipSpring": {
+                    "Id": "{{ModId}}.PhilipSpring",
+                    "Portrait": "Portraits/Philip_spring",
+                    "Sprite": "Characters/Philip_spring",
+                    "Condition": "{{Philip|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PhilipSummer": {
+                    "Id": "{{ModId}}.PhilipSummer",
+                    "Portrait": "Portraits/Philip_summer",
+                    "Sprite": "Characters/Philip_summer",
+                    "Condition": "{{Philip|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PhilipFall": {
+                    "Id": "{{ModId}}.PhilipFall",
+                    "Portrait": "Portraits/Philip_fall",
+                    "Sprite": "Characters/Philip_fall",
+                    "Condition": "{{Philip|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PhilipWinter": {
+                    "Id": "{{ModId}}.PhilipWinter",
+                    "Portrait": "Portraits/Philip_winter",
+                    "Sprite": "Characters/Philip_winter",
+                    "Condition": "{{Philip|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.PhilipRain": {
+                    "Id": "{{ModId}}.PhilipRain",
+                    "Portrait": "Portraits/Philip_rain",
+                    "Sprite": "Characters/Philip_rain",
+                    "Condition": "{{Philip|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Philip.FlowerDance": {
+                    "Id": "{{ModId}}.Philip.FlowerDance",
+                    "Portrait": "Portraits/Philip_spring24",
+                    "Sprite": "Characters/Philip_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Philip|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Philip.SpiritsEve1": {
+                    "Id": "{{ModId}}.Philip.SpiritsEve1",
+                    "Portrait": "Portraits/Philip_fall27-1",
+                    "Sprite": "Characters/Philip_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Philip|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Philip.SpiritsEve2": {
+                    "Id": "{{ModId}}.Philip.SpiritsEve2",
+                    "Portrait": "Portraits/Philip_fall27-2",
+                    "Sprite": "Characters/RSVSeasonalBlank",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Philip|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+				
+				//Work Outfit
+				"{{ModId}}.PhilipWork": {
+                    "Id": "{{ModId}}.PhilipWork",
+                    "Portrait": "Portraits/Philip_work",
+                    "Sprite": "Characters/Philip_work",
+                    "Condition": "{{Philip|contains= enabled}}, LOCATION_NAME Target Custom_Ridgeside_ShiroHouse",
+                    "Precedence": -150
+                },
+            }
+        },
+	]
+}

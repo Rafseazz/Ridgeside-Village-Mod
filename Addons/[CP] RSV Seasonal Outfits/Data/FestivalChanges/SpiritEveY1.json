@@ -1,0 +1,299 @@
+{
+"Changes": [
+
+    {
+        "LogName": "RSV Halloween Map Patch Y1",
+        "Action": "EditMap",
+    		"Target": "Maps/Town-Halloween",
+    		"FromFile": "Assets/Maps/RSVHalloween_patchY1.tmx",
+        "FromArea": { "X": 0, "Y": 0, "Width": 4, "Height": 4 },
+  			"ToArea": { "X": 5, "Y": 62, "Width": 4, "Height": 4 },
+  			"PatchMode": "Replace",
+    		"When": {
+    			"HasMod: |contains=FlashShifter.StardewValleyExpandedCP, DaisyNiko.SVR2": false,
+          "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
+          "HasSeenEvent: anyPlayer|contains=75160188": true,
+    		},
+    },
+
+    {
+        //The squad
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Aguar 9 57 down/Alissa 21 62 down/Lola 10 69 left/Corine 21 58 down/Ezekiel 15 58 right/Flor 21 71 left/Bert 12 69 down/Ian 16 60 down/Jeric 21 69 left/Keahi 13 63 left/Lenny 15 66 right/Olga 13 69 down/Maddie 20 58 down/Freddie 9 69 right/Philip 11 60 left/Richard 16 72 right/Shiro 11 61 left/Ysabelle 19 58 down/Yuuma 9 61 down/Kimpoi 14 70 left/Malaya 14 71 left/Sonny 19 66 down/Louie 18 66 down/Maive 17 66 left/Ariah 17 68 down/Shanice 20 64 down/Lorenzo 20 65 up/Anton 19 73 right/Kiarra 19 61 up/Paula 20 73 left/Carmen 14 62 left/Blair 13 62 right/Sean 17 60 left/Faye 9 72 right/Irene 16 69 right/June 22 62 down/Torts 8 63 right",
+                "Delimiter": "/"
+            },
+            //Trinnie 13 64 left
+            //Kenneth 11 67 down
+            //Pika 17 73 left
+
+            //Animations
+            {
+                "Operation": "Append",
+                "Target": ["Fields", "set-up", 5],
+                "Value": "/advancedMove Keahi true -2 0 0 1 2 0 0 -1/advancedMove Irene true 0 2 1 10500 0 -2 1 12600/animate Anton true true 100 20 20 20 20 20 21 22 21 22 22 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 22 22 22 22 22 21 20 20/advancedMove Torts true 0 -1 4 6000 1 0 1 3000 0 0 4 3400 -1 0 3 5000 0 1 2 2500/animate Aguar false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 18 18 18 18 18 18 17 16 16 16 16 16 16 16 16 16 16 16 17 18 18 18 18 18 18 18 17",
+            }
+        ]
+    },
+
+    {
+        //Flor panicking
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Flor": "enabled, festivals only",
+            "Relationship:Flor|contains=married": false
+        },
+        "TextOperations": [
+          {
+           "Operation": "Append",
+           "Target": ["Fields", "set-up", 5],
+           "Value": "/advancedMove Flor true 1 500 2 500 3 500 2 500 3 500 2 500",
+          },
+        ]
+    },
+    {
+        //Pika large sprite
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Pika": "enabled, festivals only"
+        },
+        "TextOperations": [
+          {
+           "Operation": "Append",
+           "Target": ["Fields", "set-up", 5],
+           "Value": "/addTemporaryActor Pika_fall27-1 32 32 17 73 down/animate Pika_fall27-1 false true 1000 6 6 6",
+          },
+        ]
+    },
+	{
+        //Invisible Pika
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Pika": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Pika 17 73 down",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
+        //Pika disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Pika": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Pika 17 73 left",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
+        //Trinnie large sprite
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Trinnie": "enabled, festivals only"
+        },
+        "TextOperations": [
+          {
+           "Operation": "Append",
+           "Target": ["Fields", "set-up", 5],
+           "Value": "/addTemporaryActor Trinnie_fall27-1 32 32 9 64 down false/animate Trinnie_fall27-1 false true 100 8 8 8 3 3 3 8 8 8 3 3 3 8 8 8 3 3 3 8 9 10 11 10 9 8 3 3 3",
+          },
+        ]
+    },
+	{
+        //Invisible Trinnie
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Trinnie": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Trinnie 9 64 down",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
+        //Trinnie disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Trinnie": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Trinnie 13 64 left",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
+        //Kenneth large sprite
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Kenneth": "enabled, festivals only"
+        },
+        "TextOperations": [
+          {
+           "Operation": "Append",
+           "Target": ["Fields", "set-up", 5],
+           "Value": "/addTemporaryActor Kenneth_fall27-1 48 48 10 67 down false/animate Kenneth_fall27-1 false true 100 3 4 7 11 12 15 16 19 20 23 24 27 28 31 32 35 36 39 40 43 44 47 48 51",
+          },
+        ]
+    },
+	{
+        //Invisible Kenneth
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Kenneth": "enabled, festivals only",
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Kenneth 11 67 down",
+              "Delimiter": "/"
+          },
+        ]
+    },
+    {
+        //Kenneth disabled
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "Kenneth": "disabled"
+        },
+        "TextOperations": [
+          {
+              "Operation": "Append",
+              "Target": ["Entries", "Set-Up_additionalCharacters"],
+              "Value": "Kenneth 11 67 down",
+              "Delimiter": "/"
+          },
+        ]
+    },
+
+    {
+        //Naomi Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160249,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Naomi 9 60 right",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Daia Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160254,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Daia 8 66 right",
+                "Delimiter": "/"
+            },
+            {
+             "Operation": "Append",
+             "Target": ["Fields", "set-up", 5],
+             "Value": "/advancedMove Daia true 5 0 1 5000 4 5000 -5 0 2 10500 0 4 1 6000 0 -4 4 5000 2 5000",
+            },
+        ]
+    },
+
+    {
+        //Zayne Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160338,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Zayne 16 65 down",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+    {
+        //Bryle Arrives
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent": 75160375,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Bryle 10 73 up",
+                "Delimiter": "/"
+            },
+        ]
+    },
+
+		{
+        //Jio and Kiwi
+        "Action": "EditData",
+        "Target": "Data/Festivals/fall27",
+        "When": {
+            "HasSeenEvent: anyPlayer|contains=75160377, 75160187": true,
+            "HasSeenEvent: anyPlayer|contains=75160188": true,
+        },
+        "TextOperations": [
+            {
+                "Operation": "Append",
+                "Target": ["Entries", "Set-Up_additionalCharacters"],
+                "Value": "Jio 4 65 right/Kiwi 3 64 down",
+                "Delimiter": "/"
+            },
+            {
+             "Operation": "Append",
+             "Target": ["Fields", "set-up", 5],
+             "Value": "/animate Kiwi false true 75 16 16 17 17 17 17 17 17 18 19 20 21 22 23 24 25 26 17 17 27 27 27 16",
+            },
+        ]
+    },
+
+
+]
+}

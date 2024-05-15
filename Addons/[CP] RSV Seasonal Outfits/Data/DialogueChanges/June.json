@@ -1,0 +1,46 @@
+{
+"Changes": [
+	{
+	 "LogName": "June Spirit's Eve Dialogue Change Normal Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 // Line about Jeric
+		 "Jeric": "enabled, festivals only",
+	 },
+   "Entries": {
+		"June": "{{i18n:SpiritEve.June.1}}",
+		},
+	},
+	{
+	 "LogName": "June Spirit's Eve Dialogue Changes",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "June": "enabled, festivals only",
+	 },
+   "Entries": {
+ 	  "June_y2": "{{i18n:SpiritEve.June.2}}",
+		"June_spouse": "{{i18n:SpiritEve.June_spouse.1}}",
+ 	  "June_spouse_y2": "{{i18n:SpiritEve.June_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "June Spirit's Eve Dialogue Changes (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:June": "Married",
+		"June": "enabled, festivals only",
+   },
+   "Entries": {
+	   "June": "{{i18n:SpiritEve.June_spouse.1}}",
+		 "June_y2": "{{i18n:SpiritEve.June_spouse.2}}",
+		},
+	},
+]
+}

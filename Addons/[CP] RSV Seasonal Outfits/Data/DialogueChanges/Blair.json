@@ -1,0 +1,62 @@
+{
+"Changes": [
+	{
+	 "LogName": "Blair Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 // Line about Carmen's costume
+		 "Carmen": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Blair": "{{i18n:SpiritEve.Blair.1}}",
+ 	  "Blair_spouse": "{{i18n:SpiritEve.Blair_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Blair Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 // Matching with Sean
+		 "Blair": "enabled, festivals only",
+		 "Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+ 	  "Blair_y2": "{{i18n:SpiritEve.Blair.2}}",
+ 	  "Blair_spouse_y2": "{{i18n:SpiritEve.Blair_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Blair Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"IsOddYear": true,
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Blair": "Married",
+		"Carmen": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Blair": "{{i18n:SpiritEve.Blair_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Blair Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Blair": "Married",
+		"Blair": "enabled, festivals only",
+		"Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Blair_y2": "{{i18n:SpiritEve.Blair_spouse.2}}",
+		},
+	},
+]
+}

@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Lorenzo Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Lorenzo_spring, Portraits/Lorenzo_summer, Portraits/Lorenzo_fall, Portraits/Lorenzo_winter, Portraits/Lorenzo_spring24, Portraits/Lorenzo_fall27-1, Portraits/Lorenzo_fall27-2, Characters/Lorenzo_spring, Characters/Lorenzo_summer, Characters/Lorenzo_fall, Characters/Lorenzo_winter, Characters/Lorenzo_spring24, Characters/Lorenzo_fall27-1, Characters/Lorenzo_fall27-2, Portraits/Lorenzo_rain, Characters/Lorenzo_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Lorenzo/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Lorenzo",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Lorenzo", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.LorenzoSpring": {
+                    "Id": "{{ModId}}.LorenzoSpring",
+                    "Portrait": "Portraits/Lorenzo_spring",
+                    "Sprite": "Characters/Lorenzo_spring",
+                    "Condition": "{{Lorenzo|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LorenzoSummer": {
+                    "Id": "{{ModId}}.LorenzoSummer",
+                    "Portrait": "Portraits/Lorenzo_summer",
+                    "Sprite": "Characters/Lorenzo_summer",
+                    "Condition": "{{Lorenzo|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LorenzoFall": {
+                    "Id": "{{ModId}}.LorenzoFall",
+                    "Portrait": "Portraits/Lorenzo_fall",
+                    "Sprite": "Characters/Lorenzo_fall",
+                    "Condition": "{{Lorenzo|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LorenzoWinter": {
+                    "Id": "{{ModId}}.LorenzoWinter",
+                    "Portrait": "Portraits/Lorenzo_winter",
+                    "Sprite": "Characters/Lorenzo_winter",
+                    "Condition": "{{Lorenzo|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.LorenzoRain": {
+                    "Id": "{{ModId}}.LorenzoRain",
+                    "Portrait": "Portraits/Lorenzo_rain",
+                    "Sprite": "Characters/Lorenzo_rain",
+                    "Condition": "{{Lorenzo|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Lorenzo.FlowerDance": {
+                    "Id": "{{ModId}}.Lorenzo.FlowerDance",
+                    "Portrait": "Portraits/Lorenzo_spring24",
+                    "Sprite": "Characters/Lorenzo_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Lorenzo|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Lorenzo.SpiritsEve1": {
+                    "Id": "{{ModId}}.Lorenzo.SpiritsEve1",
+                    "Portrait": "Portraits/Lorenzo_fall27-1",
+                    "Sprite": "Characters/Lorenzo_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Lorenzo|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Lorenzo.SpiritsEve2": {
+                    "Id": "{{ModId}}.Lorenzo.SpiritsEve2",
+                    "Portrait": "Portraits/Lorenzo_fall27-2",
+                    "Sprite": "Characters/Lorenzo_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Lorenzo|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

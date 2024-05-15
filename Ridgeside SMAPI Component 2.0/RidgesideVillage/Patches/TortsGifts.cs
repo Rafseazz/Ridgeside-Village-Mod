@@ -29,7 +29,7 @@ namespace RidgesideVillage
 
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickPersonalFarmEvent)),
-                transpiler: new HarmonyMethod(typeof(BabyEventPatch).GetMethod("Transpiler"))
+                transpiler: new HarmonyMethod(typeof(BabyEventPatch).GetMethod(nameof(BabyEventPatch.Transpiler)))
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickFarmEvent)),
@@ -93,7 +93,7 @@ namespace RidgesideVillage
             gifter.friendshipData["Torts"].GiftsThisWeek++;
             gifter.friendshipData["Torts"].LastGiftDate = new WorldDate(Game1.Date);
             giftee.CurrentDialogue.Clear();
-            giftee.CurrentDialogue.Push(new Dialogue("...", giftee));
+            giftee.CurrentDialogue.Push(new Dialogue(giftee, "", "..."));
             Game1.drawDialogue(giftee);
         }
 

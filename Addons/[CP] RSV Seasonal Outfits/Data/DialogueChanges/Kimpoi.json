@@ -1,0 +1,29 @@
+{
+"Changes": [
+	{
+	 "LogName": "Kimpoi Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Kimpoi": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Kimpoi": "{{i18n:SpiritEve.Kimpoi.1}}",
+		},
+	},
+	{
+	 "LogName": "Kimpoi Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Kimpoi": "enabled, festivals only",
+		 "Malaya": "enabled, festivals only",
+		 "Query: ('{{Alissa}}' = 'enabled' AND '{{SeasonalAlissaToken}}' = 'true') OR ('{{Alissa}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+	   "Kimpoi_y2": "{{i18n:SpiritEve.Kimpoi.2}}",
+		},
+	},
+]
+}

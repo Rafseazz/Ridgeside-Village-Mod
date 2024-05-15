@@ -1,0 +1,912 @@
+{
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Portraits/Aguar_winter, Portraits/Alissa_winter, Portraits/Anton_winter, Portraits/Ariah_winter, Portraits/Bert_winter, Portraits/Blair_winter, Portraits/Bryle_winter, Portraits/Carmen_winter, Portraits/Corine_winter, Portraits/Daia_winter, Portraits/Ezekiel_winter, Portraits/Faye_winter, Portraits/Flor_winter, Portraits/Freddie_winter, Portraits/Ian_winter, Portraits/Irene_winter, Portraits/Jeric_winter, Portraits/June_winter, Portraits/Keahi_winter, Portraits/Kenneth_winter, Portraits/Kiarra_winter, Portraits/Kimpoi_winter, Portraits/Lenny_winter, Portraits/Lola_winter, Portraits/Lorenzo_winter, Portraits/Louie_winter, Portraits/Maddie_winter, Portraits/Maive_winter, Portraits/Malaya_winter, Portraits/Naomi_winter, Portraits/Olga_winter, Portraits/Paula_winter, Portraits/Philip_winter, Portraits/Pika_winter, Portraits/Richard_winter, Portraits/Sean_winter, Portraits/Shanice_winter, Portraits/Shiro_winter, Portraits/Sonny_winter, Portraits/Trinnie_winter, Portraits/Ysabelle_winter, Portraits/Yuuma_winter, Portraits/Zayne_winter, Characters/Aguar_winter, Characters/Alissa_winter, Characters/Anton_winter, Characters/Ariah_winter, Characters/Bert_winter, Characters/Blair_winter, Characters/Bryle_winter, Characters/Carmen_winter, Characters/Corine_winter, Characters/Daia_winter, Characters/Ezekiel_winter, Characters/Faye_winter, Characters/Flor_winter, Characters/Freddie_winter, Characters/Ian_winter, Characters/Irene_winter, Characters/Jeric_winter, Characters/June_winter, Characters/Keahi_winter, Characters/Kenneth_winter, Characters/Kiarra_winter, Characters/Kimpoi_winter, Characters/Lenny_winter, Characters/Lola_winter, Characters/Lorenzo_winter, Characters/Louie_winter, Characters/Maddie_winter, Characters/Maive_winter, Characters/Malaya_winter, Characters/Naomi_winter, Characters/Olga_winter, Characters/Paula_winter, Characters/Philip_winter, Characters/Pika_winter, Characters/Richard_winter, Characters/Sean_winter, Characters/Shanice_winter, Characters/Shiro_winter, Characters/Sonny_winter, Characters/Trinnie_winter, Characters/Ysabelle_winter, Characters/Yuuma_winter, Characters/Zayne_winter",
+            "FromFile": "Assets/WinterOutfits/{{Target}}.png"
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Aguar",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Aguar", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.AguarWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Aguar_winter",
+                    "Sprite": "Characters/Aguar_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Alissa",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Alissa", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.AlissaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Alissa_winter",
+                    "Sprite": "Characters/Alissa_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Anton",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Anton", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.AntonWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Anton_winter",
+                    "Sprite": "Characters/Anton_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Ariah",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ariah", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.AriahWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Ariah_winter",
+                    "Sprite": "Characters/Ariah_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Bert",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Bert", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.BertWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Bert_winter",
+                    "Sprite": "Characters/Bert_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Blair",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Blair", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.BlairWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Blair_winter",
+                    "Sprite": "Characters/Blair_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Bryle",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Bryle", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.BryleWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Bryle_winter",
+                    "Sprite": "Characters/Bryle_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Carmen",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Carmen", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.CarmenWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Carmen_winter",
+                    "Sprite": "Characters/Carmen_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Corine",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Corine", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.CorineWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Corine_winter",
+                    "Sprite": "Characters/Corine_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Daia",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Daia", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.DaiaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Daia_winter",
+                    "Sprite": "Characters/Daia_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Ezekiel",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ezekiel", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.EzekielWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Ezekiel_winter",
+                    "Sprite": "Characters/Ezekiel_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Faye",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Faye", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.FayeWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Faye_winter",
+                    "Sprite": "Characters/Faye_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Flor",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Flor", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.FlorWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Flor_winter",
+                    "Sprite": "Characters/Flor_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Freddie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Freddie", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.FreddieWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Freddie_winter",
+                    "Sprite": "Characters/Freddie_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Ian",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ian", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.IanWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Ian_winter",
+                    "Sprite": "Characters/Ian_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Irene",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Irene", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.IreneWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Irene_winter",
+                    "Sprite": "Characters/Irene_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Jeric",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Jeric", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.JericWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Jeric_winter",
+                    "Sprite": "Characters/Jeric_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - June",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "June", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.JuneWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/June_winter",
+                    "Sprite": "Characters/June_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Keahi",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Keahi", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.KeahiWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Keahi_winter",
+                    "Sprite": "Characters/Keahi_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Kenneth",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Kenneth", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.KennethWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Kenneth_winter",
+                    "Sprite": "Characters/Kenneth_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Kiarra",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Kiarra", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.KiarraWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Kiarra_winter",
+                    "Sprite": "Characters/Kiarra_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Kimpoi",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Kimpoi", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.KimpoiWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Kimpoi_winter",
+                    "Sprite": "Characters/Kimpoi_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Lenny",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Lenny", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.LennyWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Lenny_winter",
+                    "Sprite": "Characters/Lenny_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Lola",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Lola", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.LolaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Lola_winter",
+                    "Sprite": "Characters/Lola_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Lorenzo",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Lorenzo", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.LorenzoWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Lorenzo_winter",
+                    "Sprite": "Characters/Lorenzo_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Louie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Louie", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.LouieWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Louie_winter",
+                    "Sprite": "Characters/Louie_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Maddie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Maddie", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.MaddieWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Maddie_winter",
+                    "Sprite": "Characters/Maddie_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Maive",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Maive", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.MaiveWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Maive_winter",
+                    "Sprite": "Characters/Maive_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Malaya",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Malaya", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.MalayaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Malaya_winter",
+                    "Sprite": "Characters/Malaya_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Naomi",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Naomi", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.NaomiWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Naomi_winter",
+                    "Sprite": "Characters/Naomi_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Olga",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Olga", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.OlgaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Olga_winter",
+                    "Sprite": "Characters/Olga_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Paula",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Paula", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.PaulaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Paula_winter",
+                    "Sprite": "Characters/Paula_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Philip",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Philip", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.PhilipWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Philip_winter",
+                    "Sprite": "Characters/Philip_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Pika",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Pika", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.PikaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Pika_winter",
+                    "Sprite": "Characters/Pika_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Richard",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Richard", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.RichardWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Richard_winter",
+                    "Sprite": "Characters/Richard_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Sean",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Sean", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.SeanWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Sean_winter",
+                    "Sprite": "Characters/Sean_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Shanice",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Shanice", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.ShaniceWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Shanice_winter",
+                    "Sprite": "Characters/Shanice_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Shiro",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Shiro", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.ShiroWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Shiro_winter",
+                    "Sprite": "Characters/Shiro_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Sonny",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Sonny", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.SonnyWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Sonny_winter",
+                    "Sprite": "Characters/Sonny_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Trinnie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Trinnie", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.TrinnieWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Trinnie_winter",
+                    "Sprite": "Characters/Trinnie_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Ysabelle",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ysabelle", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.YsabelleWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Ysabelle_winter",
+                    "Sprite": "Characters/Ysabelle_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Yuuma",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Yuuma", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.YuumaWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Yuuma_winter",
+                    "Sprite": "Characters/Yuuma_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+
+        {
+            "LogName": "RSV Winter Outfit - Zayne",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Zayne", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.ZayneWinterOutfit": {
+                    "Id": "Winter",
+                    "Condition": null,
+                    "Season": "Winter",
+                    "Indoors": true,
+                    "Outdoors": true,
+                    "Portrait": "Portraits/Zayne_winter",
+                    "Sprite": "Characters/Zayne_winter",
+                    "IsIslandAttire": false,
+                    "Precedence": -100,
+                    "Weight": 0
+                  }
+            }
+        },
+    ]
+}

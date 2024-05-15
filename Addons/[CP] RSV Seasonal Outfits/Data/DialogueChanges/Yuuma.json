@@ -1,0 +1,25 @@
+{
+"Changes": [
+	{
+	 "LogName": "Yuuma Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Yuuma": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Yuuma": "{{i18n:SpiritEve.Yuuma.1}}",
+		},
+	},
+	{
+	 "LogName": "Yuuma Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": { "Torts": "enabled, festivals only", },
+   "Entries": {
+	   "Yuuma_y2": "{{i18n:SpiritEve.Yuuma.2}}",
+		},
+	},
+]
+}

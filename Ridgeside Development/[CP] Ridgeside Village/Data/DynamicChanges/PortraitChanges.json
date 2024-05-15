@@ -10,15 +10,12 @@
 		"Action": "EditImage",
 		"Target": "Portraits/Corine",
 		"FromFile": "Assets/Portraits/Corine_Ninja.png",
+		"Update": "OnLocationChange",
 		"When": {
 			"HasSeenEvent: hostPlayer": 75160125,
 			"DayOfWeek": "Thursday",
+			"LocationName|contains=Custom_Ridgeside_EzekielHouse": false
 		},
-	},
-	{
-		"Action": "Load",
-		"Target": "Portraits/Corine_Custom_Ridgeside_EzekielHouse",
-		"FromFile": "Assets/Portraits/Corine.png",
 	},
 
 	{

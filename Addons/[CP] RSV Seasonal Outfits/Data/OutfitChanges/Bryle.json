@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Bryle Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Bryle_spring, Portraits/Bryle_summer, Portraits/Bryle_fall, Portraits/Bryle_winter, Portraits/Bryle_spring24, Portraits/Bryle_fall27-1, Portraits/Bryle_fall27-2, Characters/Bryle_spring, Characters/Bryle_summer, Characters/Bryle_fall, Characters/Bryle_winter, Characters/Bryle_spring24, Characters/Bryle_fall27-1, Characters/Bryle_fall27-2, Portraits/Bryle_rain, Characters/Bryle_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Bryle/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Bryle",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Bryle", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.BryleSpring": {
+                    "Id": "{{ModId}}.BryleSpring",
+                    "Portrait": "Portraits/Bryle_spring",
+                    "Sprite": "Characters/Bryle_spring",
+                    "Condition": "{{Bryle|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BryleSummer": {
+                    "Id": "{{ModId}}.BryleSummer",
+                    "Portrait": "Portraits/Bryle_summer",
+                    "Sprite": "Characters/Bryle_summer",
+                    "Condition": "{{Bryle|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BryleFall": {
+                    "Id": "{{ModId}}.BryleFall",
+                    "Portrait": "Portraits/Bryle_fall",
+                    "Sprite": "Characters/Bryle_fall",
+                    "Condition": "{{Bryle|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BryleWinter": {
+                    "Id": "{{ModId}}.BryleWinter",
+                    "Portrait": "Portraits/Bryle_winter",
+                    "Sprite": "Characters/Bryle_winter",
+                    "Condition": "{{Bryle|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.BryleRain": {
+                    "Id": "{{ModId}}.BryleRain",
+                    "Portrait": "Portraits/Bryle_rain",
+                    "Sprite": "Characters/Bryle_rain",
+                    "Condition": "{{Bryle|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Bryle.FlowerDance": {
+                    "Id": "{{ModId}}.Bryle.FlowerDance",
+                    "Portrait": "Portraits/Bryle_spring24",
+                    "Sprite": "Characters/Bryle_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Bryle|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Bryle.SpiritsEve1": {
+                    "Id": "{{ModId}}.Bryle.SpiritsEve1",
+                    "Portrait": "Portraits/Bryle_fall27-1",
+                    "Sprite": "Characters/Bryle_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Bryle|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Bryle.SpiritsEve2": {
+                    "Id": "{{ModId}}.Bryle.SpiritsEve2",
+                    "Portrait": "Portraits/Bryle_fall27-2",
+                    "Sprite": "Characters/Bryle_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Bryle|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

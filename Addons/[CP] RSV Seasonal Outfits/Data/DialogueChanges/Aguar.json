@@ -1,0 +1,45 @@
+{
+"Changes": [
+	{
+	 "LogName": "Aguar Spirit's Eve Dialogue Change (pre 2 heart event)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasSeenEvent|contains=75160061": false,
+		 "Aguar": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Aguar": "{{i18n:SpiritEve.Aguar.1}}",
+	   "Aguar_y2": "{{i18n:SpiritEve.Aguar.2}}",
+		},
+	},
+
+	{
+		"LogName": "Aguar Spirit's Eve Dialogue Change (post 2 heart event)",
+		"Action": "EditData",
+		"Target": "Data/Festivals/fall27",
+		"When": {
+			"HasSeenEvent": 75160061,
+			"Aguar": "enabled, festivals only",
+		},
+		"Entries": {
+			"Aguar": "{{i18n:SpiritEve.Aguar.1-2heart}}",
+			"Aguar_y2": "{{i18n:SpiritEve.Aguar.2-2heart}}",
+		},
+	},
+
+	{
+		"LogName": "Aguar Dialogue Change (Wizard)",
+		"Action": "EditData",
+		"Target": "Data/Festivals/fall27",
+		"When": {
+			"HasSeenEvent": 75160062,
+			"Query: {{Random:{{Range:1,10}}|key=AguarWizard}}|contains= 2,4,6,8": true,
+			"Aguar": "enabled, festivals only",
+		},
+		"Entries": {
+			"Wizard_y2": "{{i18n:SpiritEve.Wizard.2}}",
+		},
+	},
+]
+}

@@ -1,0 +1,78 @@
+{
+	"Changes": [
+		{
+            "LogName": "RSV Load Seasonals - Kiarra Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Kiarra_spring, Portraits/Kiarra_summer, Portraits/Kiarra_fall, Portraits/Kiarra_winter, Portraits/Kiarra_spring24, Portraits/Kiarra_fall27-1, Portraits/Kiarra_fall27-2, Characters/Kiarra_spring, Characters/Kiarra_summer, Characters/Kiarra_fall, Characters/Kiarra_winter, Characters/Kiarra_spring24, Characters/Kiarra_fall27-1, Characters/Kiarra_fall27-2, Portraits/Kiarra_rain, Characters/Kiarra_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Kiarra/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Kiarra",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Kiarra", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.KiarraSpring": {
+                    "Id": "{{ModId}}.KiarraSpring",
+                    "Portrait": "Portraits/Kiarra_spring",
+                    "Sprite": "Characters/Kiarra_spring",
+                    "Condition": "{{Kiarra|contains= enabled}}, SEASON spring, {{SeasonalKiarraToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KiarraSummer": {
+                    "Id": "{{ModId}}.KiarraSummer",
+                    "Portrait": "Portraits/Kiarra_summer",
+                    "Sprite": "Characters/Kiarra_summer",
+                    "Condition": "{{Kiarra|contains= enabled}}, SEASON summer, {{SeasonalKiarraToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KiarraFall": {
+                    "Id": "{{ModId}}.KiarraFall",
+                    "Portrait": "Portraits/Kiarra_fall",
+                    "Sprite": "Characters/Kiarra_fall",
+                    "Condition": "{{Kiarra|contains= enabled}}, SEASON fall, {{SeasonalKiarraToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KiarraWinter": {
+                    "Id": "{{ModId}}.KiarraWinter",
+                    "Portrait": "Portraits/Kiarra_winter",
+                    "Sprite": "Characters/Kiarra_winter",
+                    "Condition": "{{Kiarra|contains= enabled}}, SEASON winter, {{SeasonalKiarraToken}}",
+                    "Precedence": -100
+                },
+				"{{ModId}}.KiarraRain": {
+                    "Id": "{{ModId}}.KiarraRain",
+                    "Portrait": "Portraits/Kiarra_rain",
+                    "Sprite": "Characters/Kiarra_rain",
+                    "Condition": "{{Kiarra|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Kiarra.FlowerDance": {
+                    "Id": "{{ModId}}.Kiarra.FlowerDance",
+                    "Portrait": "Portraits/Kiarra_spring24",
+                    "Sprite": "Characters/Kiarra_spring24",
+                    "Condition": "ANY \"IS_EVENT festival_spring24, {{Kiarra|contains=enabled}}, {{SeasonalKiarraToken}}\" \"IS_EVENT festival_spring24, {{Kiarra|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Kiarra.SpiritsEve1": {
+                    "Id": "{{ModId}}.Kiarra.SpiritsEve1",
+                    "Portrait": "Portraits/Kiarra_fall27-1",
+                    "Sprite": "Characters/Kiarra_fall27-1",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Kiarra|contains=enabled}}, {{SeasonalKiarraToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Kiarra|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Kiarra.SpiritsEve2": {
+                    "Id": "{{ModId}}.Kiarra.SpiritsEve2",
+                    "Portrait": "Portraits/Kiarra_fall27-2",
+                    "Sprite": "Characters/Kiarra_fall27-2",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Kiarra|contains=enabled}}, {{SeasonalKiarraToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Kiarra|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+            }
+        },
+	]
+}

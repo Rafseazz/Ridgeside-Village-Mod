@@ -10,6 +10,8 @@ using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Menus;
 using StardewValley.GameData;
+using StardewValley.GameData.SpecialOrders;
+using StardewValley.SpecialOrders;
 
 namespace RidgesideVillage.Questing
 {
@@ -112,7 +114,7 @@ namespace RidgesideVillage.Questing
 			{
 				foreach (SpecialOrder order in Game1.player.team.availableSpecialOrders)
 				{
-					if ((order.questDuration.Value == SpecialOrder.QuestDuration.TwoDays || order.questDuration.Value == SpecialOrder.QuestDuration.ThreeDays) && !Game1.player.team.acceptedSpecialOrderTypes.Contains(order.orderType.Value))
+					if ((order.questDuration.Value == QuestDuration.TwoDays || order.questDuration.Value == QuestDuration.ThreeDays) && !Game1.player.team.acceptedSpecialOrderTypes.Contains(order.orderType.Value))
 					{
 						order.SetDuration(order.questDuration.Value);
 					}
@@ -142,13 +144,13 @@ namespace RidgesideVillage.Questing
 				string key = keys[k];
 				if (force_refresh) Log.Trace($"Checking {key}");
 				bool invalid = false;
-				bool repeatable = order_data[key].Repeatable.Equals("True", StringComparison.OrdinalIgnoreCase);
-				if (repeatable && Game1.MasterPlayer.team.completedSpecialOrders.ContainsKey(key))
+				bool repeatable = order_data[key].Repeatable == true;
+				if (repeatable && Game1.MasterPlayer.team.completedSpecialOrders.Contains(key))
 				{
 					if (force_refresh) Log.Trace($"Not repeatable and already done");
 					invalid = true;
 				}
-				if (Game1.dayOfMonth >= 16 && order_data[key].Duration == "Month")
+				if (Game1.dayOfMonth >= 16 && order_data[key].Duration == QuestDuration.Month)
 				{
 					if (force_refresh) Log.Trace($"Month SO and after 16th");
 					invalid = true;
@@ -192,7 +194,7 @@ namespace RidgesideVillage.Questing
 
 				for (int j = 0; j < typed_keys.Count; j++)
 				{
-					if (Game1.player.team.completedSpecialOrders.ContainsKey(typed_keys[j]))
+					if (Game1.player.team.completedSpecialOrders.Contains(typed_keys[j]))
 					{
 						typed_keys.RemoveAt(j);
 						j--;

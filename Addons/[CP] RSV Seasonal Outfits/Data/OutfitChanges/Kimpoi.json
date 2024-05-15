@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Kimpoi Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Kimpoi_spring, Portraits/Kimpoi_summer, Portraits/Kimpoi_fall, Portraits/Kimpoi_winter, Portraits/Kimpoi_spring24, Portraits/Kimpoi_fall27-1, Portraits/Kimpoi_fall27-2, Characters/Kimpoi_spring, Characters/Kimpoi_summer, Characters/Kimpoi_fall, Characters/Kimpoi_winter, Characters/Kimpoi_spring24, Characters/Kimpoi_fall27-1, Characters/Kimpoi_fall27-2, Portraits/Kimpoi_rain, Characters/Kimpoi_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Kimpoi/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Kimpoi",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Kimpoi", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.KimpoiSpring": {
+                    "Id": "{{ModId}}.KimpoiSpring",
+                    "Portrait": "Portraits/Kimpoi_spring",
+                    "Sprite": "Characters/Kimpoi_spring",
+                    "Condition": "{{Kimpoi|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KimpoiSummer": {
+                    "Id": "{{ModId}}.KimpoiSummer",
+                    "Portrait": "Portraits/Kimpoi_summer",
+                    "Sprite": "Characters/Kimpoi_summer",
+                    "Condition": "{{Kimpoi|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KimpoiFall": {
+                    "Id": "{{ModId}}.KimpoiFall",
+                    "Portrait": "Portraits/Kimpoi_fall",
+                    "Sprite": "Characters/Kimpoi_fall",
+                    "Condition": "{{Kimpoi|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KimpoiWinter": {
+                    "Id": "{{ModId}}.KimpoiWinter",
+                    "Portrait": "Portraits/Kimpoi_winter",
+                    "Sprite": "Characters/Kimpoi_winter",
+                    "Condition": "{{Kimpoi|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.KimpoiRain": {
+                    "Id": "{{ModId}}.KimpoiRain",
+                    "Portrait": "Portraits/Kimpoi_rain",
+                    "Sprite": "Characters/Kimpoi_rain",
+                    "Condition": "{{Kimpoi|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Kimpoi.FlowerDance": {
+                    "Id": "{{ModId}}.Kimpoi.FlowerDance",
+                    "Portrait": "Portraits/Kimpoi_spring24",
+                    "Sprite": "Characters/Kimpoi_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Kimpoi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Kimpoi.SpiritsEve1": {
+                    "Id": "{{ModId}}.Kimpoi.SpiritsEve1",
+                    "Portrait": "Portraits/Kimpoi_fall27-1",
+                    "Sprite": "Characters/Kimpoi_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Kimpoi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Kimpoi.SpiritsEve2": {
+                    "Id": "{{ModId}}.Kimpoi.SpiritsEve2",
+                    "Portrait": "Portraits/Kimpoi_fall27-2",
+                    "Sprite": "Characters/Kimpoi_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Kimpoi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

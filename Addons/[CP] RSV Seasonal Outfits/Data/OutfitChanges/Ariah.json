@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Ariah Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Ariah_spring, Portraits/Ariah_summer, Portraits/Ariah_fall, Portraits/Ariah_winter, Portraits/Ariah_spring24, Portraits/Ariah_fall27-1, Portraits/Ariah_fall27-2, Characters/Ariah_spring, Characters/Ariah_summer, Characters/Ariah_fall, Characters/Ariah_winter, Characters/Ariah_spring24, Characters/Ariah_fall27-1, Characters/Ariah_fall27-2, Portraits/Ariah_rain, Characters/Ariah_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Ariah/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Ariah",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ariah", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.AriahSpring": {
+                    "Id": "{{ModId}}.AriahSpring",
+                    "Portrait": "Portraits/Ariah_spring",
+                    "Sprite": "Characters/Ariah_spring",
+                    "Condition": "{{Ariah|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AriahSummer": {
+                    "Id": "{{ModId}}.AriahSummer",
+                    "Portrait": "Portraits/Ariah_summer",
+                    "Sprite": "Characters/Ariah_summer",
+                    "Condition": "{{Ariah|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AriahFall": {
+                    "Id": "{{ModId}}.AriahFall",
+                    "Portrait": "Portraits/Ariah_fall",
+                    "Sprite": "Characters/Ariah_fall",
+                    "Condition": "{{Ariah|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AriahWinter": {
+                    "Id": "{{ModId}}.AriahWinter",
+                    "Portrait": "Portraits/Ariah_winter",
+                    "Sprite": "Characters/Ariah_winter",
+                    "Condition": "{{Ariah|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.AriahRain": {
+                    "Id": "{{ModId}}.AriahRain",
+                    "Portrait": "Portraits/Ariah_rain",
+                    "Sprite": "Characters/Ariah_rain",
+                    "Condition": "{{Ariah|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Ariah.FlowerDance": {
+                    "Id": "{{ModId}}.Ariah.FlowerDance",
+                    "Portrait": "Portraits/Ariah_spring24",
+                    "Sprite": "Characters/Ariah_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Ariah|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ariah.SpiritsEve1": {
+                    "Id": "{{ModId}}.Ariah.SpiritsEve1",
+                    "Portrait": "Portraits/Ariah_fall27-1",
+                    "Sprite": "Characters/Ariah_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Ariah|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ariah.SpiritsEve2": {
+                    "Id": "{{ModId}}.Ariah.SpiritsEve2",
+                    "Portrait": "Portraits/Ariah_fall27-2",
+                    "Sprite": "Characters/Ariah_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Ariah|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

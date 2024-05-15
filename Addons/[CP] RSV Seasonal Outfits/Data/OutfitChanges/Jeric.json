@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Jeric Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Jeric_spring, Portraits/Jeric_summer, Portraits/Jeric_fall, Portraits/Jeric_winter, Portraits/Jeric_spring24, Portraits/Jeric_fall27-1, Portraits/Jeric_fall27-2, Characters/Jeric_spring, Characters/Jeric_summer, Characters/Jeric_fall, Characters/Jeric_winter, Characters/Jeric_spring24, Characters/Jeric_fall27-1, Characters/Jeric_fall27-2, Portraits/Jeric_rain, Characters/Jeric_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Jeric/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Jeric",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Jeric", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.JericSpring": {
+                    "Id": "{{ModId}}.JericSpring",
+                    "Portrait": "Portraits/Jeric_spring",
+                    "Sprite": "Characters/Jeric_spring",
+                    "Condition": "{{Jeric|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.JericSummer": {
+                    "Id": "{{ModId}}.JericSummer",
+                    "Portrait": "Portraits/Jeric_summer",
+                    "Sprite": "Characters/Jeric_summer",
+                    "Condition": "{{Jeric|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.JericFall": {
+                    "Id": "{{ModId}}.JericFall",
+                    "Portrait": "Portraits/Jeric_fall",
+                    "Sprite": "Characters/Jeric_fall",
+                    "Condition": "{{Jeric|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.JericWinter": {
+                    "Id": "{{ModId}}.JericWinter",
+                    "Portrait": "Portraits/Jeric_winter",
+                    "Sprite": "Characters/Jeric_winter",
+                    "Condition": "{{Jeric|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.JericRain": {
+                    "Id": "{{ModId}}.JericRain",
+                    "Portrait": "Portraits/Jeric_rain",
+                    "Sprite": "Characters/Jeric_rain",
+                    "Condition": "{{Jeric|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Jeric.FlowerDance": {
+                    "Id": "{{ModId}}.Jeric.FlowerDance",
+                    "Portrait": "Portraits/Jeric_spring24",
+                    "Sprite": "Characters/Jeric_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Jeric|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Jeric.SpiritsEve1": {
+                    "Id": "{{ModId}}.Jeric.SpiritsEve1",
+                    "Portrait": "Portraits/Jeric_fall27-1",
+                    "Sprite": "Characters/Jeric_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Jeric|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Jeric.SpiritsEve2": {
+                    "Id": "{{ModId}}.Jeric.SpiritsEve2",
+                    "Portrait": "Portraits/Jeric_fall27-2",
+                    "Sprite": "Characters/Jeric_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Jeric|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

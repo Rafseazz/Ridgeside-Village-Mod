@@ -1,0 +1,84 @@
+{
+"Changes": [
+	{
+	 "LogName": "Corine Egg Fest Dialogue Change",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/spring13",
+	 "When": { "Corine": "enabled, festivals always" },
+	 "Entries": {
+		"Corine_spouse": "{{i18n:EggFest.Corine_spouse}}",
+		},
+	},
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+		 "Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+		 "Maddie": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Corine": "{{i18n:SpiritEve.Corine.1}}",
+ 	  "Corine_spouse": "{{i18n:SpiritEve.Corine_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+ 	  "Corine_y2": "{{i18n:SpiritEve.Corine.2}}",
+ 	  "Corine_spouse_y2": "{{i18n:SpiritEve.Corine_spouse.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change (post 8 heart) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		 "HasSeenEvent": 75160125,
+		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+	   "Corine_y2": "{{i18n:SpiritEve.Corine_spouse.2-8heart}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"IsOddYear": true,
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Corine": "Married",
+		"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+		"Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+		"Maddie": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Corine": "{{i18n:SpiritEve.Corine_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Corine Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Corine": "Married",
+		"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Corine_y2": "{{i18n:SpiritEve.Corine_spouse.2}}",
+		},
+	},
+]
+}

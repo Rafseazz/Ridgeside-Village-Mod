@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - June Portraits",
+            "Action": "Load",
+            "Target": "Portraits/June_spring, Portraits/June_summer, Portraits/June_fall, Portraits/June_winter, Portraits/June_spring24, Portraits/June_fall27-1, Portraits/June_fall27-2, Characters/June_spring, Characters/June_summer, Characters/June_fall, Characters/June_winter, Characters/June_spring24, Characters/June_fall27-1, Characters/June_fall27-2, Portraits/June_rain, Characters/June_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/June/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - June",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "June", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.JuneSpring": {
+                    "Id": "{{ModId}}.JuneSpring",
+                    "Portrait": "Portraits/June_spring",
+                    "Sprite": "Characters/June_spring",
+                    "Condition": "{{June|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.JuneSummer": {
+                    "Id": "{{ModId}}.JuneSummer",
+                    "Portrait": "Portraits/June_summer",
+                    "Sprite": "Characters/June_summer",
+                    "Condition": "{{June|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.JuneFall": {
+                    "Id": "{{ModId}}.JuneFall",
+                    "Portrait": "Portraits/June_fall",
+                    "Sprite": "Characters/June_fall",
+                    "Condition": "{{June|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.JuneWinter": {
+                    "Id": "{{ModId}}.JuneWinter",
+                    "Portrait": "Portraits/June_winter",
+                    "Sprite": "Characters/June_winter",
+                    "Condition": "{{June|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.JuneRain": {
+                    "Id": "{{ModId}}.JuneRain",
+                    "Portrait": "Portraits/June_rain",
+                    "Sprite": "Characters/June_rain",
+                    "Condition": "{{June|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.June.FlowerDance": {
+                    "Id": "{{ModId}}.June.FlowerDance",
+                    "Portrait": "Portraits/June_spring24",
+                    "Sprite": "Characters/June_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{June|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.June.SpiritsEve1": {
+                    "Id": "{{ModId}}.June.SpiritsEve1",
+                    "Portrait": "Portraits/June_fall27-1",
+                    "Sprite": "Characters/June_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{June|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.June.SpiritsEve2": {
+                    "Id": "{{ModId}}.June.SpiritsEve2",
+                    "Portrait": "Portraits/June_fall27-2",
+                    "Sprite": "Characters/June_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{June|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

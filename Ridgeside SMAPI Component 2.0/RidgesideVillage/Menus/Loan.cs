@@ -8,8 +8,6 @@ using StardewValley;
 using StardewModdingAPI.Events;
 using Microsoft.Xna.Framework;
 using StardewValley.Menus;
-using SpaceCore.Events;
-using StardewModdingAPI.Utilities;
 
 namespace RidgesideVillage
 {
@@ -29,17 +27,17 @@ namespace RidgesideVillage
             Helper.Events.GameLoop.DayEnding += OnDayEnding;
             //SpaceEvents.TouchActionActivated += OnTileAction;
 
-            TileActionHandler.RegisterTileAction("RSVMaiveLoan", RSVMaiveLoan);
+            GameLocation.RegisterTileAction("RSVMaiveLoan", RSVMaiveLoan);
         }
 
-        private static void OnTileAction(object sender, EventArgsAction e)
-        {
-            if (e.ActionString == "RSVMaiveLoan")
-            {
-                Log.Debug("MaiveLoan: In Touch Action event");
-                RSVMaiveLoan("RSVMaiveLoan", Vector2.Zero);
-            }    
-        }
+        //private static void OnTileAction(object sender, EventArgsAction e)
+        //{
+        //    if (e.ActionString == "RSVMaiveLoan")
+        //    {
+        //        Log.Debug("MaiveLoan: In Touch Action event");
+        //        RSVMaiveLoan("RSVMaiveLoan", Vector2.Zero);
+        //    }    
+        //}
 
         private static void OnDayEnding(object sender, DayEndingEventArgs e)
         {
@@ -57,7 +55,7 @@ namespace RidgesideVillage
             }
         }
 
-        private static void RSVMaiveLoan(string tileActionString, Vector2 position)
+        private static bool RSVMaiveLoan(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
             Log.Debug($"MaiveLoan: starting tile action");
             if (!Game1.player.IsMainPlayer && Game1.player.mailReceived.Contains(REWARDLETTER))
@@ -69,7 +67,7 @@ namespace RidgesideVillage
                 if (!Game1.player.mailReceived.Contains(RSVConstants.M_LOANMAIL) && Game1.player.mailReceived.Contains(REWARDLETTER))
                 {
                     Log.Debug("MaiveLoan: Player is host and has completed SO");
-                    var responses = new List<Response>
+                    var responses = new Response[]
                     {
                         new Response("small", Helper.Translation.Get("Loan.100k")),
                         new Response("med", Helper.Translation.Get("Loan.500k")),
@@ -107,7 +105,7 @@ namespace RidgesideVillage
                 else if (Game1.player.mailReceived.Contains(RSVConstants.M_LOANMAIL))
                 {
                     Log.Debug($"MaiveLoan: player has active loan");
-                    var responses = new List<Response>
+                    var responses = new Response[]
                     {
                         new Response("yes", Helper.Translation.Get("Offer.Yes")),
                         new Response("no", Helper.Translation.Get("Offer.No")),
@@ -127,6 +125,7 @@ namespace RidgesideVillage
                     Log.Debug($"MaiveLoan: Player has not completed quest");
                 }
             }
+            return true;
         }
 
         public static void PayOffAmount(int number, int price, Farmer who)

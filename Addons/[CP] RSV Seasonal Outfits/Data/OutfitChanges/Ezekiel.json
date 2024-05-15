@@ -1,0 +1,94 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Ezekiel Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Ezekiel_spring, Portraits/Ezekiel_summer, Portraits/Ezekiel_fall, Portraits/Ezekiel_winter, Portraits/Ezekiel_spring24, Portraits/Ezekiel_fall27-1, Portraits/Ezekiel_fall27-2, Characters/Ezekiel_spring, Characters/Ezekiel_summer, Characters/Ezekiel_fall, Characters/Ezekiel_winter, Characters/Ezekiel_spring24, Characters/Ezekiel_fall27-1, Characters/Ezekiel_fall27-2, Portraits/Ezekiel_rain, Characters/Ezekiel_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Ezekiel/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Ezekiel",
+			"Action": "EditImage",
+			"Target": "Portraits/Ezekiel_spring, Portraits/Ezekiel_summer, Portraits/Ezekiel_fall, Portraits/Ezekiel_winter, Portraits/Ezekiel_rain, Characters/Ezekiel_spring, Characters/Ezekiel_summer, Characters/Ezekiel_fall, Characters/Ezekiel_winter, Characters/Ezekiel_rain",
+			"FromFile": "Assets/{{TargetPathOnly}}/Ezekiel/Ezekiel_acc.png",
+			"When":
+			{
+				"Ezekiel": "enabled",
+				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR ({{Random:{{Range:1,10}}|key=EzekielHat}} > 5)": true,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Ezekiel",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ezekiel", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.EzekielSpring": {
+                    "Id": "{{ModId}}.EzekielSpring",
+                    "Portrait": "Portraits/Ezekiel_spring",
+                    "Sprite": "Characters/Ezekiel_spring",
+                    "Condition": "{{Ezekiel|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.EzekielSummer": {
+                    "Id": "{{ModId}}.EzekielSummer",
+                    "Portrait": "Portraits/Ezekiel_summer",
+                    "Sprite": "Characters/Ezekiel_summer",
+                    "Condition": "{{Ezekiel|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.EzekielFall": {
+                    "Id": "{{ModId}}.EzekielFall",
+                    "Portrait": "Portraits/Ezekiel_fall",
+                    "Sprite": "Characters/Ezekiel_fall",
+                    "Condition": "{{Ezekiel|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.EzekielWinter": {
+                    "Id": "{{ModId}}.EzekielWinter",
+                    "Portrait": "Portraits/Ezekiel_winter",
+                    "Sprite": "Characters/Ezekiel_winter",
+                    "Condition": "{{Ezekiel|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.EzekielRain": {
+                    "Id": "{{ModId}}.EzekielRain",
+                    "Portrait": "Portraits/Ezekiel_rain",
+                    "Sprite": "Characters/Ezekiel_rain",
+                    "Condition": "{{Ezekiel|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Ezekiel.FlowerDance": {
+                    "Id": "{{ModId}}.Ezekiel.FlowerDance",
+                    "Portrait": "Portraits/Ezekiel_spring24",
+                    "Sprite": "Characters/Ezekiel_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Ezekiel|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ezekiel.SpiritsEve1": {
+                    "Id": "{{ModId}}.Ezekiel.SpiritsEve1",
+                    "Portrait": "Portraits/Ezekiel_fall27-1",
+                    "Sprite": "Characters/Ezekiel_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Ezekiel|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ezekiel.SpiritsEve2": {
+                    "Id": "{{ModId}}.Ezekiel.SpiritsEve2",
+                    "Portrait": "Portraits/Ezekiel_fall27-2",
+                    "Sprite": "Characters/Ezekiel_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Ezekiel|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

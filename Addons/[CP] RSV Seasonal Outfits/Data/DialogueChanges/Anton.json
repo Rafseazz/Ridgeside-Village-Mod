@@ -1,0 +1,93 @@
+{
+"Changes": [
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change Normal Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Anton": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Anton": "{{i18n:SpiritEve.Anton.1}}",
+		},
+	},
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change Normal Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "Entries": {
+ 	  "Anton_y2": "{{i18n:SpiritEve.Anton.2}}",
+		},
+	},
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change Spouse Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Anton": "enabled, festivals only",
+		 "Paula": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Anton_spouse": "{{i18n:SpiritEve.Anton_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change Spouse Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Anton": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Anton_spouse_y2": "{{i18n:SpiritEve.Anton_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"IsOddYear": true,
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Anton": "Married",
+		"Anton": "enabled, festivals only",
+		"Paula": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Anton": "{{i18n:SpiritEve.Anton_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Anton": "Married",
+		"Anton": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Anton_y2": "{{i18n:SpiritEve.Anton_spouse.2}}",
+		},
+	},
+
+//With Ian mod
+	{
+	 "LogName": "Anton Spirit's Eve Dialogue Change (With Ian seasonals) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		 "Anton": "enabled, festivals only",
+		 "SeasonalIanToken": false,
+		 "HasMod|contains=x3n3as.RSVSeasonalIan": true,
+	 },
+   "Entries": {
+	   "Anton_y2": "{{i18n:SpiritEve.Anton.2-ian}}",
+		},
+	},
+]
+}

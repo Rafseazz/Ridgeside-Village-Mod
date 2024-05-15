@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Pika Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Pika_spring, Portraits/Pika_summer, Portraits/Pika_fall, Portraits/Pika_winter, Portraits/Pika_spring24, Portraits/Pika_fall27-1, Portraits/Pika_fall27-2, Characters/Pika_spring, Characters/Pika_summer, Characters/Pika_fall, Characters/Pika_winter, Characters/Pika_spring24, Characters/Pika_fall27-1, Characters/Pika_fall27-2, Portraits/Pika_rain, Characters/Pika_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Pika/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Pika",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Pika", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.PikaSpring": {
+                    "Id": "{{ModId}}.PikaSpring",
+                    "Portrait": "Portraits/Pika_spring",
+                    "Sprite": "Characters/Pika_spring",
+                    "Condition": "{{Pika|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PikaSummer": {
+                    "Id": "{{ModId}}.PikaSummer",
+                    "Portrait": "Portraits/Pika_summer",
+                    "Sprite": "Characters/Pika_summer",
+                    "Condition": "{{Pika|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PikaFall": {
+                    "Id": "{{ModId}}.PikaFall",
+                    "Portrait": "Portraits/Pika_fall",
+                    "Sprite": "Characters/Pika_fall",
+                    "Condition": "{{Pika|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PikaWinter": {
+                    "Id": "{{ModId}}.PikaWinter",
+                    "Portrait": "Portraits/Pika_winter",
+                    "Sprite": "Characters/Pika_winter",
+                    "Condition": "{{Pika|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.PikaRain": {
+                    "Id": "{{ModId}}.PikaRain",
+                    "Portrait": "Portraits/Pika_rain",
+                    "Sprite": "Characters/Pika_rain",
+                    "Condition": "{{Pika|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Pika.FlowerDance": {
+                    "Id": "{{ModId}}.Pika.FlowerDance",
+                    "Portrait": "Portraits/Pika_spring24",
+                    "Sprite": "Characters/Pika_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Pika|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Pika.SpiritsEve1": {
+                    "Id": "{{ModId}}.Pika.SpiritsEve1",
+                    "Portrait": "Portraits/Pika_fall27-1",
+                    "Sprite": "Characters/RSVSeasonalBlank",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Pika|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Pika.SpiritsEve2": {
+                    "Id": "{{ModId}}.Pika.SpiritsEve2",
+                    "Portrait": "Portraits/Pika_fall27-2",
+                    "Sprite": "Characters/Pika_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Pika|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

@@ -1,18 +1,14 @@
-﻿using StardewModdingAPI;
-using StardewModdingAPI.Events;
-using System;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Collections.Generic;
-using System.Reflection;
-using HarmonyLib;
-using StardewValley;
-using StardewValley.Menus;
+﻿using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Netcode;
-using StardewValley.Network;
 using SpaceCore.Events;
+using StardewModdingAPI;
+using StardewModdingAPI.Events;
+using StardewValley;
+using StardewValley.Menus;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RidgesideVillage
 {
@@ -22,7 +18,7 @@ namespace RidgesideVillage
         private static IModHelper Helper { get; set; }
         private static IManifest ModManifest;
 
-        private static string[] travelers = { "Bryle", "Irene", "June", "Zayne" };
+        private static string[] travelers = { "Bryle", "Irene", "June", "ayne" };
         private static Dictionary<string, string> to_be_broadcast = new Dictionary<string, string>(){
          // Important event, extra info type/extra info ID
          // e: event only, r: response ID, m: mail flag
@@ -35,15 +31,15 @@ namespace RidgesideVillage
             { "75160320", "e/" }, // Faye fashion show notice
             { "75160449", "e/" }, // Faye fashion show
         };
-        private static Dictionary<string, string> unlock_rules = new Dictionary<string, string>(){
+        public static Dictionary<string, string> unlock_rules = new Dictionary<string, string>(){
          // Character, deciding heart event ID/unlock cond type/cond ID
          // r: response, m: mail, !: does not have
-            { "Anton", "75160304/r/75163042" },
-            { "Paula", "75160352/r/75163521" },
-            { "Irene", "75160324/r/7516325" },
-            { "Zayne", "75160440/r/7516439" },
-            { "Faye", "75160449/!m/FayeBryleLoveStory" },
-            { "Bryle", "75160453/!m/FayeBryleLoveStory" },
+            { "anton", "75160304/r/75163042" },
+            { "paula", "75160352/r/75163521" },
+            { "irene", "75160324/r/7516325" },
+            { "zayne", "75160440/r/7516439" },
+            { "faye", "75160449/!m/FayeBryleLoveStory" },
+            { "bryle", "75160453/!m/FayeBryleLoveStory" },
         };
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper, IManifest manifest)
@@ -79,7 +75,7 @@ namespace RidgesideVillage
             Farmer currentPlayer = Game1.player;
             foreach (string key in to_be_broadcast.Keys)
             {
-                int eventID = int.Parse(key);
+                string eventID = key;
                 string[] info = to_be_broadcast[key].Split('/');
                 // For all entries, make sure all players have seen the event in the first bucket if anyone has
                 if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
@@ -102,7 +98,7 @@ namespace RidgesideVillage
 
                 // For each listing with a second item in the list, use that as condition and make sure it's universally met or unmet
                 var id_type = info[0];
-                int responseID;
+                string responseID;
                 string mailID;
                 bool decision_made;
                 switch (id_type)
@@ -113,7 +109,7 @@ namespace RidgesideVillage
                     case "r":
                         if (sync_direction < 0 && Game1.CurrentEvent.id == eventID)
                         {
-                            responseID = int.Parse(info[1]);
+                            responseID = info[1];
                             decision_made = sync_direction < 0 ? Game1.player.dialogueQuestionsAnswered.Contains(responseID) : Game1.MasterPlayer.dialogueQuestionsAnswered.Contains(responseID);
                             if (decision_made)
                             {
@@ -127,7 +123,7 @@ namespace RidgesideVillage
                         }
                         else if (sync_direction > 0 && Game1.MasterPlayer.eventsSeen.Contains(eventID))
                         {
-                            responseID = int.Parse(info[1]);
+                            responseID = info[1];
                             decision_made = sync_direction < 0 ? Game1.player.dialogueQuestionsAnswered.Contains(responseID) : Game1.MasterPlayer.dialogueQuestionsAnswered.Contains(responseID);
                             if (!currentPlayer.dialogueQuestionsAnswered.Contains(responseID) && decision_made)
                             {
@@ -178,11 +174,11 @@ namespace RidgesideVillage
             switch (e.Type)
             {
                 case "EventSeen":
-                    Game1.player.eventsSeen.Add(int.Parse(message));
+                    Game1.player.eventsSeen.Add(message);
                     Log.Trace($"RSV: Marked event {message} as seen.");
                     break;
                 case "QuestionAnswered":
-                    Game1.player.dialogueQuestionsAnswered.Add(int.Parse(message));
+                    Game1.player.dialogueQuestionsAnswered.Add(message);
                     Log.Trace($"RSV: Marked response {message} as chosen.");
                     break;
                 case "MailReceived":
@@ -212,7 +208,7 @@ namespace RidgesideVillage
             }
 
             //Teleport Bryle
-            if (Game1.CurrentEvent.id == 75160460)
+            if (Game1.CurrentEvent.id.Equals("75160460"))
             {
                 NPC bryle = Game1.getCharacterFromName("Bryle");
                 if (bryle is not null && Game1.player.friendshipData.TryGetValue("Bryle", out var f1)
@@ -249,17 +245,17 @@ namespace RidgesideVillage
 
         private static bool NPC_engagementResponse_Prefix(NPC __instance)
         {
-            if ((__instance.Name == "Shiro") && !Game1.MasterPlayer.eventsSeen.Contains(75160249))
+            if ((__instance.Name == "Shiro") && !Game1.MasterPlayer.eventsSeen.Contains("75160249"))
             {
                 __instance.CurrentDialogue.Clear();
-                __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Shiro.RejectProposal"), __instance));
+                __instance.CurrentDialogue.Push(new Dialogue(__instance, "",Helper.Translation.Get("Shiro.RejectProposal")));
                 Game1.drawDialogue(__instance);
                 return false;
             }
-            else if ((__instance.Name == "Kiarra") && Game1.MasterPlayer.eventsSeen.Contains(502261))
+            else if ((__instance.Name == "Kiarra") && Game1.MasterPlayer.eventsSeen.Contains("502261"))
             {
                 __instance.CurrentDialogue.Clear();
-                __instance.CurrentDialogue.Push(new Dialogue(Helper.Translation.Get("Kiarra.RejectProposal"), __instance));
+                __instance.CurrentDialogue.Push(new Dialogue(__instance, "",Helper.Translation.Get("Kiarra.RejectProposal")));
                 Game1.drawDialogue(__instance);
                 return false;
             }
@@ -268,18 +264,10 @@ namespace RidgesideVillage
 
         private static void SocialPage_drawNPCSlot_Postfix(SocialPage __instance, SpriteBatch b, int i)
         {
-            string name = __instance.names[i] as string;
-            if (unlock_rules.Keys.Contains(name) && !SocialPage.isDatable(name))
+            var socialEntry = __instance.SocialEntries[i];
+            if (unlock_rules.Keys.Contains(socialEntry.InternalName.ToLower()) && !socialEntry.IsDatable)
             {
-                int event_id = int.Parse(unlock_rules[name].Split("/")[0]);
-                string id_type = unlock_rules[name].Split("/")[1];
-                var romance_id = unlock_rules[name].Split("/")[2];
-                bool unlocked = false;
-                if (id_type == "r")
-                    unlocked = Game1.player.dialogueQuestionsAnswered.Contains(int.Parse(romance_id));
-                else if (id_type == "!m")
-                    unlocked = !Game1.player.mailReceived.Contains(romance_id);
-                if (Game1.player.eventsSeen.Contains(event_id) && unlocked)
+                if (Game1.player.eventsSeen.Contains(unlock_rules[socialEntry.InternalName.ToLower()].Split("/")[0]))
                     return;
                 int width = (IClickableMenu.borderWidth * 3 + 128 - 40 + 192) / 2;
                 string text = Game1.parseText(Helper.Translation.Get("RelationshipStatus.Locked"), Game1.smallFont, width);

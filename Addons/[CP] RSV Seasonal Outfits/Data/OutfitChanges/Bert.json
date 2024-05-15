@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Bert Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Bert_spring, Portraits/Bert_summer, Portraits/Bert_fall, Portraits/Bert_winter, Portraits/Bert_spring24, Portraits/Bert_fall27-1, Portraits/Bert_fall27-2, Characters/Bert_spring, Characters/Bert_summer, Characters/Bert_fall, Characters/Bert_winter, Characters/Bert_spring24, Characters/Bert_fall27-1, Characters/Bert_fall27-2, Portraits/Bert_rain, Characters/Bert_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Bert/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Bert",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Bert", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.BertSpring": {
+                    "Id": "{{ModId}}.BertSpring",
+                    "Portrait": "Portraits/Bert_spring",
+                    "Sprite": "Characters/Bert_spring",
+                    "Condition": "{{Bert|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BertSummer": {
+                    "Id": "{{ModId}}.BertSummer",
+                    "Portrait": "Portraits/Bert_summer",
+                    "Sprite": "Characters/Bert_summer",
+                    "Condition": "{{Bert|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BertFall": {
+                    "Id": "{{ModId}}.BertFall",
+                    "Portrait": "Portraits/Bert_fall",
+                    "Sprite": "Characters/Bert_fall",
+                    "Condition": "{{Bert|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BertWinter": {
+                    "Id": "{{ModId}}.BertWinter",
+                    "Portrait": "Portraits/Bert_winter",
+                    "Sprite": "Characters/Bert_winter",
+                    "Condition": "{{Bert|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.BertRain": {
+                    "Id": "{{ModId}}.BertRain",
+                    "Portrait": "Portraits/Bert_rain",
+                    "Sprite": "Characters/Bert_rain",
+                    "Condition": "{{Bert|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Bert.FlowerDance": {
+                    "Id": "{{ModId}}.Bert.FlowerDance",
+                    "Portrait": "Portraits/Bert_spring24",
+                    "Sprite": "Characters/Bert_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Bert|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Bert.SpiritsEve1": {
+                    "Id": "{{ModId}}.Bert.SpiritsEve1",
+                    "Portrait": "Portraits/Bert_fall27-1",
+                    "Sprite": "Characters/Bert_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Bert|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Bert.SpiritsEve2": {
+                    "Id": "{{ModId}}.Bert.SpiritsEve2",
+                    "Portrait": "Portraits/Bert_fall27-2",
+                    "Sprite": "Characters/Bert_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Bert|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

@@ -1,0 +1,79 @@
+{
+	"Changes": [
+		
+		{
+            "LogName": "RSV Load Seasonals - Alissa Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Alissa_spring, Portraits/Alissa_summer, Portraits/Alissa_fall, Portraits/Alissa_winter, Portraits/Alissa_spring24, Portraits/Alissa_fall27-1, Portraits/Alissa_fall27-2, Characters/Alissa_spring, Characters/Alissa_summer, Characters/Alissa_fall, Characters/Alissa_winter, Characters/Alissa_spring24, Characters/Alissa_fall27-1, Characters/Alissa_fall27-2, Portraits/Alissa_rain, Characters/Alissa_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Alissa/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Alissa",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Alissa", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.AlissaSpring": {
+                    "Id": "{{ModId}}.AlissaSpring",
+                    "Portrait": "Portraits/Alissa_spring",
+                    "Sprite": "Characters/Alissa_spring",
+                    "Condition": "{{Alissa|contains= enabled}}, SEASON spring, {{SeasonalAlissaToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AlissaSummer": {
+                    "Id": "{{ModId}}.AlissaSummer",
+                    "Portrait": "Portraits/Alissa_summer",
+                    "Sprite": "Characters/Alissa_summer",
+                    "Condition": "{{Alissa|contains= enabled}}, SEASON summer, {{SeasonalAlissaToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AlissaFall": {
+                    "Id": "{{ModId}}.AlissaFall",
+                    "Portrait": "Portraits/Alissa_fall",
+                    "Sprite": "Characters/Alissa_fall",
+                    "Condition": "{{Alissa|contains= enabled}}, SEASON fall, {{SeasonalAlissaToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.AlissaWinter": {
+                    "Id": "{{ModId}}.AlissaWinter",
+                    "Portrait": "Portraits/Alissa_winter",
+                    "Sprite": "Characters/Alissa_winter",
+                    "Condition": "{{Alissa|contains= enabled}}, SEASON winter, {{SeasonalAlissaToken}}",
+                    "Precedence": -100
+                },
+				"{{ModId}}.AlissaRain": {
+                    "Id": "{{ModId}}.AlissaRain",
+                    "Portrait": "Portraits/Alissa_rain",
+                    "Sprite": "Characters/Alissa_rain",
+                    "Condition": "{{Alissa|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Alissa.FlowerDance": {
+                    "Id": "{{ModId}}.Alissa.FlowerDance",
+                    "Portrait": "Portraits/Alissa_spring24",
+                    "Sprite": "Characters/Alissa_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Alissa|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Alissa.SpiritsEve1": {
+                    "Id": "{{ModId}}.Alissa.SpiritsEve1",
+                    "Portrait": "Portraits/Alissa_fall27-1",
+                    "Sprite": "Characters/Alissa_fall27-1",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Alissa|contains=enabled}}, {{SeasonalAlissaToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Alissa|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Alissa.SpiritsEve2": {
+                    "Id": "{{ModId}}.Alissa.SpiritsEve2",
+                    "Portrait": "Portraits/Alissa_fall27-2",
+                    "Sprite": "Characters/Alissa_fall27-2",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Alissa|contains=enabled}}, {{SeasonalAlissaToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Alissa|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+            }
+        },
+	]
+}

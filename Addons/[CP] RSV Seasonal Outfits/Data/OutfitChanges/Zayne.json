@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Zayne Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Zayne_spring, Portraits/Zayne_summer, Portraits/Zayne_fall, Portraits/Zayne_winter, Portraits/Zayne_spring24, Portraits/Zayne_fall27-1, Portraits/Zayne_fall27-2, Characters/Zayne_spring, Characters/Zayne_summer, Characters/Zayne_fall, Characters/Zayne_winter, Characters/Zayne_spring24, Characters/Zayne_fall27-1, Characters/Zayne_fall27-2, Portraits/Zayne_rain, Characters/Zayne_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Zayne/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Zayne",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Zayne", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.ZayneSpring": {
+                    "Id": "{{ModId}}.ZayneSpring",
+                    "Portrait": "Portraits/Zayne_spring",
+                    "Sprite": "Characters/Zayne_spring",
+                    "Condition": "{{Zayne|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ZayneSummer": {
+                    "Id": "{{ModId}}.ZayneSummer",
+                    "Portrait": "Portraits/Zayne_summer",
+                    "Sprite": "Characters/Zayne_summer",
+                    "Condition": "{{Zayne|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ZayneFall": {
+                    "Id": "{{ModId}}.ZayneFall",
+                    "Portrait": "Portraits/Zayne_fall",
+                    "Sprite": "Characters/Zayne_fall",
+                    "Condition": "{{Zayne|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ZayneWinter": {
+                    "Id": "{{ModId}}.ZayneWinter",
+                    "Portrait": "Portraits/Zayne_winter",
+                    "Sprite": "Characters/Zayne_winter",
+                    "Condition": "{{Zayne|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.ZayneRain": {
+                    "Id": "{{ModId}}.ZayneRain",
+                    "Portrait": "Portraits/Zayne_rain",
+                    "Sprite": "Characters/Zayne_rain",
+                    "Condition": "{{Zayne|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Zayne.FlowerDance": {
+                    "Id": "{{ModId}}.Zayne.FlowerDance",
+                    "Portrait": "Portraits/Zayne_spring24",
+                    "Sprite": "Characters/Zayne_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Zayne|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Zayne.SpiritsEve1": {
+                    "Id": "{{ModId}}.Zayne.SpiritsEve1",
+                    "Portrait": "Portraits/Zayne_fall27-1",
+                    "Sprite": "Characters/Zayne_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Zayne|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Zayne.SpiritsEve2": {
+                    "Id": "{{ModId}}.Zayne.SpiritsEve2",
+                    "Portrait": "Portraits/Zayne_fall27-2",
+                    "Sprite": "Characters/RSVSeasonalBlank",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Zayne|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

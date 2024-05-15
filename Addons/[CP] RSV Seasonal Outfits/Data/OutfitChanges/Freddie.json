@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Freddie Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Freddie_spring, Portraits/Freddie_summer, Portraits/Freddie_fall, Portraits/Freddie_winter, Portraits/Freddie_spring24, Portraits/Freddie_fall27-1, Portraits/Freddie_fall27-2, Characters/Freddie_spring, Characters/Freddie_summer, Characters/Freddie_fall, Characters/Freddie_winter, Characters/Freddie_spring24, Characters/Freddie_fall27-1, Characters/Freddie_fall27-2, Portraits/Freddie_rain, Characters/Freddie_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Freddie/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Freddie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Freddie", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.FreddieSpring": {
+                    "Id": "{{ModId}}.FreddieSpring",
+                    "Portrait": "Portraits/Freddie_spring",
+                    "Sprite": "Characters/Freddie_spring",
+                    "Condition": "{{Freddie|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FreddieSummer": {
+                    "Id": "{{ModId}}.FreddieSummer",
+                    "Portrait": "Portraits/Freddie_summer",
+                    "Sprite": "Characters/Freddie_summer",
+                    "Condition": "{{Freddie|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FreddieFall": {
+                    "Id": "{{ModId}}.FreddieFall",
+                    "Portrait": "Portraits/Freddie_fall",
+                    "Sprite": "Characters/Freddie_fall",
+                    "Condition": "{{Freddie|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.FreddieWinter": {
+                    "Id": "{{ModId}}.FreddieWinter",
+                    "Portrait": "Portraits/Freddie_winter",
+                    "Sprite": "Characters/Freddie_winter",
+                    "Condition": "{{Freddie|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.FreddieRain": {
+                    "Id": "{{ModId}}.FreddieRain",
+                    "Portrait": "Portraits/Freddie_rain",
+                    "Sprite": "Characters/Freddie_rain",
+                    "Condition": "{{Freddie|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Freddie.FlowerDance": {
+                    "Id": "{{ModId}}.Freddie.FlowerDance",
+                    "Portrait": "Portraits/Freddie_spring24",
+                    "Sprite": "Characters/Freddie_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Freddie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Freddie.SpiritsEve1": {
+                    "Id": "{{ModId}}.Freddie.SpiritsEve1",
+                    "Portrait": "Portraits/Freddie_fall27-1",
+                    "Sprite": "Characters/Freddie_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Freddie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Freddie.SpiritsEve2": {
+                    "Id": "{{ModId}}.Freddie.SpiritsEve2",
+                    "Portrait": "Portraits/Freddie_fall27-2",
+                    "Sprite": "Characters/Freddie_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Freddie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

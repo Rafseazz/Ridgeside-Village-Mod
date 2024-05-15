@@ -21,15 +21,11 @@ namespace RidgesideVillage
 
             Animations.ApplyPatch(harmony, Helper);
             Backgrounds.ApplyPatch(harmony, Helper);
-            ClothingDonation.ApplyPatch(harmony, Helper);
             Dateables.ApplyPatch(harmony, Helper, Manifest);
             EventDetection.ApplyPatch(harmony, Helper);
             EventPatches.ApplyPatch(harmony, Helper);
-            Fish.ApplyPatch(harmony, Helper);
-            Obelisk.ApplyPatch(harmony, Helper);
             Projectiles.ApplyPatch(harmony, Helper);
             Rings.ApplyPatch(harmony, Helper);
-            SecretSantaGift.ApplyPatch(harmony, Helper);
             SODialogue.ApplyPatch(harmony, Helper);
             SummitFarm.ApplyPatch(harmony, Helper);
             SwimPatch.ApplyPatch(harmony, Helper);
@@ -37,11 +33,10 @@ namespace RidgesideVillage
             TreasureItems.ApplyPatch(harmony, Helper);
             UntimedSO.ApplyPatch(harmony, Helper);
             WalletItem.ApplyPatch(harmony, Helper);
-            WeddingPatches.ApplyPatch(harmony, Helper);
             QuestPatches.ApplyPatch(harmony, Helper);
             Music.ApplyPatch(harmony, Helper);
+            SummitHouse.ApplyPatch(harmony, Helper);
 
-            ShopTileAction.ApplyPatch(harmony, Helper);
             //RidgeForest.ApplyPatch(harmony, Helper);
         }
     }

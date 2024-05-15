@@ -1,0 +1,85 @@
+{
+"Changes": [
+	{
+	 "LogName": "Ysabelle Egg Fest Dialogue Change",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/spring13",
+	 "When": { "Ysabelle": "enabled, festivals always", },
+	 "Entries": {
+		"Ysabelle": "{{i18n:EggFest.Ysabelle}}",
+		"Ysabelle_spouse": "{{i18n:EggFest.Ysabelle_spouse}}",
+		},
+	},
+
+	{
+	 "LogName": "Ysabelle Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+		 "Maddie": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Ysabelle": "{{i18n:SpiritEve.Ysabelle.1}}",
+ 	  "Ysabelle_spouse": "{{i18n:SpiritEve.Ysabelle_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Ysabelle Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+		 "Faye": "enabled, festivals only"
+	 },
+   "Entries": {
+ 	  "Ysabelle_y2": "{{i18n:SpiritEve.Ysabelle.2}}",
+		},
+	},
+	{
+	 "LogName": "Ysabelle Spirit's Eve Dialogue Change Spouse Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+ 	  "Ysabelle_spouse_y2": "{{i18n:SpiritEve.Ysabelle_spouse.2}}",
+		},
+	},
+
+
+//Free Love back-up
+	{
+	 "LogName": "Ysabelle Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"IsOddYear": true,
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Ysabelle": "Married",
+		"Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+		"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+		"Maddie": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Ysabelle": "{{i18n:SpiritEve.Ysabelle_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Ysabelle Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Ysabelle": "Married",
+		"Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Ysabelle_y2": "{{i18n:SpiritEve.Ysabelle_spouse.2}}",
+		},
+	},
+]
+}

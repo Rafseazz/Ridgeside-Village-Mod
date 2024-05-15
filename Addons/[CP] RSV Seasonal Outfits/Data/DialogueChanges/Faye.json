@@ -1,0 +1,92 @@
+{
+"Changes": [
+	{
+	 "LogName": "Faye Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasSeenEvent|contains=75160375": false,
+		 "IsOddYear": true,
+		 "Faye": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Faye": "{{i18n:SpiritEve.Faye.1-nobryle}}",
+ 	  "Faye_spouse": "{{i18n:SpiritEve.Faye_spouse.1}}",
+		},
+	},
+
+	{
+	 "LogName": "Faye Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": false,
+		 "Faye": "enabled, festivals only",
+	 },
+   "Entries": {
+		"Faye": "{{i18n:SpiritEve.Faye.2}}",
+ 	  "Faye_spouse": "{{i18n:SpiritEve.Faye_spouse.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Faye Spirit's Eve Dialogue Change (Bryle present)",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasSeenEvent": 75160375,
+		 "IsOddYear": true,
+		 "Faye": "enabled, festivals only",
+		 "Bryle": "enabled, festivals only",
+	 },
+	 "Entries": {
+		 "Faye": "{{i18n:SpiritEve.Faye.1-single}}",
+	 },
+	},
+
+	{
+	 "LogName": "Faye Spirit's Eve Dialogue Change (dating Bryle)",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasSeenEvent": 75160453,
+		 "HasSeenEvent": 75160449,
+		 "HasFlag|contains=FayeBryleLoveStory": true,
+		 "IsOddYear": true,
+	 },
+	 "Entries": {
+		 "Faye": "{{i18n:SpiritEve.Faye.1-bryle}}",
+	 },
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Faye Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Faye": "Married",
+		"IsOddYear": true,
+		"Faye": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Faye": "{{i18n:SpiritEve.Faye_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Faye Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Faye": "Married",
+		"IsOddYear": false,
+		"Faye": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Faye": "{{i18n:SpiritEve.Faye_spouse.2}}",
+		},
+	},
+]
+}

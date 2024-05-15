@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Lenny Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Lenny_spring, Portraits/Lenny_summer, Portraits/Lenny_fall, Portraits/Lenny_winter, Portraits/Lenny_spring24, Portraits/Lenny_fall27-1, Portraits/Lenny_fall27-2, Characters/Lenny_spring, Characters/Lenny_summer, Characters/Lenny_fall, Characters/Lenny_winter, Characters/Lenny_spring24, Characters/Lenny_fall27-1, Characters/Lenny_fall27-2, Portraits/Lenny_rain, Characters/Lenny_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Lenny/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Lenny",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Lenny", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.LennySpring": {
+                    "Id": "{{ModId}}.LennySpring",
+                    "Portrait": "Portraits/Lenny_spring",
+                    "Sprite": "Characters/Lenny_spring",
+                    "Condition": "{{Lenny|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LennySummer": {
+                    "Id": "{{ModId}}.LennySummer",
+                    "Portrait": "Portraits/Lenny_summer",
+                    "Sprite": "Characters/Lenny_summer",
+                    "Condition": "{{Lenny|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LennyFall": {
+                    "Id": "{{ModId}}.LennyFall",
+                    "Portrait": "Portraits/Lenny_fall",
+                    "Sprite": "Characters/Lenny_fall",
+                    "Condition": "{{Lenny|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LennyWinter": {
+                    "Id": "{{ModId}}.LennyWinter",
+                    "Portrait": "Portraits/Lenny_winter",
+                    "Sprite": "Characters/Lenny_winter",
+                    "Condition": "{{Lenny|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.LennyRain": {
+                    "Id": "{{ModId}}.LennyRain",
+                    "Portrait": "Portraits/Lenny_rain",
+                    "Sprite": "Characters/Lenny_rain",
+                    "Condition": "{{Lenny|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Lenny.FlowerDance": {
+                    "Id": "{{ModId}}.Lenny.FlowerDance",
+                    "Portrait": "Portraits/Lenny_spring24",
+                    "Sprite": "Characters/Lenny_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Lenny|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Lenny.SpiritsEve1": {
+                    "Id": "{{ModId}}.Lenny.SpiritsEve1",
+                    "Portrait": "Portraits/Lenny_fall27-1",
+                    "Sprite": "Characters/Lenny_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Lenny|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Lenny.SpiritsEve2": {
+                    "Id": "{{ModId}}.Lenny.SpiritsEve2",
+                    "Portrait": "Portraits/Lenny_fall27-2",
+                    "Sprite": "Characters/Lenny_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Lenny|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

@@ -10,26 +10,24 @@
       "LogName": "Load RSV Icon",
       "Action": "Load",
       "Target": "LooseSprites/RSVIcon",
-      "FromFile": "Assets/LooseSprites/RSVIcon.png",
-      "When": { "Rafseazz.RidgesideVillage/SeasonalRSVMap": "false" }
+      "FromFile": "Assets/LooseSprites/RSVIcon.png"
     },
     {
       "LogName": "Load RSV Icon",
-      "Action": "Load",
+      "Action": "EditImage",
       "Target": "LooseSprites/RSVIcon",
       "FromFile": "Assets/LooseSprites/RSVIcon_{{season}}.png",
       "When": { "Rafseazz.RidgesideVillage/SeasonalRSVMap": "true" }
     },
-    {
+	{
       "LogName": "Load RSV World Map",
       "Action": "Load",
       "Target": "LooseSprites/RSVWorldMap",
-      "FromFile": "Assets/LooseSprites/RSVWorldMap.png",
-      "When": { "Rafseazz.RidgesideVillage/SeasonalRSVMap": "false" }
+      "FromFile": "Assets/LooseSprites/RSVWorldMap.png"
     },
     {
       "LogName": "Load RSV World Map",
-      "Action": "Load",
+      "Action": "EditImage",
       "Target": "LooseSprites/RSVWorldMap",
       "FromFile": "Assets/LooseSprites/RSVWorldMap_{{season}}.png",
       "When": { "Rafseazz.RidgesideVillage/SeasonalRSVMap": "true" }

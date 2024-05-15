@@ -28,14 +28,15 @@ namespace RidgesideVillage
         internal static void Setup(IModHelper Helper)
         {
             MapMenu.Helper = Helper;
-            TileActionHandler.RegisterTileAction("ShowMap", Open);
+            GameLocation.RegisterTileAction("ShowMap", Open);
         }
 
-        internal static void Open(string tileAction, Vector2 position)
+        internal static bool Open(GameLocation location, string[] arg2, Farmer farmer, Point point)
         {
             Texture2D image = Helper.GameContent.Load<Texture2D>(MapPath);
             Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width), (int)(image.Height));
             Game1.activeClickableMenu = new MapMenu((int)topLeft.X, (int)topLeft.Y, image);
+            return true;
         }
         internal MapMenu(int x, int y, Texture2D mapTexture):
             base(x, y, mapTexture.Width, mapTexture.Height, showUpperRightCloseButton: true)

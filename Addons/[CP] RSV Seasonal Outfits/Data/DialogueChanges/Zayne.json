@@ -1,0 +1,88 @@
+{
+"Changes": [
+	{
+	 "LogName": "Zayne Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": true,
+		"Zayne": "enabled, festivals only",
+   },
+   "Entries": {
+		"Zayne": "{{i18n:SpiritEve.Zayne.1}}",
+ 	  "Zayne_spouse": "{{i18n:SpiritEve.Zayne_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Zayne Spirit's Eve Dialogue Change Y2",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+		"Zayne": "enabled, festivals only",
+		"Irene": "enabled, festivals only",
+	 },
+	 "Entries": {
+		"Zayne": "{{i18n:SpiritEve.Zayne.2-single}}",
+		},
+	},
+	{
+	 "LogName": "Zayne Spirit's Eve Dialogue Change (dating Irene)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasDialogueAnswer": 7516439,
+		 "HasDialogueAnswer": 7516325,
+		 "IsOddYear": false,
+		 "Zayne": "enabled, festivals only",
+		 "Irene": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Zayne": "{{i18n:SpiritEve.Zayne.2-irene}}"
+	 },
+	},
+	{
+	 "LogName": "Zayne Spirit's Eve Dialogue Change Y2 (spouse)",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+		"Zayne": "enabled, festivals only",
+	 },
+	 "Entries": {
+		"Zayne_spouse": "{{i18n:SpiritEve.Zayne_spouse.2}}",
+		},
+	},
+
+
+//Free Love back-up
+	{
+	 "LogName": "Zayne Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Zayne": "Married",
+		"IsOddYear": true,
+		"Zayne": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Zayne": "{{i18n:SpiritEve.Zayne_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Zayne Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Zayne": "Married",
+		"IsOddYear": false,
+		"Zayne": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Zayne": "{{i18n:SpiritEve.Zayne_spouse.2}}",
+		},
+	},
+]
+}

@@ -1,0 +1,86 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Aguar Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Aguar_1, Portraits/Aguar_2, Portraits/Aguar_3, Portraits/Aguar_4, Portraits/Aguar_spring24, Portraits/Aguar_fall27-1, Portraits/Aguar_fall27-2, Characters/Aguar_1, Characters/Aguar_2, Characters/Aguar_3, Characters/Aguar_4, Characters/Aguar_spring24, Characters/Aguar_fall27-1, Characters/Aguar_fall27-2",
+            "FromFile": "Assets/{{TargetPathOnly}}/Aguar/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Aguar",
+			"Action": "EditImage",
+			"Target": "Portraits/Aguar_1, Portraits/Aguar_2, Portraits/Aguar_3, Portraits/Aguar_4, Characters/Aguar_1, Characters/Aguar_2, Characters/Aguar_3, Characters/Aguar_4",
+			"FromFile": "Assets/{{TargetPathOnly}}/Aguar/Aguar_acc.png",
+			"When": {
+				"Aguar": "enabled",
+				"Query: '{{Weather|contains=Rain, Storm, Snow}}' = 'true' OR ({{Random:{{Range:1,10}}|key=AguarHat}} > 5)": true,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Aguar",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Aguar", "Appearance" ],
+            "Entries": {
+                //Random Outfits
+                "{{ModId}}.Aguar1": {
+                    "Id": "{{ModId}}.Aguar1",
+                    "Portrait": "Portraits/Aguar_1",
+                    "Sprite": "Characters/Aguar_1",
+                    "Condition": "{{Aguar|contains= enabled}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.Aguar2": {
+                    "Id": "{{ModId}}.Aguar2",
+                    "Portrait": "Portraits/Aguar_2",
+                    "Sprite": "Characters/Aguar_2",
+                    "Condition": "{{Aguar|contains= enabled}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.Aguar3": {
+                    "Id": "{{ModId}}.Aguar3",
+                    "Portrait": "Portraits/Aguar_3",
+                    "Sprite": "Characters/Aguar_3",
+                    "Condition": "{{Aguar|contains= enabled}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.Aguar4": {
+                    "Id": "{{ModId}}.Aguar4",
+                    "Portrait": "Portraits/Aguar_4",
+                    "Sprite": "Characters/Aguar_4",
+                    "Condition": "{{Aguar|contains= enabled}}",
+                    "Precedence": -100
+                },
+                
+                //Festivals
+                "{{ModId}}.Aguar.FlowerDance": {
+                    "Id": "{{ModId}}.Aguar.FlowerDance",
+                    "Portrait": "Portraits/Aguar_spring24",
+                    "Sprite": "Characters/Aguar_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Aguar|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Aguar.SpiritsEve1": {
+                    "Id": "{{ModId}}.Aguar.SpiritsEve1",
+                    "Portrait": "Portraits/Aguar_fall27-1",
+                    "Sprite": "Characters/Aguar_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Aguar|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Aguar.SpiritsEve2": {
+                    "Id": "{{ModId}}.Aguar.SpiritsEve2",
+                    "Portrait": "Portraits/Aguar_fall27-2",
+                    "Sprite": "Characters/Aguar_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Aguar|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

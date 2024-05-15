@@ -1,0 +1,220 @@
+{
+"Changes": [
+	
+		{
+			"LogName": "Mail Triggers",
+			"Action": "EditData",
+			"Target": "Data/TriggerActions",
+			"Entries": {
+			
+				/* //Example Trigger Template
+				"Rafseazz.RSVCP_ExampleTrigger": {
+					"Id": "Rafseazz.RSVCP_ExampleMailID", //Required or the patch will not work
+					"Trigger": "DayEnding", //For mails, always use DayEnding. Locational changes are generally unnecessary for mail, but highly useful otherwise.
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current NPC 2000", // 1500 = 6 heart, 2000 = 8 heart, 2500 = 10 heart. Use other GSQ as necessary.
+					"HostOnly": false, //true if only Host should get this.
+					"Action": "AddMail Current MailFlag", //Use "Action" if only setting one action. *If setting multiple, use the example in "Actions" instead of this!!* Do not use both Action and Actions.
+					"Actions": [
+						"AddMail Current Abigail_LeoMoved", //From example on wiki.
+						"AddConversationTopic LeoMoved 5"
+					],
+				},*/
+				
+				//HEART EVENT MAILS
+				
+				//Alissa sends letter to farmer (Alissa 6 hearts part 1)
+				"Rafseazz.RSVCP_Alissa6Heart": {
+					"Id": "Rafseazz.RSVCP_Alissa6Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Alissa 1500, PLAYER_HAS_SEEN_EVENT Current 75160115, !PLAYER_HAS_MAIL Current AlissaLetter",
+					"HostOnly": false, 
+					"Action": "AddMail Current AlissaLetter",
+				},
+				
+				//Alissa sends letter to farmer about performance (Alissa 8 hearts part 1)
+				"Rafseazz.RSVCP_Alissa8Heart": {
+					"Id": "Rafseazz.RSVCP_Alissa8Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Alissa 2000, PLAYER_HAS_SEEN_EVENT Current 75160118, !PLAYER_HAS_MAIL Current AlissaPerform",
+					"HostOnly": false, 
+					"Action": "AddMail Current AlissaPerform",
+				},
+				
+				//Flor sends letter (Flor 8 hearts part 1)
+				"Rafseazz.RSVCP_Flor8Heart": {
+					"Id": "Rafseazz.RSVCP_Flor8Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Flor 2000, PLAYER_HAS_SEEN_EVENT Current 75160130, !PLAYER_HAS_MAIL Current FlorLetter",
+					"HostOnly": false, 
+					"Action": "AddMail Current FlorLetter",
+				},
+				
+				//Maddie sends letter (Maddie 9 hearts part 1)
+				"Rafseazz.RSVCP_Maddie9Heart": {
+					"Id": "Rafseazz.RSVCP_Maddie9Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Maddie 2249, PLAYER_HAS_SEEN_EVENT Current 75160136, !PLAYER_HAS_MAIL Current MaddieLetter",
+					"HostOnly": false, 
+					"Action": "AddMail Current MaddieLetter",
+				},
+				
+				//Maddie sends letter 2 (Maddie 10 hearts part 1)
+				"Rafseazz.RSVCP_Maddie10Heart": {
+					"Id": "Rafseazz.RSVCP_Maddie10Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Maddie 2500, PLAYER_HAS_SEEN_EVENT Current 75160138, !SEASON Winter, PLAYER_NPC_RELATIONSHIP Current Maddie Dating, !PLAYER_HAS_MAIL Current MaddieDate",
+					"HostOnly": false, 
+					"Action": "AddMail Current MaddieDate",
+				},
+				
+				//Daia sends a letter (Daia 10 heart part 1)
+				"Rafseazz.RSVCP_Daia10Heart": {
+					"Id": "Rafseazz.RSVCP_Daia10Heart",
+					"Trigger": "DayEnding",			
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Daia 2500, PLAYER_HAS_SEEN_EVENT Current 75160205, !PLAYER_HAS_MAIL Current DaiaDate",
+					"HostOnly": false, 
+					"Action": "AddMail Current DaiaDate",
+				},
+				
+				//Jeric sends letter (Jeric 10 hearts part 1)
+				"Rafseazz.RSVCP_Jeric10Heart": {
+					"Id": "Rafseazz.RSVCP_Jeric10Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Jeric 2500, PLAYER_HAS_SEEN_EVENT Current 75160154, PLAYER_NPC_RELATIONSHIP Current Jeric Dating, !PLAYER_HAS_MAIL Current JericLetter",
+					"HostOnly": false, 
+					"Action": "AddMail Current JericLetter",
+				},
+
+				//Sean sends a letter (Sean 8 heart part 1)
+				"Rafseazz.RSVCP_Sean8Heart": {
+					"Id": "Rafseazz.RSVCP_Sean8Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Sean 2000, PLAYER_HAS_SEEN_EVENT Current 75160355, !PLAYER_HAS_MAIL Current SeanLetter",
+					"HostOnly": false, 
+					"Action": "AddMail Current SeanLetter",
+				},
+				
+				//Maive sends a letter (Maive 8 heart part 1)
+				"Rafseazz.RSVCP_Maive8Heart": {
+					"Id": "Rafseazz.RSVCP_Maive8Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Maive 2000, PLAYER_HAS_SEEN_EVENT Current 75160339, !PLAYER_HAS_MAIL Current MaiveInviteLetter",
+					"HostOnly": false, 
+					"Action": "AddMail Current MaiveInviteLetter",
+				},
+				
+				//Zayne sends letter to farmer (Zayne 8 hearts part 1)
+				"Rafseazz.RSVCP_Zayne8Heart": {
+					"Id": "Rafseazz.RSVCP_Zayne8Heart",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_FRIENDSHIP_POINTS Current Zayne 2000, PLAYER_HAS_SEEN_EVENT Current 75160438, PLAYER_HAS_SEEN_EVENT Current 75160340, !PLAYER_HAS_MAIL Current ZayneLetter",
+					"HostOnly": false, 
+					"Action": "AddMail Current ZayneLetter",
+				},
+				
+				//JUNE MAILS
+				
+				//June Arrives (Hotel Mail, Platonic or Dating)
+				"Rafseazz.RSVCP_JunePlatonicArrival": {
+					"Id": "Rafseazz.RSVCP_JunePlatonicArrival",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current June Friendly Dating, PLAYER_HAS_SEEN_EVENT Current 94620000, SEASON Summer, DAY_OF_MONTH 27",
+					"HostOnly": false, 
+					"Action": "AddMail Current JuneNPC.PlatonicArrival",
+					"MarkActionApplied": false,
+				},
+				
+				//June Leaves (Platonic)
+				"Rafseazz.RSVCP_JunePlatonicDeparture": {
+					"Id": "Rafseazz.RSVCP_JunePlatonicDeparture",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current June Friendly, PLAYER_HAS_SEEN_EVENT Current 94620000, SEASON Winter, DAY_OF_MONTH 28",
+					"HostOnly": false, 
+					"Action": "AddMail Current JuneNPC.PlatonicDeparture",
+					"MarkActionApplied": false,
+				},
+				
+				//June Arrives (Romance)
+				"Rafseazz.RSVCP_JuneRomanticArrival": {
+					"Id": "Rafseazz.RSVCP_JuneRomanticArrival",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current June Dating, PLAYER_HAS_SEEN_EVENT Current 94620000, SEASON Summer, DAY_OF_MONTH 28",
+					"HostOnly": false, 
+					"Action": "AddMail Current JuneNPC.RomanticArrival",
+					"MarkActionApplied": false,
+				},
+				
+				//June Leaves (Romance)
+				"Rafseazz.RSVCP_JuneRomanticDeparture": {
+					"Id": "Rafseazz.RSVCP_JuneRomanticDeparture",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current June Dating, PLAYER_HAS_SEEN_EVENT Current 94620000, SEASON Winter, DAY_OF_MONTH 28",
+					"HostOnly": false, 
+					"Action": "AddMail Current JuneNPC.RomanticDeparture",
+					"MarkActionApplied": false,
+				},
+				
+				//June Writes (Romance)
+				"Rafseazz.RSVCP_JuneRomanticSummer": {
+					"Id": "Rafseazz.RSVCP_JuneRomanticSummer",
+					"Trigger": "DayEnding",			
+					"Condition": "PLAYER_NPC_RELATIONSHIP Current June Dating, PLAYER_HAS_SEEN_EVENT Current 94620000, SEASON Spring, DAY_OF_MONTH 28",
+					"HostOnly": false, 
+					"Action": "AddMail Current JuneNPC.RomanticSummer",
+					"MarkActionApplied": false,
+				},
+				
+				
+				//MISC MAIL TRIGGERS
+				
+				//Community Greenhouse Unlock Letter
+				"Rafseazz.RSVCP_GreenhouseUnlockLetter": {
+					"Id": "Rafseazz.RSVCP_GreenhouseUnlockLetter",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_HAS_MAIL Host RSV.FixedGreenhouse, !PLAYER_HAS_MAIL Current GH1Letter",
+					"HostOnly": true, 
+					"Action": "AddMail Current GH1Letter",
+				},
+				
+				//Odd Jobs Summit Farm Renovations Letter
+				"Rafseazz.RSVCP_OddJobsNotice": {
+					"Id": "Rafseazz.RSVCP_OddJobsNotice",
+					"Trigger": "DayEnding",				
+					"Condition": "PLAYER_HAS_SEEN_EVENT Current 75160263, !PLAYER_HAS_MAIL Current OddJobsNotice",
+					"HostOnly": true, 
+					"Action": "AddMail Current OddJobsNotice",
+				},
+				
+				//Wedding Reception Letter once player is engaged
+				"Rafseazz.RSVCP_WeddingReceptionLetter": {
+					"Id": "Rafseazz.RSVCP_WeddingReceptionLetter",
+					"Trigger": "DayEnding",			
+					"Condition": "PLAYER_HAS_MAIL Current RSV.IsEngagedFlag, !YEAR 1",
+					"HostOnly": false, 
+					"Action": "AddMail Current WedReception",
+					"MarkActionApplied": false,
+				},
+				
+				//Ridgeside Gathering Invitation (Letter)
+				"Rafseazz.RSVCP_GatheringInvitation": {
+					"Id": "Rafseazz.RSVCP_GatheringInvitation",
+					"Trigger": "DayEnding",				
+					"Condition": "SEASON Fall, DAY_OF_MONTH 19",
+					"HostOnly": false, 
+					"Action": "AddMail Current GatheringInvitation",
+					"MarkActionApplied": false,
+				},
+				
+				//Ember of Resolutions Invitation (Letter)
+				"Rafseazz.RSVCP_EmberNightInvitation": {
+					"Id": "Rafseazz.RSVCP_EmberNightInvitation",
+					"Trigger": "DayEnding",				
+					"Condition": "SEASON Winter, DAY_OF_MONTH 27",
+					"HostOnly": false, 
+					"Action": "AddMail Current EmberNightInvitation",
+					"MarkActionApplied": false,
+				},
+			},
+		},
+	],
+}

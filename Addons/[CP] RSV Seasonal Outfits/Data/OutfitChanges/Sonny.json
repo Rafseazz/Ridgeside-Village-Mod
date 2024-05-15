@@ -1,0 +1,66 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Sonny Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Sonny_summer, Portraits/Sonny_spring24, Portraits/Sonny_fall27-1, Portraits/Sonny_fall27-2, Characters/Sonny_summer, Characters/Sonny_spring24, Characters/Sonny_fall27-1, Characters/Sonny_fall27-2",
+            "FromFile": "Assets/{{TargetPathOnly}}/Sonny/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Sonny",
+			"Action": "EditImage",
+			"Target": "Portraits/Sonny, Characters/Sonny, Portraits/Sonny_summer, Characters/Sonny_summer",
+			"FromFile": "Assets/{{TargetPathOnly}}/Sonny/Sonny_acc_{{season}}.png",
+			"When": {
+				"Sonny": "enabled",
+				"Weather|contains=Rain, Storm": false,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Query: {{Random:{{Range:1,10}}|key=SonnyHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Sonny",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Sonny", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.SonnySummer": {
+                    "Id": "{{ModId}}.SonnySummer",
+                    "Portrait": "Portraits/Sonny_summer",
+                    "Sprite": "Characters/Sonny_summer",
+                    "Condition": "{{Sonny|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                
+                //Festivals
+                "{{ModId}}.Sonny.FlowerDance": {
+                    "Id": "{{ModId}}.Sonny.FlowerDance",
+                    "Portrait": "Portraits/Sonny_spring24",
+                    "Sprite": "Characters/Sonny_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Sonny|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Sonny.SpiritsEve1": {
+                    "Id": "{{ModId}}.Sonny.SpiritsEve1",
+                    "Portrait": "Portraits/Sonny_fall27-1",
+                    "Sprite": "Characters/Sonny_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Sonny|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Sonny.SpiritsEve2": {
+                    "Id": "{{ModId}}.Sonny.SpiritsEve2",
+                    "Portrait": "Portraits/Sonny_fall27-2",
+                    "Sprite": "Characters/Sonny_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Sonny|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Paula Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Paula_spring, Portraits/Paula_summer, Portraits/Paula_fall, Portraits/Paula_winter, Portraits/Paula_spring24, Portraits/Paula_fall27-1, Portraits/Paula_fall27-2, Characters/Paula_spring, Characters/Paula_summer, Characters/Paula_fall, Characters/Paula_winter, Characters/Paula_spring24, Characters/Paula_fall27-1, Characters/Paula_fall27-2, Portraits/Paula_rain, Characters/Paula_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Paula/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Paula",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Paula", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.PaulaSpring": {
+                    "Id": "{{ModId}}.PaulaSpring",
+                    "Portrait": "Portraits/Paula_spring",
+                    "Sprite": "Characters/Paula_spring",
+                    "Condition": "{{Paula|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PaulaSummer": {
+                    "Id": "{{ModId}}.PaulaSummer",
+                    "Portrait": "Portraits/Paula_summer",
+                    "Sprite": "Characters/Paula_summer",
+                    "Condition": "{{Paula|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PaulaFall": {
+                    "Id": "{{ModId}}.PaulaFall",
+                    "Portrait": "Portraits/Paula_fall",
+                    "Sprite": "Characters/Paula_fall",
+                    "Condition": "{{Paula|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.PaulaWinter": {
+                    "Id": "{{ModId}}.PaulaWinter",
+                    "Portrait": "Portraits/Paula_winter",
+                    "Sprite": "Characters/Paula_winter",
+                    "Condition": "{{Paula|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.PaulaRain": {
+                    "Id": "{{ModId}}.PaulaRain",
+                    "Portrait": "Portraits/Paula_rain",
+                    "Sprite": "Characters/Paula_rain",
+                    "Condition": "{{Paula|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Paula.FlowerDance": {
+                    "Id": "{{ModId}}.Paula.FlowerDance",
+                    "Portrait": "Portraits/Paula_spring24",
+                    "Sprite": "Characters/Paula_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Paula|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Paula.SpiritsEve1": {
+                    "Id": "{{ModId}}.Paula.SpiritsEve1",
+                    "Portrait": "Portraits/Paula_fall27-1",
+                    "Sprite": "Characters/Paula_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Paula|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Paula.SpiritsEve2": {
+                    "Id": "{{ModId}}.Paula.SpiritsEve2",
+                    "Portrait": "Portraits/Paula_fall27-2",
+                    "Sprite": "Characters/Paula_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Paula|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

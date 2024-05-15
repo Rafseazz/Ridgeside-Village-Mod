@@ -1,0 +1,253 @@
+{
+    "Changes": [
+        {
+            "LogName": "Load Fruit Trees Tilesheet",
+            "Action": "Load",
+            "Target": "Mods/Rafseazz.RSVCP/Objects/FruitTrees",
+            "FromFile": "Assets/Objects/FruitTrees.png"
+        },
+        {
+            "LogName": "Load Fruit Trees Saplings Tilesheet",
+            "Action": "Load",
+            "Target": "Mods/Rafseazz.RSVCP/Objects/FruitTreeSaplings",
+            "FromFile": "Assets/Objects/FruitTreeSaplings.png"
+        },
+        {
+            "LogName": "Load Fruit Trees Saplings Data",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "Rafseazz.RSVCP_Cherry_Pluot_Sapling": {
+                    "Name": "Cherry Pluot Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.cherry-pluot-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.cherry-pluot-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 0
+                },
+                "Rafseazz.RSVCP_Desert_Tangelo_Sapling": {
+                    "Name": "Desert Tangelo Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.desert-tangelo-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.desert-tangelo-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 1
+                },
+                "Rafseazz.RSVCP_Ember_Blood_Lime_Sapling": {
+                    "Name": "Ember Blood Lime Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.ember-blood-lime-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.ember-blood-lime-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 2
+                },
+                "Rafseazz.RSVCP_Highland_Jostaberry_Sapling": {
+                    "Name": "Highland Jostaberry Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.highland-jostaberry-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.highland-jostaberry-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 3
+                },
+                "Rafseazz.RSVCP_Mountain_Plumcot_Sapling": {
+                    "Name": "Mountain Plumcot Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.mountain-plumcot-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.mountain-plumcot-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 4
+                },
+                "Rafseazz.RSVCP_Northern_Limequat_Sapling": {
+                    "Name": "Northern Limequat Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.northern-limequat-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.northern-limequat-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 5
+                },
+                "Rafseazz.RSVCP_Paradise_Rangpur_Sapling": {
+                    "Name": "Paradise Rangpur Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.paradise-rangpur-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.paradise-rangpur-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 6
+                },
+                "Rafseazz.RSVCP_Tropi_Ugli_Fruit_Sapling": {
+                    "Name": "Tropi Ugli Fruit Sapling",
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.tropi-ugli-fruit-sapling.name]",
+                    "Description": "[LocalizedText Strings\\Objects:trees.tropi-ugli-fruit-sapling.description]",
+                    "Type": "Basic",
+                    "Category": -74,
+                    "Price": 1200,
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTreeSaplings",
+                    "SpriteIndex": 7
+                },
+            }
+        },
+        {
+            "LogName": "FruitTrees Data",
+            "Action": "EditData",
+            "Target": "Data/FruitTrees",
+            "Entries": {
+                "Rafseazz.RSVCP_Cherry_Pluot_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.cherry-pluot-tree.name]",
+                    "Seasons": [
+                        "Spring"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Cherry_Pluot"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 0
+                },
+                "Rafseazz.RSVCP_Desert_Tangelo_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.desert-tangelo-tree.name]",
+                    "Seasons": [
+                        "Summer"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Desert_Tangelo"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 1
+                },
+                "Rafseazz.RSVCP_Ember_Blood_Lime_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.ember-blood-lime-tree]",
+                    "Seasons": [
+                        "Fall"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Ember_Blood_Lime"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 2
+                },
+                "Rafseazz.RSVCP_Highland_Jostaberry_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.highland-jostaberry-tree.name]",
+                    "Seasons": [
+                        "Fall"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Highland_Jostaberry"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 3
+                },
+                "Rafseazz.RSVCP_Mountain_Plumcot_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.mountain-plumcot-tree.name]",
+                    "Seasons": [
+                        "Spring"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Mountain_Plumcot"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 4
+                },
+                "Rafseazz.RSVCP_Northern_Limequat_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.northern-limequat-tree.name]",
+                    "Seasons": [
+                        "Fall"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Northern_Limequat"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 5
+                },
+                "Rafseazz.RSVCP_Paradise_Rangpur_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.paradise-rangpur-tree.name]",
+                    "Seasons": [
+                        "Summer"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Paradise_Rangpur"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 6
+                },
+                "Rafseazz.RSVCP_Tropi_Ugli_Fruit_Sapling": {
+                    "DisplayName": "[LocalizedText Strings\\Objects:trees.tropi-ugli-fruit-tree.name]",
+                    "Seasons": [
+                        "Summer"
+                    ],
+                    "Fruit": [
+                        {
+                            "Id": "Default",
+                            "ItemId": "(O)Rafseazz.RSVCP_Tropi_Ugli_Fruit"
+                        }
+                    ],
+                    "Texture": "Mods\\Rafseazz.RSVCP\\Objects\\FruitTrees",
+                    "TextureSpriteRow": 7
+                }
+            }
+        },
+        {
+            "LogName": "Load Fruit Trees Translations",
+            "Action": "EditData",
+            "Target": "Strings/Objects",
+            "Entries": {
+                "trees.cherry-pluot-tree.name": "{{i18n:trees.cherry-pluot-tree.name}}",
+                "trees.cherry-pluot-sapling.name": "{{i18n:trees.cherry-pluot-sapling.name}}",
+                "trees.cherry-pluot-sapling.description": "{{i18n:trees.cherry-pluot-sapling.description}}",
+                "trees.desert-tangelo-tree.name": "{{i18n:trees.desert-tangelo-tree.name}}",
+                "trees.desert-tangelo-sapling.name": "{{i18n:trees.desert-tangelo-sapling.name}}",
+                "trees.desert-tangelo-sapling.description": "{{i18n:trees.desert-tangelo-sapling.description}}",
+                "trees.ember-blood-lime-tree.name": "{{i18n:trees.ember-blood-lime-tree.name}}",
+                "trees.ember-blood-lime-sapling.name": "{{i18n:trees.ember-blood-lime-sapling.name}}",
+                "trees.ember-blood-lime-sapling.description": "{{i18n:trees.ember-blood-lime-sapling.description}}",
+                "trees.highland-jostaberry-tree.name": "{{i18n:trees.highland-jostaberry-tree.name}}",
+                "trees.highland-jostaberry-sapling.name": "{{i18n:trees.highland-jostaberry-sapling.name}}",
+                "trees.highland-jostaberry-sapling.description": "{{i18n:trees.highland-jostaberry-sapling.description}}",
+                "trees.mountain-plumcot-tree.name": "{{i18n:trees.mountain-plumcot-tree.name}}",
+                "trees.mountain-plumcot-sapling.name": "{{i18n:trees.mountain-plumcot-sapling.name}}",
+                "trees.mountain-plumcot-sapling.description": "{{i18n:trees.mountain-plumcot-sapling.description}}",
+                "trees.northern-limequat-tree.name": "{{i18n:trees.northern-limequat-tree.name}}",
+                "trees.northern-limequat-sapling.name": "{{i18n:trees.northern-limequat-sapling.name}}",
+                "trees.northern-limequat-sapling.description": "{{i18n:trees.northern-limequat-sapling.description}}",
+                "trees.paradise-rangpur-tree.name": "{{i18n:trees.paradise-rangpur-tree.name}}",
+                "trees.paradise-rangpur-sapling.name": "{{i18n:trees.paradise-rangpur-sapling.name}}",
+                "trees.paradise-rangpur-sapling.description": "{{i18n:trees.paradise-rangpur-sapling.description}}",
+                "trees.tropi-ugli-fruit-tree.name": "{{i18n:trees.tropi-ugli-fruit-tree.name}}",
+                "trees.tropi-ugli-fruit-sapling.name": "{{i18n:trees.tropi-ugli-fruit-sapling.name}}",
+                "trees.tropi-ugli-fruit-sapling.description": "{{i18n:trees.tropi-ugli-fruit-sapling.description}}"
+            }
+        },
+    ]
+}

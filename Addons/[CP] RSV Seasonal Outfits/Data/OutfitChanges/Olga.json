@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Olga Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Olga_spring, Portraits/Olga_summer, Portraits/Olga_fall, Portraits/Olga_winter, Portraits/Olga_spring24, Portraits/Olga_fall27-1, Portraits/Olga_fall27-2, Characters/Olga_spring, Characters/Olga_summer, Characters/Olga_fall, Characters/Olga_winter, Characters/Olga_spring24, Characters/Olga_fall27-1, Characters/Olga_fall27-2, Portraits/Olga_rain, Characters/Olga_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Olga/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Olga",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Olga", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.OlgaSpring": {
+                    "Id": "{{ModId}}.OlgaSpring",
+                    "Portrait": "Portraits/Olga_spring",
+                    "Sprite": "Characters/Olga_spring",
+                    "Condition": "{{Olga|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.OlgaSummer": {
+                    "Id": "{{ModId}}.OlgaSummer",
+                    "Portrait": "Portraits/Olga_summer",
+                    "Sprite": "Characters/Olga_summer",
+                    "Condition": "{{Olga|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.OlgaFall": {
+                    "Id": "{{ModId}}.OlgaFall",
+                    "Portrait": "Portraits/Olga_fall",
+                    "Sprite": "Characters/Olga_fall",
+                    "Condition": "{{Olga|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.OlgaWinter": {
+                    "Id": "{{ModId}}.OlgaWinter",
+                    "Portrait": "Portraits/Olga_winter",
+                    "Sprite": "Characters/Olga_winter",
+                    "Condition": "{{Olga|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.OlgaRain": {
+                    "Id": "{{ModId}}.OlgaRain",
+                    "Portrait": "Portraits/Olga_rain",
+                    "Sprite": "Characters/Olga_rain",
+                    "Condition": "{{Olga|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Olga.FlowerDance": {
+                    "Id": "{{ModId}}.Olga.FlowerDance",
+                    "Portrait": "Portraits/Olga_spring24",
+                    "Sprite": "Characters/Olga_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Olga|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Olga.SpiritsEve1": {
+                    "Id": "{{ModId}}.Olga.SpiritsEve1",
+                    "Portrait": "Portraits/Olga_fall27-1",
+                    "Sprite": "Characters/Olga_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Olga|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Olga.SpiritsEve2": {
+                    "Id": "{{ModId}}.Olga.SpiritsEve2",
+                    "Portrait": "Portraits/Olga_fall27-2",
+                    "Sprite": "Characters/Olga_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Olga|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

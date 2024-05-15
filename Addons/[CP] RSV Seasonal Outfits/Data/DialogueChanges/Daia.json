@@ -1,0 +1,67 @@
+{
+"Changes": [
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": { "Daia": "enabled, festivals only", },
+   "Entries": {
+		"IsOddYear": true,
+		"Daia": "{{i18n:SpiritEve.Daia.1}}",
+		},
+	},
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Changes Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Jeric": "enabled, festivals only",
+	 },
+   "Entries": {
+ 	  "Daia_y2": "{{i18n:SpiritEve.Daia.2}}",
+		"Daia_spouse_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
+		},
+	},
+	{
+	 "LogName": "Daia Spirit's Eve Spouse Dialogue Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Jeric": "enabled, festivals only",
+	 },
+   "Entries": {
+ 	  "Daia_spouse": "{{i18n:SpiritEve.Daia_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Change Dating Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		 	"HasSeenEvent": 75160263,
+   		"Relationship:Daia": "Dating",
+			"Jeric": "enabled, festivals only",
+   },
+   "Entries": {
+ 	  "Daia_y2": "{{i18n:SpiritEve.Daia.2_dating}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Daia Spirit's Eve Dialogue Changes (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasSeenEvent": 75160263,
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Daia": "Married",
+   },
+   "Entries": {
+	   "Daia": "{{i18n:SpiritEve.Daia_spouse.1}}",
+		 "Daia_y2": "{{i18n:SpiritEve.Daia_spouse.2}}",
+		},
+	},
+]
+}

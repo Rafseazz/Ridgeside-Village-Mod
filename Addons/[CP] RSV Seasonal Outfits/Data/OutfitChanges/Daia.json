@@ -1,0 +1,122 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Daia Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Daia_spring, Portraits/Daia_summer, Portraits/Daia_fall, Portraits/Daia_winter, Portraits/Daia_spring24, Portraits/Daia_fall27-1, Portraits/Daia_fall27-2, Characters/Daia_spring, Characters/Daia_summer, Characters/Daia_fall, Characters/Daia_winter, Characters/Daia_spring24, Characters/Daia_fall27-1, Characters/Daia_fall27-2, Portraits/Daia_ninja, Characters/Daia_ninja, Portraits/Daia_rain, Characters/Daia_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Daia/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Daia Ninja Mask In Intro",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia_ninja, Characters/Daia_ninja",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_mask.png",
+			"PatchMode": "Overlay",
+			"When":
+			{
+				"Daia": "enabled",
+				"HasSeenEvent|contains=75160254": false
+			}
+		},
+		
+		{
+			"LogName": "RSV Daia Work Outfit Mask",
+			"Action": "EditImage",
+			"Target": "Portraits/Daia_ninja, Characters/Daia_ninja",
+			"FromFile": "Assets/{{TargetPathOnly}}/Daia/Daia_mask.png",
+			"When":
+			{
+				"Daia": "enabled",
+				"Query: {{Random:{{Range:1,10}}|key=DaiaMask}}|contains= 6,9": true,
+			},
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Daia",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Daia", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.DaiaSpring": {
+                    "Id": "{{ModId}}.DaiaSpring",
+                    "Portrait": "Portraits/Daia_spring",
+                    "Sprite": "Characters/Daia_spring",
+                    "Condition": "{{Daia|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.DaiaSummer": {
+                    "Id": "{{ModId}}.DaiaSummer",
+                    "Portrait": "Portraits/Daia_summer",
+                    "Sprite": "Characters/Daia_summer",
+                    "Condition": "{{Daia|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.DaiaFall": {
+                    "Id": "{{ModId}}.DaiaFall",
+                    "Portrait": "Portraits/Daia_fall",
+                    "Sprite": "Characters/Daia_fall",
+                    "Condition": "{{Daia|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.DaiaWinter": {
+                    "Id": "{{ModId}}.DaiaWinter",
+                    "Portrait": "Portraits/Daia_winter",
+                    "Sprite": "Characters/Daia_winter",
+                    "Condition": "{{Daia|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.DaiaRain": {
+                    "Id": "{{ModId}}.DaiaRain",
+                    "Portrait": "Portraits/Daia_rain",
+                    "Sprite": "Characters/Daia_rain",
+                    "Condition": "{{Daia|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+				"{{ModId}}.Daia.FlowerDance": {
+                    "Id": "{{ModId}}.Daia.FlowerDance",
+                    "Portrait": "Portraits/Daia_spring24",
+                    "Sprite": "Characters/Daia_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Daia|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Daia.SpiritsEve1": {
+                    "Id": "{{ModId}}.Daia.SpiritsEve1",
+                    "Portrait": "Portraits/Daia_fall27-1",
+                    "Sprite": "Characters/Daia_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Daia|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Daia.SpiritsEve2": {
+                    "Id": "{{ModId}}.Daia.SpiritsEve2",
+                    "Portrait": "Portraits/Daia_fall27-2",
+                    "Sprite": "Characters/Daia_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Daia|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+				
+				//Daia at Work
+				"{{ModId}}.DaiaIntro": {
+                    "Id": "{{ModId}}.DaiaIntro",
+                    "Portrait": "Portraits/Daia_ninja",
+                    "Sprite": "Characters/Daia_ninja",
+                    "Condition": "{{Daia|contains= enabled}}, IS_EVENT 75160254",
+                    "Precedence": -150
+                },
+				
+				"{{ModId}}.DaiaWork": {
+                    "Id": "{{ModId}}.DaiaWork",
+                    "Portrait": "Portraits/Daia_ninja",
+                    "Sprite": "Characters/Daia_ninja",
+                    "Condition": "{{Daia|contains= enabled}}, LOCATION_NAME Target Custom_Ridgeside_Ridge Custom_Ridgeside_RidgeForest Custom_Ridgeside_RSVSpiritRealm Custom_Ridgeside_RSVNinjaHouse Custom_Ridgeside_RidgeFalls\"",
+                    "Precedence": -150
+                },
+				
+            }
+        },
+    ]
+}

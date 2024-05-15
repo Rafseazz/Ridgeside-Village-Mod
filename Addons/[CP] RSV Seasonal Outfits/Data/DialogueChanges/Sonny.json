@@ -1,0 +1,29 @@
+{
+"Changes": [
+	{
+	 "LogName": "Sonny Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Sonny": "enabled, festivals only",
+		 "Louie": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Sonny": "{{i18n:SpiritEve.Sonny.1}}",
+		},
+	},
+	{
+	 "LogName": "Sonny Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Sonny": "enabled, festivals only",
+		 "Maive": "enabled, festivals only",
+	 },
+   "Entries": {
+	   "Sonny_y2": "{{i18n:SpiritEve.Sonny.2}}",
+		},
+	},
+]
+}

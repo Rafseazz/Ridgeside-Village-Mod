@@ -11,7 +11,7 @@
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVCliff",
-		"FromFile": "Assets/Maps/OutdoorMaps/RSVCliff.tmx",
+		"FromFile": "Assets/Maps/OutdoorMaps/Custom_Ridgeside_RSVCliff.tmx",
 		"FromArea": { "X": 0, "Y": 0, "Width": 108, "Height": 40 },
 		"ToArea": { "X": 0, "Y": 0, "Width": 108, "Height": 40 },
 		"PatchMode": "ReplaceByLayer",
@@ -33,7 +33,7 @@
 	{
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_RSVTheRide",
-		"FromFile": "Assets/Maps/EventMaps/RSVTheRide.tmx",
+		"FromFile": "Assets/Maps/EventMaps/Custom_Ridgeside_RSVTheRide.tmx",
 		"ToArea": { "X": 0, "Y": 0, "Width": 93, "Height": 40 },
 		"PatchMode": "ReplaceByLayer",
 		"When": { "Time": "{{Range: 0600, 1900}}" },
@@ -150,85 +150,6 @@
 	},
 
 //Unlock Minecarts
-	{
-				"LogName": "RSV: Full minecart usage in village",
-        "Action": "EditMap",
-        "Target": "Maps/Custom_Ridgeside_RidgesideVillage",
-        "MapTiles": [
-			{
-				"Position": { "X": 69, "Y": 15 },
-				"Layer": "Buildings",
-				"SetProperties": {
-				"Action": "RSVMinecart2"
-               }
-            },
-			{
-				"Position": { "X": 16, "Y": 81 },
-				"Layer": "Buildings",
-				"SetProperties": {
-				"Action": "RSVMinecart3"
-               }
-            },
-            {
-				"Position": { "X": 109, "Y": 84 },
-				"Layer": "Buildings",
-				"SetProperties": {
-				"Action": "RSVMinecart4"
-               }
-            }
-		],
-		"When": {
-			"HasFlag: hostPlayer": "RSV.FixedMinecart",
-			"HasMod: |contains=jibb.minecarts": false
-		},
-		"Update": "OnLocationChange"
-    },
-	{
-				"LogName": "RSV: Full minecart usage at cable car",
-        "Action": "EditMap",
-        "Target": "Maps/Custom_Ridgeside_RSVCableCar",
-        "MapTiles": [
-			{
-				"Position": { "X": 25, "Y": 17 },
-				"Layer": "Buildings",
-				"SetProperties": {
-				"Action": "RSVMinecart1"
-               }
-            }
-		],
-		"When": {
-			"HasFlag: hostPlayer": "RSV.FixedMinecart",
-			"HasMod: |contains=jibb.minecarts": false
-		},
-		"Update": "OnLocationChange"
-	},
-	{
-				"LogName": "RSV: Full minecart usage at summit farm",
-        "Action": "EditMap",
-        "Target": "Maps/Custom_Ridgeside_SummitFarm",
-        "MapTiles": [
-			{
-				"Position": { "X": 77, "Y": 47 },
-				"Layer": "Buildings",
-				"SetProperties": {
-				"Action": "RSVMinecart5"
-               }
-            },
-
-            {
-				"Position": { "X": 22, "Y": 40 },
-				"Layer": "Buildings",
-				"SetProperties": {
-				"Action": "RSVMinecart6"
-               }
-            }
-		],
-		"When": {
-			"HasFlag: hostPlayer": "RSV.FixedMinecart",
-			"HasMod: |contains=jibb.minecarts": false
-		},
-		"Update": "OnLocationChange"
-	},
 	//Open Entrance
 	{
 		"LogName": "RSV: Open entrance to minecarts",
@@ -401,7 +322,7 @@
       	},
 
     //Hike Greenhouse unlock
-     	 {
+			{
 				 "LogName": "RSV: Open phantom greenhouse at night",
          "Action": "EditMap",
          "Target": "Maps/Custom_Ridgeside_RSVTheHike",
@@ -427,7 +348,6 @@
          "PatchMode": "Overlay",
          "Update": "OnLocationChange",
     	 "When": {
-             //"HasSeenEvent: hostPlayer": 75160271,
 						 "HasFlag: hostPlayer |contains=RSV.HauntedGHFix": true,
       	}
       	},
@@ -640,6 +560,30 @@
 		},
 		"Update": "OnLocationChange"
 	},
+		{
+			"LogName": "Corrupt Spirit Realm Music",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+			"MapProperties": {
+				"Music": "spirits_eve"
+				},
+			"When": {
+			"HasSeenEvent: hostPlayer |contains=75160263": false,
+			},
+			"Update": "OnLocationChange"
+		},
+		{
+			"LogName": "Cleanse Spirit Realm Music",
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVSpiritRealm",
+			"MapProperties": {
+				"Music": "AweAmbience"
+				},
+			"When": {
+			"HasSeenEvent: hostPlayer |contains=75160263": true,
+			},
+			"Update": "OnLocationChange"
+		},
 
 //Corrupt Flames
 	{
@@ -715,7 +659,7 @@
 				"Position": { "X": 125, "Y": 12 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 46 72"
+				"Action": "RSVTeleport Custom_Ridgeside_RidgesideVillage 46 72"
                }
             }
 		],
@@ -730,7 +674,7 @@
 				"Position": { "X": 45, "Y": 72 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 67 123"
+				"Action": "RSVTeleport Custom_Ridgeside_RidgesideVillage 67 123"
                }
             }
 		],
@@ -745,7 +689,7 @@
 				"Position": { "X": 67, "Y": 124 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RSVTheHike 60 27"
+				"Action": "RSVTeleport Custom_Ridgeside_RSVTheHike 60 27"
                }
             }
 		],
@@ -760,7 +704,7 @@
 				"Position": { "X": 60, "Y": 26 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_RidgesideVillage 125 13"
+				"Action": "RSVTeleport Custom_Ridgeside_RidgesideVillage 125 13"
                }
             }
 		],
@@ -777,7 +721,7 @@
 				"Position": { "X": 57, "Y": 52 },
 				"Layer": "Buildings",
 				"SetProperties": {
-				"Action": "RSVWarp Custom_Ridgeside_TortsRealm 14 38"
+				"Action": "RSVTeleport Custom_Ridgeside_TortsRealm 14 38"
                }
             }
 		],
@@ -892,7 +836,7 @@
 		"MapProperties": {
 			"Outdoors": "T",
 			"Light": "51 42 4 80 100 4 101 6 4 126 22 4 46 27 4 58 25 4 74 25 4 111 26 4 118 26 4 143 26 4 107 39 4 121 39 4 95 47 4 135 49 4 8 61 4 37 56 4 72 57 4 95 57 4 112 53 4 116 53 4 64 70 4 93 75 4 112 64 4 126 74 4 133 74 4 126 83 4 133 83 4 81 85 4 87 85 4 87 110 4 62 41 4 86 39 4 62 44 4 65 50 4 69 50 4 89 46 4 89 49 4 101 50 4 70 14 4 17 80 4 110 83 4 66 35 4 68 35 4 70 35 4 72 35 4 74 35 4 76 35 4 78 35 4 80 35 4 82 35 4 90 36 4 92 36 4 94 36 4 96 36 4 98 36 4 100 36 4",
-			"NightTiles": "AlwaysFront 51 42 908 AlwaysFront 80 100 908 AlwaysFront 101 6 908 AlwaysFront 126 22 908 AlwaysFront 46 27 908 AlwaysFront 58 25 908 AlwaysFront 74 25 908 AlwaysFront 111 26 908 AlwaysFront 118 26 908 AlwaysFront 143 26 908 AlwaysFront 107 39 908 AlwaysFront 121 39 908 AlwaysFront 95 47 908 AlwaysFront 135 49 908 AlwaysFront 8 61 908 AlwaysFront 37 56 908 AlwaysFront 72 57 908 AlwaysFront 95 57 908 AlwaysFront 112 53 908 AlwaysFront 116 53 908 AlwaysFront 64 70 908 AlwaysFront 93 75 908 AlwaysFront 112 64 908 AlwaysFront 126 74 908 AlwaysFront 133 74 908 AlwaysFront 126 83 908 AlwaysFront 133 83 908 AlwaysFront 81 85 908 AlwaysFront 87 85 908 AlwaysFront 87 110 908 AlwaysFront 70 14 507 AlwaysFront 17 80 507 AlwaysFront 110 83 507"
+			"NightTiles": "AlwaysFront 51 42 908 AlwaysFront 80 100 908 AlwaysFront 101 6 908 AlwaysFront 126 22 908 AlwaysFront 46 27 908 AlwaysFront 58 25 908 AlwaysFront 74 25 908 AlwaysFront 111 26 908 AlwaysFront 118 26 908 AlwaysFront 143 26 908 AlwaysFront 107 39 908 AlwaysFront 121 39 908 AlwaysFront 95 47 908 AlwaysFront 135 49 908 AlwaysFront 8 61 908 AlwaysFront 37 56 908 AlwaysFront 72 57 908 AlwaysFront 95 57 908 AlwaysFront 112 53 908 AlwaysFront 116 53 908 AlwaysFront 64 70 908 AlwaysFront 93 75 908 AlwaysFront 112 64 908 AlwaysFront 126 74 908 AlwaysFront 133 74 908 AlwaysFront 126 83 908 AlwaysFront 133 83 908 AlwaysFront 81 85 908 AlwaysFront 87 85 908 AlwaysFront 87 110 908 Buildings 70 14 507 Buildings 17 80 507 Buildings 110 83 507"
 		},
 		"When": { "HasFlag: hostPlayer": "RSV.LennyHelped" },
 	},
@@ -952,33 +896,6 @@
 		"ToArea": { "X": 80, "Y": 24, "Width": 13, "Height": 20 },
 		"PatchMode": "Replace",
 		"When": { "HasFlag: hostPlayer": "RSV.SummitOreArea" }
-	},
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_SummitFarm",
-		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_Shed.tmx",
-		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 11 },
-		"ToArea": { "X": 9, "Y": 29, "Width": 13, "Height": 11 },
-		"PatchMode": "Replace",
-		"When": { "HasFlag: hostPlayer": "RSV.ShedAdded" }
-	},
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_SummitFarm",
-		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_ShedStairs.tmx",
-		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 6 },
-		"ToArea": { "X": 9, "Y": 43, "Width": 1, "Height": 6 },
-		"PatchMode": "Replace",
-		"When": { "HasConversationTopic: hostPlayer": "RSV.ShedCT" }
-	},
-	{
-		"Action": "EditMap",
-		"Target": "Maps/Custom_Ridgeside_SummitFarm",
-		"FromFile": "Assets/Maps/DynamicMaps/SummitFarm_ShedStairs.tmx",
-		"FromArea": { "X": 0, "Y": 0, "Width": 1, "Height": 6 },
-		"ToArea": { "X": 9, "Y": 43, "Width": 1, "Height": 6 },
-		"PatchMode": "Replace",
-		"When": { "HasFlag: hostPlayer": "RSV.ShedAdded" }
 	},
 
 //Paula Clean Room
@@ -1170,6 +1087,20 @@
 				 ]
 			},
 
+			{
+				"LogName": "Decorate June's rom",
+				"Action": "EditMap",
+				"Target": "Maps/Custom_Ridgeside_LogCabinHotel2ndFloor",
+				"FromFile": "Assets/Maps/DynamicMaps/LogCabinHotel2ndFloor_June.tmx",
+				"FromArea": { "X": 0, "Y": 0, "Width": 8, "Height": 8 },
+				"ToArea": { "X": 35, "Y": 18, "Width": 8, "Height": 8 },
+				"PatchMode": "ReplaceByLayer",
+				"When": {
+					"Season": "fall, winter",
+					"Relationship:June |contains=Married": false,
+				},
+			},
+
 		// Edit the piano text when June is present but not playing
 			{
 	  		"LogName": "June Piano Text Edit - Unmarried",
@@ -1277,7 +1208,7 @@
 			],
 			"When": {
 				"HasSeenEvent: |contains=75160440": false,
-				"HasSeenEvent: |contains=75160439": true
+				"HasFlag": "ZayneLetter",
 			},
 			"Update": "OnLocationChange, OnTimeChange"
 	},
@@ -1307,18 +1238,60 @@
 	},
 
 	{
-		"LogName": "RSV: Irene Work Outfit at Mansion",
+		"LogName": "RSV: Traveling Cart at Hike Trail",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 5 },
+		"ToArea": { "X": 48, "Y": 20, "Width": 9, "Height": 5 },
+		"PatchMode": "ReplaceByLayer",
+		"Update": "OnTimeChange",
+		"When": {
+			"Time": "{{Range: 0600, 1950}}",
+			"DayOfWeek": "Wednesday"
+		},
+	},
+	{
+		"LogName": "RSV: Traveling Cart at Hike Trail",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+		"FromFile": "Assets/Maps/DynamicMaps/RSVTheHike_Cart-Empty.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 9, "Height": 5 },
+		"ToArea": { "X": 48, "Y": 20, "Width": 9, "Height": 5 },
+		"PatchMode": "ReplaceByLayer",
+		"Update": "OnTimeChange",
+		"When": {
+			"Time": "{{Range: 2000, 2600}}",
+			"DayOfWeek": "Wednesday"
+		},
+	},
+
+	{
+		"LogName": "RSV: Irene's Room at Amethynes Empty",
 		"Action": "EditMap",
 		"Target": "Maps/Custom_Ridgeside_PurpleMansion",
-		"MapProperties":
-		{
-			"UniquePortrait": "Irene",
-			"UniqueSprite": "Irene"
+		"FromFile": "Assets/Maps/DynamicMaps/PurpleMansion_NoIrene.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 14, "Height": 8 },
+		"ToArea": { "X": 0, "Y": 40, "Width": 14, "Height": 8 },
+		"PatchMode": "ReplaceByLayer",
+		"When": {
+			"HasSeenEvent |contains=75160431": true
 		},
+	},
+	/*
+	{
+		"LogName": "RSV: Irene Room at Faye's",
+		"Action": "EditMap",
+		"Target": "Maps/Custom_Ridgeside_FayeHouse",
+		"FromFile": "Assets/Maps/DynamicMaps/FayeHouse_Irene.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 9 },
+		"ToArea": { "X": 1, "Y": 1, "Width": 13, "Height": 9 },
+		"PatchMode": "ReplaceByLayer",
 		"When": {
 			"HasSeenEvent |contains=75160431": false
 		},
 	},
+	*/
 
 ]
 }

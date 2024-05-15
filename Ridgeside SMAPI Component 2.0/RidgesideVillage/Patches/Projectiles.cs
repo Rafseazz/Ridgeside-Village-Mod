@@ -70,19 +70,13 @@ namespace RidgesideVillage
                 //Log.Debug($"RSV: Entered transpiler, woohoo!");
                 NetCharacterRef firerInfo = Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe").GetValue();
                 Monster monster = (Monster)firerInfo.Get(Game1.currentLocation);
-                try
-                {
-                    if (monster.modData["RSV_bloomDebuff"] != "true")
-                    {
-                        projectiles.Add(original);
-                        return;
-                    }
-                }
-                catch
+
+                if (!monster.modData.ContainsKey("RSV_bloomDebuff"))
                 {
                     projectiles.Add(original);
                     return;
                 }
+
                 float xVelocity = Helper.Reflection.GetField<NetFloat>(original, "xVelocity").GetValue().Value;
                 float yVelocity = Helper.Reflection.GetField<NetFloat>(original, "yVelocity").GetValue().Value;
                 monster.currentLocation.projectiles.Add(new MistProjectile(rotation, xVelocity, yVelocity, monster.Position + new Vector2(0f, -32f), monster.currentLocation, monster));
@@ -97,7 +91,7 @@ namespace RidgesideVillage
                 {
                     if (insn.opcode == OpCodes.Callvirt && (insn.operand?.Equals(AccessTools.Method(typeof(NetCollection<Projectile>), nameof(NetCollection<Projectile>.Add)))) == true)
                     {
-                        ret.Add(new CodeInstruction(OpCodes.Call, typeof(MonsterProjectilePatch).GetMethod("ReplaceProjectile")));
+                        ret.Add(new CodeInstruction(OpCodes.Call, typeof(MonsterProjectilePatch).GetMethod(nameof(ReplaceProjectile))));
                     }
                     else
                     {

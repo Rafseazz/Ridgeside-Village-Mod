@@ -1,0 +1,77 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Minecarts",
+            "Entries": {
+                "RSV.MinecartNetwork": {
+                    "Destinations": [
+                        {
+                            "Id": "RSV_CableCar",
+                            "DisplayName": "{{i18n:Minecart.CableCar}}",
+                            "TargetLocation": "Custom_Ridgeside_RSVCableCar",
+                            "TargetTile": {
+                                "X": 25,
+                                "Y": 18
+                            },
+                            "TargetDirection": "down",
+                        },
+                        {
+                            "Id": "RSV_Heaps",
+                            "DisplayName": "{{i18n:Minecart.Heaps}}",
+                            "TargetLocation": "Custom_Ridgeside_RidgesideVillage",
+                            "TargetTile": {
+                                "X": 69,
+                                "Y": 16
+                            },
+                            "TargetDirection": "down",
+                        },
+                        {
+                            "Id": "RSV_Nightingale",
+                            "DisplayName": "{{i18n:Minecart.Nightingale}}",
+                            "TargetLocation": "Custom_Ridgeside_RidgesideVillage",
+                            "TargetTile": {
+                                "X": 16,
+                                "Y": 82
+                            },
+                            "TargetDirection": "down",
+                        },
+                        {
+                            "Id": "RSV_Greenhouse",
+                            "DisplayName": "{{i18n:Minecart.Greenhouse}}",
+                            "TargetLocation": "Custom_Ridgeside_RidgesideVillage",
+                            "TargetTile": {
+                                "X": 109,
+                                "Y": 85
+                            },
+                            "TargetDirection": "down",
+                        },
+                        {
+                            "Id": "RSV_EastSummit",
+                            "DisplayName": "{{i18n:Minecart.EastSummit}}",
+                            "Condition": "PLAYER_VISITED_LOCATION Any Custom_Ridgeside_SummitFarm",
+                            "TargetLocation": "Custom_Ridgeside_SummitFarm",
+                            "TargetTile": {
+                                "X": 77,
+                                "Y": 48
+                            },
+                            "TargetDirection": "down",
+                        },
+                        {
+                            "Id": "RSV_WestSummit",
+                            "DisplayName": "{{i18n:Minecart.WestSummit}}",
+                            "Condition": "PLAYER_VISITED_LOCATION Any Custom_Ridgeside_SummitFarm",
+                            "TargetLocation": "Custom_Ridgeside_SummitFarm",
+                            "TargetTile": {
+                                "X": 22,
+                                "Y": 41
+                            },
+                            "TargetDirection": "down",
+                        }
+                    ],
+                    "UnlockCondition": "PLAYER_HAS_MAIL Host RSV.FixedMinecart Received",
+                }
+            }
+        }
+    ]
+}

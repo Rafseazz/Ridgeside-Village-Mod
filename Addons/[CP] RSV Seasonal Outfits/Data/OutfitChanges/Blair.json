@@ -1,0 +1,93 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Blair Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Blair_spring, Portraits/Blair_summer, Portraits/Blair_fall, Portraits/Blair_winter, Portraits/Blair_spring24, Portraits/Blair_fall27-1, Portraits/Blair_fall27-2, Characters/Blair_spring, Characters/Blair_summer, Characters/Blair_fall, Characters/Blair_winter, Characters/Blair_spring24, Characters/Blair_fall27-1, Characters/Blair_fall27-2, Portraits/Blair_rain, Characters/Blair_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Blair/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Blair",
+			"Action": "EditImage",
+			"Target": "Portraits/Blair_rain, Characters/Blair_rain",
+			"FromFile": "Assets/{{TargetPathOnly}}/Blair/Blair_acc_rain.png",
+			"When": {
+				"Blair": "enabled",
+				"Weather|contains=Rain, Storm, Snow": true,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Blair",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Blair", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.BlairSpring": {
+                    "Id": "{{ModId}}.BlairSpring",
+                    "Portrait": "Portraits/Blair_spring",
+                    "Sprite": "Characters/Blair_spring",
+                    "Condition": "{{Blair|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BlairSummer": {
+                    "Id": "{{ModId}}.BlairSummer",
+                    "Portrait": "Portraits/Blair_summer",
+                    "Sprite": "Characters/Blair_summer",
+                    "Condition": "{{Blair|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BlairFall": {
+                    "Id": "{{ModId}}.BlairFall",
+                    "Portrait": "Portraits/Blair_fall",
+                    "Sprite": "Characters/Blair_fall",
+                    "Condition": "{{Blair|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.BlairWinter": {
+                    "Id": "{{ModId}}.BlairWinter",
+                    "Portrait": "Portraits/Blair_winter",
+                    "Sprite": "Characters/Blair_winter",
+                    "Condition": "{{Blair|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.BlairRain": {
+                    "Id": "{{ModId}}.BlairRain",
+                    "Portrait": "Portraits/Blair_rain",
+                    "Sprite": "Characters/Blair_rain",
+                    "Condition": "{{Blair|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Blair.FlowerDance": {
+                    "Id": "{{ModId}}.Blair.FlowerDance",
+                    "Portrait": "Portraits/Blair_spring24",
+                    "Sprite": "Characters/Blair_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Blair|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Blair.SpiritsEve1": {
+                    "Id": "{{ModId}}.Blair.SpiritsEve1",
+                    "Portrait": "Portraits/Blair_fall27-1",
+                    "Sprite": "Characters/Blair_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Blair|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Blair.SpiritsEve2": {
+                    "Id": "{{ModId}}.Blair.SpiritsEve2",
+                    "Portrait": "Portraits/Blair_fall27-2",
+                    "Sprite": "Characters/Blair_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Blair|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

@@ -1,0 +1,93 @@
+{
+	"Changes": [
+		{
+            "LogName": "RSV Load Seasonals - Irene Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Irene_spring, Portraits/Irene_summer, Portraits/Irene_fall, Portraits/Irene_winter, Portraits/Irene_spring24, Portraits/Irene_fall27-1, Portraits/Irene_fall27-2, Characters/Irene_spring, Characters/Irene_summer, Characters/Irene_fall, Characters/Irene_winter, Characters/Irene_spring24, Characters/Irene_fall27-1, Characters/Irene_fall27-2, Portraits/Irene_rain, Characters/Irene_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Irene/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Accessories - Irene",
+			"Action": "EditImage",
+			"Target": "Portraits/Irene_fall, Characters/Irene_fall",
+			"FromFile": "Assets/{{TargetPathOnly}}/Irene/Irene_acc_fall.png",
+			"When": {
+				"Irene": "enabled",
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Query: {{Random:{{Range:1,10}}|key=IreneHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Irene",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Irene", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.IreneSpring": {
+                    "Id": "{{ModId}}.IreneSpring",
+                    "Portrait": "Portraits/Irene_spring",
+                    "Sprite": "Characters/Irene_spring",
+                    "Condition": "{{Irene|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.IreneSummer": {
+                    "Id": "{{ModId}}.IreneSummer",
+                    "Portrait": "Portraits/Irene_summer",
+                    "Sprite": "Characters/Irene_summer",
+                    "Condition": "{{Irene|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.IreneFall": {
+                    "Id": "{{ModId}}.IreneFall",
+                    "Portrait": "Portraits/Irene_fall",
+                    "Sprite": "Characters/Irene_fall",
+                    "Condition": "{{Irene|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.IreneWinter": {
+                    "Id": "{{ModId}}.IreneWinter",
+                    "Portrait": "Portraits/Irene_winter",
+                    "Sprite": "Characters/Irene_winter",
+                    "Condition": "{{Irene|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.IreneRain": {
+                    "Id": "{{ModId}}.IreneRain",
+                    "Portrait": "Portraits/Irene_rain",
+                    "Sprite": "Characters/Irene_rain",
+                    "Condition": "{{Irene|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Irene.FlowerDance": {
+                    "Id": "{{ModId}}.Irene.FlowerDance",
+                    "Portrait": "Portraits/Irene_spring24",
+                    "Sprite": "Characters/Irene_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Irene|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Irene.SpiritsEve1": {
+                    "Id": "{{ModId}}.Irene.SpiritsEve1",
+                    "Portrait": "Portraits/Irene_fall27-1",
+                    "Sprite": "Characters/Irene_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Irene|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Irene.SpiritsEve2": {
+                    "Id": "{{ModId}}.Irene.SpiritsEve2",
+                    "Portrait": "Portraits/Irene_fall27-2",
+                    "Sprite": "Characters/Irene_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Irene|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+	]
+}

@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Shiro Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Shiro_spring, Portraits/Shiro_summer, Portraits/Shiro_fall, Portraits/Shiro_winter, Portraits/Shiro_spring24, Portraits/Shiro_fall27-1, Portraits/Shiro_fall27-2, Characters/Shiro_spring, Characters/Shiro_summer, Characters/Shiro_fall, Characters/Shiro_winter, Characters/Shiro_spring24, Characters/Shiro_fall27-1, Characters/Shiro_fall27-2, Portraits/Shiro_rain, Characters/Shiro_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Shiro/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Shiro",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Shiro", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.ShiroSpring": {
+                    "Id": "{{ModId}}.ShiroSpring",
+                    "Portrait": "Portraits/Shiro_spring",
+                    "Sprite": "Characters/Shiro_spring",
+                    "Condition": "{{Shiro|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ShiroSummer": {
+                    "Id": "{{ModId}}.ShiroSummer",
+                    "Portrait": "Portraits/Shiro_summer",
+                    "Sprite": "Characters/Shiro_summer",
+                    "Condition": "{{Shiro|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ShiroFall": {
+                    "Id": "{{ModId}}.ShiroFall",
+                    "Portrait": "Portraits/Shiro_fall",
+                    "Sprite": "Characters/Shiro_fall",
+                    "Condition": "{{Shiro|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ShiroWinter": {
+                    "Id": "{{ModId}}.ShiroWinter",
+                    "Portrait": "Portraits/Shiro_winter",
+                    "Sprite": "Characters/Shiro_winter",
+                    "Condition": "{{Shiro|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.ShiroRain": {
+                    "Id": "{{ModId}}.ShiroRain",
+                    "Portrait": "Portraits/Shiro_rain",
+                    "Sprite": "Characters/Shiro_rain",
+                    "Condition": "{{Shiro|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Shiro.FlowerDance": {
+                    "Id": "{{ModId}}.Shiro.FlowerDance",
+                    "Portrait": "Portraits/Shiro_spring24",
+                    "Sprite": "Characters/Shiro_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Shiro|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Shiro.SpiritsEve1": {
+                    "Id": "{{ModId}}.Shiro.SpiritsEve1",
+                    "Portrait": "Portraits/Shiro_fall27-1",
+                    "Sprite": "Characters/Shiro_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Shiro|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Shiro.SpiritsEve2": {
+                    "Id": "{{ModId}}.Shiro.SpiritsEve2",
+                    "Portrait": "Portraits/Shiro_fall27-2",
+                    "Sprite": "Characters/RSVSeasonalBlank",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Shiro|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

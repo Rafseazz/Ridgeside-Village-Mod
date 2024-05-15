@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Sean Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Sean_spring, Portraits/Sean_summer, Portraits/Sean_fall, Portraits/Sean_winter, Portraits/Sean_spring24, Portraits/Sean_fall27-1, Portraits/Sean_fall27-2, Characters/Sean_spring, Characters/Sean_summer, Characters/Sean_fall, Characters/Sean_winter, Characters/Sean_spring24, Characters/Sean_fall27-1, Characters/Sean_fall27-2, Portraits/Sean_rain, Characters/Sean_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Sean/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Sean",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Sean", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.SeanSpring": {
+                    "Id": "{{ModId}}.SeanSpring",
+                    "Portrait": "Portraits/Sean_spring",
+                    "Sprite": "Characters/Sean_spring",
+                    "Condition": "{{Sean|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.SeanSummer": {
+                    "Id": "{{ModId}}.SeanSummer",
+                    "Portrait": "Portraits/Sean_summer",
+                    "Sprite": "Characters/Sean_summer",
+                    "Condition": "{{Sean|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.SeanFall": {
+                    "Id": "{{ModId}}.SeanFall",
+                    "Portrait": "Portraits/Sean_fall",
+                    "Sprite": "Characters/Sean_fall",
+                    "Condition": "{{Sean|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.SeanWinter": {
+                    "Id": "{{ModId}}.SeanWinter",
+                    "Portrait": "Portraits/Sean_winter",
+                    "Sprite": "Characters/Sean_winter",
+                    "Condition": "{{Sean|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.SeanRain": {
+                    "Id": "{{ModId}}.SeanRain",
+                    "Portrait": "Portraits/Sean_rain",
+                    "Sprite": "Characters/Sean_rain",
+                    "Condition": "{{Sean|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Sean.FlowerDance": {
+                    "Id": "{{ModId}}.Sean.FlowerDance",
+                    "Portrait": "Portraits/Sean_spring24",
+                    "Sprite": "Characters/Sean_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Sean|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Sean.SpiritsEve1": {
+                    "Id": "{{ModId}}.Sean.SpiritsEve1",
+                    "Portrait": "Portraits/Sean_fall27-1",
+                    "Sprite": "Characters/Sean_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Sean|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Sean.SpiritsEve2": {
+                    "Id": "{{ModId}}.Sean.SpiritsEve2",
+                    "Portrait": "Portraits/Sean_fall27-2",
+                    "Sprite": "Characters/Sean_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Sean|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

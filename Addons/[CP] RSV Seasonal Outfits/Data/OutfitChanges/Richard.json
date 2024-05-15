@@ -1,0 +1,110 @@
+{
+    "Changes": [
+        
+		{
+            "LogName": "RSV Load Seasonals - Richard Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Richard_spring, Portraits/Richard_summer, Portraits/Richard_fall, Portraits/Richard_winter, Portraits/Richard_spring24, Portraits/Richard_fall27-1, Portraits/Richard_fall27-2, Characters/Richard_spring, Characters/Richard_summer, Characters/Richard_fall, Characters/Richard_winter, Characters/Richard_spring24, Characters/Richard_fall27-1, Characters/Richard_fall27-2, Portraits/Richard_rain, Characters/Richard_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Richard/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Richard Rain",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard_rain, Characters/Richard_rain",
+			"FromFile": "Assets/{{TargetPathOnly}}/Richard/Richard_acc_rain.png",
+			"When": {
+				"Richard": "enabled",
+				"Weather|contains=Rain, Storm": true,
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+                "Query: {{Random:{{Range:1,10}}|key=RichardHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+			"LogName": "RSV Seasonal Accessories - Richard Winter",
+			"Action": "EditImage",
+			"Target": "Portraits/Richard_winter, Characters/Richard_winter",
+			"FromFile": "Assets/{{TargetPathOnly}}/Richard/Richard_acc_winter.png",
+			"When": {
+				"Richard": "enabled",
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+                "Query: {{Random:{{Range:1,10}}|key=RichardHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Richard",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Richard", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.RichardSpring": {
+                    "Id": "{{ModId}}.RichardSpring",
+                    "Portrait": "Portraits/Richard_spring",
+                    "Sprite": "Characters/Richard_spring",
+                    "Condition": "{{Richard|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.RichardSummer": {
+                    "Id": "{{ModId}}.RichardSummer",
+                    "Portrait": "Portraits/Richard_summer",
+                    "Sprite": "Characters/Richard_summer",
+                    "Condition": "{{Richard|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.RichardFall": {
+                    "Id": "{{ModId}}.RichardFall",
+                    "Portrait": "Portraits/Richard_fall",
+                    "Sprite": "Characters/Richard_fall",
+                    "Condition": "{{Richard|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.RichardWinter": {
+                    "Id": "{{ModId}}.RichardWinter",
+                    "Portrait": "Portraits/Richard_winter",
+                    "Sprite": "Characters/Richard_winter",
+                    "Condition": "{{Richard|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.RichardRain": {
+                    "Id": "{{ModId}}.RichardRain",
+                    "Portrait": "Portraits/Richard_rain",
+                    "Sprite": "Characters/Richard_rain",
+                    "Condition": "{{Richard|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Richard.FlowerDance": {
+                    "Id": "{{ModId}}.Richard.FlowerDance",
+                    "Portrait": "Portraits/Richard_spring24",
+                    "Sprite": "Characters/Richard_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Richard|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Richard.SpiritsEve1": {
+                    "Id": "{{ModId}}.Richard.SpiritsEve1",
+                    "Portrait": "Portraits/Richard_fall27-1",
+                    "Sprite": "Characters/Richard_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Richard|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Richard.SpiritsEve2": {
+                    "Id": "{{ModId}}.Richard.SpiritsEve2",
+                    "Portrait": "Portraits/Richard_fall27-2",
+                    "Sprite": "Characters/Richard_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Richard|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

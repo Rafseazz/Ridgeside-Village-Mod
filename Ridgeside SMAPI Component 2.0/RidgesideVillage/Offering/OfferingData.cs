@@ -12,12 +12,10 @@ namespace RidgesideVillage.Offering
     {
         internal Dictionary<string, OfferEntry> lookup;
 
-        static OfferingData Data;
         internal OfferingData()
         {
             lookup = new Dictionary<string, OfferEntry>();
             lookup = ModEntry.Helper.Data.ReadJsonFile<Dictionary<string, OfferEntry>>("assets//OfferingData.json");
-            Data = this;
         }
 
     }
@@ -85,27 +83,27 @@ namespace RidgesideVillage.Offering
                             }
                             else if (crop.isWildSeedCrop())
                             {
-                                int forage = crop.getRandomWildCropForSeason(Game1.currentSeason);
+                                String forage = crop.getRandomWildCropForSeason(Game1.season);
                                 var Farm = Game1.getFarm();
 
                                 //check if an object is already there
-                                if (!Farm.objects.ContainsKey(dirt.currentTileLocation))
+                                if (!Farm.objects.ContainsKey(dirt.Tile))
                                 {
-                                    Game1.getFarm().objects.Add(dirt.currentTileLocation, new StardewValley.Object(dirt.currentTileLocation, forage, 1)
+                                    Game1.getFarm().objects.Add(dirt.Tile, new StardewValley.Object(forage, 1)
                                     {
                                         IsSpawnedObject = true,
                                         CanBeGrabbed = true
                                     });
-                                    Log.Verbose($"RSV: Forage crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                                    Log.Verbose($"RSV: Forage crop fully grown at {dirt.Tile.X}, {dirt.Tile.Y}.");
                                     crop = null;
-                                    dirt.destroyCrop(dirt.currentTileLocation, false, Game1.getFarm());
+                                    dirt.destroyCrop(false);
 
                                 }
                             }
                             else
                             {
                                 crop.growCompletely();
-                                Log.Verbose($"RSV: Regular crop fully grown at {dirt.currentTileLocation.X}, {dirt.currentTileLocation.Y}.");
+                                Log.Verbose($"RSV: Regular crop fully grown at {dirt.Tile.X}, {dirt.Tile.Y}.");
                             }
 
                             n++;
@@ -118,99 +116,83 @@ namespace RidgesideVillage.Offering
 
         private void ApplyBuff()
         {
-            int index = -1;
+            string id = "BlessingBuff";
             switch (this.BuffType.ToLower())
             {
-                case "farming":
-                    index = Buff.farming;
-                    break;
-                case "fishing":
-                    index = Buff.fishing;
-                    break;
-                case "mining":
-                    index = Buff.mining;
-                    break;
-                case "luck":
-                    index = Buff.luck;
-                    break;
-                case "foraging":
-                    index = Buff.foraging;
-                    break;
-                case "crafting":
-                    index = Buff.crafting;
-                    break;
-                case "maxstamina":
-                    index = Buff.maxStamina;
-                    break;
-                case "speed":
-                    index = Buff.speed;
-                    break;
-                case "defense":
-                    index = Buff.defense;
-                    break;
-                case "attack":
-                    index = Buff.attack;
-                    break;
                 case "goblinscurse":
-                    index = Buff.goblinsCurse;
+                    id = Buff.goblinsCurse;
                     break;
                 case "slimed":
-                    index = Buff.slimed;
+                    id = Buff.slimed;
                     break;
                 case "evileye":
-                    index = Buff.evilEye;
-                    break;
-                case "chickenedout":
-                    index = Buff.chickenedOut;
+                    id = Buff.evilEye;
                     break;
                 case "tipsy":
-                    index = Buff.tipsy;
+                    id = Buff.tipsy;
                     break;
                 case "fear":
-                    index = Buff.fear;
+                    id = Buff.fear;
                     break;
                 case "frozen":
-                    index = Buff.frozen;
+                    id = Buff.frozen;
                     break;
                 case "yobablessing":
-                    index = Buff.yobaBlessing;
+                    id = Buff.yobaBlessing;
                     break;
                 case "nauseous":
-                    index = Buff.nauseous;
+                    id = Buff.nauseous;
                     break;
                 case "darkness":
-                    index = Buff.darkness;
+                    id = Buff.darkness;
                     break;
                 case "weakness":
-                    index = Buff.weakness;
+                    id = Buff.weakness;
                     break;
                 case "squidinkravioli":
-                    index = Buff.squidInkRavioli;
+                    id = Buff.squidInkRavioli;
                     break;
             }
 
-            if (index != -1)
+            Buff buff = new Buff(id);
+            if (id.Equals("BlessingBuff"))
             {
-                Buff buff;
-                if (index == 7)
+                switch (this.BuffType.ToLower())
                 {
-                    //needs to be updated as drink buff as stamina as otherBuff is bugged
-                    //probably fixed in 1.6
-                    string sourceString = Game1.getCharacterFromName("Raeriyala").displayName;
-                    buff = new Buff(0, 0, 0, 0, 0, 0, 0, this.Value, 0, 0, 0, 0, this.Duration, sourceString, sourceString);
-                    Game1.buffsDisplay.tryToAddDrinkBuff(buff);
-                    Game1.player.Stamina = Game1.player.MaxStamina;
-                }
-                else
-                {
-                    buff = new Buff(index);
-                    buff.buffAttributes[index] = Value;
-                    buff.millisecondsDuration = buff.totalMillisecondsDuration = this.Duration * 1000;
-                    buff.displaySource = Game1.getCharacterFromName("Raeriyala").displayName;
-                    Game1.buffsDisplay.addOtherBuff(buff);
-
+                    case "farming":
+                        buff.effects.FarmingLevel.Value = Value;
+                        break;
+                    case "fishing":
+                        buff.effects.FishingLevel.Value = Value;
+                        break;
+                    case "mining":
+                        buff.effects.MiningLevel.Value = Value;
+                        break;
+                    case "luck":
+                        buff.effects.LuckLevel.Value = Value;
+                        break;
+                    case "foraging":
+                        buff.effects.ForagingLevel.Value = Value;
+                        break;
+                    case "maxstamina":
+                        buff.effects.MaxStamina.Value = Value;
+                        break;
+                    case "speed":
+                        buff.effects.Speed.Value = Value;
+                        break;
+                    case "defense":
+                        buff.effects.Defense.Value = Value;
+                        break;
+                    case "attack":
+                        buff.effects.Attack.Value = Value;
+                        break;
                 }
             }
+
+            buff.millisecondsDuration = buff.totalMillisecondsDuration = this.Duration * 1000;
+            buff.displaySource = Game1.getCharacterFromName("Raeriyala").displayName;
+            Game1.player.applyBuff(buff);
+
         }
     }
 }

@@ -1,0 +1,85 @@
+{
+	"Changes": [
+		{
+            "LogName": "RSV Load Seasonals - Corine Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Corine_spring, Portraits/Corine_summer, Portraits/Corine_fall, Portraits/Corine_winter, Portraits/Corine_spring24, Portraits/Corine_fall27-1, Portraits/Corine_fall27-2, Characters/Corine_spring, Characters/Corine_summer, Characters/Corine_fall, Characters/Corine_winter, Characters/Corine_spring24, Characters/Corine_fall27-1, Characters/Corine_fall27-2, Portraits/Corine_spring13, Characters/Corine_spring13, Portraits/Corine_rain, Characters/Corine_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Corine/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Corine",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Corine", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.CorineSpring": {
+                    "Id": "{{ModId}}.CorineSpring",
+                    "Portrait": "Portraits/Corine_spring",
+                    "Sprite": "Characters/Corine_spring",
+                    "Condition": "{{Corine|contains= enabled}}, SEASON spring, {{SeasonalCorineToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.CorineSummer": {
+                    "Id": "{{ModId}}.CorineSummer",
+                    "Portrait": "Portraits/Corine_summer",
+                    "Sprite": "Characters/Corine_summer",
+                    "Condition": "{{Corine|contains= enabled}}, SEASON summer, {{SeasonalCorineToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.CorineFall": {
+                    "Id": "{{ModId}}.CorineFall",
+                    "Portrait": "Portraits/Corine_fall",
+                    "Sprite": "Characters/Corine_fall",
+                    "Condition": "{{Corine|contains= enabled}}, SEASON fall, {{SeasonalCorineToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.CorineWinter": {
+                    "Id": "{{ModId}}.CorineWinter",
+                    "Portrait": "Portraits/Corine_winter",
+                    "Sprite": "Characters/Corine_winter",
+                    "Condition": "{{Corine|contains= enabled}}, SEASON winter, {{SeasonalCorineToken}}",
+                    "Precedence": -100
+                },
+				"{{ModId}}.CorineRain": {
+                    "Id": "{{ModId}}.CorineRain",
+                    "Portrait": "Portraits/Corine_rain",
+                    "Sprite": "Characters/Corine_rain",
+                    "Condition": "{{Corine|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Corine.EggFestival": {
+                    "Id": "{{ModId}}.Corine.EggFestival",
+                    "Portrait": "Portraits/Corine_spring13",
+                    "Sprite": "Characters/Corine_spring13",
+                    "Condition": "IS_EVENT festival_spring13, {{Corine|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+				"{{ModId}}.Corine.FlowerDance": {
+                    "Id": "{{ModId}}.Corine.FlowerDance",
+                    "Portrait": "Portraits/Corine_spring24",
+                    "Sprite": "Characters/Corine_spring24",
+                    "Condition": "ANY \"IS_EVENT festival_spring24, {{Corine|contains=enabled}}, {{SeasonalCorineToken}}\" \"IS_EVENT festival_spring24, {{Corine|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Corine.SpiritsEve1": {
+                    "Id": "{{ModId}}.Corine.SpiritsEve1",
+                    "Portrait": "Portraits/Corine_fall27-1",
+                    "Sprite": "Characters/Corine_fall27-1",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Corine|contains=enabled}}, {{SeasonalCorineToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Corine|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Corine.SpiritsEve2": {
+                    "Id": "{{ModId}}.Corine.SpiritsEve2",
+                    "Portrait": "Portraits/Corine_fall27-2",
+                    "Sprite": "Characters/Corine_fall27-2",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Corine|contains=enabled}}, {{SeasonalCorineToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Corine|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+            }
+        },
+	]
+}

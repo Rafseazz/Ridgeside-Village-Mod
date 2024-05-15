@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Shanice Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Shanice_spring, Portraits/Shanice_summer, Portraits/Shanice_fall, Portraits/Shanice_winter, Portraits/Shanice_spring24, Portraits/Shanice_fall27-1, Portraits/Shanice_fall27-2, Characters/Shanice_spring, Characters/Shanice_summer, Characters/Shanice_fall, Characters/Shanice_winter, Characters/Shanice_spring24, Characters/Shanice_fall27-1, Characters/Shanice_fall27-2, Portraits/Shanice_rain, Characters/Shanice_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Shanice/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Shanice",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Shanice", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.ShaniceSpring": {
+                    "Id": "{{ModId}}.ShaniceSpring",
+                    "Portrait": "Portraits/Shanice_spring",
+                    "Sprite": "Characters/Shanice_spring",
+                    "Condition": "{{Shanice|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ShaniceSummer": {
+                    "Id": "{{ModId}}.ShaniceSummer",
+                    "Portrait": "Portraits/Shanice_summer",
+                    "Sprite": "Characters/Shanice_summer",
+                    "Condition": "{{Shanice|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ShaniceFall": {
+                    "Id": "{{ModId}}.ShaniceFall",
+                    "Portrait": "Portraits/Shanice_fall",
+                    "Sprite": "Characters/Shanice_fall",
+                    "Condition": "{{Shanice|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.ShaniceWinter": {
+                    "Id": "{{ModId}}.ShaniceWinter",
+                    "Portrait": "Portraits/Shanice_winter",
+                    "Sprite": "Characters/Shanice_winter",
+                    "Condition": "{{Shanice|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.ShaniceRain": {
+                    "Id": "{{ModId}}.ShaniceRain",
+                    "Portrait": "Portraits/Shanice_rain",
+                    "Sprite": "Characters/Shanice_rain",
+                    "Condition": "{{Shanice|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Shanice.FlowerDance": {
+                    "Id": "{{ModId}}.Shanice.FlowerDance",
+                    "Portrait": "Portraits/Shanice_spring24",
+                    "Sprite": "Characters/Shanice_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Shanice|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Shanice.SpiritsEve1": {
+                    "Id": "{{ModId}}.Shanice.SpiritsEve1",
+                    "Portrait": "Portraits/Shanice_fall27-1",
+                    "Sprite": "Characters/Shanice_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Shanice|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Shanice.SpiritsEve2": {
+                    "Id": "{{ModId}}.Shanice.SpiritsEve2",
+                    "Portrait": "Portraits/Shanice_fall27-2",
+                    "Sprite": "Characters/Shanice_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Shanice|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

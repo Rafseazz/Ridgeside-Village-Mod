@@ -1,0 +1,85 @@
+{
+	"Changes": [
+		{
+            "LogName": "RSV Load Seasonals - Ysabelle Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Ysabelle_spring, Portraits/Ysabelle_summer, Portraits/Ysabelle_fall, Portraits/Ysabelle_winter, Portraits/Ysabelle_spring24, Portraits/Ysabelle_fall27-1, Portraits/Ysabelle_fall27-2, Characters/Ysabelle_spring, Characters/Ysabelle_summer, Characters/Ysabelle_fall, Characters/Ysabelle_winter, Characters/Ysabelle_spring24, Characters/Ysabelle_fall27-1, Characters/Ysabelle_fall27-2, Portraits/Ysabelle_spring13, Characters/Ysabelle_spring13, Portraits/Ysabelle_rain, Characters/Ysabelle_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Ysabelle/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Ysabelle",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ysabelle", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.YsabelleSpring": {
+                    "Id": "{{ModId}}.YsabelleSpring",
+                    "Portrait": "Portraits/Ysabelle_spring",
+                    "Sprite": "Characters/Ysabelle_spring",
+                    "Condition": "{{Ysabelle|contains= enabled}}, SEASON spring, {{SeasonalYsabelleToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.YsabelleSummer": {
+                    "Id": "{{ModId}}.YsabelleSummer",
+                    "Portrait": "Portraits/Ysabelle_summer",
+                    "Sprite": "Characters/Ysabelle_summer",
+                    "Condition": "{{Ysabelle|contains= enabled}}, SEASON summer, {{SeasonalYsabelleToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.YsabelleFall": {
+                    "Id": "{{ModId}}.YsabelleFall",
+                    "Portrait": "Portraits/Ysabelle_fall",
+                    "Sprite": "Characters/Ysabelle_fall",
+                    "Condition": "{{Ysabelle|contains= enabled}}, SEASON fall, {{SeasonalYsabelleToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.YsabelleWinter": {
+                    "Id": "{{ModId}}.YsabelleWinter",
+                    "Portrait": "Portraits/Ysabelle_winter",
+                    "Sprite": "Characters/Ysabelle_winter",
+                    "Condition": "{{Ysabelle|contains= enabled}}, SEASON winter, {{SeasonalYsabelleToken}}",
+                    "Precedence": -100
+                },
+				"{{ModId}}.YsabelleRain": {
+                    "Id": "{{ModId}}.YsabelleRain",
+                    "Portrait": "Portraits/Ysabelle_rain",
+                    "Sprite": "Characters/Ysabelle_rain",
+                    "Condition": "{{Ysabelle|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Ysabelle.EggFestival": {
+                    "Id": "{{ModId}}.Ysabelle.EggFestival",
+                    "Portrait": "Portraits/Ysabelle_spring13",
+                    "Sprite": "Characters/Ysabelle_spring13",
+                    "Condition": "IS_EVENT festival_spring13, {{Ysabelle|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+				"{{ModId}}.Ysabelle.FlowerDance": {
+                    "Id": "{{ModId}}.Ysabelle.FlowerDance",
+                    "Portrait": "Portraits/Ysabelle_spring24",
+                    "Sprite": "Characters/Ysabelle_spring24",
+                    "Condition": "ANY \"IS_EVENT festival_spring24, {{Ysabelle|contains=enabled}}, {{SeasonalYsabelleToken}}\" \"IS_EVENT festival_spring24, {{Ysabelle|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ysabelle.SpiritsEve1": {
+                    "Id": "{{ModId}}.Ysabelle.SpiritsEve1",
+                    "Portrait": "Portraits/Ysabelle_fall27-1",
+                    "Sprite": "Characters/Ysabelle_fall27-1",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Ysabelle|contains=enabled}}, {{SeasonalYsabelleToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Ysabelle|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ysabelle.SpiritsEve2": {
+                    "Id": "{{ModId}}.Ysabelle.SpiritsEve2",
+                    "Portrait": "Portraits/Ysabelle_fall27-2",
+                    "Sprite": "Characters/Ysabelle_fall27-2",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Ysabelle|contains=enabled}}, {{SeasonalYsabelleToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Ysabelle|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+            }
+        },
+	]
+}

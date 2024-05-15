@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Lola Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Lola_spring, Portraits/Lola_summer, Portraits/Lola_fall, Portraits/Lola_winter, Portraits/Lola_spring24, Portraits/Lola_fall27-1, Portraits/Lola_fall27-2, Characters/Lola_spring, Characters/Lola_summer, Characters/Lola_fall, Characters/Lola_winter, Characters/Lola_spring24, Characters/Lola_fall27-1, Characters/Lola_fall27-2, Portraits/Lola_rain, Characters/Lola_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Lola/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Lola",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Lola", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.LolaSpring": {
+                    "Id": "{{ModId}}.LolaSpring",
+                    "Portrait": "Portraits/Lola_spring",
+                    "Sprite": "Characters/Lola_spring",
+                    "Condition": "{{Lola|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LolaSummer": {
+                    "Id": "{{ModId}}.LolaSummer",
+                    "Portrait": "Portraits/Lola_summer",
+                    "Sprite": "Characters/Lola_summer",
+                    "Condition": "{{Lola|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LolaFall": {
+                    "Id": "{{ModId}}.LolaFall",
+                    "Portrait": "Portraits/Lola_fall",
+                    "Sprite": "Characters/Lola_fall",
+                    "Condition": "{{Lola|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LolaWinter": {
+                    "Id": "{{ModId}}.LolaWinter",
+                    "Portrait": "Portraits/Lola_winter",
+                    "Sprite": "Characters/Lola_winter",
+                    "Condition": "{{Lola|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.LolaRain": {
+                    "Id": "{{ModId}}.LolaRain",
+                    "Portrait": "Portraits/Lola_rain",
+                    "Sprite": "Characters/Lola_rain",
+                    "Condition": "{{Lola|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Lola.FlowerDance": {
+                    "Id": "{{ModId}}.Lola.FlowerDance",
+                    "Portrait": "Portraits/Lola_spring24",
+                    "Sprite": "Characters/Lola_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Lola|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Lola.SpiritsEve1": {
+                    "Id": "{{ModId}}.Lola.SpiritsEve1",
+                    "Portrait": "Portraits/Lola_fall27-1",
+                    "Sprite": "Characters/Lola_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Lola|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Lola.SpiritsEve2": {
+                    "Id": "{{ModId}}.Lola.SpiritsEve2",
+                    "Portrait": "Portraits/Lola_fall27-2",
+                    "Sprite": "Characters/Lola_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Lola|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

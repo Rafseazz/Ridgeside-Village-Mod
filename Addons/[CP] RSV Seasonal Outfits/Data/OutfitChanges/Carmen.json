@@ -1,0 +1,78 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Carmen Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Carmen_spring, Portraits/Carmen_summer, Portraits/Carmen_fall, Portraits/Carmen_winter, Portraits/Carmen_spring24, Portraits/Carmen_fall27-1, Portraits/Carmen_fall27-2, Characters/Carmen_spring, Characters/Carmen_summer, Characters/Carmen_fall, Characters/Carmen_winter, Characters/Carmen_spring24, Characters/Carmen_fall27-1, Characters/Carmen_fall27-2, Portraits/Carmen_rain, Characters/Carmen_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Carmen/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Carmen",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Carmen", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.CarmenSpring": {
+                    "Id": "{{ModId}}.CarmenSpring",
+                    "Portrait": "Portraits/Carmen_spring",
+                    "Sprite": "Characters/Carmen_spring",
+                    "Condition": "{{Carmen|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.CarmenSummer": {
+                    "Id": "{{ModId}}.CarmenSummer",
+                    "Portrait": "Portraits/Carmen_summer",
+                    "Sprite": "Characters/Carmen_summer",
+                    "Condition": "{{Carmen|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.CarmenFall": {
+                    "Id": "{{ModId}}.CarmenFall",
+                    "Portrait": "Portraits/Carmen_fall",
+                    "Sprite": "Characters/Carmen_fall",
+                    "Condition": "{{Carmen|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.CarmenWinter": {
+                    "Id": "{{ModId}}.CarmenWinter",
+                    "Portrait": "Portraits/Carmen_winter",
+                    "Sprite": "Characters/Carmen_winter",
+                    "Condition": "{{Carmen|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.CarmenRain": {
+                    "Id": "{{ModId}}.CarmenRain",
+                    "Portrait": "Portraits/Carmen_rain",
+                    "Sprite": "Characters/Carmen_rain",
+                    "Condition": "{{Carmen|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Carmen.FlowerDance": {
+                    "Id": "{{ModId}}.Carmen.FlowerDance",
+                    "Portrait": "Portraits/Carmen_spring24",
+                    "Sprite": "Characters/Carmen_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Carmen|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Carmen.SpiritsEve1": {
+                    "Id": "{{ModId}}.Carmen.SpiritsEve1",
+                    "Portrait": "Portraits/Carmen_fall27-1",
+                    "Sprite": "Characters/Carmen_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Carmen|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Carmen.SpiritsEve2": {
+                    "Id": "{{ModId}}.Carmen.SpiritsEve2",
+                    "Portrait": "Portraits/Carmen_fall27-2",
+                    "Sprite": "Characters/Carmen_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Carmen|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

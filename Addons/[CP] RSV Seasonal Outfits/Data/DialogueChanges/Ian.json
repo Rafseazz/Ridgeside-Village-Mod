@@ -1,0 +1,61 @@
+{
+"Changes": [
+	{
+	 "LogName": "Ian Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
+		 "Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+		"Ian": "{{i18n:SpiritEve.Ian.1}}",
+ 	  "Ian_spouse": "{{i18n:SpiritEve.Ian_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Ian Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 // Line about Kenneth
+		 "Kenneth": "enabled, festivals only"
+	 },
+   "Entries": {
+ 	  "Ian_y2": "{{i18n:SpiritEve.Ian.2}}",
+ 	  "Ian_spouse_y2": "{{i18n:SpiritEve.Ian_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Ian Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"IsOddYear": true,
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Ian": "Married",
+		"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
+		"Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Ian": "{{i18n:SpiritEve.Ian_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Ian Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Ian": "Married",
+		"Query: ('{{Ian}}' = 'enabled' AND '{{SeasonalIanToken}}' = 'true') OR ('{{Ian}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Ian_y2": "{{i18n:SpiritEve.Ian_spouse.2}}",
+		},
+	},
+]
+}

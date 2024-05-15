@@ -17,6 +17,8 @@ namespace RidgesideVillage
         private static IMonitor Monitor { get; set; }
         private static IModHelper Helper { get; set; }
         private static string[] npcs = { "Torts", "Carmen", "Blair", "Kenneth", "June" };
+        private static string[] npcs_fall27_1 = { "Kenneth", "Pika", "Trinnie" };
+        private static string[] npcs_fall27_2 = { "Faye", "Kenneth", "Philip", "Shiro", "Zayne" };
 
 
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
@@ -32,6 +34,31 @@ namespace RidgesideVillage
                 prefix: new HarmonyMethod(typeof(Animations), nameof(finishRouteBehavior_Prefix))
             );
             Helper.Events.GameLoop.DayEnding += DayEnd;
+            if (Helper.ModRegistry.IsLoaded("Rafseazz.RSVSeasonalOutfits"))
+                Helper.Events.Player.Warped += OnWarped;
+        }
+
+        internal static void OnWarped(object sender, WarpedEventArgs e)
+        {
+            // For clearing TempAnimatedSprite characters' dialogue in Seasonal Outfits Spirit's Eve
+            if (e.NewLocation is null) return;
+            if (Game1.currentSeason + Game1.dayOfMonth == "fall27" && e.NewLocation.Name.Equals("Town"))
+            {
+                if (Game1.year % 2 == 1)
+                {
+                    foreach (string name in npcs_fall27_1)
+                    {
+                        Game1.getCharacterFromName(name).CurrentDialogue.Clear();
+                    }
+                }
+                else
+                {
+                    foreach (string name in npcs_fall27_2)
+                    {
+                        Game1.getCharacterFromName(name).CurrentDialogue.Clear();
+                    }
+                }
+            }
         }
 
         internal static void startRouteBehavior_Postfix(ref NPC __instance, string behaviorName)
@@ -58,7 +85,7 @@ namespace RidgesideVillage
                         __instance.Sprite.currentFrame = 16;
                         if (Utility.isOnScreen(Utility.Vector2ToPoint(__instance.Position), 64, __instance.currentLocation))
                         {
-                            __instance.currentLocation.playSoundAt("slosh", __instance.getTileLocation());
+                            __instance.currentLocation.playSound("slosh", __instance.Tile);
                         }
                         break;
                     case "june_piano":
@@ -75,11 +102,11 @@ namespace RidgesideVillage
                     case "kenneth_fixleft":
                         __instance.extendSourceRect(0, 32);
                         __instance.Sprite.tempSpriteHeight = 64;
-                        __instance.drawOffset.Value = new Vector2(0f, 96f);
+                        __instance.drawOffset = new Vector2(0f, 96f);
                         __instance.Sprite.ignoreSourceRectUpdates = false;
                         if (Utility.isOnScreen(Utility.Vector2ToPoint(__instance.Position), 64, __instance.currentLocation))
                         {
-                            __instance.currentLocation.playSoundAt("slosh", __instance.getTileLocation());
+                            __instance.currentLocation.playSound("slosh", __instance.Tile);
                         }
                         break;
                 }
@@ -114,7 +141,7 @@ namespace RidgesideVillage
                         __instance.Sprite.SpriteWidth = 16;
                         __instance.Sprite.SpriteHeight = 32;
                         __instance.Sprite.UpdateSourceRect();
-                        __instance.drawOffset.Value = Vector2.Zero;
+                        __instance.drawOffset = Vector2.Zero;
                         __instance.Halt();
                         __instance.movementPause = 1;
                         break;
@@ -140,7 +167,7 @@ namespace RidgesideVillage
                     npc.Sprite.SpriteWidth = 16;
                     npc.Sprite.ignoreSourceRectUpdates = false;
                     npc.Sprite.UpdateSourceRect();
-                    npc.drawOffset.Value = Vector2.Zero;
+                    npc.drawOffset= Vector2.Zero;
                     npc.IsInvisible = false;
                 }
             }

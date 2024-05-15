@@ -1,0 +1,32 @@
+{
+"Changes": [
+	{
+	 "LogName": "Jeric Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": { "Jeric": "enabled, festivals only", },
+   "Entries": {
+		"Jeric": "{{i18n:SpiritEve.Jeric.1}}",
+ 	  "Jeric_y2": "{{i18n:SpiritEve.Jeric.2}}",
+ 	  "Jeric_spouse": "{{i18n:SpiritEve.Jeric_spouse.1}}",
+ 	  "Jeric_spouse_y2": "{{i18n:SpiritEve.Jeric_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Jeric Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Jeric": "Married",
+		"Jeric": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Jeric": "{{i18n:SpiritEve.Jeric_spouse.1}}",
+	   "Jeric_y2": "{{i18n:SpiritEve.Jeric_spouse.2}}",
+		},
+	},
+]
+}

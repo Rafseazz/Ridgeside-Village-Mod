@@ -1,0 +1,28 @@
+{
+"Changes": [
+	{
+	 "LogName": "Louie Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Louie": "enabled, festivals only",
+		 "Maive": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Louie": "{{i18n:SpiritEve.Louie.1}}",
+		},
+	},
+	{
+	 "LogName": "Louie Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Torts": "enabled, festivals only",
+	 },
+   "Entries": {
+	   "Louie_y2": "{{i18n:SpiritEve.Louie.2}}",
+		},
+	},
+]
+}

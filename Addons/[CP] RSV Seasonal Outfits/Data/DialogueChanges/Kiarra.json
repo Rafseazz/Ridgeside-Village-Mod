@@ -1,0 +1,47 @@
+{
+"Changes": [
+	{
+	 "LogName": "Kiarra Flower Dance Dialogue Change",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/spring24",
+	 "When": {
+		 // Comment about Corine's dress
+		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+	 },
+	 "Entries": {
+		"Kiarra": "{{i18n:FlowerDance.Kiarra}}",
+		},
+	},
+
+	{
+	 "LogName": "Kiarra Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+		"Kiarra": "{{i18n:SpiritEve.Kiarra.1}}",
+ 	  "Kiarra_y2": "{{i18n:SpiritEve.Kiarra.2}}",
+ 	  "Kiarra_spouse": "{{i18n:SpiritEve.Kiarra_spouse.1}}",
+ 	  "Kiarra_spouse_y2": "{{i18n:SpiritEve.Kiarra_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Kiarra Spirit's Eve Dialogue Change (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Kiarra": "Married",
+		"Query: ('{{Kiarra}}' = 'enabled' AND '{{SeasonalKiarraToken}}' = 'true') OR ('{{Kiarra}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Kiarra": "{{i18n:SpiritEve.Kiarra_spouse.1}}",
+	   "Kiarra_y2": "{{i18n:SpiritEve.Kiarra_spouse.2}}",
+		},
+	},
+]
+}

@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework;
 using System.Reflection;
 using Microsoft.Xna.Framework.Graphics;
 using StardewModdingAPI.Utilities;
+using StardewValley.SpecialOrders;
 
 namespace RidgesideVillage
 {
@@ -24,62 +25,31 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Log.Trace($"Applying Harmony Patch \"{nameof(ShowGlobalMessage_Prefix)}.");
-            harmony.Patch(
-                original: AccessTools.Method(typeof(Game1), nameof(Game1.showGlobalMessage)),
-                prefix: new HarmonyMethod(typeof(EventPatches), nameof(ShowGlobalMessage_Prefix))
-            );
-
-            harmony.Patch(
-                original: AccessTools.Method(typeof(GameLocation), nameof(GameLocation.checkEventPrecondition)),
-                prefix: new HarmonyMethod(typeof(EventPatches), nameof(EventPatches.checkEventPrecondition_Prefix))
-            );
             Helper.Events.GameLoop.GameLaunched += OnGameLaunched;
 
         }
 
         private static void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            MethodInfo showImageCommands = typeof(EventPatches).GetMethod("command_RSVShowImage");
-            ExternalAPIs.SC.AddEventCommand("RSVShowImage", showImageCommands);
 
-            MethodInfo stopShowImageCommands = typeof(EventPatches).GetMethod(nameof(EventPatches.command_RSVStopShowImage));
-            ExternalAPIs.SC.AddEventCommand("RSVStopShowImage", stopShowImageCommands);
-
-            MethodInfo AddSOCommand = typeof(EventPatches).GetMethod("command_RSVAddSO");
-            ExternalAPIs.SC.AddEventCommand("RSVAddSO", AddSOCommand);
+            Event.RegisterCommand("RSVShowImage", command_RSVShowImage);
+            Event.RegisterCommand("RSVStopShowImage", command_RSVStopShowImage);
+            Event.RegisterPrecondition("rsvRidingHorse", precondition_RSVRidingHorse);
         }
 
-
-        public static void command_RSVAddSO(Event @event, GameLocation location, GameTime time, string[] split)
+        private static bool precondition_RSVRidingHorse(GameLocation location, string eventId, string[] args)
         {
-            string specialOrderKey = split[2];
-            try
-            {
-                if (!Game1.player.team.SpecialOrderActive(specialOrderKey))
-                {
-                    Game1.player.team.specialOrders.Add(SpecialOrder.GetSpecialOrder(specialOrderKey, null));
-                }
-                @event.CurrentCommand++;
-                @event.checkForNextCommand(location, time);
-            }
-            catch
-            {
-                Log.Error($"Special order {specialOrderKey} not found and thus not added");
-                @event.CurrentCommand++;
-                @event.checkForNextCommand(location, time);
-            }
+            return Game1.player.isRidingHorse();
         }
-
 
         static ImageMenu currImageMenu;
 
-        public static void command_RSVShowImage(Event @event, GameLocation location, GameTime time, string[] split)
+        public static void command_RSVShowImage(Event @event, string[] args, EventContext context)
         {
             try
             {
-                Texture2D image = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName(split[1]));
-                if (!float.TryParse(split[2], out float scale))
+                Texture2D image = Helper.GameContent.Load<Texture2D>(PathUtilities.NormalizeAssetName(args[1]));
+                if (!float.TryParse(args[2], out float scale))
                 {
                     scale = 1f;
                 }
@@ -89,8 +59,6 @@ namespace RidgesideVillage
                 topLeft.Y = Math.Min(topLeft.Y, Game1.viewport.Height - image.Height*scale - 510);
                 topLeft.Y = Math.Max(topLeft.Y, 0);
                 EventPatches.currImageMenu = new ImageMenu((int)topLeft.X, (int)topLeft.Y, scale, image, false);
-                @event.CurrentCommand++;
-
 
                 EventPatches.Helper.Events.Display.RenderedHud += DrawImageMenu;
 
@@ -99,16 +67,16 @@ namespace RidgesideVillage
             }
             catch
             {
-                if(split.Length < 1)
+                if(args.Length < 1)
                 {
                     Log.Error("RSVShowImage has no path for file");
                 }
                 else
                 {
-                    Log.Error($"Image {split[1]} not found");
+                    Log.Error($"Image {args[1]} not found");
                 }
-                @event.CurrentCommand++;
-                @event.checkForNextCommand(location, time);
+                //@event.CurrentCommand++;
+                //@event.checkForNextCommand(location, time);
             }
         }
 
@@ -124,7 +92,7 @@ namespace RidgesideVillage
             }
         }
 
-        public static void command_RSVStopShowImage(Event @event, GameLocation location, GameTime time, string[] split)
+        public static void command_RSVStopShowImage(Event @event, string[] args, EventContext context)
         {
             try
             {
@@ -135,8 +103,8 @@ namespace RidgesideVillage
             }
             catch
             {
-                @event.CurrentCommand++;
-                @event.checkForNextCommand(location, time);
+                //@event.CurrentCommand++;
+                //@event.checkForNextCommand(location, time);
             }
         }
 

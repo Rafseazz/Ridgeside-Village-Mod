@@ -1,0 +1,78 @@
+{
+	"Changes": [
+		{
+            "LogName": "RSV Load Seasonals - Ian Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Ian_spring, Portraits/Ian_summer, Portraits/Ian_fall, Portraits/Ian_winter, Portraits/Ian_spring24, Portraits/Ian_fall27-1, Portraits/Ian_fall27-2, Characters/Ian_spring, Characters/Ian_summer, Characters/Ian_fall, Characters/Ian_winter, Characters/Ian_spring24, Characters/Ian_fall27-1, Characters/Ian_fall27-2, Portraits/Ian_rain, Characters/Ian_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Ian/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Ian",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Ian", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.IanSpring": {
+                    "Id": "{{ModId}}.IanSpring",
+                    "Portrait": "Portraits/Ian_spring",
+                    "Sprite": "Characters/Ian_spring",
+                    "Condition": "{{Ian|contains= enabled}}, SEASON spring, {{SeasonalIanToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.IanSummer": {
+                    "Id": "{{ModId}}.IanSummer",
+                    "Portrait": "Portraits/Ian_summer",
+                    "Sprite": "Characters/Ian_summer",
+                    "Condition": "{{Ian|contains= enabled}}, SEASON summer, {{SeasonalIanToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.IanFall": {
+                    "Id": "{{ModId}}.IanFall",
+                    "Portrait": "Portraits/Ian_fall",
+                    "Sprite": "Characters/Ian_fall",
+                    "Condition": "{{Ian|contains= enabled}}, SEASON fall, {{SeasonalIanToken}}",
+                    "Precedence": -100
+                },
+                "{{ModId}}.IanWinter": {
+                    "Id": "{{ModId}}.IanWinter",
+                    "Portrait": "Portraits/Ian_winter",
+                    "Sprite": "Characters/Ian_winter",
+                    "Condition": "{{Ian|contains= enabled}}, SEASON winter, {{SeasonalIanToken}}",
+                    "Precedence": -100
+                },
+				"{{ModId}}.IanRain": {
+                    "Id": "{{ModId}}.IanRain",
+                    "Portrait": "Portraits/Ian_rain",
+                    "Sprite": "Characters/Ian_rain",
+                    "Condition": "{{Ian|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Ian.FlowerDance": {
+                    "Id": "{{ModId}}.Ian.FlowerDance",
+                    "Portrait": "Portraits/Ian_spring24",
+                    "Sprite": "Characters/Ian_spring24",
+                    "Condition": "ANY \"IS_EVENT festival_spring24, {{Ian|contains=enabled}}, {{SeasonalIanToken}}\" \"IS_EVENT festival_spring24, {{Ian|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ian.SpiritsEve1": {
+                    "Id": "{{ModId}}.Ian.SpiritsEve1",
+                    "Portrait": "Portraits/Ian_fall27-1",
+                    "Sprite": "Characters/Ian_fall27-1",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Ian|contains=enabled}}, {{SeasonalIanToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Ian|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Ian.SpiritsEve2": {
+                    "Id": "{{ModId}}.Ian.SpiritsEve2",
+                    "Portrait": "Portraits/Ian_fall27-2",
+                    "Sprite": "Characters/Ian_fall27-2",
+                    "Condition": "ANY \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Ian|contains=enabled}}, {{SeasonalIanToken}}\" \"IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Ian|contains= festivals only}}\"",
+                    "Precedence": -200
+                },
+            }
+        },
+	]
+}

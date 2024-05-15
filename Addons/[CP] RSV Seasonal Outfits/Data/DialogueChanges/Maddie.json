@@ -1,0 +1,76 @@
+{
+"Changes": [
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Maddie": "enabled, festivals only",
+		 "Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+		 "Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+		"Maddie": "{{i18n:SpiritEve.Maddie.1}}",
+ 	  "Maddie_spouse": "{{i18n:SpiritEve.Maddie_spouse.1}}",
+		},
+	},
+
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change Y2",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Jeric": "enabled, festivals only",
+	 },
+	 "Entries": {
+		"Maddie_y2": "{{i18n:SpiritEve.Maddie.2}}",
+		"Maddie_spouse_y2": "{{i18n:SpiritEve.Maddie_spouse.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change (Jeric married) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Relationship:Jeric": "Married",
+		 "Jeric": "enabled, festivals only",
+	 },
+   "Entries": {
+ 	  "Maddie_y2": "{{i18n:SpiritEve.Maddie.2-jeric}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"IsOddYear": true,
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Maddie": "Married",
+		"Maddie": "enabled, festivals only",
+		"Query: ('{{Corine}}' = 'enabled' AND '{{SeasonalCorineToken}}' = 'true') OR ('{{Corine}}' = 'festivals always')": true,
+		"Query: ('{{Ysabelle}}' = 'enabled' AND '{{SeasonalYsabelleToken}}' = 'true') OR ('{{Ysabelle}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Maddie": "{{i18n:SpiritEve.Maddie_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Maddie Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Maddie": "Married",
+		"Jeric": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Maddie_y2": "{{i18n:SpiritEve.Maddie_spouse.2}}",
+		},
+	},
+]
+}

@@ -1,0 +1,32 @@
+{
+    "Changes": [
+        {
+            "LogName": "Load RSV Seasonals - Undreya",
+            "Action": "Load",
+            "Target": "Portraits/Undreya_1, Portraits/Undreya_2, Characters/Undreya_1, Characters/Undreya_2",
+            "FromFile": "Assets/{{TargetPathOnly}}/Undreya/{{TargetWithoutPath}}.png"
+        },
+        {
+            "LogName": "RSV Seasonal Appearances - Undreya",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Undreya", "Appearance" ],
+            "Entries": {
+                "{{ModId}}.Undreya.1": {
+                    "Id": "{{ModId}}.Undreya.1",
+                    "Portrait": "Portraits/Undreya_1",
+                    "Sprite": "Characters/Undreya_1",
+                    "Condition": "ANY \"LOCATION_NAME Target Custom_Ridgeside_RSVAbandonedHouse, {{Undreya |contains= enabled}}\" \"LOCATION_NAME Target Custom_Ridgeside_RSVTheHike, {{Undreya |contains= enabled}}\"",
+                    "Precedence": -100
+                },
+                "{{ModId}}.Undreya.2": {
+                    "Id": "{{ModId}}.Undreya.2",
+                    "Portrait": "Portraits/Undreya_2",
+                    "Sprite": "Characters/Undreya_2",
+                    "Condition": "ANY \"LOCATION_NAME Target Custom_Ridgeside_RSVAbandonedHouse, {{Undreya |contains= enabled}}\" \"LOCATION_NAME Target Custom_Ridgeside_RSVTheHike, {{Undreya |contains= enabled}}\"",
+                    "Precedence": -100
+                }
+            }
+        }
+    ]
+}

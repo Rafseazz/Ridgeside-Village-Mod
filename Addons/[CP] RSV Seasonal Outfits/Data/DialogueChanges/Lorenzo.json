@@ -1,0 +1,17 @@
+{
+"Changes": [
+	{
+	 "LogName": "Lorenzo Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Shanice": "enabled, festivals only",
+		 "Lorenzo": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Lorenzo": "{{i18n:SpiritEve.Lorenzo.1}}",
+	   "Lorenzo_y2": "{{i18n:SpiritEve.Lorenzo.2}}",
+		},
+	},
+]
+}

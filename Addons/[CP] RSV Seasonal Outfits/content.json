@@ -1,0 +1,972 @@
+{
+	"Format": "2.0",
+	"ConfigSchema":
+	{
+		// Mod Mechanics
+		"Festival Dialogue Edits":
+		{
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Replaces characters' Spirit's Eve dialogue from the main mod with dialogue that references their costumes. (Requires RSV's Expanded Festival Maps.)",
+			"AllowBlank": false,
+			"Section": "Mod Mechanics",
+		},
+
+		// Characters With Other Seasonal Mods
+		"Alissa":
+		{
+			"AllowValues": "enabled, disabled, festivals always",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Alissa's appearance. When ZoeDoll's Alissa Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and ZoeDoll's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
+			"AllowBlank": false,
+			"Section": "Characters With Other Seasonal Mods",
+		},
+		"Corine":
+		{
+			"AllowValues": "enabled, disabled, festivals always",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Corine's appearance. When x3n3as's Corine Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and x3n3as's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
+			"AllowBlank": false,
+			"Section": "Characters With Other Seasonal Mods",
+		},
+		"Ian":
+		{
+			"AllowValues": "enabled, disabled, festivals always",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Ian's appearance. When x3n3as's Ian Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and x3n3as's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
+			"AllowBlank": false,
+			"Section": "Characters With Other Seasonal Mods",
+		},
+		"Kiarra":
+		{
+			"AllowValues": "enabled, disabled, festivals always",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Kiarra's appearance. When UndyneWolf's Kiarra Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and UndyneWolf's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
+			"AllowBlank": false,
+			"Section": "Characters With Other Seasonal Mods",
+		},
+		"Sean":
+		{
+			"AllowValues": "enabled, disabled, festivals always",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Sean's appearance. When Vinilla's Sean Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and Vinilla's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
+			"AllowBlank": false,
+			"Section": "Characters With Other Seasonal Mods",
+		},
+		"Ysabelle":
+		{
+			"AllowValues": "enabled, disabled, festivals always",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Ysabelle's appearance. When x3n3as's Ysabelle Seasonals mod is installed, \"enabled\" randomizes appearance between this mod's outfits and x3n3as's outfits, and \"festivals always\" does the same but always chooses this mod's outfits for festivals.",
+			"AllowBlank": false,
+			"Section": "Characters With Other Seasonal Mods",
+		},
+
+		// All Other Characters
+		"Aguar":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Aguar's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Anton":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Anton's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Ariah":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Ariah's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Bert":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Bert's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Blair":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Blair's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Bryle":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Bryle's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Carmen":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Carmen's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Daia":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Daia's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Ezekiel":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Ezekiel's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Faye":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Faye's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Flor":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Flor's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Freddie":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Freddie's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Irene":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Irene's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Jeric":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Jeric's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Jio":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Jio's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"June":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change June's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Keahi":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Keahi's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Kenneth":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Kenneth's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Kimpoi":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Kimpoi's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Kiwi":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Kiwi's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Lenny":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Lenny's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Lola":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Lola's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Lorenzo":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Lorenzo's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Louie":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Louie's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Maddie":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Maddie's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Maive":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Maive's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Malaya":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Malaya's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Naomi":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Naomi's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Olga":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Olga's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Paula":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Paula's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Philip":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Philip's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Pika":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Pika's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Richard":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Richard's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Shanice":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Shanice's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Shiro":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Shiro's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Sonny":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Sonny's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Torts":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Torts's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Trinnie":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Trinnie's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Undreya":
+		{
+			"AllowValues": "enabled, disabled",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Undreya's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Yuuma":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Yuuma's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+		"Zayne":
+		{
+			"AllowValues": "enabled, disabled, festivals only",
+			"Default": "enabled",
+			"Description": "Allow this mod to change Zayne's appearance.",
+			"AllowBlank": false,
+			"Section": "All Other Characters",
+		},
+	},
+
+
+	"DynamicTokens":
+	[
+	// World
+		{
+			"Name": "SeasonalRainToken",
+			"Value": "{{season}}"
+  		},
+  		{
+			"Name": "SeasonalRainToken",
+			"Value": "rain",
+			"When": {
+			  	"Weather |contains=Rain, Storm": true,
+			  	"Season": "Spring, Summer, Fall"
+			}
+  		},
+		{
+			"Name": "IsOddYear",
+			"Value": "{{Query: {{Year}} % 2 = 1}}"
+		},
+
+	// RSV-specific
+		{
+			"Name": "JioMasked",
+			"Value": "false"
+		},
+		{
+			"Name": "JioMasked",
+			"Value": "true",
+			"When":
+			{
+				"HasSeenEvent|contains=75160263": false
+			}
+		},
+		{
+			"Name": "JioMasked",
+			"Value": "true",
+			"When":
+			{
+				"LocationName |contains=Custom_Ridgeside_Ridge, Custom_Ridgeside_RidgeForest, Custom_Ridgeside_RSVSpiritRealm, Custom_Ridgeside_RSVNinjaHouse, Custom_Ridgeside_RidgeFalls Temp": true
+			}
+		},
+		{
+			"Name": "JioMasked",
+			"Value": "true",
+			"When":
+			{
+				"Hearts:Jio": "{{Range: 0,7}}"
+			}
+		},
+		{
+			"Name": "JioMasked",
+			"Value": "true",
+			"When":
+			{
+				"Hearts:Jio": "{{Range: 8,10}}",
+				"Query: {{Random:{{Range:1,10}}|key=JioMask}}|contains= 4,5,6": false,
+			}
+		},
+		{
+			"Name": "JioMasked",
+			"Value": "false",
+			"When":
+			{
+				"Relationship:Jio": "Married",
+				"LocationName |contains= Farm, FarmHouse, Summit": true
+			}
+		},
+
+	// Other mod compat
+
+		//Alissa
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": true
+		},
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
+		  	"When":
+			{
+				"HasMod |contains=ZoeDoll.RSVSeasonalAlissa": true,
+				"Alissa": "enabled"
+			}
+		},
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": false,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": false,
+				"Alissa": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalAlissaToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Alissa": "festivals always"
+			}
+		},
+
+		//Corine
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": true
+		},
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalCorine": true,
+				"Corine": "enabled"
+			}
+		},
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": false,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": false,
+				"Corine": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalCorineToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Corine": "festivals always"
+			}
+		},
+
+		//Ian
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": true
+		},
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalIan": true,
+		  	"Ian": "enabled"
+			}
+		},
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": false,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": false,
+				"Ian": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalIanToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Ian": "festivals always"
+			}
+		},
+
+		//Kiarra
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": true
+		},
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
+		  	"When":
+			{
+				"HasMod |contains=UndyneWolf.SeasonalKiarra": true,
+				"Kiarra": "enabled"
+			}
+		},
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": false,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": false,
+				"Kiarra": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalKiarraToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Kiarra": "festivals always"
+			}
+		},
+
+		//Ysabelle
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": true,
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": "{{Query:{{Random: true, false}}}}",
+		  	"When":
+			{
+				"HasMod |contains=x3n3as.RSVSeasonalYsabelle": true,
+				"Ysabelle": "enabled"
+			}
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": false,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": false,
+				"Ysabelle": "disabled, festivals always"
+			}
+		},
+		{
+		  	"Name": "SeasonalYsabelleToken",
+		  	"Value": true,
+		  	"When":
+			{
+				"HasValue:{{DayEvent}}": true,
+				"Ysabelle": "festivals always"
+			}
+		},
+	],
+
+	"Changes": [
+
+/*-----------------------------------
+Outfit Changes
+-----------------------------------*/
+
+	{
+		"LogName": "RSV Aguar Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Aguar.json",
+		"When": { "Aguar|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Alissa Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Alissa.json",
+		"When": { "Alissa|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Anton Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Anton.json",
+		"When": { "Anton|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ariah Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ariah.json",
+		"When": { "Ariah|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Bert Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Bert.json",
+		"When": { "Bert|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Blair Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Blair.json",
+		"When": { "Blair|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Bryle Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Bryle.json",
+		"When": { "Bryle|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Carmen Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Carmen.json",
+		"When": { "Carmen|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Corine Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Corine.json",
+		"When": { "Corine|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Daia Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Daia.json",
+		"When": { "Daia|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ezekiel Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ezekiel.json",
+		"When": { "Ezekiel|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Faye Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Faye.json",
+		"When": { "Faye|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Flor Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Flor.json",
+		"When": { "Flor|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Freddie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Freddie.json",
+		"When": { "Freddie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ian Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ian.json",
+		"When": { "Ian|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Irene Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Irene.json",
+		"When": { "Irene|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Jeric Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Jeric.json",
+		"When": { "Jeric|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Jio Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Jio.json",
+		"When": { "Jio|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV June Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/June.json",
+		"When": { "June|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Keahi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Keahi.json",
+		"When": { "Keahi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kenneth Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kenneth.json",
+		"When": { "Kenneth|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kiarra Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kiarra.json",
+		"When": { "Kiarra|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kimpoi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kimpoi.json",
+		"When": { "Kimpoi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Kiwi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Kiwi.json",
+		"When": { "Kiwi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Lenny Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Lenny.json",
+		"When": { "Lenny|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Lola Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Lola.json",
+		"When": { "Lola|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Lorenzo Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Lorenzo.json",
+		"When": { "Lorenzo|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Louie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Louie.json",
+		"When": { "Louie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Maddie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Maddie.json",
+		"When": { "Maddie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Maive Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Maive.json",
+		"When": { "Maive|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Malaya Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Malaya.json",
+		"When": { "Malaya|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Naomi Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Naomi.json",
+		"When": { "Naomi|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Olga Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Olga.json",
+		"When": { "Olga|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Paula Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Paula.json",
+		"When": { "Paula|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Philip Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Philip.json",
+		"When": { "Philip|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Pika Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Pika.json",
+		"When": { "Pika|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Richard Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Richard.json",
+		"When": { "Richard|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Sean Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Sean.json",
+		"When": { "Sean|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Shanice Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Shanice.json",
+		"When": { "Shanice|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Shiro Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Shiro.json",
+		"When": { "Shiro|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Sonny Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Sonny.json",
+		"When": { "Sonny|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Torts Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Torts.json",
+		"When": { "Torts|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Trinnie Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Trinnie.json",
+		"When": { "Trinnie|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Undreya Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Undreya.json",
+		"When": { "Undreya|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Ysabelle Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Ysabelle.json",
+		"When": { "Ysabelle|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Yuuma Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Yuuma.json",
+		"When": { "Yuuma|contains=disabled": false }
+	},
+	{
+		"LogName": "RSV Zayne Outfits",
+		"Action": "Include",
+		"FromFile": "Data/OutfitChanges/Zayne.json",
+		"When": { "Zayne|contains=disabled": false }
+	},
+
+/*-----------------------------------
+Dialogue Changes
+-----------------------------------*/
+
+	// Spirit's Eve dialogue changes
+	{
+		"LogName": "Include Ridgeside Dialogue Files",
+   	"Action": "Include",
+		"FromFile": "Data/DialogueChanges/Alissa.json, Data/DialogueChanges/Aguar.json, Data/DialogueChanges/Bert.json, Data/DialogueChanges/Corine.json, Data/DialogueChanges/Ezekiel.json, Data/DialogueChanges/Flor.json, Data/DialogueChanges/Freddie.json, Data/DialogueChanges/Ian.json, Data/DialogueChanges/Jeric.json, Data/DialogueChanges/Jio.json, Data/DialogueChanges/Keahi.json, Data/DialogueChanges/Kenneth.json, Data/DialogueChanges/Kiwi.json, Data/DialogueChanges/Lenny.json, Data/DialogueChanges/Lola.json, Data/DialogueChanges/Maddie.json, Data/DialogueChanges/Olga.json, Data/DialogueChanges/Philip.json, Data/DialogueChanges/Pika.json, Data/DialogueChanges/Richard.json, Data/DialogueChanges/Shiro.json, Data/DialogueChanges/Trinnie.json, Data/DialogueChanges/Ysabelle.json, Data/DialogueChanges/Yuuma.json, Data/DialogueChanges/Daia.json, Data/DialogueChanges/Naomi.json, Data/DialogueChanges/Malaya.json, Data/DialogueChanges/Kimpoi.json, Data/DialogueChanges/Anton.json, Data/DialogueChanges/Ariah.json, Data/DialogueChanges/Blair.json, Data/DialogueChanges/Bryle.json, Data/DialogueChanges/Carmen.json, Data/DialogueChanges/Faye.json, Data/DialogueChanges/Irene.json, Data/DialogueChanges/Kiarra.json, Data/DialogueChanges/Lorenzo.json, Data/DialogueChanges/Louie.json, Data/DialogueChanges/Maive.json, Data/DialogueChanges/Paula.json, Data/DialogueChanges/Sean.json, Data/DialogueChanges/Shanice.json, Data/DialogueChanges/Sonny.json, Data/DialogueChanges/Zayne.json, Data/DialogueChanges/Torts.json, Data/DialogueChanges/June.json",
+		"When": {
+			"Festival Dialogue Edits": true,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
+		},
+  },
+
+/*-----------------------------------
+Other Patches
+-----------------------------------*/
+
+	// Spirit's Eve location changes
+	{
+		"LogName": "RSV Seasonal Spirit's Eve Positions Y1",
+		"Action": "Include",
+		"FromFile": "Data/FestivalChanges/SpiritEveY1.json",
+		"Update": "OnLocationChange",
+		"When": {
+			"IsOddYear": true,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
+		}
+	},
+	{
+		"LogName": "RSV Seasonal Spirit's Eve Positions Y2",
+		"Action": "Include",
+		"FromFile": "Data/FestivalChanges/SpiritEveY2.json",
+		"When": {
+			"IsOddYear": false,
+			"Rafseazz.RidgesideVillage/RSVNPCSAttendFestivals": true,
+			"Rafseazz.RidgesideVillage/ExpandedFestivalMaps": true,
+		}
+	},
+	
+	{
+		"LogName": "RSV Load Seasonals - Blank Sprites for Festivals",
+		"Action": "Load",
+		"Target": "Characters/RSVSeasonalBlank",
+		"FromFile": "Assets/Characters/Blank.png"
+    },
+]
+}

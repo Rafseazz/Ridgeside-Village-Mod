@@ -1,0 +1,60 @@
+{
+"Changes": [
+	{
+	 "LogName": "Kenneth Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": true,
+		"Kenneth": "enabled, festivals only",
+   },
+   "Entries": {
+		"Kenneth": "{{i18n:SpiritEve.Kenneth.1}}",
+ 	  "Kenneth_spouse": "{{i18n:SpiritEve.Kenneth_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Kenneth Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		"IsOddYear": false,
+		"Kenneth": "enabled, festivals only",
+   },
+   "Entries": {
+		"Kenneth": "{{i18n:SpiritEve.Kenneth.2}}",
+ 	  "Kenneth_spouse": "{{i18n:SpiritEve.Kenneth_spouse.2}}",
+		},
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Kenneth Spirit's Eve Dialogue Change (Free Love back-up) Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Kenneth": "Married",
+		"IsOddYear": true,
+		"Kenneth": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Kenneth": "{{i18n:SpiritEve.Kenneth_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Kenneth Spirit's Eve Dialogue Change (Free Love back-up) Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Kenneth": "Married",
+		"IsOddYear": false,
+		"Kenneth": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Kenneth": "{{i18n:SpiritEve.Kenneth_spouse.2}}",
+		},
+	},
+]
+}

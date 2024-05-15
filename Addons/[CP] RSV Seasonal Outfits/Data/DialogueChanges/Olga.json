@@ -1,0 +1,30 @@
+{
+"Changes": [
+	{
+	 "LogName": "Olga Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Olga": "enabled, festivals only",
+		 "Bert": "enabled, festivals only",
+	 },
+   "Entries": {
+		 "Olga": "{{i18n:SpiritEve.Olga.1}}",
+		},
+	},
+	{
+	 "LogName": "Olga Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Olga": "enabled, festivals only",
+		 "Bert": "enabled, festivals only",
+		 "Trinnie": "enabled, festivals only",
+	 },
+   "Entries": {
+	   "Olga_y2": "{{i18n:SpiritEve.Olga.2}}",
+		},
+	},
+]
+}

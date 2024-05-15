@@ -1,0 +1,78 @@
+{
+	"Changes": [
+		{
+            "LogName": "RSV Load Seasonals - Maddie Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Maddie_spring, Portraits/Maddie_summer, Portraits/Maddie_fall, Portraits/Maddie_winter, Portraits/Maddie_spring24, Portraits/Maddie_fall27-1, Portraits/Maddie_fall27-2, Characters/Maddie_spring, Characters/Maddie_summer, Characters/Maddie_fall, Characters/Maddie_winter, Characters/Maddie_spring24, Characters/Maddie_fall27-1, Characters/Maddie_fall27-2, Portraits/Maddie_rain, Characters/Maddie_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Maddie/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Maddie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Maddie", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.MaddieSpring": {
+                    "Id": "{{ModId}}.MaddieSpring",
+                    "Portrait": "Portraits/Maddie_spring",
+                    "Sprite": "Characters/Maddie_spring",
+                    "Condition": "{{Maddie|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MaddieSummer": {
+                    "Id": "{{ModId}}.MaddieSummer",
+                    "Portrait": "Portraits/Maddie_summer",
+                    "Sprite": "Characters/Maddie_summer",
+                    "Condition": "{{Maddie|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MaddieFall": {
+                    "Id": "{{ModId}}.MaddieFall",
+                    "Portrait": "Portraits/Maddie_fall",
+                    "Sprite": "Characters/Maddie_fall",
+                    "Condition": "{{Maddie|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MaddieWinter": {
+                    "Id": "{{ModId}}.MaddieWinter",
+                    "Portrait": "Portraits/Maddie_winter",
+                    "Sprite": "Characters/Maddie_winter",
+                    "Condition": "{{Maddie|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.MaddieRain": {
+                    "Id": "{{ModId}}.MaddieRain",
+                    "Portrait": "Portraits/Maddie_rain",
+                    "Sprite": "Characters/Maddie_rain",
+                    "Condition": "{{Maddie|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Maddie.FlowerDance": {
+                    "Id": "{{ModId}}.Maddie.FlowerDance",
+                    "Portrait": "Portraits/Maddie_spring24",
+                    "Sprite": "Characters/Maddie_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Maddie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Maddie.SpiritsEve1": {
+                    "Id": "{{ModId}}.Maddie.SpiritsEve1",
+                    "Portrait": "Portraits/Maddie_fall27-1",
+                    "Sprite": "Characters/Maddie_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Maddie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Maddie.SpiritsEve2": {
+                    "Id": "{{ModId}}.Maddie.SpiritsEve2",
+                    "Portrait": "Portraits/Maddie_fall27-2",
+                    "Sprite": "Characters/Maddie_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Maddie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+	]
+}

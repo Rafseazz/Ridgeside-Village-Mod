@@ -1,0 +1,92 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Jio Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Jio_spring, Portraits/Jio_summer, Portraits/Jio_fall, Portraits/Jio_winter, Portraits/Jio_spring24, Portraits/Jio_fall27-1, Portraits/Jio_fall27-2, Characters/Jio_spring, Characters/Jio_summer, Characters/Jio_fall, Characters/Jio_winter, Characters/Jio_spring24, Characters/Jio_fall27-1, Characters/Jio_fall27-2, Portraits/Jio_rain, Characters/Jio_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Jio/{{TargetWithoutPath}}.png"
+        },
+
+        {
+			"LogName": "RSV Seasonal Accessories - Jio Work Mask",
+			"Action": "EditImage",
+			"Target": "Portraits/Jio_spring, Portraits/Jio_summer, Portraits/Jio_fall, Portraits/Jio_winter, Portraits/Jio_rain, Characters/Jio_spring, Characters/Jio_summer, Characters/Jio_fall, Characters/Jio_winter, Characters/Jio_rain",
+			"FromFile": "Assets/{{TargetPathOnly}}/Jio/Jio_mask.png",
+			"When":
+			{
+				"Jio": "enabled",
+				"JioMasked": true
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Jio",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Jio", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.JioSpring": {
+                    "Id": "{{ModId}}.JioSpring",
+                    "Portrait": "Portraits/Jio_spring",
+                    "Sprite": "Characters/Jio_spring",
+                    "Condition": "{{Jio|contains= enabled}}, SEASON spring",
+                    "Precedence": -101
+                },
+                "{{ModId}}.JioSummer": {
+                    "Id": "{{ModId}}.JioSummer",
+                    "Portrait": "Portraits/Jio_summer",
+                    "Sprite": "Characters/Jio_summer",
+                    "Condition": "{{Jio|contains= enabled}}, SEASON summer",
+                    "Precedence": -101
+                },
+                "{{ModId}}.JioFall": {
+                    "Id": "{{ModId}}.JioFall",
+                    "Portrait": "Portraits/Jio_fall",
+                    "Sprite": "Characters/Jio_fall",
+                    "Condition": "{{Jio|contains= enabled}}, SEASON fall",
+                    "Precedence": -101
+                },
+                "{{ModId}}.JioWinter": {
+                    "Id": "{{ModId}}.JioWinter",
+                    "Portrait": "Portraits/Jio_winter",
+                    "Sprite": "Characters/Jio_winter",
+                    "Condition": "{{Jio|contains= enabled}}, SEASON winter",
+                    "Precedence": -101
+                },
+				"{{ModId}}.JioRain": {
+                    "Id": "{{ModId}}.JioRain",
+                    "Portrait": "Portraits/Jio_rain",
+                    "Sprite": "Characters/Jio_rain",
+                    "Condition": "{{Jio|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Jio.FlowerDance": {
+                    "Id": "{{ModId}}.Jio.FlowerDance",
+                    "Portrait": "Portraits/Jio_spring24",
+                    "Sprite": "Characters/Jio_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Jio|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Jio.SpiritsEve1": {
+                    "Id": "{{ModId}}.Jio.SpiritsEve1",
+                    "Portrait": "Portraits/Jio_fall27-1",
+                    "Sprite": "Characters/Jio_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Jio|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Jio.SpiritsEve2": {
+                    "Id": "{{ModId}}.Jio.SpiritsEve2",
+                    "Portrait": "Portraits/Jio_fall27-2",
+                    "Sprite": "Characters/Jio_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Jio|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

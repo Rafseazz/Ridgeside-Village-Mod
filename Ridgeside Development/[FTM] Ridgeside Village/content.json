@@ -67,6 +67,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -159,6 +160,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -230,6 +232,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -263,7 +266,7 @@
           "Aurorean Iris",
           "Sierra Wintergreen"
         ],
-        "UniqueAreaID": "RSV RidgeFalls Forage",
+        "UniqueAreaID": "RSV Ridge Falls Forage",
         "MapName": "Custom_Ridgeside_RidgeFalls",
         "MinimumSpawnsPerDay": 5,
         "MaximumSpawnsPerDay": 10,
@@ -292,6 +295,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -334,7 +338,7 @@
           418,
           283
         ],
-        "UniqueAreaID": "RSV RidgeForest Forage",
+        "UniqueAreaID": "RSV Ridge Forest Forage",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 10,
         "MaximumSpawnsPerDay": 30,
@@ -548,6 +552,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -556,36 +561,72 @@
       },
       {
         "SpringItemIndex": [
-          74,
-          373,
-          103,
-          168,
-          499
+          535,
+          536,
+          537,
+          680,
+          413,
+          273,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
+          815,
+          399,
+          591,
+          597
         ],
         "SummerItemIndex": [
-          74,
-          373,
-          103,
-          168,
-          499
+          535,
+          536,
+          537,
+          680,
+          413,
+          273,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
+          815,
+          421,
+          593,
+          376
         ],
         "FallItemIndex": [
-          74,
-          373,
-          103,
-          168,
-          499
+          535,
+          536,
+          537,
+          680,
+          413,
+          273,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
+          815,
+          281,
+          421,
+          595
         ],
         "WinterItemIndex": [
-          74,
-          373,
-          103,
-          168,
-          499
+          535,
+          536,
+          537,
+          680,
+          413,
+          273,
+          {
+            "category": "item",
+            "name": "Rain Totem"
+          },
+          815,
+          440,
+          444,
+          84
         ],
-        "UniqueAreaID": "RSV RidgeForest Treasures",
+        "UniqueAreaID": "RSV RidgeForest Mid-Tier Treasures",
         "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 0,
+        "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 3,
         "IncludeTerrainTypes": [
           "Grass"
@@ -797,11 +838,710 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "PLAYER_COMBAT_LEVEL Current 3, PLAYER_FORAGING_LEVEL Current 3, RANDOM 0.75"
+          ],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
-        "DaysUntilSpawnsExpire": 2
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "SpringItemIndex": [
+          {
+            "category": "Ring",
+            "name": "Amethyst Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Topaz Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Aquamarine Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Jade Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Emerald Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Ruby Ring"
+          },
+          437,
+          439,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          103,
+          104,
+          109,
+          "Mistbloom Syrup"
+        ],
+        "SummerItemIndex": [
+          {
+            "category": "Ring",
+            "name": "Amethyst Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Topaz Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Aquamarine Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Jade Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Emerald Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Ruby Ring"
+          },
+          437,
+          439,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          103,
+          104,
+          109,
+          "Mistbloom Syrup"
+        ],
+        "FallItemIndex": [
+          {
+            "category": "Ring",
+            "name": "Amethyst Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Topaz Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Aquamarine Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Jade Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Emerald Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Ruby Ring"
+          },
+          437,
+          439,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          103,
+          104,
+          109,
+          "Mistbloom Syrup"
+        ],
+        "WinterItemIndex": [
+          {
+            "category": "Ring",
+            "name": "Amethyst Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Topaz Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Aquamarine Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Jade Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Emerald Ring"
+          },
+          {
+            "category": "Ring",
+            "name": "Ruby Ring"
+          },
+          437,
+          439,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          103,
+          104,
+          109,
+          "Mistbloom Syrup"
+        ],
+        "UniqueAreaID": "RSV RidgeForest Good-Tier Treasures",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 1,
+        "MaximumSpawnsPerDay": 2,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99",
+          "84,126/84,126",
+          "37,96/37,96",
+          "18,76/18,76",
+          "146,99/146,99",
+          "108,58/108,58",
+          "118,44/118,44",
+          "58,11/58,11"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "PLAYER_COMBAT_LEVEL Current 5, PLAYER_FORAGING_LEVEL Current 5, RANDOM 0.75"
+          ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "SpringItemIndex": [
+          74,
+          373,
+          454,
+          417,
+          604,
+          446,
+          279,
+          {
+            "category": "Ring",
+            "name": "Lucky Ring"
+          },
+          872,
+          879,
+          {
+            "category": "Ring",
+            "name": "Immunity Band"
+          },
+          891,
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
+        ],
+        "SummerItemIndex": [
+          74,
+          373,
+          454,
+          417,
+          604,
+          446,
+          279,
+          {
+            "category": "Ring",
+            "name": "Lucky Ring"
+          },
+          872,
+          879,
+          {
+            "category": "Ring",
+            "name": "Immunity Band"
+          },
+          891,
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
+        ],
+        "FallItemIndex": [
+          74,
+          373,
+          454,
+          417,
+          604,
+          446,
+          279,
+          {
+            "category": "Ring",
+            "name": "Lucky Ring"
+          },
+          872,
+          879,
+          {
+            "category": "Ring",
+            "name": "Immunity Band"
+          },
+          891,
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
+        ],
+        "WinterItemIndex": [
+          74,
+          373,
+          454,
+          417,
+          604,
+          446,
+          279,
+          {
+            "category": "Ring",
+            "name": "Lucky Ring"
+          },
+          872,
+          879,
+          {
+            "category": "Ring",
+            "name": "Immunity Band"
+          },
+          891,
+          {
+            "category": "item",
+            "name": "Warp Totem: Ridgeside"
+          }
+        ],
+        "UniqueAreaID": "RSV RidgeForest God-Tier Treasures",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 0,
+        "MaximumSpawnsPerDay": 1,
+        "IncludeTerrainTypes": [
+          "Grass"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [
+          "105,128/164,149",
+          "45,21/57,149",
+          "58,133/75,149",
+          "85,133/100,49",
+          "101,127/164,149",
+          "0,128/44,149",
+          "0,0/29,16",
+          "30,0/43,7",
+          "44,0/169,5",
+          "56,6/84,6",
+          "68,7/83,17",
+          "108,6/164,14",
+          "117,15/150,26",
+          "122,27/142,30",
+          "0,21/19,34",
+          "0,35/16,45",
+          "0,47/14,56",
+          "15,53/24,56",
+          "0,61/9,68",
+          "0,73/3,79",
+          "3,97/6,106",
+          "0,111/6,124",
+          "162,108/164,109",
+          "164,14/169,149",
+          "162,75/163,77",
+          "162,25/163,28",
+          "28,14/31,17",
+          "34,12/40,15",
+          "43,7/46,10",
+          "48,6/54,8",
+          "60,8/63,11",
+          "61,15/64,18",
+          "67,17/71,22",
+          "40,16/43,19",
+          "45,20/51,25",
+          "54,16/57,21",
+          "58,21/61,25",
+          "25,23/31,29",
+          "17,43/20,46",
+          "34,41/37,43",
+          "33,28/36,31",
+          "36,27/41,27",
+          "57,44/60,46",
+          "57,32/60,35",
+          "26,61/29,65",
+          "31,53/34,57",
+          "39,53/44,57",
+          "48,52/54,55",
+          "62,55/65,57",
+          "48,63/48,63",
+          "8,71/14,76",
+          "16,77/19,81",
+          "22,74/28,80",
+          "39,84/43,84",
+          "44,86/47,90",
+          "32,67/38,73",
+          "39,72/42,76",
+          "44,69/50,75",
+          "53,67/56,71",
+          "55,64/61,67",
+          "64,67/67,68",
+          "57,74/60,78",
+          "58,87/64,93",
+          "63,80/66,84",
+          "56,54/58,56",
+          "10,87/16,92",
+          "18,97/19,98",
+          "22,92/27,99",
+          "28,96/30,100",
+          "33,93/36,94",
+          "38,94/41,97",
+          "44,98/50,103",
+          "0,96/9,102",
+          "13,104/14,104",
+          "22,101/26,106",
+          "31,105/34,110",
+          "39,107/42,112",
+          "6,111/9,114",
+          "14,105/20,111",
+          "37,115/42,120",
+          "11,116/16,121",
+          "18,117/21,121",
+          "25,116/31,122",
+          "37,115/41,120",
+          "53,98/56,103",
+          "66,94/69,99",
+          "95,90/98,94",
+          "105,92/106,92",
+          "50,110/56,115",
+          "58,105/61,110",
+          "66,105/69,110",
+          "70,100/76,105",
+          "79,107/82,112",
+          "97,99/100,104",
+          "104,100/107,105",
+          "61,118/64,123",
+          "67,121/73,127",
+          "83,113/88,118",
+          "95,108/98,113",
+          "104,113/107,114",
+          "75,113/78,138",
+          "82,135/85,140",
+          "86,122/92,128",
+          "93,121/96,126",
+          "100,117/103,122",
+          "85,8/88,12",
+          "105,7/108,12",
+          "110,11/113,16",
+          "113,20/119,26",
+          "115,29/118,34",
+          "132,32/135,37",
+          "144,26/147,31",
+          "150,13/153,18",
+          "155,17/161,23",
+          "155,24/158,29",
+          "162,11/169,16",
+          "87,15/92,20",
+          "81,19/84,24",
+          "96,15/99,20",
+          "76,31/82,37",
+          "90,25/93,30",
+          "87,32/90,37",
+          "104,24/107,29",
+          "103,32/109,39",
+          "79,44/85,50",
+          "89,41/92,46",
+          "102,40/105,45",
+          "112,43/118,49",
+          "112,40/128,46",
+          "124,47/127,52",
+          "132,43/135,48",
+          "142,36/145,41",
+          "148,35/154,41",
+          "155,35/161,41",
+          "162,37/169,49",
+          "154,56/157,47",
+          "74,54/77,59",
+          "85,56/88,61",
+          "91,55/97,59",
+          "99,55/102,60",
+          "119,55/122,60",
+          "134,51/139,56",
+          "155,53/160,59",
+          "161,57/163,62",
+          "154,60/157,65",
+          "76,65/82,69",
+          "83,74/89,80",
+          "91,78/94,83",
+          "94,71/97,76",
+          "102,69/105,71",
+          "97,78/102,83",
+          "105,75/108,80",
+          "110,74/116,80",
+          "78,82/81,87",
+          "113,63/116,68",
+          "119,62/125,68",
+          "121,72/124,77",
+          "104,87/107,92",
+          "114,88/117,93",
+          "143,83/146,88",
+          "152,78/155,83",
+          "154,85/157,90",
+          "161,80/169,86",
+          "123,94/126,99",
+          "111,104/114,109",
+          "116,101/121,106",
+          "123,101/126,108",
+          "115,116/121,122",
+          "126,118/132,124",
+          "139,91/142,96",
+          "137,98/140,103",
+          "146,98/152,104",
+          "143,105/146,110",
+          "141,120/146,125",
+          "148,116/154,122",
+          "158,109/161,114",
+          "154,93/160,99",
+          "159,101/162,106",
+          "164,100/165,123",
+          "162,94/164,99",
+          "84,126/84,126",
+          "37,96/37,96",
+          "18,76/18,76",
+          "146,99/146,99",
+          "108,58/108,58",
+          "118,44/118,44",
+          "58,11/58,11"
+        ],
+        "StrictTileChecking": "High",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 600,
+          "MinimumTimeBetweenSpawns": 10,
+          "MaximumSimultaneousSpawns": null,
+          "OnlySpawnIfAPlayerIsPresent": false,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "PLAYER_COMBAT_LEVEL Current 10, PLAYER_FORAGING_LEVEL Current 10, RANDOM 0.75"
+          ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
       },
       {
         "SpringItemIndex": [
@@ -1026,6 +1766,7 @@
             "Storm"
           ],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -1045,7 +1786,7 @@
         "WinterItemIndex": [
           "Yellow Wood Sculpture"
         ],
-        "UniqueAreaID": "RSV RidgeForest Yellow Wood Sculpture",
+        "UniqueAreaID": "RSV Ridge Forest Yellow Wood Sculpture",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 1,
@@ -1075,6 +1816,7 @@
             "Snow"
           ],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -1094,7 +1836,7 @@
         "WinterItemIndex": [
           "Silver Fish Bones"
         ],
-        "UniqueAreaID": "RSV RidgeForest Silver Fish Bones",
+        "UniqueAreaID": "RSV Ridge Forest Silver Fish Bones",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 2,
         "MaximumSpawnsPerDay": 2,
@@ -1134,6 +1876,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -1153,7 +1896,7 @@
         "WinterItemIndex": [
           "Inked Fossil"
         ],
-        "UniqueAreaID": "RSV RidgeForest Inked Fossil",
+        "UniqueAreaID": "RSV Ridge Forest Inked Fossil",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 2,
         "MaximumSpawnsPerDay": 2,
@@ -1193,6 +1936,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -1212,7 +1956,7 @@
         "WinterItemIndex": [
           "Nightblack Diamond"
         ],
-        "UniqueAreaID": "RSV RidgeForest Nightblack Diamond",
+        "UniqueAreaID": "RSV Ridge Forest Nightblack Diamond",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 2,
         "MaximumSpawnsPerDay": 2,
@@ -1243,6 +1987,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -1262,7 +2007,7 @@
         "WinterItemIndex": [
           "Shell Bracelet"
         ],
-        "UniqueAreaID": "RSV RidgeForest Shell Bracelet",
+        "UniqueAreaID": "RSV Ridge Forest Shell Bracelet",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 1,
@@ -1292,6 +2037,7 @@
             "Snow"
           ],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -1363,7 +2109,7 @@
           "Frost Clump Berry",
           "Ridgeside Clementine"
         ],
-        "UniqueAreaID": "Aguar Fruit Cave",
+        "UniqueAreaID": "RSV Aguar Fruit Cave",
         "MapName": "Custom_Ridgeside_AguarCave",
         "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 1,
@@ -1392,10 +2138,14 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "q 751600642/r 0.67"
+          "GameStateQueries": [
+            "RANDOM 0.67"
           ],
+          "CPConditions": {
+            "HasDialogueAnswer": "751600642",
+            "HasDialogueAnswer|contains=751600641": "false"
+          },
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 14
@@ -1465,7 +2215,7 @@
           "Mountain Arugula",
           "Highland Chard"
         ],
-        "UniqueAreaID": "Aguar Flower Cave",
+        "UniqueAreaID": "RSV Aguar Flower Cave",
         "MapName": "Custom_Ridgeside_AguarCave",
         "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 1,
@@ -1494,10 +2244,12 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "q 751600641/r 0.67"
-          ],
+          "GameStateQueries": [],
+          "CPConditions": {
+            "HasDialogueAnswer": "751600641",
+            "HasDialogueAnswer|contains=751600642": "false"
+          },
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 14
@@ -1537,8 +2289,8 @@
         ],
         "UniqueAreaID": "RSV Summit Farm Initial Debris",
         "MapName": "Custom_Ridgeside_SummitFarm",
-        "MinimumSpawnsPerDay": 500,
-        "MaximumSpawnsPerDay": 500,
+        "MinimumSpawnsPerDay": 15,
+        "MaximumSpawnsPerDay": 20,
         "IncludeTerrainTypes": [
           "Dirt",
           "Grass"
@@ -1553,7 +2305,11 @@
           "90,46/92,79",
           "89,64/92,79",
           "88,67/92,79",
-          "70,42/71,45"
+          "70,42/71,45",
+          "18,47/18,47",
+          "22,40/23,41",
+          "77,48/77,48",
+          "46,73/49,79"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -1571,10 +2327,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hl OddJobsNotice"
+          "GameStateQueries": [
+            "!PLAYER_HAS_MAIL Host OddJobsNotice"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 0
@@ -1614,8 +2371,8 @@
         ],
         "UniqueAreaID": "RSV Summit Farm Monthly Debris",
         "MapName": "Custom_Ridgeside_SummitFarm",
-        "MinimumSpawnsPerDay": 100,
-        "MaximumSpawnsPerDay": 200,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 15,
         "IncludeTerrainTypes": [
           "Dirt",
           "Grass"
@@ -1630,7 +2387,11 @@
           "90,46/92,79",
           "89,64/92,79",
           "88,67/92,79",
-          "70,42/71,45"
+          "70,42/71,45",
+          "18,47/18,47",
+          "22,40/23,41",
+          "77,48/77,48",
+          "46,73/49,79"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -1648,10 +2409,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hn OddJobsNotice/Hl RSV.HasGoldClock/u 1"
+          "GameStateQueries": [
+            "PLAYER_HAS_MAIL Host OddJobsNotice, !PLAYER_HAS_MAIL Host RSV.HasGoldClock"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 0
@@ -1715,7 +2477,12 @@
           "131,110/131,110",
           "46,70/49,79",
           "16,47/22,49",
-          "75,48/49,50"
+          "75,48/49,50",
+          "70,42/71,45",
+          "18,47/18,47",
+          "22,40/23,41",
+          "77,48/77,48",
+          "46,73/49,79"
         ],
         "StrictTileChecking": "High",
         "SpawnTiming": {
@@ -1733,10 +2500,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hn OddJobsNotice"
+          "GameStateQueries": [
+            "PLAYER_HAS_MAIL Host OddJobsNotice"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -1773,7 +2541,7 @@
         "FindExistingObjectLocations": false,
         "PercentExtraSpawnsPerSkillLevel": 0,
         "RelatedSkill": "Foraging",
-        "UniqueAreaID": "Ridge Log",
+        "UniqueAreaID": "RSV Ridge Log",
         "MapName": "Custom_Ridgeside_Ridge",
         "MinimumSpawnsPerDay": 1,
         "MaximumSpawnsPerDay": 1,
@@ -1799,10 +2567,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!e 75160377"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160377"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 0
@@ -1815,10 +2584,10 @@
         "FindExistingObjectLocations": false,
         "PercentExtraSpawnsPerSkillLevel": 0,
         "RelatedSkill": "Foraging",
-        "UniqueAreaID": "Summit Farm large objects",
+        "UniqueAreaID": "RSV Summit Farm large objects",
         "MapName": "Custom_Ridgeside_SummitFarm",
-        "MinimumSpawnsPerDay": 25,
-        "MaximumSpawnsPerDay": 30,
+        "MinimumSpawnsPerDay": 10,
+        "MaximumSpawnsPerDay": 12,
         "IncludeTerrainTypes": [
           "Dirt"
         ],
@@ -1842,7 +2611,12 @@
           "131,110/131,110",
           "46,70/49,79",
           "16,47/22,49",
-          "75,48/49,50"
+          "75,48/49,50",
+          "70,42/71,45",
+          "18,47/18,47",
+          "22,40/23,41",
+          "77,48/77,48",
+          "46,73/49,79"
         ],
         "StrictTileChecking": "Maximum",
         "SpawnTiming": {
@@ -1860,10 +2634,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hl OddJobsNotice"
+          "GameStateQueries": [
+            "!PLAYER_HAS_MAIL Host OddJobsNotice"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": 1
         },
         "DaysUntilSpawnsExpire": 0
@@ -1877,7 +2652,7 @@
         "MiningLevelRequired": null,
         "StartingSpawnChance": null,
         "LevelTenSpawnChance": null,
-        "UniqueAreaID": "RSV RidgeForest Ores",
+        "UniqueAreaID": "RSV Ridge Forest Ore",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 20,
         "MaximumSpawnsPerDay": 50,
@@ -1922,6 +2697,7 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
@@ -1986,7 +2762,7 @@
           "Emerald": 10,
           "Aquamarine": 10
         },
-        "UniqueAreaID": "RSV SummitFarm Ore Area",
+        "UniqueAreaID": "RSV Summit Farm Ore Area",
         "MapName": "Custom_Ridgeside_SummitFarm",
         "MinimumSpawnsPerDay": 0,
         "MaximumSpawnsPerDay": 3,
@@ -2017,10 +2793,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "Hn RSV.SummitOreArea/r 0.67"
+          "GameStateQueries": [
+            "PLAYER_HAS_MAIL Host RSV.SummitOreArea, RANDOM 0.67"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 14
@@ -2093,54 +2870,6 @@
           {
             "MonsterName": "ghost",
             "Settings": {
-              "SpawnWeight": 3,
-              "RelatedSkill": "Combat",
-              "SeesPlayersAtSpawn": false,
-              "Loot": [
-                "Spiritual Essence"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "RSV RidgeForest Ghost",
-        "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 20,
-        "MaximumSpawnsPerDay": 30,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "Maximum",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 2550,
-          "MinimumTimeBetweenSpawns": 20,
-          "MaximumSimultaneousSpawns": 6,
-          "OnlySpawnIfAPlayerIsPresent": true,
-          "SpawnSound": ""
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Pale Candelabrum"
-          ],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "ghost",
-            "Settings": {
               "SpawnWeight": 4,
               "HP": 60,
               "Damage": 40,
@@ -2154,7 +2883,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV RidgeForest Corrupted Spirit",
+        "UniqueAreaID": "RSV Ridge Forest Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 40,
         "MaximumSpawnsPerDay": 50,
@@ -2180,10 +2909,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Pale Candelabrum"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Pale_Candelabrum"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -2232,10 +2962,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Everfrost Stone"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Everfrost_Stone"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -2261,7 +2992,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV RidgeForest Viperial",
+        "UniqueAreaID": "RSV Ridge Forest Viperial",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 5,
         "MaximumSpawnsPerDay": 10,
@@ -2468,10 +3199,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Ancient Music Box"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Ancient_Music_Box"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -2704,12 +3436,13 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Ancient_Music_Box"
+          ],
           "CPConditions": {
             "SkillLevel:Combat": "8, 9, 10"
           },
-          "EPUPreconditions": [
-            "!HasItem Ancient Music Box"
-          ],
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -2765,7 +3498,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV RidgeForest Beasts",
+        "UniqueAreaID": "RSV Ridge Forest Serpentine Beasts",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 50,
         "MaximumSpawnsPerDay": 50,
@@ -2972,13 +3705,125 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Village Hero Sculpture"
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Village_Hero_Sculpture"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "royal serpent",
+            "Settings": {
+              "SpawnWeight": 1,
+              "HP": 1500,
+              "Damage": 20,
+              "SeesPlayersAtSpawn": true,
+              "DodgeChance": 0,
+              "RelatedSkill": "Combat",
+              "Sprite": "Characters/Monsters/RSVSerperial",
+              "EXP": 20,
+              "Segments": 11,
+              "Loot": [
+                "Spiritual Essence",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom",
+                "Mountain Mistbloom"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "RSV Ridge Forest Serperial",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 5,
+        "MaximumSpawnsPerDay": 6,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 180,
+          "MaximumSimultaneousSpawns": 1,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": "serpentDie"
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Ancient_Music_Box"
+          ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
+      },
+      {
+        "MonsterTypes": [
+          {
+            "MonsterName": "ghost",
+            "Settings": {
+              "SpawnWeight": 3,
+              "RelatedSkill": "Combat",
+              "SeesPlayersAtSpawn": false,
+              "Loot": [
+                "Spiritual Essence"
+              ]
+            }
+          }
+        ],
+        "UniqueAreaID": "RSV Ridge Forest Vanilla Ghosts",
+        "MapName": "Custom_Ridgeside_RidgeForest",
+        "MinimumSpawnsPerDay": 20,
+        "MaximumSpawnsPerDay": 30,
+        "IncludeTerrainTypes": [
+          "All"
+        ],
+        "ExcludeTerrainTypes": [],
+        "IncludeCoordinates": [],
+        "ExcludeCoordinates": [],
+        "StrictTileChecking": "Maximum",
+        "SpawnTiming": {
+          "StartTime": 600,
+          "EndTime": 2550,
+          "MinimumTimeBetweenSpawns": 20,
+          "MaximumSimultaneousSpawns": 6,
+          "OnlySpawnIfAPlayerIsPresent": true,
+          "SpawnSound": ""
+        },
+        "ExtraConditions": {
+          "Years": [],
+          "Seasons": [],
+          "Days": [],
+          "WeatherYesterday": [],
+          "WeatherToday": [],
+          "WeatherTomorrow": [],
+          "GameStateQueries": [
+            "!PLAYER_HAS_ITEM Any Rafseazz.RSVCP_Pale_Candelabrum"
+          ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
+          "LimitedNumberOfSpawns": null
+        },
+        "DaysUntilSpawnsExpire": 1
       },
       {
         "MonsterTypes": [
@@ -3002,7 +3847,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV RidgeForest Wild Monsters",
+        "UniqueAreaID": "RSV Ridge Forest Vanilla Grounded Monsters",
         "MapName": "Custom_Ridgeside_RidgeForest",
         "MinimumSpawnsPerDay": 95,
         "MaximumSpawnsPerDay": 95,
@@ -3209,72 +4054,12 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
+          "GameStateQueries": [],
           "CPConditions": {},
           "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
-      },
-      {
-        "MonsterTypes": [
-          {
-            "MonsterName": "royal serpent",
-            "Settings": {
-              "SpawnWeight": 1,
-              "HP": 1500,
-              "Damage": 20,
-              "SeesPlayersAtSpawn": true,
-              "DodgeChance": 0,
-              "RelatedSkill": "Combat",
-              "Sprite": "Characters/Monsters/RSVSerperial",
-              "EXP": 20,
-              "Segments": 11,
-              "Loot": [
-                "Spiritual Essence",
-                "Mountain Mistbloom",
-                "Mountain Mistbloom",
-                "Mountain Mistbloom",
-                "Mountain Mistbloom",
-                "Mountain Mistbloom",
-                "Mountain Mistbloom",
-                "Mountain Mistbloom"
-              ]
-            }
-          }
-        ],
-        "UniqueAreaID": "RSV RidgeForest Serperial",
-        "MapName": "Custom_Ridgeside_RidgeForest",
-        "MinimumSpawnsPerDay": 5,
-        "MaximumSpawnsPerDay": 6,
-        "IncludeTerrainTypes": [
-          "All"
-        ],
-        "ExcludeTerrainTypes": [],
-        "IncludeCoordinates": [],
-        "ExcludeCoordinates": [],
-        "StrictTileChecking": "Maximum",
-        "SpawnTiming": {
-          "StartTime": 600,
-          "EndTime": 2550,
-          "MinimumTimeBetweenSpawns": 180,
-          "MaximumSimultaneousSpawns": 1,
-          "OnlySpawnIfAPlayerIsPresent": true,
-          "SpawnSound": "serpentDie"
-        },
-        "ExtraConditions": {
-          "Years": [],
-          "Seasons": [],
-          "Days": [],
-          "WeatherYesterday": [],
-          "WeatherToday": [],
-          "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "!HasItem Ancient Music Box"
-          ],
-          "LimitedNumberOfSpawns": null
-        },
-        "DaysUntilSpawnsExpire": 1
       },
       {
         "MonsterTypes": [
@@ -3294,7 +4079,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV SpiritRealm Corrupted Spirit",
+        "UniqueAreaID": "RSV Spirit Realm Corrupted Spirit",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
         "MinimumSpawnsPerDay": 15,
         "MaximumSpawnsPerDay": 20,
@@ -3320,10 +4105,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3346,7 +4132,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV SpiritRealm Wraith",
+        "UniqueAreaID": "RSV Spirit Realm Wraith",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
         "MinimumSpawnsPerDay": 10,
         "MaximumSpawnsPerDay": 15,
@@ -3372,10 +4158,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3399,7 +4186,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV SpiritRealm Viperial",
+        "UniqueAreaID": "RSV Spirit Realm Viperial",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
         "MinimumSpawnsPerDay": 5,
         "MaximumSpawnsPerDay": 5,
@@ -3429,10 +4216,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1
@@ -3488,7 +4276,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV SpiritRealm Beasts",
+        "UniqueAreaID": "RSV Spirit Realm Serpentine Beasts",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
         "MinimumSpawnsPerDay": 30,
         "MaximumSpawnsPerDay": 40,
@@ -3514,10 +4302,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": null
@@ -3549,7 +4338,7 @@
             }
           }
         ],
-        "UniqueAreaID": "RSV SpiritRealm Serperial",
+        "UniqueAreaID": "RSV Spirit Realm Serperial",
         "MapName": "Custom_Ridgeside_RSVSpiritRealm",
         "MinimumSpawnsPerDay": 3,
         "MaximumSpawnsPerDay": 5,
@@ -3575,10 +4364,11 @@
           "WeatherYesterday": [],
           "WeatherToday": [],
           "WeatherTomorrow": [],
-          "CPConditions": {},
-          "EPUPreconditions": [
-            "k 75160263"
+          "GameStateQueries": [
+            "!PLAYER_HAS_SEEN_EVENT Current 75160263"
           ],
+          "CPConditions": {},
+          "EPUPreconditions": [],
           "LimitedNumberOfSpawns": null
         },
         "DaysUntilSpawnsExpire": 1

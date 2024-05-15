@@ -1,0 +1,64 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Kiwi Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Kiwi_spring, Portraits/Kiwi_summer, Portraits/Kiwi_fall, Portraits/Kiwi_winter, Portraits/Kiwi_fall27-1, Portraits/Kiwi_fall27-2, Characters/Kiwi_spring, Characters/Kiwi_summer, Characters/Kiwi_fall, Characters/Kiwi_winter, Characters/Kiwi_fall27-1, Characters/Kiwi_fall27-2",
+            "FromFile": "Assets/{{TargetPathOnly}}/Kiwi/{{TargetWithoutPath}}.png"
+        },
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Kiwi",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Kiwi", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.KiwiSpring": {
+                    "Id": "{{ModId}}.KiwiSpring",
+                    "Portrait": "Portraits/Kiwi_spring",
+                    "Sprite": "Characters/Kiwi_spring",
+                    "Condition": "{{Kiwi|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KiwiSummer": {
+                    "Id": "{{ModId}}.KiwiSummer",
+                    "Portrait": "Portraits/Kiwi_summer",
+                    "Sprite": "Characters/Kiwi_summer",
+                    "Condition": "{{Kiwi|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KiwiFall": {
+                    "Id": "{{ModId}}.KiwiFall",
+                    "Portrait": "Portraits/Kiwi_fall",
+                    "Sprite": "Characters/Kiwi_fall",
+                    "Condition": "{{Kiwi|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.KiwiWinter": {
+                    "Id": "{{ModId}}.KiwiWinter",
+                    "Portrait": "Portraits/Kiwi_winter",
+                    "Sprite": "Characters/Kiwi_winter",
+                    "Condition": "{{Kiwi|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+                
+                //Festivals
+                "{{ModId}}.Kiwi.SpiritsEve1": {
+                    "Id": "{{ModId}}.Kiwi.SpiritsEve1",
+                    "Portrait": "Portraits/Kiwi_fall27-1",
+                    "Sprite": "Characters/Kiwi_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Kiwi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Kiwi.SpiritsEve2": {
+                    "Id": "{{ModId}}.Kiwi.SpiritsEve2",
+                    "Portrait": "Portraits/Kiwi_fall27-2",
+                    "Sprite": "Characters/Kiwi_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Kiwi|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

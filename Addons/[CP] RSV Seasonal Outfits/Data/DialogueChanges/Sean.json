@@ -1,0 +1,47 @@
+{
+"Changes": [
+	{
+	 "LogName": "Sean Spirit's Eve Dialogue Change Y1",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "IsOddYear": true,
+		 "Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
+	 },
+   "Entries": {
+		"Sean": "{{i18n:SpiritEve.Sean.1}}",
+ 	  "Sean_spouse": "{{i18n:SpiritEve.Sean_spouse.1}}",
+		},
+	},
+	{
+	 "LogName": "Sean Spirit's Eve Dialogue Change Y2",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
+		 "Blair": "enabled, festivals only",
+	 },
+   "Entries": {
+ 	  "Sean_y2": "{{i18n:SpiritEve.Sean.2}}",
+ 	  "Sean_spouse_y2": "{{i18n:SpiritEve.Sean_spouse.2}}",
+		},
+	},
+
+
+//Free Love back-up
+	{
+	 "LogName": "Sean Spirit's Eve Dialogue Changes (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Sean": "Married",
+		"Query: ('{{Sean}}' = 'enabled' AND '{{SeasonalSeanToken}}' = 'true') OR ('{{Sean}}' = 'festivals always')": true,
+   },
+   "Entries": {
+	   "Sean": "{{i18n:SpiritEve.Sean_spouse.1}}",
+		 "Sean_y2": "{{i18n:SpiritEve.Sean_spouse.2}}",
+		},
+	},
+]
+}

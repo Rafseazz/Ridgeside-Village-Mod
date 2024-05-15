@@ -1,0 +1,93 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Maive Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Maive_spring, Portraits/Maive_summer, Portraits/Maive_fall, Portraits/Maive_winter, Portraits/Maive_spring24, Portraits/Maive_fall27-1, Portraits/Maive_fall27-2, Characters/Maive_spring, Characters/Maive_summer, Characters/Maive_fall, Characters/Maive_winter, Characters/Maive_spring24, Characters/Maive_fall27-1, Characters/Maive_fall27-2, Portraits/Maive_rain, Characters/Maive_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Maive/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Maive",
+			"Action": "EditImage",
+			"Target": "Portraits/Maive_summer, Characters/Maive_summer",
+			"FromFile": "Assets/{{TargetPathOnly}}/Maive/Maive_acc_summer.png",
+			"When": {
+				"Maive": "enabled",
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+				"Query: {{Random:{{Range:1,10}}|key=MaiveHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Maive",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Maive", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.MaiveSpring": {
+                    "Id": "{{ModId}}.MaiveSpring",
+                    "Portrait": "Portraits/Maive_spring",
+                    "Sprite": "Characters/Maive_spring",
+                    "Condition": "{{Maive|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MaiveSummer": {
+                    "Id": "{{ModId}}.MaiveSummer",
+                    "Portrait": "Portraits/Maive_summer",
+                    "Sprite": "Characters/Maive_summer",
+                    "Condition": "{{Maive|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MaiveFall": {
+                    "Id": "{{ModId}}.MaiveFall",
+                    "Portrait": "Portraits/Maive_fall",
+                    "Sprite": "Characters/Maive_fall",
+                    "Condition": "{{Maive|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.MaiveWinter": {
+                    "Id": "{{ModId}}.MaiveWinter",
+                    "Portrait": "Portraits/Maive_winter",
+                    "Sprite": "Characters/Maive_winter",
+                    "Condition": "{{Maive|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.MaiveRain": {
+                    "Id": "{{ModId}}.MaiveRain",
+                    "Portrait": "Portraits/Maive_rain",
+                    "Sprite": "Characters/Maive_rain",
+                    "Condition": "{{Maive|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Maive.FlowerDance": {
+                    "Id": "{{ModId}}.Maive.FlowerDance",
+                    "Portrait": "Portraits/Maive_spring24",
+                    "Sprite": "Characters/Maive_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Maive|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Maive.SpiritsEve1": {
+                    "Id": "{{ModId}}.Maive.SpiritsEve1",
+                    "Portrait": "Portraits/Maive_fall27-1",
+                    "Sprite": "Characters/Maive_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Maive|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Maive.SpiritsEve2": {
+                    "Id": "{{ModId}}.Maive.SpiritsEve2",
+                    "Portrait": "Portraits/Maive_fall27-2",
+                    "Sprite": "Characters/Maive_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Maive|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

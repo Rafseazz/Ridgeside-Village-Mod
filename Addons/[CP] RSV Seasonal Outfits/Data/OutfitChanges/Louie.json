@@ -1,0 +1,93 @@
+{
+    "Changes": [
+        {
+            "LogName": "RSV Load Seasonals - Louie Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Louie_spring, Portraits/Louie_summer, Portraits/Louie_fall, Portraits/Louie_winter, Portraits/Louie_spring24, Portraits/Louie_fall27-1, Portraits/Louie_fall27-2, Characters/Louie_spring, Characters/Louie_summer, Characters/Louie_fall, Characters/Louie_winter, Characters/Louie_spring24, Characters/Louie_fall27-1, Characters/Louie_fall27-2, Portraits/Louie_rain, Characters/Louie_rain",
+            "FromFile": "Assets/{{TargetPathOnly}}/Louie/{{TargetWithoutPath}}.png"
+        },
+		
+		{
+			"LogName": "RSV Seasonal Accessories - Louie",
+			"Action": "EditImage",
+			"Target": "Portraits/Louie_fall, Characters/Louie_fall, Portraits/Louie_winter, Characters/Louie_winter",
+			"FromFile": "Assets/{{TargetPathOnly}}/Louie/Louie_acc.png",
+			"When": {
+				"Louie": "enabled",
+				"IsOutdoors": true,
+				"HasValue:{{DayEvent}}": false,
+                "Query: {{Random:{{Range:1,10}}|key=LouieHat}} > 5": true,
+			},
+			"Update": "OnLocationChange",
+			"PatchMode": "Overlay"
+		},
+		
+        {
+            "LogName": "RSV Seasonal Appearances - Louie",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "TargetField": [ "Louie", "Appearance" ],
+            "Entries": {
+                //Seasonal Outfits
+                "{{ModId}}.LouieSpring": {
+                    "Id": "{{ModId}}.LouieSpring",
+                    "Portrait": "Portraits/Louie_spring",
+                    "Sprite": "Characters/Louie_spring",
+                    "Condition": "{{Louie|contains= enabled}}, SEASON spring",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LouieSummer": {
+                    "Id": "{{ModId}}.LouieSummer",
+                    "Portrait": "Portraits/Louie_summer",
+                    "Sprite": "Characters/Louie_summer",
+                    "Condition": "{{Louie|contains= enabled}}, SEASON summer",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LouieFall": {
+                    "Id": "{{ModId}}.LouieFall",
+                    "Portrait": "Portraits/Louie_fall",
+                    "Sprite": "Characters/Louie_fall",
+                    "Condition": "{{Louie|contains= enabled}}, SEASON fall",
+                    "Precedence": -100
+                },
+                "{{ModId}}.LouieWinter": {
+                    "Id": "{{ModId}}.LouieWinter",
+                    "Portrait": "Portraits/Louie_winter",
+                    "Sprite": "Characters/Louie_winter",
+                    "Condition": "{{Louie|contains= enabled}}, SEASON winter",
+                    "Precedence": -100
+                },
+				"{{ModId}}.LouieRain": {
+                    "Id": "{{ModId}}.LouieRain",
+                    "Portrait": "Portraits/Louie_rain",
+                    "Sprite": "Characters/Louie_rain",
+                    "Condition": "{{Louie|contains= enabled}}, SEASON spring summer fall, WEATHER Target Rain Storm",
+                    "Precedence": -120
+                },
+                
+                //Festivals
+                "{{ModId}}.Louie.FlowerDance": {
+                    "Id": "{{ModId}}.Louie.FlowerDance",
+                    "Portrait": "Portraits/Louie_spring24",
+                    "Sprite": "Characters/Louie_spring24",
+                    "Condition": "IS_EVENT festival_spring24, {{Louie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Louie.SpiritsEve1": {
+                    "Id": "{{ModId}}.Louie.SpiritsEve1",
+                    "Portrait": "Portraits/Louie_fall27-1",
+                    "Sprite": "Characters/Louie_fall27-1",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= true}}, {{Louie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+                "{{ModId}}.Louie.SpiritsEve2": {
+                    "Id": "{{ModId}}.Louie.SpiritsEve2",
+                    "Portrait": "Portraits/Louie_fall27-2",
+                    "Sprite": "Characters/Louie_fall27-2",
+                    "Condition": "IS_EVENT festival_fall27, {{IsOddYear|contains= false}}, {{Louie|contains= enabled, festivals only}}",
+                    "Precedence": -200
+                },
+            }
+        },
+    ]
+}

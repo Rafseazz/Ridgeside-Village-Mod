@@ -1,0 +1,61 @@
+{
+"Changes": [
+	{
+	 "LogName": "Irene Spirit's Eve Dialogue Change",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+	 "When": { "Irene": "enabled, festivals only", },
+   "Entries": {
+		"Irene": "{{i18n:SpiritEve.Irene.1}}",
+ 	  "Irene_y2": "{{i18n:SpiritEve.Irene.2-nozayne}}",
+ 	  "Irene_spouse": "{{i18n:SpiritEve.Irene_spouse.1}}",
+ 	  "Irene_spouse_y2": "{{i18n:SpiritEve.Irene_spouse.2}}",
+		},
+	},
+
+	{
+	 "LogName": "Irene Spirit's Eve Dialogue Change (Zayne present) Y2",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasSeenEvent": 75160338,
+		 "Irene": "enabled, festivals only",
+		 "Zayne": "enabled, festivals only",
+	 },
+	 "Entries": {
+		 "Irene_y2": "{{i18n:SpiritEve.Irene.2-single}}"
+	 },
+	},
+
+	{
+	 "LogName": "Irene Spirit's Eve Dialogue Change (dating Zayne) Y2",
+	 "Action": "EditData",
+	 "Target": "Data/Festivals/fall27",
+	 "When": {
+		 "HasDialogueAnswer": 7516439,
+		 "HasDialogueAnswer": 7516325,
+		 "Irene": "enabled, festivals only",
+		 "Zayne": "enabled, festivals only",
+	 },
+	 "Entries": {
+		 "Irene_y2": "{{i18n:SpiritEve.Irene.2-zayne}}"
+	 },
+	},
+
+//Free Love back-up
+	{
+	 "LogName": "Irene Spirit's Eve Dialogue Changes (Free Love back-up)",
+   "Action": "EditData",
+   "Target": "Data/Festivals/fall27",
+   "When": {
+		"HasMod": "aedenthorn.FreeLove",
+   	"Relationship:Irene": "Married",
+		"Irene": "enabled, festivals only",
+   },
+   "Entries": {
+	   "Irene": "{{i18n:SpiritEve.Irene_spouse.1}}",
+		 "Irene_y2": "{{i18n:SpiritEve.Irene_spouse.2}}",
+		},
+	},
+]
+}
