@@ -1,12 +1,6 @@
 {
     "Changes": [
         {
-            "LogName": "Load Village Map",
-            "Action": "Load",
-            "Target": "LooseSprites/RSVWorldMap_unscaled",
-            "FromFile": "Assets/LooseSprites/RSVWorldMap_unscaled.png"
-        },
-        {
             "LogName": "Add World Map",
             "Action": "EditData",
             "Target": "Data/WorldMap",
@@ -15,7 +9,7 @@
                     "BaseTexture": [
                         {
                             "Id": "RSV_Base_Texture",
-                            "Texture": "LooseSprites/RSVWorldMap_unscaled"
+                            "Texture": "LooseSprites/RSVWorldMap"
                         }
                     ],
                     "MapAreas": [
