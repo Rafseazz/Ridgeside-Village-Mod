@@ -163,12 +163,15 @@ namespace RidgesideVillage
                 foreach(string name in npcs)
                 {
                     NPC npc = Game1.getCharacterFromName(name);
-                    npc.Sprite.SpriteHeight = 32;
-                    npc.Sprite.SpriteWidth = 16;
-                    npc.Sprite.ignoreSourceRectUpdates = false;
-                    npc.Sprite.UpdateSourceRect();
-                    npc.drawOffset= Vector2.Zero;
-                    npc.IsInvisible = false;
+                    if(npc is not null)
+                    {
+                        npc.Sprite.SpriteHeight = 32;
+                        npc.Sprite.SpriteWidth = 16;
+                        npc.Sprite.ignoreSourceRectUpdates = false;
+                        npc.Sprite.UpdateSourceRect();
+                        npc.drawOffset = Vector2.Zero;
+                        npc.IsInvisible = false;
+                    }
                 }
             }
             catch (Exception e)
