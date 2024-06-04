@@ -46,6 +46,7 @@ namespace RidgesideVillage
                 GMCM.AddBoolOption(ModManifest, () => Config.PoleAtBackwoods, (bool val) => Config.PoleAtBackwoods = val, () => i18n.Get("PoleAtBackwoods"), () => i18n.Get("PoleAtBackwoods.Description"));
                 GMCM.AddBoolOption(ModManifest, () => Config.SeasonalRSVMap, (bool val) => Config.SeasonalRSVMap = val, () => i18n.Get("SeasonalRSVMap"), () => i18n.Get("SeasonalRSVMap.Description"));
                 GMCM.AddBoolOption(ModManifest, () => Config.EnableTouristNPCs, (bool val) => Config.EnableTouristNPCs = val, () => i18n.Get("EnableTouristNPCs"), () => i18n.Get("EnableTouristNPCs.Description"));
+                GMCM.AddBoolOption(ModManifest, () => Config.ShowRSVCustomMap, (bool val) => Config.ShowRSVCustomMap = val, () => i18n.Get("ShowRSVCustomMap"), () => i18n.Get("ShowRSVCustomMap.Description"));
             }
             
 
