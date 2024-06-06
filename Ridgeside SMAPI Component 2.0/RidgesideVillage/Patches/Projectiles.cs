@@ -68,7 +68,10 @@ namespace RidgesideVillage
             public static void ReplaceProjectile(NetCollection<Projectile> projectiles, Projectile original)
             {
                 //Log.Debug($"RSV: Entered transpiler, woohoo!");
-                NetCharacterRef firerInfo = Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe").GetValue();
+#nullable enable
+                if (Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe") == null) return;
+                NetCharacterRef? firerInfo = Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe").GetValue();
+#nullable disable
                 Monster monster = (Monster)firerInfo.Get(Game1.currentLocation);
 
                 if (!monster.modData.ContainsKey("RSV_bloomDebuff"))

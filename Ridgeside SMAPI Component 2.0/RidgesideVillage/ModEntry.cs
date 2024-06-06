@@ -51,9 +51,9 @@ namespace RidgesideVillage
             CableCarBackground.Initialize(this);
             SummitRenovateMenu.Initialize(this);
 
-            //BloomProjectile.Initialize(this);
-            //MistProjectile.Initialize(this);
-            //Mistblade.Initialize(this);
+            BloomProjectile.Initialize(this);
+            MistProjectile.Initialize(this);
+            Mistblade.Initialize(this);
 
             Patcher = new Patcher(this);
             Patcher.PerformPatching();
@@ -141,11 +141,10 @@ namespace RidgesideVillage
             CustomCPTokens.RegisterTokens();
 
             Helper.ConsoleCommands.Add("RSV_LocationModData", "show ModData of given location", printLocationModData);
-            Helper.ConsoleCommands.Add("RSV_RemoveEquipment", "Remove all clothes and equipment from farmer", RemoveEquipment);
-            Helper.ConsoleCommands.Add("RSV_ResetPedestals", "", ResetPedestals);
-            Helper.ConsoleCommands.Add("RSV_OpenPortal", "", OpenPortal);
-            Helper.ConsoleCommands.Add("RSV_ToggleCaveSpawn", "", ToggleCaveSpawn);
-            Helper.ConsoleCommands.Add("RSV_ToggleLockedNPC", "", ToggleLockedNPC);
+            Helper.ConsoleCommands.Add("RSV_ResetPedestals", "reset pedestals for spirit realm quest", ResetPedestals);
+            Helper.ConsoleCommands.Add("RSV_OpenPortal", "force open portal to spirit realm", OpenPortal);
+            Helper.ConsoleCommands.Add("RSV_ToggleCaveSpawn", "change spawn in aguar's cave from his 8 heart event", ToggleCaveSpawn);
+            Helper.ConsoleCommands.Add("RSV_ToggleLockedNPC", "change the dateable status of a locked npc", ToggleLockedNPC);
             // RSV_rivera_secret in Patches/WalletItem
             // Quest commands in Questing/QuestController
             // Secret santa gift test in Patches/SecretSantaGift
@@ -257,27 +256,6 @@ namespace RidgesideVillage
                 }
             }
             Log.Info("Done");
-        }
-
-        private void RemoveEquipment(string arg1, string[] arg2)
-        {
-            Game1.player.hat.Value = null;
-            Game1.player.shirt.Value = "-1";
-            Game1.player.changeShirt("-1");
-            Game1.player.shirtItem.Value = null;
-            Game1.player.pants.Value = "-1";
-            //Game1.player.changePants(Color.White);
-            Game1.player.pantsItem.Value = null;
-            Game1.player.UpdateClothing();
-
-            try { Game1.player.boots?.Value.onUnequip(Game1.player); } catch { }
-            Game1.player.boots.Value = null;
-            Game1.player.changeShoeColor("12");
-
-            try { Game1.player.leftRing?.Value.onUnequip(Game1.player); } catch { }
-            Game1.player.leftRing.Value = null;
-            try { Game1.player.rightRing?.Value.onUnequip(Game1.player); } catch { }
-            Game1.player.rightRing.Value = null;
         }
 
         private void OpenPortal(string arg1, string[] arg2)

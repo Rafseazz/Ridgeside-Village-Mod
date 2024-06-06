@@ -35,7 +35,7 @@ namespace RidgesideVillage
 
         public bool EnableTouristNPCs = true;
 
-        public bool ShowRSVCustomMap = false;
+        public bool ShowRSVCustomMap = true;
 
     }
 }

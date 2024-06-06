@@ -332,17 +332,6 @@
           "Text": "{{i18n:RSV.Map.Text.Daniels}}"
         },
 
-        "LogCabinHotel": {
-          "Area": {
-            "X": 450,
-            "Y": 190,
-            "Width": 80,
-            "Height": 75
-          },
-          "Inhabitants": "Richard/Ysabelle/Flor/Philip",
-          "Text": "{{i18n:RSV.Map.Text.LogCabinHotel.{{RSVWorldState}}}}"
-        },
-
         "OddJobs": {
           "Area": {
             "X": 545,
@@ -373,6 +362,17 @@
             "Height": 35
           },
           "Text": "{{i18n:RSV.Map.Text.CableCar}}"
+        },
+
+        "LogCabinHotel": {
+          "Area": {
+            "X": 450,
+            "Y": 190,
+            "Width": 80,
+            "Height": 75
+          },
+          "Inhabitants": "Richard/Ysabelle/Flor/Philip",
+          "Text": "{{i18n:RSV.Map.Text.LogCabinHotel.{{RSVWorldState}}}}"
         },
 
         "Electrician": {
@@ -570,5 +570,48 @@
 
       }
     },
+    /* June is still not shown for some reason?
+    {
+      "LogName": "Edit RSV Map Data - Log Cabin w/o June",
+      "Action": "EditData",
+      "Target": "RSV/RSVMapData",
+      "When": {
+ 			 "Season": "spring, summer",
+     },
+      "Entries": {
+        "LogCabinHotel": {
+          "Area": {
+            "X": 450,
+            "Y": 190,
+            "Width": 80,
+            "Height": 75
+          },
+          "Inhabitants": "Richard/Ysabelle/Flor/Philip",
+          "Text": "{{i18n:RSV.Map.Text.LogCabinHotel.{{RSVWorldState}}}}"
+        },
+      }
+    },
+    {
+      "LogName": "Edit RSV Map Data - Log Cabin w/ June",
+      "Action": "EditData",
+      "Target": "RSV/RSVMapData",
+      "When": {
+ 			 "Season": "fall, winter",
+ 			 "Relationship:June |contains=Married": false,
+     },
+      "Entries": {
+        "LogCabinHotel": {
+          "Area": {
+            "X": 450,
+            "Y": 190,
+            "Width": 80,
+            "Height": 75
+          },
+          "Inhabitants": "Richard/Ysabelle/Flor/Philip/June",
+          "Text": "{{i18n:RSV.Map.Text.LogCabinHotel.{{RSVWorldState}}}}"
+        },
+      }
+    },
+    */
   ]
 }

@@ -55,7 +55,7 @@ namespace RidgesideVillage
 
         internal static void Open(IClickableMenu gameMenu)
         {
-            if (gameMenu is GameMenu menu)
+            if (gameMenu is GameMenu menu && (!Game1.currentLocation.Name.StartsWith("Custom_Ridgeside") || Game1.currentLocation.Name == RSVConstants.L_CABLECAR))
             {
                 Texture2D image = Helper.GameContent.Load<Texture2D>(MapPath);
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * 5), (int)(image.Height * 5));
@@ -136,12 +136,11 @@ namespace RidgesideVillage
                 npcMarker.draw(b);
             }
 
-
             if (farmerMarker != null)
             {
                 Game1.player.FarmerRenderer.drawMiniPortrat(b, farmerMarker.MapPosition, 0.5f, 2f, 2, Game1.player);
             }
-
+            
             bool drawPeopleOnAreaHover = true;
 
             //check if people have to be drawn
