@@ -35,27 +35,11 @@ namespace RidgesideVillage
         internal static void Setup(IModHelper helper)
         {
             Helper = helper;
-            Helper.Events.Display.MenuChanged += OnMenuChanged;
-        }
-
-        private static void OnMenuChanged(object sender, MenuChangedEventArgs e)
-        {
-            if(!ModEntry.Config.ShowRSVCustomMap)
-            {
-                return;
-            }
-            if(e.NewMenu is GameMenu gameMenu)
-            {
-                if(gameMenu.currentTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside"))
-                {
-                    Open(gameMenu);
-                }
-            }
         }
 
         internal static void Open(IClickableMenu gameMenu)
         {
-            if (gameMenu is GameMenu menu && (!Game1.currentLocation.Name.StartsWith("Custom_Ridgeside") || Game1.currentLocation.Name == RSVConstants.L_CABLECAR))
+            if (gameMenu is GameMenu menu)
             {
                 Texture2D image = Helper.GameContent.Load<Texture2D>(MapPath);
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * 5), (int)(image.Height * 5));
