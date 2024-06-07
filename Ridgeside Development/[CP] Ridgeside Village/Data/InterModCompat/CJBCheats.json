@@ -1,0 +1,177 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Mods/CJBok.CheatsMenu/WarpSections",
+            "When":{ "HasMod":"CJBok.CheatsMenu" },
+            "Entries": {
+                "{{ModId}}_Village": {
+                    "Id": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.village}}"
+                },
+                "{{ModId}}_Surroundings": {
+                    "Id": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.surroundings}}"
+                },
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Mods/CJBok.CheatsMenu/Warps",
+            "When":{ "HasMod":"CJBok.CheatsMenu" },
+            "Entries": {
+              // Village
+              "{{ModId}}_JericHouse": {
+                  "Id": "{{ModId}}_JericHouse",
+                  "SectionId": "{{ModId}}_Village",
+                  "DisplayName": "{{i18n: RSV.cjbwarps.jerichouse}}",
+                  "Location": "Custom_Ridgeside_RidgesideVillage",
+                  "Tile": "22, 23"
+              },
+              "{{ModId}}_Heaps": {
+                  "Id": "{{ModId}}_Heaps",
+                  "SectionId": "{{ModId}}_Village",
+                  "DisplayName": "{{i18n: RSV.cjbwarps.heaps}}",
+                  "Location": "Custom_Ridgeside_RidgesideVillage",
+                  "Tile": "76, 19"
+              },
+                "{{ModId}}_Hotel": {
+                    "Id": "{{ModId}}_Hotel",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.hotel}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "114, 24"
+                },
+                "{{ModId}}_OddJobs": {
+                    "Id": "{{ModId}}_OddJobs",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.oddjobs}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "133, 23"
+                },
+                "{{ModId}}_Pikas": {
+                    "Id": "{{ModId}}_Pikas",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.pikas}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "97, 42"
+                },
+                "{{ModId}}_Plaza": {
+                    "Id": "{{ModId}}_Plaza",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.plaza}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "114, 45"
+                },
+                "{{ModId}}_Clinic": {
+                    "Id": "{{ModId}}_Clinic",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.clinic}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "135, 37"
+                },
+                "{{ModId}}_LolaShed": {
+                    "Id": "{{ModId}}_LolaShed",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.lolashed}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "7, 50"
+                },
+                "{{ModId}}_Greenhouse1": {
+                    "Id": "{{ModId}}_Greenhouse1",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.greenhouse1}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "96, 75"
+                },
+                "{{ModId}}_AmethyneMansion": {
+                    "Id": "{{ModId}}_AmethyneMansion",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.mansion}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "129, 71"
+                },
+                "{{ModId}}_Orchard": {
+                    "Id": "{{ModId}}_Orchard",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.orchard}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "19, 101"
+                },
+                "{{ModId}}_WaterLab": {
+                    "Id": "{{ModId}}_WaterLab",
+                    "SectionId": "{{ModId}}_Village",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.waterlab}}",
+                    "Location": "Custom_Ridgeside_RidgesideVillage",
+                    "Tile": "98, 111"
+                },
+
+                //Surroundings
+                "{{ModId}}_CableCar": {
+                    "Id": "{{ModId}}_CableCar",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.cablecar}}",
+                    "Location": "Custom_Ridgeside_RSVCableCar",
+                    "Tile": "20, 13"
+                },
+                "{{ModId}}_Cliff": {
+                    "Id": "{{ModId}}_Cliff",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.cliff}}",
+                    "Location": "Custom_Ridgeside_RSVCliff",
+                    "Tile": "39, 24"
+                },
+                "{{ModId}}_Hike": {
+                    "Id": "{{ModId}}_Hike",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.hike}}",
+                    "Location": "Custom_Ridgeside_RSVTheHike",
+                    "Tile": "38, 27"
+                },
+                "{{ModId}}_Ninja": {
+                    "Id": "{{ModId}}_Ninja",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.ninja}}",
+                    "Location": "Custom_Ridgeside_Ridge",
+                    "Tile": "89, 23"
+                },
+                "{{ModId}}_Ridge": {
+                    "Id": "{{ModId}}_Ridge",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.ridge}}",
+                    "Location": "Custom_Ridgeside_Ridge",
+                    "Tile": "50, 30"
+                },
+                "{{ModId}}_Forest": {
+                    "Id": "{{ModId}}_Forest",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.forest}}",
+                    "Location": "Custom_Ridgeside_RidgeForest",
+                    "Tile": "80, 132"
+                },
+                "{{ModId}}_Falls": {
+                    "Id": "{{ModId}}_Falls",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.falls}}",
+                    "Location": "Custom_Ridgeside_RidgeFalls",
+                    "Tile": "39, 23"
+                },
+                "{{ModId}}_SpiritRealm": {
+                    "Id": "{{ModId}}_SpiritRealm",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.spiritrealm}}",
+                    "Location": "Custom_Ridgeside_RSVSpiritRealm",
+                    "Tile": "48, 80"
+                },
+                "{{ModId}}_SummitFarm": {
+                    "Id": "{{ModId}}_SummitFarm",
+                    "SectionId": "{{ModId}}_Surroundings",
+                    "DisplayName": "{{i18n: RSV.cjbwarps.summitfarm}}",
+                    "Location": "Custom_Ridgeside_SummitFarm",
+                    "Tile": "18, 47"
+                },
+
+            }
+        }
+    ]
+}
