@@ -80,12 +80,8 @@ namespace RidgesideVillage
         {
             try
             {
-                //only draw on vanilla or RSV maps
-                ShouldDraw = ModEntry.Config.ShowRSVCustomMap && (!Game1.currentLocation.Name.Contains('_') || Game1.currentLocation.Name.StartsWith("Custom_Ridgeside"));
-                if (ShouldDraw && whichTab == GameMenu.mapTab && Game1.currentLocation.Name.StartsWith("Custom_Ridgeside") && Constants.TargetPlatform != GamePlatform.Android)
-                {
-                    RSVWorldMap.Open(Game1.activeClickableMenu);
-                }
+                //only draw on vanilla or cablecar map
+                ShouldDraw = ModEntry.Config.ShowRSVCustomMap && (!Game1.currentLocation.Name.Contains('_') || Game1.currentLocation.Name == RSVConstants.L_CABLECAR);
             }
             catch (Exception e)
             {
