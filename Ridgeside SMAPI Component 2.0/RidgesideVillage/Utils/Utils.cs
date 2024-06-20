@@ -126,6 +126,15 @@ namespace RidgesideVillage
             return location.dropObject(forageObj, tile * 64f, Game1.viewport, true, null); //attempt to place the object and return success/failure
         }
 
+        public static void SpawnDebris(string itemID, int tileX, int tileY, GameLocation location)
+        {
+            if (itemID != null)
+            {
+                Game1.createObjectDebris(itemID, tileX, tileY, location: location);
+            }
+
+        }
+
         public static bool IsSomeoneHere(int x, int y, int w, int h)
         {
             NetCollection<NPC> characters = Game1.currentLocation.characters;
