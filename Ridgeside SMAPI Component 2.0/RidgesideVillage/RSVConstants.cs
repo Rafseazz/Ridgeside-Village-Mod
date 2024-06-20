@@ -156,18 +156,22 @@ namespace RidgesideVillage
         public const string P_RIVERASECRET = "Rafseazz.RSVCP_RiveraSecret";
 
             //Items
-        public const string ITOTEM = "Rafseazz.RSVCP_Warp_Totem__Ridgeside";
-        public const string IFOXBLOOM = "Rafseazz.RSVCP_Foxbloom";
-        public const string IMUSICBOX = "Rafseazz.RSVCP_Ancient_Music_Box";
-        public const string IELVENCOMB = "Rafseazz.RSVCP_Elven_Comb";
-        public const string IEVERFROSTSTONE = "Rafseazz.RSVCP_Everfrost_Stone";
-        public const string IMOOSESTATUE = "Rafseazz.RSVCP_Moose_Statue";
-        public const string IOPALHALO = "Rafseazz.RSVCP_Opal_Halo";
-        public const string ICANDELABRUM = "Rafseazz.RSVCP_Pale_Candelabrum";
-        public const string IRELICFOXMASK = "Rafseazz.RSVCP_Relic_Fox_Mask";
-        public const string ISAPPHIREPEARL = "Rafseazz.RSVCP_Sapphire_Pearl";
-        public const string IFOXTAILCHARM = "Rafseazz.RSVCP_Old_Lucky_Foxtail_Charm";
-        public const string IHEROSTATUE = "Rafseazz.RSVCP_Village_Hero_Sculpture";
+        public const string I_TOTEM = "Rafseazz.RSVCP_Warp_Totem__Ridgeside";
+        public const string I_FOXBLOOM = "Rafseazz.RSVCP_Foxbloom";
+        public const string I_MUSICBOX = "Rafseazz.RSVCP_Ancient_Music_Box";
+        public const string I_ELVENCOMB = "Rafseazz.RSVCP_Elven_Comb";
+        public const string I_EVERFROSTSTONE = "Rafseazz.RSVCP_Everfrost_Stone";
+        public const string I_MOOSESTATUE = "Rafseazz.RSVCP_Moose_Statue";
+        public const string I_OPALHALO = "Rafseazz.RSVCP_Opal_Halo";
+        public const string I_CANDELABRUM = "Rafseazz.RSVCP_Pale_Candelabrum";
+        public const string I_RELICFOXMASK = "Rafseazz.RSVCP_Relic_Fox_Mask";
+        public const string I_SAPPHIREPEARL = "Rafseazz.RSVCP_Sapphire_Pearl";
+        public const string I_FOXTAILCHARM = "Rafseazz.RSVCP_Old_Lucky_Foxtail_Charm";
+        public const string I_HEROSTATUE = "Rafseazz.RSVCP_Village_Hero_Sculpture";
+        public const string I_RAERING = "Rafseazz.RSVCP_The_Fairy_Doe_Fox_s_Ring";
+        public const string I_BELRING = "Rafseazz.RSVCP_The_Beautiful_Serpent_s_Ring";
+        public const string I_BOTHRING = "Rafseazz.RSVCP_The_Ring_of_the_Ridge_Deities";
+        public const string I_STEALTHRING = "Rafseazz.RSVCP_Glove_of_the_Assassin";
 
     }
 }

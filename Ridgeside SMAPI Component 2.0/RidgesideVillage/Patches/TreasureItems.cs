@@ -123,7 +123,7 @@ namespace RidgesideVillage
 
             if(FoxStatueCounter.Value >= 12)
             {
-                SpawnJAItemAsDebris(RSVConstants.IRELICFOXMASK, 18, 10, Game1.getLocationFromName(RSVConstants.L_RIDGE));
+                SpawnJAItemAsDebris(RSVConstants.I_RELICFOXMASK, 18, 10, Game1.getLocationFromName(RSVConstants.L_RIDGE));
                 Game1.player.mailReceived.Add(RSVConstants.M_FOXMASK);
                 FoxStatueCounter.Value = 0;
                 Helper.Events.GameLoop.TimeChanged -= OnTimeChanged;
@@ -142,13 +142,13 @@ namespace RidgesideVillage
                 int tileY = y / 64;
                 if(tileX == 14 && tileY == 3 && Game1.currentLocation.Name.Equals(RSVConstants.L_HOTEL3) && !Game1.player.mailReceived.Contains(RSVConstants.M_MUSICBOX))
                 {
-                    SpawnJAItemAsDebris(RSVConstants.IMUSICBOX, tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.I_MUSICBOX, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_MUSICBOX);
                 }
                 else if(tileX == 5 && tileY == 3 && Game1.currentLocation.Name.Equals(RSVConstants.L_ALISSASHED) && !Game1.player.mailReceived.Contains(RSVConstants.M_EVERFROST))
                 {
                     Game1.player.mailReceived.Add(RSVConstants.M_EVERFROST);
-                    SpawnJAItemAsDebris(RSVConstants.IEVERFROSTSTONE, tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.I_EVERFROSTSTONE, tileX, tileY, Game1.currentLocation);
                 }
             }
             catch (Exception e)
@@ -168,18 +168,18 @@ namespace RidgesideVillage
                 int tileY = y / 64;
                 if (tileX == 80 && tileY == 22 && Game1.currentLocation.Name.Equals(RSVConstants.L_CLIFF) && !Game1.player.mailReceived.Contains(RSVConstants.M_MOOSE))
                 {
-                    SpawnJAItemAsDebris(RSVConstants.IMOOSESTATUE, tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.I_MOOSESTATUE, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_MOOSE);
 
                 }
                 else if (tileX == 63 && tileY == 40 && Game1.currentLocation.Name.Equals(RSVConstants.L_HIKE) && !Game1.player.mailReceived.Contains(RSVConstants.M_ELVENCOMB))
                 {
-                    SpawnJAItemAsDebris(RSVConstants.IELVENCOMB, tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.I_ELVENCOMB, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_ELVENCOMB);
                 }
                 else if (tileX == 23 && tileY == 6 && Game1.currentLocation.Name.Equals(RSVConstants.L_CABLECAR) && !Game1.player.mailReceived.Contains(RSVConstants.M_OPALHALO))
                 {
-                    SpawnJAItemAsDebris(RSVConstants.IOPALHALO, tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.I_OPALHALO, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_OPALHALO);
                 }
             }
@@ -200,7 +200,7 @@ namespace RidgesideVillage
                 int tileY = y / 64;
                 if (tileX == 11 && tileY == 7 && Game1.currentLocation.Name.Equals(RSVConstants.L_HAUNTEDGH) && !Game1.player.mailReceived.Contains(RSVConstants.M_CANDELABRUM))
                 {
-                    SpawnJAItemAsDebris(RSVConstants.ICANDELABRUM, tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.I_CANDELABRUM, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_CANDELABRUM);
                 }
             }
@@ -227,7 +227,7 @@ namespace RidgesideVillage
 
                 if (tileX == 145 && tileY == 69 && Game1.currentLocation.Name.Equals(RSVConstants.L_VILLAGE) && !Game1.player.mailReceived.Contains(RSVConstants.M_HEROSTATUE))
                 {
-                    SpawnJAItemAsDebris(RSVConstants.IHEROSTATUE, tileX, tileY, Game1.currentLocation);
+                    SpawnJAItemAsDebris(RSVConstants.I_HEROSTATUE, tileX, tileY, Game1.currentLocation);
                     Game1.player.mailReceived.Add(RSVConstants.M_HEROSTATUE);
                 }
                 
@@ -241,7 +241,7 @@ namespace RidgesideVillage
         //if player pulled sapphire, add flag. not done in getFish() cus mod compatibility
         private static void FishingRod_PullFishFromWater_PostFix(ref FishingRod __instance, string  fishId, int fishSize, int fishQuality, int fishDifficulty, bool treasureCaught, bool wasPerfect, bool fromFishPond)
         {
-            if (fishId.Equals(RSVConstants.ISAPPHIREPEARL))
+            if (fishId.Equals(RSVConstants.I_SAPPHIREPEARL))
             {
                 Game1.player.mailReceived.Add(RSVConstants.M_SAPPHIRE);
             }

@@ -49,7 +49,7 @@ namespace RidgesideVillage
             Vector2 spawn_spot = spawn_spots.ElementAt(random.Next(0, 7));
             try
             {
-                bool successfulSpawn = UtilFunctions.SpawnForage(RSVConstants.IFOXBLOOM, e.NewLocation, spawn_spot, true);
+                bool successfulSpawn = UtilFunctions.SpawnForage(RSVConstants.I_FOXBLOOM, e.NewLocation, spawn_spot, true);
                 if (!successfulSpawn)
                 {
                     Log.Info("Foxbloom could not be spawned :(");

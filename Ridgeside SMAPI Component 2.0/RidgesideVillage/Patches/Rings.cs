@@ -21,13 +21,6 @@ namespace RidgesideVillage
     {
         private static IModHelper Helper { get; set; }
 
-        const string STEALTHRING = "Rafseazz.RSVCP_Glove_of_the_Assassin";
-        public static int StealthRingId = -1;
-
-        const string RAERING = "The_Fairy_Doe_Fox_s_Ring";
-        const string BELRING = "The_Beautiful_Serpent_s_Ring";
-        const string BOTHRING = "The_Ring_of_the_Ridge_Deities";
-
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
@@ -59,14 +52,14 @@ namespace RidgesideVillage
 
         private static void WithinPlayerThreshold_Prefix(NPC __instance, ref int threshold)
         {
-            if ((__instance is Monster) && HasRingEquipped(STEALTHRING))
+            if ((__instance is Monster) && HasRingEquipped(RSVConstants.I_STEALTHRING))
             {
                 threshold = Math.Max(threshold / 2, 2);
             }
         }
         private static bool Ghost_Prefix(Ghost __instance)
         {
-            if (HasRingEquipped(STEALTHRING) &&
+            if (HasRingEquipped(RSVConstants.I_STEALTHRING) &&
                 ((__instance.Position.X - Game1.viewport.X > Game1.viewport.Width) ||
                 (__instance.Position.Y - Game1.viewport.Y > Game1.viewport.Height)))
             {
@@ -79,9 +72,9 @@ namespace RidgesideVillage
 
         private static bool Combine_Prefix(ref Ring __instance, Ring ring, ref Item __result)
         {
-            if (((__instance.ItemId == RAERING) && (ring.ItemId == BELRING)) || ((__instance.ItemId == BELRING) && (ring.ItemId == RAERING)))
+            if (((__instance.ItemId == RSVConstants.I_RAERING) && (ring.ItemId == RSVConstants.I_BELRING)) || ((__instance.ItemId == RSVConstants.I_BELRING) && (ring.ItemId == RSVConstants.I_RAERING)))
             {
-                Ring both_ring = new(BOTHRING);
+                Ring both_ring = new(RSVConstants.I_BOTHRING);
                 __result = both_ring;
                 return false;
             }
@@ -91,7 +84,7 @@ namespace RidgesideVillage
         private static bool CanCombine_Prefix(ref Ring __instance, Ring ring, ref bool __result)
         {
             // looks like {BELRING, RAERING} when sorted
-            string[] our_rings = { BELRING, BOTHRING, RAERING, STEALTHRING };
+            string[] our_rings = { RSVConstants.I_BELRING, RSVConstants.I_BOTHRING, RSVConstants.I_RAERING, RSVConstants.I_STEALTHRING };
             string[] their_rings = { __instance.Name, ring.Name };
             var overlap = our_rings.Intersect(their_rings);
             int overlap_size = overlap.Count();
@@ -107,7 +100,7 @@ namespace RidgesideVillage
             }
             // at this point 2 rings is the only option left
             Array.Sort(our_rings);
-            if ((their_rings[0] == BELRING) && (their_rings[1] == RAERING))
+            if ((their_rings[0] == RSVConstants.I_BELRING) && (their_rings[1] == RSVConstants.I_RAERING) || (their_rings[0] == RSVConstants.I_RAERING) && (their_rings[1] == RSVConstants.I_BELRING))
             {
                 __result = true;
                 return false;

@@ -31,7 +31,7 @@ namespace RidgesideVillage
 		{
 			if (!Game1.IsMasterGame)
 				return;
-			if (Game1.player.Items.ContainsId(RSVConstants.IFOXTAILCHARM) && Game1.player.eventsSeen.Contains(RSVConstants.E_LORENZO1H) && !Game1.player.eventsSeen.Contains(RSVConstants.E_GRANDMA))
+			if (Game1.player.Items.ContainsId(RSVConstants.I_FOXTAILCHARM) && Game1.player.eventsSeen.Contains(RSVConstants.E_LORENZO1H) && !Game1.player.eventsSeen.Contains(RSVConstants.E_GRANDMA))
 			{
 				var location = Game1.getLocationFromName("FarmHouse");
 				location.TryGetLocationEvents(out string assetName, out var events);

@@ -114,7 +114,7 @@ namespace RidgesideVillage
         public static bool SpawnForage(string id, GameLocation location, Vector2 tile, bool destroyOvernight)
         {
             StardewValley.Object forageObj;
-            forageObj = new StardewValley.Object(RSVConstants.IFOXBLOOM, 1); //generate the object (use the constructor that allows pickup)
+            forageObj = new StardewValley.Object(RSVConstants.I_FOXBLOOM, 1); //generate the object (use the constructor that allows pickup)
             if (destroyOvernight)
                 forageObj.destroyOvernight = true;
 

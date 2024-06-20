@@ -365,7 +365,7 @@ namespace RidgesideVillage
                 Log.Trace($"RSV: Today ({Game1.dayOfMonth}) not Foxbloom Day ({FoxbloomDay}) OR weather not clear.");
                 return false;
             }
-            if (!Game1.player.Items.ContainsId(RSVConstants.IRELICFOXMASK))
+            if (!Game1.player.Items.ContainsId(RSVConstants.I_RELICFOXMASK))
             {
                 Log.Trace("RSV: Player does not have Relic Fox Mask in inventory.");
                 return false;
