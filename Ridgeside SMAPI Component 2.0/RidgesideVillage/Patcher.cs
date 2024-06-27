@@ -29,7 +29,7 @@ namespace RidgesideVillage
             SODialogue.ApplyPatch(harmony, Helper);
             SummitFarm.ApplyPatch(harmony, Helper);
             SwimPatch.ApplyPatch(harmony, Helper);
-            TortsGifts.ApplyPatch(harmony, Helper);
+            OfferingPatches.ApplyPatch(harmony, Helper);
             TreasureItems.ApplyPatch(harmony, Helper);
             UntimedSO.ApplyPatch(harmony, Helper);
             WalletItem.ApplyPatch(harmony, Helper);

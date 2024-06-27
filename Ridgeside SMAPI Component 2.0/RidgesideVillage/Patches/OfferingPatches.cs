@@ -10,7 +10,7 @@ using HarmonyLib;
 
 namespace RidgesideVillage
 {
-    internal static class TortsGifts
+    internal static class OfferingPatches
     {
         static IModHelper Helper;
 
@@ -33,7 +33,7 @@ namespace RidgesideVillage
             );
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickFarmEvent)),
-                postfix: new HarmonyMethod(typeof(TortsGifts), nameof(PickFarmEvent_Postfix))
+                postfix: new HarmonyMethod(typeof(OfferingPatches), nameof(PickFarmEvent_Postfix))
             );
         }
 

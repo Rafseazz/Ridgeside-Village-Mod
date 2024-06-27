@@ -822,6 +822,70 @@
 				"HasMod |contains=Lemurkat.JacobEloise.CP": true
 			}
 		},
+		//Gender Neutral Tokens Compatibility
+		{
+			"Name": "GenderNeutralRSV",
+			"Value": "",
+		},
+		{
+			"Name": "GenderNeutralRSV",
+			"Value": ".GN",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
+		{
+			"Name": "GNMTTitle",
+			"Value": "false",
+		},
+		{
+			"Name": "GNMTTitle",
+			"Value": "{{Hana.GNMTokens/Title}}",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
+		{
+			"Name": "GNMTSubjectivePronoun",
+			"Value": "false",
+		},
+		{
+			"Name": "GNMTSubjectivePronoun",
+			"Value": "{{Hana.GNMTokens/SubjectivePronoun}}",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
+		{
+			"Name": "GNMTObjectivePronoun",
+			"Value": "false",
+		},
+		{
+			"Name": "GNMTObjectivePronoun",
+			"Value": "{{Hana.GNMTokens/ObjectivePronoun}}",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
+		{
+			"Name": "GNMTAdjective",
+			"Value": "false",
+		},
+		{
+			"Name": "GNMTAdjective",
+			"Value": "{{Hana.GNMTokens/Adjective}}",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
+		{
+			"Name": "GNMTSpouseNoun",
+			"Value": "false",
+		},
+		{
+			"Name": "GNMTSpouseNoun",
+			"Value": "{{Hana.GNMTokens/SpouseNoun}}",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
+		{
+			"Name": "GNMTElderFamilialNoun",
+			"Value": "false",
+		},
+		{
+			"Name": "GNMTElderFamilialNoun",
+			"Value": "{{Hana.GNMTokens/ElderFamilialNoun}}",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
 	],
 	/*********
 	** Patches

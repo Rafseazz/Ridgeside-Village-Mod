@@ -25,6 +25,7 @@ namespace RidgesideVillage.Offering
         WaterPlants,
         GrowPlants,
         Buff,
+        // add new offering types
     }
 
     internal class OfferEntry
@@ -54,6 +55,7 @@ namespace RidgesideVillage.Offering
                 case OfferingType.GrowPlants:
                     this.GrowPlants();
                     break;
+                // add new offering type cases
             }
             return;
         }
