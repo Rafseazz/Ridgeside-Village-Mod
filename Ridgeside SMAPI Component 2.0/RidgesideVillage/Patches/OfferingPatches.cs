@@ -14,18 +14,9 @@ namespace RidgesideVillage
     {
         static IModHelper Helper;
 
-        const string MISTBLOOM = "Mountain Mistbloom";
-        const string AMANCAY = "Forest Amancay";
-        const string FOXTAIL = "Old Lucky Foxtail Charm";
-        const string LOVERPIE = "Strawberry Lover Pie";
-        const string FAIRYFISH = "Fairytale Lionfish";
-        const string NIGHTBLACK = "Nightblack Diamond";
-
         internal static void ApplyPatch(Harmony harmony, IModHelper helper)
         {
             Helper = helper;
-
-            SpaceEvents.BeforeGiftGiven += BeforeGiftGiven;
 
             harmony.Patch(
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickPersonalFarmEvent)),
@@ -35,66 +26,6 @@ namespace RidgesideVillage
                 original: AccessTools.Method(typeof(Utility), nameof(Utility.pickFarmEvent)),
                 postfix: new HarmonyMethod(typeof(OfferingPatches), nameof(PickFarmEvent_Postfix))
             );
-        }
-
-        private static void BeforeGiftGiven(object sender, EventArgsBeforeReceiveObject e)
-        {
-            NPC giftee = e.Npc;
-            if (giftee.Name != "Torts")
-                return;
-
-            Farmer gifter = Game1.player;
-            if (gifter.friendshipData["Torts"].GiftsToday == 1)
-            {
-                Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3981", giftee.displayName)));
-                e.Cancel = true;
-                return;
-            }
-            if (gifter.friendshipData["Torts"].GiftsThisWeek == 2)
-            {
-                Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:NPC.cs.3987", giftee.displayName, 2)));
-                e.Cancel = true;
-                return;
-            }
-
-            StardewValley.Object gift = e.Gift;
-            switch (gift.Name)
-            {
-                case MISTBLOOM:
-                    Game1.weatherForTomorrow = Game1.weather_rain;
-                    break;
-                case AMANCAY:
-                    Game1.weatherForTomorrow = Game1.weather_sunny;
-                    break;
-                case FOXTAIL:
-                    gifter.team.sharedDailyLuck.Value = 0.12;
-                    break;
-                case LOVERPIE:
-                    gifter.mailReceived.Add(RSVConstants.M_TORTSLOVE);
-                    break;
-                case FAIRYFISH:
-                    gifter.mailReceived.Add(RSVConstants.M_TORTSFAIRY);
-                    break;
-                case NIGHTBLACK:
-                    gifter.mailReceived.Add(RSVConstants.M_TORTSMETEOR);
-                    break;
-                default:
-                    return;
-            }
-            DoPostGiftStuff(gifter, giftee, e);
-        }
-
-        private static void DoPostGiftStuff(Farmer gifter, NPC giftee, EventArgsBeforeReceiveObject e)
-        {
-            e.Cancel = true;
-            gifter.reduceActiveItemByOne();
-            gifter.currentLocation.localSound("give_gift");
-            gifter.friendshipData["Torts"].GiftsToday++;
-            gifter.friendshipData["Torts"].GiftsThisWeek++;
-            gifter.friendshipData["Torts"].LastGiftDate = new WorldDate(Game1.Date);
-            giftee.CurrentDialogue.Clear();
-            giftee.CurrentDialogue.Push(new Dialogue(giftee, "", "..."));
-            Game1.drawDialogue(giftee);
         }
 
         public static void PickFarmEvent_Postfix(ref FarmEvent __result)
