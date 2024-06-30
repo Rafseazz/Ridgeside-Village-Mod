@@ -25,7 +25,12 @@ namespace RidgesideVillage.Offering
         WaterPlants,
         GrowPlants,
         Buff,
-        // add new offering types
+        ForecastRain,
+        ForecastSun,
+        BoostLuck,
+        BabyChance,
+        FairyChance,
+        MeteorChance
     }
 
     internal class OfferEntry
@@ -55,7 +60,24 @@ namespace RidgesideVillage.Offering
                 case OfferingType.GrowPlants:
                     this.GrowPlants();
                     break;
-                // add new offering type cases
+                case OfferingType.ForecastRain:
+                    Game1.weatherForTomorrow = Game1.weather_rain;
+                    break;
+                case OfferingType.ForecastSun:
+                    Game1.weatherForTomorrow = Game1.weather_sunny;
+                    break;
+                case OfferingType.BoostLuck:
+                    Game1.player.team.sharedDailyLuck.Value = 0.12;
+                    break;
+                case OfferingType.BabyChance:
+                    Game1.player.mailReceived.Add(RSVConstants.M_TORTSLOVE);
+                    break;
+                case OfferingType.FairyChance:
+                    Game1.player.mailReceived.Add(RSVConstants.M_TORTSFAIRY);
+                    break;
+                case OfferingType.MeteorChance:
+                    Game1.player.mailReceived.Add(RSVConstants.M_TORTSMETEOR);
+                    break;
             }
             return;
         }
