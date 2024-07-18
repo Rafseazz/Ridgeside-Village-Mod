@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Zayne",
   "Skills": [
 
@@ -32,13 +32,13 @@
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Zayne/!f Zayne 2000": "reject",
-    "O Zayne": "accept",
+	"PLAYER_NPC_RELATIONSHIP Current Zayne Married, !PLAYER_HEARTS Current Zayne 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Zayne Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Zayne 1000": "reject",
-    "k 75160437": "reject",
+    "!PLAYER_HEARTS Current Zayne 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160437": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

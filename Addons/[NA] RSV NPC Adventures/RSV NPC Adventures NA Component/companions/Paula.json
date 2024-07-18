@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Paula",
   "Skills": [
 
@@ -33,20 +33,20 @@
   ],
   "Rules": {
     //Work
-    "t 800 1400/!d Sun/Hn GH1Letter/!O Paula/!z rainy": "reject companionRejectedWork",
-    "t 1000 1700/!d Wed/!O Paula/!z rainy": "reject companionRejectedWork",
-    "t 800 1700/d Wed/!O Paula": "reject companionRejectedWork",
-    "t 800 1600/d Tue Thu Sat Sun/O Paula/!z rainy": "reject companionRejectedWork_Spouse",
+    "TIME 800 1400, DAY_OF_WEEK Sun/PLAYER_HAS_MAIL Host GH1Letter, !PLAYER_NPC_RELATIONSHIP Current Paula Married/!z rainy": "reject companionRejectedWork",
+    "TIME 1000 1700, DAY_OF_WEEK Wed, !PLAYER_NPC_RELATIONSHIP Current Paula Married, WEATHER Town Rain Storm GreenRain": "reject companionRejectedWork",
+    "TIME 800 1700, !DAY_OF_WEEK Wed, !PLAYER_NPC_RELATIONSHIP Current Paula Married": "reject companionRejectedWork",
+    "TIME 800 1600, DAY_OF_WEEK Mon Wed Fri, PLAYER_NPC_RELATIONSHIP Current Paula Married, WEATHER Town Rain Storm GreenRain": "reject companionRejectedWork_Spouse",
 
     //Marriage
-    //Reject if under 8 hearts, otherwise always go
-    "O Paula/!f Paula 2000": "reject",
-    "O Paula": "accept",
+    //Reject if under 8 hearts, otherwise always go	
+	"PLAYER_NPC_RELATIONSHIP Current Paula Married, !PLAYER_HEARTS Current Paula 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Paula Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Paula 1000": "reject",
-    "k 75160349": "reject",
+    "!PLAYER_HEARTS Current Paula 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160349": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

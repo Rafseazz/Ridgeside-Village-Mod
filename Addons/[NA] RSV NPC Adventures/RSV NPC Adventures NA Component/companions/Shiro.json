@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Shiro",
   "Skills": [
 
@@ -51,13 +51,13 @@
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Shiro/!f Shiro 2000": "reject",
-    "O Shiro": "accept",
+	"PLAYER_NPC_RELATIONSHIP Current Shiro Married, !PLAYER_HEARTS Current Shiro 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Shiro Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Shiro 1000": "reject",
-    "k 75160169": "reject",
+    "!PLAYER_HEARTS Current Shiro 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160169": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

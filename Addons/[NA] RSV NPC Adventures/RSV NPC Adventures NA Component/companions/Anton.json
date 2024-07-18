@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Anton",
   "Skills": [
 
@@ -34,14 +34,14 @@
   ],
   "Rules": {
     //Marriage
-    //Reject if under 8 hearts, otherwise always go
-    "O Anton/!f Anton 2000": "reject",
-    "O Anton": "accept",
+    //Reject if under 8 hearts, otherwise always go	
+	"PLAYER_NPC_RELATIONSHIP Current Anton Married, !PLAYER_HEARTS Current Anton 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Anton Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Anton 1000": "reject",
-    "k 75160302": "reject",
+    "!PLAYER_HEARTS Current Anton 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT 75160302": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

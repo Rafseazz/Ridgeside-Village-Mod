@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Jeric",
   "Skills": [
 
@@ -30,13 +30,13 @@
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Jeric/!f Jeric 2000": "reject",
-    "O Jeric": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Jeric Married, !PLAYER_HEARTS Current Jeric 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Jeric Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Jeric 1000": "reject",
-    "k 75160152": "reject",
+    "!PLAYER_HEARTS Current Jeric 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160152": "reject",
 
     //Basics
     "": "accept", //acceptance when asked
