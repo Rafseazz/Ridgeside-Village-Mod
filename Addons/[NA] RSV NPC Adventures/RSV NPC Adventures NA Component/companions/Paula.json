@@ -33,7 +33,7 @@
   ],
   "Rules": {
     //Work
-    "TIME 800 1400, DAY_OF_WEEK Sun/PLAYER_HAS_MAIL Host GH1Letter, !PLAYER_NPC_RELATIONSHIP Current Paula Married/!z rainy": "reject companionRejectedWork",
+    "TIME 800 1400, DAY_OF_WEEK Sun, PLAYER_HAS_MAIL Host GH1Letter, !PLAYER_NPC_RELATIONSHIP Current Paula Married, WEATHER Town Rain Storm GreenRain": "reject companionRejectedWork",
     "TIME 1000 1700, DAY_OF_WEEK Wed, !PLAYER_NPC_RELATIONSHIP Current Paula Married, WEATHER Town Rain Storm GreenRain": "reject companionRejectedWork",
     "TIME 800 1700, !DAY_OF_WEEK Wed, !PLAYER_NPC_RELATIONSHIP Current Paula Married": "reject companionRejectedWork",
     "TIME 800 1600, DAY_OF_WEEK Mon Wed Fri, PLAYER_NPC_RELATIONSHIP Current Paula Married, WEATHER Town Rain Storm GreenRain": "reject companionRejectedWork_Spouse",
