@@ -164,5 +164,281 @@
 
 			},
 		},
+		/*
+								{
+										"Operation": "Append",
+										"Target": ["Entries", "NAME", "1"], // Loved
+										"Value": "",
+										"Delimiter": " "
+								},
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "NAME", "3"], // Liked
+                    "Value": "",
+                    "Delimiter": " "
+                },
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "NAME", "5"], // Dislike
+                    "Value": "a",
+                    "Delimiter": " "
+                },
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "NAME", "7"], // Hate
+                    "Value": "",
+                    "Delimiter": " "
+                },
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "NAME", "9"], // Neutral
+                    "Value": "",
+                    "Delimiter": " "
+                },
+		*/
+		{
+			"LogName": "Vanilla NPCs gift tastes for RSV items",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"TextOperations": [
+				// Abigail
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Abigail", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Highland_Blueberry_Pie Rafseazz.RSVCP_Mountain_Mistbloom Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich",
+                    "Delimiter": " "
+                },
+				// Alex
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Alex", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Lava_Lily Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich Rafseazz.RSVCP_Pumpkin_Darling_Slice Rafseazz.RSVCP_Ridge_Apple_Cake Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee",
+                    "Delimiter": " "
+                },
+				// Caroline
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Caroline", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Highland_Blueberry_Pie Rafseazz.RSVCP_Matcha_Latte",
+                    "Delimiter": " "
+                },
+				// Clint
+
+				// Demetrius
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Demetrius", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Highland_Blueberry_Pie Rafseazz.RSVCP_Violet_Devil_s_Claw",
+                    "Delimiter": " "
+                },
+				// Dwarf
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "Dwarf", "5"], // Dislike
+                    "Value": "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Matcha_Latte Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee Rafseazz.RSVCP_Summit_Iced_Tea Rafseazz.RSVCP_Wild_Apple_Juice",
+                    "Delimiter": " "
+                },
+				// Elliott
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Elliott", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Kek_s_Small_Dream Rafseazz.RSVCP_Ridge_Mosaic_Cake Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee Rafseazz.RSVCP_Strawberry_Lover_Pie",
+                    "Delimiter": " "
+                },
+				// Emily
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Emily", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Forest_Halva Rafseazz.RSVCP_Pink_Frosted_Sprinkled_Doughnut Rafseazz.RSVCP_Sweet_Cranberry_Cheesecake",
+                    "Delimiter": " "
+                },
+				// Evelyn
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Evelyn", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Pumpkin_Darling_Slice Rafseazz.RSVCP_Ridge_Mosaic_Cake",
+                    "Delimiter": " "
+                },
+				// George
+
+				// Gus
+
+				// Haley
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Haley", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Forest_Halva Rafseazz.RSVCP_Kek_s_Style_Shortcake Rafseazz.RSVCP_Lava_Lily Rafseazz.RSVCP_Mountain_Mistbloom Rafseazz.RSVCP_Strawberry_Lover_Pie",
+                    "Delimiter": " "
+                },
+				// Harvey
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Harvey", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Aurorean_Iris Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Highland_Jostaberry Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee",
+                    "Delimiter": " "
+                },
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "Harvey", "7"], // Hate
+                    "Value": "Rafseazz.RSVCP_Ridge_Apple_Cake Rafseazz.RSVCP_Wild_Apple_Juice",
+                    "Delimiter": " "
+                },
+				// Jas
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Jas", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Apricot_Juice Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Forest_Halva Rafseazz.RSVCP_Highland_Blueberry_Pie Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Hundred_Flavor_Doughnut Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee Rafseazz.RSVCP_Summit_Iced_Tea Rafseazz.RSVCP_Wild_Apple_Juice",
+                    "Delimiter": " "
+                },
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "Jas", "5"], // Dislike
+                    "Value": "Rafseazz.RSVCP_Matcha_Latte",
+                    "Delimiter": " "
+                },
+				// Jodi
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Jodi", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Mountain_Plumcot",
+                    "Delimiter": " "
+                },
+				// Kent
+
+				// Krobus
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Krobus", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Mountain_Mistbloom",
+                    "Delimiter": " "
+                },
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "Krobus", "5"], // Dislike
+                    "Value": "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Matcha_Latte Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee Rafseazz.RSVCP_Summit_Iced_Tea Rafseazz.RSVCP_Wild_Apple_Juice",
+                    "Delimiter": " "
+                },
+				// Leah
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Leah", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Lava_Lily",
+                    "Delimiter": " "
+                },
+				// Leo
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Leo", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Holiday_Ice",
+                    "Delimiter": " "
+                },
+				// Lewis
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Lewis", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Highland_Revani Rafseazz.RSVCP_Kek_s_Style_Shortcake Rafseazz.RSVCP_Violet_Devil_s_Claw",
+                    "Delimiter": " "
+                },
+				// Linus
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Linus", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Kek_s_Small_Dream",
+                    "Delimiter": " "
+                },
+				// Marnie
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Marnie", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Forest_Halva Rafseazz.RSVCP_Kek_s_Style_Shortcake Rafseazz.RSVCP_Lava_Lily Rafseazz.RSVCP_Paradise_Rangpur",
+                    "Delimiter": " "
+                },
+				// Maru
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Maru", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Aurorean_Iris Rafseazz.RSVCP_Mountain_Mistbloom Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich",
+                    "Delimiter": " "
+                },
+								{
+                    "Operation": "Append",
+                    "Target": ["Entries", "Maru", "7"], // Hate
+                    "Value": "Rafseazz.RSVCP_Ridge_Apple_Cake supert_SlimeHeart supert_Zinnia",
+                    "Delimiter": " "
+                },
+				// Pam
+
+				// Penny
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Penny", "1"], // Loved
+                    "Value": "Rafseasz.RSVCP_Apricot_Juice Rafseazz.RSVCP_Kedi_Delight Rafseazz.RSVCP_Kek_s_Style_Shortcake Rafseazz.RSVCP_Mountain_Mistbloom Rafseazz.RSVCP_Summit_Iced_Tea Rafseazz.RSVCP_Wild_Apple_Juice",
+                    "Delimiter": " "
+                },
+				// Pierre
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Pierre", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Tropi_Ugli_Fruit",
+                    "Delimiter": " "
+                },
+				// Robin
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Robin", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Sweet_Cranberry_Cheesecake",
+                    "Delimiter": " "
+                },
+				// Sam
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Sam", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Pillowsoft_Cheezy_Sandwich Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee Rafseazz.RSVCP_Strawberry_Lover_Pie",
+                    "Delimiter": " "
+                },
+				// Sandy
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Sandy", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Kek_s_Small_Dream",
+                    "Delimiter": " "
+                },
+				// Sebastian
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Sebastian", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Caped_Tree_Frog Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Mountain_Mistbloom Rafseazz.RSVCP_Pumpkin_Darling_Slice Rafseazz.RSVCP_Ridge_Apple_Cake Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee",
+                    "Delimiter": " "
+                },
+				// Shane
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Shane", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Apricot_Juice Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Ridge_Mosaic_Cake Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee Rafseazz.RSVCP_Summit_Iced_Tea Rafseazz.RSVCP_Wild_Apple_Juice",
+                    "Delimiter": " "
+                },
+				// Vincent
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Vincent", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Apricot_Juice Rafseazz.RSVCP_Autumn_Dew_Drop_Juice Rafseazz.RSVCP_Cherry_Berry_Shakey Rafseazz.RSVCP_Clementine_Juice Rafseazz.RSVCP_Highland_Blueberry_Pie Rafseazz.RSVCP_Highland_Ice_Cream Rafseazz.RSVCP_Hundred_Flavor_Doughnut Rafseazz.RSVCP_Ridgeside_Shaketini Rafseazz.RSVCP_Snowball_Slurpee Rafseazz.RSVCP_Summit_Iced_Tea Rafseazz.RSVCP_Wild_Apple_Juice",
+                    "Delimiter": " "
+                },
+				// Willy
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Willy", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Cutthroat_Trout Rafseazz.RSVCP_Deep_Ridge_Angler Rafseazz.RSVCP_Holiday_Ice Rafseazz.RSVCP_Mountain_Redbelly_Dace Rafseazz.RSVCP_Mountain_Whitefish Rafseazz.RSVCP_Ridge_Bluegill Rafseazz.RSVCP_Skulpin_Fish Rafseazz.RSVCP_Sockeye_Salmon Rafseazz.RSVCP_Waterfall_Snakehead",
+                    "Delimiter": " "
+                },
+				// Wizard
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Wizard", "1"], // Loved
+                    "Value": "Rafseazz.RSVCP_Mountain_Mistbloom Rafseazz.RSVCP_Violet_Devil_s_Claw supert_Zinnia",
+                    "Delimiter": " "
+                },
+            ]
+		},
 	]
 }

@@ -72,12 +72,14 @@ namespace RidgesideVillage.Offering
                 case OfferingType.BabyChance:
                     Game1.player.mailReceived.Add(RSVConstants.M_TORTSLOVE);
                     break;
-                case OfferingType.FairyChance:
-                    Game1.player.mailReceived.Add(RSVConstants.M_TORTSFAIRY);
-                    break;
                 case OfferingType.MeteorChance:
                     Game1.player.mailReceived.Add(RSVConstants.M_TORTSMETEOR);
                     break;
+                /*
+                case OfferingType.FairyChance:
+                    Game1.player.mailReceived.Add(RSVConstants.M_TORTSFAIRY);
+                    break;
+                */
             }
             return;
         }
