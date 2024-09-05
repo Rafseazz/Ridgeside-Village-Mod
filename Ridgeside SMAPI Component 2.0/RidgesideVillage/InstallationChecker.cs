@@ -60,7 +60,7 @@ namespace RidgesideVillage
                 }
                 else if (dependency.name == "RSV Extra Music Add-on")
                 {
-                    Log.Trace($"RSV's extra music add-on is no longer needed in this version of the main mod. You may delete the music add-on mod.");
+                    Log.Warn($"RSV's extra music add-on is no longer needed in this version of the main mod. You may delete the music add-on mod.");
                 }
                 else if (dependency.required && !helper.ModRegistry.IsLoaded(dependency.uniqueID))
                 {
