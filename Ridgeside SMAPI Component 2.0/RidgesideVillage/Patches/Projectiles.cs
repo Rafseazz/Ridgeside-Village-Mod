@@ -71,8 +71,8 @@ namespace RidgesideVillage
 #nullable enable
                 if (Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe") == null) return;
                 NetCharacterRef? firerInfo = Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe").GetValue();
+                Monster? monster = (Monster)firerInfo.Get(Game1.currentLocation);
 #nullable disable
-                Monster monster = (Monster)firerInfo.Get(Game1.currentLocation);
 
                 if (!monster.modData.ContainsKey("RSV_bloomDebuff"))
                 {

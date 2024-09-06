@@ -34,7 +34,7 @@ namespace RidgesideVillage.Questing
             {
 				return null;
             }
-			var quests = ModEntry.Helper.GameContent.Load<Dictionary<string, string>>(StardewModdingAPI.Utilities.PathUtilities.NormalizeAssetName("data/quests"));
+			var quests = ModEntry.Helper.GameContent.Load<Dictionary<string, string>>(StardewModdingAPI.Utilities.PathUtilities.NormalizeAssetName("Data/Quests"));
 			var candidates = new List<string>();
 			foreach (var key in quests.Keys)
 			{
