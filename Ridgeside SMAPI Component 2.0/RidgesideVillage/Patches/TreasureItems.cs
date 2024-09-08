@@ -211,7 +211,7 @@ namespace RidgesideVillage
         }
 
         //change result to sapphire if appropriate
-        internal static void FishingRod_DoFunction_Postfix(ref WateringCan __instance, int x, int y, int power, Farmer who)
+        internal static void FishingRod_DoFunction_Postfix(ref FishingRod __instance, int x, int y, int power, Farmer who)
         {
             if (!Game1.player.eventsSeen.Contains(RSVConstants.E_RAEUNSEAL))
                 return;
