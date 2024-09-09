@@ -119,6 +119,7 @@ namespace RidgesideVillage
         public const string L_HOTEL = "Custom_Ridgeside_LogCabinHotelLobby";
         public const string L_HOTEL2 = "Custom_Ridgeside_LogCabinHotel2ndFloor";
         public const string L_HOTEL3 = "Custom_Ridgeside_LogCabinHotel3rdFloor";
+        public const string L_HALL = "Custom_Ridgeside_LogCabinEventHall";
         public const string L_ALISSASHED = "Custom_Ridgeside_AlissaShed";
         public const string L_HIKE = "Custom_Ridgeside_RSVTheHike";
         public const string L_TOWNGH = "Custom_Ridgeside_RSVGreenhouse1";

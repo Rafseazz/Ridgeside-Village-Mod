@@ -9,6 +9,7 @@ using StardewModdingAPI.Events;
 using Microsoft.Xna.Framework;
 using StardewValley.Menus;
 using StardewModdingAPI.Utilities;
+using xTile.Dimensions;
 
 namespace RidgesideVillage
 {
@@ -257,7 +258,11 @@ namespace RidgesideVillage
             if (Game1.player.Money < 1500)
             {
                 Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.NotEnoughMoney"));
-            }            
+            }
+            else if (Game1.currentLocation.GetWeather().weather.Value == Game1.weather_green_rain)
+            {
+                Game1.activeClickableMenu = new DialogueBox("Uh oh! Green rain!");
+            }
             //If player has booked an event
             else if (HotelMenu.IsThereUpcomingBirthdayBooked() || Game1.player.activeDialogueEvents.ContainsKey(RSVConstants.M_RECEPTIONBOOKEDFLAG) || Game1.player.mailReceived.Contains(RSVConstants.M_ANNIVERSARYBOOKEDFLAG))
             {
@@ -357,7 +362,13 @@ namespace RidgesideVillage
 
             var responses = new List<Response>();
             var responseActions = new List<Action>();
-            var NPCList = NPCBirthdaysInNextNDays(3);
+            var NPCList = NPCBirthdaysToday();
+
+            if (NPCList.Count == 0)
+            {
+                Game1.activeClickableMenu = new DialogueBox("No NPCs with birthday today!");
+                return;
+            }
 
             foreach(var NPCtuple in NPCList)
             {
@@ -372,9 +383,30 @@ namespace RidgesideVillage
                 responseActions.Add(delegate
                 {
                     Game1.player.Money -= BIRTHDAYPRICE;
-                    Game1.player.mailReceived.Add(RSVConstants.M_BIRTHDAYBOOKED + NPCName + "." + NPCtuple.Item2);
-                    Game1.player.mailReceived.Add(RSVConstants.M_BIRTHDAYBOOKEDFLAG);
+                    //Game1.player.mailReceived.Add(RSVConstants.M_BIRTHDAYBOOKED + NPCName + "." + NPCtuple.Item2);
+                    //Game1.player.mailReceived.Add(RSVConstants.M_BIRTHDAYBOOKEDFLAG);
                     Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("EventHallCounter.Booking.Bday.AfterBooking"));
+
+                    Game1.getLocationFromName(RSVConstants.L_HALL).TryGetLocationEvents(out var assetName, out var events);
+                    var NPCListCheck = new List<string> { "Aguar", "Alissa", "Bert", "Corine", "Ezekiel", "Flor", "Freddie", "Ian", "Jeric", "Keahi", "Kenneth", "Lenny", "Lola", "Maddie", "Olga", "Philip", "Pika", "Richard", "Shiro", "Trinnie", "Ysabelle", "Yuuma", "Naomi", "Kimpoi", "Malaya", "Alex", "Elliott", "Harvey", "Sam", "Sebastian", "Shane", "Abigail", "Emily", "Haley", "Leah", "Maru", "Penny", "Caroline", "Clint", "Demetrius", "Evelyn", "George", "Gus", "Jas", "Jodi", "Kenneth", "Lewis", "Linus", "Marnie", "Pam", "Pierre", "Robin", "Vincent", "Willy" };
+                    Event BirthdayEvent = null;
+                    if (NPCName == "Torts")
+                    {
+                        BirthdayEvent = new Event(events[$"{RSVConstants.E_BIRTHDAY}/n TortsParty"].Replace("{NPC}", NPCName), assetName, RSVConstants.E_BIRTHDAY);
+                    }
+                    else if (NPCListCheck.Contains(NPCName))
+                    {
+                        BirthdayEvent = new Event(events[$"{RSVConstants.E_BIRTHDAY}/n KnownParty"].Replace("{NPC}", NPCName), assetName, RSVConstants.E_BIRTHDAY);
+                    }
+                    else
+                    {
+                        BirthdayEvent = new Event(events[$"{RSVConstants.E_BIRTHDAY}/n OtherParty"].Replace("{NPC}", NPCName), assetName, RSVConstants.E_BIRTHDAY);
+                    }
+
+                    if (BirthdayEvent != null)
+                    {
+                        UtilFunctions.StartEvent(BirthdayEvent, RSVConstants.L_HALL, 1000, 1000);
+                    }
                 });
             }
             responses.Add(new Response("", Helper.Translation.Get("Exit.Text")));
@@ -400,7 +432,7 @@ namespace RidgesideVillage
             foreach (NPC k in Utility.getAllCharacters())
             {
                 //Log.Debug($"checking {k?.Name}, {k?.Birthday_Season}");
-                if (k.isVillager() && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && Game1.player.friendshipData.ContainsKey(k.Name) && k.Name != "Krobus")
+                if (k.IsVillager && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && Game1.player.friendshipData.ContainsKey(k.Name) && k.Name != "Krobus")
                 {
 
                     SDate birthday = new SDate(k.Birthday_Day, k.Birthday_Season.ToLower());
@@ -415,8 +447,36 @@ namespace RidgesideVillage
                     }
                 }
             }
-            Log.Debug("Birthdays: ");
+            Log.Debug($"Birthdays in next {n} days: ");
             foreach(var entry in birthdayNPCs)
+            {
+                Log.Debug($"{entry.Item1} {entry.Item2}");
+            }
+
+            return birthdayNPCs;
+        }
+
+        private static HashSet<Tuple<string, string>> NPCBirthdaysToday()
+        {
+            HashSet<Tuple<string, string>> birthdayNPCs = new HashSet<Tuple<string, string>>();
+            SDate todaysDate = SDate.Now();
+            List<string> validSeasons = new List<string> { "spring", "summer", "fall", "winter" };
+
+            foreach (NPC k in Utility.getAllCharacters())
+            {
+                //Log.Debug($"checking {k?.Name}, {k?.Birthday_Season}");
+                if (k.IsVillager && k.Birthday_Season != null && validSeasons.Contains(k.Birthday_Season.ToLower()) && Game1.player.friendshipData.ContainsKey(k.Name) && k.Name != "Krobus")
+                {
+
+                    SDate birthday = new SDate(k.Birthday_Day, k.Birthday_Season.ToLower());
+                    if (birthday == todaysDate)
+                    {
+                        birthdayNPCs.Add(new Tuple<string, string>(k.Name, $"{birthday.Day}-{birthday.Season}-{birthday.Year}"));
+                    }
+                }
+            }
+            Log.Debug("Birthdays today: ");
+            foreach (var entry in birthdayNPCs)
             {
                 Log.Debug($"{entry.Item1} {entry.Item2}");
             }
