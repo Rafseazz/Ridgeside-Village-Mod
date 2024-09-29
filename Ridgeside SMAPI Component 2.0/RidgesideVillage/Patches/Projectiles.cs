@@ -69,10 +69,14 @@ namespace RidgesideVillage
             {
                 //Log.Debug($"RSV: Entered transpiler, woohoo!");
 #nullable enable
-                if (Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe") == null) return;
+                if (original == null || Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe") == null) return;
                 NetCharacterRef? firerInfo = Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe").GetValue();
                 Monster? monster = (Monster)firerInfo.Get(Game1.currentLocation);
 #nullable disable
+                if(monster == null)
+                {
+                    return;
+                }
 
                 if (!monster.modData.ContainsKey("RSV_bloomDebuff"))
                 {
