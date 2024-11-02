@@ -71,7 +71,7 @@ namespace RidgesideVillage
 #nullable enable
                 if (original == null || Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe") == null) return;
                 NetCharacterRef? firerInfo = Helper.Reflection.GetField<NetCharacterRef>(original, "theOneWhoFiredMe").GetValue();
-                Monster? monster = (Monster)firerInfo.Get(Game1.currentLocation);
+                Monster? monster = (Monster?)firerInfo?.Get(Game1.currentLocation);
 #nullable disable
                 if(monster == null)
                 {
