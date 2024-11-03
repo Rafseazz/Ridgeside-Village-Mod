@@ -37,5 +37,9 @@ namespace RidgesideVillage
 
         public bool ShowRSVCustomMap = true;
 
+        public int OddJobsWateringPrice = 5;
+        public int OddJobsFencePrice = 10;
+        public int OddJobsPetPrice = 10;
+
     }
 }
