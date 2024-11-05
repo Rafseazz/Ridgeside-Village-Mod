@@ -18,7 +18,7 @@ namespace RidgesideVillage
         private static IModHelper Helper { get; set; }
         private static IManifest ModManifest;
 
-        private static string[] travelers = { "Bryle", "Irene", "June", "ayne" };
+        private static string[] travelers = { "Bryle", "Irene", "June", "Zayne" };
         private static Dictionary<string, string> to_be_broadcast = new Dictionary<string, string>(){
          // Important event, extra info type/extra info ID
          // e: event only, r: response ID, m: mail flag
