@@ -354,7 +354,10 @@
 			"Value": "n NonexistentMailFlag",
 			"When": { "Season": "winter" }
 		},
-		
+		{
+			"Name": "IreneTraveling",
+			"Value": false,
+		},
 		{
 			"Name": "IreneTraveling",
 			"Value": true,
@@ -411,6 +414,15 @@
 		{
 			"Name": "GenderNeutralRSV",
 			"Value": ".GN",
+			"When": { "HasMod |contains=Hana.GNMTokens": true }
+		},
+		{
+			"Name": "GNMTGenericNoun",
+			"Value": "he",
+		},
+		{
+			"Name": "GNMTGenericNoun",
+			"Value": "{{Hana.GNMTokens/GenericNoun}}",
 			"When": { "HasMod |contains=Hana.GNMTokens": true }
 		},
 		{
