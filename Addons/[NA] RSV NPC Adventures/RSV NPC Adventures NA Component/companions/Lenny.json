@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Lenny",
   "Skills": [
 
@@ -32,8 +32,8 @@
   "Rules": {
     //Normal
     //Requires seen 6 heart event + 6 hearts and above
-    "!f Lenny 1500": "reject",
-    "k 75160088": "reject",
+    "!PLAYER_HEARTS Current Lenny 6": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160088": "reject",
 
     //Basics
     "": "accept", //acceptance when asked
