@@ -84,9 +84,9 @@ namespace RidgesideVillage
         private static bool CanCombine_Prefix(ref Ring __instance, Ring ring, ref bool __result)
         {
             // looks like {BELRING, RAERING} when sorted
-            string[] our_rings = { RSVConstants.I_BELRING, RSVConstants.I_BOTHRING, RSVConstants.I_RAERING, RSVConstants.I_STEALTHRING };
-            string[] their_rings = { __instance.Name, ring.Name };
-            var overlap = our_rings.Intersect(their_rings);
+            string[] rsv_rings = { RSVConstants.I_STEALTHRING, RSVConstants.I_BELRING, RSVConstants.I_RAERING, RSVConstants.I_BOTHRING };
+            string[] curr_rings = { __instance.ItemId, ring.ItemId };
+            var overlap = rsv_rings.Intersect(curr_rings);
             int overlap_size = overlap.Count();
             if (overlap_size == 0)
             {
@@ -98,9 +98,7 @@ namespace RidgesideVillage
                 __result = false;
                 return false;
             }
-            // at this point 2 rings is the only option left
-            Array.Sort(our_rings);
-            if ((their_rings[0] == RSVConstants.I_BELRING) && (their_rings[1] == RSVConstants.I_RAERING) || (their_rings[0] == RSVConstants.I_RAERING) && (their_rings[1] == RSVConstants.I_BELRING))
+            if ((curr_rings[0] == RSVConstants.I_BELRING) && (curr_rings[1] == RSVConstants.I_RAERING) || (curr_rings[0] == RSVConstants.I_RAERING) && (curr_rings[1] == RSVConstants.I_BELRING))
             {
                 __result = true;
                 return false;

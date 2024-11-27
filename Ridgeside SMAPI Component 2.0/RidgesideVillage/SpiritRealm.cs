@@ -55,16 +55,8 @@ namespace RidgesideVillage
             var tilesheets = location.map.TileSheets;
             int i = 0;
             int index = -1;
-            foreach(var tilesheet in tilesheets)
-            {
-                if (tilesheet.Id.Equals("zrsvspiritrealm"))
-                {
-                    index = i;
-                }
-                i++;
-            }
 
-            location.setMapTile(Xcoord, Ycoord, 1715, "Buildings", null, whichTileSheet: index);
+            location.setMapTile(Xcoord, Ycoord, 1715, "Buildings", "zrsvspiritrealm");
 
             var extinguishSprite = new TemporaryAnimatedSprite("LooseSprites\\RSVSmoke", new Rectangle(0, 0, 16, 32), 100f, 10, 1, new Vector2(Xcoord, Ycoord - 1) * 64, false, false, ((Ycoord+0.1f) * 64f) / 10000f, 0f, Color.White, 4f, 0f, 0f, 0f)
             {
@@ -106,7 +98,7 @@ namespace RidgesideVillage
                     location.removeTile(xCoord, yCoord - 1, "Front");
                     location.removeTile(xCoord, yCoord, "Buildings");
 
-                    location.setMapTile(xCoord, yCoord, 1715, "Buildings", null, whichTileSheet: tileSheetIndex);
+                    location.setMapTile(xCoord, yCoord, 1715, "Buildings", "zrsvspiritrealm");
                 }
             }
         }

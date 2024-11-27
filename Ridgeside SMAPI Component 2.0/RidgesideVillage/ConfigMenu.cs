@@ -47,6 +47,9 @@ namespace RidgesideVillage
                 GMCM.AddBoolOption(ModManifest, () => Config.SeasonalRSVMap, (bool val) => Config.SeasonalRSVMap = val, () => i18n.Get("SeasonalRSVMap"), () => i18n.Get("SeasonalRSVMap.Description"));
                 GMCM.AddBoolOption(ModManifest, () => Config.EnableTouristNPCs, (bool val) => Config.EnableTouristNPCs = val, () => i18n.Get("EnableTouristNPCs"), () => i18n.Get("EnableTouristNPCs.Description"));
                 GMCM.AddBoolOption(ModManifest, () => Config.ShowRSVCustomMap, (bool val) => Config.ShowRSVCustomMap = val, () => i18n.Get("ShowRSVCustomMap"), () => i18n.Get("ShowRSVCustomMap.Description"));
+                GMCM.AddNumberOption(ModManifest, () => Config.OddJobsWateringPrice, (int val) => Config.OddJobsWateringPrice = val, () => i18n.Get("OddJobsWateringPrice"), () => i18n.Get("OddJobsWateringPrice.Description"), min: 0, max:100);
+                GMCM.AddNumberOption(ModManifest, () => Config.OddJobsFencePrice, (int val) => Config.OddJobsFencePrice = val, () => i18n.Get("OddJobsFencePrice"), () => i18n.Get("OddJobsFencePrice.Description"), min: 0, max: 100);
+                GMCM.AddNumberOption(ModManifest, () => Config.OddJobsPetPrice, (int val) => Config.OddJobsPetPrice = val, () => i18n.Get("OddJobsPetPrice"), () => i18n.Get("OddJobsPetPrice.Description"),min: 0, max: 100);
             }
             
 

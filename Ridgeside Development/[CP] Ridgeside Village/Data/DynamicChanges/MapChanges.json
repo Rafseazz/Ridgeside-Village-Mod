@@ -316,9 +316,21 @@
          "FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 11 },
          "ToArea": { "X": 90, "Y": 64, "Width": 13, "Height": 11 },
          "PatchMode": "Overlay",
+         "When": { "HasFlag: hostPlayer |contains=GH1letter": true }
+      	},
+				{
+				 "LogName": "RSV: Unlock community greenhouse for Gathering",
+         "Action": "EditMap",
+         "Target": "Maps/Custom_Ridgeside_RSVGathering",
+         "FromFile": "Assets/Maps/EventMaps/UnlockGH1.tmx",
+         "FromArea": { "X": 0, "Y": 0, "Width": 13, "Height": 11 },
+         "ToArea": { "X": 90, "Y": 64, "Width": 13, "Height": 11 },
+         "PatchMode": "Overlay",
          "When": {
-			 "HasFlag: hostPlayer |contains=GH1letter": true,
-		}
+					 "Season": "Fall",
+					 "Day": "20",
+					 "HasFlag: hostPlayer |contains=GH1letter": true
+				 }
       	},
 
     //Hike Greenhouse unlock

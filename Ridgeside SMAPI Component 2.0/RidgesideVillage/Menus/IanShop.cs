@@ -16,9 +16,6 @@ namespace RidgesideVillage
 {
     internal static class IanShop
     {
-        const int perCropPrice = 5;
-        const int perFencePrice = 10;
-        const int perAnimalPrice = 10;
 
         const string willWaterPlants = "IanShop.WaterPlants";
         const string willFixFences = "IanShop.FixFences";
@@ -102,7 +99,7 @@ namespace RidgesideVillage
         private static void petAnimalsDaily(ModDataDictionary modData)
         {
             var FarmAnimals = Game1.getFarm().getAllFarmAnimals();
-            int price = perAnimalPrice * FarmAnimals.Count;
+            int price = ModEntry.Config.OddJobsPetPrice * FarmAnimals.Count;
             if (Game1.player.Money < price)
             {
                 Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.NotEnoughMoneyHUD").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.PetAnimals")), HUDMessage.newQuest_type));
@@ -129,7 +126,7 @@ namespace RidgesideVillage
                 return;
             }
             int n = UtilFunctions.WaterPlants(Game1.getFarm());
-            int price = perCropPrice * n;
+            int price = ModEntry.Config.OddJobsWateringPrice * n;
             Game1.player.Money -= price;
             Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasWatered") + price + "g", HUDMessage.newQuest_type));
             Log.Debug($"RSV: {n} crops watered for {price}g");
@@ -152,7 +149,7 @@ namespace RidgesideVillage
                     fence.health.Value *= 2f;
                 n++;
             }
-            int price = perFencePrice * n;
+            int price = ModEntry.Config.OddJobsFencePrice * n;
             Game1.player.Money -= price;
             Game1.addHUDMessage(new HUDMessage(Helper.Translation.Get("IanShop.HasFixedFences") + price + "g", HUDMessage.newQuest_type));
             Log.Debug($"RSV: {n} fences fixed for {price}g");
@@ -223,7 +220,7 @@ namespace RidgesideVillage
             {
                 var responses = new List<Response>
                 {
-                    new Response("petAnimals", Helper.Translation.Get("IanShop.PetAnimalsSelection").ToString().Replace("{{amount}}", perAnimalPrice.ToString())),
+                    new Response("petAnimals", Helper.Translation.Get("IanShop.PetAnimalsSelection").ToString().Replace("{{amount}}", ModEntry.Config.OddJobsPetPrice.ToString())),
                     new Response("cancelService", Helper.Translation.Get("IanShop.CancelService")),
                     new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
                 };
@@ -235,13 +232,13 @@ namespace RidgesideVillage
                         {
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceAlreadyActive").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.PetAnimals").ToString().ToLower()));
                         }
-                        else if (Game1.player.Money < n * perAnimalPrice)
+                        else if (Game1.player.Money < n * ModEntry.Config.OddJobsPetPrice)
                         {
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
                         }
                         else
                         {
-                            Game1.getFarm().modData.Add(willPetAnimals, perCropPrice.ToString());
+                            Game1.getFarm().modData.Add(willPetAnimals, "ValueDoesntMatter");
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceStarted").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.PetAnimals").ToString().ToLower()));
                         }
                     },
@@ -272,7 +269,7 @@ namespace RidgesideVillage
             var modData = Game1.getFarm().modData;
             var responses = new List<Response>
             {
-                new Response("waterPlants", Helper.Translation.Get("IanShop.WaterPlantsSelection").ToString().Replace("{{amount}}", (perCropPrice).ToString())),
+                new Response("waterPlants", Helper.Translation.Get("IanShop.WaterPlantsSelection").ToString().Replace("{{amount}}", (ModEntry.Config.OddJobsWateringPrice).ToString())),
                 new Response("cancelService", Helper.Translation.Get("IanShop.CancelService")),
                 new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
             };
@@ -282,7 +279,7 @@ namespace RidgesideVillage
                 {
                     if (!modData.ContainsKey(willWaterPlants))
                     {
-                        modData.Add(willWaterPlants, perCropPrice.ToString());
+                        modData.Add(willWaterPlants, "ValueDoesntMatter");
                         Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceStarted").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.WaterPlants").ToString().ToLower()));
                     }
                     else
@@ -320,7 +317,7 @@ namespace RidgesideVillage
             {
                 var responses = new List<Response>
                 {
-                    new Response("fixFence", Helper.Translation.Get("IanShop.FixFencesSelection").ToString().Replace("{{amount}}", (n).ToString()).Replace("{{price}}", (perFencePrice).ToString())),
+                    new Response("fixFence", Helper.Translation.Get("IanShop.FixFencesSelection").ToString().Replace("{{amount}}", (n).ToString()).Replace("{{price}}", (ModEntry.Config.OddJobsFencePrice).ToString())),
                     new Response("cancelService", Helper.Translation.Get("IanShop.CancelService")),
                     new Response("cancel", Helper.Translation.Get("IanShop.Cancel"))
                 };
@@ -332,13 +329,13 @@ namespace RidgesideVillage
                         {
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceAlreadyActive").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.FixFences".ToString().ToLower())));
                         }
-                        else if(Game1.player.Money < n * perFencePrice)
+                        else if(Game1.player.Money < n * ModEntry.Config.OddJobsFencePrice)
                         {
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("NotEnoughMoney"));
                         }
                         else
                         {
-                            modData.Add(willFixFences, perFencePrice.ToString());
+                            modData.Add(willFixFences, ModEntry.Config.OddJobsFencePrice.ToString());
                             Game1.activeClickableMenu = new DialogueBox(Helper.Translation.Get("IanShop.ServiceStarted").ToString().Replace("{{serviceName}}", Helper.Translation.Get("IanShop.FixFences").ToString().ToLower()));
                         }
                     },

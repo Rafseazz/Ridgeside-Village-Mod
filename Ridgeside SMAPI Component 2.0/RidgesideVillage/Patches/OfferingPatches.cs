@@ -55,8 +55,8 @@ namespace RidgesideVillage
                 {
                     if (Game1.player.mailReceived.Contains(RSVConstants.M_TORTSLOVE))
                     {
-                        Log.Trace("RSV: Setting birth event chance to 50%");
-                        chance = 0.5f;
+                        Log.Trace("RSV: Setting birth event chance to 99%");
+                        chance = 0.99f;
                         Game1.player.RemoveMail(RSVConstants.M_TORTSLOVE);
                     }
                 }

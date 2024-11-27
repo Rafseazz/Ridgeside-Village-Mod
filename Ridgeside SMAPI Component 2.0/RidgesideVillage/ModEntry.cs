@@ -33,7 +33,6 @@ namespace RidgesideVillage
                 return;
             }
 
-            new SaveMigration(helper);
 
             ConfigMenu = new ConfigMenu(this);
             CustomCPTokens = new CustomCPTokens(this);

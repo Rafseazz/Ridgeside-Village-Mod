@@ -67,7 +67,6 @@ namespace RidgesideVillage
                         missing_parents.Add(dependency);
                     else // has parent dependencies but they're loaded
                         missing_dependencies.Add(dependency);
-                    
                 }
                 else
                 {
@@ -105,6 +104,11 @@ namespace RidgesideVillage
             if (!isInstalledCorrectly || !hasAllDependencies || outdatedRSVComponents.Count != 0)
             {
                 helper.Events.GameLoop.GameLaunched += OnGameLaunched;
+            }
+
+            if (helper.ModRegistry.Get("Rafseazz.RSVSAATExtra") != null)
+            {
+                Log.Warn($"RSV's extra music add-on is no longer needed in this version of the main mod. You may delete the music add-on mod.");
             }
 
             return isInstalledCorrectly && hasAllDependencies && outdatedRSVComponents.Count == 0;
