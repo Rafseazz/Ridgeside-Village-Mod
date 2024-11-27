@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Kiwi",
   "Skills": [
 
@@ -30,7 +30,7 @@
   "Rules": {
     //Normal
     //Requires seen 8 heart event + 10 hearts
-    "f Kiwi 2500/e 75160180": "accept",
+    "PLAYER_HEARTS Current Kiwi 10, PLAYER_HAS_SEEN_EVENT Current 75160180": "accept",
 
     //Basics
     "": "reject",
