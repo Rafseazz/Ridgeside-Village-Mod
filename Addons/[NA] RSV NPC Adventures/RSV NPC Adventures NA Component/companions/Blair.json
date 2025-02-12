@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Blair",
   "Skills": [
 
@@ -30,13 +30,13 @@
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Blair/!f Blair 2000": "reject",
-    "O Blair": "accept",
+	"PLAYER_NPC_RELATIONSHIP Current Blair Married, !PLAYER_HEARTS Current Blair 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Blair Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Blair 1000": "reject",
-    "k 75160310": "reject",
+    "!PLAYER_HEARTS Current Blair 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160310": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

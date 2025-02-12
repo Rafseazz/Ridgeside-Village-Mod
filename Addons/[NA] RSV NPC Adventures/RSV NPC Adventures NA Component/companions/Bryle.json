@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Bryle",
   "Skills": [
 
@@ -35,19 +35,19 @@
   "CanSuggest": false,
   "Price": 500,
   "Sales": {
-    "O Bryle": 0.0,
-    "f Bryle 2000/e 75160453": 0.5,
+    "PLAYER_NPC_RELATIONSHIP Current Bryle Married": 0.0,
+    "PLAYER_HEARTS Current Bryle 8, PLAYER_HAS_SEEN_EVENT Current 75160453": 0.5,
   },
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Bryle/!f Bryle 2000": "reject",
-    "O Bryle": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Bryle Married, !PLAYER_HEARTS Bryle 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Bryle Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    //"!f Bryle 1000": "reject",
-    //"k 75160451": "reject",
+    "!PLAYER_HEARTS Current Bryle 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160451": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Trinnie",
   "Skills": [
 
@@ -16,11 +16,11 @@
   "Rules": {
     //Normal
     //Requires seen 4 heart event + 4 hearts and above with Trinnie and Olga/Bert
-    "e 75160107/f Trinnie 1000/f Bert 1000": "accept",
-    "e 75160107/f Trinnie 1000/f Olga 1000": "accept",
+    "PLAYER_HAS_SEEN_EVENT Current 75160107, PLAYER_HEARTS Current Trinnie 4, PLAYER_HEARTS Current Bert 4": "accept",
+    "PLAYER_HAS_SEEN_EVENT Current 75160107, PLAYER_HEARTS Current Trinnie 4, PLAYER_HEARTS Current Olga 4": "accept",
 
     //Basics
-    "": "reject", //acceptance when asked
+    "": "reject", //reject when asked
   },
 
   "Bedtime": "2000",
