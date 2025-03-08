@@ -37,9 +37,9 @@ namespace RidgesideVillage
             Helper = helper;
         }
 
-        internal static void Open(IClickableMenu gameMenu)
+        internal static void Open(IClickableMenu menu)
         {
-            if (gameMenu is GameMenu menu)
+            if (menu is not null)
             {
                 Texture2D image = Helper.GameContent.Load<Texture2D>(MapPath);
                 Vector2 topLeft = Utility.getTopLeftPositionForCenteringOnScreen((int)(image.Width * 5), (int)(image.Height * 5));

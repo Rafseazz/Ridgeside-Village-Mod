@@ -29,11 +29,6 @@ namespace RidgesideVillage
         {
             Helper = helper;
 
-            Log.Trace($"Applying Harmony Patch \"{nameof(GameMenu_ChangeTab_PostFix)}.");
-            harmony.Patch(
-                original: AccessTools.Method(typeof(GameMenu), nameof(GameMenu.changeTab)),
-                prefix: new HarmonyMethod(typeof(EventDetection), nameof(GameMenu_ChangeTab_PostFix))
-            );
             harmony.Patch(
                 original: AccessTools.Method(typeof(MapPage), nameof(MapPage.draw), new Type[]{ typeof(SpriteBatch)}),
                 postfix: new HarmonyMethod(typeof(EventDetection), nameof(MapPage_draw_Postfix))
@@ -53,8 +48,15 @@ namespace RidgesideVillage
                 upNeighborID = 1001
             };
 
+            Helper.Events.Display.MenuChanged += OnMenuChanged;
             Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
             Helper.Events.Display.WindowResized += OnWindowResized;
+        }
+
+        private static void OnMenuChanged(object sender, MenuChangedEventArgs e)
+        {
+            //only draw on vanilla or cablecar map
+            ShouldDraw = ModEntry.Config.ShowRSVCustomMap && Game1.currentLocation?.Name is not null && (!Game1.currentLocation.Name.Contains('_') || Game1.currentLocation.Name == RSVConstants.L_CABLECAR);
         }
 
         private static void OnSaveLoaded(object sender, SaveLoadedEventArgs e)
@@ -76,18 +78,6 @@ namespace RidgesideVillage
             RSVButton.bounds = ButtonArea;
         }
 
-        internal static void GameMenu_ChangeTab_PostFix(ref GameMenu __instance, int whichTab, bool playSound = true)
-        {
-            try
-            {
-                //only draw on vanilla or cablecar map
-                ShouldDraw = ModEntry.Config.ShowRSVCustomMap && (!Game1.currentLocation.Name.Contains('_') || Game1.currentLocation.Name == RSVConstants.L_CABLECAR);
-            }
-            catch (Exception e)
-            {
-                Log.Error($"Harmony patch \"{nameof(GameMenu_ChangeTab_PostFix)}\" has encountered an error. \n{e.ToString()}");
-            }
-        }
 
         internal static void MapPage_draw_Postfix(ref MapPage __instance, SpriteBatch b) {
             if (!ShouldDraw)
