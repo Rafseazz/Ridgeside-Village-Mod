@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Jio",
   "Skills": [
 
@@ -51,25 +51,25 @@
   "CanSuggest": false,
   "Price": 1000,
   "Sales": {
-    "O Jio": 0.0,
-    "f Jio 2000/e 75160081": 0.5,
+    "PLAYER_NPC_RELATIONSHIP Current Jio Married": 0.0,
+    "PLAYER_HEARTS Current Jio 8, PLAYER_HAS_SEEN_EVENT Current 75160081": 0.5,
   },
   "Rules": {
     //Combat
-    "z fall/z winter/t 2000 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
-    "!z fall/t 1900 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
-    "!z winter/t 1800 2600/!SkillLevel combat 6": "reject companionRejectedNight_Weak",
-    "!SkillLevel combat 6": "reject companionRejected_Weak",
+    "SEASON Spring Summer, TIME 2000 2600, !PLAYER_COMBAT_LEVEL Current 6": "reject companionRejectedNight_Weak",
+    "SEASON fall, TIME 1900 2600, !PLAYER_COMBAT_LEVEL Current 6": "reject companionRejectedNight_Weak",
+    "SEASON winter, TIME 1800 2600, !PLAYER_COMBAT_LEVEL Current 6": "reject companionRejectedNight_Weak",
+    "!PLAYER_COMBAT_LEVEL Current 6": "reject companionRejected_Weak",
 
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Jio/!f Jio 2000": "reject",
-    "O Jio": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Jio Married, !PLAYER_HEARTS Current Jio 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Jio Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    //"!f Jio 1000": "reject",
-    //"k 75160079": "reject",
+    "!PLAYER_HEARTS Current Jio 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160079": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

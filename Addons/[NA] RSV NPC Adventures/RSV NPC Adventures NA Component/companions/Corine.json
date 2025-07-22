@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Corine",
   "Skills": [
 
@@ -29,27 +29,27 @@
   ],
   "Rules": {
     //Saloon - reject
-    "t 1500 2300/!z rainy/!O Corine/!d Fri": "reject companionRejectedSaloon",
-    "t 1330 2000/!z rainy/O Corine/!d Fri": "reject companionRejectedSaloon_Spouse",
+    "TIME 1500 2300, WEATHER Town Rain Storm GreenRain, !PLAYER_NPC_RELATIONSHIP Current Corine Married, DAY_OF_WEEK Fri": "reject companionRejectedSaloon",
+    "TIME 1330 2000, WEATHER Town Rain Storm GreenRain, PLAYER_NPC_RELATIONSHIP Current Corine Married, DAY_OF_WEEK Fri": "reject companionRejectedSaloon_Spouse",
 
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Corine/!f Corine 2000": "reject",
-    "O Corine": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Corine Married, !PLAYER_HEARTS Current Corine 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Corine Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Corine 1000": "reject",
-    "k 75160123": "reject",
+    "!PLAYER_HEARTS Current Corine 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160123": "reject",
 
     //Pika's - accept
-    "t 900 2300/e 75160125/Hn GH1letter/!z rainy/!O Corine/d Tue Fri Thu": "accept companionAcceptedWork",
-    "t 900 2300/Hn GH1letter/!z rainy/!O Corine/d Tue Fri": "accept companionAcceptedWork",
-    "t 900 2300/e 75160125/!z rainy/!O Corine/d Thu Fri": "accept companionAcceptedWork",
-    "t 900 2300/!z rainy/!O Corine/d Fri": "accept companionAcceptedWork",
+    "TIME 900 2300, PLAYER_HAS_SEEN_EVENT Current 75160125, PLAYER_HAS_MAIL Host GH1letter, WEATHER Town Rain Storm GreenRain, !PLAYER_NPC_RELATIONSHIP Current Corine Married, !DAY_OF_WEEK Tue Fri Thu": "accept companionAcceptedWork",
+    "TIME 900 2300, PLAYER_HAS_MAIL Host GH1letter, WEATHER Town Rain Storm GreenRain, !PLAYER_NPC_RELATIONSHIP Current Corine Married, !DAY_OF_WEEK Tue Fri": "accept companionAcceptedWork",
+    "TIME 900 2300, PLAYER_HAS_SEEN_EVENT Current 75160125, WEATHER Town Rain Storm GreenRain, !PLAYER_NPC_RELATIONSHIP Current Corine Married, !DAY_OF_WEEK Thu Fri": "accept companionAcceptedWork",
+    "TIME 900 2300, WEATHER Town Rain Storm GreenRain, !PLAYER_NPC_RELATIONSHIP Current Corine Married, !DAY_OF_WEEK Fri": "accept companionAcceptedWork",
 
-    "t 1200 1800/e 75160125/!z rainy/O Corine/d Tue Fri Thu Sat Sun": "accept companionAcceptedWork_Spouse",
-    "t 1200 1800/!z rainy/O Corine/d Tue Fri Sat Sun": "accept companionAcceptedWork_Spouse",
+    "TIME 1200 1800, PLAYER_HAS_SEEN_EVENT Current 75160125, WEATHER Town Rain Storm GreenRain, PLAYER_NPC_RELATIONSHIP Current Corine Married, DAY_OF_WEEK Mon Wed": "accept companionAcceptedWork_Spouse",
+    "TIME 1200 1800, WEATHER Town Rain Storm GreenRain, PLAYER_NPC_RELATIONSHIP Current Corine Married, DAY_OF_WEEK Mon Wed Thu": "accept companionAcceptedWork_Spouse",
 
     //Basics
     "": "accept", //acceptance when asked

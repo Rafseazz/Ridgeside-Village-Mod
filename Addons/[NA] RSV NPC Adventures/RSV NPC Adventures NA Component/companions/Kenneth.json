@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Kenneth",
   "Skills": [
 
@@ -40,13 +40,13 @@
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Kenneth/!f Kenneth 2000": "reject",
-    "O Kenneth": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Kenneth Married, !PLAYER_HEARTS Current Kenneth 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Kenneth Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Kenneth 1000": "reject",
-    "k 75160158": "reject",
+    "!PLAYER_HEARTS Current Kenneth 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160158": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Ysabelle",
   "Skills": [
 
@@ -29,20 +29,20 @@
       "Duration": 5,
       "Cooldown": 120,
       "Amount": 3, //Increase of attack power IF Attack Type protector
-      "Description": "[Ysa.protector]"
+      "Description": "[June.protector]"
     },
 
   ],
   "Rules": {
     //Marriage
-    //Reject if under 8 hearts, otherwise always go
-    "O Ysabelle/!f Ysabelle 2000": "reject",
-    "O Ysabelle": "accept",
+    //Reject if under 8 hearts, otherwise always go	
+	"PLAYER_NPC_RELATIONSHIP Current Ysabelle Married, !PLAYER_HEARTS Current Ysabelle 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Ysabelle Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Ysabelle 1000": "reject",
-    "k 75160142": "reject",
+    "!PLAYER_HEARTS Current Ysabelle 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160142": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

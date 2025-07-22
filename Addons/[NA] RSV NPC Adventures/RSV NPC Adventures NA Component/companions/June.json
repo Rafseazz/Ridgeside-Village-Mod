@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "June",
   "Skills": [
 
@@ -35,20 +35,20 @@
   ],
   "Rules": {
     //Work
-    "t 1700 2100/d Mon Tue Wed Sun/!O June": "reject companionRejectedWork",
-    "t 1200 1500/d Mon Tue Wed Thu Fri/!O June": "reject companionRejectedWork",
-    "t 1200 1800/!d Sat/O June/!z rainy": "reject companionRejectedWork_Spouse",
-    "t 1200 1500/!d Sun/O June/!z rainy": "reject companionRejectedWork_Spouse",
+    "TIME 1700 2100, DAY_OF_WEEK Thu Fri Sat, !PLAYER_NPC_RELATIONSHIP Current June Married": "reject companionRejectedWork",
+    "TIME 1200 1500, DAY_OF_WEEK Sat Sun, !PLAYER_NPC_RELATIONSHIP Current June Married": "reject companionRejectedWork",
+    "TIME 1200 1800, DAY_OF_WEEK Sat, PLAYER_NPC_RELATIONSHIP Current June Married, WEATHER Town Rain Storm GreenRain": "reject companionRejectedWork_Spouse",
+    "TIME 1200 1500, DAY_OF_WEEK Sun, PLAYER_NPC_RELATIONSHIP Current June Married, WEATHER Town Rain Storm GreenRain": "reject companionRejectedWork_Spouse",
 
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O June/!f June 2000": "reject",
-    "O June": "accept",
+	"PLAYER_NPC_RELATIONSHIP Current June Married, !PLAYER_HEARTS Current June 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current June Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f June 1000": "reject",
-    "k 94620004": "reject",
+    "!PLAYER_HEARTS Current June 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 94620004": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Kiarra",
   "Skills": [
 
@@ -29,13 +29,13 @@
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Kiarra/!f Kiarra 2000": "reject",
-    "O Kiarra": "accept",
+	"PLAYER_NPC_RELATIONSHIP Current Kiarra Married, !PLAYER_HEARTS Current Kiarra 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Kiarra Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Kiarra 1000": "reject",
-    "k 75160326": "reject",
+    "!PLAYER_HEARTS Current Kiarra 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160326": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

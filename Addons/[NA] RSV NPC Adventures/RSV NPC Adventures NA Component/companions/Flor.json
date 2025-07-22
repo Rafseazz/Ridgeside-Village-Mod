@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Flor",
   "Skills": [
     //Doctor Skill
@@ -43,13 +43,13 @@
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Flor/!f Flor 2000": "reject",
-    "O Flor": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Flor Married, !PLAYER_HEARTS Current Flor 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Flor Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Flor 1000": "reject",
-    "k 75160129": "reject",
+    "!PLAYER_HEARTS Current Flor 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160129": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

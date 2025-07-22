@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Sean",
   "Skills": [
 
@@ -28,14 +28,14 @@
   ],
   "Rules": {
     //Marriage
-    //Reject if under 8 hearts, otherwise always go
-    "O Sean/!f Sean 2000": "reject",
-    "O Sean": "accept",
+    //Reject if under 8 hearts, otherwise always go	
+	"PLAYER_NPC_RELATIONSHIP Current Sean Married, !PLAYER_HEARTS Current Sean 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Sean Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Sean 1000": "reject",
-    "k 75160354": "reject",
+    "!PLAYER_HEARTS Current Sean 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160354": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Ian",
   "Skills": [
 
@@ -29,19 +29,19 @@
   "CanSuggest": false,
   "Price": 500,
   "Sales": {
-    "O Ian": 0.0,
-    "f Ian 2000/e 75160149": 0.5,
+    "PLAYER_NPC_RELATIONSHIP Current Ian Married": 0.0,
+    "PLAYER_HEARTS Current Ian 8, PLAYER_HAS_SEEN_EVENT Current 75160149": 0.5,
   },
   "Rules": {
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Ian/!f Ian 2000": "reject",
-    "O Ian": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Ian Married, !PLAYER_HEARTS Current Ian 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Ian Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    //"!f Ian 1000": "reject",
-    //"k 75160147": "reject",
+    "!PLAYER_HEARTS Current Ian 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160147": "reject",
 
     //Basics
     "": "accept", //acceptance when asked

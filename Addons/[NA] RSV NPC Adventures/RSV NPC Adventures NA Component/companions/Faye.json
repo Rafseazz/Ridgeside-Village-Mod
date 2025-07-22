@@ -1,5 +1,5 @@
 {
-  "Format": "2.0",
+  "Format": "2.1",
   "Name": "Faye",
   "Skills": [
 
@@ -29,21 +29,21 @@
   ],
   "Rules": {
     //Work
-    "t 900 1400/!O Faye/!z rainy/!d Tue/Hn GH1letter": "reject companionRejectedWork",
-    "t 900 1200/!O Faye/!z rainy/d Thu": "reject companionRejectedWork",
-    "t 1800 2300/!O Faye/!z rainy/d Thu": "reject companionRejectedWork",
-    "t 1000 1400/O Faye/!z rainy/d Tue Wed Thu Sat Sun": "reject companionRejectedWork_Spouse",
-    "t 1800 2000/O Faye/!z rainy/d Tue Wed Thu Sat Sun": "reject companionRejectedWork_Spouse",
+    "TIME 900 1400, !PLAYER_NPC_RELATIONSHIP Current Faye Married, WEATHER Town Rain Storm GreenRain, DAY_OF_WEEK Tue, PLAYER_HAS_MAIL Host GH1letter": "reject companionRejectedWork",
+    "TIME 900 1200, !PLAYER_NPC_RELATIONSHIP Current Faye Married, WEATHER Town Rain Storm GreenRain, !DAY_OF_WEEK Thu": "reject companionRejectedWork",
+    "TIME 1800 2300, !PLAYER_NPC_RELATIONSHIP Current Faye Married, WEATHER Town Rain Storm GreenRain, !DAY_OF_WEEK Thu": "reject companionRejectedWork",
+    "TIME 1000 1400, PLAYER_NPC_RELATIONSHIP Current Faye Married, WEATHER Town Rain Storm GreenRain, DAY_OF_WEEK Mon Fri": "reject companionRejectedWork_Spouse",
+    "TIME 1800 2000, PLAYER_NPC_RELATIONSHIP Current Faye Married, WEATHER Town Rain Storm GreenRain, DAY_OF_WEEK Mon Fri": "reject companionRejectedWork_Spouse",
 
     //Marriage
     //Reject if under 8 hearts, otherwise always go
-    "O Faye/!f Faye 2000": "reject",
-    "O Faye": "accept",
+    "PLAYER_NPC_RELATIONSHIP Current Faye Married, !PLAYER_HEARTS Current Faye 8": "reject",
+    "PLAYER_NPC_RELATIONSHIP Current Faye Married": "accept",
 
     //Normal
     //Requires seen 4 heart event + 4 hearts and above
-    "!f Faye 1000": "reject",
-    "k 75160318": "reject",
+    "!PLAYER_HEARTS Current Faye 4": "reject",
+    "!PLAYER_HAS_SEEN_EVENT Current 75160318": "reject",
 
     //Basics
     "": "accept", //acceptance when asked
